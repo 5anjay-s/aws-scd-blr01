@@ -5,13 +5,11 @@ import LoadingScreenMobile from "../components/loading/LoadingScreenMobile";
 
 type StartupGateProps = {
   children: ReactNode;
-  desktopScale: number;
   isMobile: boolean;
 };
 
 export default function StartupGate({
   children,
-  desktopScale,
   isMobile,
 }: StartupGateProps) {
   const [isVisible, setIsVisible] = useState(true);
@@ -58,7 +56,6 @@ export default function StartupGate({
         >
           <div
             className={isMobile ? "mobile-frame" : "desktop-frame"}
-            style={isMobile ? undefined : { zoom: desktopScale }}
           >
             {isMobile ? (
               <LoadingScreenMobile onEnter={revealSite} />

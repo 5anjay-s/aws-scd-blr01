@@ -37,7 +37,7 @@ public/
 
 - `src/main.tsx` mounts the React app; `src/app/App.tsx` maps the current path to a page and handles navigation.
 - Supported paths are `/`, `/technical`, `/non-technical`, and `/registration`. Other paths render the 404 page.
-- Each route has a desktop and mobile component. At widths up to 900px, the mobile composition is rendered; otherwise the 1440px desktop composition scales to the available screen width. Mobile artwork is designed on a 390px canvas.
+- Each route has a desktop and mobile component. At widths up to 1100px, the mobile composition is rendered in a fluid column capped at 600px. Desktop content is capped at 1440px. `src/responsive.css` adapts the imported layouts, caps heading sizes, and extends section backgrounds to the viewport without page-level zoom. The artwork retains its original reference dimensions.
 - `src/app/SiteLayout.tsx` wraps each route with the responsive navbar and footer. `src/app/StartupGate.tsx` shows the initial loading screen while page fonts and images load.
 - `src/app/App.tsx` maps imported Figma `data-node-id` values to route destinations and section anchors. Preserve those IDs when editing interactive elements and keep their desktop/mobile anchor targets in sync.
 - Page files contain the detailed Figma layouts. Shared components, global font declarations, color/spacing variables, and global motion styles live in their respective shared folders/files.

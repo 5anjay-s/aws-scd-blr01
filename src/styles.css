@@ -92,17 +92,17 @@ body {
   min-height: 100vh;
 }
 .desktop-frame {
-  width: 1440px;
+  width: min(100%, 1440px);
   margin: 0 auto;
 }
 .mobile-frame {
-  width: 390px;
+  width: min(100%, 600px);
   margin: 0 auto;
 }
 .site-layout {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
 }
 .startup-overlay {
   position: fixed;

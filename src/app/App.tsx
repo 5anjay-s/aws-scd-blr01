@@ -104,21 +104,17 @@ function routeFromPath(pathname: string): RouteName {
 
 export default function App() {
   const [isMobile, setIsMobile] = useState(() =>
-    window.matchMedia("(max-width: 900px)").matches,
-  );
-  const [desktopScale, setDesktopScale] = useState(() =>
-    window.innerWidth / 1440,
+    window.matchMedia("(max-width: 1100px)").matches,
   );
   const [route, setRoute] = useState(() => routeFromPath(window.location.pathname));
 
   useEffect(() => {
-    const breakpoint = window.matchMedia("(max-width: 900px)");
+    const breakpoint = window.matchMedia("(max-width: 1100px)");
     const updateLayout = () => {
       setIsMobile(breakpoint.matches);
-      setDesktopScale(window.innerWidth / 1440);
     };
-    window.addEventListener("resize", updateLayout);
-    return () => window.removeEventListener("resize", updateLayout);
+    breakpoint.addEventListener("change", updateLayout);
+    return () => breakpoint.removeEventListener("change", updateLayout);
   }, []);
 
   useEffect(() => {
@@ -203,10 +199,9 @@ export default function App() {
         activate(event);
       }}
     >
-      <StartupGate isMobile={isMobile} desktopScale={desktopScale}>
+      <StartupGate isMobile={isMobile}>
         <div
           className={frameClass}
-          style={isMobile ? undefined : { zoom: desktopScale }}
         >
           <SiteLayout isMobile={isMobile}>{page}</SiteLayout>
         </div>

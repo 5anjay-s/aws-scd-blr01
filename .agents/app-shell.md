@@ -2,7 +2,7 @@
 
 ## Ownership
 
-- `src/app/App.tsx` maps URL paths to page components, selects desktop/mobile variants at a 900px breakpoint, scales the desktop canvas, and maps imported Figma node IDs to navigation destinations and section anchors.
+- `src/app/App.tsx` maps URL paths to page components, selects desktop/mobile variants at a 1100px breakpoint, caps the responsive desktop content, and maps imported Figma node IDs to navigation destinations and section anchors.
 - `src/app/SiteLayout.tsx` places the appropriate shared navbar and footer around the active route.
 - `src/app/StartupGate.tsx` displays the entry loading screen, waits for local fonts and images, and reveals the site after readiness (with a minimum display time and fallback timeout). The Figma enter control can reveal it early.
 
