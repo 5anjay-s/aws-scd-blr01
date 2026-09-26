@@ -1,6 +1,12 @@
 const assetPathPrefix = "/assets/desktop";
 const imgArtworkNonTechnicalTrackPixelQuotations = `${assetPathPrefix}/artwork-non-technical-track-pixel-quotations.svg`;
 const imgArtworkTechnicalTrackPixelBrackets = `${assetPathPrefix}/artwork-technical-track-pixel-brackets.svg`;
+const imgArtworkWindowOriginalTexture = `${assetPathPrefix}/artwork-window-original-texture.png`;
+const imgDitherWakePhase2 = `${assetPathPrefix}/dither-wake-phase-2.svg`;
+const imgDitherWakePhase1 = `${assetPathPrefix}/dither-wake-phase-1.svg`;
+const imgPixelPropellerPlaneLeftFacing = `${assetPathPrefix}/pixel-propeller-plane-left-facing.svg`;
+const imgPixelTowline = `${assetPathPrefix}/pixel-towline.svg`;
+const imgSteppedPixelPennant = `${assetPathPrefix}/stepped-pixel-pennant.svg`;
 
 import { motion } from "motion/react";
 
@@ -124,6 +130,149 @@ function ArtworkTechnicalTrackPixelBrackets({ className }: { className?: string 
   );
 }
 
+function PixelPropellerFlightRightToLeft() {
+  return (
+    <motion.div
+      className="absolute left-[266px] top-[184px] flex h-[80px] w-[364px] items-center"
+      data-node-id="860:5021"
+      data-name="Pixel propeller flight / right to left"
+      data-figma-motion="translate"
+      initial={{ x: 654, y: 0 }}
+      animate={{ x: [654, -654], y: [0, -4, 0, 4, 0] }}
+      transition={{
+        x: { duration: 16, times: [0, 1], ease: "linear", repeat: Infinity },
+        y: { duration: 16, times: [0, 0.25, 0.5, 0.75, 1], ease: "easeInOut", repeat: Infinity },
+      }}
+    >
+      <motion.div
+        className="absolute left-0 top-0 h-[80px] w-[488px]"
+        data-node-id="860:5034"
+        data-name="Dither wake / phase 2"
+        data-figma-motion="opacity"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: [0, 0.12, 0.5, 0.12, 0.5, 0.12, 0.5, 0.12, 0.5, 0.25, 0] }}
+        transition={{
+          opacity: {
+            duration: 16,
+            times: [0, 0.0313, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 0.9625, 1],
+            ease: "linear",
+            repeat: Infinity,
+          },
+        }}
+      >
+        <img alt="" className="absolute inset-0 block size-full max-w-none" src={imgDitherWakePhase2} />
+      </motion.div>
+      <motion.div
+        className="absolute left-0 top-0 h-[80px] w-[488px]"
+        data-node-id="860:5049"
+        data-name="Dither wake / phase 1"
+        data-figma-motion="opacity"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: [0, 0.55, 0.12, 0.55, 0.12, 0.55, 0.12, 0.55, 0.12, 0.35, 0] }}
+        transition={{
+          opacity: {
+            duration: 16,
+            times: [0, 0.0313, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 0.9625, 1],
+            ease: "linear",
+            repeat: Infinity,
+          },
+        }}
+      >
+        <img alt="" className="absolute inset-0 block size-full max-w-none" src={imgDitherWakePhase1} />
+      </motion.div>
+      <div className="relative h-[80px] w-[128px] shrink-0" data-node-id="860:5052" data-name="Pixel propeller plane / left-facing">
+        <img alt="" className="absolute inset-0 block size-full max-w-none" src={imgPixelPropellerPlaneLeftFacing} />
+      </div>
+      <div className="relative h-[4px] w-[36px] shrink-0" data-node-id="860:5059" data-name="Pixel towline">
+        <div className="absolute inset-[-12.5%_-1.39%]">
+          <img alt="" className="block size-full max-w-none" src={imgPixelTowline} />
+        </div>
+      </div>
+      <div className="relative flex h-[48px] w-[200px] shrink-0 items-center justify-center" data-node-id="860:5060" data-name="Banner / pixel pennant">
+        <div className="absolute left-0 top-0 h-[48px] w-[200px]" data-node-id="860:5061" data-name="Stepped pixel pennant">
+          <img alt="" className="absolute inset-0 block size-full max-w-none" src={imgSteppedPixelPennant} />
+        </div>
+        <p className="relative shrink-0 whitespace-nowrap font-['Pixelify_Sans'] text-[22px] font-medium leading-none text-[color:var(--navy,#0b1020)]" data-node-id="860:5063">
+          COMING SOON
+        </p>
+      </div>
+    </motion.div>
+  );
+}
+
+function SkyFieldDesktop() {
+  return (
+    <section
+      className="flex h-[472px] w-[1440px] items-start bg-[var(--navy,#0b1020)] px-[48px] pb-[24px]"
+      data-node-id="860:5008"
+      data-name="Sky field v2"
+    >
+      <div
+        className="relative h-[448px] w-[896px] shrink-0 overflow-hidden bg-[var(--cyan,#22d3ee)]"
+        data-node-id="860:5009"
+        data-name="Flat sky / crop"
+      >
+        <div className="absolute left-[-16px] top-[-85px] h-[618.667px] w-[928px]" data-node-id="860:5010" data-name="Flat sky / static print">
+          <div className="absolute inset-[-22.25%_-46.23%_-71.61%_-47.63%]" data-node-id="1131:2448" data-name="Artwork / Window - Original texture">
+            <img alt="" className="pointer-events-none absolute inset-0 size-full object-contain" src={imgArtworkWindowOriginalTexture} />
+          </div>
+        </div>
+        <PixelPropellerFlightRightToLeft />
+      </div>
+      <div
+        className="flex size-[448px] shrink-0 flex-col items-start gap-[24px] bg-[var(--orange,#f90)] p-[32px]"
+        data-node-id="860:5064"
+        data-name="Invitation panel"
+      >
+        <p className="w-[384px] shrink-0 font-['Geist_Mono'] text-[11px] font-normal leading-[1.5] text-[color:var(--navy,#0b1020)]" data-node-id="860:5065">
+          AWS STUDENT COMMUNITY DAY
+        </p>
+        <div className="w-[384px] shrink-0 font-['Azeret_Mono'] text-[40px] font-medium leading-[0] tracking-[-1.6px] text-[color:var(--navy,#0b1020)]" data-node-id="860:5066">
+          <p className="mb-0 leading-[1.05]">THE FUTURE</p>
+          <p className="mb-0 leading-[1.05]">IS A GROUP</p>
+          <p className="leading-[1.05]">PROJECT.</p>
+        </div>
+        <div className="w-[384px] shrink-0 font-['Geist_Mono'] text-[16px] font-normal leading-[0] text-[color:var(--navy,#0b1020)]" data-node-id="860:5067">
+          <p className="mb-0 leading-[1.5]">Meet the people. Explore the cloud.</p>
+          <p className="leading-[1.5]">Build something that matters.</p>
+        </div>
+        <div
+          className="flex h-[64px] w-[384px] shrink-0 items-center gap-[24px] bg-[var(--navy,#0b1020)] px-[24px] py-[16px]"
+          data-node-id="860:5068"
+          data-name="Button / Flat"
+        >
+          <p className="shrink-0 whitespace-nowrap font-['Geist_Mono'] text-[15px] font-normal leading-[1.5] text-[color:var(--white,#f8fafc)]" data-node-id="I860:5068;5:30">
+            Registration info
+          </p>
+          <div className="relative size-[22px] shrink-0" data-node-id="I860:5068;15:32" data-name="Arrow">
+            <img alt="" className="absolute inset-0 block size-full" src={imgArrow1} />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function MetadataDesktop() {
+  return (
+    <section
+      className="flex h-[92px] w-[1440px] items-start justify-between bg-[var(--navy,#0b1020)] px-[48px] py-[24px] font-['Geist_Mono'] text-[12px] font-normal leading-[1.5]"
+      data-node-id="860:5069"
+      data-name="Metadata v2"
+    >
+      <p className="w-[400px] shrink-0 text-[color:var(--white,#f8fafc)]" data-node-id="860:5070">
+        DATE / TO BE ANNOUNCED
+      </p>
+      <p className="w-[440px] shrink-0 text-[color:var(--white,#f8fafc)]" data-node-id="860:5071">
+        PLACE / TO BE ANNOUNCED
+      </p>
+      <p className="w-[370px] shrink-0 text-[color:var(--lime,#bef264)]" data-node-id="860:5072">
+        STUDENT LED. COMMUNITY POWERED.
+      </p>
+    </section>
+  );
+}
+
 export default function HomeDesktop() {
   return (
     <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col items-start relative size-full" data-node-id="860:4958" data-name="Desktop">
@@ -150,7 +299,9 @@ export default function HomeDesktop() {
           <div className="absolute h-[16px] left-[1024px] top-[184px] w-[120px]" data-node-id="860:5007" data-name="Accent / Signal stitch">
             <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAccentSignalStitch} />
           </div>
-        </div>
+      </div>
+      <SkyFieldDesktop />
+      <MetadataDesktop />
       <div className="bg-[var(--white,#f8fafc)] content-stretch flex flex-col h-[652px] items-start p-[var(--space-48,48px)] relative shrink-0 w-[1440px]" data-node-id="860:5073" data-name="Introduction v2 / First hello">
         <p className="[word-break:break-word] font-['Geist_Mono'] font-normal leading-[1.5] relative shrink-0 text-[12px] text-[color:var(--navy,#0b1020)] w-[1344px]" data-node-id="860:5074">
           01 / A DAY TO START SOMETHING
