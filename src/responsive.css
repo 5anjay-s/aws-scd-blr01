@@ -1,0 +1,200 @@
+/* Figma's 1440px and 390px frames are reference sizes, not viewport scales. */
+.desktop-frame, .mobile-frame { container-type: inline-size; }
+.site-layout > main, .site-layout > main > div { width: 100%; min-width: 0; }
+.site-layout :where(.flex) > :where(:not(.absolute, .contents, img)) {
+  min-width: 0;
+  max-width: 100%;
+  flex-shrink: 1;
+}
+.site-layout :where(p, button, [role="link"]) { max-width: 100%; }
+.site-layout :where(.flex:not(.absolute)):has(> :not(.absolute, .contents, img)) {
+  height: auto;
+}
+.site-layout :where([data-name^="Action /"], [data-name="Button / Flat"], [role="link"]) {
+  min-height: 44px;
+}
+.site-layout [data-name^="Action /"] > p,
+.site-layout [data-name="Button / Flat"] > p { white-space: normal; }
+.site-layout [data-name="Arrow"] { flex-shrink: 0; }
+.site-layout :where(.w-\[1440px\], .w-\[1439px\], .w-\[1344px\]) { width: 100%; }
+.mobile-frame .site-layout :where(.w-\[390px\], .w-\[342px\]) { width: 100%; }
+/* Extend each section's color without enlarging its content or artwork. */
+.site-layout :is(.w-\[1440px\], .w-\[1439px\], .w-\[390px\], .w-full)[class*="bg-"]:not(.absolute) {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+}
+.site-layout :is(.w-\[1440px\], .w-\[1439px\], .w-\[390px\], .w-full)[class*="bg-"]:not(.absolute)::before {
+  content: "";
+  position: absolute;
+  inset: 0 calc(50% - 50vw);
+  z-index: -1;
+  background: inherit;
+  pointer-events: none;
+}
+/* Fluid headings stop growing at the design's font size. Body copy stays readable. */
+.desktop-frame .text-\[22px\] { font-size: clamp(22px, 1.52778cqi, 22px); }
+.desktop-frame .text-\[23px\] { font-size: clamp(22px, 1.59722cqi, 23px); }
+.desktop-frame .text-\[24px\] { font-size: clamp(22px, 1.66667cqi, 24px); }
+.desktop-frame .text-\[26px\] { font-size: clamp(22px, 1.80556cqi, 26px); }
+.desktop-frame .text-\[27px\] { font-size: clamp(22px, 1.87500cqi, 27px); }
+.desktop-frame .text-\[28px\] { font-size: clamp(22px, 1.94444cqi, 28px); }
+.desktop-frame .text-\[30px\] { font-size: clamp(22px, 2.08333cqi, 30px); }
+.desktop-frame .text-\[32px\] { font-size: clamp(22.4px, 2.22222cqi, 32px); }
+.desktop-frame .text-\[36px\] { font-size: clamp(25.2px, 2.50000cqi, 36px); }
+.desktop-frame .text-\[38px\] { font-size: clamp(26.6px, 2.63889cqi, 38px); }
+.desktop-frame .text-\[40px\] { font-size: clamp(28px, 2.77778cqi, 40px); }
+.desktop-frame .text-\[42px\] { font-size: clamp(29.4px, 2.91667cqi, 42px); }
+.desktop-frame .text-\[44px\] { font-size: clamp(30.8px, 3.05556cqi, 44px); }
+.desktop-frame .text-\[48px\] { font-size: clamp(33.6px, 3.33333cqi, 48px); }
+.desktop-frame .text-\[49px\] { font-size: clamp(34.3px, 3.40278cqi, 49px); }
+.desktop-frame .text-\[54px\] { font-size: clamp(37.8px, 3.75000cqi, 54px); }
+.desktop-frame .text-\[56px\] { font-size: clamp(39.2px, 3.88889cqi, 56px); }
+.desktop-frame .text-\[62px\] { font-size: clamp(43.4px, 4.30556cqi, 62px); }
+.desktop-frame .text-\[64px\] { font-size: clamp(44.8px, 4.44444cqi, 64px); }
+.desktop-frame .text-\[72px\] { font-size: clamp(50.4px, 5.00000cqi, 72px); }
+.desktop-frame .text-\[80px\] { font-size: clamp(56px, 5.55556cqi, 80px); }
+.desktop-frame .text-\[82px\] { font-size: clamp(57.4px, 5.69444cqi, 82px); }
+.desktop-frame .text-\[86px\] { font-size: clamp(60.2px, 5.97222cqi, 86px); }
+.desktop-frame .text-\[88px\] { font-size: clamp(61.6px, 6.11111cqi, 88px); }
+.desktop-frame .text-\[96px\] { font-size: clamp(67.2px, 6.66667cqi, 96px); }
+.desktop-frame .text-\[104px\] { font-size: clamp(72.8px, 7.22222cqi, 104px); }
+.desktop-frame .text-\[108px\] { font-size: clamp(75.6px, 7.50000cqi, 108px); }
+.desktop-frame .text-\[112px\] { font-size: clamp(78.4px, 7.77778cqi, 112px); }
+.desktop-frame .text-\[128px\] { font-size: clamp(89.6px, 8.88889cqi, 128px); }
+.desktop-frame .text-\[160px\] { font-size: clamp(112px, 11.11111cqi, 160px); }
+.desktop-frame .text-\[164px\] { font-size: clamp(114.8px, 11.38889cqi, 164px); }
+.desktop-frame .text-\[172px\] { font-size: clamp(120.4px, 11.94444cqi, 172px); }
+.desktop-frame .text-\[212px\] { font-size: clamp(148.4px, 14.72222cqi, 212px); }
+.desktop-frame .leading-\[22px\] { line-height: clamp(22px, 1.52778cqi, 22px); }
+.desktop-frame .leading-\[23px\] { line-height: clamp(22px, 1.59722cqi, 23px); }
+.desktop-frame .leading-\[24px\] { line-height: clamp(22px, 1.66667cqi, 24px); }
+.desktop-frame .leading-\[25px\] { line-height: clamp(22px, 1.73611cqi, 25px); }
+.desktop-frame .leading-\[26px\] { line-height: clamp(22px, 1.80556cqi, 26px); }
+.desktop-frame .leading-\[27px\] { line-height: clamp(22px, 1.87500cqi, 27px); }
+.desktop-frame .leading-\[28px\] { line-height: clamp(22px, 1.94444cqi, 28px); }
+.desktop-frame .leading-\[29px\] { line-height: clamp(22px, 2.01389cqi, 29px); }
+.desktop-frame .leading-\[30px\] { line-height: clamp(22px, 2.08333cqi, 30px); }
+.desktop-frame .leading-\[32px\] { line-height: clamp(22.4px, 2.22222cqi, 32px); }
+.desktop-frame .leading-\[34px\] { line-height: clamp(23.8px, 2.36111cqi, 34px); }
+.desktop-frame .leading-\[35px\] { line-height: clamp(24.5px, 2.43056cqi, 35px); }
+.desktop-frame .leading-\[36px\] { line-height: clamp(25.2px, 2.50000cqi, 36px); }
+.desktop-frame .leading-\[38px\] { line-height: clamp(26.6px, 2.63889cqi, 38px); }
+.desktop-frame .leading-\[42px\] { line-height: clamp(29.4px, 2.91667cqi, 42px); }
+.desktop-frame .leading-\[44px\] { line-height: clamp(30.8px, 3.05556cqi, 44px); }
+.desktop-frame .leading-\[48px\] { line-height: clamp(33.6px, 3.33333cqi, 48px); }
+.desktop-frame .leading-\[50px\] { line-height: clamp(35px, 3.47222cqi, 50px); }
+.desktop-frame .leading-\[51px\] { line-height: clamp(35.7px, 3.54167cqi, 51px); }
+.desktop-frame .leading-\[56px\] { line-height: clamp(39.2px, 3.88889cqi, 56px); }
+.desktop-frame .leading-\[57px\] { line-height: clamp(39.9px, 3.95833cqi, 57px); }
+.desktop-frame .leading-\[58px\] { line-height: clamp(40.6px, 4.02778cqi, 58px); }
+.desktop-frame .leading-\[59px\] { line-height: clamp(41.3px, 4.09722cqi, 59px); }
+.desktop-frame .leading-\[68px\] { line-height: clamp(47.6px, 4.72222cqi, 68px); }
+.desktop-frame .leading-\[76px\] { line-height: clamp(53.2px, 5.27778cqi, 76px); }
+.desktop-frame .leading-\[80px\] { line-height: clamp(56px, 5.55556cqi, 80px); }
+.desktop-frame .leading-\[82px\] { line-height: clamp(57.4px, 5.69444cqi, 82px); }
+.desktop-frame .leading-\[85px\] { line-height: clamp(59.5px, 5.90278cqi, 85px); }
+.desktop-frame .leading-\[93px\] { line-height: clamp(65.1px, 6.45833cqi, 93px); }
+.desktop-frame .leading-\[102px\] { line-height: clamp(71.4px, 7.08333cqi, 102px); }
+.desktop-frame .leading-\[110px\] { line-height: clamp(77px, 7.63889cqi, 110px); }
+.desktop-frame .leading-\[119px\] { line-height: clamp(83.3px, 8.26389cqi, 119px); }
+.desktop-frame .leading-\[136px\] { line-height: clamp(95.2px, 9.44444cqi, 136px); }
+.desktop-frame .leading-\[154px\] { line-height: clamp(107.8px, 10.69444cqi, 154px); }
+.desktop-frame .leading-\[200px\] { line-height: clamp(140px, 13.88889cqi, 200px); }
+.desktop-frame .leading-\[232px\] { line-height: clamp(162.4px, 16.11111cqi, 232px); }
+
+.desktop-frame { --space-48: clamp(32px, 3.333cqi, 48px); --space-64: clamp(40px, 4.444cqi, 64px); --space-80: clamp(48px, 5.556cqi, 80px); }
+/* Keep navigation and the home masthead in their normal document flow. */
+[data-node-id="860:4980"] { min-height: 80px; gap: 20px; }
+[data-node-id="860:4981"] { width: 260px; }
+[data-node-id="860:4982"] { flex: 1; gap: 16px; min-height: 80px; font-size: clamp(11px, .97cqi, 14px); }
+[data-node-id="860:5001"] { min-height: 0; }
+[data-node-id="860:5003"] { padding-block: 20px; }
+[data-node-id="860:5007"] { left: 72%; top: 46%; }
+[data-node-id="860:5008"] { align-items: stretch; }
+[data-node-id="860:5064"] { width: 448px; height: auto; }
+[data-node-id="860:5009"] { flex: 1; min-height: 448px; }
+[data-node-id="860:5069"] { gap: 24px; }
+/* The introduction's text determines its height; accents follow the copy. */
+[data-node-id="860:5073"] { gap: 24px; padding-bottom: 180px; }
+[data-node-id="860:5083"] { top: auto; bottom: 132px; }
+[data-node-id="860:5084"] { top: auto; bottom: 140px; left: auto; right: 6.667%; }
+[data-node-id="920:3377"] { top: auto; bottom: 0; }
+[data-node-id="860:5267"] { padding-bottom: 112px; }
+[data-node-id="860:5275"] { top: auto; bottom: 48px; left: auto; right: 8%; }
+[data-node-id="860:5276"] { top: auto; bottom: 64px; left: auto; right: 23%; }
+/* Single-column compositions can expand to tablet widths without enlarging type. */
+.mobile-frame .site-layout :where(.flex:not(.absolute)) > [class*="w-"] { max-width: 100%; }
+.mobile-frame .site-layout [data-name*="masthead"] { overflow-wrap: anywhere; }
+.mobile-frame .site-layout [class*="text-[48px]"] { font-size: clamp(36px, 12.31cqi, 48px); }
+.mobile-frame .site-layout [class*="text-[56px]"] { font-size: clamp(42px, 14.36cqi, 56px); }
+.mobile-frame .site-layout [class*="text-[64px]"] { font-size: clamp(48px, 16.41cqi, 64px); }
+/* Loading artwork is independent of the page width and stays inside the viewport. */
+.startup-overlay { background: var(--cyan); align-items: stretch; }
+.startup-overlay--mobile { justify-content: center; }
+.startup-overlay > :is(.desktop-frame, .mobile-frame) { width: 100%; max-width: 1440px; }
+.startup-overlay [data-name^="Loading"][data-node-id]:first-child { width: 100%; height: 100dvh; min-height: 480px; }
+.startup-overlay [data-name^="Static sky"] { width: 100%; height: 100%; }
+.startup-overlay [data-name="AWS / Pixel logo"] { left: 50%; top: 24%; transform: translateX(-50%); max-width: 74%; }
+.startup-overlay [data-name="Cloud Clearing / Header"],
+.startup-overlay [data-name="Cloud Clearing / Mobile header"] { left: 5%; width: 90%; top: 5%; }
+.startup-overlay [data-name="Loading / Centered status"],
+.startup-overlay [data-name="Loading / Mobile status"] { left: 50%; top: 62%; transform: translateX(-50%); max-width: 90%; }
+.startup-overlay [data-name="Cloud Clearing / Footer"] { left: 5%; width: 90%; top: auto; bottom: 5%; }
+.startup-overlay [data-node-id="866:8333"] { left: 5%; width: 90%; top: auto; bottom: 5%; }
+.startup-overlay [data-node-id="1171:580"] { left: 50%; top: auto; bottom: 15%; max-width: 90%; }
+@media (max-width: 1350px) and (min-width: 1101px) {
+  [data-node-id="860:4980"] { flex-wrap: wrap; padding-block: 16px; }
+  [data-node-id="860:4982"] { order: 3; flex-basis: 100%; min-height: 44px; }
+  [data-node-id="860:4995"] { display: none; }
+}
+
+/* Keep positioned art clipped inside its own stage, and inset reading columns. */
+html { overflow-x: clip; }
+[data-node-id="866:8543"] { width: 100%; }
+[data-node-id="866:8548"] { width: calc(100% - 48px) !important; }
+[data-node-id="860:5247"], [data-node-id="866:8543"] { overflow: clip; }
+[data-node-id="860:5254"] { left: 22%; width: 58%; }
+[data-node-id="1160:5764"] { left: auto; right: 48px; width: 26%; }
+[data-node-id="1367:680"] { left: auto; right: 3%; transform: scale(.82); transform-origin: top right; }
+[data-node-id="1367:671"], [data-node-id="1367:672"] { width: 52%; }
+[data-node-id="1367:674"] { width: 47%; }
+[data-node-id="860:5073"]::before { background: var(--paper); }
+/* Preserve the asymmetric speaker arrangement using proportions of its column. */
+[data-node-id="1127:2325"], [data-node-id="1127:2326"] { width: 41.667%; }
+[data-node-id="1127:2330"], [data-node-id="1127:2337"], [data-node-id="1127:2336"] { left: 47.619%; }
+[data-node-id="1127:2330"], [data-node-id="1127:2338"], [data-node-id="1127:2343"] { width: 23.81%; }
+[data-node-id="1127:2335"] { left: 75%; width: 25%; }
+[data-node-id="1127:2337"] { width: 25%; }
+[data-node-id="1127:2338"], [data-node-id="1127:2343"] { left: 76.19%; }
+[data-node-id="1127:2325"], [data-node-id="1127:2335"], [data-node-id="1127:2337"] { height: auto; aspect-ratio: 560 / 646.154; }
+[data-node-id="1127:2325"] > div, [data-node-id="1127:2335"] > div, [data-node-id="1127:2337"] > div { width: 100%; height: 100%; }
+[data-node-id="1127:2306"] { left: auto; right: 0; width: 19%; height: auto; aspect-ratio: 4 / 3; }
+[data-node-id="1160:5761"] { left: auto; right: 48px; transform: none; width: 40%; }
+[data-node-id="1160:5769"] { width: calc(100% - 96px); }
+[data-node-id="1398:7045"] { left: auto; right: 24px; }
+/* Recovery text reflows independently from the printed-paper illustration. */
+[data-node-id="1265:3044"] { width: calc(100% - 256px); }
+[data-node-id="1265:3050"] { left: 50%; width: 41%; }
+[data-node-id="1265:3052"] { width: calc(100% - 256px); }
+[data-node-id="1265:3123"], [data-node-id="1265:3124"], [data-node-id="1265:3137"] { width: calc(100% - 16px); }
+[data-node-id="1265:3126"] { left: auto; right: 16px; }
+[data-node-id="1265:3127"] { width: calc(100% - 72px); }
+[data-node-id="1265:3128"] { width: calc(100% - 60px); }
+[data-node-id="1265:3129"] { width: calc(100% - 88px); }
+[data-node-id="1265:3131"], [data-node-id="1265:3136"] { width: calc(100% - 96px); }
+[data-node-id="1265:3135"] { width: calc(100% - 72px); }
+@media (max-width: 389px) {
+  [data-node-id="1367:802"] { width: 342px !important; transform: scale(.78); transform-origin: top left; }
+  [data-node-id="1265:3130"] { width: 342px !important; transform: scale(.79); transform-origin: top left; }
+  [data-node-id="1265:3132"] { font-size: 30px; }
+}
+/* Let standalone artwork keep its intrinsic proportions when a column shrinks. */
+.site-layout .relative:not(.absolute):has(> img:only-child) {
+  height: auto;
+}
+.site-layout .relative:not(.absolute) > img:only-child {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
