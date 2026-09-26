@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="120" height="2" viewBox="0 0 120 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Palette signal rule" clip-path="url(#clip0_0_50)">
+<path id="Vector" d="M0 0H48V2H0V0Z" fill="#FF9900"/>
+<path id="Vector_2" d="M48 0H80V2H48V0Z" fill="#22D3EE"/>
+<path id="Vector_3" d="M80 0H104V2H80V0Z" fill="#A78BFA"/>
+<path id="Vector_4" d="M104 0H120V2H104V0Z" fill="#BEF264"/>
+</g>
+<defs>
+<clipPath id="clip0_0_50">
+<rect width="120" height="2" fill="white"/>
+</clipPath>
+</defs>
+</svg>
