@@ -12,6 +12,8 @@ This is the AWS Student Community Day website, built with React 19, TypeScript, 
 - `public/fonts/`: local font files.
 - `.agents/`: focused contributor notes. Read the relevant guide before changing an area.
 
+Before making changes, read the applicable guide in `.agents/`. For project setup and commands, see `README.md`.
+
 ## Commands
 
 - `bun run dev` starts the Vite development server.
