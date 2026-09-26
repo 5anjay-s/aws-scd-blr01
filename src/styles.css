@@ -99,7 +99,37 @@ body {
   width: 390px;
   margin: 0 auto;
 }
+.site-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.startup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background: var(--navy);
+  opacity: 1;
+  transition: opacity 240ms ease;
+}
+.startup-overlay--leaving {
+  opacity: 0;
+  pointer-events: none;
+}
+.startup-overlay--mobile {
+  justify-content: flex-start;
+}
+.startup-overlay > .desktop-frame {
+  flex: 0 0 auto;
+  margin: 0;
+}
 @media (prefers-reduced-motion: reduce) {
+  .startup-overlay {
+    transition: none;
+  }
   [data-figma-motion="translate"],
   [data-figma-motion="rotate"] {
     transform: none !important;
