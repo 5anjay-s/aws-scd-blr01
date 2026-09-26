@@ -1,55 +1,55 @@
 @font-face {
   font-family: "Azeret Mono";
-  src: url("/fonts/azeret-mono-400.ttf") format("truetype");
+  src: url("/fonts/azeret-mono-400.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Azeret Mono";
-  src: url("/fonts/azeret-mono-500.ttf") format("truetype");
+  src: url("/fonts/azeret-mono-500.woff2") format("woff2");
   font-style: normal;
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: "Azeret Mono";
-  src: url("/fonts/azeret-mono-600.ttf") format("truetype");
+  src: url("/fonts/azeret-mono-600.woff2") format("woff2");
   font-style: normal;
   font-weight: 600;
   font-display: swap;
 }
 @font-face {
   font-family: "Azeret Mono";
-  src: url("/fonts/azeret-mono-700.ttf") format("truetype");
+  src: url("/fonts/azeret-mono-700.woff2") format("woff2");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
   font-family: "Geist Mono";
-  src: url("/fonts/geist-mono-400.ttf") format("truetype");
+  src: url("/fonts/geist-mono-400.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Geist Mono";
-  src: url("/fonts/geist-mono-500.ttf") format("truetype");
+  src: url("/fonts/geist-mono-500.woff2") format("woff2");
   font-style: normal;
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: "Geist Mono";
-  src: url("/fonts/geist-mono-600.ttf") format("truetype");
+  src: url("/fonts/geist-mono-600.woff2") format("woff2");
   font-style: normal;
   font-weight: 600;
   font-display: swap;
 }
 @font-face {
   font-family: "Pixelify Sans";
-  src: url("/fonts/pixelify-sans-500.ttf") format("truetype");
+  src: url("/fonts/pixelify-sans-500.woff2") format("woff2");
   font-style: normal;
   font-weight: 500;
   font-display: swap;
