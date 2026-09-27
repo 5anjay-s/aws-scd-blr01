@@ -1,3 +1,4 @@
+import PixelDivider from "../../components/PixelDivider";
 const assetPathPrefix = "/assets/technical/desktop";
 const imgScdTechnicalCompileBrackets = `${assetPathPrefix}/scd-technical-compile-brackets.svg`;
 
@@ -185,9 +186,7 @@ export default function TechnicalDesktop() {
           </div>
         </div>
       </div>
-      <div className="h-[108px] relative shrink-0 w-full" data-node-id="1413:622" data-name="Section divider / Preparation to continue">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSectionDividerPreparationToContinue} />
-      </div>
+      <PixelDivider src={imgSectionDividerPreparationToContinue} nodeId="1413:622" name="Section divider / Preparation to continue" />
       <div className="bg-[var(--navy,#0b1020)] content-stretch flex gap-[var(--space-48,48px)] items-center p-[var(--space-48,48px)] relative shrink-0 w-[1440px]" data-node-id="874:8974" data-name="Technical / Continue — Desktop">
         <div className="content-stretch flex flex-col gap-[var(--space-16,16px)] items-start relative shrink-0 w-[784px]" data-node-id="874:8975" data-name="Continue / Copy">
           <div className="h-[24px] relative shrink-0 w-[144px]" data-node-id="874:8976" data-name="Accent / Pixel stitch">

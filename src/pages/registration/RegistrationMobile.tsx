@@ -1,3 +1,4 @@
+import PixelDivider from "../../components/PixelDivider";
 const assetPathPrefix = "/assets/registration/mobile";
 const imgPixelEnvelopeInvitationActionTab = `${assetPathPrefix}/pixel-envelope-invitation-action-tab.svg`;
 const imgArrow = `${assetPathPrefix}/arrow.svg`;
@@ -8,7 +9,8 @@ const imgTicketSteppedOutline = `${assetPathPrefix}/ticket-stepped-outline.svg`;
 const imgTicketAssemblyPlus = `${assetPathPrefix}/ticket-assembly-plus.svg`;
 const imgTicketSquarePerforation = `${assetPathPrefix}/ticket-square-perforation.svg`;
 const imgTicketDecorativePrintCode = `${assetPathPrefix}/ticket-decorative-print-code.svg`;
-const imgRsvpCyanToNavyPixelTransition = `${assetPathPrefix}/rsvp-cyan-to-navy-pixel-transition.svg`;
+// Use the complete repeat; the 390px mobile export ends partway through a tile.
+const imgRsvpCyanToNavyPixelTransition = "/assets/registration/desktop/rsvp-cyan-to-navy-pixel-transition.svg";
 const imgArrow1 = `${assetPathPrefix}/arrow-1.svg`;
 
 
@@ -188,9 +190,7 @@ export default function RegistrationMobile() {
         </div>
       </div>
       <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col items-start overflow-clip relative shrink-0 w-[390px]" data-node-id="1367:816" data-name="Registration / Community RSVP — Mobile">
-        <div className="h-[54px] relative shrink-0 w-[390px]" data-node-id="1367:817" data-name="RSVP / Cyan-to-navy pixel transition">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgRsvpCyanToNavyPixelTransition} />
-        </div>
+        <PixelDivider src={imgRsvpCyanToNavyPixelTransition} nodeId="1367:817" name="RSVP / Cyan-to-navy pixel transition" from="cyan" />
         <ScdRegistrationMeetupRsvpMobile className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col gap-[var(--space-24,24px)] items-start pb-[var(--space-48,48px)] pt-[var(--space-32,32px)] px-[var(--space-24,24px)] relative shrink-0 w-[390px]" />
       </div>
       <div className="bg-[var(--white,#f8fafc)] content-stretch flex flex-col gap-[var(--space-32,32px)] items-start px-[var(--space-24,24px)] py-[40px] relative shrink-0 w-[390px]" data-node-id="1367:847" data-name="Registration / Before the details arrive — Mobile">
