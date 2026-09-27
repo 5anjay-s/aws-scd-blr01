@@ -1,23 +1,15 @@
-# Development Workflow
+# Development workflow
 
-## Adding a Page
+## Changes
 
-1. Create a route folder in `src/pages/<route>/` with one `<Name>Desktop.tsx` and one `<Name>Mobile.tsx` component.
-2. Add the URL to `RouteName`, `routeFromPath`, and the desktop/mobile page selection in `src/app/App.tsx`.
-3. Add page artwork under `public/assets/<route>/desktop/` and `public/assets/<route>/mobile/`. Put all font files in `public/fonts/`; register any new family or weight in `src/styles.css`.
-4. Add Figma `data-node-id` destination mappings in `clickDestinations` for interactive nodes. Keep node IDs used as in-page anchors in the page markup.
-5. Confirm both variants at desktop and mobile widths, then run `bun run typecheck` and `bun run build`.
+1. Inspect the relevant desktop/mobile compositions in `src/components/design/` and shared behavior in `src/components/`.
+2. Add new composition mappings to `src/design-manifest.json` and update route/section selection in `src/App.tsx` and `src/navigation.ts` together.
+3. Reuse artwork from `public/assets/`. Keep asset references and `src/asset-manifest.json` current.
+4. Keep layout fixes in `src/styles/responsive.css` and animation styles in `src/styles/interactions.css`. Original Figma styles live in `design.css`; `scripts/generate-responsive-css.py` generates the companion responsive sheet.
+5. Verify affected desktop/mobile layouts, then run `npm run typecheck`, `npm test`, and `npm run build`.
 
-Use the established React, TypeScript, Tailwind utility, and CSS-variable patterns. Shared UI belongs in `src/components/`; shared tokens, font faces, global behavior, and keyframes belong in `src/styles.css`. Consult `.agents/app-shell.md`, `.agents/pages.md`, `.agents/shared-components.md`, and `.agents/assets-and-design.md` for the area being changed. Keep Figma as the source of truth for copy, artwork, layout, and motion.
+Use npm with the committed package-lock.json. Do not retain obsolete route trees, generated build output, duplicate artwork, or unused dependencies. TypeScript checks unused locals and parameters.
 
 ## Commits
 
-Use the repository's short `type: summary` format. Keep the summary specific and concise, for example:
-
-- `add: Add speakers page`
-- `fix: Restore desktop sky metadata`
-- `docs: Explain local development setup`
-- `refactor: Share track page content`
-- `test: Cover route selection`
-
-Choose the type that best describes the change (`add`, `fix`, `docs`, `refactor`, `test`, or `chore`) and write the summary in imperative form.
+Use the repository's short `type: summary` format. Choose `add`, `fix`, `docs`, `refactor`, `test`, or `chore`, and write a specific imperative summary.

@@ -1,0 +1,18 @@
+/* Use the original logo's 568 × 316 canvas, including its smile overhang. */
+.loading-flight {
+  position: absolute;
+  inset: 0 0 auto;
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.loading-flight__paper { opacity: var(--paper-opacity, 1); }
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-flight__banner, .loading-flight__fold { transform: none; }
+  .loading-flight__paper { opacity: 0; }
+  .loading-flight__plane { display: none; }
+}

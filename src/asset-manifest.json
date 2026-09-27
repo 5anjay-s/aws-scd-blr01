@@ -1,0 +1,1262 @@
+[
+  {
+    "file": "public/assets/1154-483-382cb.svg",
+    "component": "DividerSpeakersTimeline",
+    "variable": "imgDividerSpeakersTimeline",
+    "bytes": 6022
+  },
+  {
+    "file": "public/assets/1154-487-d7ac4.svg",
+    "component": "DividerPartnerInvitationFaq",
+    "variable": "imgDividerPartnerInvitationFaq",
+    "bytes": 6030
+  },
+  {
+    "file": "public/assets/1160-5759-074ac.svg",
+    "component": "PartnersGoodCompany",
+    "variable": "imgPartnersCollectiveImprint1440",
+    "bytes": 3497
+  },
+  {
+    "file": "public/assets/1160-5759-305fd.svg",
+    "component": "PartnersGoodCompany",
+    "variable": "imgAccentWovenLinks",
+    "bytes": 8992
+  },
+  {
+    "file": "public/assets/1160-5759-df021.svg",
+    "component": "PartnersGoodCompany",
+    "variable": "imgDividerPartnerOpenerDirectoryOrangeToPaper",
+    "bytes": 6069
+  },
+  {
+    "file": "public/assets/865-7675-28d92.png",
+    "component": "MobileHeroDesktopAligned",
+    "variable": "imgArtworkWindowDesktopTextureMobileCrop",
+    "bytes": 2131108
+  },
+  {
+    "file": "public/assets/865-7675-fa3f0.svg",
+    "component": "MobileHeroDesktopAligned",
+    "variable": "imgAccentSignalStitch",
+    "bytes": 5156
+  },
+  {
+    "file": "public/assets/1168-491-212f9.svg",
+    "component": "MobileHeroDesktopAligned",
+    "variable": "imgDitherWakePhase2",
+    "bytes": 7004
+  },
+  {
+    "file": "public/assets/1168-491-5e543.svg",
+    "component": "MobileHeroDesktopAligned",
+    "variable": "imgDitherWakePhase1",
+    "bytes": 6594
+  },
+  {
+    "file": "public/assets/1168-491-96d60.svg",
+    "component": "MobileHeroDesktopAligned",
+    "variable": "imgPixelPropellerPlaneLeftFacing",
+    "bytes": 973
+  },
+  {
+    "file": "public/assets/1168-491-7d404.svg",
+    "component": "MobileHeroDesktopAligned",
+    "variable": "imgPixelTowline",
+    "bytes": 353
+  },
+  {
+    "file": "public/assets/1168-491-5c397.svg",
+    "component": "MobileHeroDesktopAligned",
+    "variable": "imgSteppedPixelPennant",
+    "bytes": 516
+  },
+  {
+    "file": "public/assets/865-7675-0b485.svg",
+    "component": "MobileHeroDesktopAligned",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1168-492-58d8d.svg",
+    "component": "MobileIntroDesktopAligned",
+    "variable": "imgAccentSignalStitch",
+    "bytes": 11102
+  },
+  {
+    "file": "public/assets/1168-492-892aa.svg",
+    "component": "MobileIntroDesktopAligned",
+    "variable": "imgAccentCuriositySpark",
+    "bytes": 9837
+  },
+  {
+    "file": "public/assets/1168-492-106e5.svg",
+    "component": "MobileIntroDesktopAligned",
+    "variable": "imgSectionDividerApprovedPixelDither",
+    "bytes": 5644
+  },
+  {
+    "file": "public/assets/1168-493-2adcd.svg",
+    "component": "MobileChaptersDesktopAligned",
+    "variable": "imgAccentCuriositySpark",
+    "bytes": 4781
+  },
+  {
+    "file": "public/assets/1168-493-b4ed3.svg",
+    "component": "MobileChaptersDesktopAligned",
+    "variable": "imgAccentDitherCorner",
+    "bytes": 2496
+  },
+  {
+    "file": "public/assets/1168-493-fd314.svg",
+    "component": "MobileChaptersDesktopAligned",
+    "variable": "imgCodeOpenBrackets",
+    "bytes": 3040
+  },
+  {
+    "file": "public/assets/1168-493-5454f.svg",
+    "component": "MobileChaptersDesktopAligned",
+    "variable": "imgAccentWovenLinks",
+    "bytes": 12035
+  },
+  {
+    "file": "public/assets/1168-494-a5a4a.svg",
+    "component": "SpeakersApprovedDesktopAlignedMobile",
+    "variable": "imgApprovedDitheredQuotationMobileOpener",
+    "bytes": 9561
+  },
+  {
+    "file": "public/assets/865-7675-0b485.svg",
+    "component": "SpeakersApprovedDesktopAlignedMobile",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1168-494-2f3d4.svg",
+    "component": "SpeakersApprovedDesktopAlignedMobile",
+    "variable": "imgPortraitPixelBust",
+    "bytes": 40357
+  },
+  {
+    "file": "public/assets/1168-494-1942a.svg",
+    "component": "SpeakersApprovedDesktopAlignedMobile",
+    "variable": "imgPortraitPixelBust1",
+    "bytes": 40673
+  },
+  {
+    "file": "public/assets/1168-494-b8c10.svg",
+    "component": "SpeakersApprovedDesktopAlignedMobile",
+    "variable": "imgApprovedDitheredQuotationSpeaker02",
+    "bytes": 9531
+  },
+  {
+    "file": "public/assets/1168-494-ad0f2.svg",
+    "component": "SpeakersApprovedDesktopAlignedMobile",
+    "variable": "imgPortraitPixelBust2",
+    "bytes": 52885
+  },
+  {
+    "file": "public/assets/1168-495-4fdc0.svg",
+    "component": "MobileCommunityDesktopAligned",
+    "variable": "imgAccentCuriositySpark",
+    "bytes": 9837
+  },
+  {
+    "file": "public/assets/1168-495-22597.svg",
+    "component": "MobileCommunityDesktopAligned",
+    "variable": "imgAccentWovenLinks",
+    "bytes": 8617
+  },
+  {
+    "file": "public/assets/1168-496-4ca63.svg",
+    "component": "PartnersGoodCompanyMobile",
+    "variable": "imgAccentWovenLinksMobile",
+    "bytes": 11040
+  },
+  {
+    "file": "public/assets/1168-496-7988e.svg",
+    "component": "PartnersGoodCompanyMobile",
+    "variable": "imgPartnersCollectiveImprintMobile",
+    "bytes": 5786
+  },
+  {
+    "file": "public/assets/1168-496-9396e.svg",
+    "component": "PartnersGoodCompanyMobile",
+    "variable": "imgDividerApprovedSquareRhythmCroppedMobile",
+    "bytes": 5673
+  },
+  {
+    "file": "public/assets/1168-497-195a8.svg",
+    "component": "MobileDetailsDesktopAligned",
+    "variable": "imgAccentDitherCorner",
+    "bytes": 2007
+  },
+  {
+    "file": "public/assets/1168-498-ba173.svg",
+    "component": "FooterKeepTheConversationGoingMobile",
+    "variable": "imgSectionDividerApprovedPixelDither",
+    "bytes": 5644
+  },
+  {
+    "file": "public/assets/1168-498-e1335.svg",
+    "component": "FooterKeepTheConversationGoingMobile",
+    "variable": "imgApprovedWovenLinks",
+    "bytes": 11016
+  },
+  {
+    "file": "public/assets/1168-498-5d2c8.svg",
+    "component": "FooterKeepTheConversationGoingMobile",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1168-498-378aa.svg",
+    "component": "FooterKeepTheConversationGoingMobile",
+    "variable": "imgArrow1",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1170-640-ba173.svg",
+    "component": "DividerSpeakersToProgrammeMobile",
+    "variable": "imgSectionDividerApprovedPixelDither",
+    "bytes": 5639
+  },
+  {
+    "file": "public/assets/1170-643-df33a.svg",
+    "component": "DividerPartnersToQuestionsMobile",
+    "variable": "imgSectionDividerApprovedPixelDither",
+    "bytes": 5642
+  },
+  {
+    "file": "public/assets/1265-3035-4ee15.svg",
+    "component": "Component404Desktop",
+    "variable": "imgFeedHousingSteppedVioletOutline",
+    "bytes": 292
+  },
+  {
+    "file": "public/assets/1265-3035-3d531.svg",
+    "component": "Component404Desktop",
+    "variable": "imgFeedHousingNavyInset",
+    "bytes": 277
+  },
+  {
+    "file": "public/assets/1265-3035-e8b99.svg",
+    "component": "Component404Desktop",
+    "variable": "imgTicketCyanPaper",
+    "bytes": 464
+  },
+  {
+    "file": "public/assets/1265-3035-01c4f.svg",
+    "component": "Component404Desktop",
+    "variable": "imgScdNumeral4FullCrossbar",
+    "bytes": 624
+  },
+  {
+    "file": "public/assets/1265-3035-0a058.svg",
+    "component": "Component404Desktop",
+    "variable": "imgScdNumeral0OpenCounter",
+    "bytes": 513
+  },
+  {
+    "file": "public/assets/1265-3035-a6290.svg",
+    "component": "Component404Desktop",
+    "variable": "imgPrintBarcode",
+    "bytes": 948
+  },
+  {
+    "file": "public/assets/1265-3035-228b5.svg",
+    "component": "Component404Desktop",
+    "variable": "imgInkControlledPixelFade",
+    "bytes": 2301
+  },
+  {
+    "file": "public/assets/1265-3035-89a58.svg",
+    "component": "Component404Desktop",
+    "variable": "imgPaperFourQuietFragments",
+    "bytes": 329
+  },
+  {
+    "file": "public/assets/1265-3035-1b7d9.svg",
+    "component": "Component404Desktop",
+    "variable": "imgFormCarbonBackingFollowsThePaperTear",
+    "bytes": 406
+  },
+  {
+    "file": "public/assets/1265-3035-4d2d4.svg",
+    "component": "Component404Desktop",
+    "variable": "imgPaperContinuousFormWithBrokenLowerEdge",
+    "bytes": 408
+  },
+  {
+    "file": "public/assets/1265-3035-b2300.svg",
+    "component": "Component404Desktop",
+    "variable": "imgFeedSquareSprocketsLeft",
+    "bytes": 864
+  },
+  {
+    "file": "public/assets/1265-3035-78e45.svg",
+    "component": "Component404Desktop",
+    "variable": "imgFeedTearOffHeaderSeam",
+    "bytes": 1695
+  },
+  {
+    "file": "public/assets/1265-3035-9ff97.svg",
+    "component": "Component404Desktop",
+    "variable": "imgPrintFeedBandEntersHousing",
+    "bytes": 265
+  },
+  {
+    "file": "public/assets/865-7675-207b4.svg",
+    "component": "Component404Desktop",
+    "variable": "imgArrow1",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1265-3035-d7a83.svg",
+    "component": "Component404Desktop",
+    "variable": "imgFeedVerticalFold",
+    "bytes": 792
+  },
+  {
+    "file": "public/assets/1265-3035-0e938.svg",
+    "component": "Component404Desktop",
+    "variable": "imgFormPrintedSerial",
+    "bytes": 914
+  },
+  {
+    "file": "public/assets/1265-3035-ab13f.svg",
+    "component": "Component404Desktop",
+    "variable": "imgFormPixelFibres",
+    "bytes": 28238
+  },
+  {
+    "file": "public/assets/1265-3035-453bd.svg",
+    "component": "Component404Desktop",
+    "variable": "imgApprovedWovenLinks",
+    "bytes": 9616
+  },
+  {
+    "file": "public/assets/1168-498-5d2c8.svg",
+    "component": "Component404Desktop",
+    "variable": "imgArrow2",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1168-498-378aa.svg",
+    "component": "Component404Desktop",
+    "variable": "imgArrow3",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1265-3120-09d92.svg",
+    "component": "Component404Mobile",
+    "variable": "imgFormCarbonBackingFollowsThePaperTear",
+    "bytes": 326
+  },
+  {
+    "file": "public/assets/1265-3120-3c466.svg",
+    "component": "Component404Mobile",
+    "variable": "imgMobileContinuousPaperForm",
+    "bytes": 312
+  },
+  {
+    "file": "public/assets/1265-3120-16f82.svg",
+    "component": "Component404Mobile",
+    "variable": "imgMobileSquareSprocketsLeft",
+    "bytes": 904
+  },
+  {
+    "file": "public/assets/1265-3120-07a59.svg",
+    "component": "Component404Mobile",
+    "variable": "imgFeedHousingSteppedVioletOutline",
+    "bytes": 284
+  },
+  {
+    "file": "public/assets/1265-3120-c920c.svg",
+    "component": "Component404Mobile",
+    "variable": "imgFeedHousingNavyInset",
+    "bytes": 272
+  },
+  {
+    "file": "public/assets/1265-3120-d8ac8.svg",
+    "component": "Component404Mobile",
+    "variable": "imgTicketCyanPaper",
+    "bytes": 391
+  },
+  {
+    "file": "public/assets/1265-3120-924cc.svg",
+    "component": "Component404Mobile",
+    "variable": "imgScdNumeral4FullCrossbar",
+    "bytes": 624
+  },
+  {
+    "file": "public/assets/1265-3120-3924c.svg",
+    "component": "Component404Mobile",
+    "variable": "imgScdNumeral0OpenCounter",
+    "bytes": 512
+  },
+  {
+    "file": "public/assets/1265-3120-13e8b.svg",
+    "component": "Component404Mobile",
+    "variable": "imgPrintBarcode",
+    "bytes": 568
+  },
+  {
+    "file": "public/assets/1265-3120-3a389.svg",
+    "component": "Component404Mobile",
+    "variable": "imgInkControlledPixelFade",
+    "bytes": 2778
+  },
+  {
+    "file": "public/assets/1265-3120-9cbaa.svg",
+    "component": "Component404Mobile",
+    "variable": "imgPaperFourQuietFragments",
+    "bytes": 308
+  },
+  {
+    "file": "public/assets/865-7675-207b4.svg",
+    "component": "Component404Mobile",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1265-3120-00ee6.svg",
+    "component": "Component404Mobile",
+    "variable": "imgMobileTearOffSeam",
+    "bytes": 585
+  },
+  {
+    "file": "public/assets/1265-3120-5e006.svg",
+    "component": "Component404Mobile",
+    "variable": "imgMobilePaperFibres",
+    "bytes": 27675
+  },
+  {
+    "file": "public/assets/1168-498-e1335.svg",
+    "component": "Component404Mobile",
+    "variable": "imgApprovedWovenLinks",
+    "bytes": 11016
+  },
+  {
+    "file": "public/assets/1168-498-5d2c8.svg",
+    "component": "Component404Mobile",
+    "variable": "imgArrow1",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1168-498-378aa.svg",
+    "component": "Component404Mobile",
+    "variable": "imgArrow2",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1367-652-7de52.svg",
+    "component": "RegistrationDesktop",
+    "variable": "imgPixelEnvelopeInvitationActionTab",
+    "bytes": 3114
+  },
+  {
+    "file": "public/assets/865-7675-207b4.svg",
+    "component": "RegistrationDesktop",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1367-652-4fc85.svg",
+    "component": "RegistrationDesktop",
+    "variable": "imgRsvpPixelCheck",
+    "bytes": 300
+  },
+  {
+    "file": "public/assets/1367-652-6ea97.svg",
+    "component": "RegistrationDesktop",
+    "variable": "imgTicketSteppedOutline",
+    "bytes": 310
+  },
+  {
+    "file": "public/assets/1367-652-e8226.svg",
+    "component": "RegistrationDesktop",
+    "variable": "imgTicketAssemblyPlus",
+    "bytes": 844
+  },
+  {
+    "file": "public/assets/1367-652-2d79b.svg",
+    "component": "RegistrationDesktop",
+    "variable": "imgTicketSquarePerforation",
+    "bytes": 616
+  },
+  {
+    "file": "public/assets/1367-652-ab864.svg",
+    "component": "RegistrationDesktop",
+    "variable": "imgTicketDecorativePrintCode",
+    "bytes": 1092
+  },
+  {
+    "file": "public/assets/1367-652-442d6.svg",
+    "component": "RegistrationDesktop",
+    "variable": "imgRsvpCyanToNavyPixelTransition",
+    "bytes": 6014
+  },
+  {
+    "file": "public/assets/865-7675-0b485.svg",
+    "component": "RegistrationDesktop",
+    "variable": "imgArrow1",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1367-652-1103f.svg",
+    "component": "RegistrationDesktop",
+    "variable": "imgRegistrationPaperToNavyFooterTransition",
+    "bytes": 6025
+  },
+  {
+    "file": "public/assets/1265-3035-453bd.svg",
+    "component": "RegistrationDesktop",
+    "variable": "imgApprovedWovenLinks",
+    "bytes": 9616
+  },
+  {
+    "file": "public/assets/1168-498-5d2c8.svg",
+    "component": "RegistrationDesktop",
+    "variable": "imgArrow2",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1168-498-378aa.svg",
+    "component": "RegistrationDesktop",
+    "variable": "imgArrow3",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1367-780-82bb0.svg",
+    "component": "RegistrationMobile",
+    "variable": "imgPixelEnvelopeInvitationActionTab",
+    "bytes": 5316
+  },
+  {
+    "file": "public/assets/865-7675-207b4.svg",
+    "component": "RegistrationMobile",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1367-652-4fc85.svg",
+    "component": "RegistrationMobile",
+    "variable": "imgRsvpPixelCheck",
+    "bytes": 300
+  },
+  {
+    "file": "public/assets/1367-780-2ba6a.svg",
+    "component": "RegistrationMobile",
+    "variable": "imgTicketSteppedOutline",
+    "bytes": 400
+  },
+  {
+    "file": "public/assets/1367-780-08a82.svg",
+    "component": "RegistrationMobile",
+    "variable": "imgTicketAssemblyPlus",
+    "bytes": 1794
+  },
+  {
+    "file": "public/assets/1367-780-dc77f.svg",
+    "component": "RegistrationMobile",
+    "variable": "imgTicketSquarePerforation",
+    "bytes": 1010
+  },
+  {
+    "file": "public/assets/1367-780-f37db.svg",
+    "component": "RegistrationMobile",
+    "variable": "imgTicketDecorativePrintCode",
+    "bytes": 1898
+  },
+  {
+    "file": "public/assets/1367-780-673f2.svg",
+    "component": "RegistrationMobile",
+    "variable": "imgRsvpCyanToNavyPixelTransition",
+    "bytes": 5640
+  },
+  {
+    "file": "public/assets/865-7675-0b485.svg",
+    "component": "RegistrationMobile",
+    "variable": "imgArrow1",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1367-780-5e445.svg",
+    "component": "RegistrationMobile",
+    "variable": "imgRegistrationPaperToNavyFooterTransition",
+    "bytes": 5651
+  },
+  {
+    "file": "public/assets/1168-498-e1335.svg",
+    "component": "RegistrationMobile",
+    "variable": "imgApprovedWovenLinks",
+    "bytes": 11016
+  },
+  {
+    "file": "public/assets/1168-498-5d2c8.svg",
+    "component": "RegistrationMobile",
+    "variable": "imgArrow2",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1168-498-378aa.svg",
+    "component": "RegistrationMobile",
+    "variable": "imgArrow3",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1398-7044-16b24.svg",
+    "component": "PartnersEditorialDirectory",
+    "variable": "imgScrollSpotlightTripodFixedAtBottomRight",
+    "bytes": 1846
+  },
+  {
+    "file": "public/assets/1398-7044-0e0d2.svg",
+    "component": "PartnersEditorialDirectory",
+    "variable": "imgEyepieceSteppedSilhouette",
+    "bytes": 442
+  },
+  {
+    "file": "public/assets/1398-7044-a2db3.svg",
+    "component": "PartnersEditorialDirectory",
+    "variable": "imgEyepieceReflectedPaper",
+    "bytes": 296
+  },
+  {
+    "file": "public/assets/1398-7044-e9ef1.svg",
+    "component": "PartnersEditorialDirectory",
+    "variable": "imgBarrelContinuousInkContour",
+    "bytes": 769
+  },
+  {
+    "file": "public/assets/1398-7044-b3abf.svg",
+    "component": "PartnersEditorialDirectory",
+    "variable": "imgBarrelBroadPaperPlane",
+    "bytes": 649
+  },
+  {
+    "file": "public/assets/1398-7044-0333d.svg",
+    "component": "PartnersEditorialDirectory",
+    "variable": "imgBarrelOrderedShadowScreen",
+    "bytes": 3521
+  },
+  {
+    "file": "public/assets/1398-7044-9d634.svg",
+    "component": "PartnersEditorialDirectory",
+    "variable": "imgObjectiveCollarInkRim",
+    "bytes": 562
+  },
+  {
+    "file": "public/assets/1398-7044-7ba5a.svg",
+    "component": "PartnersEditorialDirectory",
+    "variable": "imgObjectiveOrangeCollar",
+    "bytes": 487
+  },
+  {
+    "file": "public/assets/1398-7044-409d5.svg",
+    "component": "PartnersEditorialDirectory",
+    "variable": "imgObjectiveAperture",
+    "bytes": 445
+  },
+  {
+    "file": "public/assets/1398-7044-e24ed.svg",
+    "component": "PartnersEditorialDirectory",
+    "variable": "imgObjectivePaperReflection",
+    "bytes": 328
+  },
+  {
+    "file": "public/assets/1405-638-1bdb8.svg",
+    "component": "DividerPartnerDirectoryInvitationPaperToOrange",
+    "variable": "imgDividerPartnerDirectoryInvitationPaperToOrange",
+    "bytes": 6071
+  },
+  {
+    "file": "public/assets/1406-700-9a5d2.svg",
+    "component": "DividerPartnersDirectoryToInvitationMobile",
+    "variable": "imgApprovedPaperToOrangeDitherHalfScale",
+    "bytes": 5649
+  },
+  {
+    "file": "public/assets/860-4959-ee06b.svg",
+    "component": "Loading",
+    "variable": "imgStaticSkyFullBleedDitherField",
+    "bytes": 53788
+  },
+  {
+    "file": "public/assets/860-4959-9116d.svg",
+    "component": "LoadingFlight",
+    "variable": "logoArtwork",
+    "bytes": 4993
+  },
+  {
+    "file": "public/assets/860-5073-978e7.svg",
+    "component": "IntroductionV2FirstHello",
+    "variable": "imgAccentSignalStitch",
+    "bytes": 5697
+  },
+  {
+    "file": "public/assets/860-5073-2287b.svg",
+    "component": "IntroductionV2FirstHello",
+    "variable": "imgAccentCuriositySpark",
+    "bytes": 4853
+  },
+  {
+    "file": "public/assets/860-5073-1f258.svg",
+    "component": "IntroductionV2FirstHello",
+    "variable": "imgIntroductionNavyPixelDitherTransition",
+    "bytes": 6030
+  },
+  {
+    "file": "public/assets/860-5073-2287b.svg",
+    "component": "ChaptersV2",
+    "variable": "imgAccentCuriositySpark",
+    "bytes": 4853
+  },
+  {
+    "file": "public/assets/860-5085-cefb3.svg",
+    "component": "ChaptersV2",
+    "variable": "imgAccentDitherCorner",
+    "bytes": 2005
+  },
+  {
+    "file": "public/assets/860-5085-96238.svg",
+    "component": "ChaptersV2",
+    "variable": "imgCodeOpenBrackets",
+    "bytes": 3140
+  },
+  {
+    "file": "public/assets/1160-5759-305fd.svg",
+    "component": "ChaptersV2",
+    "variable": "imgAccentWovenLinks",
+    "bytes": 8992
+  },
+  {
+    "file": "public/assets/860-5104-db107.svg",
+    "component": "ProgrammeV2ChooseYourTrackApprovedDesktop",
+    "variable": "imgArtworkNonTechnicalTrackPixelQuotations",
+    "bytes": 29522
+  },
+  {
+    "file": "public/assets/860-5104-5f40e.svg",
+    "component": "ProgrammeV2ChooseYourTrackApprovedDesktop",
+    "variable": "imgArtworkTechnicalTrackPixelBrackets",
+    "bytes": 32278
+  },
+  {
+    "file": "public/assets/860-5104-70864.svg",
+    "component": "ProgrammeV2ChooseYourTrackApprovedDesktop",
+    "variable": "imgAccentPixelStitch",
+    "bytes": 5747
+  },
+  {
+    "file": "public/assets/865-7675-0b485.svg",
+    "component": "ProgrammeV2ChooseYourTrackApprovedDesktop",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/860-5144-5a444.svg",
+    "component": "SpeakersV2IdeasWithAVoiceApprovedDesktop",
+    "variable": "imgSpeakersApprovedDitheredQuotation",
+    "bytes": 5312
+  },
+  {
+    "file": "public/assets/865-7675-0b485.svg",
+    "component": "SpeakersV2IdeasWithAVoiceApprovedDesktop",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/860-5144-2417b.svg",
+    "component": "SpeakersV2IdeasWithAVoiceApprovedDesktop",
+    "variable": "imgPortraitPixelBust",
+    "bytes": 39430
+  },
+  {
+    "file": "public/assets/860-5144-b0bb9.svg",
+    "component": "SpeakersV2IdeasWithAVoiceApprovedDesktop",
+    "variable": "imgPortraitPixelBust1",
+    "bytes": 39792
+  },
+  {
+    "file": "public/assets/860-5144-cc774.svg",
+    "component": "SpeakersV2IdeasWithAVoiceApprovedDesktop",
+    "variable": "imgSpeakersApprovedDitheredQuotation1",
+    "bytes": 9609
+  },
+  {
+    "file": "public/assets/860-5144-a4a5a.svg",
+    "component": "SpeakersV2IdeasWithAVoiceApprovedDesktop",
+    "variable": "imgPortraitPixelBust2",
+    "bytes": 51756
+  },
+  {
+    "file": "public/assets/860-5180-e4193.svg",
+    "component": "ProgrammeV2EventTimelineApprovedDesktop",
+    "variable": "imgSteppedProgrammeViolet",
+    "bytes": 24439
+  },
+  {
+    "file": "public/assets/860-5180-92afc.svg",
+    "component": "ProgrammeV2EventTimelineApprovedDesktop",
+    "variable": "imgSteppedProgrammeCyan",
+    "bytes": 19324
+  },
+  {
+    "file": "public/assets/860-5180-4545c.svg",
+    "component": "ProgrammeV2EventTimelineApprovedDesktop",
+    "variable": "imgSteppedProgrammeOrange",
+    "bytes": 15470
+  },
+  {
+    "file": "public/assets/860-5180-be42c.svg",
+    "component": "ProgrammeV2EventTimelineApprovedDesktop",
+    "variable": "imgAccentPixelStitch",
+    "bytes": 3726
+  },
+  {
+    "file": "public/assets/865-7675-0b485.svg",
+    "component": "ProgrammeV2EventTimelineApprovedDesktop",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/860-5246-f047e.svg",
+    "component": "ManifestoV3AClearingInTheConversation",
+    "variable": "imgClearingAsymmetricSteppedSilhouette",
+    "bytes": 385
+  },
+  {
+    "file": "public/assets/865-7675-207b4.svg",
+    "component": "ManifestoV3AClearingInTheConversation",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/860-5246-42ed8.svg",
+    "component": "ManifestoV3AClearingInTheConversation",
+    "variable": "imgOpeningQuotationSharedVoices",
+    "bytes": 61769
+  },
+  {
+    "file": "public/assets/860-5246-85f17.svg",
+    "component": "ManifestoV3AClearingInTheConversation",
+    "variable": "imgClosingQuotationManyVoicesOneCommunity",
+    "bytes": 103661
+  },
+  {
+    "file": "public/assets/860-5267-10945.svg",
+    "component": "CommunityV2",
+    "variable": "imgAccentWovenLinks",
+    "bytes": 8992
+  },
+  {
+    "file": "public/assets/860-5267-2eeb3.svg",
+    "component": "CommunityV2",
+    "variable": "imgAccentCuriositySpark",
+    "bytes": 4781
+  },
+  {
+    "file": "public/assets/865-7675-0b485.svg",
+    "component": "PartnersV2BuildTheNextWave",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/860-5328-2b89b.svg",
+    "component": "FaqV2GoodQuestions",
+    "variable": "imgFaqAskAndAnswerPixelArtwork",
+    "bytes": 2972
+  },
+  {
+    "file": "public/assets/860-5342-6be3b.svg",
+    "component": "QuestionsV2",
+    "variable": "imgAccentDitherCorner",
+    "bytes": 2174
+  },
+  {
+    "file": "public/assets/865-7675-0b485.svg",
+    "component": "JoinV2",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/860-5352-25e8e.svg",
+    "component": "JoinV2",
+    "variable": "imgAccentNextStep",
+    "bytes": 7046
+  },
+  {
+    "file": "public/assets/1265-3035-453bd.svg",
+    "component": "FooterKeepTheConversationGoingDesktop",
+    "variable": "imgApprovedWovenLinks",
+    "bytes": 9616
+  },
+  {
+    "file": "public/assets/1168-498-5d2c8.svg",
+    "component": "FooterKeepTheConversationGoingDesktop",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1168-498-378aa.svg",
+    "component": "FooterKeepTheConversationGoingDesktop",
+    "variable": "imgArrow1",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/860-5359-ef2a5.svg",
+    "component": "FooterKeepTheConversationGoingDesktop",
+    "variable": "imgFooterNavyPixelTransition",
+    "bytes": 5777
+  },
+  {
+    "file": "public/assets/865-7675-28d92.png",
+    "component": "Group1",
+    "variable": "imgArtworkWindowOriginalTexture",
+    "bytes": 2131108
+  },
+  {
+    "file": "public/assets/865-7675-fa3f0.svg",
+    "component": "Group1",
+    "variable": "imgAccentSignalStitch",
+    "bytes": 5156
+  },
+  {
+    "file": "public/assets/865-7675-4ceb6.svg",
+    "component": "Group1",
+    "variable": "imgDitherWakePhase2",
+    "bytes": 6027
+  },
+  {
+    "file": "public/assets/865-7675-008e9.svg",
+    "component": "Group1",
+    "variable": "imgDitherWakePhase1",
+    "bytes": 5676
+  },
+  {
+    "file": "public/assets/865-7675-cdcaf.svg",
+    "component": "Group1",
+    "variable": "imgPixelPropellerPlaneLeftFacing",
+    "bytes": 992
+  },
+  {
+    "file": "public/assets/865-7675-86822.svg",
+    "component": "Group1",
+    "variable": "imgPixelTowline",
+    "bytes": 295
+  },
+  {
+    "file": "public/assets/865-7675-fc9d7.svg",
+    "component": "Group1",
+    "variable": "imgSteppedPixelPennant",
+    "bytes": 352
+  },
+  {
+    "file": "public/assets/865-7675-0b485.svg",
+    "component": "Group1",
+    "variable": "imgArrow1",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/866-8315-9bde5.svg",
+    "component": "LoadingCloudV2CloudClearingMobile",
+    "variable": "imgStaticSkyMobileDitherField",
+    "bytes": 55177
+  },
+  {
+    "file": "public/assets/866-8432-27de8.svg",
+    "component": "ProgrammeV2ChooseYourTrackApprovedMobile",
+    "variable": "imgTrackMastheadApprovedSignalStitch",
+    "bytes": 5465
+  },
+  {
+    "file": "public/assets/866-8432-9a55f.svg",
+    "component": "ProgrammeV2ChooseYourTrackApprovedMobile",
+    "variable": "imgArtworkTechnicalTrackPixelBrackets",
+    "bytes": 31022
+  },
+  {
+    "file": "public/assets/865-7675-0b485.svg",
+    "component": "ProgrammeV2ChooseYourTrackApprovedMobile",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/866-8432-00a38.svg",
+    "component": "ProgrammeV2ChooseYourTrackApprovedMobile",
+    "variable": "imgArtworkNonTechnicalTrackPixelQuotations",
+    "bytes": 28634
+  },
+  {
+    "file": "public/assets/866-8481-2d4f1.svg",
+    "component": "ProgrammeV2EventTimelineApprovedMobile",
+    "variable": "imgSteppedProgrammeViolet",
+    "bytes": 29908
+  },
+  {
+    "file": "public/assets/866-8481-4c9db.svg",
+    "component": "ProgrammeV2EventTimelineApprovedMobile",
+    "variable": "imgSteppedProgrammeCyan",
+    "bytes": 23309
+  },
+  {
+    "file": "public/assets/866-8481-32bf2.svg",
+    "component": "ProgrammeV2EventTimelineApprovedMobile",
+    "variable": "imgSteppedProgrammeOrange",
+    "bytes": 19187
+  },
+  {
+    "file": "public/assets/866-8481-ae677.svg",
+    "component": "ProgrammeV2EventTimelineApprovedMobile",
+    "variable": "imgAccentPixelStitch",
+    "bytes": 2844
+  },
+  {
+    "file": "public/assets/865-7675-0b485.svg",
+    "component": "ProgrammeV2EventTimelineApprovedMobile",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/866-8542-9ba11.svg",
+    "component": "MobileV3ManifestoAClearingInTheConversation",
+    "variable": "imgClearingMobileSteppedOpening",
+    "bytes": 333
+  },
+  {
+    "file": "public/assets/865-7675-207b4.svg",
+    "component": "MobileV3ManifestoAClearingInTheConversation",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/866-8542-c8e08.svg",
+    "component": "MobileV3ManifestoAClearingInTheConversation",
+    "variable": "imgOpeningQuotationMobile",
+    "bytes": 54203
+  },
+  {
+    "file": "public/assets/866-8542-0b5fe.svg",
+    "component": "MobileV3ManifestoAClearingInTheConversation",
+    "variable": "imgClosingQuotationMobile",
+    "bytes": 54203
+  },
+  {
+    "file": "public/assets/866-8582-232fa.svg",
+    "component": "PartnersEditorialDirectoryMobile",
+    "variable": "imgTelescopeTripodFixed",
+    "bytes": 2702
+  },
+  {
+    "file": "public/assets/866-8582-180df.svg",
+    "component": "PartnersEditorialDirectoryMobile",
+    "variable": "imgTelescopeBarrelSeparateRotatingHead",
+    "bytes": 12566
+  },
+  {
+    "file": "public/assets/865-7675-0b485.svg",
+    "component": "MobileV2PartnersBuildTheNextWave",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/866-8605-491b7.svg",
+    "component": "MobileV2FaqGoodQuestions",
+    "variable": "imgFaqMobilePixelConversation",
+    "bytes": 2814
+  },
+  {
+    "file": "public/assets/865-7675-0b485.svg",
+    "component": "MobileV2Join",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/866-8622-12ae5.svg",
+    "component": "MobileV2Join",
+    "variable": "imgAccentNextStep",
+    "bytes": 6335
+  },
+  {
+    "file": "public/assets/874-8915-7e810.svg",
+    "component": "TechnicalDesktop",
+    "variable": "imgScdTechnicalCompileBrackets",
+    "bytes": 83993
+  },
+  {
+    "file": "public/assets/865-7675-207b4.svg",
+    "component": "TechnicalDesktop",
+    "variable": "imgArrow1",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/874-8915-fb0a8.svg",
+    "component": "TechnicalDesktop",
+    "variable": "imgSectionDividerPreparationToContinue",
+    "bytes": 6022
+  },
+  {
+    "file": "public/assets/874-8915-7bab5.svg",
+    "component": "TechnicalDesktop",
+    "variable": "imgAccentPixelStitch",
+    "bytes": 4331
+  },
+  {
+    "file": "public/assets/1265-3035-453bd.svg",
+    "component": "TechnicalDesktop",
+    "variable": "imgApprovedWovenLinks",
+    "bytes": 9616
+  },
+  {
+    "file": "public/assets/1168-498-5d2c8.svg",
+    "component": "TechnicalDesktop",
+    "variable": "imgArrow2",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1168-498-378aa.svg",
+    "component": "TechnicalDesktop",
+    "variable": "imgArrow3",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/874-9123-4fa4b.svg",
+    "component": "TechnicalMobile",
+    "variable": "imgArtworkCompileBracketsMobile",
+    "bytes": 168414
+  },
+  {
+    "file": "public/assets/865-7675-207b4.svg",
+    "component": "TechnicalMobile",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/874-9123-2e906.svg",
+    "component": "TechnicalMobile",
+    "variable": "imgApprovedDitherPaperToNavyCropped",
+    "bytes": 5665
+  },
+  {
+    "file": "public/assets/874-9123-7bab5.svg",
+    "component": "TechnicalMobile",
+    "variable": "imgAccentPixelStitch",
+    "bytes": 4331
+  },
+  {
+    "file": "public/assets/1168-498-e1335.svg",
+    "component": "TechnicalMobile",
+    "variable": "imgApprovedWovenLinks",
+    "bytes": 11016
+  },
+  {
+    "file": "public/assets/1168-498-5d2c8.svg",
+    "component": "TechnicalMobile",
+    "variable": "imgArrow1",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1168-498-378aa.svg",
+    "component": "TechnicalMobile",
+    "variable": "imgArrow2",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/874-9211-c568c.svg",
+    "component": "NonTechnicalDesktop",
+    "variable": "imgSharedGlyphOpenExchange",
+    "bytes": 43087
+  },
+  {
+    "file": "public/assets/865-7675-0b485.svg",
+    "component": "NonTechnicalDesktop",
+    "variable": "imgArrow1",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/874-9211-fb0a8.svg",
+    "component": "NonTechnicalDesktop",
+    "variable": "imgSectionDividerHeroToOpenExchange",
+    "bytes": 6020
+  },
+  {
+    "file": "public/assets/865-7675-207b4.svg",
+    "component": "NonTechnicalDesktop",
+    "variable": "imgArrow2",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1265-3035-453bd.svg",
+    "component": "NonTechnicalDesktop",
+    "variable": "imgApprovedWovenLinks",
+    "bytes": 9616
+  },
+  {
+    "file": "public/assets/1168-498-5d2c8.svg",
+    "component": "NonTechnicalDesktop",
+    "variable": "imgArrow3",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1168-498-378aa.svg",
+    "component": "NonTechnicalDesktop",
+    "variable": "imgArrow4",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/865-7675-0b485.svg",
+    "component": "NonTechnicalMobile",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/880-9338-d328b.svg",
+    "component": "NonTechnicalMobile",
+    "variable": "imgSharedGlyphOpenExchange",
+    "bytes": 61570
+  },
+  {
+    "file": "public/assets/880-9338-2e906.svg",
+    "component": "NonTechnicalMobile",
+    "variable": "imgApprovedDitherPaperToNavyCropped",
+    "bytes": 5665
+  },
+  {
+    "file": "public/assets/865-7675-207b4.svg",
+    "component": "NonTechnicalMobile",
+    "variable": "imgArrow1",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1168-498-e1335.svg",
+    "component": "NonTechnicalMobile",
+    "variable": "imgApprovedWovenLinks",
+    "bytes": 11016
+  },
+  {
+    "file": "public/assets/1168-498-5d2c8.svg",
+    "component": "NonTechnicalMobile",
+    "variable": "imgArrow2",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1168-498-378aa.svg",
+    "component": "NonTechnicalMobile",
+    "variable": "imgArrow3",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/865-7675-207b4.svg",
+    "component": "RegistrationButton",
+    "variable": "imgArrow",
+    "bytes": 274
+  },
+  {
+    "file": "public/assets/1304-694-39fa8.svg",
+    "component": "Group1",
+    "variable": "imgDitherCorner",
+    "bytes": 2997
+  }
+]

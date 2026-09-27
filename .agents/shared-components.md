@@ -1,12 +1,11 @@
-# Shared Components
+# Shared components
 
-Shared site chrome is grouped by responsibility:
+- `SiteHeader` renders composition-specific navigation into App's shared sticky header host.
+- `SiteLink` and `RegistrationButton` provide accessible internal links and button styling.
+- `DitherDivider` and `ProgrammeDivider` reuse the original SVG borders.
+- `LoadingFlight` handles the optional entry animation.
+- `HeroTitle`, `SignalStitch`, `ScrollSpark`, `WovenRibbon`, `BuildBrackets`, `ProgrammeSteps`, and the manifesto components own reusable animation behavior.
 
-- `src/components/navigation/`: desktop and mobile navbars.
-- `src/components/footer/`: desktop and mobile footers.
-- `src/components/loading/`: desktop and mobile entry/loading screens.
-- `src/components/PixelDivider.tsx`: decorative section borders that repeat the original SVG across the viewport at a fixed pixel size. Set `from` and `to` to the neighboring section colors to avoid seams.
+Keep animation logic out of duplicated desktop/mobile compositions. Preserve SVG geometry and colors unless the user requests changes. Respect reduced motion, keep stationary reading content still, and pause continuous effects offscreen where supported.
 
-`SiteLayout` chooses the navbar and footer variants. `StartupGate` chooses the loading-screen variant. Edit the relevant pair when a shared feature should appear consistently across screen sizes; avoid copying these elements into route pages.
-
-Keep existing Figma node IDs on interactive elements. `src/app/App.tsx` uses those IDs to connect controls to routes and anchors. Check keyboard behavior, focusability, and narrow viewport layout when changing controls. Shared component styles and global design rules are in `src/styles.css`.
+Shared styles live in `src/styles/`. Check keyboard navigation, sticky header offsets, button labels, and narrow viewport sizing when changing shared controls. The current navbar label is Register now.

@@ -1,11 +1,13 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import App from "./app/App";
-import "./styles.css";
-import "./responsive.css";
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import '@fontsource/azeret-mono/500.css';
+import '@fontsource/geist-mono/400.css';
+import '@fontsource/pixelify-sans/500.css';
+import './styles/base.css';
+import './styles/design.css';
+import './styles/responsive-generated.css';
+import './styles/responsive.css';
+import './styles/interactions.css';
+import App from './App';
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-);
+createRoot(document.getElementById('root')!).render(<StrictMode><App /></StrictMode>);

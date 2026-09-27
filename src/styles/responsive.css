@@ -1,0 +1,285 @@
+/* Layout dimensions and typography respond independently; no page-level scaling. */
+.design-content { width: 100%; max-width: 1440px; margin-inline: auto; position: relative; container-type: inline-size; --design-unit: min(1px, calc(100cqw / 1440)); --space-unit: min(1px, calc(100cqw / 1440)); }
+.design-content > * { min-width: 0; }
+.site-header-shell { position: sticky; top: 0; z-index: 100; display: flow-root; background: var(--navy); }
+.design-section { scroll-margin-top: var(--site-header-height, 92px); }
+.desktop-layout .design-content .site-header { justify-content: flex-start; gap: 24px; }
+.desktop-layout .site-header [data-name='Nav links v2'] { width: auto; gap: 24px; justify-content: flex-start; margin-left: auto; }
+.site-header .site-button { gap: 12px; padding-inline: 16px; white-space: nowrap; }
+.design-content .event-detail { display: flex; align-items: center; gap: 10px; }
+.event-detail strong { display: inline-block; padding: 6px 10px; color: var(--navy); font-weight: 600; line-height: 1.5; }
+.event-detail-date { background: var(--orange); }
+.event-detail-place { background: var(--cyan); }
+/* A compact pixel divider carries the header palette across the viewport. */
+.design-content .site-header { margin-bottom: 12px; }
+.design-content .site-header::after {
+  content: '';
+  position: absolute;
+  left: calc(50% - 50vw);
+  bottom: -12px;
+  width: 100vw;
+  height: 12px;
+  pointer-events: none;
+  background: linear-gradient(90deg,
+    var(--orange) 0 40%, var(--cyan) 40% 67%,
+    var(--violet) 67% 87%, var(--lime) 87% 100%);
+  mask:
+    linear-gradient(90deg, #000 25%, transparent 25%) 0 0 / 16px 4px repeat-x,
+    linear-gradient(90deg, #000 50%, transparent 50%) 4px 4px / 8px 4px repeat-x,
+    linear-gradient(90deg, #000 50%, transparent 50%) 0 8px / 8px 4px repeat-x;
+}
+.mobile-layout .design-content { max-width: 640px; --design-unit: calc(100cqw / 390); --space-unit: min(1px, calc(100cqw / 390)); }
+.design-content .pixel-border { flex-shrink: 0; }
+.design-content .dither-divider {
+  position: relative;
+  left: calc(50% - 50vw);
+  width: 100vw;
+  height: 108px;
+  flex-shrink: 0;
+  background: var(--dither-to);
+}
+.dither-divider::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--dither-from);
+  mask: var(--dither-mask) repeat-x 0 0 / 1440px 108px;
+  mask-mode: alpha;
+}
+.design-content .track-preview-divider { margin-top: 72px; }
+.design-content .track-programme-preview { padding-block: 72px; }
+.mobile-layout .design-content .dither-divider { height: 54px; }
+.mobile-layout .dither-divider::before { mask-size: 720px 54px; }
+.mobile-layout .design-content .track-preview-divider { margin-top: 40px; }
+.mobile-layout .design-content .track-programme-preview { padding-block: 48px; }
+/* Join both neighboring colors through navy using two copies of the original art. */
+.dither-divider-pair { position: relative; width: 100%; flex-shrink: 0; }
+.design-content .dither-divider-pair .dither-divider { height: 54px; }
+.dither-divider-pair .dither-divider::before { mask-size: 720px 54px; }
+.mobile-layout .design-content .dither-divider-pair .dither-divider { height: 27px; }
+.mobile-layout .dither-divider-pair .dither-divider::before { mask-size: 360px 27px; }
+/* Reuse the approved Figma artwork in the direction of this section change. */
+.design-content .programme-divider { position: relative; left: calc(50% - 50vw); width: 100vw; height: 108px; flex-shrink: 0; }
+.programme-divider > .pixel-border {
+  position: relative;
+  height: 100%;
+  background: url('/assets/1160-5759-df021.svg') repeat-x 0 0 / 1440px 108px;
+  transform: scaleY(-1);
+}
+.mobile-layout .programme-divider { height: 54px; }
+.mobile-layout .programme-divider > .pixel-border { background-image: url('/assets/1168-496-9396e.svg'); background-size: 720px 54px; }
+.design-section[aria-label='Section divider'] .design-content { height: 108px; }
+.mobile-layout .design-section[aria-label='Section divider'] .design-content { height: 54px; }
+.design-content [data-node-id='865:7675'] { display: flex; flex-direction: column; width: 100%; background: var(--navy); }
+.design-content [data-node-id='860:4980'],
+.design-content [data-node-id='860:5000'],
+.design-content [data-node-id='860:5008'],
+.design-content [data-node-id='860:5069'] { position: relative; top: auto; left: auto; width: 100%; height: auto; }
+.design-content [data-node-id='860:4980'] { min-height: 80px; gap: 24px; }
+.design-content [data-node-id='860:5000'] { gap: 0; padding-block: 24px 40px; }
+.design-content [data-node-id='860:5001'] { width: 100%; height: auto; align-items: flex-start; }
+.design-content [data-node-id='860:5002'] { font-size: clamp(150px, 12.5cqw, 180px); line-height: 1.05; width: auto; }
+.design-content [data-node-id='860:5003'] { height: auto; width: calc(320 * var(--design-unit)); padding-top: calc(44 * var(--space-unit)); }
+/* Place DAY beneath the right-hand note, matching the reference's two columns. */
+.design-content [data-node-id='860:5006'] { font-size: clamp(143px, 11.9444cqw, 172px); line-height: 1.05; width: 100%; display: flex; justify-content: space-between; gap: 0.35em; }
+.design-content [data-node-id='860:5007'] { position: relative; inset: auto; flex-shrink: 0; margin-top: calc(12 * var(--space-unit)); margin-left: calc(12 * var(--space-unit)); }
+.design-content [data-node-id='860:5008'] { display: grid; grid-template-columns: 2fr 1fr; gap: 0; padding-top: 0; align-items: stretch; }
+.design-content [data-node-id='860:5009'] { width: 100%; height: clamp(320px, 30cqw, 432px); }
+/* Keep Figma's 928 × 618.667 print, offset (-16, -85) inside its 896px crop. */
+.design-content [data-node-id='860:5010'] {
+  inset: auto;
+  top: 0;
+  left: calc(-100% * 16 / 896);
+  margin-top: calc(-100% * 85 / 896);
+  width: calc(100% * 928 / 896);
+  height: auto;
+  aspect-ratio: 928 / 618.667;
+}
+.design-content [data-node-id='1131:2448'] { inset: -22.25% -46.23% -71.61% -47.63%; width: auto; height: auto; }
+/* The pennant artwork is absolute, so its frame must reserve the full design height. */
+.design-content [data-node-id='860:5060'],
+.design-content [data-node-id='1169:551'] { height: auto; aspect-ratio: 200 / 48; }
+.design-content [data-node-id='860:5063'] { font-size: calc(22 * var(--design-unit)); }
+.design-content [data-node-id='1169:554'] { font-size: calc(16.5 * var(--design-unit)); }
+.design-content [data-node-id='860:5064'] { width: 100%; height: auto; min-width: 0; }
+.design-content [data-node-id='860:5064'] > * { max-width: 100%; }
+.design-content [data-node-id='860:5069'] { min-height: 80px; gap: 24px; }
+.design-content [data-node-id='860:5069'] > * { width: auto; }
+.design-content .hero-dither-corner { left: auto; right: 48px; top: auto; bottom: 104px; }
+.design-content [data-node-id='860:5073'] { gap: 32px; padding-bottom: 0; }
+.design-content [data-node-id='860:5075'] { height: auto; width: 100%; display: grid; grid-template-columns: 2fr 1fr; gap: 48px; }
+.design-content [data-node-id='860:5075'] > * { width: 100%; height: auto; }
+.design-content [data-node-id='860:5083'] { position: relative; inset: auto; margin-block: 8px 24px; }
+.design-content [data-node-id='860:5084'] { top: auto; bottom: 150px; right: 48px; left: auto; }
+.design-content [data-node-id='920:3377'] { position: relative; top: auto; margin-top: 12px; }
+/* The staggered track bands reach opposite viewport edges around capped content. */
+.design-content [data-node-id='860:5120'],
+.design-content [data-node-id='860:5128'] { isolation: isolate; }
+.design-content [data-node-id='860:5120']::before,
+.design-content [data-node-id='860:5128']::before {
+  content: ''; position: absolute; inset-block: 0; z-index: -1;
+  background: inherit; pointer-events: none;
+}
+.design-content [data-node-id='860:5120']::before { left: 0; right: min(0px, calc((1440px - 100vw) / 2)); }
+.design-content [data-node-id='860:5128']::before { right: 0; left: min(0px, calc((1440px - 100vw) / 2)); }
+.design-content [data-node-id='860:5104'] .d-2b3bdbf669 { height: auto; aspect-ratio: 320 / 256; }
+.design-content [data-node-id='860:5125'],
+.design-content [data-node-id='860:5134'] { position: static; }
+.design-content [data-node-id='860:5121'],
+.design-content [data-node-id='860:5130'] { position: static; }
+.design-content [data-node-id='860:5125']::after,
+.design-content [data-node-id='860:5134']::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+.design-content [data-node-id='860:5125']::after { right: min(0px, calc((1440px - 100vw) / 2)); }
+.design-content [data-node-id='860:5134']::after { left: min(0px, calc((1440px - 100vw) / 2)); }
+/* Keep enough room for the original accents as these rows size around their copy. */
+.design-content [data-node-id='860:5088'],
+.design-content [data-node-id='860:5093'],
+.design-content [data-node-id='860:5098'] { min-height: calc(166 * var(--design-unit)); }
+.design-content [data-node-id='860:5267'] { min-height: calc(456 * var(--design-unit)); }
+.design-content [data-node-id='860:5342'] { min-height: calc(404 * var(--design-unit)); }
+.desktop-layout .design-content .d-e88f0dd487 { min-height: 80px; }
+.design-content [data-node-id='874:8951'] { align-items: stretch; }
+.design-content [data-node-id='874:8951'] > * { height: auto; min-height: calc(560 * var(--design-unit)); }
+.design-content [data-node-id='874:8952'] { isolation: isolate; }
+.design-content [data-node-id='874:8952']::before {
+  content: ''; position: absolute; inset-block: 0; right: 0;
+  left: min(0px, calc((1440px - 100vw) / 2)); background: inherit;
+  z-index: -1; pointer-events: none;
+}
+.design-content [data-node-id='1367:691'] { overflow: visible; }
+.design-content [data-node-id='666:2087'] { height: auto; aspect-ratio: 832 / 336; }
+.design-content [data-node-id='860:5187'],
+.design-content [data-node-id='860:5188'],
+.design-content [data-node-id='860:5189'],
+.design-content [data-node-id='860:5190'] { height: calc(288 * var(--design-unit)); }
+.design-content .programme-steps .programme-step-number {
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; height: calc(36 * var(--design-unit));
+}
+.design-content .programme-step[data-step='01'] .programme-step-number { left: 3.32%; top: 53.13%; width: calc(114 * var(--design-unit)); }
+.design-content .programme-step[data-step='02'] .programme-step-number { left: 28.54%; top: 34.38%; width: calc(138 * var(--design-unit)); }
+.design-content .programme-step[data-step='03'] .programme-step-number { left: 59.07%; top: 16.67%; width: calc(171 * var(--design-unit)); height: calc(33 * var(--design-unit)); }
+.design-content [data-node-id='860:5194'] { top: calc(266 * var(--design-unit)); left: 0; width: 100%; text-align: center; }
+.mobile-layout .design-content .programme-steps { height: calc(232 * var(--design-unit)); }
+.mobile-layout .design-content .programme-step { height: calc(202 * var(--design-unit)); }
+.mobile-layout .design-content .programme-step .programme-step-number { height: calc(26 * var(--design-unit)); }
+.mobile-layout .design-content .programme-step[data-step='01'] .programme-step-number { left: 2.92%; top: 57.43%; width: calc(88 * var(--design-unit)); }
+.mobile-layout .design-content .programme-step[data-step='02'] .programme-step-number { left: 28.65%; top: 37.62%; width: calc(104 * var(--design-unit)); }
+.mobile-layout .design-content .programme-step[data-step='03'] .programme-step-number { left: 59.06%; top: 17.82%; width: calc(130 * var(--design-unit)); }
+.mobile-layout .design-content [data-node-id='866:8495'] { top: calc(210 * var(--design-unit)); left: 0; width: 100%; text-align: center; }
+.design-content [data-node-id='1160:5759'] {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, calc(368 * var(--design-unit)));
+  column-gap: calc(96 * var(--space-unit));
+  row-gap: 0;
+  padding: calc(40 * var(--space-unit)) calc(48 * var(--space-unit)) 0;
+}
+.design-content [data-node-id='1160:5759'] > * { position: relative; inset: auto; min-width: 0; width: 100%; height: auto; }
+.design-content [data-node-id='1160:5761'] { translate: none; }
+.design-content [data-node-id='1160:5762'] { align-self: end; width: calc(100% + 32 * var(--space-unit)); margin-left: calc(-32 * var(--space-unit)); margin-bottom: calc(2 * var(--space-unit)); }
+.design-content [data-node-id='1160:5764'] { margin-top: calc(60 * var(--space-unit)); min-height: calc(324 * var(--space-unit)); }
+.design-content [data-node-id='1160:5764'] > * { width: 100%; }
+.design-content [data-node-id='1160:5768'] { grid-column: 1 / -1; width: calc(100% + 96 * var(--space-unit)); margin-left: calc(-48 * var(--space-unit)); margin-top: calc(30 * var(--space-unit)); height: auto; aspect-ratio: 1440 / 176; }
+.design-content [data-node-id='1160:5769'] { grid-column: 1 / -1; margin-top: calc(72 * var(--space-unit)); padding: 0; }
+.design-content [data-node-id='1160:5775'] { position: absolute; width: calc(160 * var(--design-unit)); height: calc(80 * var(--design-unit)); top: calc(134 * var(--space-unit)); left: calc(24 * var(--space-unit)); }
+.design-content [data-node-id='1411:620'] { grid-column: 1 / -1; height: 108px; width: 100vw; left: calc(50% - 50vw); margin-top: calc(16 * var(--space-unit)); }
+.design-section[data-design-section='860:5246'] { background: var(--white); overflow: clip; }
+.design-section[data-design-section='866:8542'] { background: var(--white); }
+.design-content [data-node-id='860:5247'] { position: relative; width: 100%; height: 1120px; overflow: visible; }
+.design-content [data-node-id='860:5248'] { height: 1280px; gap: calc(24 * var(--space-unit)); width: calc((1552 + 3152 * var(--voice-side-groups, 0)) * var(--design-unit)); left: calc((-56 - 1576 * var(--voice-side-groups, 0)) * var(--design-unit)); }
+.design-section[data-design-section='1398:7044'] { background: var(--white); }
+.design-content [data-node-id='1398:7044'] { overflow: clip; }
+/* Keep the mobile barrel's center on the tripod bearing at (252, 114). */
+.mobile-layout .design-content [data-node-id='1406:683'] { height: calc(196 * var(--design-unit)); }
+.mobile-layout .design-content [data-node-id='1406:684'] { top: calc(148 * var(--design-unit)); }
+.mobile-layout .design-content [data-node-id='1406:690'] {
+  top: calc(-89.67 * var(--design-unit));
+  height: calc(407.347 * var(--design-unit));
+}
+.design-content [data-node-id='1398:7083'], .design-content [data-node-id='1398:7084'], .design-content [data-node-id='1398:7087'] { min-height: calc(140 * var(--space-unit)); }
+.design-content [data-node-id='1398:7090'] { min-height: calc(230 * var(--space-unit)); }
+.design-content [data-node-id='1398:7102'], .design-content [data-node-id='1398:7118'] { min-height: calc(210 * var(--space-unit)); }
+.design-content [data-node-id='1398:7134'] { min-height: calc(42 * var(--space-unit)); }
+.design-content [data-node-id='1398:7061'] { top: calc(541.12 * var(--design-unit)); height: calc(565.76 * var(--design-unit)); }
+.design-content [data-node-id='1398:7061'] [data-name='Scroll spotlight / Barrel + light — rotates around fixed bearing'] { height: calc(448 * var(--design-unit)); }
+.design-content [data-node-id='1127:2324'] { height: 856px; }
+.design-content [data-node-id='1127:2325'] { height: auto; aspect-ratio: 560 / 646.154; }
+.design-content [data-node-id='1127:2335'], .design-content [data-node-id='1127:2337'] { height: auto; aspect-ratio: 336 / 387.692; }
+.design-content [data-node-id='866:8542'] { height: 880px; }
+.design-content [data-node-id='1265:3037'] { min-height: 984px; }
+.design-content [data-node-id='1265:3038'] { height: 884px; top: 52px; }
+.design-content [data-node-id='1265:3039'] { height: 884px; top: 32px; }
+.design-content [data-node-id='1265:3064'] { height: 28px; top: 900px; }
+.design-content [data-node-id='1367:669'] { min-height: 844px; }
+.design-content [data-node-id='860:4959'] { height: 100svh; min-height: 700px; }
+.design-content [data-node-id='860:4960'] { width: 100vw; height: 100%; left: calc(50% - 50vw); }
+.design-content [data-node-id='860:4960'] img { object-fit: cover; }
+.design-content [data-node-id='860:4965'] { top: calc(50% - 208 * var(--design-unit)); height: calc(296 * var(--design-unit)); }
+/* Leave room for the banner's lower panel to open above the status text. */
+.design-content [data-node-id='860:4968'] { top: calc(50% + 140 * var(--design-unit)); }
+.design-content [data-node-id='860:4977'] { top: auto; bottom: 48px; }
+.design-content [data-node-id='866:8315'] { height: 100svh; min-height: 700px; }
+.design-content [data-node-id='866:8316'] { width: 100vw; height: 100%; left: calc(50% - 50vw); }
+.design-content [data-node-id='866:8316'] img { object-fit: cover; }
+.design-content [data-node-id='866:8321'] { left: 50%; transform: translateX(-50%); width: calc(284 * var(--space-unit)); height: calc(148 * var(--space-unit)); top: calc(50% - 146 * var(--space-unit)); }
+.design-content [data-node-id='866:8324'] { top: calc(50% + 44 * var(--space-unit)); }
+.design-content [data-node-id='866:8333'] { top: auto; bottom: 44px; }
+.design-content [data-node-id='1171:580'] { top: auto; bottom: 104px; }
+/* Preserve intrinsic artwork compositions, while ordinary section rows stay in document flow. */
+.mobile-layout .design-content [data-node-id='1168:491'] { height: auto; }
+.mobile-layout .design-content [data-node-id='1169:523'] { width: 100%; }
+.mobile-layout .design-content [data-node-id='1169:525'] { width: 100%; }
+.mobile-layout .design-content [data-node-id='1169:525'] p { font-size: clamp(42px, 14.87cqw, 58px); line-height: 1.05; }
+.mobile-layout .design-content [data-node-id='866:8559'] { top: 112px; right: calc(18 * var(--space-unit)); left: auto; width: calc(160 * var(--space-unit)); height: calc(128 * var(--space-unit)); }
+.mobile-layout .design-content [data-node-id='866:8560'] { --design-unit: var(--space-unit); }
+.mobile-layout .design-content [data-node-id='866:8441'],
+.mobile-layout .design-content [data-node-id='866:8448'] { height: auto; aspect-ratio: 342 / 192; }
+.mobile-layout .design-content [data-node-id='880:9347'] { height: auto; aspect-ratio: 342 / 260.113; }
+/* Mobile speaker directory: two adjoining portrait cards with captions below. */
+.mobile-layout .design-content .mobile-speaker-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 0;
+  width: calc(100% + 48 * var(--space-unit));
+  margin-inline: calc(-24 * var(--space-unit));
+  border-top: 1px solid rgb(11 16 32 / 22%);
+}
+.mobile-layout .design-content .mobile-speaker-card {
+  width: 100%; min-width: 0; gap: 0;
+  border-bottom: 1px solid rgb(11 16 32 / 22%);
+}
+.mobile-layout .design-content .mobile-speaker-card:nth-child(odd) { border-right: 1px solid rgb(11 16 32 / 22%); }
+.mobile-layout .design-content .mobile-speaker-portrait { width: 100%; height: auto; aspect-ratio: 1; }
+.mobile-layout .design-content .mobile-speaker-portrait > div { inset: 0; width: 100%; height: 100%; }
+.mobile-layout .design-content .mobile-speaker-portrait img { object-fit: contain; object-position: bottom; }
+.mobile-layout .design-content .mobile-speaker-caption { width: 100%; padding: 16px 12px; gap: 8px; }
+.mobile-layout .design-content .mobile-speaker-caption :is(p, div) { width: 100%; min-width: 0; }
+.mobile-layout .design-content .mobile-speaker-caption > p:nth-child(2) { font-size: clamp(16px, 4.6cqw, 22px); line-height: 1.2; }
+.mobile-layout .design-content .mobile-speaker-caption > p:nth-child(3),
+.mobile-layout .design-content .mobile-speaker-caption > div p { font-size: 13px; line-height: 1.5; }
+.mobile-layout .design-content .mobile-speaker-caption [data-node-id='1170:595'] { flex-direction: column; align-items: flex-start; gap: 12px; }
+.mobile-layout .design-content .mobile-speaker-caption [data-node-id='1170:597'] { width: 48px; height: 36px; align-self: flex-end; }
+/* These wrappers crop Figma's larger divider export, not the repeated CSS border. */
+.mobile-layout .design-content .d-d2efcd5d06,
+.mobile-layout .design-content .d-11f997cef7,
+.mobile-layout .design-content .d-74ac1ded28,
+.mobile-layout .design-content [data-node-id='1367:816'] { overflow: visible; }
+/* Preserve the coordinate system inside the ticket illustration. */
+.mobile-layout .design-content [data-node-id='1265:3122'] { --design-unit: var(--space-unit); width: min(100%, 390px); height: calc(984 * var(--space-unit)); margin-inline: auto; }
+.mobile-layout .design-content [data-node-id='1265:3127'] { top: calc(48 * var(--space-unit)); }
+.mobile-layout .design-content [data-node-id='1265:3128'] { top: calc(88 * var(--space-unit)); height: calc(40 * var(--space-unit)); }
+.mobile-layout .design-content [data-node-id='1265:3129'] { top: calc(98 * var(--space-unit)); }
+.mobile-layout .design-content [data-node-id='1265:3130'] { --ticket-scale: calc(var(--space-unit) / 1px); width: calc(342 * var(--space-unit)); height: calc(392 * var(--space-unit)); top: calc(136 * var(--space-unit)); left: 50%; transform: translateX(-50%); }
+.ticket-artwork { --design-unit: 1px; --space-unit: 1px; position: relative; width: 342px; height: 392px; transform: scale(var(--ticket-scale)); transform-origin: top left; }
+.design-content [data-node-id='1229:2241'] { --ticket-scale: calc(var(--design-unit) / 1px); height: calc(592 * var(--design-unit)); }
+.ticket-artwork-desktop { width: 672px; height: 592px; }
+.design-content [data-node-id='1367:680'] { --ticket-scale: calc(var(--design-unit) / 1px); height: calc(700.387 * var(--design-unit)); }
+.design-content [data-node-id='1367:680'] > * { --design-unit: 1px; --space-unit: 1px; scale: var(--ticket-scale); }
+.mobile-layout .design-content [data-node-id='1265:3131'] { top: calc(552 * var(--space-unit)); }
+.mobile-layout .design-content [data-node-id='1265:3136'] { top: calc(876 * var(--space-unit)); }
+.design-content [role='checkbox'] { width: 24px; height: 24px; min-height: 24px; flex: none; }
+.design-content [data-name='Arrow'] { width: 24px; height: 24px; flex: none; }
+.mobile-layout .design-content [data-node-id='1367:822'] { --design-unit: var(--space-unit); width: min(342px, calc(342 * var(--space-unit))); height: 216px; margin-inline: auto; }
+.mobile-layout .design-content [data-node-id='1367:801'] { --design-unit: var(--space-unit); --ticket-scale: calc(var(--space-unit) / 1px); width: calc(342 * var(--space-unit)); height: calc(402.98 * var(--space-unit)); margin-inline: auto; }
+.mobile-layout .design-content [data-node-id='1367:802'] { --design-unit: 1px; --space-unit: 1px; transform: scale(var(--ticket-scale)); transform-origin: top left; }
