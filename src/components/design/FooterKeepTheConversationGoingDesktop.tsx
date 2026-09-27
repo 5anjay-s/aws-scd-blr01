@@ -1,3 +1,4 @@
+import { SiteBrand } from "../SiteBrand";
 import { WovenRibbon } from "../WovenRibbon";
 import { SiteLink } from "../SiteLink";
 import { siteLinks } from "../../site-config";
@@ -75,12 +76,7 @@ export default function FooterKeepTheConversationGoingDesktop() {
       </div>
       <div className="d-e2d3cf23e7" data-node-id="1287:642" data-name="Footer / Quiet divider" />
       <div className="d-cd7fcf8b0a" data-node-id="1287:625" data-name="Footer / Utility">
-        <div className="d-6792f5ce03" data-node-id="1301:702" data-name="Footer / Brand lockup">
-          <div className="d-8a7b794c07" data-node-id="1301:703" data-name="Logo placeholder" aria-hidden="true" />
-          <SiteLink className="d-362449b657" data-node-id="860:5360" href={"/#home"}>
-            aws / STUDENT COMMUNITY DAY
-          </SiteLink>
-        </div>
+        <SiteBrand data-node-id="1301:702" />
         <p className="d-393807428f" data-node-id="860:5361">
           STUDENT LED. COMMUNITY POWERED.
         </p>

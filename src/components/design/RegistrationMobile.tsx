@@ -1,3 +1,4 @@
+import { SiteBrand } from "../SiteBrand";
 import { SiteHeader } from "../SiteHeader";
 import { WovenRibbon } from "../WovenRibbon";
 import { SiteCheckbox, SiteLink } from "../SiteLink";
@@ -78,13 +79,7 @@ export default function RegistrationMobile() {
   return (
     <div className="d-3c9f0988a3" data-node-id="1367:780" data-name="Registration — Mobile">
       <SiteHeader className="d-7794366a59 site-header" data-node-id="1367:781" data-name="Navigation / Mobile">
-        <div className="d-865ada786d" data-node-id="1367:782" data-name="Navigation / Brand">
-          <div className="d-7efb04617a" data-node-id="1367:783" data-name="Logo placeholder" aria-hidden="true" />
-          <div className="d-1c6193c990" data-node-id="1367:785">
-            <p className="d-522924dbde">aws / STUDENT</p>
-            <p className="d-4f5b4a54fa">COMMUNITY DAY</p>
-          </div>
-        </div>
+        <SiteBrand data-node-id="1367:782" />
         <SiteLink className="d-8213d7a805" data-node-id="1367:786" data-name="Navigation / Explore" href={"/#experience"}>
           <p className="d-d21e8bada1" data-node-id="1367:787">
             Explore
@@ -330,13 +325,7 @@ export default function RegistrationMobile() {
         <div className="d-116660ca67" data-node-id="1476:857" data-name="Footer / Quiet divider" />
         <div className="d-3c2f073db3" data-node-id="1476:858" data-name="Footer / Utility">
           <div className="d-f6b8f3f4a8" data-node-id="1476:859" data-name="Footer / Brand and return">
-            <div className="d-220e469696" data-node-id="1476:860" data-name="Footer / Brand lockup">
-              <div className="d-8a7b794c07" data-node-id="1476:861" data-name="Logo placeholder" aria-hidden="true" />
-              <div className="d-016cb89607" data-node-id="1476:863">
-                <p className="d-9f251d856d">aws / STUDENT</p>
-                <p className="d-8c8cd1946c">COMMUNITY DAY</p>
-              </div>
-            </div>
+            <SiteBrand data-node-id="1476:860" />
             <SiteLink className="d-2458e22cbe" data-node-id="1476:864" data-name="Footer / Back to top" href={"#top"}>
               <p className="d-fe8d7a0908" data-node-id="1476:865">
                 Back to top ↑

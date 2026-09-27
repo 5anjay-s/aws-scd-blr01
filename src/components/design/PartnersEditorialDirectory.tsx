@@ -1,5 +1,7 @@
 // Source: Figma 00/ Final, node 1398:7044.
 import { DesignMotion } from "../DesignMotion";
+import { SponsorLogo } from "../SponsorLogo";
+import { siteSponsors } from "../../site-config";
 const imgScrollSpotlightTripodFixedAtBottomRight = "/assets/1398-7044-16b24.svg";
 const imgEyepieceSteppedSilhouette = "/assets/1398-7044-0e0d2.svg";
 const imgEyepieceReflectedPaper = "/assets/1398-7044-a2db3.svg";
@@ -67,8 +69,8 @@ export default function PartnersEditorialDirectory() {
         </div>
         <div className="d-eb23faf569" data-node-id="1398:7087" data-name="Directory / Announcement status">
           <div className="d-a5fe29e781" data-node-id="1398:7088">
-            <p className="d-4cce5c8f2c">Good company is on the way.</p>
-            <p className="d-5009bb455e">Announcements coming soon.</p>
+            <p className="d-4cce5c8f2c">Meet the organizations</p>
+            <p className="d-5009bb455e">helping make the day possible.</p>
           </div>
         </div>
       </div>
@@ -89,16 +91,14 @@ export default function PartnersEditorialDirectory() {
               <p className="d-8c8cd1946c">become possibility.</p>
             </div>
           </div>
-          <div className="d-395c66bc83" data-node-id="1398:7097" data-name="Directory / Pending announcements">
-            <div className="d-2b73e6011f" data-node-id="1398:7098" data-name="FEATURED PARTNER">
+          <div className="d-395c66bc83" data-node-id="1398:7097" data-name="Directory / Title sponsor">
+            <div className="d-2b73e6011f" data-node-id="1398:7098" data-name="Title sponsor / AWS">
               <p className="d-356af2f3f4" data-node-id="1398:7099">
-                FEATURED PARTNER
+                {siteSponsors.title.role}
               </p>
-              <p className="d-4ccab95f30" data-node-id="1398:7100">
-                To be announced
-              </p>
+              <SponsorLogo sponsor="title" data-node-id="1398:7100" />
               <p className="d-24c3b48b18" data-node-id="1398:7101">
-                OUR FIRST PARTNER REVEAL IS ON THE WAY
+                AMAZON WEB SERVICES
               </p>
             </div>
           </div>
@@ -120,74 +120,21 @@ export default function PartnersEditorialDirectory() {
               <p className="d-8c8cd1946c">with good company.</p>
             </div>
           </div>
-          <div className="d-a79a2ffad7" data-node-id="1398:7109" data-name="Directory / Pending announcements">
-            <div className="d-36d4b0d1ec" data-node-id="1398:7110" data-name="ECOSYSTEM PARTNER / 01">
+          <div className="d-a79a2ffad7" data-node-id="1398:7109" data-name="Directory / Supporting sponsors">
+            <div className="d-36d4b0d1ec" data-node-id="1398:7110" data-name="Powered by / OpenAI">
               <p className="d-cd1f4eb9ef" data-node-id="1398:7111">
-                ECOSYSTEM PARTNER / 01
+                {siteSponsors.poweredBy.role}
               </p>
-              <div className="d-aba7892e6a" data-node-id="1398:7112">
-                <p className="d-40ace226fd">To be</p>
-                <p className="d-fe6c23de1d">announced</p>
-              </div>
-              <p className="d-d5d31cdd54" data-node-id="1398:7113">{`NAME & LOGO COMING SOON`}</p>
+              <SponsorLogo sponsor="poweredBy" data-node-id="1398:7112" />
             </div>
-            <div className="d-36d4b0d1ec" data-node-id="1398:7114" data-name="ECOSYSTEM PARTNER / 02">
+            <div className="d-36d4b0d1ec" data-node-id="1398:7114" data-name="Workshop sponsor / MongoDB">
               <p className="d-cd1f4eb9ef" data-node-id="1398:7115">
-                ECOSYSTEM PARTNER / 02
+                {siteSponsors.workshop.role}
               </p>
-              <div className="d-aba7892e6a" data-node-id="1398:7116">
-                <p className="d-40ace226fd">To be</p>
-                <p className="d-fe6c23de1d">announced</p>
-              </div>
-              <p className="d-d5d31cdd54" data-node-id="1398:7117">{`NAME & LOGO COMING SOON`}</p>
+              <SponsorLogo sponsor="workshop" data-node-id="1398:7116" />
             </div>
           </div>
         </div>
-      </div>
-      <div className="d-6499b30df5" data-node-id="1398:7118" data-name="Directory / 03 / COMMUNITY">
-        <div className="d-07f84ce0fa" data-node-id="1398:7119" data-name="Rule" />
-        <div className="d-70d88ac505" data-node-id="1398:7120" data-name="Directory / Unboxed partner row">
-          <div className="d-c8c0226a60" data-node-id="1398:7121" data-name="Directory / Category">
-            <p className="d-65cb95bc55" data-node-id="1398:7122">
-              03 / COMMUNITY
-            </p>
-            <div className="d-5fe2d73b11" data-node-id="1398:7123">
-              <p className="d-8305ee571e">Local roots.</p>
-              <p className="d-e358ca9dbc">New routes.</p>
-            </div>
-            <div className="d-7958fc7b6f" data-node-id="1398:7124">
-              <p className="d-9f251d856d">Connecting builders</p>
-              <p className="d-8c8cd1946c">beyond the day.</p>
-            </div>
-          </div>
-          <div className="d-a79a2ffad7" data-node-id="1398:7125" data-name="Directory / Pending announcements">
-            <div className="d-36d4b0d1ec" data-node-id="1398:7126" data-name="COMMUNITY PARTNER / 01">
-              <p className="d-cd1f4eb9ef" data-node-id="1398:7127">
-                COMMUNITY PARTNER / 01
-              </p>
-              <div className="d-aba7892e6a" data-node-id="1398:7128">
-                <p className="d-40ace226fd">To be</p>
-                <p className="d-fe6c23de1d">announced</p>
-              </div>
-              <p className="d-d5d31cdd54" data-node-id="1398:7129">{`NAME & LOGO COMING SOON`}</p>
-            </div>
-            <div className="d-36d4b0d1ec" data-node-id="1398:7130" data-name="COMMUNITY PARTNER / 02">
-              <p className="d-cd1f4eb9ef" data-node-id="1398:7131">
-                COMMUNITY PARTNER / 02
-              </p>
-              <div className="d-aba7892e6a" data-node-id="1398:7132">
-                <p className="d-40ace226fd">To be</p>
-                <p className="d-fe6c23de1d">announced</p>
-              </div>
-              <p className="d-d5d31cdd54" data-node-id="1398:7133">{`NAME & LOGO COMING SOON`}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="d-c113713a66" data-node-id="1398:7134" data-name="Directory / Status footnote">
-        <p className="d-6d9fe254c0" data-node-id="1398:7135">
-          ANNOUNCEMENTS COMING SOON.
-        </p>
       </div>
     </div>
   );

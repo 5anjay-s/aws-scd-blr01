@@ -1,3 +1,4 @@
+import { SiteBrand } from "../SiteBrand";
 import { SiteHeader } from "../SiteHeader";
 import { WovenRibbon } from "../WovenRibbon";
 import { SignalStitch } from "../SignalStitch";
@@ -16,10 +17,7 @@ export default function TechnicalMobile() {
   return (
     <div className="d-3c9f0988a3" data-node-id="874:9123" data-name="Technical — Mobile">
       <SiteHeader className="d-db11631e53 site-header" data-node-id="874:9124" data-name="Mobile v2 / Header">
-        <div className="d-ba0a8a8bff" data-node-id="874:9125">
-          <p className="d-7519be8e79">aws / STUDENT</p>
-          <p className="d-95907800fd">COMMUNITY DAY</p>
-        </div>
+        <SiteBrand data-node-id="874:9125" />
         <SiteLink className="d-5760172eb5" data-node-id="874:9126" href="/tracks">
           <p className="d-95907800fd">Explore</p>
         </SiteLink>
@@ -262,13 +260,7 @@ export default function TechnicalMobile() {
         <div className="d-116660ca67" data-node-id="1476:691" data-name="Footer / Quiet divider" />
         <div className="d-3c2f073db3" data-node-id="1476:692" data-name="Footer / Utility">
           <div className="d-f6b8f3f4a8" data-node-id="1476:693" data-name="Footer / Brand and return">
-            <div className="d-220e469696" data-node-id="1476:694" data-name="Footer / Brand lockup">
-              <div className="d-8a7b794c07" data-node-id="1476:695" data-name="Logo placeholder" aria-hidden="true" />
-              <div className="d-016cb89607" data-node-id="1476:697">
-                <p className="d-9f251d856d">aws / STUDENT</p>
-                <p className="d-8c8cd1946c">COMMUNITY DAY</p>
-              </div>
-            </div>
+            <SiteBrand data-node-id="1476:694" />
             <SiteLink className="d-2458e22cbe" data-node-id="1476:698" data-name="Footer / Back to top" href={"#top"}>
               <p className="d-fe8d7a0908" data-node-id="1476:699">
                 Back to top ↑

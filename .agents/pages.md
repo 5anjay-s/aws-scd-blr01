@@ -6,4 +6,4 @@ Keep paired compositions aligned with the approved copy, artwork, and behavior. 
 
 Retain imported Figma node IDs. Navigation uses `SiteLink` with clean paths, while homepage section IDs are assigned by App. Update section paths and legacy aliases in `src/navigation.ts` when changing URLs.
 
-Do not add a second route tree or duplicate the active navigation. `SiteHeader` moves each page's existing navigation into the shared sticky header host. Preserve empty logo placeholders until the user supplies replacement artwork.
+Do not add a second route tree or duplicate the active navigation. `SiteHeader` moves each page's existing navigation into the shared sticky header host. `SiteBrand` uses the original Open Passage logo with small aws lettering underneath and a single-line event name to its right. BLR is cyan.

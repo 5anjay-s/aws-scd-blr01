@@ -1,3 +1,4 @@
+import { SiteBrand } from "../SiteBrand";
 import { SiteHeader } from "../SiteHeader";
 import { SignalStitch } from "../SignalStitch";
 import { HeroTitle, HeroTitleWord } from "../HeroTitle";
@@ -17,13 +18,7 @@ export default function MobileHeroDesktopAligned() {
   return (
     <div className="d-0b16a12d9f" data-node-id="1168:491" data-name="Mobile / hero — Desktop aligned">
       <SiteHeader className="d-7794366a59 site-header" data-node-id="1169:507" data-name="Navigation / Mobile">
-        <div className="d-865ada786d" data-node-id="1169:508" data-name="Navigation / Brand">
-          <div className="d-7efb04617a" data-node-id="1169:509" data-name="Logo placeholder" aria-hidden="true" />
-          <div className="d-1c6193c990" data-node-id="1169:515">
-            <p className="d-522924dbde">aws / STUDENT</p>
-            <p className="d-4f5b4a54fa">COMMUNITY DAY</p>
-          </div>
-        </div>
+        <SiteBrand data-node-id="1169:508" />
         <SiteLink className="d-8213d7a805" data-node-id="1169:516" data-name="Navigation / Explore" href={"/#experience"}>
           <p className="d-d21e8bada1" data-node-id="1169:517">
             Explore

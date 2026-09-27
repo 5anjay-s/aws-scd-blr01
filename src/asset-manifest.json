@@ -1258,5 +1258,38 @@
     "component": "Group1",
     "variable": "imgDitherCorner",
     "bytes": 2997
+  },
+  {
+    "file": "public/assets/1590-770-568cf.svg",
+    "component": "SiteBrand",
+    "variable": "logoArtwork",
+    "bytes": 604
+  },
+  {
+    "file": "public/assets/1590-802-cfe72.svg",
+    "component": "SiteFavicon",
+    "variable": "faviconArtwork",
+    "bytes": 464
+  },
+  {
+    "file": "public/assets/sponsors/aws.svg",
+    "component": "SponsorLogo",
+    "variable": "awsLogo",
+    "bytes": 7414,
+    "source": "https://aws.amazon.com/"
+  },
+  {
+    "file": "public/assets/sponsors/mongodb.svg",
+    "component": "SponsorLogo",
+    "variable": "mongodbLogo",
+    "bytes": 11428,
+    "source": "https://webimages.mongodb.com/_com_assets/cms/kuyjf3vea2hg34taa-horizontal_default_slate_blue.svg"
+  },
+  {
+    "file": "public/assets/sponsors/openai.svg",
+    "component": "SponsorLogo",
+    "variable": "openaiLogo",
+    "bytes": 2210,
+    "source": "https://cdn.openai.com/brand/OpenAI-Logos-2025.zip"
   }
 ]

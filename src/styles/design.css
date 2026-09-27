@@ -1,14 +1,12 @@
 /* Plain CSS compiled from the exact 00/ Final component styles. */
 .d-002b86814d{overflow-wrap:break-word;font-family:"Geist Mono",monospace;font-weight:400;line-height:26px;position:relative;flex-shrink:0;font-size:16px;color:var(--navy,#0b1020);width:342px}
 .d-002ccdd06f{line-height:48px}
-.d-0059adc6e5{overflow-wrap:break-word;font-family:"Geist Mono",monospace;font-weight:400;line-height:1.5;position:relative;flex-shrink:0;font-size:16px;color:var(--white,#f8fafc);width:440px}
 .d-009dfc7898{line-height:119px}
 .d-00bdb0ea46{line-height:45px;margin-bottom:0}
 .d-00c843dfdd{align-content:stretch;display:flex;gap:var(--space-64,64px);height:292px;align-items:flex-start;position:relative;flex-shrink:0;width:1344px}
 .d-01015d3743{position:absolute;display:flex;height:700.387px;align-items:center;justify-content:center;left:784.83px;top:72px;width:594.402px}
 .d-0105d30b12{height:54px;position:relative;flex-shrink:0;width:720px}
 .d-015f0ff7c6{line-height:68px}
-.d-016cb89607{overflow-wrap:break-word;font-family:"Geist Mono",monospace;font-weight:400;line-height:0;position:relative;flex-shrink:0;font-size:11px;color:var(--white,#f8fafc);width:196px}
 .d-01b8dd4d38{overflow-wrap:break-word;font-family:"Azeret Mono",monospace;font-weight:500;line-height:0;position:relative;flex-shrink:0;font-size:28px;color:var(--white,#f8fafc);letter-spacing:-1.12px;width:384px}
 .d-0207f9dc9a{overflow-wrap:break-word;position:absolute;font-family:"Azeret Mono",monospace;font-weight:500;line-height:20px;left:44px;font-size:14px;color:var(--navy,#0b1020);top:98px;width:302px}
 .d-02422be0a0{background-color:var(--navy,#0b1020);align-content:stretch;display:flex;flex-direction:column;gap:var(--space-16,16px);align-items:flex-start;padding:var(--space-48,48px);position:relative;width:100%;height:100%}
@@ -113,7 +111,6 @@
 .d-1b878f8f90{background-color:var(--white,#f8fafc);height:1px;opacity:0.22;position:relative;flex-shrink:0;width:448px}
 .d-1be0a328f7{overflow-wrap:break-word;font-family:"Geist Mono",monospace;font-weight:400;line-height:18px;position:relative;flex-shrink:0;font-size:10px;color:var(--lime,#bef264);width:342px}
 .d-1c5e80253f{overflow-wrap:break-word;font-family:"Geist Mono",monospace;font-weight:400;line-height:0;position:relative;flex-shrink:0;font-size:11px;color:var(--cyan,#22d3ee);width:464px}
-.d-1c6193c990{overflow-wrap:break-word;font-family:"Geist Mono",monospace;font-weight:400;line-height:0;position:relative;flex-shrink:0;font-size:11px;color:var(--white,#f8fafc);width:206px}
 .d-1c9404c1d4{overflow-wrap:break-word;background-color:var(--orange,#f90);align-content:stretch;display:flex;flex-direction:column;font-family:"Geist Mono",monospace;font-weight:400;gap:var(--space-8,8px);align-items:flex-start;line-height:18px;padding:var(--space-24,24px);position:relative;flex-shrink:0;font-size:12px;color:var(--navy,#0b1020);width:390px}
 .d-1cdf9c61a0{overflow-wrap:break-word;font-family:"Azeret Mono",monospace;font-weight:500;line-height:0;position:relative;flex-shrink:0;font-size:38px;color:var(--violet,#a78bfa);letter-spacing:-1.52px;width:342px}
 .d-1ce5ee9503{background-color:var(--navy,#0b1020);align-content:stretch;display:flex;flex-direction:column;gap:var(--space-24,24px);height:560px;align-items:flex-start;padding:var(--space-48,48px);position:relative;flex-shrink:0;width:480px}
@@ -138,7 +135,6 @@
 .d-218b1f732f{overflow-wrap:break-word;font-family:"Geist Mono",monospace;font-weight:400;line-height:16px;position:relative;flex-shrink:0;font-size:10px;color:var(--cyan,#22d3ee);width:342px}
 .d-21e0852790{height:40px;position:relative;flex-shrink:0;width:320px}
 .d-21f089ff85{background-color:var(--navy,#0b1020);align-content:stretch;display:flex;flex-direction:column;gap:var(--space-32,32px);align-items:flex-start;padding-bottom:40px;padding-top:156px;padding-left:var(--space-48,48px);padding-right:var(--space-48,48px);position:relative;width:100%;height:100%}
-.d-220e469696{align-content:stretch;display:flex;gap:12px;align-items:center;position:relative;flex-shrink:0;width:232px}
 .d-226d24be45{display:block;cursor:pointer;height:44px;line-height:0;position:relative;flex-shrink:0;font-size:13px;text-align:right;width:240px}
 .d-229a3a46e3{position:absolute;background-color:var(--violet,#a78bfa);height:2px;left:0;opacity:0.65;top:111px;width:52px}
 .d-22bea6fb2f{position:absolute;height:387.692px;left:0;top:0;width:336px}
@@ -236,7 +232,6 @@
 .d-346f0c017b{position:absolute;height:52px;left:608px;top:140px;width:48px}
 .d-353266b000{line-height:18px;position:relative;flex-shrink:0;font-size:12px;width:784px}
 .d-356af2f3f4{font-family:"Geist Mono",monospace;font-weight:400;line-height:18px;position:relative;flex-shrink:0;font-size:12px;width:672px}
-.d-362449b657{overflow-wrap:break-word;font-family:"Geist Mono",monospace;font-weight:400;line-height:20px;position:relative;flex-shrink:0;font-size:13px;color:var(--white,#f8fafc);width:404px}
 .d-3640469606{position:relative;flex-shrink:0;width:40px;height:40px}
 .d-36d4b0d1ec{align-content:stretch;display:flex;flex-direction:column;gap:12px;height:161px;align-items:flex-start;position:relative;flex-shrink:0;width:312px}
 .d-36e152c572{display:block;position:relative;flex-shrink:0}
@@ -445,7 +440,6 @@
 .d-662118bfb8{height:30px;position:relative;flex-shrink:0;width:48px}
 .d-66900ceb90{overflow-wrap:break-word;position:absolute;font-family:"Azeret Mono",monospace;font-weight:500;line-height:20px;left:231.53px;font-size:19px;color:var(--navy,#0b1020);top:45.4px;letter-spacing:-0.76px;width:64px}
 .d-66c2241b81{background-color:var(--navy,#0b1020);height:1px;position:relative;flex-shrink:0;width:1344px}
-.d-6792f5ce03{align-content:stretch;display:flex;gap:12px;align-items:center;position:relative;flex-shrink:0;width:448px}
 .d-67b969e89a{position:absolute;inset:43.75% 28.57% 46.43% 57.14%}
 .d-67ca39aa4a{font-family:"Geist Mono",monospace;font-weight:400;line-height:16px;position:relative;flex-shrink:0;font-size:11px;width:416px}
 .d-6805fbd7b7{font-family:"Geist Mono",monospace;font-weight:400;line-height:20px;position:relative;flex-shrink:0;font-size:12px;width:48px}
@@ -549,7 +543,6 @@
 .d-7e6bfdd719{align-content:stretch;display:flex;flex-direction:column;gap:var(--space-32,32px);align-items:flex-start;overflow:clip;position:relative;flex-shrink:0;width:688px}
 .d-7ecd3c2bde{overflow-wrap:break-word;font-family:"Azeret Mono",monospace;font-weight:500;line-height:51px;position:relative;flex-shrink:0;font-size:48px;color:var(--cyan,#22d3ee);letter-spacing:-1.92px;width:342px}
 .d-7ee4ef429a{position:absolute;background-color:var(--navy,#0b1020);align-content:stretch;display:flex;height:80px;align-items:center;justify-content:space-between;left:0;padding-left:48px;padding-right:48px;top:0;width:1439px}
-.d-7efb04617a{position:relative;flex-shrink:0;width:20px;height:20px}
 .d-7efb926afd{position:relative;flex-shrink:0;text-align:right;width:342px}
 .d-7f75f43100{position:absolute;display:flex;height:392.468px;align-items:center;justify-content:flex-end;left:-523.49px;top:-162.19px;width:669.202px}
 .d-7fe91255b2{background-color:var(--white,#f8fafc);align-content:stretch;display:flex;flex-direction:column;align-items:flex-start;position:relative;width:100%;height:100%}
@@ -583,7 +576,6 @@
 .d-8555103173{overflow-wrap:break-word;position:absolute;font-family:"Azeret Mono",monospace;font-weight:500;line-height:28px;left:36px;font-size:26px;color:var(--navy,#0b1020);top:164px;letter-spacing:-1.04px;width:64px}
 .d-85e8a98f69{font-family:"Azeret Mono",monospace;font-weight:500;line-height:0;position:relative;flex-shrink:0;font-size:40px;letter-spacing:-1.6px;width:472px}
 .d-8658b5b0ac{background-color:var(--navy,#0b1020);align-content:stretch;display:flex;flex-direction:column;gap:var(--space-16,16px);align-items:flex-start;padding:var(--space-24,24px);position:relative;flex-shrink:0;width:390px}
-.d-865ada786d{align-content:stretch;display:flex;gap:12px;align-items:center;position:relative;flex-shrink:0;width:238px}
 .d-86b35f0797{background-color:var(--orange,#f90);align-content:stretch;display:flex;gap:var(--space-24,24px);align-items:center;justify-content:space-between;padding-left:var(--space-24,24px);padding-right:var(--space-24,24px);padding-top:var(--space-16,16px);padding-bottom:var(--space-16,16px);position:relative;flex-shrink:0;width:336px}
 .d-86d46de7df{flex:none;rotate:180deg}
 .d-87e8379a2b{position:absolute;height:80px;left:1168px;top:328px;width:160px}
@@ -596,7 +588,6 @@
 .d-88eab127a3{position:absolute;inset:28.57% 70.54% 59.82% 23.21%}
 .d-897a3c8a4f{line-height:22px;margin-bottom:0}
 .d-8a64c4dc5c{overflow-wrap:break-word;align-content:stretch;display:flex;flex-direction:column;gap:var(--space-16,16px);align-items:flex-start;position:relative;flex-shrink:0;color:var(--navy,#0b1020);width:800px}
-.d-8a7b794c07{position:relative;flex-shrink:0;width:24px;height:24px}
 .d-8aac1916c9{align-content:stretch;display:flex;flex-direction:column;gap:var(--space-8,8px);height:48px;align-items:flex-start;position:relative;flex-shrink:0;width:416px}
 .d-8ac2978ed0{position:absolute;height:663.917px;left:-330.54px;top:-123.26px;width:995.875px}
 .d-8acd9593db{line-height:26px;position:relative;flex-shrink:0;font-size:17px;width:712px}
@@ -772,7 +763,6 @@
 .d-b9789abc71{line-height:13px;margin-bottom:0}
 .d-b9b760d314{position:absolute;inset:0;max-width:none;object-fit:contain;pointer-events:none;width:100%;height:100%}
 .d-b9e36edfd0{overflow-wrap:break-word;position:absolute;font-family:"Geist Mono",monospace;font-weight:400;line-height:17px;left:14px;font-size:11px;color:var(--lime,#bef264);top:266px;width:430px}
-.d-ba0a8a8bff{position:relative;flex-shrink:0;font-size:11px;color:var(--white,#f8fafc);width:232px}
 .d-ba765cc2f2{font-family:"Azeret Mono",monospace;font-weight:500;line-height:25px;position:relative;flex-shrink:0;font-size:24px;letter-spacing:-0.96px;width:342px}
 .d-bc163b9ca8{font-family:"Azeret Mono",monospace;font-weight:500;line-height:59px;position:relative;flex-shrink:0;font-size:56px;letter-spacing:-2.24px;width:960px}
 .d-bc1cc41ab7{align-content:stretch;display:flex;flex-direction:column;gap:var(--space-16,16px);align-items:flex-start;overflow:clip;position:relative;flex-shrink:0;width:480px}
@@ -818,7 +808,6 @@
 .d-c436757d44{font-family:"Geist Mono",monospace;font-weight:400;line-height:22px;position:relative;flex-shrink:0;font-size:14px;width:368px;white-space:pre-wrap}
 .d-c46b257eb5{position:absolute;height:104px;left:16px;top:16px;width:640px}
 .d-c4c7f38125{background-color:var(--violet,#a78bfa);align-content:stretch;display:flex;flex-direction:column;gap:var(--space-24,24px);align-items:flex-start;padding:var(--space-24,24px);position:relative;flex-shrink:0;width:342px}
-.d-c4da47cd12{position:absolute;left:16px;width:24px;height:24px;top:28px}
 .d-c501c3aa8c{font-family:"Geist Mono",monospace;font-weight:400;line-height:26px;position:relative;flex-shrink:0;font-size:17px;width:672px}
 .d-c509c55bf1{overflow-wrap:break-word;font-family:"Geist Mono",monospace;font-weight:400;line-height:23px;position:relative;flex-shrink:0;font-size:15px;color:var(--cyan,#22d3ee);width:342px}
 .d-c5133ff0d4{position:absolute;inset:37.62% 0 0 28.65%}
@@ -1054,7 +1043,6 @@
 .d-fde4eefad4{background-color:var(--orange,#f90);position:relative;flex-shrink:0;width:12px;height:12px}
 .d-fded5a1cec{overflow-wrap:break-word;align-content:stretch;display:flex;flex-direction:column;font-family:"Geist Mono",monospace;font-weight:400;gap:var(--space-8,8px);align-items:flex-start;position:relative;flex-shrink:0;color:var(--navy,#0b1020);width:608px}
 .d-fe15f8978d{background-color:var(--white,#f8fafc);align-content:stretch;cursor:pointer;display:flex;gap:var(--space-24,24px);height:56px;align-items:center;padding-left:var(--space-24,24px);padding-right:var(--space-24,24px);padding-top:var(--space-16,16px);padding-bottom:var(--space-16,16px);position:relative;flex-shrink:0;width:342px}
-.d-fe447388c7{overflow-wrap:break-word;font-family:"Geist Mono",monospace;font-weight:400;line-height:1.5;position:relative;flex-shrink:0;font-size:16px;color:var(--white,#f8fafc);width:360px}
 .d-fe6c23de1d{line-height:38px}
 .d-fe6c6fa3bf{align-content:stretch;display:flex;flex-direction:column;gap:var(--space-24,24px);align-items:flex-start;position:relative;flex-shrink:0;width:96px}
 .d-fe8d7a0908{overflow-wrap:break-word;font-family:"Geist Mono",monospace;font-weight:400;line-height:18px;position:relative;flex-shrink:0;font-size:10px;color:var(--white,#f8fafc);width:86px}

@@ -5,3 +5,9 @@ export const siteLinks = {
   linkedin: '',
   instagram: '',
 };
+
+export const siteSponsors = {
+  title: { role: 'TITLE SPONSOR', name: 'AWS', logo: '/assets/sponsors/aws.svg' },
+  poweredBy: { role: 'POWERED BY', name: 'OpenAI', logo: '/assets/sponsors/openai.svg' },
+  workshop: { role: 'WORKSHOP SPONSOR', name: 'MongoDB', logo: '/assets/sponsors/mongodb.svg' },
+};

@@ -1,3 +1,4 @@
+import { SiteBrand } from "../SiteBrand";
 import { SiteHeader } from "../SiteHeader";
 import { RegistrationButton } from "../RegistrationButton";
 import { SiteLink } from "../SiteLink";
@@ -22,9 +23,7 @@ export default function Group1() {
         <img alt="" src={imgDitherCorner} />
       </div>
       <SiteHeader className="d-7ee4ef429a site-header" data-node-id="860:4980" data-name="Navigation v2">
-        <SiteLink className="d-fe447388c7" data-node-id="860:4981" href={"/#home"}>
-          aws / STUDENT COMMUNITY DAY
-        </SiteLink>
+        <SiteBrand data-node-id="860:4981" />
         <div className="d-06d21171a1" data-node-id="860:4982" data-name="Nav links v2">
           <SiteLink className="d-36e152c572" data-node-id="860:4983" href={"/#experience"}>
             <p>
@@ -52,7 +51,6 @@ export default function Group1() {
           </SiteLink>
         </div>
         <RegistrationButton />
-        <div className="d-c4da47cd12" data-node-id="860:4989" data-name="Logo placeholder" aria-hidden="true" />
       </SiteHeader>
       <HeroTitle className="d-0f614aab94" data-node-id="860:5000" role="heading" aria-level={1} data-name="Masthead v2">
         <div className="d-1a6510fcd2" data-node-id="860:5001" data-name="Masthead upper band">

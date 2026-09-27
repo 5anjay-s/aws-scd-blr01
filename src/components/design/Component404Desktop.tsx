@@ -1,3 +1,4 @@
+import { SiteBrand } from "../SiteBrand";
 import { SiteHeader } from "../SiteHeader";
 import { WovenRibbon } from "../WovenRibbon";
 import { RegistrationButton } from "../RegistrationButton";
@@ -93,9 +94,7 @@ export default function Component404Desktop() {
   return (
     <div className="d-3c9f0988a3" data-node-id="1265:3035" data-name="404 — Desktop">
       <SiteHeader className="d-e88f0dd487 site-header" data-node-id="1332:688" data-name="SCD / Navigation / 404 explorations">
-        <SiteLink className="d-fe447388c7" data-node-id="1332:689" href={"/#home"}>
-          aws / STUDENT COMMUNITY DAY
-        </SiteLink>
+        <SiteBrand data-node-id="1332:689" />
         <div className="d-fd21041cfd" data-node-id="1332:690" data-name="Nav links v2">
           <SiteLink className="d-3328cbea32" data-node-id="1332:691" href={"/#experience"}>
             <span className="d-d0d8823c60">01</span>
@@ -115,7 +114,6 @@ export default function Component404Desktop() {
           </SiteLink>
         </div>
         <RegistrationButton />
-        <div className="d-c4da47cd12" data-node-id="1332:697" data-name="Logo placeholder" aria-hidden="true" />
       </SiteHeader>
       <div className="d-c759ce1c08" data-node-id="1265:3037" data-name="Continuous form / a page made from feed paper">
         <div className="d-3b5a7422e7" data-node-id="1265:3038" data-name="Form / carbon backing follows the paper tear">
@@ -257,12 +255,7 @@ export default function Component404Desktop() {
         </div>
         <div className="d-e2d3cf23e7" data-node-id="1476:901" data-name="Footer / Quiet divider" />
         <div className="d-cd7fcf8b0a" data-node-id="1476:902" data-name="Footer / Utility">
-          <div className="d-6792f5ce03" data-node-id="1476:903" data-name="Footer / Brand lockup">
-            <div className="d-8a7b794c07" data-node-id="1476:904" data-name="Logo placeholder" aria-hidden="true" />
-            <SiteLink className="d-362449b657" data-node-id="1476:906" href={"/#home"}>
-              aws / STUDENT COMMUNITY DAY
-            </SiteLink>
-          </div>
+          <SiteBrand data-node-id="1476:903" />
           <p className="d-393807428f" data-node-id="1476:907">
             STUDENT LED. COMMUNITY POWERED.
           </p>

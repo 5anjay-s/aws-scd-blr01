@@ -188,20 +188,23 @@
 .design-content [data-node-id='860:5247'] { position: relative; width: 100%; height: 1120px; overflow: visible; }
 .design-content [data-node-id='860:5248'] { height: 1280px; gap: calc(24 * var(--space-unit)); width: calc((1552 + 3152 * var(--voice-side-groups, 0)) * var(--design-unit)); left: calc((-56 - 1576 * var(--voice-side-groups, 0)) * var(--design-unit)); }
 .design-section[data-design-section='1398:7044'] { background: var(--white); }
-.design-content [data-node-id='1398:7044'] { overflow: clip; }
+/* Retain the open space below the sponsor lineup after removing the Community copy. */
+.design-content [data-node-id='1398:7044'] { overflow: clip; min-height: calc(960 * var(--space-unit)); padding-bottom: calc(300 * var(--space-unit)); }
 /* Keep the mobile barrel's center on the tripod bearing at (252, 114). */
-.mobile-layout .design-content [data-node-id='1406:683'] { height: calc(196 * var(--design-unit)); }
-.mobile-layout .design-content [data-node-id='1406:684'] { top: calc(148 * var(--design-unit)); }
+.mobile-layout .design-content [data-node-id='1406:683'] { height: calc(196 * var(--design-unit)); margin-top: calc(395 * var(--space-unit)); }
 .mobile-layout .design-content [data-node-id='1406:690'] {
   top: calc(-89.67 * var(--design-unit));
   height: calc(407.347 * var(--design-unit));
 }
 .design-content [data-node-id='1398:7083'], .design-content [data-node-id='1398:7084'], .design-content [data-node-id='1398:7087'] { min-height: calc(140 * var(--space-unit)); }
 .design-content [data-node-id='1398:7090'] { min-height: calc(230 * var(--space-unit)); }
-.design-content [data-node-id='1398:7102'], .design-content [data-node-id='1398:7118'] { min-height: calc(210 * var(--space-unit)); }
-.design-content [data-node-id='1398:7134'] { min-height: calc(42 * var(--space-unit)); }
+.design-content [data-node-id='1398:7102'] { min-height: calc(210 * var(--space-unit)); }
 .design-content [data-node-id='1398:7061'] { top: calc(541.12 * var(--design-unit)); height: calc(565.76 * var(--design-unit)); }
 .design-content [data-node-id='1398:7061'] [data-name='Scroll spotlight / Barrel + light — rotates around fixed bearing'] { height: calc(448 * var(--design-unit)); }
+.sponsor-logo { display: block; width: auto; height: 48px; max-width: 100%; object-fit: contain; object-position: left center; filter: brightness(0); }
+.sponsor-logo--title { height: 80px; }
+.mobile-layout .sponsor-logo { height: 44px; }
+.mobile-layout .sponsor-logo--title { height: 72px; }
 .design-content [data-node-id='1127:2324'] { height: 856px; }
 .design-content [data-node-id='1127:2325'] { height: auto; aspect-ratio: 560 / 646.154; }
 .design-content [data-node-id='1127:2335'], .design-content [data-node-id='1127:2337'] { height: auto; aspect-ratio: 336 / 387.692; }

@@ -7,8 +7,6 @@ art=set(); bleed=set(); borders=[]; compositions=set(); image_classes=set()
 for component in Path('src/components').rglob('*.tsx'):
     text=component.read_text()
     image_classes.update(re.findall(r'<(?:img|SignalStitch|ScrollSpark)\b[^>]*className="([^"]+)"', text))
-    # Empty logo slots still retain the dimensions of the original artwork.
-    art.update(re.findall(r'<div\b[^>]*className="([^"]+)"[^>]*data-name="Logo placeholder"', text))
     stack=[]
     for m in re.finditer(r'<(/?)([A-Za-z][\w.]*)\b([^<>]*)>',text):
         close,tag,attrs=m.groups()

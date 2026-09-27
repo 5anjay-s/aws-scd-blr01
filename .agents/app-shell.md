@@ -4,6 +4,6 @@
 - `src/navigation.ts` owns clean section paths and legacy aliases. Update route resolution alongside section anchors.
 - `SiteLink` handles internal navigation with real anchor elements and preserves modified-click behavior. Avoid competing click handlers.
 - `SiteHeader` portals each composition's navigation into the shared sticky host. Keep the measured header offset when scrolling to anchors.
-- The hero is the default entry point. `/loading` explicitly plays `LoadingFlight`, which returns to the hero after completion or reduced-motion handling.
+- On the first visit in a browser tab, `LoadingFlight` plays before the requested page. Completion is remembered in session storage, and the original path is preserved. Reduced motion skips the intro. `/loading` explicitly replays it and returns to the hero.
 - Scroll updates replace the URL without creating history entries. Learn, Build, Belong shares `/experience`. The manifesto follows it, then `/tracks`.
 - Desktop and mobile are alternate compositions, not separate routes. Keep browser Back and direct section URLs working.

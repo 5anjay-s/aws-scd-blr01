@@ -1,3 +1,4 @@
+import { SiteBrand } from "../SiteBrand";
 import { SiteHeader } from "../SiteHeader";
 import { WovenRibbon } from "../WovenRibbon";
 import { RegistrationButton } from "../RegistrationButton";
@@ -84,9 +85,7 @@ export default function RegistrationDesktop() {
   return (
     <div className="d-0b16a12d9f" data-node-id="1367:652" data-name="Registration — Desktop">
       <SiteHeader className="d-e88f0dd487 site-header" data-node-id="1367:653" data-name="Navigation / Existing site">
-        <SiteLink className="d-fe447388c7" data-node-id="1367:654" href={"/#home"}>
-          aws / STUDENT COMMUNITY DAY
-        </SiteLink>
+        <SiteBrand data-node-id="1367:654" />
         <div className="d-fd21041cfd" data-node-id="1367:655" data-name="Nav links v2">
           <SiteLink className="d-3328cbea32" data-node-id="1367:656" href={"/#experience"}>
             <span className="d-d0d8823c60">01</span>
@@ -106,7 +105,6 @@ export default function RegistrationDesktop() {
           </SiteLink>
         </div>
         <RegistrationButton />
-        <div className="d-c4da47cd12" data-node-id="1367:662" data-name="Logo placeholder" aria-hidden="true" />
       </SiteHeader>
       <div className="d-a8f0c92515" data-node-id="1367:669" data-name="Registration / Admission desk">
         <p className="d-09dae26e09" data-node-id="1367:670" role="heading" aria-level={1}>
@@ -351,12 +349,7 @@ export default function RegistrationDesktop() {
         </div>
         <div className="d-e2d3cf23e7" data-node-id="1476:818" data-name="Footer / Quiet divider" />
         <div className="d-cd7fcf8b0a" data-node-id="1476:819" data-name="Footer / Utility">
-          <div className="d-6792f5ce03" data-node-id="1476:820" data-name="Footer / Brand lockup">
-            <div className="d-8a7b794c07" data-node-id="1476:821" data-name="Logo placeholder" aria-hidden="true" />
-            <SiteLink className="d-362449b657" data-node-id="1476:823" href={"/#home"}>
-              aws / STUDENT COMMUNITY DAY
-            </SiteLink>
-          </div>
+          <SiteBrand data-node-id="1476:820" />
           <p className="d-393807428f" data-node-id="1476:824">
             STUDENT LED. COMMUNITY POWERED.
           </p>

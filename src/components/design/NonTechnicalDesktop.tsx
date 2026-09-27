@@ -1,3 +1,4 @@
+import { SiteBrand } from "../SiteBrand";
 import { SiteHeader } from "../SiteHeader";
 import { WovenRibbon } from "../WovenRibbon";
 import { RegistrationButton } from "../RegistrationButton";
@@ -26,9 +27,7 @@ export default function NonTechnicalDesktop() {
   return (
     <div className="d-3c9f0988a3" data-node-id="874:9211" data-name="Non-technical — Desktop">
       <SiteHeader className="d-e88f0dd487 site-header" data-node-id="874:9212" data-name="Navigation v2">
-        <SiteLink className="d-0059adc6e5" data-node-id="874:9213" href={"/#home"}>
-          aws / STUDENT COMMUNITY DAY
-        </SiteLink>
+        <SiteBrand data-node-id="874:9213" />
         <div className="d-0ec2f0208b" data-node-id="874:9214" data-name="Nav links v2">
           <div className="d-467c585ef8" data-node-id="874:9215">
             <SiteLink className="d-95907800fd" href={"/tracks"}>01 Tracks</SiteLink>
@@ -44,7 +43,6 @@ export default function NonTechnicalDesktop() {
           </div>
         </div>
         <RegistrationButton />
-        <div className="d-c4da47cd12" data-node-id="874:9220" data-name="Logo placeholder" aria-hidden="true" />
       </SiteHeader>
       <div className="d-320c8a2508" data-node-id="874:9231" data-name="Nontechnical / Beyond the code — Hero">
         <p className="d-53452c27e4" data-node-id="874:9232">
@@ -328,12 +326,7 @@ export default function NonTechnicalDesktop() {
         </div>
         <div className="d-e2d3cf23e7" data-node-id="1476:735" data-name="Footer / Quiet divider" />
         <div className="d-cd7fcf8b0a" data-node-id="1476:736" data-name="Footer / Utility">
-          <div className="d-6792f5ce03" data-node-id="1476:737" data-name="Footer / Brand lockup">
-            <div className="d-8a7b794c07" data-node-id="1476:738" data-name="Logo placeholder" aria-hidden="true" />
-            <SiteLink className="d-362449b657" data-node-id="1476:740" href={"/#home"}>
-              aws / STUDENT COMMUNITY DAY
-            </SiteLink>
-          </div>
+          <SiteBrand data-node-id="1476:737" />
           <p className="d-393807428f" data-node-id="1476:741">
             STUDENT LED. COMMUNITY POWERED.
           </p>

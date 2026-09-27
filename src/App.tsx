@@ -64,15 +64,28 @@ const pages: Record<string, ResponsiveSections> = {
   '/404': { desktop: [section('1265:3035', 'Page not found')], mobile: [section('1265:3120', 'Page not found')] },
 };
 
+const introSeenKey = 'scd-intro-seen';
+
+function firstVisitTarget() {
+  const url = new URL(window.location.href);
+  const { path } = resolveLocation(url);
+  if (!Object.hasOwn(pages, path) || path === '/404' || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return null;
+  try {
+    if (sessionStorage.getItem(introSeenKey) === 'true') return null;
+  } catch { /* The intro also works when storage is unavailable. */ }
+  return url.pathname + url.search + url.hash;
+}
+
 export default function App() {
   const readLocation = () => resolveLocation(new URL(window.location.href));
   const [location, setLocation] = useState(readLocation);
+  const [entryTarget, setEntryTarget] = useState(firstVisitTarget);
   const [headerHost, setHeaderHost] = useState<HTMLDivElement | null>(null);
   const [loadingTransition, setLoadingTransition] = useState<LoadingTransitionPhase | null>(null);
   const pendingNavigation = useRef<(() => void) | null>(null);
   const scrollBehavior = useRef<ScrollBehavior>('instant');
   const [viewport, setViewport] = useState(() => document.documentElement.clientWidth);
-  const isLoading = location.path === '/loading';
+  const isLoading = entryTarget !== null || location.path === '/loading';
   const mobile = viewport < (isLoading ? 768 : 1200);
   const sections = isLoading
     ? [section(mobile ? '866:8315' : '860:4959', 'Loading the day')]
@@ -92,17 +105,21 @@ export default function App() {
   }, [headerHost]);
 
   const navigate = useCallback((href: string, options?: NavigationOptions) => {
-    const url = cleanSectionUrl(new URL(href, window.location.href));
+    const url = cleanSectionUrl(new URL(isLoading && entryTarget ? entryTarget : href, window.location.href));
     if (url.origin !== window.location.origin) return;
     const nextLocation = resolveLocation(url);
     scrollBehavior.current = nextLocation.path === location.path && !isLoading && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
       ? 'smooth' : 'instant';
     const commit = () => {
-      if (options?.replace) history.replaceState(null, '', url.pathname + url.search + url.hash);
+      if (isLoading) {
+        try { sessionStorage.setItem(introSeenKey, 'true'); } catch { /* Navigation does not depend on storage. */ }
+        setEntryTarget(null);
+      }
+      if (options?.replace || isLoading) history.replaceState(null, '', url.pathname + url.search + url.hash);
       else history.pushState(null, '', url.pathname + url.search + url.hash);
       setLocation(nextLocation);
     };
-    if (isLoading && nextLocation.path === '/' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (isLoading && nextLocation.path !== '/loading' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       if (pendingNavigation.current) return;
       pendingNavigation.current = commit;
       setLoadingTransition('cover');
@@ -111,7 +128,7 @@ export default function App() {
     pendingNavigation.current = null;
     setLoadingTransition(null);
     commit();
-  }, [location.path, isLoading]);
+  }, [location.path, isLoading, entryTarget]);
 
   const revealHero = useCallback(() => {
     if (!pendingNavigation.current) return;
@@ -126,6 +143,7 @@ export default function App() {
     const back = () => {
       pendingNavigation.current = null;
       setLoadingTransition(null);
+      setEntryTarget(null);
       scrollBehavior.current = 'instant';
       setLocation(readLocation());
     };
@@ -172,7 +190,7 @@ export default function App() {
   }, [isLoading, location, mobile, headerHost]);
 
   useEffect(() => {
-    if (location.path !== '/') return;
+    if (isLoading || location.path !== '/') return;
     const anchors = Array.from(document.querySelectorAll<HTMLElement>('.design-section[id]'));
     if (!anchors.length) return;
     let frame = 0;
@@ -213,7 +231,7 @@ export default function App() {
       window.removeEventListener('scroll', scheduleUpdate);
       window.removeEventListener('resize', scheduleUpdate);
     };
-  }, [location.path, mobile]);
+  }, [location.path, mobile, isLoading]);
 
   return <NavigationContext.Provider value={navigate}><HeaderHostContext.Provider value={headerHost}>
     <main id="top" className={`design-shell ${isLoading ? 'loading-shell' : ''}`} inert={loadingTransition !== null}>
