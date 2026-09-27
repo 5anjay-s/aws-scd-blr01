@@ -1,11 +1,8 @@
-export default function FooterMobile() {
+import PixelDivider from "../PixelDivider";
+export default function FooterMobile({ transitionSrc }: { transitionSrc?: string }) {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-[390px]" data-node-id="1168:498" data-name="Footer / Keep the conversation going — Mobile">
-            <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col h-[54px] items-start overflow-clip relative shrink-0 w-[390px]" data-node-id="1169:691" data-name="Divider / Join → Footer — Mobile">
-              <div className="absolute h-[54px] left-0 top-0 w-[720px]" data-node-id="1169:692" data-name="Section divider / Approved pixel dither">
-                <img alt="" className="absolute block inset-0 max-w-none size-full" src={"/assets/mobile/section-divider-approved-pixel-dither-1.svg"} />
-              </div>
-            </div>
+            {transitionSrc && <PixelDivider src={transitionSrc} from={transitionSrc.includes("paper-to-navy") ? "white" : "orange"} nodeId="1169:691" name="Divider / Join → Footer — Mobile" artNodeId="1169:692" artName="Section divider / Approved pixel dither" />}
             <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col gap-[var(--space-24,24px)] items-start px-[var(--space-24,24px)] py-[var(--space-32,32px)] relative shrink-0 w-[390px]" data-node-id="1169:694" data-name="Footer / Content — Mobile">
               <div className="content-stretch flex flex-col gap-[var(--space-16,16px)] items-start overflow-clip relative shrink-0 w-[342px]" data-node-id="1287:644" data-name="Footer / Stay connected">
                 <p className="[word-break:break-word] font-['Geist_Mono'] font-normal leading-[18px] relative shrink-0 text-[11px] text-[color:var(--orange,#f90)] w-[342px]" data-node-id="1287:645">

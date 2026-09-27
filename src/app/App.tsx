@@ -203,7 +203,12 @@ export default function App() {
         <div
           className={frameClass}
         >
-          <SiteLayout isMobile={isMobile}>{page}</SiteLayout>
+          <SiteLayout
+            isMobile={isMobile}
+            footerTransition={route === "home" ? "orange" : route === "registration" ? "paper" : undefined}
+          >
+            {page}
+          </SiteLayout>
         </div>
       </StartupGate>
     </main>

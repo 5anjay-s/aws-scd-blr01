@@ -1,3 +1,4 @@
+import PixelDivider from "../../components/PixelDivider";
 const assetPathPrefix = "/assets/registration/desktop";
 const imgPixelEnvelopeInvitationActionTab = `${assetPathPrefix}/pixel-envelope-invitation-action-tab.svg`;
 const imgArrow = `${assetPathPrefix}/arrow.svg`;
@@ -188,9 +189,7 @@ export default function RegistrationDesktop() {
         </div>
       </div>
       <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col items-start overflow-clip relative shrink-0 w-[1440px]" data-node-id="1367:691" data-name="Registration / Community RSVP — Desktop">
-        <div className="h-[108px] relative shrink-0 w-[1440px]" data-node-id="1367:692" data-name="RSVP / Cyan-to-navy pixel transition">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgRsvpCyanToNavyPixelTransition} />
-        </div>
+        <PixelDivider src={imgRsvpCyanToNavyPixelTransition} nodeId="1367:692" name="RSVP / Cyan-to-navy pixel transition" from="cyan" />
         <ScdRegistrationMeetupRsvpDesktop className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col gap-[var(--space-32,32px)] items-start p-[var(--space-48,48px)] relative shrink-0 w-[1440px]" />
       </div>
       <div className="bg-[var(--white,#f8fafc)] content-stretch flex flex-col gap-[var(--space-32,32px)] h-[464px] items-start p-[var(--space-48,48px)] relative shrink-0 w-[1440px]" data-node-id="1367:725" data-name="Registration / Before the details arrive">

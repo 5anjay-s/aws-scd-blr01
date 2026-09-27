@@ -1,3 +1,4 @@
+import PixelDivider from "../../components/PixelDivider";
 const assetPathPrefix = "/assets/technical/mobile";
 const imgArtworkCompileBracketsMobile = `${assetPathPrefix}/artwork-compile-brackets-mobile.svg`;
 const imgArrow = `${assetPathPrefix}/arrow.svg`;
@@ -157,11 +158,7 @@ export default function TechnicalMobile() {
           </div>
         </div>
       </div>
-      <div className="bg-[var(--navy,#0b1020)] h-[54px] overflow-clip relative shrink-0 w-full" data-node-id="1413:626" data-name="Section divider / Preparation to continue">
-        <div className="absolute h-[54px] left-[-165px] top-0 w-[720px]" data-node-id="1413:624" data-name="Approved dither / Paper to navy — cropped">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgApprovedDitherPaperToNavyCropped} />
-        </div>
-      </div>
+      <PixelDivider src={imgApprovedDitherPaperToNavyCropped} nodeId="1413:626" name="Section divider / Preparation to continue" artNodeId="1413:624" artName="Approved dither / Paper to navy — cropped" />
       <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col gap-[var(--space-24,24px)] items-start px-[var(--space-24,24px)] py-[40px] relative shrink-0 w-[390px]" data-node-id="874:9159" data-name="Technical / Continue — Mobile">
         <div className="h-[24px] relative shrink-0 w-[144px]" data-node-id="874:9160" data-name="Accent / Pixel stitch">
           <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAccentPixelStitch} />

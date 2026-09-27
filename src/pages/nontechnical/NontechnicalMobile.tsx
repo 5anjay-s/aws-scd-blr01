@@ -1,3 +1,4 @@
+import PixelDivider from "../../components/PixelDivider";
 const assetPathPrefix = "/assets/nontechnical/mobile";
 const imgArrow = `${assetPathPrefix}/arrow.svg`;
 const imgSharedGlyphOpenExchange = `${assetPathPrefix}/shared-glyph-open-exchange.svg`;
@@ -41,11 +42,7 @@ export default function NonTechnicalMobile() {
           <p className="leading-[18px]">Details to be announced</p>
         </div>
       </div>
-      <div className="bg-[var(--navy,#0b1020)] h-[54px] overflow-clip relative shrink-0 w-full" data-node-id="1413:633" data-name="Section divider / Hero to open exchange">
-        <div className="absolute h-[54px] left-[-165px] top-0 w-[720px]" data-node-id="1413:631" data-name="Approved dither / Paper to navy — cropped">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgApprovedDitherPaperToNavyCropped} />
-        </div>
-      </div>
+      <PixelDivider src={imgApprovedDitherPaperToNavyCropped} nodeId="1413:633" name="Section divider / Hero to open exchange" artNodeId="1413:631" artName="Approved dither / Paper to navy — cropped" />
       <div className="[word-break:break-word] bg-[var(--navy,#0b1020)] content-stretch flex flex-col items-start relative shrink-0 w-[390px]" data-node-id="880:9350" data-name="Nontechnical / Open exchange — Programme / Mobile">
         <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col gap-[var(--space-24,24px)] items-start px-[var(--space-24,24px)] py-[var(--space-48,48px)] relative shrink-0 w-[390px]" data-node-id="880:9351" data-name="Programme / Introduction">
           <p className="font-['Geist_Mono'] font-normal leading-[17px] relative shrink-0 text-[11px] text-[color:var(--lime,#bef264)] w-[342px]" data-node-id="880:9352">
@@ -176,11 +173,7 @@ export default function NonTechnicalMobile() {
           </div>
         </div>
       </div>
-      <div className="bg-[var(--navy,#0b1020)] h-[54px] overflow-clip relative shrink-0 w-full" data-node-id="1413:636" data-name="Section divider / Before joining to continue">
-        <div className="absolute h-[54px] left-[-165px] top-0 w-[720px]" data-node-id="1413:634" data-name="Approved dither / Paper to navy — cropped">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgApprovedDitherPaperToNavyCropped} />
-        </div>
-      </div>
+      <PixelDivider src={imgApprovedDitherPaperToNavyCropped} nodeId="1413:636" name="Section divider / Before joining to continue" artNodeId="1413:634" artName="Approved dither / Paper to navy — cropped" />
       <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col gap-[var(--space-24,24px)] items-start pb-[var(--space-32,32px)] pt-[var(--space-48,48px)] px-[var(--space-24,24px)] relative shrink-0 w-[390px]" data-node-id="880:9396" data-name="Nontechnical / Continue exploring / Mobile">
         <p className="[word-break:break-word] font-['Geist_Mono'] font-normal leading-[17px] relative shrink-0 text-[11px] text-[color:var(--lime,#bef264)] w-[342px]" data-node-id="880:9397">
           THE FUTURE IS A GROUP PROJECT.

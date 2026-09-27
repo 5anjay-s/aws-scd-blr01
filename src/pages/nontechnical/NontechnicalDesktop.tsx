@@ -1,3 +1,4 @@
+import PixelDivider from "../../components/PixelDivider";
 const assetPathPrefix = "/assets/nontechnical/desktop";
 const imgSharedGlyphOpenExchange = `${assetPathPrefix}/shared-glyph-open-exchange.svg`;
 
@@ -63,9 +64,7 @@ export default function NonTechnicalDesktop() {
           </div>
         </div>
       </div>
-      <div className="h-[108px] relative shrink-0 w-full" data-node-id="1413:627" data-name="Section divider / Hero to open exchange">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSectionDividerHeroToOpenExchange} />
-      </div>
+      <PixelDivider src={imgSectionDividerHeroToOpenExchange} nodeId="1413:627" name="Section divider / Hero to open exchange" />
       <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col items-start relative shrink-0 w-[1440px]" data-node-id="874:9244" data-name="Nontechnical / Open exchange — Programme">
         <div className="[word-break:break-word] bg-[var(--navy,#0b1020)] content-stretch flex gap-[var(--space-48,48px)] items-start p-[var(--space-48,48px)] relative shrink-0 w-[1440px]" data-node-id="874:9245" data-name="Programme / Introduction">
           <div className="content-stretch flex flex-col gap-[var(--space-24,24px)] items-start relative shrink-0 w-[648px]" data-node-id="874:9246" data-name="Programme / Heading group">
@@ -212,9 +211,7 @@ export default function NonTechnicalDesktop() {
           </div>
         </div>
       </div>
-      <div className="h-[108px] relative shrink-0 w-full" data-node-id="1413:629" data-name="Section divider / Before joining to continue">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSectionDividerHeroToOpenExchange} />
-      </div>
+      <PixelDivider src={imgSectionDividerHeroToOpenExchange} nodeId="1413:629" name="Section divider / Before joining to continue" />
       <div className="bg-[var(--navy,#0b1020)] content-stretch flex gap-[var(--space-48,48px)] items-center justify-between p-[var(--space-48,48px)] relative shrink-0 w-[1440px]" data-node-id="874:9299" data-name="Nontechnical / Continue exploring">
         <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--space-24,24px)] items-start relative shrink-0 w-[896px]" data-node-id="874:9300" data-name="Footer / Message">
           <p className="font-['Geist_Mono'] font-normal leading-[18px] relative shrink-0 text-[12px] text-[color:var(--lime,#bef264)] w-[896px]" data-node-id="874:9301">

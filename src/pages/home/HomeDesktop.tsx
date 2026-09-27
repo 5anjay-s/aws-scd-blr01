@@ -1,3 +1,4 @@
+import PixelDivider from "../../components/PixelDivider";
 const assetPathPrefix = "/assets/desktop";
 const imgArtworkNonTechnicalTrackPixelQuotations = `${assetPathPrefix}/artwork-non-technical-track-pixel-quotations.svg`;
 const imgArtworkTechnicalTrackPixelBrackets = `${assetPathPrefix}/artwork-technical-track-pixel-brackets.svg`;
@@ -188,7 +189,7 @@ function PixelPropellerFlightRightToLeft() {
           <img alt="" className="block size-full max-w-none" src={imgPixelTowline} />
         </div>
       </div>
-      <div className="relative flex h-[48px] w-[200px] shrink-0 items-center justify-center" data-node-id="860:5060" data-name="Banner / pixel pennant">
+      <div className="flight-banner relative flex h-[48px] w-[200px] shrink-0 items-center justify-center" data-node-id="860:5060" data-name="Banner / pixel pennant">
         <div className="absolute left-0 top-0 h-[48px] w-[200px]" data-node-id="860:5061" data-name="Stepped pixel pennant">
           <img alt="" className="absolute inset-0 block size-full max-w-none" src={imgSteppedPixelPennant} />
         </div>
@@ -339,9 +340,7 @@ export default function HomeDesktop() {
         <div className="absolute left-[1248px] size-[96px] top-[360px]" data-node-id="860:5084" data-name="Accent / Curiosity spark">
           <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAccentCuriositySpark} />
         </div>
-        <div className="absolute h-[108px] left-0 top-[544px] w-[1440px]" data-node-id="920:3377" data-name="Introduction / Navy pixel-dither transition">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIntroductionNavyPixelDitherTransition} />
-        </div>
+        <PixelDivider src={imgIntroductionNavyPixelDitherTransition} nodeId="920:3377" name="Introduction / Navy pixel-dither transition" placement="bottom" />
       </div>
       <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col gap-[var(--space-16,16px)] h-[720px] items-start p-[var(--space-48,48px)] relative shrink-0 w-[1440px]" data-node-id="860:5085" data-name="Chapters v2">
         <p className="[word-break:break-word] font-['Geist_Mono'] font-normal leading-[1.5] relative shrink-0 text-[12px] text-[color:var(--white,#f8fafc)] w-[1344px]" data-node-id="860:5086">
@@ -672,9 +671,7 @@ export default function HomeDesktop() {
           </div>
         </div>
       </div>
-      <div className="h-[108px] relative shrink-0 w-[1440px]" data-node-id="1154:483" data-name="Divider / Speakers → Timeline">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDividerSpeakersTimeline} />
-      </div>
+      <PixelDivider src={imgDividerSpeakersTimeline} nodeId="1154:483" name="Divider / Speakers → Timeline" from="orange" />
       <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col items-start relative shrink-0 w-[1440px]" data-node-id="860:5180" data-name="Programme v2 / Event timeline — Approved / Desktop">
         <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col gap-[var(--space-32,32px)] items-start p-[var(--space-48,48px)] relative shrink-0 w-[1440px]" data-node-id="860:5181" data-name="Timeline / Masthead">
           <p className="[word-break:break-word] font-['Geist_Mono'] font-normal leading-[18px] relative shrink-0 text-[12px] text-[color:var(--cyan,#22d3ee)] w-[1344px]" data-node-id="860:5182">
@@ -979,9 +976,7 @@ export default function HomeDesktop() {
         <div className="absolute h-[80px] left-[24px] top-[134px] w-[160px]" data-node-id="1160:5775" data-name="Accent / Woven links">
           <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAccentWovenLinks} />
         </div>
-        <div className="absolute h-[108px] left-0 top-[780px] w-[1440px]" data-node-id="1411:620" data-name="Divider / Partner opener → Directory — Orange to paper">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDividerPartnerOpenerDirectoryOrangeToPaper} />
-        </div>
+        <PixelDivider src={imgDividerPartnerOpenerDirectoryOrangeToPaper} nodeId="1411:620" name="Divider / Partner opener → Directory — Orange to paper" placement="bottom" from="orange" to="white" />
       </div>
       <div className="bg-[var(--white,#f8fafc)] content-stretch flex flex-col items-start overflow-clip p-[var(--space-48,48px)] relative shrink-0 w-[1440px]" data-node-id="1398:7044" data-name="Partners / Editorial directory">
         <div className="absolute h-[224px] left-[1032px] top-[688px] w-[384px]" data-node-id="1398:7045" data-name="Scroll spotlight / Tripod — FIXED at bottom right">
@@ -1160,9 +1155,7 @@ export default function HomeDesktop() {
           </p>
         </div>
       </div>
-      <div className="h-[108px] relative shrink-0 w-full" data-node-id="1405:638" data-name="Divider / Partner directory → Invitation — Paper to orange">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDividerPartnerDirectoryInvitationPaperToOrange} />
-      </div>
+      <PixelDivider src={imgDividerPartnerDirectoryInvitationPaperToOrange} nodeId="1405:638" name="Divider / Partner directory → Invitation — Paper to orange" to="cyan" />
       <div className="bg-[var(--cyan,#22d3ee)] content-stretch flex gap-[var(--space-64,64px)] items-start overflow-clip p-[var(--space-48,48px)] relative shrink-0 w-full" data-node-id="860:5320" data-name="Partners v2 / Build the next wave">
         <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--space-24,24px)] items-start overflow-clip relative shrink-0 text-[color:var(--navy,#0b1020)] w-[864px]" data-node-id="860:5321" data-name="Invitation / Statement">
           <p className="font-['Geist_Mono'] font-normal leading-[18px] relative shrink-0 text-[12px] w-[864px]" data-node-id="860:5322">
@@ -1191,9 +1184,7 @@ export default function HomeDesktop() {
           </button>
         </div>
       </div>
-      <div className="h-[108px] relative shrink-0 w-[1440px]" data-node-id="1154:487" data-name="Divider / Partner invitation → FAQ">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDividerPartnerInvitationFaq} />
-      </div>
+      <PixelDivider src={imgDividerPartnerInvitationFaq} nodeId="1154:487" name="Divider / Partner invitation → FAQ" from="cyan" />
       <div className="bg-[var(--navy,#0b1020)] content-stretch flex gap-[var(--space-64,64px)] items-center overflow-clip p-[var(--space-48,48px)] relative shrink-0 w-full" data-node-id="860:5328" data-name="FAQ v2 / Good questions">
         <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--space-24,24px)] items-start overflow-clip relative shrink-0 w-[736px]" data-node-id="860:5329" data-name="FAQ / Hero text">
           <p className="font-['Geist_Mono'] font-normal leading-[18px] relative shrink-0 text-[12px] text-[color:var(--cyan,#22d3ee)] w-[736px]" data-node-id="860:5330">

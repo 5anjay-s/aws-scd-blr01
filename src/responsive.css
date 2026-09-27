@@ -198,3 +198,49 @@ html { overflow-x: clip; }
   width: 100%;
   height: auto;
 }
+
+/* Tile the original Figma artwork across the viewport without widening pixels. */
+.site-layout .pixel-divider {
+  position: relative;
+  width: 100%;
+  height: 108px;
+  flex: none;
+  pointer-events: none;
+}
+
+.mobile-frame .pixel-divider {
+  height: 54px;
+}
+
+.pixel-divider__art {
+  position: absolute;
+  inset: 0 calc(50% - 50vw);
+  background-color: var(--pixel-divider-to);
+  /* Cover fractional-pixel seams where the SVG meets the surrounding sections. */
+  background-image: linear-gradient(var(--pixel-divider-from) 1px, transparent 1px), var(--pixel-divider-image);
+  background-repeat: no-repeat, repeat-x;
+  background-position: center;
+  background-size: 100% 100%, auto 100%;
+  box-shadow: 0 -1px 0 var(--pixel-divider-from), 0 1px 0 var(--pixel-divider-to);
+}
+
+.site-layout .pixel-divider--top,
+.site-layout .pixel-divider--bottom {
+  position: absolute;
+  left: 0;
+}
+
+.pixel-divider--top { top: 0; }
+.pixel-divider--bottom { bottom: 0; }
+
+/* Keep the flag's canvas height so its label centers inside the artwork. */
+.site-layout .flight-banner {
+  height: 48px;
+  min-height: 48px;
+  flex: none;
+}
+
+.mobile-frame .site-layout .flight-banner {
+  height: 36px;
+  min-height: 36px;
+}

@@ -1,6 +1,7 @@
-export default function FooterDesktop() {
+import PixelDivider from "../PixelDivider";
+export default function FooterDesktop({ transitionSrc }: { transitionSrc?: string }) {
   return (
-    <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col gap-[var(--space-32,32px)] items-start pb-[40px] pt-[156px] px-[var(--space-48,48px)] relative shrink-0 w-[1440px]" data-node-id="860:5359" data-name="Footer / Keep the conversation going — Desktop">
+    <div className={`bg-[var(--navy,#0b1020)] content-stretch flex flex-col gap-[var(--space-32,32px)] items-start pb-[40px] ${transitionSrc ? "pt-[156px]" : "pt-[48px]"} px-[var(--space-48,48px)] relative shrink-0 w-[1440px]`} data-node-id="860:5359" data-name="Footer / Keep the conversation going — Desktop">
             <div className="content-stretch flex gap-[var(--space-64,64px)] items-center overflow-clip relative shrink-0 w-full" data-node-id="1287:626" data-name="Footer / Stay connected">
               <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--space-16,16px)] items-start overflow-clip relative shrink-0 w-[416px]" data-node-id="1287:627" data-name="Footer / Invitation">
                 <p className="font-['Geist_Mono'] font-normal leading-[18px] relative shrink-0 text-[12px] text-[color:var(--orange,#f90)] w-[416px]" data-node-id="1287:628">
@@ -61,9 +62,7 @@ export default function FooterDesktop() {
                 </div>
               </div>
             </div>
-            <div className="absolute h-[108px] left-0 top-0 w-[1440px]" data-node-id="913:540" data-name="Footer / Navy pixel transition">
-              <img alt="" className="absolute block inset-0 max-w-none size-full" src={"/assets/desktop/footer-navy-pixel-transition.svg"} />
-            </div>
+            {transitionSrc && <PixelDivider src={transitionSrc} from={transitionSrc.includes("paper-to-navy") ? "white" : "orange"} nodeId="913:540" name="Footer / Navy pixel transition" placement="top" />}
             <div className="bg-[var(--white,#f8fafc)] h-px opacity-20 relative shrink-0 w-[1344px]" data-node-id="1287:642" data-name="Footer / Quiet divider" />
             <div className="content-stretch flex items-center justify-between overflow-clip relative shrink-0 w-full" data-node-id="1287:625" data-name="Footer / Utility">
               <div className="content-stretch flex gap-[12px] items-center relative shrink-0 w-[448px]" data-node-id="1301:702" data-name="Footer / Brand lockup">

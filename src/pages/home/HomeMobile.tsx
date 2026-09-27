@@ -1,3 +1,4 @@
+import PixelDivider from "../../components/PixelDivider";
 const assetPathPrefix = "/assets/mobile";
 import { motion } from "motion/react";
 const imgArtworkWindowDesktopTextureMobileCrop = `${assetPathPrefix}/artwork-window-desktop-texture-mobile-crop.png`;
@@ -14,7 +15,7 @@ const imgSteppedPixelPennant = `${assetPathPrefix}/stepped-pixel-pennant.svg`;
 const imgArrow = `${assetPathPrefix}/arrow.svg`;
 const imgAccentSignalStitch1 = `${assetPathPrefix}/accent-signal-stitch-1.svg`;
 const imgAccentCuriositySpark = `${assetPathPrefix}/accent-curiosity-spark.svg`;
-const imgSectionDividerApprovedPixelDither = `${assetPathPrefix}/section-divider-approved-pixel-dither.svg`;
+const imgSectionDividerApprovedPixelDither = "/assets/desktop/introduction-navy-pixel-dither-transition.svg";
 const imgAccentCuriositySpark1 = `${assetPathPrefix}/accent-curiosity-spark-1.svg`;
 const imgAccentDitherCorner = `${assetPathPrefix}/accent-dither-corner.svg`;
 const imgCodeOpenBrackets = `${assetPathPrefix}/code-open-brackets.svg`;
@@ -28,7 +29,7 @@ const imgPortraitPixelBust = `${assetPathPrefix}/portrait-pixel-bust.svg`;
 const imgPortraitPixelBust1 = `${assetPathPrefix}/portrait-pixel-bust-1.svg`;
 const imgApprovedDitheredQuotationSpeaker02 = `${assetPathPrefix}/approved-dithered-quotation-speaker-02.svg`;
 const imgPortraitPixelBust2 = `${assetPathPrefix}/portrait-pixel-bust-2.svg`;
-const imgSectionDividerApprovedPixelDither1 = `${assetPathPrefix}/section-divider-approved-pixel-dither-1.svg`;
+const imgSectionDividerApprovedPixelDither1 = "/assets/desktop/divider-speakers-timeline.svg";
 const imgSteppedProgrammeViolet = `${assetPathPrefix}/stepped-programme-violet.svg`;
 const imgSteppedProgrammeCyan = `${assetPathPrefix}/stepped-programme-cyan.svg`;
 const imgSteppedProgrammeOrange = `${assetPathPrefix}/stepped-programme-orange.svg`;
@@ -45,7 +46,7 @@ const imgDividerApprovedSquareRhythmCroppedMobile = `${assetPathPrefix}/divider-
 const imgTelescopeTripodFixed = `${assetPathPrefix}/telescope-tripod-fixed.svg`;
 const imgTelescopeBarrelSeparateRotatingHead = `${assetPathPrefix}/telescope-barrel-separate-rotating-head.svg`;
 const imgApprovedPaperToOrangeDitherHalfScale = `${assetPathPrefix}/approved-paper-to-orange-dither-half-scale.svg`;
-const imgSectionDividerApprovedPixelDither2 = `${assetPathPrefix}/section-divider-approved-pixel-dither-2.svg`;
+const imgSectionDividerApprovedPixelDither2 = "/assets/desktop/divider-partner-invitation-faq.svg";
 const imgFaqMobilePixelConversation = `${assetPathPrefix}/faq-mobile-pixel-conversation.svg`;
 const imgAccentDitherCorner1 = `${assetPathPrefix}/accent-dither-corner-1.svg`;
 const imgAccentNextStep = `${assetPathPrefix}/accent-next-step.svg`;
@@ -134,7 +135,7 @@ export default function HomeMobile() {
                   <img alt="" className="block max-w-none size-full" src={imgPixelTowline} />
                 </div>
               </div>
-              <div className="content-stretch flex h-[36px] items-center justify-center relative shrink-0 w-[150px]" data-node-id="1169:551" data-name="Banner / pixel pennant">
+              <div className="flight-banner content-stretch flex h-[36px] items-center justify-center relative shrink-0 w-[150px]" data-node-id="1169:551" data-name="Banner / pixel pennant">
                 <div className="absolute h-[36px] left-0 top-0 w-[150px]" data-node-id="1169:552" data-name="Stepped pixel pennant">
                   <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSteppedPixelPennant} />
                 </div>
@@ -215,11 +216,7 @@ export default function HomeMobile() {
             </div>
           </div>
         </div>
-        <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col h-[54px] items-start overflow-clip relative shrink-0 w-[390px]" data-node-id="1169:618" data-name="Divider / Introduction → Chapters — Mobile">
-          <div className="absolute h-[54px] left-0 top-0 w-[720px]" data-node-id="1169:619" data-name="Section divider / Approved pixel dither">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSectionDividerApprovedPixelDither} />
-          </div>
-        </div>
+        <PixelDivider src={imgSectionDividerApprovedPixelDither} nodeId="1169:618" name="Divider / Introduction → Chapters — Mobile" artNodeId="1169:619" artName="Section divider / Approved pixel dither" />
       </div>
       <div className="content-stretch flex flex-col items-start relative shrink-0 w-[390px]" data-node-id="1168:493" data-name="Mobile / chapters — Desktop aligned">
         <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col gap-[var(--space-24,24px)] items-start px-[var(--space-24,24px)] py-[32px] relative shrink-0 w-[390px]" data-node-id="1169:621" data-name="Chapters / Learn, build, belong">
@@ -522,11 +519,7 @@ export default function HomeMobile() {
           </button>
         </div>
       </div>
-      <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col h-[54px] items-start overflow-clip relative shrink-0 w-[390px]" data-node-id="1170:640" data-name="Divider / Speakers to programme — Mobile">
-        <div className="absolute h-[54px] left-0 top-0 w-[720px]" data-node-id="1170:641" data-name="Section divider / Approved pixel dither">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSectionDividerApprovedPixelDither1} />
-        </div>
-      </div>
+      <PixelDivider src={imgSectionDividerApprovedPixelDither1} nodeId="1170:640" name="Divider / Speakers to programme — Mobile" artNodeId="1170:641" artName="Section divider / Approved pixel dither" from="orange" />
       <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col items-start relative shrink-0 w-[390px]" data-node-id="866:8481" data-name="Programme v2 / Event timeline — Approved / Mobile">
         <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col gap-[var(--space-24,24px)] items-start p-[var(--space-24,24px)] relative shrink-0 w-[390px]" data-node-id="866:8482" data-name="Timeline / Masthead">
           <p className="[word-break:break-word] font-['Geist_Mono'] font-normal leading-[18px] relative shrink-0 text-[12px] text-[color:var(--cyan,#22d3ee)] w-[342px]" data-node-id="866:8483">
@@ -825,11 +818,7 @@ export default function HomeMobile() {
             The next wave starts with us.
           </p>
         </div>
-        <div className="bg-[var(--white,#f8fafc)] content-stretch flex flex-col h-[54px] items-center justify-center overflow-clip relative shrink-0 w-full" data-node-id="1411:622" data-name="Divider / Partner opener → Directory — Orange to paper">
-          <div className="h-[54px] relative shrink-0 w-[720px]" data-node-id="1411:623" data-name="Divider / Approved square rhythm — cropped mobile">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDividerApprovedSquareRhythmCroppedMobile} />
-          </div>
-        </div>
+        <PixelDivider src={imgDividerApprovedSquareRhythmCroppedMobile} nodeId="1411:622" name="Divider / Partner opener → Directory — Orange to paper" artNodeId="1411:623" artName="Divider / Approved square rhythm — cropped mobile" from="orange" to="white" />
       </div>
       <div className="bg-[var(--white,#f8fafc)] content-stretch flex flex-col gap-[var(--space-32,32px)] items-start overflow-clip px-[var(--space-24,24px)] py-[var(--space-32,32px)] relative shrink-0 w-[390px]" data-node-id="866:8582" data-name="Partners / Editorial directory — Mobile">
         <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--space-16,16px)] items-start overflow-clip relative shrink-0 text-[color:var(--navy,#0b1020)] w-[342px]" data-node-id="1406:639" data-name="Directory / Introduction">
@@ -959,11 +948,7 @@ export default function HomeMobile() {
           </div>
         </div>
       </div>
-      <div className="bg-[var(--cyan,#22d3ee)] content-stretch flex flex-col h-[54px] items-start overflow-clip relative shrink-0 w-[390px]" data-node-id="1406:700" data-name="Divider / Partners directory to invitation — Mobile">
-        <div className="absolute h-[54px] left-[-165px] top-0 w-[720px]" data-node-id="1406:701" data-name="Approved paper-to-orange dither / Half scale">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgApprovedPaperToOrangeDitherHalfScale} />
-        </div>
-      </div>
+      <PixelDivider src={imgApprovedPaperToOrangeDitherHalfScale} nodeId="1406:700" name="Divider / Partners directory to invitation — Mobile" artNodeId="1406:701" artName="Approved paper-to-orange dither / Half scale" to="cyan" />
       <div className="bg-[var(--cyan,#22d3ee)] content-stretch flex flex-col gap-[var(--space-24,24px)] items-start overflow-clip p-[var(--space-24,24px)] relative shrink-0 w-full" data-node-id="866:8600" data-name="Mobile v2 / Partners — Build the next wave">
         <p className="[word-break:break-word] font-['Geist_Mono'] font-normal leading-[18px] relative shrink-0 text-[12px] text-[color:var(--navy,#0b1020)] w-[342px]" data-node-id="866:8601">
           THE NEXT WAVE STARTS WITH US.
@@ -988,11 +973,7 @@ export default function HomeMobile() {
           </div>
         </button>
       </div>
-      <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col h-[54px] items-start overflow-clip relative shrink-0 w-[390px]" data-node-id="1170:643" data-name="Divider / Partners to questions — Mobile">
-        <div className="absolute h-[54px] left-0 top-0 w-[720px]" data-node-id="1170:644" data-name="Section divider / Approved pixel dither">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSectionDividerApprovedPixelDither2} />
-        </div>
-      </div>
+      <PixelDivider src={imgSectionDividerApprovedPixelDither2} nodeId="1170:643" name="Divider / Partners to questions — Mobile" artNodeId="1170:644" artName="Section divider / Approved pixel dither" from="cyan" />
       <div className="bg-[var(--navy,#0b1020)] content-stretch flex flex-col gap-[var(--space-24,24px)] items-center overflow-clip p-[var(--space-24,24px)] relative shrink-0 w-full" data-node-id="866:8605" data-name="Mobile v2 / FAQ — Good questions">
         <p className="[word-break:break-word] font-['Geist_Mono'] font-normal leading-[18px] relative shrink-0 text-[12px] text-[color:var(--cyan,#22d3ee)] w-[342px]" data-node-id="866:8606">
           FAQ / BEFORE WE BUILD
