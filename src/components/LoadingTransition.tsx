@@ -1,4 +1,5 @@
-import { useId } from 'react';
+import { useId, useLayoutEffect, useRef } from 'react';
+import { gsap, useReducedMotion } from './animation';
 import '../styles/loading-transition.css';
 
 export type LoadingTransitionPhase = 'cover' | 'reveal';
@@ -22,13 +23,22 @@ export function LoadingTransition({ phase, onCovered, onComplete }: {
   onComplete: () => void;
 }) {
   const id = useId();
+  const ref = useRef<HTMLDivElement>(null);
+  const reducedMotion = useReducedMotion();
+  useLayoutEffect(() => {
+    const context = gsap.context(() => {
+      gsap.fromTo(ref.current, { xPercent: phase === 'cover' ? -100 : 0 }, {
+        xPercent: phase === 'cover' ? 0 : 100,
+        duration: reducedMotion ? 0 : phase === 'cover' ? 0.36 : 0.54,
+        ease: phase === 'cover' ? 'scd-cloud-cover' : 'scd-cloud-reveal',
+        onComplete: phase === 'cover' ? onCovered : onComplete,
+      });
+    }, ref);
+    return () => context.revert();
+  }, [phase, onCovered, onComplete, reducedMotion]);
 
   return <div className="loading-transition" data-phase={phase} aria-hidden="true">
-    <div className="loading-transition__cloud" onAnimationEnd={(event) => {
-      if (event.target !== event.currentTarget) return;
-      if (phase === 'cover') onCovered();
-      else onComplete();
-    }}>
+    <div ref={ref} className="loading-transition__cloud">
       {['left', 'right'].map((side) => <svg key={side}
         className={`loading-transition__edge loading-transition__edge--${side}`}
         viewBox="0 0 144 720" preserveAspectRatio="none" shapeRendering="crispEdges">

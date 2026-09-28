@@ -1,3 +1,4 @@
+import { SiteLink } from "../SiteLink";
 // Source: Figma 00/ Final, node 866:8605.
 const imgFaqMobilePixelConversation = "/assets/866-8605-491b7.svg";
 
@@ -20,6 +21,9 @@ export default function MobileV2FaqGoodQuestions() {
       <div className="d-5f10091e3c" data-node-id="866:8609" data-name="FAQ / Mobile pixel conversation">
         <img alt="" className="d-511e8f31d4" src={imgFaqMobilePixelConversation} />
       </div>
+      <SiteLink href="/faq" className="faq-preview-link" buttonTone="orange" hoverTone="cyan">
+        Read all questions <img src="/assets/865-7675-207b4.svg" width="22" height="22" alt="" />
+      </SiteLink>
     </div>
   );
 }

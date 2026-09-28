@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { cleanSectionUrl, resolveLocation } from '../src/navigation.ts';
+import { cleanSectionUrl, isNavigationActive, resolveLocation } from '../src/navigation.ts';
 
 const origin = 'https://example.com';
 
@@ -47,4 +47,36 @@ test('back to top stays on a track page but returns home from a homepage section
 
 test('unknown fragments are not mistaken for homepage section routes', () => {
   assert.equal(cleanSectionUrl(new URL('/#constructor', origin)).hash, '#constructor');
+});
+
+test('FAQ is a standalone page and legacy bookmarks open it', () => {
+  for (const href of ['/faq', '/faq/', '/#faq']) {
+    const url = cleanSectionUrl(new URL(href, origin));
+    assert.equal(url.pathname + url.hash, '/faq');
+    assert.deepEqual(resolveLocation(url), { path: '/faq', anchor: '' });
+  }
+  assert.deepEqual(resolveLocation(new URL('/#faq', origin)), { path: '/faq', anchor: '' });
+});
+
+test('FAQ category links and return-to-top remain on the FAQ page', () => {
+  const url = cleanSectionUrl(new URL('/faq?source=home#plan-your-visit', origin));
+  assert.deepEqual(resolveLocation(url), { path: '/faq', anchor: 'plan-your-visit' });
+  assert.equal(url.search, '?source=home');
+  assert.equal(cleanSectionUrl(new URL('#top', origin + '/faq')).href, origin + '/faq');
+});
+
+test('the homepage FAQ teaser has its own section URL', () => {
+  assert.deepEqual(resolveLocation(new URL('/questions', origin)), { path: '/', anchor: 'faq-preview' });
+  assert.equal(cleanSectionUrl(new URL('/#faq-preview', origin)).pathname, '/questions');
+});
+
+test('header highlights distinguish homepage sections from standalone pages', () => {
+  const at = href => resolveLocation(new URL(href, origin));
+  assert.equal(isNavigationActive(at('/'), at('/experience')), false);
+  assert.equal(isNavigationActive(at('/#speakers'), at('/speakers')), true);
+  assert.equal(isNavigationActive(at('/tracks'), at('/technical')), false);
+  assert.equal(isNavigationActive(at('/technical'), at('/technical')), true);
+  assert.equal(isNavigationActive(at('/faq'), at('/faq#plan-your-visit')), true);
+  assert.equal(isNavigationActive(at('/faq'), at('/questions')), false);
+  assert.equal(isNavigationActive(at('/'), { path: '/', anchor: 'home' }), true);
 });

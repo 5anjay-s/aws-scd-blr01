@@ -1,4 +1,5 @@
-import { useContext, useEffect, useState, type CSSProperties, type ImgHTMLAttributes } from 'react';
+import { useContext, useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type ImgHTMLAttributes } from 'react';
+import { gsap } from './animation';
 import { readQuoteArtwork } from './quotePixels';
 import { ManifestoMotionContext } from './ManifestoMotion';
 
@@ -18,7 +19,9 @@ function loadArtwork(src: string) {
 }
 
 export function PixelQuote({ src, className, alt = '', ...props }: ImgHTMLAttributes<HTMLImageElement>) {
-  const { active } = useContext(ManifestoMotionContext);
+  const ref = useRef<HTMLSpanElement>(null);
+  const playback = useRef<gsap.core.Timeline>(null);
+  const { active, reducedMotion } = useContext(ManifestoMotionContext);
   const [loaded, setLoaded] = useState<{ src: string; artwork: QuoteArtwork }>();
   const artwork = loaded && loaded.src === src ? loaded.artwork : null;
   useEffect(() => {
@@ -28,7 +31,24 @@ export function PixelQuote({ src, className, alt = '', ...props }: ImgHTMLAttrib
     void loadArtwork(src).then(result => { if (!cancelled) setLoaded({ src, artwork: result }); });
     return () => { cancelled = true; };
   }, [active, src]);
-  return <span className={[className, 'pixel-quote'].filter(Boolean).join(' ')} data-artwork={Boolean(artwork)}>
+  useLayoutEffect(() => {
+    if (!artwork || reducedMotion) return;
+    const context = gsap.context(() => {
+      playback.current = gsap.timeline({ paused: true });
+      const closingDelay = ref.current!.closest('.manifesto-quote-closing') ? 0.75 : 0;
+      ref.current!.querySelectorAll<SVGPathElement>('.pixel-quote-pulse').forEach(pixel => {
+        const delay = Number(pixel.style.getPropertyValue('--quote-band')) * 0.05 + closingDelay;
+        const pulse = gsap.timeline({ repeat: -1, delay })
+          .to(pixel, { opacity: 0.15, duration: 0.36, ease: 'steps(1)' })
+          .to(pixel, { opacity: 1, duration: 0.12, ease: 'steps(1)' })
+          .to({}, { duration: 1.52 });
+        playback.current!.add(pulse, 0);
+      });
+    }, ref);
+    return () => { context.revert(); playback.current = null; };
+  }, [artwork, reducedMotion]);
+  useLayoutEffect(() => { playback.current?.paused(!active); }, [active, artwork, reducedMotion]);
+  return <span ref={ref} className={[className, 'pixel-quote'].filter(Boolean).join(' ')} data-artwork={Boolean(artwork)}>
     <img {...props} src={src} alt={alt} />
     {artwork && <svg className="pixel-quote-art" viewBox={artwork.viewBox} preserveAspectRatio="none" fill="none" aria-hidden="true">
       {artwork.fields.map((field, index) => <path key={index} d={field.path} fill={field.color}

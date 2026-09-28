@@ -1,5 +1,6 @@
-import { Children, cloneElement, isValidElement, useContext, useEffect, useMemo, useRef, useState, useSyncExternalStore, type CSSProperties, type HTMLAttributes, type ReactElement } from 'react';
+import { Children, cloneElement, isValidElement, useContext, useEffect, useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore, type CSSProperties, type HTMLAttributes, type ReactElement } from 'react';
 
+import { gsap } from './animation';
 import { ManifestoMotionContext } from './ManifestoMotion';
 import { advanceVoiceTyping, wrapVoiceLines, type VoiceTypingState } from './voiceTyping';
 
@@ -12,12 +13,25 @@ type VoiceParagraph = ReactElement<HTMLAttributes<HTMLParagraphElement> & { 'dat
 
 function VoiceColumn({ column, index }: { column: VoiceParagraph; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
+  const cursorRef = useRef<HTMLSpanElement>(null);
+  const cursorTween = useRef<gsap.core.Tween>(null);
   const { active, reducedMotion } = useContext(ManifestoMotionContext);
   const [metrics, setMetrics] = useState({ capacity: 24, rows: 34, lineHeight: 34 });
   const [typing, setTyping] = useState<VoiceTypingState>({ head: index * 3, typed: 0, phase: 'typing' });
   const source = String(column.props.children ?? '');
   const lines = useMemo(() => wrapVoiceLines(source, metrics.capacity), [source, metrics.capacity]);
   const currentLine = lines[(typing.head + metrics.rows - 1) % lines.length] ?? '';
+
+  useLayoutEffect(() => {
+    if (reducedMotion) return;
+    const context = gsap.context(() => {
+      cursorTween.current = gsap.to(cursorRef.current, {
+        opacity: 0, duration: 0.35, repeat: -1, yoyo: true, ease: 'steps(1)', paused: true,
+      });
+    }, ref);
+    return () => { context.revert(); cursorTween.current = null; };
+  }, [reducedMotion]);
+  useLayoutEffect(() => { cursorTween.current?.paused(!active); }, [active, reducedMotion]);
 
   useEffect(() => {
     const element = ref.current;
@@ -48,13 +62,19 @@ function VoiceColumn({ column, index }: { column: VoiceParagraph; index: number 
     setTyping({ head: index * 3, typed: 0, phase: 'typing' });
   }, [index, metrics.capacity, metrics.rows]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!active || reducedMotion || !lines.length) return;
     const punctuation = /[.!?]/.test(currentLine[typing.typed - 1] ?? '');
     const delay = typing.phase === 'advance' ? 90 : typing.phase === 'hold' || punctuation ? 70 : 16 + index % 4 * 3;
-    const timer = window.setTimeout(() => setTyping(previous => advanceVoiceTyping(previous, currentLine.length)), delay);
-    return () => window.clearTimeout(timer);
-  }, [active, reducedMotion, lines.length, currentLine, typing, index]);
+    const advance = () => setTyping(previous => advanceVoiceTyping(previous, currentLine.length));
+    const context = gsap.context(() => {
+      if (typing.phase === 'advance') gsap.to('.community-voice-track', {
+        y: -metrics.lineHeight, duration: 0.09, ease: 'power1.out', onComplete: advance,
+      });
+      else gsap.delayedCall(delay / 1000, advance);
+    }, ref);
+    return () => context.revert();
+  }, [active, reducedMotion, lines.length, currentLine, typing, index, metrics.lineHeight]);
 
   return <div ref={ref} className={[column.props.className, 'community-voice-column'].filter(Boolean).join(' ')}
     style={{ '--voice-line-height': `${metrics.lineHeight}px` } as CSSProperties}>
@@ -63,7 +83,7 @@ function VoiceColumn({ column, index }: { column: VoiceParagraph; index: number 
         {lines[(typing.head + row) % lines.length]}
       </div>)}
       <div className="community-voice-line community-voice-typing">
-        {currentLine.slice(0, typing.typed)}<span className="community-voice-cursor" />
+        {currentLine.slice(0, typing.typed)}<span ref={cursorRef} className="community-voice-cursor" />
       </div>
       <div className="community-voice-line" aria-hidden="true" />
     </div>}

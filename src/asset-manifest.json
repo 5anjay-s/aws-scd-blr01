@@ -37,7 +37,7 @@
   },
   {
     "file": "public/assets/865-7675-fa3f0.svg",
-    "component": "MobileHeroDesktopAligned",
+    "component": "HeroTitle",
     "variable": "imgAccentSignalStitch",
     "bytes": 5156
   },
@@ -918,12 +918,6 @@
     "bytes": 2131108
   },
   {
-    "file": "public/assets/865-7675-fa3f0.svg",
-    "component": "Group1",
-    "variable": "imgAccentSignalStitch",
-    "bytes": 5156
-  },
-  {
     "file": "public/assets/865-7675-4ceb6.svg",
     "component": "Group1",
     "variable": "imgDitherWakePhase2",
@@ -1291,5 +1285,53 @@
     "variable": "openaiLogo",
     "bytes": 2210,
     "source": "https://cdn.openai.com/brand/OpenAI-Logos-2025.zip"
+  },
+  {
+    "file": "public/assets/865-7675-28d92.png",
+    "component": "HeroTitle",
+    "variable": "imgHeroCloudTexture",
+    "bytes": 2131108
+  },
+  {
+    "file": "public/assets/1590-802-cfe72.svg",
+    "component": "HeroTitle",
+    "variable": "cloudArtwork",
+    "bytes": 464
+  },
+  {
+    "file": "public/assets/865-7675-cdcaf.svg",
+    "component": "HeroTitle",
+    "variable": "imgHeroPlane",
+    "bytes": 992
+  },
+  {
+    "file": "public/assets/227-540-40b86.svg",
+    "component": "FaqAccordion",
+    "variable": "imgToggleMinus",
+    "bytes": 261
+  },
+  {
+    "file": "public/assets/227-540-15af5.svg",
+    "component": "FaqAccordion",
+    "variable": "imgTogglePlus",
+    "bytes": 279
+  },
+  {
+    "file": "public/assets/860-5328-2b89b.svg",
+    "component": "FaqPage",
+    "variable": "imgFaqAskAndAnswerPixelArtwork",
+    "bytes": 2972
+  },
+  {
+    "file": "public/assets/866-8605-491b7.svg",
+    "component": "FaqPage",
+    "variable": "imgFaqMobilePixelConversation",
+    "bytes": 2814
+  },
+  {
+    "file": "public/assets/865-7675-0b485.svg",
+    "component": "FaqPage",
+    "variable": "imgExploreArrow",
+    "bytes": 274
   }
 ]

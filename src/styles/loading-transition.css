@@ -11,7 +11,6 @@
   position: absolute;
   inset: 0 -144px;
   will-change: transform;
-  animation: loading-cloud-cover 360ms cubic-bezier(.45, 0, .55, 1) both;
 }
 
 .loading-transition__cloud::before {
@@ -24,24 +23,3 @@
 .loading-transition__edge { position: absolute; top: 0; width: 144px; height: 100%; }
 .loading-transition__edge--left { left: 0; }
 .loading-transition__edge--right { right: 0; transform: scaleX(-1); }
-
-.loading-transition[data-phase='reveal'] .loading-transition__cloud {
-  animation: loading-cloud-reveal 540ms cubic-bezier(.45, 0, .25, 1) both;
-}
-
-@keyframes loading-cloud-cover {
-  from { transform: translate3d(-100%, 0, 0); }
-  to { transform: translate3d(0, 0, 0); }
-}
-
-@keyframes loading-cloud-reveal {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(100%, 0, 0); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .loading-transition[data-phase] .loading-transition__cloud {
-    animation-duration: 1ms;
-    transform: none !important;
-  }
-}

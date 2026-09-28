@@ -1,9 +1,12 @@
+import { gsap } from './components/animation';
 import { useCallback, useEffect, useLayoutEffect, useRef, useState, type ComponentType } from 'react';
 import manifest from './design-manifest.json';
 import { NavigationContext, type NavigationOptions } from './components/SiteLink';
 import { cleanSectionUrl, homeSectionPaths, resolveLocation } from './navigation';
 import { HeaderHostContext } from './components/SiteHeader';
+import { NavigationLocationContext } from './components/NavigationState';
 import { LoadingTransition, type LoadingTransitionPhase } from './components/LoadingTransition';
+import { PageTransition } from './components/PageTransition';
 
 const modules = import.meta.glob<{ default: ComponentType }>('./components/design/*.tsx', { eager: true });
 const components = new Map(manifest.map((entry) => [entry.id,
@@ -11,6 +14,7 @@ const components = new Map(manifest.map((entry) => [entry.id,
 
 type Section = { node: string; anchor?: string; label: string };
 type ResponsiveSections = { desktop: Section[]; mobile: Section[] };
+type TransitionState = { kind: 'intro' | 'page'; phase: LoadingTransitionPhase; origin?: NavigationOptions['origin'] };
 const section = (node: string, label: string, anchor?: string): Section => ({ node, label, anchor });
 
 const home: ResponsiveSections = {
@@ -29,7 +33,7 @@ const home: ResponsiveSections = {
     section('1405:638', 'Section divider'),
     section('860:5320', 'Make room for more builders', 'partner-with-us'),
     section('1154:487', 'Section divider'),
-    section('860:5328', 'Good questions', 'faq'),
+    section('860:5328', 'Good questions', 'faq-preview'),
     section('860:5342', 'The details', 'details'),
     section('860:5352', 'Build something', 'join'),
     section('860:5359', 'Keep the conversation going', 'contact'),
@@ -49,7 +53,7 @@ const home: ResponsiveSections = {
     section('1406:700', 'Section divider'),
     section('866:8600', 'Make room for more builders', 'partner-with-us'),
     section('1170:643', 'Section divider'),
-    section('866:8605', 'Good questions', 'faq'),
+    section('866:8605', 'Good questions', 'faq-preview'),
     section('1168:497', 'The details', 'details'),
     section('866:8622', 'Build something', 'join'),
     section('1168:498', 'Keep the conversation going', 'contact'),
@@ -58,6 +62,10 @@ const home: ResponsiveSections = {
 
 const pages: Record<string, ResponsiveSections> = {
   '/': home,
+  '/faq': {
+    desktop: [section('227:540', 'Frequently asked questions'), section('860:5359', 'Keep the conversation going')],
+    mobile: [section('227:541', 'Frequently asked questions'), section('1168:498', 'Keep the conversation going')],
+  },
   '/technical': { desktop: [section('874:8915', 'Technical track')], mobile: [section('874:9123', 'Technical track')] },
   '/non-technical': { desktop: [section('874:9211', 'Non-technical track')], mobile: [section('880:9338', 'Non-technical track')] },
   '/registration': { desktop: [section('1367:652', 'Registration')], mobile: [section('1367:780', 'Registration')] },
@@ -79,10 +87,13 @@ function firstVisitTarget() {
 export default function App() {
   const readLocation = () => resolveLocation(new URL(window.location.href));
   const [location, setLocation] = useState(readLocation);
+  const [activeSection, setActiveSection] = useState(() => readLocation().anchor || 'home');
   const [entryTarget, setEntryTarget] = useState(firstVisitTarget);
   const [headerHost, setHeaderHost] = useState<HTMLDivElement | null>(null);
-  const [loadingTransition, setLoadingTransition] = useState<LoadingTransitionPhase | null>(null);
+  const [transition, setTransition] = useState<TransitionState | null>(null);
+  const transitionActive = useRef(false);
   const pendingNavigation = useRef<(() => void) | null>(null);
+  const focusOnArrival = useRef(false);
   const scrollBehavior = useRef<ScrollBehavior>('instant');
   const [viewport, setViewport] = useState(() => document.documentElement.clientWidth);
   const isLoading = entryTarget !== null || location.path === '/loading';
@@ -105,10 +116,13 @@ export default function App() {
   }, [headerHost]);
 
   const navigate = useCallback((href: string, options?: NavigationOptions) => {
+    if (transitionActive.current) return;
     const url = cleanSectionUrl(new URL(isLoading && entryTarget ? entryTarget : href, window.location.href));
     if (url.origin !== window.location.origin) return;
     const nextLocation = resolveLocation(url);
-    scrollBehavior.current = nextLocation.path === location.path && !isLoading && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const changesPage = nextLocation.path !== location.path;
+    scrollBehavior.current = !changesPage && !isLoading && !reducedMotion
       ? 'smooth' : 'instant';
     const commit = () => {
       if (isLoading) {
@@ -117,35 +131,55 @@ export default function App() {
       }
       if (options?.replace || isLoading) history.replaceState(null, '', url.pathname + url.search + url.hash);
       else history.pushState(null, '', url.pathname + url.search + url.hash);
+      focusOnArrival.current = changesPage || isLoading;
       setLocation(nextLocation);
     };
-    if (isLoading && nextLocation.path !== '/loading' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      if (pendingNavigation.current) return;
+    if (!reducedMotion && (isLoading ? nextLocation.path !== '/loading' : changesPage)) {
+      transitionActive.current = true;
       pendingNavigation.current = commit;
-      setLoadingTransition('cover');
+      setTransition({ kind: isLoading ? 'intro' : 'page', phase: 'cover', origin: options?.origin });
       return;
     }
     pendingNavigation.current = null;
-    setLoadingTransition(null);
+    setTransition(null);
     commit();
   }, [location.path, isLoading, entryTarget]);
 
-  const revealHero = useCallback(() => {
+  const revealPage = useCallback(() => {
     if (!pendingNavigation.current) return;
-    // Replace the page only once the cloud completely covers the viewport.
+    // Mount and position the destination while the viewport is fully covered.
     pendingNavigation.current();
     pendingNavigation.current = null;
-    setLoadingTransition('reveal');
+    setTransition((current) => current && { ...current, phase: 'reveal' });
+  }, []);
+
+  const completeTransition = useCallback(() => {
+    transitionActive.current = false;
+    setTransition(null);
   }, []);
 
   useEffect(() => {
     const resize = () => setViewport(document.documentElement.clientWidth);
     const back = () => {
-      pendingNavigation.current = null;
-      setLoadingTransition(null);
-      setEntryTarget(null);
+      const nextLocation = readLocation();
+      const commit = () => {
+        setEntryTarget(null);
+        focusOnArrival.current = nextLocation.path !== location.path;
+        setLocation(nextLocation);
+      };
       scrollBehavior.current = 'instant';
-      setLocation(readLocation());
+      // A new Back/Forward action cancels a pending link instead of committing it later.
+      if (!transitionActive.current && !isLoading && nextLocation.path !== location.path
+        && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        transitionActive.current = true;
+        pendingNavigation.current = commit;
+        setTransition({ kind: 'page', phase: 'cover' });
+        return;
+      }
+      pendingNavigation.current = null;
+      transitionActive.current = false;
+      setTransition(null);
+      commit();
     };
     window.addEventListener('resize', resize);
     window.addEventListener('popstate', back);
@@ -155,7 +189,23 @@ export default function App() {
       window.removeEventListener('popstate', back);
       window.removeEventListener('hashchange', back);
     };
-  }, []);
+  }, [location.path, isLoading]);
+
+  useEffect(() => {
+    if (!transition) return;
+    const preventScroll = (event: Event) => event.preventDefault();
+    const preventScrollKey = (event: KeyboardEvent) => {
+      if (['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) event.preventDefault();
+    };
+    window.addEventListener('wheel', preventScroll, { passive: false });
+    window.addEventListener('touchmove', preventScroll, { passive: false });
+    window.addEventListener('keydown', preventScrollKey);
+    return () => {
+      window.removeEventListener('wheel', preventScroll);
+      window.removeEventListener('touchmove', preventScroll);
+      window.removeEventListener('keydown', preventScrollKey);
+    };
+  }, [transition]);
 
   useLayoutEffect(() => {
     const previousRestoration = history.scrollRestoration;
@@ -185,12 +235,25 @@ export default function App() {
     // Scroll updates the URL without triggering a React navigation.
     const { anchor } = resolveLocation(url);
     const target = !isLoading && anchor ? document.getElementById(anchor) : null;
-    if (target) window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - (headerHost?.parentElement?.getBoundingClientRect().height ?? 0), behavior });
-    else window.scrollTo({ top: 0, behavior: 'instant' });
+    const top = target ? target.getBoundingClientRect().top + window.scrollY
+      - (headerHost?.parentElement?.getBoundingClientRect().height ?? 0) : 0;
+    if (target && behavior === 'smooth') {
+      const scroll = gsap.to(window, { scrollTo: { y: top, autoKill: true }, duration: 0.65, ease: 'power2.inOut' });
+      return () => { scroll.kill(); };
+    }
+    window.scrollTo({ top, behavior: 'instant' });
   }, [isLoading, location, mobile, headerHost]);
 
+  useLayoutEffect(() => {
+    if (transition || !focusOnArrival.current) return;
+    focusOnArrival.current = false;
+    const { anchor } = readLocation();
+    const target = anchor ? document.getElementById(anchor) : document.querySelector<HTMLElement>('.design-section');
+    target?.focus({ preventScroll: true });
+  }, [location, transition]);
+
   useEffect(() => {
-    if (isLoading || location.path !== '/') return;
+    if (transition || isLoading || location.path !== '/') return;
     const anchors = Array.from(document.querySelectorAll<HTMLElement>('.design-section[id]'));
     if (!anchors.length) return;
     let frame = 0;
@@ -210,6 +273,7 @@ export default function App() {
         current = anchors[anchors.length - 1];
       }
       const path = homeSectionPaths[current.id];
+      setActiveSection(current.id);
       if (path && (window.location.pathname !== path || window.location.hash)) {
         // Replace the URL without adding history entries or triggering an anchor jump.
         history.replaceState(history.state, '', path + window.location.search);
@@ -231,17 +295,19 @@ export default function App() {
       window.removeEventListener('scroll', scheduleUpdate);
       window.removeEventListener('resize', scheduleUpdate);
     };
-  }, [location.path, mobile, isLoading]);
+  }, [location.path, mobile, isLoading, transition]);
 
-  return <NavigationContext.Provider value={navigate}><HeaderHostContext.Provider value={headerHost}>
-    <main id="top" className={`design-shell ${isLoading ? 'loading-shell' : ''}`} inert={loadingTransition !== null}>
+  return <NavigationContext.Provider value={navigate}>
+    <NavigationLocationContext.Provider value={{ path: location.path, anchor: location.path === '/' ? activeSection : location.anchor }}>
+    <HeaderHostContext.Provider value={headerHost}>
+    <main id="top" className={`design-shell ${isLoading ? 'loading-shell' : ''}`} inert={transition !== null} aria-busy={transition !== null}>
       <div className={`design-canvas ${mobile ? 'mobile-layout' : 'desktop-layout'}`}>
         {!isLoading && <header className="site-header-shell">
           <div className="design-content" ref={setHeaderHost} />
         </header>}
         {sections.map((item) => {
           const Component = components.get(item.node)!;
-          return <section key={item.node} id={item.anchor} aria-label={item.label}
+          return <section key={item.node} id={item.anchor} aria-label={item.label} tabIndex={-1}
             data-design-section={item.node} className="design-section">
             <div className="design-content">
               <Component />
@@ -250,7 +316,8 @@ export default function App() {
         })}
       </div>
     </main>
-    {loadingTransition && <LoadingTransition phase={loadingTransition} onCovered={revealHero}
-      onComplete={() => setLoadingTransition(null)} />}
-  </HeaderHostContext.Provider></NavigationContext.Provider>;
+    {transition && (transition.kind === 'intro'
+      ? <LoadingTransition phase={transition.phase} onCovered={revealPage} onComplete={completeTransition} />
+      : <PageTransition phase={transition.phase} origin={transition.origin} onCovered={revealPage} onComplete={completeTransition} />)}
+  </HeaderHostContext.Provider></NavigationLocationContext.Provider></NavigationContext.Provider>;
 }

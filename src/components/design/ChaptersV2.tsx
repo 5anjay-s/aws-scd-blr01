@@ -1,3 +1,4 @@
+import { SpinningSpark } from "../SpinningSpark";
 import { useState } from "react";
 import { WovenRibbon } from "../WovenRibbon";
 import { BuildBrackets } from "../BuildBrackets";
@@ -27,7 +28,7 @@ export default function ChaptersV2() {
             <p className="d-95907800fd">and the tools shaping what is next.</p>
           </div>
           <div className="d-6970dad1f2" data-node-id="860:5091" data-name="Accent / Curiosity spark">
-            <img alt="" className="d-511e8f31d4 curiosity-spark-spin" src={imgAccentCuriositySpark} />
+            <SpinningSpark alt="" className="d-511e8f31d4 curiosity-spark-spin" src={imgAccentCuriositySpark} />
           </div>
           <div className="d-820b371f2c" data-node-id="860:5092" data-name="Accent / Dither corner">
             <img alt="" className="d-511e8f31d4" src={imgAccentDitherCorner} />

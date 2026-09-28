@@ -228,5 +228,15 @@
     "id": "880:9338",
     "name": "NonTechnicalMobile",
     "file": "src/components/design/NonTechnicalMobile.tsx"
+  },
+  {
+    "id": "227:540",
+    "name": "FaqGoodQuestionsDesktop",
+    "file": "src/components/design/FaqGoodQuestionsDesktop.tsx"
+  },
+  {
+    "id": "227:541",
+    "name": "FaqGoodQuestionsMobile",
+    "file": "src/components/design/FaqGoodQuestionsMobile.tsx"
   }
 ]

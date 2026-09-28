@@ -1,5 +1,5 @@
 import { createContext, useRef, type HTMLAttributes } from 'react';
-import { useInView, useReducedMotion } from 'motion/react';
+import { useInView, usePageVisible, useReducedMotion } from './animation';
 
 export const ManifestoMotionContext = createContext({ active: false, reducedMotion: false });
 
@@ -7,8 +7,9 @@ export function ManifestoMotion({ className, ...props }: HTMLAttributes<HTMLDivE
   const ref = useRef<HTMLDivElement>(null);
   const visible = useInView(ref, { amount: 0.05 });
   const reducedMotion = useReducedMotion();
+  const pageVisible = usePageVisible();
 
-  const active = visible && !reducedMotion;
+  const active = visible && pageVisible && !reducedMotion;
   return <ManifestoMotionContext.Provider value={{ active, reducedMotion: Boolean(reducedMotion) }}>
     <div {...props} ref={ref}
       className={[className, 'manifesto-motion'].filter(Boolean).join(' ')}

@@ -1,3 +1,4 @@
+import { SpinningSpark } from "../SpinningSpark";
 import { WovenRibbon } from "../WovenRibbon";
 
 // Source: Figma 00/ Final, node 860:5267.
@@ -36,7 +37,7 @@ export default function CommunityV2() {
         <WovenRibbon alt="" className="d-511e8f31d4" src={imgAccentWovenLinks} />
       </div>
       <div className="d-d259713903" data-node-id="860:5276" data-name="Accent / Curiosity spark">
-        <img alt="" className="d-511e8f31d4 curiosity-spark-spin" src={imgAccentCuriositySpark} />
+        <SpinningSpark alt="" className="d-511e8f31d4 curiosity-spark-spin" src={imgAccentCuriositySpark} />
       </div>
     </div>
   );

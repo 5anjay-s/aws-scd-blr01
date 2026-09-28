@@ -11,12 +11,12 @@
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "motion": "^12.23.0",
     "@fontsource/azeret-mono": "^5.2.0",
     "@fontsource/geist-mono": "^5.2.0",
-    "@fontsource/pixelify-sans": "^5.2.0"
+    "@fontsource/pixelify-sans": "^5.2.0",
+    "gsap": "^3.15.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@types/react": "^19.2.0",

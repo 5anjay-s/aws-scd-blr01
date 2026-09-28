@@ -1,3 +1,4 @@
+import { SpinningSpark } from "../SpinningSpark";
 import { useState } from "react";
 import { WovenRibbon } from "../WovenRibbon";
 import { BuildBrackets } from "../BuildBrackets";
@@ -23,7 +24,7 @@ export default function MobileChaptersDesktopAligned() {
               LEARN
             </p>
             <div className="d-8c43c371bf" data-node-id="1169:626" data-name="Accent / Curiosity spark">
-              <img alt="" className="d-511e8f31d4 curiosity-spark-spin" src={imgAccentCuriositySpark} />
+              <SpinningSpark alt="" className="d-511e8f31d4 curiosity-spark-spin" src={imgAccentCuriositySpark} />
             </div>
           </div>
           <p className="d-72c9e63c85" data-node-id="1169:630">

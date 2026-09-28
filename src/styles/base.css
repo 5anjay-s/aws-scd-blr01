@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Arcade Classic';
+  src: url('/fonts/ARCADECLASSIC.TTF') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   font-family: 'Geist Mono', monospace;
   color: #0b1020;
@@ -10,8 +18,15 @@
   --white: #f8fafc;
 }
 *, *::before, *::after { box-sizing: border-box; }
-html { scrollbar-width: none; }
-html::-webkit-scrollbar { display: none; }
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: var(--orange) var(--navy);
+}
+html::-webkit-scrollbar { width: 8px; height: 8px; }
+html::-webkit-scrollbar-track { background: var(--navy); }
+html::-webkit-scrollbar-thumb { background: var(--orange); border: 2px solid var(--navy); }
 body { margin: 0; }
 p, h1, h2, h3 { margin: 0; }
 a { color: inherit; text-decoration: none; }
@@ -19,7 +34,6 @@ button, input { font: inherit; }
 button { border: 0; border-radius: 0; padding: 0; background: transparent; color: inherit; text-align: inherit; cursor: pointer; }
 img { display: block; }
 button, a { -webkit-tap-highlight-color: transparent; }
-a[href], button { transition: background-color 140ms ease-out, color 140ms ease-out; }
 :focus-visible { outline: 2px solid var(--cyan); outline-offset: 5px; }
 a[aria-disabled='true'] { cursor: default; }
 .design-shell { position: relative; width: 100%; overflow: clip; }
@@ -30,7 +44,6 @@ a[aria-disabled='true'] { cursor: default; }
 .hero-dither-corner img { width: 100%; height: 100%; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  a, button { transition: none; }
 }
 
 /* Cover SVG edge seams when the design canvas scales to fractional pixels. */

@@ -1,4 +1,5 @@
 import { SignalStitch } from "../SignalStitch";
+import { TrackArtwork } from "../TrackArtwork";
 import { SiteLink } from "../SiteLink";
 import { DitherDivider } from "../DitherDivider";
 // Source: Figma 00/ Final, node 860:5104.
@@ -10,7 +11,7 @@ const imgArrow = "/assets/865-7675-0b485.svg";
 function ArtworkNonTechnicalTrackPixelQuotations({ className }: { className: string }) {
   return (
     <div className={className} data-node-id="676:2196" data-name="Artwork / Non-technical track — Pixel quotations">
-      <img alt="" className="d-511e8f31d4" src={imgArtworkNonTechnicalTrackPixelQuotations} />
+      <TrackArtwork kind="quotes" className="d-511e8f31d4" src={imgArtworkNonTechnicalTrackPixelQuotations} />
     </div>
   );
 }
@@ -18,7 +19,7 @@ function ArtworkNonTechnicalTrackPixelQuotations({ className }: { className: str
 function ArtworkTechnicalTrackPixelBrackets({ className }: { className: string }) {
   return (
     <div className={className} data-node-id="676:2190" data-name="Artwork / Technical track — Pixel brackets">
-      <img alt="" className="d-511e8f31d4" src={imgArtworkTechnicalTrackPixelBrackets} />
+      <TrackArtwork kind="brackets" className="d-511e8f31d4" src={imgArtworkTechnicalTrackPixelBrackets} />
     </div>
   );
 }

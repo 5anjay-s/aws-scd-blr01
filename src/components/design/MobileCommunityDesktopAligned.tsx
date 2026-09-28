@@ -1,3 +1,4 @@
+import { SpinningSpark } from "../SpinningSpark";
 import { WovenRibbon } from "../WovenRibbon";
 
 // Source: Figma 00/ Final, node 1168:495.
@@ -28,7 +29,7 @@ export default function MobileCommunityDesktopAligned() {
         </div>
         <div className="d-eba0bdedbb" data-node-id="1169:668" data-name="Community / Shared accents">
           <div className="d-3640469606" data-node-id="1169:669" data-name="Accent / Curiosity spark">
-            <img alt="" className="d-511e8f31d4 curiosity-spark-spin" src={imgAccentCuriositySpark} />
+            <SpinningSpark alt="" className="d-511e8f31d4 curiosity-spark-spin" src={imgAccentCuriositySpark} />
           </div>
           <div className="d-fb5e31aff3" data-node-id="1169:673" data-name="Accent / Woven links">
             <WovenRibbon alt="" className="d-511e8f31d4" src={imgAccentWovenLinks} />

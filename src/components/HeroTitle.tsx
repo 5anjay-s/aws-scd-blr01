@@ -1,159 +1,233 @@
-import { createContext, useContext, useEffect, useRef, useState, type HTMLAttributes } from 'react';
-import { animate, useInView, useReducedMotion } from 'motion/react';
+import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
+import { gsap, useInView, usePageVisible, useReducedMotion } from './animation';
+import { SignalStitch } from './SignalStitch';
+import { createHeroArrival } from './heroArrival';
+import cloudArtwork from '../../public/assets/1590-802-cfe72.svg?raw';
 
-const RevealContext = createContext({ ready: false, reducedMotion: false });
-const ASSEMBLY_DURATION = 1.65;
-const clamp = (value: number) => Math.max(0, Math.min(1, value));
-const easeOut = (value: number) => 1 - (1 - value) ** 3;
-const noise = (index: number) => {
-  const value = Math.sin(index * 127.1 + 311.7) * 43758.5453;
-  return value - Math.floor(value);
-};
+const imgAccentSignalStitch = '/assets/865-7675-fa3f0.svg';
+const imgHeroCloudTexture = '/assets/865-7675-28d92.png';
+const imgHeroPlane = '/assets/865-7675-cdcaf.svg';
+const cloudCut = cloudArtwork.match(/\bd="([^"]+)"/)![1];
+type TitleWord = 'STUDENT' | 'COMMUNITY' | 'DAY';
 
-type Pixel = { x: number; y: number; dx: number; dy: number; delay: number; color: string };
-
-export function HeroTitle(props: HTMLAttributes<HTMLDivElement>) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, amount: 0.2 });
-  const reducedMotion = Boolean(useReducedMotion());
-  const [fontsReady, setFontsReady] = useState(false);
-
-  useEffect(() => {
-    let active = true;
-    void document.fonts.ready.then(() => { if (active) setFontsReady(true); });
-    return () => { active = false; };
-  }, []);
-
-  return <RevealContext.Provider value={{ ready: inView && fontsReady, reducedMotion }}>
-    <div {...props} ref={ref} />
-  </RevealContext.Provider>;
+function WordLetters({ text, signal = false }: { text: TitleWord; signal?: boolean }) {
+  return Array.from(text).map((letter, index) => <span key={index} data-character={index}
+    className="hero-letter-slot">
+    <span className={signal ? 'hero-signal-letter' : 'hero-word-letter'} data-letter={letter}>{letter}</span>
+  </span>);
 }
 
-export function HeroTitleWord({ text, startIndex = 0 }: { text: string; startIndex?: number }) {
-  const { ready, reducedMotion } = useContext(RevealContext);
-  const wordRef = useRef<HTMLSpanElement>(null);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const hasAssembled = useRef(false);
-  const [complete, setComplete] = useState(false);
-  const [fallback, setFallback] = useState(false);
-  const [sizeRevision, setSizeRevision] = useState(0);
+function TitleWord({ text, nodeId }: { text: TitleWord; nodeId?: string }) {
+  return <span className={`hero-word hero-word--${text.toLowerCase()}`} data-node-id={nodeId} data-word={text}>
+    <span className="hero-word-window">
+      <span className="hero-word-base" aria-hidden="true">
+        <WordLetters text={text} />
+      </span>
+    </span>
+    <span className="hero-word-signal" aria-hidden="true">
+      <span className="hero-word-base">
+        <WordLetters text={text} signal />
+      </span>
+    </span>
+  </span>;
+}
+
+// Both the icon and the city lettering use this exact 32 × 24 cloud print.
+function CloudInk({ orangeAccent = true }: { orangeAccent?: boolean }) {
+  return <>
+    <rect width="32" height="24" fill="#22d3ee" />
+    <image className="hero-cloud-texture" href={imgHeroCloudTexture} x="-12" y="-8" width="56" height="38" preserveAspectRatio="xMidYMid slice" />
+    {orangeAccent && <path d="M12 12H20V14H12Z" fill="#ff9900" />}
+  </>;
+}
+
+function CloudWindow() {
+  const id = useId();
+  return <svg className="hero-cloud" viewBox="0 0 48 36" aria-hidden="true" focusable="false">
+    <defs><clipPath id={id}><path d={cloudCut} fillRule="evenodd" clipRule="evenodd" /></clipPath></defs>
+    <g className="hero-cloud-float">
+      <g transform="translate(8 6)">
+        <g clipPath={`url(#${id})`}><CloudInk /></g>
+      </g>
+    </g>
+    <g className="hero-cloud-pixels">
+      <rect x="2" y="20" width="2" height="2" fill="#a78bfa" />
+      <rect x="42" y="10" width="2" height="2" fill="#22d3ee" />
+      <rect x="38" y="29" width="1" height="1" fill="#ff9900" />
+    </g>
+  </svg>;
+}
+
+function CloudCity() {
+  const id = useId();
+  return <span className="hero-city" aria-hidden="true">
+    <span className="hero-city-measure">BENGALURU</span>
+    <svg className="hero-city-art" aria-hidden="true" focusable="false">
+      <defs>
+        <pattern id={id} patternUnits="userSpaceOnUse" width="1.333333em" height="1em" viewBox="0 0 32 24">
+          <CloudInk orangeAccent={false} />
+        </pattern>
+        <clipPath id={`${id}-reveal`} clipPathUnits="objectBoundingBox">
+          {Array.from({ length: 7 }, (_, row) =>
+            <rect key={row} className="hero-city-reveal-row" x="0" y={row / 7} width="1" height={1 / 7 + 0.001} />,
+          )}
+        </clipPath>
+      </defs>
+      <g className="hero-city-reveal" clipPath={`url(#${id}-reveal)`}>
+        <g className="hero-city-float">
+          <text x="0" y="50%" dominantBaseline="central" fill={`url(#${id})`}>BENGALURU</text>
+        </g>
+      </g>
+    </svg>
+    <span className="hero-city-pixels"><i /><i /><i /></span>
+  </span>;
+}
+
+export function HeroTitle({ variant }: { variant: 'desktop' | 'mobile' }) {
+  const mobile = variant === 'mobile';
+  const ref = useRef<HTMLDivElement>(null);
+  const entered = useInView(ref, { once: true, amount: 0.15 });
+  const visible = useInView(ref, { amount: 0.05 });
+  const pageVisible = usePageVisible();
+  const reducedMotion = useReducedMotion();
+  const [fontsReady, setFontsReady] = useState(false);
+  const ready = entered && fontsReady;
+  const active = visible && pageVisible && !reducedMotion;
+  const activity = useRef(active);
+  activity.current = active;
+  const completed = useRef(false);
+  const entrance = useRef<gsap.core.Timeline>(null);
+  const ambient = useRef<gsap.core.Timeline[]>([]);
 
   useEffect(() => {
-    const word = wordRef.current;
-    const canvas = canvasRef.current;
-    if (!ready || !word || !canvas) return;
-    const context = canvas.getContext('2d');
-    const mask = document.createElement('canvas');
-    const maskContext = mask.getContext('2d', { willReadFrequently: true });
-    if (!context || !maskContext) { setFallback(true); return; }
-    setFallback(false);
+    let mounted = true;
+    void document.fonts.ready.then(() => { if (mounted) setFontsReady(true); });
+    return () => { mounted = false; };
+  }, []);
 
-    const style = getComputedStyle(word);
-    const width = word.offsetWidth;
-    const height = word.offsetHeight;
-    const fontSize = parseFloat(style.fontSize);
-    const padding = Math.ceil(fontSize * 0.35);
-    const cell = Math.max(3, Math.round(fontSize / 24));
-    const ratio = Math.min(window.devicePixelRatio || 1, 2);
-    const palette = ['--orange', '--cyan', '--violet', '--lime'].map(name => style.getPropertyValue(name).trim());
-
-    mask.width = width;
-    mask.height = height;
-    maskContext.font = `${style.fontStyle} ${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
-    maskContext.letterSpacing = style.letterSpacing;
-    maskContext.fillStyle = '#fff';
-    const metrics = maskContext.measureText(text);
-    const ascent = metrics.fontBoundingBoxAscent;
-    const descent = metrics.fontBoundingBoxDescent;
-    const baseline = (height - ascent - descent) / 2 + ascent;
-    maskContext.fillText(text, 0, baseline);
-    const { data } = maskContext.getImageData(0, 0, width, height);
-    const pixels: Pixel[] = [];
-
-    // Sample the actual font so the moving squares assemble into these exact letters.
-    for (let y = 0; y < height; y += cell) {
-      for (let x = 0; x < width; x += cell) {
-        const sampleX = Math.min(width - 1, x + Math.floor(cell / 2));
-        const sampleY = Math.min(height - 1, y + Math.floor(cell / 2));
-        if (data[(sampleY * width + sampleX) * 4 + 3] < 96) continue;
-        const seed = pixels.length + startIndex * 97;
-        pixels.push({
-          x: x + padding,
-          y: y + padding,
-          dx: (noise(seed) - 0.7) * fontSize * 0.65,
-          dy: (noise(seed + 53) - 0.5) * fontSize * 0.6,
-          delay: (x / width) * 0.28 + noise(seed + 19) * 0.14,
-          color: palette[Math.floor(noise(seed + 71) * palette.length)],
-        });
+  useLayoutEffect(() => {
+    if (!ready && !reducedMotion) return;
+    const root = ref.current!;
+    const context = gsap.context(() => {
+      const letters = root.querySelectorAll('.hero-word-letter, .hero-signal-letter');
+      const cloud = root.querySelector('.hero-cloud');
+      const city = root.querySelector('.hero-city');
+      gsap.set(letters, { opacity: 1, x: 0, y: 0, xPercent: 0, yPercent: 0, rotation: 0, rotationX: 0, rotationY: 0, scale: 1, clipPath: 'none' });
+      gsap.set(cloud, { opacity: 1, scale: 1 });
+      gsap.set(city, { opacity: 1, y: 0 });
+      gsap.set(root.querySelectorAll('.hero-city-reveal-row'), { attr: { width: 1 } });
+      gsap.set(root, { attr: { 'data-arriving': 'false' } });
+      if (reducedMotion) {
+        completed.current = true;
+        return;
       }
-    }
 
-    const canvasWidth = width + padding * 2;
-    const canvasHeight = height + padding * 2;
-    canvas.width = Math.ceil(canvasWidth * ratio);
-    canvas.height = Math.ceil(canvasHeight * ratio);
-    canvas.style.width = `${canvasWidth}px`;
-    canvas.style.height = `${canvasHeight}px`;
-    canvas.style.left = `${-padding}px`;
-    canvas.style.top = `${-padding}px`;
-    context.scale(ratio, ratio);
-    let finished = false;
-    const draw = (elapsed: number) => {
-      context.clearRect(0, 0, canvasWidth, canvasHeight);
-      const solidColor = easeOut(clamp((elapsed - 1.1) / 0.55));
-      word.style.setProperty('--hero-title-opacity', String(solidColor));
-      for (const pixel of pixels) {
-        const progress = clamp((elapsed - pixel.delay) / 0.72);
-        if (progress === 0) continue;
-        const assembled = easeOut(progress);
-        const size = cell * (0.45 + assembled * 0.48);
-        context.globalAlpha = Math.min(1, progress * 5) * (1 - solidColor);
-        context.fillStyle = pixel.color;
-        const x = pixel.x + pixel.dx * (1 - assembled) + (cell - size) / 2;
-        const y = pixel.y + pixel.dy * (1 - assembled) + (cell - size) / 2;
-        context.fillRect(x, y, size, size);
-      }
-      context.globalAlpha = 1;
-    };
+      // Animate the original sky print inside the brand's stepped cloud silhouette.
+      const sky = gsap.timeline({ paused: true, repeat: -1, yoyo: true })
+        .to('.hero-cloud .hero-cloud-texture', { x: 5, y: 2, duration: 7, ease: 'sine.inOut' }, 0)
+        .to('.hero-cloud-float, .hero-city-float', { y: -2, duration: 3.5, repeat: 1, yoyo: true, ease: 'sine.inOut' }, 0)
+        .to('.hero-cloud-pixels rect', { y: -3, opacity: 0.35, duration: 2.8, stagger: 0.35, repeat: 1, yoyo: true, ease: 'sine.inOut' }, 0)
+        .to('.hero-city-pixels i', { y: -3, opacity: 0.35, duration: 2.8, stagger: 0.35, repeat: 1, yoyo: true, ease: 'sine.inOut' }, 0);
+      const citySky = gsap.timeline({ paused: true, repeat: -1, yoyo: true })
+        .to('.hero-city .hero-cloud-texture', { x: 5, y: 2, duration: 2.4, ease: 'sine.inOut' });
+      // Both copies share every letter transform so the dither stays on the moving type.
+      const signal = gsap.timeline({ paused: true, repeat: -1 });
+      root.querySelectorAll('.hero-word-signal').forEach((word, index) => {
+        signal.fromTo(word, { '--signal-x': '-20%' }, {
+          '--signal-x': '122%', duration: 4.2, ease: 'none',
+        }, index * 1.25);
+      });
+      const character = (word: TitleWord, index: number) => root.querySelectorAll(
+        `[data-word="${word}"] [data-character="${index}"] > span`,
+      );
+      const e = character('STUDENT', 4);
+      const u = character('STUDENT', 2);
+      const i = character('COMMUNITY', 6);
+      const ms = [...character('COMMUNITY', 2), ...character('COMMUNITY', 3)];
+      const a = character('DAY', 1);
+      const y = character('DAY', 2);
+      gsap.set([...i, ...u], { transformOrigin: '50% 55%', transformPerspective: 650 });
 
-    const finish = () => {
-      if (finished) return;
-      finished = true;
-      hasAssembled.current = true;
-      draw(ASSEMBLY_DURATION);
-      setComplete(true);
-    };
+      // Short, offset character scenes repeat after the entrance, like the GSAP headline.
+      const type = gsap.timeline({ paused: true, repeat: -1, repeatDelay: 0.35 })
+        .to(e, { scaleX: 0.64, scaleY: 1.08, duration: 0.2, ease: 'power2.inOut' }, 0.15)
+        .to(e, { scaleX: 1.08, scaleY: 0.94, duration: 0.16, ease: 'power2.out' }, 0.35)
+        .to(e, { scaleX: 1, scaleY: 1, duration: 0.65, ease: 'elastic.out(1, 0.38)' }, 0.51)
+        .to(i, { rotationX: 360, duration: 1.5, ease: 'power2.inOut' }, 0.95)
+        .set(i, { rotationX: 0 }, 2.45)
+        .to(a, { scaleY: 0.78, scaleX: 1.08, duration: 0.3, ease: 'power2.inOut' }, 2.4)
+        .to(a, { scaleY: 1, scaleX: 1, duration: 1.1, ease: 'elastic.out(1, 0.38)' }, 2.7)
+        .to(u, { rotationY: 360, duration: 1.45, ease: 'power2.inOut' }, 3.6)
+        .set(u, { rotationY: 0 }, 5.05)
+        .to(ms, { yPercent: -9, scaleY: 1.06, duration: 0.4,
+          stagger: (_index, target) => Number((target as HTMLElement).parentElement!.dataset.character) * 0.12,
+          ease: 'power2.out' }, 4.7)
+        .to(ms, { yPercent: 0, scaleY: 1, duration: 0.95,
+          stagger: (_index, target) => Number((target as HTMLElement).parentElement!.dataset.character) * 0.12,
+          ease: 'elastic.out(1, 0.5)' }, 5.1)
+        .to(y, { rotation: -9, yPercent: -7, duration: 0.4, ease: 'power2.out' }, 6.15)
+        .to(y, { rotation: 0, yPercent: 0, duration: 1.15, ease: 'elastic.out(1, 0.5)' }, 6.55);
+      signal.timeScale(1.5);
+      type.timeScale(1.5);
+      ambient.current = [sky, citySky, signal, type];
+      if (completed.current) return;
 
-    // One Motion timeline per word; frames draw pixels without React state updates.
-    const playback = reducedMotion || hasAssembled.current ? undefined : animate(0, ASSEMBLY_DURATION, {
-      duration: ASSEMBLY_DURATION,
-      delay: startIndex * 0.028,
-      ease: 'linear',
-      onUpdate: (elapsed) => {
-        if (!finished) draw(elapsed);
-      },
-      onComplete: finish,
-    });
-    if (!playback) finish();
-
-    const resize = new ResizeObserver(() => {
-      if (word.offsetWidth !== width || word.offsetHeight !== height) {
-        playback?.stop();
-        hasAssembled.current = true;
-        setSizeRevision(revision => revision + 1);
+      entrance.current = createHeroArrival(root, () => {
+        completed.current = true;
+        if (activity.current) ambient.current.forEach(timeline => timeline.play());
+      });
+    }, root);
+    // A resize during delivery settles the scene instead of following stale coordinates.
+    let width = root.clientWidth;
+    const observer = new ResizeObserver(() => {
+      if (Math.abs(root.clientWidth - width) > 1) {
+        width = root.clientWidth;
+        entrance.current?.progress(1);
       }
     });
-    resize.observe(word);
+    observer.observe(root);
     return () => {
-      playback?.stop();
-      resize.disconnect();
-      canvas.width = 0;
-      canvas.height = 0;
+      observer.disconnect();
+      context.revert();
+      entrance.current = null;
+      ambient.current = [];
     };
-  }, [ready, reducedMotion, sizeRevision, startIndex, text]);
+  }, [ready, reducedMotion, mobile]);
 
-  return <span ref={wordRef} className="hero-title-word" data-complete={complete} data-fallback={fallback}>
-    <span className="hero-title-text">{text}</span>
-    <canvas ref={canvasRef} className="hero-title-pixels" aria-hidden="true" />
-  </span>;
+  useLayoutEffect(() => {
+    entrance.current?.paused(!active);
+    ambient.current.forEach(timeline => timeline.paused(!active || !completed.current));
+  }, [active, ready, reducedMotion]);
+
+  return <div ref={ref} className="hero-masthead" data-motion-active={active}
+    data-arriving="true"
+    data-node-id={mobile ? '1169:523' : '860:5000'} data-name="Masthead / Cloud and type">
+    <p className="hero-title-kicker" data-node-id={mobile ? '1169:524' : '860:5004'}>FOR THE NEXT WAVE OF BUILDERS.</p>
+    <div className="hero-title-stage">
+      <h1 className="hero-title-display" aria-label="Student Community Day Bengaluru" data-node-id={mobile ? '1169:525' : undefined}>
+        <span className="hero-title-first-row" data-node-id={mobile ? undefined : '860:5001'}>
+          <TitleWord text="STUDENT" nodeId={mobile ? undefined : '860:5002'} />
+          <CloudWindow />
+        </span>
+        <span className="hero-title-lower" data-node-id={mobile ? undefined : '860:5006'}>
+          <TitleWord text="COMMUNITY" />
+          <span className="hero-title-last-row"><TitleWord text="DAY" /><CloudCity /></span>
+        </span>
+      </h1>
+      <div className="hero-title-note" data-node-id={mobile ? '1169:526' : '860:5003'}>
+        <div data-node-id={mobile ? undefined : '860:5005'}><p>A little curiosity.</p><p>A world of possibility.</p></div>
+        <div className="hero-title-stitch" data-node-id={mobile ? '1169:527' : '860:5007'}>
+          <SignalStitch alt="" src={imgAccentSignalStitch} />
+        </div>
+      </div>
+    </div>
+    <div className="hero-arrival-plane" aria-hidden="true">
+      <div className="hero-arrival-plane-art"><img src={imgHeroPlane} alt="" /></div>
+      <svg className="hero-arrival-rig" fill="none" aria-hidden="true" strokeLinejoin="miter" strokeLinecap="square">
+        <path stroke="var(--navy)" strokeWidth="5" />
+        <path stroke="var(--orange)" strokeWidth="2" strokeDasharray="5 7" />
+      </svg>
+    </div>
+    <div className="hero-launch-pixels" aria-hidden="true"><i /><i /><i /><i /></div>
+  </div>;
 }

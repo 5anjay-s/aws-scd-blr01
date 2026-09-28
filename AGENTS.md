@@ -1,6 +1,6 @@
 # Project Guide
 
-This is the AWS Student Community Day website, built with React 19, TypeScript, Vite, and Motion. The current website uses npm and package-lock.json. Figma provides the original artwork and compositions; apply the user's approved design changes to both responsive variants.
+This is the AWS Student Community Day website, built with React 19, TypeScript, Vite, and GSAP. The current website uses npm and package-lock.json. Figma provides the original artwork and compositions; apply the user's approved design changes to both responsive variants.
 
 ## Code map
 

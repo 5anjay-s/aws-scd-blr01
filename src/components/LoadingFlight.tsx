@@ -1,5 +1,7 @@
 import { useContext, useId, useLayoutEffect, useRef } from 'react';
+import { gsap } from './animation';
 import { NavigationContext } from './SiteLink';
+import { flightRope } from './flightRope';
 import logoArtwork from '../../public/assets/860-4959-9116d.svg?raw';
 import '../styles/loading-flight.css';
 
@@ -11,24 +13,10 @@ const UNFOLD_END = 1.95;
 const PAPER_FADE_END = 2.2;
 const DEPARTURE_END = 2.4;
 const FLIGHT_END = 2.8;
-const PLANE_X = 700;
+const PLANE_X = -132;
 const clamp = (value: number) => Math.max(0, Math.min(1, value));
 const ease = (value: number) => value * value * (3 - 2 * value);
 const settle = (value: number) => value ** 3 * (value * (value * 6 - 15) + 10);
-
-type Point = { x: number; y: number };
-
-// Stitched towlines retain the square steps used throughout the site artwork.
-function ropePath(start: Point, end: Point, slack: number) {
-  let path = `M${start.x} ${start.y}`;
-  for (let step = 1; step <= 20; step++) {
-    const t = step / 20;
-    const x = Math.round((start.x + (end.x - start.x) * t) / 2) * 2;
-    const y = Math.round((start.y + (end.y - start.y) * t + Math.sin(t * Math.PI) * slack) / 2) * 2;
-    path += `H${x}V${y}`;
-  }
-  return `${path}L${end.x} ${end.y}`;
-}
 
 export function LoadingFlight() {
   const navigate = useContext(NavigationContext);
@@ -56,12 +44,11 @@ export function LoadingFlight() {
     const knots = knotsRef.current!;
     const plane = planeRef.current!;
     const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
-    let entrance = -1400;
-    let outside = 1300;
-    let elapsed = 0;
-    let previousTime: number | null = null;
-    let frame = 0;
-    let completionTimer: number | undefined;
+    let entrance = 1400;
+    let outside = -700;
+    const clock = { seconds: 0 };
+    let playback: gsap.core.Tween;
+    let completion: gsap.core.Tween | undefined;
 
     const finish = () => {
       banner.removeAttribute('transform');
@@ -74,9 +61,7 @@ export function LoadingFlight() {
       plane.setAttribute('opacity', '0');
       svg.dataset.phase = 'complete';
       // Defer the redirect so StrictMode can cancel its first effect setup.
-      if (completionTimer === undefined) {
-        completionTimer = window.setTimeout(() => navigate('/', { replace: true }), 0);
-      }
+      if (!completion) completion = gsap.delayedCall(0, () => navigate('/', { replace: true }));
     };
 
     const draw = (seconds: number) => {
@@ -89,7 +74,7 @@ export function LoadingFlight() {
       const x = entrance * (1 - settle(towing));
       const y = Math.sin(towing * Math.PI * 2) * 2 * Math.sin(towing * Math.PI) ** 2;
       banner.setAttribute('transform', `translate(${x} ${y})`);
-      knots.setAttribute('transform', `translate(${x} ${y})`);
+      knots.setAttribute('transform', `translate(${x + 568} ${y}) scale(-1 1)`);
 
       const opening = ease(clamp((seconds - TOW_END) / (UNFOLD_END - TOW_END)));
       // A hinged paper panel opens from edge-on to flat; the printed smile stays on it.
@@ -103,7 +88,7 @@ export function LoadingFlight() {
       const departure = clamp((seconds - TOW_END) / (DEPARTURE_END - TOW_END));
       const travel = departure * departure;
       const flight = { x: x + PLANE_X + (outside - PLANE_X) * travel, y: y + 88 - 40 * travel };
-      const angle = Math.atan2(-40, outside - PLANE_X) * 180 / Math.PI * ease(clamp(departure / 0.2));
+      const angle = Math.atan2(40, PLANE_X - outside) * 180 / Math.PI * ease(clamp(departure / 0.2));
       plane.setAttribute('transform', `translate(${flight.x} ${flight.y}) rotate(${angle})`);
       plane.setAttribute('opacity', seconds < DEPARTURE_END ? '1' : '0');
 
@@ -111,9 +96,9 @@ export function LoadingFlight() {
       ropes.setAttribute('opacity', String(1 - ease(release)));
       knots.setAttribute('opacity', String(1 - ease(release)));
       if (release < 1) {
-        const end = { x: flight.x * (1 - release) + (x + 588) * release, y: flight.y + release * 48 };
-        topRope.setAttribute('d', ropePath({ x: x + 584, y: y + 24 }, end, 4 + release * 20));
-        bottomRope.setAttribute('d', ropePath({ x: x + 584, y: y + 160 }, end, 4 + release * 20));
+        const end = { x: flight.x * (1 - release) + (x - 20) * release, y: flight.y + release * 48 };
+        topRope.setAttribute('d', flightRope({ x: x - 16, y: y + 24 }, end, 4 + release * 20));
+        bottomRope.setAttribute('d', flightRope({ x: x - 16, y: y + 160 }, end, 4 + release * 20));
       }
 
       svg.dataset.phase = seconds < TOW_END ? 'delivery'
@@ -125,37 +110,31 @@ export function LoadingFlight() {
       const bounds = svg.getBoundingClientRect();
       const scale = bounds.width / 568;
       if (!scale) return;
-      entrance = -bounds.left / scale - 840;
-      outside = (window.innerWidth - bounds.left) / scale + 160;
-      draw(elapsed);
-    };
-    const tick = (now: number) => {
-      if (previousTime !== null) elapsed += (now - previousTime) / 1000;
-      previousTime = now;
-      draw(elapsed);
-      if (elapsed < FLIGHT_END) frame = window.requestAnimationFrame(tick);
+      entrance = (window.innerWidth - bounds.left) / scale + 280;
+      outside = -bounds.left / scale - 160;
+      draw(clock.seconds);
     };
     const syncPlayback = () => {
-      window.cancelAnimationFrame(frame);
-      previousTime = null;
-      if (motionPreference.matches) {
-        elapsed = FLIGHT_END;
-        finish();
-      } else if (!document.hidden && elapsed < FLIGHT_END) {
-        frame = window.requestAnimationFrame(tick);
-      }
+      if (motionPreference.matches) playback.progress(1);
+      else playback.paused(document.hidden);
     };
 
     resize();
-    syncPlayback();
+    const context = gsap.context(() => {
+      playback = gsap.to(clock, {
+        seconds: FLIGHT_END, duration: FLIGHT_END, ease: 'none', paused: true,
+        onUpdate: () => draw(clock.seconds),
+      });
+      syncPlayback();
+    }, svg);
     const observer = new ResizeObserver(resize);
     observer.observe(svg);
     window.addEventListener('resize', resize);
     document.addEventListener('visibilitychange', syncPlayback);
     motionPreference.addEventListener('change', syncPlayback);
     return () => {
-      window.cancelAnimationFrame(frame);
-      window.clearTimeout(completionTimer);
+      completion?.kill();
+      context.revert();
       observer.disconnect();
       window.removeEventListener('resize', resize);
       document.removeEventListener('visibilitychange', syncPlayback);
@@ -164,7 +143,7 @@ export function LoadingFlight() {
   }, [navigate]);
 
   return <svg ref={svgRef} className="loading-flight" viewBox="0 0 568 316" role="img" aria-labelledby={`${id}-title`}>
-    <title id={`${id}-title`}>AWS. A pixel plane delivers a folded banner, which opens to reveal the orange smile.</title>
+    <title id={`${id}-title`}>AWS. A pixel plane flies right to left with a folded banner, which opens to reveal the orange smile.</title>
     <defs>
       <path id={`${id}-top-rope`} ref={topRopeRef} />
       <path id={`${id}-bottom-rope`} ref={bottomRopeRef} />
@@ -201,7 +180,7 @@ export function LoadingFlight() {
     </g>
     <g ref={planeRef} className="loading-flight__plane" opacity="0">
       <g transform="scale(.85)">
-        <image href="/assets/865-7675-cdcaf.svg" x="-120" y="-40" width="128" height="80" transform="scale(-1 1)" />
+        <image href="/assets/865-7675-cdcaf.svg" x="-120" y="-40" width="128" height="80" />
       </g>
     </g>
   </svg>;

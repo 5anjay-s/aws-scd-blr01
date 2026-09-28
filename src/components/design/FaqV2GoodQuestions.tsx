@@ -1,3 +1,4 @@
+import { SiteLink } from "../SiteLink";
 // Source: Figma 00/ Final, node 860:5328.
 const imgFaqAskAndAnswerPixelArtwork = "/assets/860-5328-2b89b.svg";
 
@@ -18,6 +19,9 @@ export default function FaqV2GoodQuestions() {
         <p className="d-32ca0347fa" data-node-id="860:5333">
           A few things to know before we build together.
         </p>
+        <SiteLink href="/faq" className="faq-preview-link" buttonTone="orange" hoverTone="cyan">
+          Read all questions <img src="/assets/865-7675-207b4.svg" width="22" height="22" alt="" />
+        </SiteLink>
       </div>
       <div className="d-65f21c9c7f" data-node-id="860:5334" data-name="FAQ / Ask and answer pixel artwork">
         <img alt="" className="d-511e8f31d4" src={imgFaqAskAndAnswerPixelArtwork} />
