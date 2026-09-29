@@ -93,7 +93,6 @@ export default function ProgrammeV2ChooseYourTrackApprovedMobile() {
           </div>
         </SiteLink>
       </div>
-      <DitherDivider from="orange" via="navy" to="lime" />
     </div>
   );
 }

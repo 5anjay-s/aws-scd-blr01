@@ -5,7 +5,7 @@ import { createHeroArrival } from './heroArrival';
 import cloudArtwork from '../../public/assets/1590-802-cfe72.svg?raw';
 
 const imgAccentSignalStitch = '/assets/865-7675-fa3f0.svg';
-const imgHeroCloudTexture = '/assets/865-7675-28d92.png';
+const imgHeroCloudTexture = '/assets/865-7675-28d92.webp';
 const imgHeroPlane = '/assets/865-7675-cdcaf.svg';
 const cloudCut = cloudArtwork.match(/\bd="([^"]+)"/)![1];
 type TitleWord = 'STUDENT' | 'COMMUNITY' | 'DAY';
@@ -61,7 +61,7 @@ function CloudWindow() {
 function CloudCity() {
   const id = useId();
   return <span className="hero-city" aria-hidden="true">
-    <span className="hero-city-measure">BENGALURU</span>
+    <span className="hero-city-measure">BENGAL<span className="hero-city-ending">URU</span></span>
     <svg className="hero-city-art" aria-hidden="true" focusable="false">
       <defs>
         <pattern id={id} patternUnits="userSpaceOnUse" width="1.333333em" height="1em" viewBox="0 0 32 24">
@@ -75,7 +75,7 @@ function CloudCity() {
       </defs>
       <g className="hero-city-reveal" clipPath={`url(#${id}-reveal)`}>
         <g className="hero-city-float">
-          <text x="0" y="50%" dominantBaseline="central" fill={`url(#${id})`}>BENGALURU</text>
+          <text x="0" y="50%" dominantBaseline="central" fill={`url(#${id})`}>BENGAL<tspan dx="-0.107em">URU</tspan></text>
         </g>
       </g>
     </svg>

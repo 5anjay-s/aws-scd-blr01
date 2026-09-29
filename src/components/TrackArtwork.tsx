@@ -17,23 +17,43 @@ export function TrackArtwork({ src, kind, className }: TrackArtworkProps) {
   useLayoutEffect(() => {
     if (reducedMotion) return;
     const context = gsap.context(() => {
-      const timeline = gsap.timeline({ paused: true, repeat: -1, repeatDelay: 0.7 });
+      const timeline = gsap.timeline({ paused: true, repeat: -1, repeatDelay: 1.1 });
       playback.current = timeline;
       if (kind === 'quotes') {
-        // Two source-pixel steps, scaled with the original desktop/mobile SVG.
-        timeline
-          .to('.track-quote-opening', { xPercent: 2.5, yPercent: -3.125, duration: 0.48, ease: 'steps(2)' }, 0.18)
-          .to('.track-quote-opening', { xPercent: 0, yPercent: 0, duration: 0.48, ease: 'steps(2)' }, 0.95)
-          .to('.track-quote-closing', { xPercent: -2.5, yPercent: 3.125, duration: 0.48, ease: 'steps(2)' }, 1.65)
-          .to('.track-quote-closing', { xPercent: 0, yPercent: 0, duration: 0.48, ease: 'steps(2)' }, 2.42);
+        // Each glyph has its own pivot. The opening pair speaks, then the
+        // closing pair answers, with a short anticipation before each hop.
+        const hop = (part: string, start: number, direction: number) => {
+          timeline
+            .to(part, { scaleX: 1.04, scaleY: 0.9, duration: 0.16, ease: 'power2.in' }, start)
+            .to(part, {
+              xPercent: direction * 2.5, yPercent: direction * -3.125,
+              rotation: direction * -6, scaleX: 1, scaleY: 1.04,
+              duration: 0.34, ease: 'power3.out',
+            }, start + 0.16)
+            .to(part, {
+              xPercent: 0, yPercent: 0, rotation: 0, scaleX: 1, scaleY: 1,
+              duration: 0.68, ease: 'elastic.out(1, 0.45)',
+            }, start + 0.5);
+        };
+        hop('.track-quote-opening-first', 0.12, 1);
+        hop('.track-quote-opening-second', 0.28, 1);
+        hop('.track-quote-closing-first', 1.82, -1);
+        hop('.track-quote-closing-second', 1.98, -1);
       } else {
         timeline
-          .to('.track-bracket-left', { xPercent: -2.5, duration: 0.64, ease: 'steps(2)' }, 0.18)
-          .to('.track-bracket-right', { xPercent: 2.5, duration: 0.64, ease: 'steps(2)' }, 0.18)
-          .to('.track-bracket-center', { scale: 1.08, duration: 0.3, ease: 'sine.inOut' }, 0.78)
-          .to('.track-bracket-center', { scale: 1, duration: 0.42, ease: 'sine.inOut' }, 1.08)
-          .to('.track-bracket-left', { xPercent: 0, duration: 0.64, ease: 'steps(2)' }, 1.75)
-          .to('.track-bracket-right', { xPercent: 0, duration: 0.64, ease: 'steps(2)' }, 1.75);
+          .timeScale(1.6)
+          // A small inward squeeze gives the opening a visible wind-up.
+          .to('.track-bracket-left', { xPercent: 1.25, duration: 0.2, ease: 'power2.inOut' }, 0.12)
+          .to('.track-bracket-right', { xPercent: -1.25, duration: 0.2, ease: 'power2.inOut' }, 0.12)
+          .to('.track-bracket-center', { scale: 0.84, duration: 0.2, ease: 'power2.in' }, 0.12)
+          .to('.track-bracket-left', { xPercent: -5, duration: 0.7, ease: 'back.out(1.5)' }, 0.32)
+          .to('.track-bracket-right', { xPercent: 5, duration: 0.7, ease: 'back.out(1.5)' }, 0.32)
+          .to('.track-bracket-center', { rotation: 90, scale: 1.12, duration: 0.85, ease: 'back.out(1.3)' }, 0.38)
+          .to('.track-bracket-center', { scale: 1, duration: 0.3, ease: 'sine.inOut' }, 1.23)
+          .to('.track-bracket-left', { xPercent: 0, duration: 0.7, ease: 'power3.inOut' }, 1.95)
+          .to('.track-bracket-right', { xPercent: 0, duration: 0.7, ease: 'power3.inOut' }, 1.95)
+          .to('.track-bracket-center', { rotation: 0, scale: 0.9, duration: 0.6, ease: 'power3.inOut' }, 1.95)
+          .to('.track-bracket-center', { scale: 1, duration: 0.48, ease: 'back.out(1.8)' }, 2.55);
       }
     }, ref);
     return () => {
@@ -47,10 +67,10 @@ export function TrackArtwork({ src, kind, className }: TrackArtworkProps) {
   }, [visible, pageVisible, reducedMotion, kind, src]);
 
   const parts = kind === 'quotes'
-    ? ['track-quote-opening', 'track-quote-closing']
+    ? ['track-quote-opening-first', 'track-quote-opening-second', 'track-quote-closing-first', 'track-quote-closing-second']
     : ['track-bracket-left', 'track-bracket-center', 'track-bracket-right'];
 
-  return <span ref={ref} className={[className, 'track-artwork-motion'].filter(Boolean).join(' ')} aria-hidden="true">
+  return <span ref={ref} className={[className, 'track-artwork-motion'].filter(Boolean).join(' ')} data-track-artwork={kind} aria-hidden="true">
     {parts.map(part => <img key={part} src={src} alt="" className={`track-artwork-part ${part}`} draggable={false} />)}
   </span>;
 }

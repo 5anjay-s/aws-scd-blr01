@@ -1,6 +1,6 @@
 import { createContext, useContext, useRef, type AnchorHTMLAttributes, type ButtonHTMLAttributes } from 'react';
 import { useButtonAnimation } from './useButtonAnimation';
-import { cleanSectionUrl, isNavigationActive, resolveLocation } from '../navigation';
+import { isNavigationActive, resolveLinkUrl, resolveLocation } from '../navigation';
 import { HeaderNavigationContext, NavigationLocationContext } from './NavigationState';
 
 export type NavigationOptions = { replace?: boolean; origin?: { x: number; y: number } };
@@ -26,7 +26,7 @@ export function SiteLink({ href, children, className, buttonTone, hoverTone, ...
     return <a {...props} {...appearance} ref={ref} role="link" aria-disabled="true" title="Link to be announced">{children}</a>;
   }
   const external = /^https?:/.test(href);
-  const url = external ? null : cleanSectionUrl(new URL(href, window.location.href));
+  const url = external ? null : resolveLinkUrl(href, new URL(window.location.href));
   const destination = url ? url.pathname + url.search + url.hash : href;
   const current = inHeader && url && isNavigationActive(resolveLocation(url), location)
     ? (location.path === '/' ? 'location' : 'page') : undefined;

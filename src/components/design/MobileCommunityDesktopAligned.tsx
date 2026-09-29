@@ -1,5 +1,6 @@
 import { SpinningSpark } from "../SpinningSpark";
 import { WovenRibbon } from "../WovenRibbon";
+import { SiteLink } from "../SiteLink";
 
 // Source: Figma 00/ Final, node 1168:495.
 const imgAccentCuriositySpark = "/assets/1168-495-4fdc0.svg";
@@ -27,6 +28,9 @@ export default function MobileCommunityDesktopAligned() {
           <p className="d-9f251d856d">STUDENT LED.</p>
           <p className="d-8c8cd1946c">OPEN TO POSSIBILITY.</p>
         </div>
+        <SiteLink href="/organizers" className="community-organizers-link" buttonTone="orange" hoverTone="violet">
+          <span>Organizers</span><img src="/assets/865-7675-207b4.svg" width={22} height={22} alt="" data-name="Arrow" />
+        </SiteLink>
         <div className="d-eba0bdedbb" data-node-id="1169:668" data-name="Community / Shared accents">
           <div className="d-3640469606" data-node-id="1169:669" data-name="Accent / Curiosity spark">
             <SpinningSpark alt="" className="d-511e8f31d4 curiosity-spark-spin" src={imgAccentCuriositySpark} />

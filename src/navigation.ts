@@ -1,4 +1,5 @@
-export const homeSectionPaths: Record<string, string> = {
+// Route names are shared by hash URLs and the older clean-path bookmarks.
+export const homeSectionRoutes: Record<string, string> = {
   home: '/',
   experience: '/experience',
   tracks: '/tracks',
@@ -15,38 +16,50 @@ export const homeSectionPaths: Record<string, string> = {
   contact: '/contact',
 };
 
-const sectionsByPath = new Map(Object.entries(homeSectionPaths).map(([anchor, path]) => [path, anchor]));
+const sectionsByRoute = new Map(Object.entries(homeSectionRoutes).map(([anchor, route]) => [route, anchor]));
 // The partner introduction and directory share one public URL; link to the directory.
-sectionsByPath.set('/partner-lineup', 'partner-lineup');
-sectionsByPath.set('/learn-build-belong', 'experience');
-sectionsByPath.set('/program', 'tracks');
+sectionsByRoute.set('/home', 'home');
+sectionsByRoute.set('/top', 'home');
+sectionsByRoute.set('/partner-lineup', 'partner-lineup');
+sectionsByRoute.set('/learn-build-belong', 'experience');
+sectionsByRoute.set('/program', 'tracks');
+sectionsByRoute.set('/faq-preview', 'faq-preview');
 
 export function resolveLocation(url: URL) {
-  const path = url.pathname.replace(/\/$/, '') || '/';
-  if (path === '/' && url.hash === '#faq') return { path: '/faq', anchor: '' };
-  const section = sectionsByPath.get(path);
+  let path = url.pathname.replace(/\/$/, '') || '/';
+  let anchor = url.hash.slice(1);
+  if (path === '/' && anchor) {
+    // A second segment identifies an anchor within a standalone page.
+    const [route, ...segments] = anchor.replace(/^\//, '').split('/');
+    path = `/${route}`;
+    anchor = segments.join('/');
+  }
+  const section = sectionsByRoute.get(path);
   return {
     path: section ? '/' : path,
-    anchor: url.hash === '#learn-build-belong' ? 'experience'
-      : url.hash === '#program' ? 'tracks' : url.hash.slice(1) || section || '',
+    anchor: anchor === 'learn-build-belong' ? 'experience'
+      : anchor === 'program' ? 'tracks' : anchor || section || '',
   };
 }
 
-export function cleanSectionUrl(source: URL) {
+export function hashRouteUrl(source: URL) {
   const url = new URL(source.href);
   const { path, anchor } = resolveLocation(url);
-  if (path === '/faq' && (url.pathname === '/' || url.pathname === '/faq/')) {
-    url.pathname = '/faq';
-    if (url.hash === '#faq') url.hash = '';
-  }
-  const sectionPath = Object.hasOwn(homeSectionPaths, anchor) ? homeSectionPaths[anchor] : undefined;
-  if (path === '/' && (sectionPath !== undefined || anchor === 'top')) {
-    url.pathname = sectionPath ?? '/';
-    url.hash = '';
-  } else if (anchor === 'top') {
-    url.hash = '';
-  }
+  const sectionRoute = Object.hasOwn(homeSectionRoutes, anchor) ? homeSectionRoutes[anchor] : '/';
+  const route = path === '/' ? (anchor === 'top' ? '/' : sectionRoute) : path;
+  const pageAnchor = path !== '/' && anchor && anchor !== 'top' ? `/${anchor}` : '';
+  url.pathname = '/';
+  url.hash = `${route === '/' ? 'home' : route.slice(1)}${pageAnchor}`;
   return url;
+}
+
+export function resolveLinkUrl(href: string, current: URL) {
+  // A relative #top link must retain the page encoded in the current hash.
+  if (href === '#top') {
+    const { path } = resolveLocation(current);
+    return hashRouteUrl(new URL(path + current.search, current));
+  }
+  return hashRouteUrl(new URL(href, current));
 }
 
 // Section URLs and page URLs share the same navigation highlight rules.

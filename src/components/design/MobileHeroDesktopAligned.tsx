@@ -3,7 +3,7 @@ import { HeroTitle } from "../HeroTitle";
 import { SiteLink } from "../SiteLink";
 // Source: Figma 00/ Final, node 1168:491.
 import { DesignMotion } from "../DesignMotion";
-const imgArtworkWindowDesktopTextureMobileCrop = "/assets/865-7675-28d92.png";
+const imgArtworkWindowDesktopTextureMobileCrop = "/assets/865-7675-28d92.webp";
 const imgDitherWakePhase2 = "/assets/1168-491-212f9.svg";
 const imgDitherWakePhase1 = "/assets/1168-491-5e543.svg";
 const imgPixelPropellerPlaneLeftFacing = "/assets/1168-491-96d60.svg";
@@ -41,7 +41,7 @@ export default function MobileHeroDesktopAligned() {
         <div className="d-390d240284" data-node-id="1169:533" data-name="Mobile / Sky crop" data-hero-sky>
           <div className="d-ad5d42a9d0" data-node-id="1169:534" data-name="Mobile / Desktop cloud texture">
             <div className="d-8ac2978ed0" data-node-id="1169:535" data-name="Artwork / Window — Desktop texture, mobile crop">
-              <img alt="" className="d-b9b760d314" src={imgArtworkWindowDesktopTextureMobileCrop} />
+              <img alt="" className="d-b9b760d314" src={imgArtworkWindowDesktopTextureMobileCrop} width={1254} height={1254} loading="eager" fetchPriority="high" decoding="async" />
             </div>
           </div>
           <DesignMotion className="d-f473903882" data-node-id="1169:536" data-name="Mobile / Pixel propeller flight / right to left" data-hero-sky-flight waitForArrival>

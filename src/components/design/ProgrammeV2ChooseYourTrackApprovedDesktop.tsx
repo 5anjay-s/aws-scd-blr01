@@ -134,7 +134,6 @@ export default function ProgrammeV2ChooseYourTrackApprovedDesktop() {
           </div>
         </SiteLink>
       </div>
-      <DitherDivider from="orange" via="navy" to="lime" />
     </div>
   );
 }

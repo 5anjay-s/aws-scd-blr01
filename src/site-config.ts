@@ -6,6 +6,11 @@ export const siteLinks = {
   instagram: '',
 };
 
+// Organizer destinations will be supplied later. Keep their contact tabs inactive until then.
+export const organizerLinks = {
+  eventInstagram: '', campusInstagram: '', linkedin: '', meetup: '', luma: '', builderCenter: '',
+};
+
 export const siteSponsors = {
   title: { role: 'TITLE SPONSOR', name: 'AWS', logo: '/assets/sponsors/aws.svg' },
   poweredBy: { role: 'POWERED BY', name: 'OpenAI', logo: '/assets/sponsors/openai.svg' },

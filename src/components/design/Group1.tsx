@@ -4,7 +4,7 @@ import { DesignMotion } from "../DesignMotion";
 import { HeroTitle } from "../HeroTitle";
 // Source: Figma 00/ Final, node 865:7675.
 const imgDitherCorner = "/assets/1304-694-39fa8.svg";
-const imgArtworkWindowOriginalTexture = "/assets/865-7675-28d92.png";
+const imgArtworkWindowOriginalTexture = "/assets/865-7675-28d92.webp";
 const imgDitherWakePhase2 = "/assets/865-7675-4ceb6.svg";
 const imgDitherWakePhase1 = "/assets/865-7675-008e9.svg";
 const imgPixelPropellerPlaneLeftFacing = "/assets/865-7675-cdcaf.svg";
@@ -46,7 +46,7 @@ export default function Group1() {
         <div className="d-392fdfdbe3" data-node-id="860:5009" data-name="Flat sky / crop" data-hero-sky>
           <div className="d-fa92dc8775" data-node-id="860:5010" data-name="Flat sky / static print">
             <div className="d-97af6a9f14" data-node-id="1131:2448" data-name="Artwork / Window — Original texture">
-              <img alt="" className="d-b9b760d314" src={imgArtworkWindowOriginalTexture} />
+              <img alt="" className="d-b9b760d314" src={imgArtworkWindowOriginalTexture} width={1254} height={1254} loading="eager" fetchPriority="high" decoding="async" />
             </div>
           </div>
           <DesignMotion className="d-b0b08e339c" data-node-id="860:5021" data-name="Pixel propeller flight / right to left" data-hero-sky-flight waitForArrival>

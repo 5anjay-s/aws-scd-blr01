@@ -2,6 +2,7 @@ import { SiteBrand } from "../SiteBrand";
 import { SiteHeader } from "../SiteHeader";
 import { WovenRibbon } from "../WovenRibbon";
 import { RegistrationButton } from "../RegistrationButton";
+import { BadgeStudio } from "../BadgeStudio";
 import { SiteCheckbox, SiteLink } from "../SiteLink";
 import { siteLinks } from "../../site-config";
 import { useState } from "react";
@@ -212,6 +213,7 @@ export default function RegistrationDesktop() {
         </div>
         <ScdRegistrationMeetupRsvpDesktop className="d-5782fa7dda" />
       </div>
+      <BadgeStudio />
       <div className="d-0ad43c5865" data-node-id="1367:725" data-name="Registration / Before the details arrive">
         <div className="d-552c1c6224" data-node-id="1367:726" data-name="Section index">
           <p className="d-c6a4bf57de" data-node-id="1367:727">

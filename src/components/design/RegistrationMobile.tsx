@@ -1,4 +1,5 @@
 import { SiteBrand } from "../SiteBrand";
+import { BadgeStudio } from "../BadgeStudio";
 import { SiteHeader } from "../SiteHeader";
 import { WovenRibbon } from "../WovenRibbon";
 import { SiteCheckbox, SiteLink } from "../SiteLink";
@@ -194,6 +195,7 @@ export default function RegistrationMobile() {
         </div>
         <ScdRegistrationMeetupRsvpMobile className="d-776ab3f7b6" />
       </div>
+      <BadgeStudio mobile />
       <div className="d-e6fc559f21" data-node-id="1367:847" data-name="Registration / Before the details arrive — Mobile">
         <div className="d-c589fabaed" data-node-id="1367:848" data-name="Registration / Section index">
           <p className="d-5f1f28fe2d" data-node-id="1367:849">

@@ -1,5 +1,15 @@
 [
   {
+    "id": "1823:3588",
+    "name": "OrganizersDesktop",
+    "file": "src/components/design/OrganizersDesktop.tsx"
+  },
+  {
+    "id": "1823:3589",
+    "name": "OrganizersMobile",
+    "file": "src/components/design/OrganizersMobile.tsx"
+  },
+  {
     "id": "1154:483",
     "name": "DividerSpeakersTimeline",
     "file": "src/components/design/DividerSpeakersTimeline.tsx"

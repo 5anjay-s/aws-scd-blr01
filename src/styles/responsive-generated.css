@@ -13,7 +13,6 @@
 .design-content .d-02422be0a0{isolation:isolate}
 .design-content .d-02422be0a0::before{content:"";position:absolute;inset:0;left:calc(50% - 50vw);right:calc(50% - 50vw);background:var(--navy,#0b1020);z-index:-1;pointer-events:none}
 .design-content .d-024da87460{left:calc(16 * var(--design-unit));width:calc(6 * var(--design-unit));height:calc(846 * var(--design-unit));top:calc(44 * var(--design-unit))}
-.design-content .d-0315f35df3{font-size:clamp(40px, calc(58 * var(--design-unit)), 58px);line-height:1.05172}
 .design-content .d-039c2c9e55{left:calc(230.15 * var(--design-unit));width:calc(69.044 * var(--design-unit));font-size:clamp(3.31px, calc(3.31 * var(--design-unit)), 3.31px);line-height:1.5003}
 .design-content .d-0479ea4484{line-height:max(1.05em, calc(23 * var(--space-unit)))}
 .design-content .d-0490a1ae8e{width:calc(400 * var(--design-unit))}
@@ -74,9 +73,6 @@
 .design-content .d-0f22abb004{gap:var(--space-24,calc(24 * var(--space-unit)));padding-left:var(--space-24,calc(24 * var(--space-unit)));padding-right:var(--space-24,calc(24 * var(--space-unit)));padding-top:calc(40 * var(--space-unit));padding-bottom:calc(40 * var(--space-unit));width:calc(390 * var(--design-unit))}
 .design-content .d-0f22abb004{isolation:isolate}
 .design-content .d-0f22abb004::before{content:"";position:absolute;inset:0;left:calc(50% - 50vw);right:calc(50% - 50vw);background:var(--white,#f8fafc);z-index:-1;pointer-events:none}
-.design-content .d-0f614aab94{padding-left:calc(48 * var(--space-unit));padding-right:calc(48 * var(--space-unit));padding-top:calc(24 * var(--space-unit));padding-bottom:calc(24 * var(--space-unit));width:calc(1439 * var(--design-unit));height:auto}
-.design-content .d-0f614aab94{isolation:isolate}
-.design-content .d-0f614aab94::before{content:"";position:absolute;inset:0;left:calc(50% - 50vw);right:calc(50% - 50vw);background:var(--navy,#0b1020);z-index:-1;pointer-events:none}
 .design-content .d-0fd138f51e{width:calc(342 * var(--design-unit));font-size:clamp(35.88px, calc(46 * var(--design-unit)), 46px);letter-spacing:-0.04em}
 .design-content .d-1089330ab3{width:calc(784 * var(--design-unit));font-size:clamp(31.2px, calc(40 * var(--design-unit)), 40px);letter-spacing:-0.04em}
 .design-content .d-10aaae0f73{width:calc(672 * var(--design-unit));font-size:clamp(14.04px, calc(18 * var(--design-unit)), 18px)}
@@ -117,7 +113,6 @@
 .design-content .d-19c923c9d7{width:calc(342 * var(--design-unit));font-size:clamp(11px, calc(11 * var(--design-unit)), 11px);line-height:1.45455}
 .design-content .d-19d4f30f9d{width:calc(342 * var(--design-unit));font-size:clamp(14px, calc(15 * var(--design-unit)), 15px)}
 .design-content .d-19fc48e306{gap:var(--space-24,calc(24 * var(--space-unit)));padding:var(--space-32,calc(32 * var(--space-unit)));width:calc(448 * var(--design-unit));height:auto}
-.design-content .d-1a6510fcd2{width:calc(1344 * var(--design-unit));height:auto}
 .design-content .d-1a81c67be5{width:calc(254 * var(--design-unit));font-size:clamp(17.94px, calc(23 * var(--design-unit)), 23px)}
 .design-content .d-1a9cf51344{gap:var(--space-16,calc(16 * var(--space-unit)));width:calc(342 * var(--design-unit))}
 .design-content .d-1a9ede0d7f{left:calc(1264 * var(--design-unit));width:calc(128 * var(--design-unit));height:calc(80 * var(--design-unit));top:calc(260 * var(--design-unit))}
@@ -157,7 +152,6 @@
 .design-content .d-20b3bae21a{width:calc(480 * var(--design-unit))}
 .design-content .d-20e6745efc{width:calc(342 * var(--design-unit));font-size:clamp(21.84px, calc(28 * var(--design-unit)), 28px)}
 .design-content .d-2158fa6ddb{line-height:max(1.05em, calc(28 * var(--space-unit)))}
-.design-content .d-218b1f732f{width:calc(342 * var(--design-unit));font-size:clamp(10px, calc(10 * var(--design-unit)), 10px);line-height:1.6}
 .design-content .d-21e0852790{width:calc(320 * var(--design-unit));height:calc(40 * var(--design-unit))}
 .design-content .d-21f089ff85{gap:var(--space-32,calc(32 * var(--space-unit)));padding-bottom:calc(40 * var(--space-unit));padding-top:calc(156 * var(--space-unit));padding-left:var(--space-48,calc(48 * var(--space-unit)));padding-right:var(--space-48,calc(48 * var(--space-unit)));height:auto}
 .design-content .d-21f089ff85{isolation:isolate}
@@ -169,13 +163,11 @@
 .design-content .d-22f3efd1f0{gap:var(--space-24,calc(24 * var(--space-unit)));width:calc(952 * var(--design-unit))}
 .design-content .d-230e513796{left:calc(16 * var(--design-unit));width:calc(160 * var(--design-unit));height:auto}
 .design-content .d-231e97fc8a{left:calc(32 * var(--design-unit));width:calc(384 * var(--design-unit));font-size:clamp(11px, calc(11 * var(--design-unit)), 11px);line-height:1.63636}
-.design-content .d-2357455c5d{width:calc(342 * var(--design-unit));font-size:clamp(20.28px, calc(26 * var(--design-unit)), 26px)}
 .design-content .d-23715e8fd1{width:calc(160 * var(--design-unit));height:calc(128 * var(--design-unit))}
 .design-content .d-23976039ee{width:calc(342 * var(--design-unit))}
 .design-content .d-2458e22cbe{width:calc(86 * var(--design-unit));height:auto}
 .design-content .d-247a001d68{left:calc(32 * var(--design-unit));width:calc(384 * var(--design-unit));font-size:clamp(11px, calc(12 * var(--design-unit)), 12px);line-height:1.5}
 .design-content .d-24afe222d2{width:calc(1344 * var(--design-unit));font-size:clamp(40px, calc(96 * var(--design-unit)), 96px);letter-spacing:-0.04em}
-.design-content .d-24c3b48b18{width:calc(672 * var(--design-unit));font-size:clamp(11px, calc(11 * var(--design-unit)), 11px);line-height:1.45455}
 .design-content .d-24de9bb201{line-height:max(1.05em, calc(29 * var(--space-unit)))}
 .design-content .d-24df9d72c3{width:calc(480 * var(--design-unit));font-size:clamp(11px, calc(11 * var(--design-unit)), 11px);line-height:1.45455}
 .design-content .d-250598d4b9{width:calc(960 * var(--design-unit));font-size:clamp(14px, calc(16 * var(--design-unit)), 16px);line-height:1.5}
@@ -190,7 +182,6 @@
 .design-content .d-26625795f6{width:calc(342 * var(--design-unit))}
 .design-content .d-2669efa126{width:calc(480 * var(--design-unit))}
 .design-content .d-26815d17f7{gap:var(--space-24,calc(24 * var(--space-unit)));padding-left:var(--space-24,calc(24 * var(--space-unit)));padding-right:var(--space-24,calc(24 * var(--space-unit)));padding-top:var(--space-16,calc(16 * var(--space-unit)));padding-bottom:var(--space-16,calc(16 * var(--space-unit)));width:calc(352 * var(--design-unit));height:auto}
-.design-content .d-268191fa90{width:calc(342 * var(--design-unit));font-size:clamp(14px, calc(17 * var(--design-unit)), 17px)}
 .design-content .d-2682a555d8{line-height:max(1.05em, calc(49 * var(--space-unit)))}
 .design-content .d-271d08db71{gap:var(--space-24,calc(24 * var(--space-unit)));padding-left:var(--space-24,calc(24 * var(--space-unit)));padding-right:var(--space-24,calc(24 * var(--space-unit)));padding-top:var(--space-16,calc(16 * var(--space-unit)));padding-bottom:var(--space-16,calc(16 * var(--space-unit)));width:calc(312 * var(--design-unit));height:auto;min-height:48px}
 .design-content .d-275622d536{left:calc(35 * var(--design-unit));width:calc(272 * var(--design-unit))}
@@ -215,7 +206,6 @@
 .design-content .d-2ab2cb11d1{left:calc(136 * var(--design-unit));width:calc(360 * var(--design-unit));font-size:clamp(14.04px, calc(18 * var(--design-unit)), 18px);line-height:1.33333}
 .design-content .d-2b15278d3b{width:calc(342 * var(--design-unit));font-size:clamp(23.4px, calc(30 * var(--design-unit)), 30px);letter-spacing:-0.04em}
 .design-content .d-2b3bdbf669{width:calc(320 * var(--design-unit))}
-.design-content .d-2b73e6011f{gap:calc(12 * var(--space-unit));width:calc(672 * var(--design-unit));height:auto}
 .design-content .d-2b9b55c96b{left:calc(1184 * var(--design-unit));width:calc(160 * var(--design-unit));height:calc(160 * var(--design-unit));top:calc(120 * var(--design-unit))}
 .design-content .d-2ba6ccb4e0{gap:var(--space-24,calc(24 * var(--space-unit)));padding-left:var(--space-24,calc(24 * var(--space-unit)));padding-right:var(--space-24,calc(24 * var(--space-unit)));padding-top:var(--space-32,calc(32 * var(--space-unit)));padding-bottom:var(--space-32,calc(32 * var(--space-unit)));width:calc(390 * var(--design-unit))}
 .design-content .d-2ba6ccb4e0{isolation:isolate}
@@ -236,7 +226,6 @@
 .design-content .d-2d1168383e{gap:var(--space-24,calc(24 * var(--space-unit)));width:calc(480 * var(--design-unit));height:auto}
 .design-content .d-2d39824b22{width:calc(560 * var(--design-unit));font-size:clamp(34.32px, calc(44 * var(--design-unit)), 44px);line-height:1.09091}
 .design-content .d-2d42c41533{left:calc(306 * var(--design-unit));width:calc(64 * var(--design-unit));font-size:clamp(20.28px, calc(26 * var(--design-unit)), 26px);letter-spacing:-0.04em;line-height:1.07692}
-.design-content .d-2d44ba2695{width:calc(342 * var(--design-unit));font-size:clamp(10px, calc(10 * var(--design-unit)), 10px);line-height:1.6}
 .design-content .d-2d63a67cb0{width:calc(128 * var(--design-unit));height:calc(16 * var(--design-unit))}
 .design-content .d-2d9d3e40e1{width:calc(352 * var(--design-unit));font-size:clamp(14px, calc(15 * var(--design-unit)), 15px);line-height:1.46667}
 .design-content .d-2da1383279{gap:var(--space-32,calc(32 * var(--space-unit)));width:calc(844 * var(--design-unit))}
@@ -269,9 +258,7 @@
 .design-content .d-3392969d42{width:calc(344 * var(--design-unit));font-size:clamp(14.04px, calc(18 * var(--design-unit)), 18px)}
 .design-content .d-346f0c017b{left:calc(608 * var(--design-unit));width:calc(48 * var(--design-unit));height:calc(52 * var(--design-unit));top:calc(140 * var(--design-unit))}
 .design-content .d-353266b000{width:calc(784 * var(--design-unit));font-size:clamp(11px, calc(12 * var(--design-unit)), 12px);line-height:1.5}
-.design-content .d-356af2f3f4{width:calc(672 * var(--design-unit));font-size:clamp(11px, calc(12 * var(--design-unit)), 12px);line-height:1.5}
 .design-content .d-3640469606{width:calc(40 * var(--design-unit));height:calc(40 * var(--design-unit))}
-.design-content .d-36d4b0d1ec{gap:calc(12 * var(--space-unit));width:calc(312 * var(--design-unit));height:auto}
 .design-content .d-36f4e0fcf2{gap:var(--space-24,calc(24 * var(--space-unit)));padding:var(--space-32,calc(32 * var(--space-unit)));width:calc(608 * var(--design-unit))}
 .design-content .d-372174b68b{width:calc(294 * var(--design-unit))}
 .design-content .d-374451ab91{height:auto}
@@ -293,7 +280,6 @@
 .design-content .d-392fdfdbe3{width:calc(896 * var(--design-unit))}
 .design-content .d-393807428f{width:calc(480 * var(--design-unit));font-size:clamp(11px, calc(12 * var(--design-unit)), 12px);line-height:1.5}
 .design-content .d-395823c23b{gap:var(--space-24,calc(24 * var(--space-unit)));width:calc(728 * var(--design-unit))}
-.design-content .d-395c66bc83{gap:var(--space-48,calc(48 * var(--space-unit)));width:calc(672 * var(--design-unit));height:auto}
 .design-content .d-39cfb050ad{line-height:max(1.05em, calc(76 * var(--space-unit)))}
 .design-content .d-3a0fbb554c{width:calc(1216 * var(--design-unit))}
 .design-content .d-3a8fd5fe1d{left:calc(314 * var(--design-unit));width:calc(6 * var(--design-unit))}
@@ -319,7 +305,6 @@
 .design-content .d-3cb557109e{width:calc(342 * var(--design-unit));font-size:clamp(29.64px, calc(38 * var(--design-unit)), 38px);letter-spacing:-0.04em}
 .design-content .d-3d0067e7da{gap:calc(13.241 * var(--space-unit));left:calc(32 * var(--design-unit));width:calc(384 * var(--design-unit));height:auto}
 .design-content .d-3d7ca59dd8{left:calc(166 * var(--design-unit));width:calc(90 * var(--design-unit));font-size:clamp(10px, calc(10 * var(--design-unit)), 10px);line-height:1.6}
-.design-content .d-3db78634da{font-size:clamp(40px, calc(58 * var(--design-unit)), 58px);line-height:1.05172}
 .design-content .d-3e088b93e2{width:calc(390 * var(--design-unit))}
 .design-content .d-3e088b93e2{isolation:isolate}
 .design-content .d-3e088b93e2::before{content:"";position:absolute;inset:0;left:calc(50% - 50vw);right:calc(50% - 50vw);background:var(--white,#f8fafc);z-index:-1;pointer-events:none}
@@ -378,19 +363,16 @@
 .design-content .d-4a0d7dd9ea{isolation:isolate}
 .design-content .d-4a0d7dd9ea::before{content:"";position:absolute;inset:0;left:calc(50% - 50vw);right:calc(50% - 50vw);background:var(--orange,#f90);z-index:-1;pointer-events:none}
 .design-content .d-4a2ed4174e{width:calc(592 * var(--design-unit));font-size:clamp(11px, calc(12 * var(--design-unit)), 12px)}
-.design-content .d-4b12b4b4b6{line-height:max(1.05em, calc(19 * var(--space-unit)))}
 .design-content .d-4b35a15af4{gap:calc(12 * var(--space-unit));left:calc(24 * var(--design-unit));width:calc(342 * var(--design-unit));height:auto}
 .design-content .d-4b43c08078{width:calc(342 * var(--design-unit))}
 .design-content .d-4b4a9cddd4{width:calc(1344 * var(--design-unit));height:auto}
 .design-content .d-4b7989c8c0{padding-bottom:var(--space-24,calc(24 * var(--space-unit)));padding-left:var(--space-24,calc(24 * var(--space-unit)));padding-right:var(--space-24,calc(24 * var(--space-unit)));width:calc(390 * var(--design-unit))}
 .design-content .d-4b7989c8c0{isolation:isolate}
 .design-content .d-4b7989c8c0::before{content:"";position:absolute;inset:0;left:calc(50% - 50vw);right:calc(50% - 50vw);background:var(--navy,#0b1020);z-index:-1;pointer-events:none}
-.design-content .d-4baab81ea1{line-height:max(1.05em, calc(19 * var(--space-unit)))}
 .design-content .d-4c830edfb9{width:calc(700 * var(--design-unit))}
 .design-content .d-4c9a0c8255{gap:var(--space-32,calc(32 * var(--space-unit)));padding:var(--space-48,calc(48 * var(--space-unit)));width:calc(1440 * var(--design-unit))}
 .design-content .d-4c9a0c8255{isolation:isolate}
 .design-content .d-4c9a0c8255::before{content:"";position:absolute;inset:0;left:calc(50% - 50vw);right:calc(50% - 50vw);background:var(--white,#f8fafc);z-index:-1;pointer-events:none}
-.design-content .d-4ccab95f30{width:calc(672 * var(--design-unit));font-size:clamp(37.44px, calc(48 * var(--design-unit)), 48px);line-height:1.16667}
 .design-content .d-4cce5c8f2c{line-height:max(1.05em, calc(26 * var(--space-unit)))}
 .design-content .d-4d3ba1bae3{width:calc(390 * var(--design-unit));height:calc(47.667 * var(--design-unit))}
 .design-content .d-4d6088a1ba{gap:var(--space-48,calc(48 * var(--space-unit)));padding:var(--space-32,calc(32 * var(--space-unit)));width:calc(1440 * var(--design-unit));font-size:clamp(11px, calc(12 * var(--design-unit)), 12px);line-height:1.5}
@@ -407,7 +389,6 @@
 .design-content .d-4f2c4792fb{width:calc(784 * var(--design-unit));font-size:clamp(40px, calc(62 * var(--design-unit)), 62px)}
 .design-content .d-4f3c7894ae{gap:var(--space-32,calc(32 * var(--space-unit)));width:calc(1344 * var(--design-unit))}
 .design-content .d-4f46e0635f{width:calc(342 * var(--design-unit))}
-.design-content .d-4f5b4a54fa{line-height:max(1.05em, calc(16 * var(--space-unit)))}
 .design-content .d-4f6da4825c{width:calc(880 * var(--design-unit));font-size:clamp(37.44px, calc(48 * var(--design-unit)), 48px);letter-spacing:-0.04em}
 .design-content .d-5003bfd20e{width:calc(912 * var(--design-unit));font-size:clamp(14.04px, calc(18 * var(--design-unit)), 18px)}
 .design-content .d-5007ffeed4{width:calc(576 * var(--design-unit));font-size:clamp(14px, calc(17 * var(--design-unit)), 17px);line-height:1.52941}
@@ -423,7 +404,6 @@
 .design-content .d-5190dfe567{gap:var(--space-24,calc(24 * var(--space-unit)));width:calc(472 * var(--design-unit))}
 .design-content .d-51a9a45b38{width:calc(408 * var(--design-unit));font-size:clamp(14px, calc(14 * var(--design-unit)), 14px);line-height:1.57143}
 .design-content .d-51b0f0d5e7{width:calc(416 * var(--design-unit));font-size:clamp(17.16px, calc(22 * var(--design-unit)), 22px);line-height:1.27273}
-.design-content .d-522924dbde{line-height:max(1.05em, calc(16 * var(--space-unit)))}
 .design-content .d-52fa24bcbd{width:calc(560 * var(--design-unit))}
 .design-content .d-52ff457d0e{left:calc(8 * var(--design-unit));width:calc(374 * var(--design-unit));height:calc(26 * var(--design-unit));top:calc(918 * var(--design-unit))}
 .design-content .d-53452c27e4{width:calc(1344 * var(--design-unit));font-size:clamp(11px, calc(12 * var(--design-unit)), 12px);line-height:1.5}
@@ -450,7 +430,6 @@
 .design-content .d-5782fa7dda{gap:var(--space-32,calc(32 * var(--space-unit)));padding:var(--space-48,calc(48 * var(--space-unit)));width:calc(1440 * var(--design-unit))}
 .design-content .d-5782fa7dda{isolation:isolate}
 .design-content .d-5782fa7dda::before{content:"";position:absolute;inset:0;left:calc(50% - 50vw);right:calc(50% - 50vw);background:var(--navy,#0b1020);z-index:-1;pointer-events:none}
-.design-content .d-57e020a7b5{gap:var(--space-24,calc(24 * var(--space-unit)));width:calc(342 * var(--design-unit))}
 .design-content .d-586f10a809{width:calc(272 * var(--design-unit));height:calc(304 * var(--design-unit))}
 .design-content .d-588c372a58{width:calc(294 * var(--design-unit));font-size:clamp(14px, calc(14 * var(--design-unit)), 14px);line-height:1.5}
 .design-content .d-58a505adc6{width:calc(176 * var(--design-unit));font-size:clamp(11px, calc(11 * var(--design-unit)), 11px);line-height:1.54545}
@@ -476,7 +455,6 @@
 .design-content .d-5c24635908{isolation:isolate}
 .design-content .d-5c24635908::before{content:"";position:absolute;inset:0;left:calc(50% - 50vw);right:calc(50% - 50vw);background:var(--navy,#0b1020);z-index:-1;pointer-events:none}
 .design-content .d-5cecc0ef37{line-height:max(1.05em, calc(50 * var(--space-unit)))}
-.design-content .d-5d8f205d81{left:calc(1024 * var(--design-unit));width:calc(120 * var(--design-unit));height:calc(16 * var(--design-unit));top:calc(184 * var(--design-unit))}
 .design-content .d-5dd7a655ee{width:calc(86 * var(--design-unit));height:auto;min-height:48px}
 .design-content .d-5de011bb5b{gap:var(--space-24,calc(24 * var(--space-unit)));width:calc(352 * var(--design-unit))}
 .design-content .d-5f10091e3c{width:calc(272 * var(--design-unit));height:calc(192 * var(--design-unit))}
@@ -488,7 +466,6 @@
 .design-content .d-5f78480222{width:calc(968 * var(--design-unit));font-size:clamp(11px, calc(12 * var(--design-unit)), 12px);line-height:1.5}
 .design-content .d-5f89f0b035{width:calc(342 * var(--design-unit));font-size:clamp(11px, calc(11 * var(--design-unit)), 11px);line-height:1.63636}
 .design-content .d-5f992142bf{left:calc(16 * var(--design-unit));width:calc(238 * var(--design-unit));height:calc(22 * var(--design-unit));top:calc(264 * var(--design-unit))}
-.design-content .d-5fe2d73b11{width:calc(240 * var(--design-unit));font-size:clamp(23.4px, calc(30 * var(--design-unit)), 30px)}
 .design-content .d-602ee05e42{width:calc(342 * var(--design-unit));font-size:clamp(40px, calc(68 * var(--design-unit)), 68px);letter-spacing:-0.0272059em;line-height:1.20588}
 .design-content .d-604c817326{width:calc(342 * var(--design-unit))}
 .design-content .d-6075610caa{gap:var(--space-48,calc(48 * var(--space-unit)));padding:var(--space-48,calc(48 * var(--space-unit)));width:calc(1440 * var(--design-unit))}
@@ -510,7 +487,6 @@
 .design-content .d-64b69ec810{isolation:isolate}
 .design-content .d-64b69ec810::before{content:"";position:absolute;inset:0;left:calc(50% - 50vw);right:calc(50% - 50vw);background:var(--navy,#0b1020);z-index:-1;pointer-events:none}
 .design-content .d-64e37b773b{width:calc(464 * var(--design-unit));font-size:clamp(14.04px, calc(18 * var(--design-unit)), 18px);line-height:1.5}
-.design-content .d-65cb95bc55{width:calc(240 * var(--design-unit));font-size:clamp(11px, calc(12 * var(--design-unit)), 12px);line-height:1.5}
 .design-content .d-65f21c9c7f{width:calc(544 * var(--design-unit));height:calc(384 * var(--design-unit))}
 .design-content .d-65fa648f17{gap:var(--space-24,calc(24 * var(--space-unit)));width:calc(472 * var(--design-unit))}
 .design-content .d-662118bfb8{width:calc(48 * var(--design-unit));height:calc(30 * var(--design-unit))}
@@ -541,7 +517,6 @@
 .design-content .d-6d70debfa3{width:calc(18 * var(--design-unit))}
 .design-content .d-6d91ba1ca8{line-height:max(1.05em, calc(37 * var(--space-unit)))}
 .design-content .d-6d96c470ea{width:calc(294 * var(--design-unit))}
-.design-content .d-6d9fe254c0{width:calc(1344 * var(--design-unit));font-size:clamp(11px, calc(11 * var(--design-unit)), 11px);line-height:1.45455}
 .design-content .d-6e321b37f6{width:calc(448 * var(--design-unit))}
 .design-content .d-6e37333e29{width:calc(342 * var(--design-unit));font-size:clamp(11px, calc(11 * var(--design-unit)), 11px);line-height:1.45455}
 .design-content .d-6e5523dbc6{line-height:max(1.05em, calc(102 * var(--space-unit)))}
@@ -556,7 +531,6 @@
 .design-content .d-706c281148{line-height:max(1.05em, calc(110 * var(--space-unit)))}
 .design-content .d-70a48e8e53{width:calc(824 * var(--design-unit));font-size:clamp(40px, calc(96 * var(--design-unit)), 96px);letter-spacing:-0.04em;line-height:1.0625}
 .design-content .d-70b8e5e9d0{gap:var(--space-24,calc(24 * var(--space-unit)));padding-left:var(--space-24,calc(24 * var(--space-unit)));padding-right:var(--space-24,calc(24 * var(--space-unit)));padding-top:var(--space-16,calc(16 * var(--space-unit)));padding-bottom:var(--space-16,calc(16 * var(--space-unit)))}
-.design-content .d-70d88ac505{gap:var(--space-48,calc(48 * var(--space-unit)));padding-top:var(--space-24,calc(24 * var(--space-unit)));padding-bottom:var(--space-24,calc(24 * var(--space-unit)));width:calc(1344 * var(--design-unit));height:auto}
 .design-content .d-713522d466{width:calc(342 * var(--design-unit));font-size:clamp(28.08px, calc(36 * var(--design-unit)), 36px);letter-spacing:-0.04em}
 .design-content .d-71a755c0b9{gap:var(--space-16,calc(16 * var(--space-unit)));width:calc(400 * var(--design-unit))}
 .design-content .d-723111d222{gap:var(--space-8,calc(8 * var(--space-unit)));left:calc(1024 * var(--design-unit));width:calc(320 * var(--design-unit));height:auto}
@@ -604,13 +578,9 @@
 .design-content .d-790e070aa2{left:calc(237.05 * var(--design-unit));width:calc(48.331 * var(--design-unit));height:calc(48.331 * var(--design-unit));top:calc(182.97 * var(--design-unit))}
 .design-content .d-791fa7a396{width:calc(448 * var(--design-unit));height:calc(456 * var(--design-unit))}
 .design-content .d-792578536f{left:calc(102 * var(--design-unit));width:calc(240 * var(--design-unit));height:calc(192 * var(--design-unit))}
-.design-content .d-793b7b3230{width:calc(368 * var(--design-unit));font-size:clamp(16.38px, calc(21 * var(--design-unit)), 21px)}
-.design-content .d-7958fc7b6f{width:calc(240 * var(--design-unit));font-size:clamp(11px, calc(12 * var(--design-unit)), 12px)}
 .design-content .d-79af150e9f{width:calc(192 * var(--design-unit))}
 .design-content .d-79f5f8e807{width:calc(600 * var(--design-unit));font-size:clamp(20.28px, calc(26 * var(--design-unit)), 26px);line-height:1.30769}
 .design-content .d-7a0f1f17eb{font-size:clamp(14px, calc(15 * var(--design-unit)), 15px)}
-.design-content .d-7a855bbe86{gap:var(--space-16,calc(16 * var(--space-unit)));width:calc(368 * var(--design-unit));height:auto}
-.design-content .d-7af9448497{gap:var(--space-48,calc(48 * var(--space-unit)));padding-top:var(--space-24,calc(24 * var(--space-unit)));padding-bottom:var(--space-24,calc(24 * var(--space-unit)));width:calc(1344 * var(--design-unit));height:auto}
 .design-content .d-7b0f966fe7{gap:var(--space-24,calc(24 * var(--space-unit)));padding-left:var(--space-24,calc(24 * var(--space-unit)));padding-right:var(--space-24,calc(24 * var(--space-unit)));padding-top:var(--space-32,calc(32 * var(--space-unit)));padding-bottom:var(--space-32,calc(32 * var(--space-unit)));width:calc(390 * var(--design-unit))}
 .design-content .d-7b0f966fe7{isolation:isolate}
 .design-content .d-7b0f966fe7::before{content:"";position:absolute;inset:0;left:calc(50% - 50vw);right:calc(50% - 50vw);background:var(--violet,#a78bfa);z-index:-1;pointer-events:none}
@@ -632,7 +602,6 @@
 .design-content .d-7ee4ef429a{isolation:isolate}
 .design-content .d-7ee4ef429a::before{content:"";position:absolute;inset:0;left:calc(50% - 50vw);right:calc(50% - 50vw);background:var(--navy,#0b1020);z-index:-1;pointer-events:none}
 .design-content .d-7efb926afd{width:calc(342 * var(--design-unit))}
-.design-content .d-7f75f43100{left:calc(-523.49 * var(--design-unit));width:calc(669.202 * var(--design-unit));height:auto}
 .design-content .d-7fe91255b2{height:auto}
 .design-content .d-7fe91255b2{isolation:isolate}
 .design-content .d-7fe91255b2::before{content:"";position:absolute;inset:0;left:calc(50% - 50vw);right:calc(50% - 50vw);background:var(--white,#f8fafc);z-index:-1;pointer-events:none}
@@ -670,9 +639,6 @@
 .design-content .d-84e4136834{width:calc(322.206 * var(--design-unit))}
 .design-content .d-8555103173{left:calc(36 * var(--design-unit));width:calc(64 * var(--design-unit));font-size:clamp(20.28px, calc(26 * var(--design-unit)), 26px);letter-spacing:-0.04em;line-height:1.07692}
 .design-content .d-85e8a98f69{width:calc(472 * var(--design-unit));font-size:clamp(31.2px, calc(40 * var(--design-unit)), 40px);letter-spacing:-0.04em}
-.design-content .d-8658b5b0ac{gap:var(--space-16,calc(16 * var(--space-unit)));padding:var(--space-24,calc(24 * var(--space-unit)));width:calc(390 * var(--design-unit))}
-.design-content .d-8658b5b0ac{isolation:isolate}
-.design-content .d-8658b5b0ac::before{content:"";position:absolute;inset:0;left:calc(50% - 50vw);right:calc(50% - 50vw);background:var(--navy,#0b1020);z-index:-1;pointer-events:none}
 .design-content .d-86b35f0797{gap:var(--space-24,calc(24 * var(--space-unit)));padding-left:var(--space-24,calc(24 * var(--space-unit)));padding-right:var(--space-24,calc(24 * var(--space-unit)));padding-top:var(--space-16,calc(16 * var(--space-unit)));padding-bottom:var(--space-16,calc(16 * var(--space-unit)));width:calc(336 * var(--design-unit))}
 .design-content .d-87e8379a2b{left:calc(1168 * var(--design-unit));width:calc(160 * var(--design-unit));height:calc(80 * var(--design-unit));top:calc(328 * var(--design-unit))}
 .design-content .d-8826026b01{width:calc(342 * var(--design-unit));font-size:clamp(21.06px, calc(27 * var(--design-unit)), 27px)}
@@ -772,7 +738,6 @@
 .design-content .d-a1f92edd2b{width:calc(368 * var(--design-unit));font-size:clamp(32.76px, calc(42 * var(--design-unit)), 42px)}
 .design-content .d-a23373a2d9{left:calc(24 * var(--design-unit));width:calc(119 * var(--design-unit));height:calc(30 * var(--design-unit));top:calc(220 * var(--design-unit))}
 .design-content .d-a238f29836{gap:var(--space-24,calc(24 * var(--space-unit)));width:calc(342 * var(--design-unit))}
-.design-content .d-a2bf04d1a7{gap:var(--space-8,calc(8 * var(--space-unit)));width:calc(342 * var(--design-unit))}
 .design-content .d-a3dcae5881{width:calc(352 * var(--design-unit));font-size:clamp(40px, calc(54 * var(--design-unit)), 54px);letter-spacing:-0.04em}
 .design-content .d-a3f0e2bf2e{width:calc(528 * var(--design-unit));font-size:clamp(24.96px, calc(32 * var(--design-unit)), 32px);letter-spacing:-0.04em;line-height:1.0625}
 .design-content .d-a3f252bd46{left:calc(24 * var(--design-unit));width:calc(224 * var(--design-unit))}
@@ -797,7 +762,6 @@
 .design-content .d-a726e4814d{padding:var(--space-24,calc(24 * var(--space-unit)));width:calc(1344 * var(--design-unit));height:auto}
 .design-content .d-a7403a2b46{width:calc(600 * var(--design-unit))}
 .design-content .d-a78be7486b{left:calc(23.01 * var(--design-unit));width:calc(276.177 * var(--design-unit));font-size:clamp(21.177px, calc(27.15 * var(--design-unit)), 27.15px);letter-spacing:-0.0608214em}
-.design-content .d-a79a2ffad7{gap:var(--space-48,calc(48 * var(--space-unit)));width:calc(672 * var(--design-unit));height:auto}
 .design-content .d-a7b8d52d66{width:calc(88 * var(--design-unit));height:calc(66 * var(--design-unit))}
 .design-content .d-a83d760431{gap:var(--space-16,calc(16 * var(--space-unit)));width:calc(824 * var(--design-unit))}
 .design-content .d-a87fd95ac8{width:calc(848 * var(--design-unit));font-size:clamp(34.32px, calc(44 * var(--design-unit)), 44px)}
@@ -816,8 +780,6 @@
 .design-content .d-aa89e67844{left:calc(1248 * var(--design-unit));width:calc(96 * var(--design-unit));height:calc(96 * var(--design-unit));top:calc(360 * var(--design-unit))}
 .design-content .d-ab04b6cee1{left:calc(23.01 * var(--design-unit));width:calc(174.912 * var(--design-unit));font-size:clamp(4.97px, calc(4.97 * var(--design-unit)), 4.97px)}
 .design-content .d-ab1efe5bd4{width:calc(342 * var(--design-unit));font-size:clamp(14px, calc(15 * var(--design-unit)), 15px);line-height:1.6}
-.design-content .d-aba7892e6a{width:calc(312 * var(--design-unit));font-size:clamp(24.96px, calc(32 * var(--design-unit)), 32px)}
-.design-content .d-abe813a2e8{gap:calc(12 * var(--space-unit));width:calc(240 * var(--design-unit));height:auto}
 .design-content .d-ace20555dd{width:calc(342 * var(--design-unit));font-size:clamp(21.84px, calc(28 * var(--design-unit)), 28px);letter-spacing:-0.04em}
 .design-content .d-aceb3ef40d{width:calc(342 * var(--design-unit))}
 .design-content .d-ad21a68151{font-size:clamp(14px, calc(15 * var(--design-unit)), 15px)}
@@ -829,7 +791,6 @@
 .design-content .d-ae46956b33{gap:calc(12 * var(--space-unit));padding:var(--space-24,calc(24 * var(--space-unit)));width:calc(390 * var(--design-unit));font-size:clamp(11px, calc(11 * var(--design-unit)), 11px);line-height:1.63636}
 .design-content .d-ae46956b33{isolation:isolate}
 .design-content .d-ae46956b33::before{content:"";position:absolute;inset:0;left:calc(50% - 50vw);right:calc(50% - 50vw);background:var(--navy,#0b1020);z-index:-1;pointer-events:none}
-.design-content .d-aec5541f52{width:calc(342 * var(--design-unit));font-size:clamp(11px, calc(13 * var(--design-unit)), 13px)}
 .design-content .d-aed963120d{width:calc(528 * var(--design-unit));font-size:clamp(11px, calc(11 * var(--design-unit)), 11px);line-height:1.54545}
 .design-content .d-aeea731e44{width:calc(342 * var(--design-unit));font-size:clamp(17.94px, calc(23 * var(--design-unit)), 23px)}
 .design-content .d-af30854260{gap:var(--space-48,calc(48 * var(--space-unit)));padding:var(--space-48,calc(48 * var(--space-unit)));width:calc(1440 * var(--design-unit));height:auto}
@@ -886,7 +847,6 @@
 .design-content .d-ba765cc2f2{width:calc(342 * var(--design-unit));font-size:clamp(18.72px, calc(24 * var(--design-unit)), 24px);letter-spacing:-0.04em;line-height:1.04167}
 .design-content .d-bc163b9ca8{width:calc(960 * var(--design-unit));font-size:clamp(40px, calc(56 * var(--design-unit)), 56px);letter-spacing:-0.04em;line-height:1.05357}
 .design-content .d-bc1cc41ab7{gap:var(--space-16,calc(16 * var(--space-unit)));width:calc(480 * var(--design-unit))}
-.design-content .d-bc49c781c8{width:calc(860 * var(--design-unit));font-size:clamp(40px, calc(172 * var(--design-unit)), 172px);letter-spacing:-0.04em}
 .design-content .d-bc82ff3714{line-height:max(1.05em, calc(50 * var(--space-unit)))}
 .design-content .d-bc95ff465f{width:calc(384 * var(--design-unit));font-size:clamp(11px, calc(11 * var(--design-unit)), 11px)}
 .design-content .d-bca0d17879{left:calc(24 * var(--design-unit));width:calc(342 * var(--design-unit))}
@@ -902,7 +862,6 @@
 .design-content .d-bfcc837179{width:calc(342 * var(--design-unit));font-size:clamp(11px, calc(11 * var(--design-unit)), 11px);line-height:1.54545}
 .design-content .d-c05214935b{width:calc(370 * var(--design-unit))}
 .design-content .d-c08309e7a2{width:calc(342 * var(--design-unit));font-size:clamp(40px, calc(72 * var(--design-unit)), 72px);letter-spacing:-0.015em}
-.design-content .d-c113713a66{width:calc(1344 * var(--design-unit));height:auto}
 .design-content .d-c12a734a38{width:calc(342 * var(--design-unit))}
 .design-content .d-c143a98bc5{width:calc(624 * var(--design-unit))}
 .design-content .d-c15645ce2b{gap:var(--space-16,calc(16 * var(--space-unit)));width:calc(496 * var(--design-unit))}
@@ -945,7 +904,6 @@
 .design-content .d-c833ecffb1{left:calc(23.01 * var(--design-unit));width:calc(276.177 * var(--design-unit));font-size:clamp(3.97px, calc(3.97 * var(--design-unit)), 3.97px);line-height:1.50101}
 .design-content .d-c84c8873bd{left:calc(96 * var(--design-unit));width:calc(1 * var(--design-unit))}
 .design-content .d-c85d59d8dc{line-height:max(1.05em, calc(27.146 * var(--space-unit)))}
-.design-content .d-c8c0226a60{gap:calc(12 * var(--space-unit));width:calc(240 * var(--design-unit));height:auto}
 .design-content .d-c92da026bf{width:calc(952 * var(--design-unit));font-size:clamp(40px, calc(128 * var(--design-unit)), 128px);letter-spacing:-0.04em}
 .design-content .d-c97a4ecbc9{left:calc(6 * var(--design-unit));width:calc(100 * var(--design-unit));height:calc(50 * var(--design-unit));top:calc(27 * var(--design-unit))}
 .design-content .d-c99acbbd56{gap:var(--space-24,calc(24 * var(--space-unit)));width:calc(464 * var(--design-unit))}
@@ -960,7 +918,6 @@
 .design-content .d-caf7a4cf95{width:calc(880 * var(--design-unit));font-size:clamp(11px, calc(12 * var(--design-unit)), 12px);line-height:1.5}
 .design-content .d-cb8ccf733c{gap:var(--space-16,calc(16 * var(--space-unit)));left:calc(640 * var(--design-unit));width:calc(320 * var(--design-unit));height:auto}
 .design-content .d-cbc396a408{width:calc(48 * var(--design-unit));font-size:clamp(21.84px, calc(28 * var(--design-unit)), 28px);letter-spacing:-0.04em;line-height:1.07143}
-.design-content .d-cd1f4eb9ef{width:calc(312 * var(--design-unit));font-size:clamp(11px, calc(12 * var(--design-unit)), 12px);line-height:1.5}
 .design-content .d-cd228f785d{width:calc(88 * var(--design-unit));font-size:clamp(11px, calc(11 * var(--design-unit)), 11px);line-height:1.54545}
 .design-content .d-cdf3a5a00c{width:calc(432 * var(--design-unit));font-size:clamp(21.06px, calc(27 * var(--design-unit)), 27px)}
 .design-content .d-cea314c430{width:calc(224 * var(--design-unit));font-size:clamp(14px, calc(14 * var(--design-unit)), 14px)}
@@ -983,7 +940,6 @@
 .design-content .d-d259713903{left:calc(1072 * var(--design-unit));width:calc(48 * var(--design-unit));height:calc(48 * var(--design-unit));top:calc(348 * var(--design-unit))}
 .design-content .d-d28ee2b6a4{line-height:max(1.05em, calc(136 * var(--space-unit)))}
 .design-content .d-d2cda3451d{width:calc(896 * var(--design-unit));font-size:clamp(28.08px, calc(36 * var(--design-unit)), 36px);letter-spacing:-0.04em}
-.design-content .d-d2e138fbfe{width:calc(342 * var(--design-unit));font-size:clamp(0px, calc(0 * var(--design-unit)), 0px)}
 .design-content .d-d2efcd5d06{width:calc(390 * var(--design-unit))}
 .design-content .d-d2efcd5d06{isolation:isolate}
 .design-content .d-d2efcd5d06::before{content:"";position:absolute;inset:0;left:calc(50% - 50vw);right:calc(50% - 50vw);background:var(--navy,#0b1020);z-index:-1;pointer-events:none}
@@ -994,7 +950,6 @@
 .design-content .d-d429737306{width:calc(648 * var(--design-unit));font-size:clamp(14.04px, calc(18 * var(--design-unit)), 18px);line-height:1.5}
 .design-content .d-d43f566f28{line-height:max(1.05em, calc(17 * var(--space-unit)))}
 .design-content .d-d47a30e809{line-height:max(1.05em, calc(13 * var(--space-unit)))}
-.design-content .d-d4882944c6{width:calc(1344 * var(--design-unit));font-size:clamp(40px, calc(164 * var(--design-unit)), 164px);letter-spacing:-0.04em}
 .design-content .d-d4c1ca5aa4{width:calc(342 * var(--design-unit));font-size:clamp(31.2px, calc(40 * var(--design-unit)), 40px);letter-spacing:-0.04em}
 .design-content .d-d4cf649985{width:calc(720 * var(--design-unit));font-size:clamp(11px, calc(12 * var(--design-unit)), 12px);line-height:1.5}
 .design-content .d-d4e2f56eff{gap:var(--space-24,calc(24 * var(--space-unit)));padding-left:var(--space-24,calc(24 * var(--space-unit)));padding-right:var(--space-24,calc(24 * var(--space-unit)));padding-top:var(--space-16,calc(16 * var(--space-unit)));padding-bottom:var(--space-16,calc(16 * var(--space-unit)));width:calc(342 * var(--design-unit));height:auto;min-height:48px}
@@ -1002,7 +957,6 @@
 .design-content .d-d53caec9f0{width:calc(384 * var(--design-unit));font-size:clamp(14px, calc(16 * var(--design-unit)), 16px);line-height:1.5}
 .design-content .d-d574c0083f{width:calc(320 * var(--design-unit))}
 .design-content .d-d57e342a10{left:calc(48 * var(--design-unit));width:calc(1200 * var(--design-unit));font-size:clamp(28.08px, calc(36 * var(--design-unit)), 36px);line-height:1.22222}
-.design-content .d-d5d31cdd54{width:calc(312 * var(--design-unit));font-size:clamp(11px, calc(11 * var(--design-unit)), 11px);line-height:1.45455}
 .design-content .d-d627b40ab8{padding:var(--space-24,calc(24 * var(--space-unit)));width:calc(1344 * var(--design-unit));height:auto}
 .design-content .d-d63489ae38{width:calc(8 * var(--design-unit))}
 .design-content .d-d63733e482{width:calc(528 * var(--design-unit));font-size:clamp(14px, calc(17 * var(--design-unit)), 17px)}
@@ -1090,12 +1044,10 @@
 .design-content .d-e88f0dd487{isolation:isolate}
 .design-content .d-e88f0dd487::before{content:"";position:absolute;inset:0;left:calc(50% - 50vw);right:calc(50% - 50vw);background:var(--navy,#0b1020);z-index:-1;pointer-events:none}
 .design-content .d-e894d19a93{line-height:max(1.05em, calc(24 * var(--space-unit)))}
-.design-content .d-e8a3679942{width:calc(368 * var(--design-unit));font-size:clamp(11px, calc(11 * var(--design-unit)), 11px)}
 .design-content .d-e8fa637ebf{gap:var(--space-24,calc(24 * var(--space-unit)));padding-left:var(--space-24,calc(24 * var(--space-unit)));padding-right:var(--space-24,calc(24 * var(--space-unit)));padding-top:var(--space-16,calc(16 * var(--space-unit)));padding-bottom:var(--space-16,calc(16 * var(--space-unit)));width:calc(342 * var(--design-unit));height:auto}
 .design-content .d-e93b5a6731{width:calc(294 * var(--design-unit));font-size:clamp(11px, calc(12 * var(--design-unit)), 12px);line-height:1.33333}
 .design-content .d-e9401eca47{width:calc(342 * var(--design-unit))}
 .design-content .d-e95e70d3df{gap:var(--space-16,calc(16 * var(--space-unit)));left:calc(48 * var(--design-unit));width:calc(294 * var(--design-unit))}
-.design-content .d-e9700a7965{width:calc(144 * var(--design-unit));font-size:clamp(10px, calc(10 * var(--design-unit)), 10px)}
 .design-content .d-ea38f6601d{width:calc(342 * var(--design-unit))}
 .design-content .d-ea4a445521{width:calc(342 * var(--design-unit))}
 .design-content .d-ea69cb599c{width:calc(200 * var(--design-unit));height:calc(48 * var(--design-unit))}
@@ -1108,7 +1060,6 @@
 .design-content .d-ebd5dfbbe6{gap:var(--space-24,calc(24 * var(--space-unit)));width:calc(624 * var(--design-unit));height:auto}
 .design-content .d-ebed470a6c{line-height:max(1.05em, calc(17 * var(--space-unit)))}
 .design-content .d-ec1083a29e{gap:var(--space-16,calc(16 * var(--space-unit)));width:calc(416 * var(--design-unit))}
-.design-content .d-ec7f647346{width:calc(342 * var(--design-unit));font-size:clamp(20.28px, calc(26 * var(--design-unit)), 26px);line-height:1.15385}
 .design-content .d-ecc7601611{width:calc(1344 * var(--design-unit));font-size:clamp(11px, calc(12 * var(--design-unit)), 12px)}
 .design-content .d-eccf51347c{height:auto;display:block}
 .design-content .d-ecf1c91312{width:calc(1344 * var(--design-unit))}
@@ -1201,11 +1152,9 @@
 .design-content .d-ff0e236310{width:calc(27 * var(--design-unit))}
 .design-content .d-ff132c886e{width:calc(342 * var(--design-unit));font-size:clamp(14px, calc(15 * var(--design-unit)), 15px);line-height:1.46667}
 .design-content .d-ff1b9b6c84{left:calc(23.01 * var(--design-unit));width:calc(276.177 * var(--design-unit));font-size:clamp(9.93px, calc(9.93 * var(--design-unit)), 9.93px);line-height:1.2002}
-.design-content .d-ff3aab5f3d{width:calc(120 * var(--design-unit));height:calc(16 * var(--design-unit))}
 .design-content .d-ff561cfd68{gap:var(--space-24,calc(24 * var(--space-unit)));padding-left:var(--space-24,calc(24 * var(--space-unit)));padding-right:var(--space-24,calc(24 * var(--space-unit)));padding-top:var(--space-16,calc(16 * var(--space-unit)));padding-bottom:var(--space-16,calc(16 * var(--space-unit)));width:calc(248 * var(--design-unit));height:auto}
 .design-content .d-ff86f257ee{width:calc(592 * var(--design-unit))}
 .design-content .d-ffa7ca0278{width:calc(342 * var(--design-unit));font-size:clamp(10px, calc(10 * var(--design-unit)), 10px)}
-.design-content .d-ffaa273d33{width:calc(656.753 * var(--design-unit))}
 .design-content .d-ffc3be19bc{width:calc(36 * var(--design-unit))}
 .design-content .d-ffe19a0b04{gap:var(--space-24,calc(24 * var(--space-unit)));padding:var(--space-24,calc(24 * var(--space-unit)));width:calc(342 * var(--design-unit))}
 .design-content [data-node-id="1154:483"]{width:100vw;height:108px;left:calc(50% - 50vw);background-image:url("/assets/1154-483-382cb.svg");background-size:1440px 108px;background-repeat:repeat-x}
