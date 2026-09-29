@@ -34,6 +34,8 @@ export function resolveLocation(url: URL) {
     path = `/${route}`;
     anchor = segments.join('/');
   }
+  // Preserve older bookmarks while using the same spelling as the page label.
+  if (path === '/organizers') path = '/organisers';
   const section = sectionsByRoute.get(path);
   return {
     path: section ? '/' : path,

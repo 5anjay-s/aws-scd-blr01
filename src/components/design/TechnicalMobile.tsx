@@ -1,4 +1,5 @@
 import { SiteBrand } from "../SiteBrand";
+import { TrackArtwork } from "../TrackArtwork";
 import { SiteHeader } from "../SiteHeader";
 import { WovenRibbon } from "../WovenRibbon";
 import { SignalStitch } from "../SignalStitch";
@@ -35,7 +36,7 @@ export default function TechnicalMobile() {
           <p className="d-c7b43af17c">ACTION.</p>
         </div>
         <div className="d-f2cd256124" data-node-id="874:9131" data-name="Artwork / Compile brackets — Mobile">
-          <img alt="" className="d-511e8f31d4" src={imgArtworkCompileBracketsMobile} />
+          <TrackArtwork kind="compile" className="d-511e8f31d4" src={imgArtworkCompileBracketsMobile} />
         </div>
         <p className="d-2c3b9cd2b0" data-node-id="874:9132">
           Get closer to the cloud. Explore AI. Turn your curiosity into something you can build.

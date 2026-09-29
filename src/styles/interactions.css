@@ -64,6 +64,10 @@
 .track-bracket-left { clip-path: inset(0 65% 0 0); }
 .track-bracket-center { clip-path: inset(0 35%); }
 .track-bracket-right { clip-path: inset(0 0 0 65%); }
+/* The technical hero uses wider 832 × 336 artwork and an off-center diamond. */
+[data-track-artwork='compile'] .track-bracket-left { clip-path: inset(0 61.778846% 0 0); }
+[data-track-artwork='compile'] .track-bracket-center { clip-path: inset(0 43.269231% 0 38.221154%); transform-origin: 47.115385% 50%; }
+[data-track-artwork='compile'] .track-bracket-right { clip-path: inset(0 0 0 56.730769%); }
 .speaker-quotation { display: block; overflow: visible; pointer-events: none; }
 .speaker-quotation-part { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
 /* Split the original 256 × 192 artwork in its gutter, with each mark's own pivot. */
@@ -140,8 +144,32 @@
 .site-header [data-name='Nav links v2'] a:hover,
 .site-header [data-name='Nav links v2'] a:focus-visible { color: var(--nav-accent); }
 .site-menu-link:hover, .site-menu-link:focus-visible { color: var(--cyan); }
+
+/* Reserve the final number's width and expose only that stable label to readers. */
+.count-up { display: inline-grid; vertical-align: baseline; }
+.count-up > span { grid-area: 1 / 1; }
+.count-up-final { opacity: 0; pointer-events: none; user-select: none; }
+
+/* Fill the original stepped paper silhouette without covering its perforations. */
+.organizers-contact { isolation: isolate; transform-origin: 50% 80%; transition: transform 220ms ease-out; }
+.organizers-contact::after {
+  content: ''; position: absolute; inset: 0 0 auto; aspect-ratio: var(--contact-ratio); z-index: 0; pointer-events: none;
+  background: var(--contact-accent);
+  mask: var(--contact-paper) center / 100% 100% no-repeat;
+  clip-path: inset(100% 0 0);
+  transition: clip-path 280ms ease-out;
+}
+.organizers-contact :is(.organizers-contact-perforation, .organizers-contact-tear, .organizers-contact-copy) { z-index: 1; }
+.organizers-contact:is(:focus-visible, :active) { transform: translateY(-6px) scale(1.015); }
+.organizers-contact:is(:focus-visible, :active)::after { clip-path: inset(0); }
+@media (hover: hover) {
+  .organizers-contact:hover { transform: translateY(-6px) scale(1.015); }
+  .organizers-contact:hover::after { clip-path: inset(0); }
+}
 @media (prefers-reduced-motion: reduce) {
   .site-menu-toggle-icon > span,
   .design-content .site-button,
   .design-content .site-button [data-name='Arrow'] img { transition: none; }
+  .organizers-contact, .organizers-contact::after { transition: none; }
+  .organizers-contact:is(:hover, :focus-visible, :active) { transform: none; }
 }

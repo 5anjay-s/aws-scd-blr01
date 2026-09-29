@@ -47,9 +47,9 @@ const home: ResponsiveSections = {
 
 const pages: Record<string, ResponsiveSections> = {
   '/': home,
-  '/organizers': {
-    desktop: [section('1823:3588', 'Organizers'), section('860:5359', 'Keep the conversation going')],
-    mobile: [section('1823:3589', 'Organizers'), section('1168:498', 'Keep the conversation going')],
+  '/organisers': {
+    desktop: [section('1823:3588', 'Organisers'), section('860:5359', 'Keep the conversation going')],
+    mobile: [section('1823:3589', 'Organisers'), section('1168:498', 'Keep the conversation going')],
   },
   '/faq': {
     desktop: [section('227:540', 'Frequently asked questions'), section('860:5359', 'Keep the conversation going')],

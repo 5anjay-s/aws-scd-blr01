@@ -5,7 +5,7 @@ import { getPageSections, hasPage } from '../src/page-config.ts';
 import { homeSectionRoutes, resolveLocation } from '../src/navigation.ts';
 
 const manifest = JSON.parse(readFileSync(new URL('../src/design-manifest.json', import.meta.url), 'utf8'));
-const pages = ['/', '/organizers', '/faq', '/technical', '/non-technical', '/registration', '/404'];
+const pages = ['/', '/organisers', '/faq', '/technical', '/non-technical', '/registration', '/404'];
 
 test('every page has unique desktop and mobile sections mapped to the Figma manifest', () => {
   for (const path of pages) {

@@ -1,9 +1,14 @@
+import type { CSSProperties } from 'react';
 import { HomeNavigation } from './HomeNavigation';
 import { SiteLink } from './SiteLink';
 import { organizerLinks } from '../site-config';
 import { organizerArtwork } from './organizerArtwork';
 import { DitherDivider } from './DitherDivider';
 import { ArcadeText } from './ArcadeText';
+import { CountUp } from './CountUp';
+import { WovenRibbon } from './WovenRibbon';
+import { TrackArtwork } from './TrackArtwork';
+import { SpinningSpark } from './SpinningSpark';
 import desktopRibbon from '../../public/assets/1823-3588-30f2c.svg?raw';
 import mobileRibbon from '../../public/assets/1823-3589-14a88.svg?raw';
 
@@ -44,12 +49,12 @@ const initiatives = [
 ];
 
 const channels = [
-  { key: 'eventInstagram', purpose: 'EVENT UPDATES', platform: 'Instagram', handle: '@aws.scd.blr' },
-  { key: 'campusInstagram', purpose: 'CAMPUS COMMUNITY', platform: 'Instagram', handle: '@aws.sbg.ru' },
-  { key: 'linkedin', purpose: 'STAY CONNECTED', platform: 'LinkedIn', handle: 'AWS SBG REVA' },
-  { key: 'meetup', purpose: 'MEET IN PERSON', platform: 'Meetup', handle: 'AWS SBG REVA' },
-  { key: 'luma', purpose: 'NEXT EVENTS', platform: 'Luma', handle: '@aws.sbg.ru' },
-  { key: 'builderCenter', purpose: 'KEEP BUILDING', platform: 'AWS Builder Center', handle: 'Explore the community' },
+  { key: 'eventInstagram', purpose: 'EVENT UPDATES', platform: 'Instagram', handle: '@aws.scd.blr', tone: 'cyan' },
+  { key: 'campusInstagram', purpose: 'CAMPUS COMMUNITY', platform: 'Instagram', handle: '@aws.sbg.ru', tone: 'violet' },
+  { key: 'linkedin', purpose: 'STAY CONNECTED', platform: 'LinkedIn', handle: 'AWS SBG REVA', tone: 'lime' },
+  { key: 'meetup', purpose: 'MEET IN PERSON', platform: 'Meetup', handle: 'AWS SBG REVA', tone: 'cyan' },
+  { key: 'luma', purpose: 'NEXT EVENTS', platform: 'Luma', handle: '@aws.sbg.ru', tone: 'violet' },
+  { key: 'builderCenter', purpose: 'KEEP BUILDING', platform: 'AWS Builder Center', handle: 'Explore the community', tone: 'lime' },
 ] as const;
 
 // Figma: 03 / Desktop explorations, organizers frames 1823:3588 and 1823:3589.
@@ -57,9 +62,9 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
   const node = (desktop: string, compact: string) => mobile ? compact : desktop;
   const art = mobile ? organizerArtwork.mobile : organizerArtwork.desktop;
   const events = [
-    { day: '02 SEP', category: 'CLOUD + AI', title: ['BUILDING', 'AI AGENTS'], detail: 'with Amazon Bedrock AgentCore', tone: 'cyan', art: art.imgArtworkTechnicalTrackPixelBrackets, node: node('1834:3859', '1834:4104'), artNode: '1831:3774' },
-    { day: '03 SEP', category: 'AI IDEATHON', title: ['IDEATE', 'BLR ’26'], detail: 'Ideas for real-world problems', tone: 'violet', art: art.imgAccentCuriositySpark, node: node('1834:3891', '1834:4130'), artNode: '1831:3797' },
-    { day: '04 SEP', category: 'WEB3 + BLOCKCHAIN', title: ['BUILD', 'ON WEB3'], detail: 'Workshop & build challenge', tone: 'orange', art: art.imgApprovedWovenLinks1, node: node('1834:3916', '1834:4156'), artNode: '1831:3826' },
+    { day: '02 SEP', category: 'CLOUD + AI', title: ['BUILDING', 'AI AGENTS'], detail: 'with Amazon Bedrock AgentCore', tone: 'cyan', motion: 'brackets', art: art.imgArtworkTechnicalTrackPixelBrackets, node: node('1834:3859', '1834:4104'), artNode: '1831:3774' },
+    { day: '03 SEP', category: 'AI IDEATHON', title: ['IDEATE', 'BLR ’26'], detail: 'Ideas for real-world problems', tone: 'violet', motion: 'spark', art: art.imgAccentCuriositySpark, node: node('1834:3891', '1834:4130'), artNode: '1831:3797' },
+    { day: '04 SEP', category: 'WEB3 + BLOCKCHAIN', title: ['BUILD', 'ON WEB3'], detail: 'Workshop & build challenge', tone: 'orange', motion: 'ribbon', art: art.imgApprovedWovenLinks1, node: node('1834:3916', '1834:4156'), artNode: '1831:3826' },
   ];
   const speechEdges = mobile
     ? [art.imgDitherPrintedSpeechEdge, art.imgDitherPrintedSpeechEdge, art.imgDitherPrintedSpeechEdge]
@@ -74,7 +79,8 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
     <HomeNavigation mobile={mobile} />
     <section className="organizers-manifesto organizers-surface" aria-labelledby="organizers-title" data-node-id={node('1834:3826', '1834:4071')}>
       <div className="organizers-poster" data-node-id={node('1834:3827', '1834:4072')} data-reveal="off">
-        <Art asset={{ ...art.imgApprovedWovenLinks, src: heroRibbons[mobile ? 'mobile' : 'desktop'] }} className="organizers-hero-links" nodeId={node('1834:3828', '1834:4073')} />
+        <WovenRibbon src={heroRibbons[mobile ? 'mobile' : 'desktop']} className="organizers-hero-links"
+          data-node-id={node('1834:3828', '1834:4073')} alt="" />
         <p className="organizers-eyebrow" data-node-id={node('1834:3833', '1834:4078')}>THE ORGANISERS / AWS SBG REVA</p>
         <h1 id="organizers-title">
           <span className="organizers-campus" data-node-id={node('1834:3834', '1834:4079')}>CAMPUS</span>
@@ -98,7 +104,7 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
     <section className="organizers-tech-week organizers-surface" aria-labelledby="organizers-tech-title" data-node-id={node('1834:3849', '1834:4093')}>
       <p className="organizers-eyebrow">01 / BENGALURU TECH WEEK — 02–04 SEPT 2026</p>
       <div className="organizers-impact" data-node-id={node('1834:3851', '1834:4095')}>
-        <p className="organizers-registration-count" data-node-id={node('1834:3852', '1834:4096')}>1,222+</p>
+        <p className="organizers-registration-count" data-node-id={node('1834:3852', '1834:4096')}><CountUp value={1222} suffix="+" /></p>
         <div><h2>Registrations.<br />All student led.</h2><p>The only student-led community organising at Bengaluru Tech Week 2026.</p></div>
       </div>
       <h2 className="organizers-domains" id="organizers-tech-title">Three days.{mobile ? <br /> : ' '}Three domains.</h2>
@@ -107,7 +113,14 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
         {events.map(event => <article className={`organizers-event organizers-event--${event.tone}`} key={event.day} data-node-id={event.node} data-reveal="rise">
           <div className="organizers-event-date"><p>{event.day}</p><p>{event.category}</p></div>
           <h3>{event.title[0]}<br />{event.title[1]}</h3>
-          <div className="organizers-event-art"><Art asset={event.art} nodeId={`I${event.node};${event.artNode}`} /></div>
+          <div className="organizers-event-art">
+            <div className={`organizers-event-motif organizers-event-motif--${event.motion}`} data-node-id={`I${event.node};${event.artNode}`}
+              style={{ '--art-width': `${event.art.width}px`, '--art-ratio': event.art.width / event.art.height } as CSSProperties}>
+              {event.motion === 'brackets' ? <TrackArtwork kind="brackets" src={event.art.src} className="organizers-live-art" />
+                : event.motion === 'spark' ? <SpinningSpark src={event.art.src} alt="" className="organizers-live-art curiosity-spark-spin" />
+                  : <WovenRibbon src={event.art.src} alt="" className="organizers-live-art" />}
+            </div>
+          </div>
           <p className="organizers-event-detail">{event.detail}</p>
           <div className="organizers-event-edition"><p>BENGALURU TECH WEEK / 2026</p><span aria-hidden="true" /></div>
         </article>)}
@@ -156,7 +169,10 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
       <div className="organizers-contact-wall" data-node-id={node('1851:3888', '1851:4005')}>
         <div className="organizers-contact-heading"><h2><ArcadeText>FIND YOUR PEOPLE.</ArcadeText></h2><p className="organizers-eyebrow">SIX WAYS TO KEEP IN TOUCH ↓</p></div>
         <div className="organizers-contacts" data-node-id={node('1851:3892', '1851:4009')}>
-          {channels.map((channel, index) => <SiteLink key={channel.key} href={organizerLinks[channel.key]} className="organizers-contact" aria-label={`${channel.platform}: ${channel.handle}`}>
+          {channels.map((channel, index) => <SiteLink key={channel.key} href={organizerLinks[channel.key]} className="organizers-contact"
+            style={{ '--contact-paper': `url("${art.imgContactPaper.src}")`, '--contact-ratio': art.imgContactPaper.width / art.imgContactPaper.height,
+              '--contact-accent': `var(--${channel.tone})` } as CSSProperties}
+            aria-label={`${channel.platform}: ${channel.handle}`}>
             <Art asset={art.imgContactPaper} className="organizers-contact-paper" />
             <Art asset={art.imgTearPerforation} className="organizers-contact-perforation" />
             {!mobile && <Art asset={organizerArtwork.desktop.imgTearHereVerticalPerforation} className="organizers-contact-tear" />}

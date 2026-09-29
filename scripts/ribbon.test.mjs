@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { readRibbonArtwork } from '../src/components/ribbonPixels.ts';
 
-const files = ['1160-5759-305fd.svg', '1168-493-5454f.svg', '860-5267-10945.svg', '1168-495-22597.svg', '1168-496-4ca63.svg', '1265-3035-453bd.svg', '1168-498-e1335.svg'];
+const files = ['1160-5759-305fd.svg', '1168-493-5454f.svg', '860-5267-10945.svg', '1168-495-22597.svg', '1168-496-4ca63.svg', '1265-3035-453bd.svg', '1168-498-e1335.svg',
+  '1823-3588-30f2c.svg', '1823-3589-14a88.svg', '1823-3588-b243c.svg', '1823-3589-27e21.svg'];
 const sources = files.map(file => readFileSync(new URL(`../public/assets/${file}`, import.meta.url), 'utf8'));
 const artworks = sources.map(readRibbonArtwork);
 const subpaths = (path, color) => path.match(/M[^Z]+Z/g).map(part => `${color}:${part}`);
@@ -24,6 +25,19 @@ test('every ribbon export retains every original subpath and fill without resamp
     assert.deepEqual(rendered.sort(), original.sort());
   }
   assert.equal(readRibbonArtwork('<svg><path d="M0 0L1 1" /></svg>'), null);
+});
+
+test('organizer hero ribbons retain their navy contrast and original geometry when animated', () => {
+  for (const file of ['1823-3588-30f2c.svg', '1823-3589-14a88.svg']) {
+    const source = readFileSync(new URL(`../public/assets/${file}`, import.meta.url), 'utf8');
+    const original = readRibbonArtwork(source);
+    const contrasting = readRibbonArtwork(source.replaceAll('#22D3EE', '#0B1020'));
+    assert.deepEqual(contrasting.pixels.map(pixel => pixel.path), original.pixels.map(pixel => pixel.path));
+    assert.deepEqual(contrasting.clips, original.clips);
+    assert.ok(contrasting.pixels.filter(pixel => pixel.mark && pixel.ring === 1)
+      .every(pixel => pixel.baseColor === '#0B1020'));
+    assert.ok(contrasting.fields.every(field => field.color !== '#22D3EE'));
+  }
 });
 
 // Follow the same paced SVG path in normalized artwork coordinates.

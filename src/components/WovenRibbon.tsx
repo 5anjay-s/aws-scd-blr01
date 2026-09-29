@@ -6,14 +6,18 @@ const artworkSources = new Set([
   '/assets/860-5267-10945.svg', '/assets/1168-495-22597.svg',
   '/assets/1168-496-4ca63.svg', '/assets/1265-3035-453bd.svg',
   '/assets/1168-498-e1335.svg',
+  '/assets/1823-3588-b243c.svg', '/assets/1823-3589-27e21.svg',
 ]);
 type RibbonArtwork = ReturnType<typeof readRibbonArtwork>;
 const artworkCache = new Map<string, Promise<RibbonArtwork>>();
+const inlineSvgPrefix = 'data:image/svg+xml,';
 
 function loadArtwork(src: string) {
   if (!artworkCache.has(src)) {
-    artworkCache.set(src, fetch(src).then(response => response.ok ? response.text() : '')
-      .then(readRibbonArtwork).catch(() => null));
+    const source = src.startsWith(inlineSvgPrefix)
+      ? Promise.resolve().then(() => decodeURIComponent(src.slice(inlineSvgPrefix.length)))
+      : fetch(src).then(response => response.ok ? response.text() : '');
+    artworkCache.set(src, source.then(readRibbonArtwork).catch(() => null));
   }
   return artworkCache.get(src)!;
 }
@@ -34,7 +38,9 @@ export function WovenRibbon({ className, src, alt = '', active = true, ...props 
   const artwork = loaded?.src === src ? loaded?.artwork : null;
 
   useEffect(() => {
-    if (!nearby || reducedMotion || !src || !artworkSources.has(src)) return;
+    // Organizer hero exports also use an inline copy with a contrasting palette.
+    if (!nearby || reducedMotion || !src
+      || (!artworkSources.has(src) && !src.startsWith(inlineSvgPrefix))) return;
     let cancelled = false;
     // Keep the original image until this ribbon is close enough to animate.
     void loadArtwork(src).then(result => { if (!cancelled) setLoaded({ src, artwork: result }); });

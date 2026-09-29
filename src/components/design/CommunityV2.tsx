@@ -22,8 +22,8 @@ export default function CommunityV2() {
           <p className="d-7519be8e79">STUDENT LED.</p>
           <p className="d-95907800fd">OPEN TO POSSIBILITY.</p>
         </div>
-        <SiteLink href="/organizers" className="community-organizers-link" buttonTone="orange" hoverTone="violet">
-          <span>Organizers</span><img src="/assets/865-7675-207b4.svg" width={22} height={22} alt="" data-name="Arrow" />
+        <SiteLink href="/organisers" className="community-organizers-link" buttonTone="orange" hoverTone="violet">
+          <span>Organisers</span><img src="/assets/865-7675-207b4.svg" width={22} height={22} alt="" data-name="Arrow" />
         </SiteLink>
       </div>
       <div className="d-14ecb956ad" data-node-id="860:5272" data-name="Community statement">

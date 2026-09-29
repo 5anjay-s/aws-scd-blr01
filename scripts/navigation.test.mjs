@@ -10,11 +10,23 @@ const canonical = href => {
 };
 
 test('hash routes open standalone pages including the loading replay', () => {
-  for (const page of ['loading', 'technical', 'non-technical', 'registration', 'organizers', 'faq', '404']) {
+  for (const page of ['loading', 'technical', 'non-technical', 'registration', 'organisers', 'faq', '404']) {
     assert.deepEqual(at(`/#${page}`), { path: `/${page}`, anchor: '' });
     assert.equal(canonical(`/${page}`), `/#${page}`);
     assert.equal(canonical(`/${page}/`), `/#${page}`);
     assert.equal(canonical(`/#${page}`), `/#${page}`);
+  }
+});
+
+test('old organizers URLs use organisers and preserve page anchors and query parameters', () => {
+  for (const href of ['/organizers', '/organizers/', '/#organizers', '/#/organizers']) {
+    assert.deepEqual(at(href), { path: '/organisers', anchor: '' });
+    assert.equal(canonical(href), '/#organisers');
+    assert.equal(resolveLinkUrl(href, new URL('/#community', origin)).href, origin + '/#organisers');
+  }
+  for (const href of ['/organizers?source=invite#organizers-title', '/?source=invite#organizers/organizers-title']) {
+    assert.equal(canonical(href), '/?source=invite#organisers/organizers-title');
+    assert.deepEqual(at(href), { path: '/organisers', anchor: 'organizers-title' });
   }
 });
 
@@ -67,7 +79,8 @@ test('back to top retains a standalone page and returns home from homepage secti
     ['/#technical', '/#technical'],
     ['/technical', '/#technical'],
     ['/#faq/plan-your-visit', '/#faq'],
-    ['/#organizers', '/#organizers'],
+    ['/#organisers', '/#organisers'],
+    ['/#organizers', '/#organisers'],
     ['/faq#plan-your-visit', '/#faq'],
     ['/#experience', '/#home'],
     ['/experience', '/#home'],

@@ -1,4 +1,5 @@
 import { SiteBrand } from "../SiteBrand";
+import { TrackArtwork } from "../TrackArtwork";
 import { SiteHeader } from "../SiteHeader";
 import { WovenRibbon } from "../WovenRibbon";
 import { SignalStitch } from "../SignalStitch";
@@ -17,7 +18,7 @@ const imgArrow3 = "/assets/1168-498-378aa.svg";
 function ScdTechnicalCompileBrackets({ className }: { className: string }) {
   return (
     <div className={className} data-node-id="666:2087" data-name="SCD / Technical / Compile brackets">
-      <img alt="" className="d-511e8f31d4" src={imgScdTechnicalCompileBrackets} />
+      <TrackArtwork kind="compile" className="d-511e8f31d4" src={imgScdTechnicalCompileBrackets} />
     </div>
   );
 }

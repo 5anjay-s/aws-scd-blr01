@@ -3,7 +3,7 @@ import { gsap, useInView, usePageVisible, useReducedMotion } from './animation';
 
 type TrackArtworkProps = {
   src: string;
-  kind: 'quotes' | 'brackets';
+  kind: 'quotes' | 'brackets' | 'compile';
   className?: string;
 };
 

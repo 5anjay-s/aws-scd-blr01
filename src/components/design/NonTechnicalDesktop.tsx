@@ -1,4 +1,5 @@
 import { SiteBrand } from "../SiteBrand";
+import { TrackArtwork } from "../TrackArtwork";
 import { SiteHeader } from "../SiteHeader";
 import { WovenRibbon } from "../WovenRibbon";
 import { RegistrationButton } from "../RegistrationButton";
@@ -17,7 +18,7 @@ function ScdArtworkOpenExchangePixelQuotations({ className }: { className: strin
   return (
     <div className={className} data-node-id="665:2047" data-name="SCD / Artwork / Open exchange pixel quotations">
       <div className="d-b4394b114b" data-node-id="670:2185" data-name="Shared glyph / Open exchange">
-        <img alt="" className="d-511e8f31d4" src={imgSharedGlyphOpenExchange} />
+        <TrackArtwork kind="quotes" className="d-511e8f31d4" src={imgSharedGlyphOpenExchange} />
       </div>
     </div>
   );

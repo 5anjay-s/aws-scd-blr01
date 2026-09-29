@@ -367,7 +367,7 @@
 .organizers-cyan { color: var(--cyan); }
 .organizers-poster { height: 42.361cqw; max-height: 610px; position: relative; overflow: clip; }
 .organizers-poster > .organizers-eyebrow { position: absolute; left: 3.333%; top: 5.9%; color: var(--navy); }
-.organizers-poster .organizers-hero-links { position: absolute; right: 3.333%; top: 53.333%; width: 36%; }
+.organizers-poster .organizers-hero-links { position: absolute; right: 3.333%; top: 53.333%; width: 36%; aspect-ratio: 2; }
 .organizers-poster h1 { font: 400 1em/.95 var(--font-arcade); }
 .organizers-poster h1 > span { position: absolute; left: 3.333%; display: block; }
 .organizers-campus { top: 13.443%; font-size: min(17.222cqw, 248px); }
@@ -395,8 +395,10 @@
 .organizers-event-date > p:first-child { font: 500 22px/24px 'Azeret Mono', monospace; white-space: nowrap; }
 .organizers-event-date > p:last-child { font-size: 11px; line-height: 15px; text-align: right; }
 .organizers-event h3 { font: 400 min(3.611cqw, 52px)/1 var(--font-arcade); }
-.organizers-event-art { display: flex; align-items: center; justify-content: center; height: min(12.778cqw, 184px); background: var(--navy); overflow: clip; }
-.organizers-event-art .organizers-art { max-width: 90%; max-height: 100%; width: auto; object-fit: contain; }
+.organizers-event-art { --art-available-height: min(12.778cqw, 184px); display: flex; align-items: center; justify-content: center; height: var(--art-available-height); background: var(--navy); overflow: clip; }
+.organizers-event-motif { position: relative; flex: none; width: min(var(--art-width), 90%, calc(var(--art-available-height) * var(--art-ratio))); aspect-ratio: var(--art-ratio); }
+.organizers-event-motif--spark { width: min(var(--art-width), 90%, calc(var(--art-available-height) / 1.1)); }
+.organizers-live-art { position: relative; display: block; width: 100%; height: 100%; }
 .organizers-event-detail { font-size: 14px; line-height: 20px; }
 .organizers-event-edition { display: flex; flex-direction: column; gap: 8px; font-size: 11px; line-height: 15px; }
 .organizers-event-edition > span { width: 100%; height: 6px; background: var(--navy); opacity: .6; }
@@ -472,7 +474,7 @@
 .organizers-page--mobile .organizers-event-date > p:first-child { font-size: 15.38px; line-height: 18.462px; }
 .organizers-page--mobile .organizers-event-date > p:last-child { font-size: 8px; line-height: 11px; }
 .organizers-page--mobile .organizers-event h3 { font-size: clamp(33.85px, 8.68cqw, 44px); }
-.organizers-page--mobile .organizers-event-art { height: auto; min-height: 142px; }
+.organizers-page--mobile .organizers-event-art { --art-available-height: 142px; height: auto; min-height: 142px; }
 .organizers-page--mobile .organizers-event-detail { font-size: 10.77px; line-height: 15.385px; }
 .organizers-page--mobile .organizers-event-edition { font-size: 8.46px; line-height: 11.54px; gap: 6px; }
 .organizers-page--mobile .organizers-event-edition > span { height: 4.615px; }

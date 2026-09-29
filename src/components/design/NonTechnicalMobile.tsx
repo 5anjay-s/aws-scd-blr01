@@ -1,4 +1,5 @@
 import { SiteBrand } from "../SiteBrand";
+import { TrackArtwork } from "../TrackArtwork";
 import { SiteHeader } from "../SiteHeader";
 import { WovenRibbon } from "../WovenRibbon";
 import { SiteLink } from "../SiteLink";
@@ -42,7 +43,7 @@ export default function NonTechnicalMobile() {
         </SiteLink>
         <div className="d-4f46e0635f" data-node-id="880:9347" data-name="Open exchange artwork / Mobile">
           <div className="d-c281aec83f" data-node-id="I880:9347;670:2185" data-name="Shared glyph / Open exchange">
-            <img alt="" className="d-511e8f31d4" src={imgSharedGlyphOpenExchange} />
+            <TrackArtwork kind="quotes" className="d-511e8f31d4" src={imgSharedGlyphOpenExchange} />
           </div>
         </div>
         <div className="d-b82fa5d8d7" data-node-id="880:9348">

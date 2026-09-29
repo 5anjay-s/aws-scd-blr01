@@ -1472,14 +1472,8 @@
   {
     "file": "public/assets/1823-3588-30f2c.svg",
     "component": "OrganizersDesktop",
-    "variable": "imgApprovedWovenLinks",
+    "variable": "desktopRibbon",
     "bytes": 10836
-  },
-  {
-    "file": "public/assets/1823-3588-0bb4a.svg",
-    "component": "OrganizersDesktop",
-    "variable": "imgPixelSeamNavyToPaper",
-    "bytes": 11390
   },
   {
     "file": "public/assets/1823-3588-75729.svg",
@@ -1548,12 +1542,6 @@
     "bytes": 3575
   },
   {
-    "file": "public/assets/1823-3588-dc433.svg",
-    "component": "OrganizersDesktop",
-    "variable": "imgPixelSeamOrangeToNavy",
-    "bytes": 11391
-  },
-  {
     "file": "public/assets/1823-3589-4611d.svg",
     "component": "OrganizersMobile",
     "variable": "imgContactPaper",
@@ -1568,14 +1556,8 @@
   {
     "file": "public/assets/1823-3589-14a88.svg",
     "component": "OrganizersMobile",
-    "variable": "imgApprovedWovenLinks",
+    "variable": "mobileRibbon",
     "bytes": 15377
-  },
-  {
-    "file": "public/assets/1823-3589-5917e.svg",
-    "component": "OrganizersMobile",
-    "variable": "imgPixelSeamNavyToPaper",
-    "bytes": 5606
   },
   {
     "file": "public/assets/1823-3589-bebe2.svg",
@@ -1630,11 +1612,5 @@
     "component": "OrganizersMobile",
     "variable": "imgDitherPrintedSpeechEdge1",
     "bytes": 2529
-  },
-  {
-    "file": "public/assets/1823-3589-f1180.svg",
-    "component": "OrganizersMobile",
-    "variable": "imgPixelSeamOrangeToNavy",
-    "bytes": 5607
   }
 ]

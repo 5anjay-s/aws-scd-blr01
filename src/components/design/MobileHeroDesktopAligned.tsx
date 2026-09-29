@@ -16,27 +16,6 @@ export default function MobileHeroDesktopAligned() {
     <div className="d-0b16a12d9f" data-node-id="1168:491" data-name="Mobile / hero — Desktop aligned">
       <HomeNavigation mobile />
       <HeroTitle variant="mobile" />
-      <div className="d-ddaf47eddc" data-node-id="1169:588" data-name="Hero / The future is a group project" data-hero-invitation>
-        <p className="d-976b59f690" data-node-id="1169:589">
-          AWS STUDENT COMMUNITY DAY
-        </p>
-        <div className="d-c73b906256" data-node-id="1169:590">
-          <p className="d-12e09ef69c">THE FUTURE IS</p>
-          <p className="d-6d91ba1ca8">A GROUP PROJECT.</p>
-        </div>
-        <div className="d-19d4f30f9d" data-node-id="1169:591">
-          <p className="d-143d1e5b1d">Meet the people. Explore the cloud.</p>
-          <p className="d-e894d19a93">Build something that matters.</p>
-        </div>
-        <SiteLink hoverTone="cyan" buttonTone="navy" className="d-e8fa637ebf" data-node-id="1169:592" data-name="Button / Flat" href={"/registration"}>
-          <p className="d-7a0f1f17eb" data-node-id="I1169:592;5:30">
-            Registration info
-          </p>
-          <div className="d-4725149c0e" data-node-id="I1169:592;15:32" data-name="Arrow">
-            <img alt="" className="d-511e8f31d4" src={imgArrow} />
-          </div>
-        </SiteLink>
-      </div>
       <div className="d-4b7989c8c0" data-node-id="1169:532" data-name="Hero / Approved mobile sky">
         <div className="d-390d240284" data-node-id="1169:533" data-name="Mobile / Sky crop" data-hero-sky>
           <div className="d-ad5d42a9d0" data-node-id="1169:534" data-name="Mobile / Desktop cloud texture">
@@ -69,6 +48,27 @@ export default function MobileHeroDesktopAligned() {
             </div>
           </DesignMotion>
         </div>
+      </div>
+      <div className="d-ddaf47eddc" data-node-id="1169:588" data-name="Hero / The future is a group project" data-hero-invitation>
+        <p className="d-976b59f690" data-node-id="1169:589">
+          AWS STUDENT COMMUNITY DAY
+        </p>
+        <div className="d-c73b906256" data-node-id="1169:590">
+          <p className="d-12e09ef69c">THE FUTURE IS</p>
+          <p className="d-6d91ba1ca8">A GROUP PROJECT.</p>
+        </div>
+        <div className="d-19d4f30f9d" data-node-id="1169:591">
+          <p className="d-143d1e5b1d">Meet the people. Explore the cloud.</p>
+          <p className="d-e894d19a93">Build something that matters.</p>
+        </div>
+        <SiteLink hoverTone="cyan" buttonTone="navy" className="d-e8fa637ebf" data-node-id="1169:592" data-name="Button / Flat" href={"/registration"}>
+          <p className="d-7a0f1f17eb" data-node-id="I1169:592;5:30">
+            Registration info
+          </p>
+          <div className="d-4725149c0e" data-node-id="I1169:592;15:32" data-name="Arrow">
+            <img alt="" className="d-511e8f31d4" src={imgArrow} />
+          </div>
+        </SiteLink>
       </div>
       <div className="d-ae46956b33" data-node-id="1169:596" data-name="Hero / Event information">
         <p className="d-f3be3a50a0 event-detail" data-node-id="1169:597">

@@ -16,16 +16,6 @@ export const organizerArtwork = {
       "width": 224.0,
       "height": 248.0
     },
-    "imgApprovedWovenLinks": {
-      "src": "/assets/1823-3588-30f2c.svg",
-      "width": 800.0,
-      "height": 400.0
-    },
-    "imgPixelSeamNavyToPaper": {
-      "src": "/assets/1823-3588-0bb4a.svg",
-      "width": 1440.0,
-      "height": 54.0
-    },
     "imgArtworkTechnicalTrackPixelBrackets": {
       "src": "/assets/1823-3588-75729.svg",
       "width": 210.0,
@@ -80,11 +70,6 @@ export const organizerArtwork = {
       "src": "/assets/1823-3588-b1725.svg",
       "width": 161.28,
       "height": 26.88
-    },
-    "imgPixelSeamOrangeToNavy": {
-      "src": "/assets/1823-3588-dc433.svg",
-      "width": 1440.0,
-      "height": 54.0
     }
   },
   "mobile": {
@@ -97,16 +82,6 @@ export const organizerArtwork = {
       "src": "/assets/1823-3589-fb726.svg",
       "width": 163.0,
       "height": 4.0
-    },
-    "imgApprovedWovenLinks": {
-      "src": "/assets/1823-3589-14a88.svg",
-      "width": 350.0,
-      "height": 175.0
-    },
-    "imgPixelSeamNavyToPaper": {
-      "src": "/assets/1823-3589-5917e.svg",
-      "width": 390.0,
-      "height": 54.0
     },
     "imgArtworkTechnicalTrackPixelBrackets": {
       "src": "/assets/1823-3589-bebe2.svg",
@@ -152,11 +127,6 @@ export const organizerArtwork = {
       "src": "/assets/1823-3589-8fe0a.svg",
       "width": 136.0,
       "height": 32.0
-    },
-    "imgPixelSeamOrangeToNavy": {
-      "src": "/assets/1823-3589-f1180.svg",
-      "width": 390.0,
-      "height": 54.0
     }
   }
 } as const;
