@@ -68,7 +68,7 @@ export default function Group1() {
               <div className="d-ea69cb599c" data-node-id="860:5061" data-name="Stepped pixel pennant">
                 <img alt="" className="d-511e8f31d4" src={imgSteppedPixelPennant} />
               </div>
-              <p className="d-9445b43840" data-node-id="860:5063">
+              <p className="d-9445b43840 arcade-heading" data-node-id="860:5063">
                 COMING SOON
               </p>
             </div>

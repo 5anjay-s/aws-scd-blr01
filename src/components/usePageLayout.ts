@@ -1,15 +1,16 @@
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useCallback, useLayoutEffect, useState, useSyncExternalStore } from 'react';
 
 export function usePageLayout(isLoading: boolean) {
-  const [viewport, setViewport] = useState(() => document.documentElement.clientWidth);
   const [headerHost, setHeaderHost] = useState<HTMLDivElement | null>(null);
-  const mobile = viewport < (isLoading ? 768 : 1200);
-
-  useEffect(() => {
-    const resize = () => setViewport(document.documentElement.clientWidth);
-    window.addEventListener('resize', resize);
-    return () => window.removeEventListener('resize', resize);
-  }, []);
+  const query = `(max-width: ${isLoading ? 767 : 1199}px)`;
+  const subscribe = useCallback((notify: () => void) => {
+    const media = window.matchMedia(query);
+    media.addEventListener('change', notify);
+    return () => media.removeEventListener('change', notify);
+  }, [query]);
+  // Pixel-by-pixel resizes are handled by CSS. Only remount a composition when
+  // its breakpoint changes, including the narrower loading-page breakpoint.
+  const mobile = useSyncExternalStore(subscribe, () => window.matchMedia(query).matches);
 
   useLayoutEffect(() => {
     if (!headerHost) return;

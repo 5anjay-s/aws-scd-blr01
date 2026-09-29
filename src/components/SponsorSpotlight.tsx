@@ -20,19 +20,23 @@ export function SponsorSpotlight({ children, className, lightNodeId, ...props }:
     const context = gsap.context(() => { gsap.set(head, { rotation: 0 }); }, root);
 
     const illuminate = (region: HTMLButtonElement | null, instant = false) => {
+      if (region === selected && !instant) return;
       sequence?.kill();
       gsap.killTweensOf([head, beam, ...fills, progress]);
       selected = region;
       root.dataset.activeSponsor = region?.dataset.sponsor ?? '';
       const still = reducedMotion || instant;
+      // Finish fading the old beam before moving its source or changing its path.
+      const fadeOut = still || Number(gsap.getProperty(beam, 'opacity')) < 0.001 ? 0 : 0.14;
       sequence = gsap.timeline({ defaults: { overwrite: 'auto' } });
       regions.forEach((item, index) => {
         item.setAttribute('aria-pressed', String(item === region));
-        if (item !== region) sequence!.to(fills[index], { opacity: 0, duration: still ? 0 : 0.18 }, 0);
+        if (still) gsap.set(fills[index], { opacity: 0 });
+        else sequence!.to(fills[index], { opacity: 0, duration: 0.18 }, 0);
       });
       if (!region) {
-        sequence.to(beam, { opacity: 0, duration: still ? 0 : 0.18 }, 0)
-          .to(head, { rotation: 0, duration: still ? 0 : 0.45, ease: 'power2.out' }, 0);
+        sequence.to(beam, { opacity: 0, duration: fadeOut }, 0)
+          .to(head, { rotation: 0, duration: still ? 0 : 0.4, ease: 'power2.out' }, fadeOut);
         return;
       }
 
@@ -40,10 +44,11 @@ export function SponsorSpotlight({ children, className, lightNodeId, ...props }:
       const headBounds = head.getBoundingClientRect();
       const regionBounds = region.getBoundingClientRect();
       const marker = region.querySelector<HTMLElement>('.sponsor-tier-marker')!.getBoundingClientRect();
+      const artWidth = art.offsetWidth;
       const geometry = telescopeGeometry({
         x: headBounds.left + headBounds.width / 2 - bounds.left,
         y: headBounds.top + headBounds.height / 2 - bounds.top,
-      }, art.offsetWidth);
+      }, artWidth);
       const target = { x: marker.left + marker.width / 2 - bounds.left, y: marker.top + marker.height / 2 - bounds.top };
       const edge: [{ x: number; y: number }, { x: number; y: number }] = [
         { x: regionBounds.left - bounds.left, y: regionBounds.bottom - bounds.top },
@@ -55,26 +60,31 @@ export function SponsorSpotlight({ children, className, lightNodeId, ...props }:
       const seed = `inset(${marker.top - regionBounds.top}px ${Math.max(0, regionBounds.right - marker.right)}px ${Math.max(0, regionBounds.bottom - marker.bottom)}px ${marker.left - regionBounds.left}px)`;
       const draw = () => {
         const lens = telescopeLens(geometry, Number(gsap.getProperty(head, 'rotation')));
-        beam.setAttribute('d', lightBeamPath(lens, target, edge, progress.travel, progress.spread, art.offsetWidth / 448 * 10));
+        beam.setAttribute('d', lightBeamPath(lens, target, edge, progress.travel, progress.spread, artWidth / 448 * 10));
       };
-      beam.style.fill = color;
-      gsap.set(beam, { opacity: 0 });
-      gsap.set(fill, { opacity: 1, clipPath: seed });
-      progress.travel = 0;
-      progress.spread = 0;
       if (still) {
+        beam.style.fill = color;
         gsap.set(head, { rotation });
-        gsap.set(fill, { clipPath: 'inset(0px 0px 0px 0px)' });
-        gsap.set(beam, { opacity: 0.32 });
+        gsap.set(fill, { opacity: 1, clipPath: 'inset(0px 0px 0px 0px)' });
+        gsap.set(beam, { opacity: 0.24 });
         progress.travel = progress.spread = 1;
         draw();
         return;
       }
-      sequence.to(head, { rotation, duration: 0.32, ease: 'power2.inOut', onUpdate: draw }, 0)
-        .to(beam, { opacity: 0.32, duration: 0.12 }, 0.2)
-        .to(progress, { travel: 1, duration: 0.2, ease: 'power1.in', onUpdate: draw }, 0.2)
-        .to(fill, { clipPath: 'inset(0px 0px 0px 0px)', duration: 0.46, ease: 'power3.out' }, 0.4)
-        .to(progress, { spread: 1, duration: 0.46, ease: 'power3.out', onUpdate: draw }, 0.4);
+      const lightStart = fadeOut + 0.32;
+      const arrival = lightStart + 0.24;
+      sequence.to(beam, { opacity: 0, duration: fadeOut }, 0)
+        .to(head, { rotation, duration: 0.32, ease: 'power2.inOut' }, fadeOut)
+        .call(() => {
+          beam.style.fill = color;
+          progress.travel = progress.spread = 0;
+          draw();
+          gsap.set(fill, { opacity: 1, clipPath: seed });
+        }, [], lightStart)
+        .to(beam, { opacity: 0.24, duration: 0.16 }, lightStart)
+        .to(progress, { travel: 1, duration: 0.24, ease: 'power1.inOut', onUpdate: draw }, lightStart)
+        .to(fill, { clipPath: 'inset(0px 0px 0px 0px)', duration: 0.4, ease: 'power2.out' }, arrival)
+        .to(progress, { spread: 1, duration: 0.4, ease: 'power2.out', onUpdate: draw }, arrival);
     };
     // Capture event-created tweens in the same cleanup context as the artwork.
     context.add('illuminate', illuminate);

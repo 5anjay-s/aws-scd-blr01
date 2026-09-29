@@ -3,6 +3,7 @@ import { SiteLink } from './SiteLink';
 import { organizerLinks } from '../site-config';
 import { organizerArtwork } from './organizerArtwork';
 import { DitherDivider } from './DitherDivider';
+import { ArcadeText } from './ArcadeText';
 import desktopRibbon from '../../public/assets/1823-3588-30f2c.svg?raw';
 import mobileRibbon from '../../public/assets/1823-3589-14a88.svg?raw';
 
@@ -78,7 +79,7 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
         <h1 id="organizers-title">
           <span className="organizers-campus" data-node-id={node('1834:3834', '1834:4079')}>CAMPUS</span>
           <span className="organizers-is-just" data-node-id={node('1834:3835', '1834:4080')}>IS JUST</span>
-          <span className="organizers-the-start" data-node-id={node('1834:3836', '1834:4081')}>THE{mobile ? <br /> : ' '}START.</span>
+          <span className="organizers-the-start" data-node-id={node('1834:3836', '1834:4081')}>THE{mobile ? <br /> : ' '}<ArcadeText>START.</ArcadeText></span>
         </h1>
       </div>
       <div className="organizers-signature" data-node-id={node('1834:3838', '1834:4083')}>
@@ -115,12 +116,12 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
     </section>
     <section className="organizers-initiatives organizers-surface" aria-labelledby="organizers-initiatives-title" data-node-id={node('1834:3942', '1834:4182')}>
       <p className="organizers-eyebrow organizers-cyan">02 / BEFORE THE BIG DAYS — DEC 2025 TO JUL 2026</p>
-      <h2 id="organizers-initiatives-title">START SMALL.<br />BUILD TOGETHER.</h2>
+      <h2 id="organizers-initiatives-title"><ArcadeText>START SMALL.</ArcadeText><br /><ArcadeText>BUILD TOGETHER.</ArcadeText></h2>
       <p>A workshop becomes a programme.<br />A first question becomes a shared possibility.</p>
       <div className="organizers-chapters" data-node-id={node('1834:3946', '1834:4186')}>
         {initiatives.map(chapter => <section className={`organizers-chapter organizers-chapter--${chapter.tone}`} key={chapter.label} data-node-id={node(chapter.desktop, chapter.mobile)}>
           <p className="organizers-small">{chapter.label}</p>
-          <h3>{chapter.title[0]}<br />{chapter.title[1]}</h3>
+          <h3><ArcadeText>{chapter.title[0]}</ArcadeText><br /><ArcadeText>{chapter.title[1]}</ArcadeText></h3>
           {chapter.activities.map(activity => <article className="organizers-activity" key={activity.date} data-node-id={node(activity.desktop, activity.mobile)}>
             <p className="organizers-eyebrow">{activity.date}</p>
             <h4>{activity.title}</h4>
@@ -136,7 +137,7 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
         <p className="organizers-small organizers-conversation-label">03 / YOUR PEOPLE ARE HERE</p>
         <div className="organizers-invitation" data-node-id={node('1851:3850', '1851:3967')}>
           <Art asset={art.imgTheInvitationPixelSpeechPanel} />
-          <div className="organizers-invitation-copy"><h2 id="organizers-invitation-title">COME BUILD<br />WITH US.</h2><p className="organizers-lime">STUDENT LED. COMMUNITY POWERED.</p></div>
+          <div className="organizers-invitation-copy"><h2 id="organizers-invitation-title">COME BUILD<br /><ArcadeText>WITH US.</ArcadeText></h2><p className="organizers-lime">STUDENT LED. COMMUNITY POWERED.</p></div>
           <Art asset={mobile ? art.imgDitherPrintedSpeechEdge1 : art.imgDitherPrintedSpeechEdge} className="organizers-invitation-dither" nodeId={node('1852:3997', '1852:4005')} />
         </div>
         {conversations.map((speech, index) => <div key={speech.channel} className={`organizers-speech organizers-speech--${index}`} data-node-id={speech.node}>
@@ -153,7 +154,7 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
         </div>
       </div>
       <div className="organizers-contact-wall" data-node-id={node('1851:3888', '1851:4005')}>
-        <div className="organizers-contact-heading"><h2>FIND YOUR PEOPLE.</h2><p className="organizers-eyebrow">SIX WAYS TO KEEP IN TOUCH ↓</p></div>
+        <div className="organizers-contact-heading"><h2><ArcadeText>FIND YOUR PEOPLE.</ArcadeText></h2><p className="organizers-eyebrow">SIX WAYS TO KEEP IN TOUCH ↓</p></div>
         <div className="organizers-contacts" data-node-id={node('1851:3892', '1851:4009')}>
           {channels.map((channel, index) => <SiteLink key={channel.key} href={organizerLinks[channel.key]} className="organizers-contact" aria-label={`${channel.platform}: ${channel.handle}`}>
             <Art asset={art.imgContactPaper} className="organizers-contact-paper" />

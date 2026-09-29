@@ -16,11 +16,9 @@ export function useScrollReveal(rootRef: RefObject<HTMLElement | null>, { pageKe
     if (!root || disabled || reducedMotion || !('IntersectionObserver' in window)) return;
     const records = collectScrollRevealTargets(root).map(target => {
       const element = target.element;
-      const computed = getComputedStyle(element);
       return {
         ...target,
-        opacity: Number(computed.opacity),
-        translate: computed.translate === 'none' ? ['0px', '0px'] : computed.translate.split(' '),
+        translate: target.translate === 'none' ? ['0px', '0px'] : target.translate.split(' '),
         styles: ownedStyles.map(name => [name, element.style.getPropertyValue(name), element.style.getPropertyPriority(name)]),
         state: 'pending',
         tween: null as gsap.core.Tween | null,
@@ -57,14 +55,15 @@ export function useScrollReveal(rootRef: RefObject<HTMLElement | null>, { pageKe
       });
     };
     const flush = () => {
-      if (pausedRef.current || document.hidden) return;
+      if (document.hidden) return;
       // Stagger only this viewport's new arrivals, so a long page never queues
       // seconds of delays and fast scrolling still reveals content promptly.
       const batch = [...visible].map(record => ({ record, bounds: record.element.getBoundingClientRect() }))
         .filter(({ bounds }) => bounds.bottom > 0 && bounds.top < window.innerHeight)
         .sort((a, b) => Math.abs(a.bounds.top - b.bounds.top) < 24
           ? a.bounds.left - b.bounds.left : a.bounds.top - b.bounds.top);
-      batch.forEach(({ record }, index) => reveal(record, Math.min(index * 0.055, 0.22)));
+      // The incoming page must already be readable as the wipe uncovers it.
+      batch.forEach(({ record }, index) => reveal(record, Math.min(index * 0.055, 0.22), pausedRef.current));
     };
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -74,15 +73,17 @@ export function useScrollReveal(rootRef: RefObject<HTMLElement | null>, { pageKe
         else visible.delete(record);
       });
       flush();
-    }, { rootMargin: '0px 0px -40px 0px', threshold: 0 });
+    }, { rootMargin: '0px', threshold: 0 });
 
+    const viewportHeight = window.innerHeight;
+    const mobile = window.innerWidth < 768;
     records.forEach(record => {
       const element = record.element;
-      // Direct links can open halfway down a page. Content already passed is
-      // immediately readable when the visitor scrolls back to it.
-      if (element.getBoundingClientRect().bottom <= 0) { finish(record); return; }
+      // Keep the arrival viewport and anything above it readable. Bounds were
+      // collected before any style writes, avoiding one forced layout per item.
+      if (record.top < viewportHeight) { finish(record); return; }
       element.dataset.scrollReveal = 'pending';
-      const offset = record.fadeOnly ? 0 : window.innerWidth < 768 ? 16 : record.artwork ? 32 : 24;
+      const offset = record.fadeOnly ? 0 : mobile ? 16 : record.artwork ? 32 : 24;
       const [x, y = '0px', z] = record.translate;
       element.style.setProperty('--scroll-reveal-y', `${offset}px`);
       element.style.translate = `${x} calc(${y} + var(--scroll-reveal-y))${z ? ` ${z}` : ''}`;

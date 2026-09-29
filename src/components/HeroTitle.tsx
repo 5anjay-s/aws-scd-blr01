@@ -1,7 +1,8 @@
-import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
+import { useId, useLayoutEffect, useRef } from 'react';
 import { gsap, useInView, usePageVisible, useReducedMotion } from './animation';
 import { SignalStitch } from './SignalStitch';
 import { createHeroArrival } from './heroArrival';
+import { resolveLocation } from '../navigation';
 import cloudArtwork from '../../public/assets/1590-802-cfe72.svg?raw';
 
 const imgAccentSignalStitch = '/assets/865-7675-fa3f0.svg';
@@ -9,6 +10,7 @@ const imgHeroCloudTexture = '/assets/865-7675-28d92.webp';
 const imgHeroPlane = '/assets/865-7675-cdcaf.svg';
 const cloudCut = cloudArtwork.match(/\bd="([^"]+)"/)![1];
 type TitleWord = 'STUDENT' | 'COMMUNITY' | 'DAY';
+let heroHasArrived = false;
 
 function WordLetters({ text, signal = false }: { text: TitleWord; signal?: boolean }) {
   return Array.from(text).map((letter, index) => <span key={index} data-character={index}
@@ -86,28 +88,27 @@ function CloudCity() {
 export function HeroTitle({ variant }: { variant: 'desktop' | 'mobile' }) {
   const mobile = variant === 'mobile';
   const ref = useRef<HTMLDivElement>(null);
-  const entered = useInView(ref, { once: true, amount: 0.15 });
-  const visible = useInView(ref, { amount: 0.05 });
+  const visible = useInView(ref);
   const pageVisible = usePageVisible();
   const reducedMotion = useReducedMotion();
-  const [fontsReady, setFontsReady] = useState(false);
-  const ready = entered && fontsReady;
   const active = visible && pageVisible && !reducedMotion;
   const activity = useRef(active);
   activity.current = active;
-  const completed = useRef(false);
+  const completed = useRef(heroHasArrived);
   const entrance = useRef<gsap.core.Timeline>(null);
   const ambient = useRef<gsap.core.Timeline[]>([]);
 
-  useEffect(() => {
-    let mounted = true;
-    void document.fonts.ready.then(() => { if (mounted) setFontsReady(true); });
-    return () => { mounted = false; };
-  }, []);
-
   useLayoutEffect(() => {
-    if (!ready && !reducedMotion) return;
     const root = ref.current!;
+    const bounds = root.getBoundingClientRect();
+    const { anchor } = resolveLocation(new URL(window.location.href));
+    // A returning visitor or a late font should get a readable title immediately.
+    // Only the first visible visit measures letters for the delivery scene.
+    if ((anchor && anchor !== 'home' && anchor !== 'top') || !document.fonts.check('16px "Arcade Classic"')
+      || bounds.bottom <= 0 || bounds.top >= window.innerHeight) {
+      completed.current = true;
+    }
+    let returnFrame = 0;
     const context = gsap.context(() => {
       const letters = root.querySelectorAll('.hero-word-letter, .hero-signal-letter');
       const cloud = root.querySelector('.hero-cloud');
@@ -119,6 +120,7 @@ export function HeroTitle({ variant }: { variant: 'desktop' | 'mobile' }) {
       gsap.set(root, { attr: { 'data-arriving': 'false' } });
       if (reducedMotion) {
         completed.current = true;
+        heroHasArrived = true;
         return;
       }
 
@@ -170,10 +172,18 @@ export function HeroTitle({ variant }: { variant: 'desktop' | 'mobile' }) {
       signal.timeScale(1.5);
       type.timeScale(1.5);
       ambient.current = [sky, citySky, signal, type];
-      if (completed.current) return;
+      if (completed.current) {
+        heroHasArrived = true;
+        // The sibling sky flight installs its listener later in this commit.
+        returnFrame = window.requestAnimationFrame(() => {
+          root.parentElement?.querySelector('[data-hero-sky-flight]')?.dispatchEvent(new Event('hero-flight-return'));
+        });
+        return;
+      }
 
       entrance.current = createHeroArrival(root, () => {
         completed.current = true;
+        heroHasArrived = true;
         if (activity.current) ambient.current.forEach(timeline => timeline.play());
       });
     }, root);
@@ -187,17 +197,19 @@ export function HeroTitle({ variant }: { variant: 'desktop' | 'mobile' }) {
     });
     observer.observe(root);
     return () => {
+      if (entrance.current && entrance.current.time() > 0) heroHasArrived = true;
+      window.cancelAnimationFrame(returnFrame);
       observer.disconnect();
       context.revert();
       entrance.current = null;
       ambient.current = [];
     };
-  }, [ready, reducedMotion, mobile]);
+  }, [reducedMotion, mobile]);
 
   useLayoutEffect(() => {
     entrance.current?.paused(!active);
     ambient.current.forEach(timeline => timeline.paused(!active || !completed.current));
-  }, [active, ready, reducedMotion]);
+  }, [active, reducedMotion]);
 
   return <div ref={ref} className="hero-masthead" data-motion-active={active}
     data-arriving="true"

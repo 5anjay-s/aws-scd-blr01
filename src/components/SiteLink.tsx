@@ -1,5 +1,4 @@
-import { createContext, useContext, useRef, type AnchorHTMLAttributes, type ButtonHTMLAttributes } from 'react';
-import { useButtonAnimation } from './useButtonAnimation';
+import { createContext, useContext, type AnchorHTMLAttributes, type ButtonHTMLAttributes } from 'react';
 import { isNavigationActive, resolveLinkUrl, resolveLocation } from '../navigation';
 import { HeaderNavigationContext, NavigationLocationContext } from './NavigationState';
 
@@ -11,30 +10,30 @@ type SiteLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   hoverTone?: 'orange' | 'cyan' | 'violet' | 'lime';
 };
 
-export function SiteLink({ href, children, className, buttonTone, hoverTone, ...props }: SiteLinkProps) {
+export function SiteLink({ href, children, className, buttonTone, hoverTone, onClick, target, rel, ...props }: SiteLinkProps) {
   const navigate = useContext(NavigationContext);
   const inHeader = useContext(HeaderNavigationContext);
   const location = useContext(NavigationLocationContext);
-  const ref = useRef<HTMLAnchorElement>(null);
-  useButtonAnimation(ref, href);
   const appearance = {
     className: [className, buttonTone && 'site-button'].filter(Boolean).join(' '),
     'data-button-tone': buttonTone,
     'data-button-hover': hoverTone,
   };
   if (!href) {
-    return <a {...props} {...appearance} ref={ref} role="link" aria-disabled="true" title="Link to be announced">{children}</a>;
+    return <a {...props} {...appearance} role="link" aria-disabled="true" title="Link to be announced">{children}</a>;
   }
   const external = /^https?:/.test(href);
-  const url = external ? null : resolveLinkUrl(href, new URL(window.location.href));
+  const url = external || props.download !== undefined ? null : resolveLinkUrl(href, new URL(window.location.href));
   const destination = url ? url.pathname + url.search + url.hash : href;
   const current = inHeader && url && isNavigationActive(resolveLocation(url), location)
     ? (location.path === '/' ? 'location' : 'page') : undefined;
-  return <a {...props} {...appearance} ref={ref} href={destination} target={external ? '_blank' : undefined}
+  return <a {...props} {...appearance} href={destination} target={target ?? (external ? '_blank' : undefined)}
     aria-current={props['aria-current'] ?? current}
-    rel={external ? 'noopener noreferrer' : undefined}
+    rel={rel ?? (external ? 'noopener noreferrer' : undefined)}
     onClick={(event) => {
-      if (!external && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) {
+      onClick?.(event);
+      if (!external && !event.defaultPrevented && event.button === 0 && (!target || target === '_self')
+        && props.download === undefined && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) {
         event.preventDefault();
         const bounds = event.currentTarget.getBoundingClientRect();
         navigate(destination, { origin: event.detail === 0

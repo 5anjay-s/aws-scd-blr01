@@ -26,7 +26,7 @@ export function PageTransition({ phase, origin, onCovered, onComplete }: {
     const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
     const tokens = getComputedStyle(document.documentElement);
     const colors = ['cyan', 'orange', 'violet', 'lime'].map(name => tokens.getPropertyValue(`--${name}`).trim());
-    const duration = phase === 'cover' ? 580 : 520;
+    const duration = phase === 'cover' ? 380 : 360;
     const clock = { progress: 0 };
     let width = 0;
     let height = 0;

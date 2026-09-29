@@ -1,23 +1,22 @@
-import { useLayoutEffect, useId, useMemo, useRef, type ImgHTMLAttributes } from 'react';
+import { useEffect, useLayoutEffect, useId, useRef, useState, type ImgHTMLAttributes } from 'react';
 import { gsap, useInView, usePageVisible, useReducedMotion } from './animation';
 import { readRibbonArtwork, RIBBON_CIRCUIT_SECONDS } from './ribbonPixels';
-import navyDesktop from '../../public/assets/1160-5759-305fd.svg?raw';
-import navyMobile from '../../public/assets/1168-493-5454f.svg?raw';
-import violetDesktop from '../../public/assets/860-5267-10945.svg?raw';
-import violetMobile from '../../public/assets/1168-495-22597.svg?raw';
-import partnersMobile from '../../public/assets/1168-496-4ca63.svg?raw';
-import footerDesktop from '../../public/assets/1265-3035-453bd.svg?raw';
-import footerMobile from '../../public/assets/1168-498-e1335.svg?raw';
+const artworkSources = new Set([
+  '/assets/1160-5759-305fd.svg', '/assets/1168-493-5454f.svg',
+  '/assets/860-5267-10945.svg', '/assets/1168-495-22597.svg',
+  '/assets/1168-496-4ca63.svg', '/assets/1265-3035-453bd.svg',
+  '/assets/1168-498-e1335.svg',
+]);
+type RibbonArtwork = ReturnType<typeof readRibbonArtwork>;
+const artworkCache = new Map<string, Promise<RibbonArtwork>>();
 
-const exports: Record<string, string> = {
-  '/assets/1160-5759-305fd.svg': navyDesktop,
-  '/assets/1168-493-5454f.svg': navyMobile,
-  '/assets/860-5267-10945.svg': violetDesktop,
-  '/assets/1168-495-22597.svg': violetMobile,
-  '/assets/1168-496-4ca63.svg': partnersMobile,
-  '/assets/1265-3035-453bd.svg': footerDesktop,
-  '/assets/1168-498-e1335.svg': footerMobile,
-};
+function loadArtwork(src: string) {
+  if (!artworkCache.has(src)) {
+    artworkCache.set(src, fetch(src).then(response => response.ok ? response.text() : '')
+      .then(readRibbonArtwork).catch(() => null));
+  }
+  return artworkCache.get(src)!;
+}
 
 type WovenRibbonProps = ImgHTMLAttributes<HTMLImageElement> & { active?: boolean };
 
@@ -25,12 +24,22 @@ export function WovenRibbon({ className, src, alt = '', active = true, ...props 
   const ref = useRef<HTMLSpanElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
   const id = useId().replace(/[^a-zA-Z0-9_-]/g, '');
+  const nearby = useInView(ref, { once: true, margin: '160px' });
   const visible = useInView(ref, { amount: 0.15 });
   const reducedMotion = useReducedMotion();
   const pageVisible = usePageVisible();
   const marks = useRef<gsap.core.Timeline>(null);
   const dots = useRef<gsap.core.Timeline>(null);
-  const artwork = useMemo(() => readRibbonArtwork(exports[src ?? ''] ?? ''), [src]);
+  const [loaded, setLoaded] = useState<{ src: string; artwork: RibbonArtwork }>();
+  const artwork = loaded?.src === src ? loaded?.artwork : null;
+
+  useEffect(() => {
+    if (!nearby || reducedMotion || !src || !artworkSources.has(src)) return;
+    let cancelled = false;
+    // Keep the original image until this ribbon is close enough to animate.
+    void loadArtwork(src).then(result => { if (!cancelled) setLoaded({ src, artwork: result }); });
+    return () => { cancelled = true; };
+  }, [nearby, reducedMotion, src]);
 
   useLayoutEffect(() => {
     if (!artwork || reducedMotion) return;

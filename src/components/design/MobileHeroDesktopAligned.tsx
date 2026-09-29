@@ -63,7 +63,7 @@ export default function MobileHeroDesktopAligned() {
               <div className="d-72adfe89db" data-node-id="1169:552" data-name="Stepped pixel pennant">
                 <img alt="" className="d-511e8f31d4" src={imgSteppedPixelPennant} />
               </div>
-              <p className="d-f99e433a84" data-node-id="1169:554">
+              <p className="d-f99e433a84 arcade-heading" data-node-id="1169:554">
                 COMING SOON
               </p>
             </div>

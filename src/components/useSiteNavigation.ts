@@ -48,7 +48,7 @@ export function useSiteNavigation() {
         try { sessionStorage.setItem(introSeenKey, 'true'); } catch { /* Navigation does not depend on storage. */ }
         setEntryTarget(null);
       }
-      if (options?.replace || isLoading) history.replaceState(null, '', url.pathname + url.search + url.hash);
+      if (options?.replace || isLoading || url.href === window.location.href) history.replaceState(null, '', url.pathname + url.search + url.hash);
       else history.pushState(null, '', url.pathname + url.search + url.hash);
       handledUrl.current = window.location.href;
       focusOnArrival.current = changesPage || isLoading;

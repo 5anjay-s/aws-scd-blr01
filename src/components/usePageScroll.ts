@@ -34,16 +34,7 @@ export function usePageScroll({ location, isLoading, transition, handledUrl, foc
   useLayoutEffect(() => {
     const previousRestoration = history.scrollRestoration;
     history.scrollRestoration = 'manual';
-    const initialLocation = readLocation();
-    let active = true;
-    // Font loading can move a section after the initial anchor jump.
-    void document.fonts.ready.then(() => {
-      const current = readLocation();
-      if (!active || !initialLocation.anchor || current.path !== initialLocation.path || current.anchor !== initialLocation.anchor) return;
-      document.getElementById(initialLocation.anchor)?.scrollIntoView({ block: 'start', behavior: 'instant' });
-    });
     return () => {
-      active = false;
       history.scrollRestoration = previousRestoration;
     };
   }, []);
@@ -67,6 +58,18 @@ export function usePageScroll({ location, isLoading, transition, handledUrl, foc
       return () => { scroll.kill(); };
     }
     window.scrollTo({ top, behavior: 'instant' });
+    if (!target || document.fonts.status === 'loaded') return;
+    let active = true;
+    const arrivalY = window.scrollY;
+    // Correct a late font shift only while the visitor remains at the arrival
+    // position. A delayed font must never pull them back after they scroll.
+    void document.fonts.ready.then(() => {
+      if (!active || Math.abs(window.scrollY - arrivalY) > 1) return;
+      const correctedTop = target.getBoundingClientRect().top + window.scrollY
+        - (headerHost?.parentElement?.getBoundingClientRect().height ?? 0);
+      window.scrollTo({ top: correctedTop, behavior: 'instant' });
+    });
+    return () => { active = false; };
   }, [isLoading, location, mobile, headerHost, handledUrl, scrollBehavior]);
 
   useLayoutEffect(() => {

@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useMemo, useRef } from 'react';
 import { getPageSections } from './page-config';
 import { NavigationContext } from './components/SiteLink';
 import { HeaderHostContext } from './components/SiteHeader';
@@ -18,6 +18,10 @@ export default function App() {
   const { mobile, headerHost, setHeaderHost } = usePageLayout(isLoading);
   const activeSection = usePageScroll(navigation, mobile, headerHost);
   const sections = getPageSections(location.path, mobile, isLoading);
+  const navigationLocation = useMemo(() => ({
+    path: location.path,
+    anchor: location.path === '/' ? activeSection : location.anchor,
+  }), [location.path, location.anchor, activeSection]);
 
   useScrollReveal(revealRoot, {
     pageKey: `${location.path}:${mobile ? 'mobile' : 'desktop'}`,
@@ -26,7 +30,7 @@ export default function App() {
   });
 
   return <NavigationContext.Provider value={navigate}>
-    <NavigationLocationContext.Provider value={{ path: location.path, anchor: location.path === '/' ? activeSection : location.anchor }}>
+    <NavigationLocationContext.Provider value={navigationLocation}>
       <HeaderHostContext.Provider value={headerHost}>
         <main ref={revealRoot} id="top" className={`design-shell ${isLoading ? 'loading-shell' : ''}`} inert={transition !== null} aria-busy={transition !== null}>
           <div className={`design-canvas ${mobile ? 'mobile-layout' : 'desktop-layout'}`}>

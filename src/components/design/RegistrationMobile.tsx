@@ -1,3 +1,4 @@
+import { ArcadeText } from "../ArcadeText";
 import { SiteBrand } from "../SiteBrand";
 import { BadgeStudio } from "../BadgeStudio";
 import { SiteHeader } from "../SiteHeader";
@@ -36,7 +37,7 @@ function ScdRegistrationMeetupRsvpMobile({ className }: { className: string }) {
         <p className="d-bf9b1d779a" data-node-id="1367:834">
           COMMUNITY
         </p>
-        <p className="d-aa17ac78e3" data-node-id="1367:835">
+        <p className="d-aa17ac78e3 arcade-heading" data-node-id="1367:835">
           RSVP
         </p>
       </div>
@@ -126,13 +127,13 @@ export default function RegistrationMobile() {
                   aws / STUDENT COMMUNITY DAY
                 </SiteLink>
                 <div className="d-a578d1bfe1" data-node-id="I1367:802;1059:507" data-name="Ticket / Top rule" />
-                <div className="d-a78be7486b" data-node-id="I1367:802;1059:508">
+                <div className="d-a78be7486b arcade-heading" data-node-id="I1367:802;1059:508">
                   <p className="d-c85d59d8dc">THE NEXT</p>
-                  <p className="d-83b276799c">CHAPTER.</p>
+                  <p className="d-83b276799c"><ArcadeText>CHAPTER.</ArcadeText></p>
                 </div>
-                <div className="d-ab04b6cee1" data-node-id="I1367:802;1059:509">
+                <div className="d-ab04b6cee1 arcade-heading" data-node-id="I1367:802;1059:509">
                   <p className="d-63cb8532db">STARTS WITH</p>
-                  <p className="d-37e9bcdf1f">YOUR CURIOSITY.</p>
+                  <p className="d-37e9bcdf1f"><ArcadeText>YOUR CURIOSITY.</ArcadeText></p>
                 </div>
                 <div className="d-790e070aa2" data-node-id="I1367:802;1059:510" data-name="Ticket / Assembly plus">
                   <img alt="" className="d-511e8f31d4" src={imgTicketAssemblyPlus} />
@@ -143,7 +144,7 @@ export default function RegistrationMobile() {
                 <p className="d-81d7223182" data-node-id="I1367:802;1059:512">
                   REGISTRATION
                 </p>
-                <p className="d-ff1b9b6c84" data-node-id="I1367:802;1059:513">
+                <p className="d-ff1b9b6c84 arcade-heading" data-node-id="I1367:802;1059:513">
                   COMING SOON
                 </p>
                 <div className="d-cf401d4ea7" data-node-id="I1367:802;1059:514" data-name="Ticket / Decorative print code">

@@ -1,5 +1,6 @@
 import { useEffect, useId, useLayoutEffect, useRef, useState, type RefObject } from 'react';
-import { badgeFilename, badgeLooks, drawBadge, loadBadgeArtwork, type BadgeLook } from './badgeArtwork';
+import { BADGE_HEIGHT, BADGE_WIDTH, badgeFilename, badgeLooks, drawBadge, loadBadgeArtwork, type BadgeLook } from './badgeArtwork';
+import { ArcadeText } from './ArcadeText';
 
 type Artwork = Awaited<ReturnType<typeof loadBadgeArtwork>>;
 type Portrait = { image: HTMLImageElement; filename: string };
@@ -13,10 +14,11 @@ function BadgeCanvas({ art, look, name = '', portrait = null, canvasRef, thumbna
 }) {
   const ownRef = useRef<HTMLCanvasElement>(null);
   const ref = canvasRef ?? ownRef;
+  const width = thumbnail ? 216 : BADGE_WIDTH;
   useLayoutEffect(() => {
-    if (ref.current) drawBadge(ref.current, art, look, name, portrait?.image);
-  }, [art, look, name, portrait, ref]);
-  return <canvas ref={ref} width="1080" height="1350" className="badge-canvas"
+    if (ref.current) drawBadge(ref.current, art, look, name, portrait?.image, width);
+  }, [art, look, name, portrait, ref, width]);
+  return <canvas ref={ref} width={width} height={width * BADGE_HEIGHT / BADGE_WIDTH} className="badge-canvas"
     role={thumbnail ? undefined : 'img'} aria-hidden={thumbnail || undefined}
     aria-label={thumbnail ? undefined : `${badgeLooks.find((item) => item.id === look)!.label} badge for ${name.trim() || 'Your name'}${portrait ? ', with your photo' : ''}`}
     data-look={look}>Your personalised AWS Student Community Day badge.</canvas>;
@@ -41,7 +43,7 @@ export function BadgeStudio({ mobile = false }: { mobile?: boolean }) {
   useEffect(() => { draft = { name, look, portrait }; }, [name, look, portrait]);
   useEffect(() => {
     let active = true;
-    void Promise.all([loadBadgeArtwork(), document.fonts.load('500 80px "Pixelify Sans"'),
+    void Promise.all([loadBadgeArtwork(), document.fonts.load('400 88px "Arcade Classic"'),
       document.fonts.load('500 38px "Azeret Mono"'), document.fonts.load('400 14px "Geist Mono"')])
       .then(([artwork]) => { if (active) setArt(artwork); })
       .catch(() => { if (active) setError('The badge artwork could not load. Please refresh and try again.'); });
@@ -107,7 +109,7 @@ export function BadgeStudio({ mobile = false }: { mobile?: boolean }) {
     <header className="badge-studio__masthead" data-node-id={mobile ? '1814:3718' : '1814:3452'}>
       <p className="badge-studio__eyebrow">COMMUNITY / THE BADGE STUDIO</p>
       <div className="badge-studio__intro">
-        <h2 id={`${id}-title`}><span className="badge-studio__title-start">MAKE IT</span><span className="badge-studio__title-highlight">YOURS.</span></h2>
+        <h2 id={`${id}-title`}><span className="badge-studio__title-start">MAKE IT</span><span className="badge-studio__title-highlight"><ArcadeText>YOURS.</ArcadeText></span></h2>
         <div className="badge-studio__invitation">
           <h3>A little you.<br />A lot of community.</h3>
           <p>Create your badge and let your people know you’ll be there.</p>

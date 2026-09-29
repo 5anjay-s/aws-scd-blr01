@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { readQuoteArtwork } from '../src/components/quotePixels.ts';
-import { wrapVoiceLines } from '../src/components/voiceTyping.ts';
+import { voiceTypingTimings, wrapVoiceLines } from '../src/components/voiceTyping.ts';
 
 test('pixel flicker preserves every original quote path and palette on desktop and mobile', () => {
   for (const file of ['860-5246-42ed8.svg', '860-5246-85f17.svg', '866-8542-c8e08.svg', '866-8542-0b5fe.svg']) {
@@ -26,4 +26,15 @@ test('typing lines preserve the supplied words and fit narrow columns', () => {
     assert.equal(lines.join(' '), text);
     assert.ok(lines.every(line => line.length <= capacity));
   }
+});
+
+test('typing pauses at punctuation and holds each complete line before scrolling', () => {
+  const timing = voiceTypingTimings('Hi. Go!', 0);
+  assert.equal(timing.characters.length, 7);
+  assert.equal(timing.characters[0], 0.016);
+  assert.ok(Math.abs(timing.characters[3] - timing.characters[2] - 0.07) < 1e-9);
+  assert.ok(Math.abs(timing.advanceAt - timing.characters.at(-1) - 0.07) < 1e-9);
+  assert.equal(voiceTypingTimings('A', 3).characters[0], 0.025);
+  assert.deepEqual(voiceTypingTimings('A', 4), voiceTypingTimings('A', 0));
+  assert.ok(voiceTypingTimings('', 0).advanceAt > 0);
 });

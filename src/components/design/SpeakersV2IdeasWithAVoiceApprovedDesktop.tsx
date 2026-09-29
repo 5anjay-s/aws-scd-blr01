@@ -1,4 +1,5 @@
 import { SiteLink } from "../SiteLink";
+import { SpeakerQuotation } from "../SpeakerQuotation";
 // Source: Figma 00/ Final, node 860:5144.
 const imgSpeakersApprovedDitheredQuotation = "/assets/860-5144-5a444.svg";
 const imgArrow = "/assets/865-7675-0b485.svg";
@@ -21,11 +22,11 @@ export default function SpeakersV2IdeasWithAVoiceApprovedDesktop() {
             </p>
           </div>
           <div className="d-7e534468f3" data-node-id="1127:2304" data-name="Masthead / Type and quotation">
-            <p className="d-de719054a7" data-node-id="1127:2305">
+            <p className="d-de719054a7 arcade-heading" data-node-id="1127:2305">
               SPEAKERS
             </p>
             <div className="d-fd50bbe54d" data-node-id="1127:2306" data-name="Speakers / Approved dithered quotation">
-              <img alt="" className="d-511e8f31d4" src={imgSpeakersApprovedDitheredQuotation} />
+              <SpeakerQuotation className="d-511e8f31d4" src={imgSpeakersApprovedDitheredQuotation} />
             </div>
           </div>
           <div className="d-f9e6b7738b" data-node-id="1127:2307" data-name="Introduction / Statement and action">
@@ -115,7 +116,7 @@ export default function SpeakersV2IdeasWithAVoiceApprovedDesktop() {
               </div>
             </div>
             <div className="d-cf1c946646" data-node-id="1127:2336" data-name="Speakers / Approved dithered quotation">
-              <img alt="" className="d-511e8f31d4" src={imgSpeakersApprovedDitheredQuotation1} />
+              <SpeakerQuotation className="d-511e8f31d4" src={imgSpeakersApprovedDitheredQuotation1} />
             </div>
             <div className="d-d9ea639326" data-node-id="1127:2337" data-name="Speakers / Anonymous portrait 03 / Artwork only">
               <div className="d-22bea6fb2f" data-node-id="I1127:2337;1060:538" data-name="Portrait / Pixel bust">

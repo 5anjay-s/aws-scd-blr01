@@ -30,10 +30,11 @@
     "bytes": 6069
   },
   {
-    "file": "public/assets/865-7675-28d92.png",
+    "file": "public/assets/865-7675-28d92.webp",
     "component": "MobileHeroDesktopAligned",
     "variable": "imgArtworkWindowDesktopTextureMobileCrop",
-    "bytes": 2131108
+    "bytes": 495524,
+    "source": "artifacts/original-artwork/865-7675-28d92.png"
   },
   {
     "file": "public/assets/865-7675-fa3f0.svg",
@@ -912,10 +913,11 @@
     "bytes": 5777
   },
   {
-    "file": "public/assets/865-7675-28d92.png",
+    "file": "public/assets/865-7675-28d92.webp",
     "component": "Group1",
     "variable": "imgArtworkWindowOriginalTexture",
-    "bytes": 2131108
+    "bytes": 495524,
+    "source": "artifacts/original-artwork/865-7675-28d92.png"
   },
   {
     "file": "public/assets/865-7675-4ceb6.svg",
@@ -1287,10 +1289,11 @@
     "source": "https://cdn.openai.com/brand/OpenAI-Logos-2025.zip"
   },
   {
-    "file": "public/assets/865-7675-28d92.png",
+    "file": "public/assets/865-7675-28d92.webp",
     "component": "HeroTitle",
     "variable": "imgHeroCloudTexture",
-    "bytes": 2131108
+    "bytes": 495524,
+    "source": "artifacts/original-artwork/865-7675-28d92.png"
   },
   {
     "file": "public/assets/1590-802-cfe72.svg",
@@ -1333,5 +1336,305 @@
     "component": "FaqPage",
     "variable": "imgExploreArrow",
     "bytes": 274
+  },
+  {
+    "file": "public/assets/1759-6933-0445e.svg",
+    "component": "BadgeStudio",
+    "variable": "1759-6933-0445e",
+    "bytes": 313
+  },
+  {
+    "file": "public/assets/1759-6933-a729e.svg",
+    "component": "BadgeStudio",
+    "variable": "1759-6933-a729e",
+    "bytes": 543
+  },
+  {
+    "file": "public/assets/1759-6933-cfc2e.svg",
+    "component": "BadgeStudio",
+    "variable": "1759-6933-cfc2e",
+    "bytes": 20983
+  },
+  {
+    "file": "public/assets/1759-6960-04e24.svg",
+    "component": "BadgeStudio",
+    "variable": "1759-6960-04e24",
+    "bytes": 22416
+  },
+  {
+    "file": "public/assets/1759-6960-81908.svg",
+    "component": "BadgeStudio",
+    "variable": "1759-6960-81908",
+    "bytes": 308
+  },
+  {
+    "file": "public/assets/1759-6960-a23af.svg",
+    "component": "BadgeStudio",
+    "variable": "1759-6960-a23af",
+    "bytes": 309
+  },
+  {
+    "file": "public/assets/1759-6960-c012d.svg",
+    "component": "BadgeStudio",
+    "variable": "1759-6960-c012d",
+    "bytes": 327
+  },
+  {
+    "file": "public/assets/1759-6996-0b485.svg",
+    "component": "BadgeStudio",
+    "variable": "1759-6996-0b485",
+    "bytes": 172
+  },
+  {
+    "file": "public/assets/1759-6996-7892a.svg",
+    "component": "BadgeStudio",
+    "variable": "1759-6996-7892a",
+    "bytes": 20845
+  },
+  {
+    "file": "public/assets/1759-6996-99e3c.svg",
+    "component": "BadgeStudio",
+    "variable": "1759-6996-99e3c",
+    "bytes": 367
+  },
+  {
+    "file": "public/assets/1759-6996-9c749.svg",
+    "component": "BadgeStudio",
+    "variable": "1759-6996-9c749",
+    "bytes": 7846
+  },
+  {
+    "file": "public/assets/1759-6996-a3ceb.svg",
+    "component": "BadgeStudio",
+    "variable": "1759-6996-a3ceb",
+    "bytes": 2913
+  },
+  {
+    "file": "public/assets/1759-6996-a9174.svg",
+    "component": "BadgeStudio",
+    "variable": "1759-6996-a9174",
+    "bytes": 34263
+  },
+  {
+    "file": "public/assets/1759-6996-c2d14.svg",
+    "component": "BadgeStudio",
+    "variable": "1759-6996-c2d14",
+    "bytes": 212
+  },
+  {
+    "file": "public/assets/1759-6996-ce464.svg",
+    "component": "BadgeStudio",
+    "variable": "1759-6996-ce464",
+    "bytes": 1457
+  },
+  {
+    "file": "public/assets/1759-6996-ea29d.svg",
+    "component": "BadgeStudio",
+    "variable": "1759-6996-ea29d",
+    "bytes": 912
+  },
+  {
+    "file": "public/assets/1759-6996-fa879.svg",
+    "component": "BadgeStudio",
+    "variable": "1759-6996-fa879",
+    "bytes": 476
+  },
+  {
+    "file": "public/assets/1759-6997-be79d.svg",
+    "component": "BadgeStudio",
+    "variable": "1759-6997-be79d",
+    "bytes": 2778
+  },
+  {
+    "file": "public/assets/1759-6997-c3470.svg",
+    "component": "BadgeStudio",
+    "variable": "1759-6997-c3470",
+    "bytes": 216
+  },
+  {
+    "file": "public/assets/1823-3588-60a9f.svg",
+    "component": "OrganizersDesktop",
+    "variable": "imgContactPaper",
+    "bytes": 422
+  },
+  {
+    "file": "public/assets/1823-3588-42ddb.svg",
+    "component": "OrganizersDesktop",
+    "variable": "imgTearPerforation",
+    "bytes": 490
+  },
+  {
+    "file": "public/assets/1823-3588-ef449.svg",
+    "component": "OrganizersDesktop",
+    "variable": "imgTearHereVerticalPerforation",
+    "bytes": 691
+  },
+  {
+    "file": "public/assets/1823-3588-30f2c.svg",
+    "component": "OrganizersDesktop",
+    "variable": "imgApprovedWovenLinks",
+    "bytes": 10836
+  },
+  {
+    "file": "public/assets/1823-3588-0bb4a.svg",
+    "component": "OrganizersDesktop",
+    "variable": "imgPixelSeamNavyToPaper",
+    "bytes": 11390
+  },
+  {
+    "file": "public/assets/1823-3588-75729.svg",
+    "component": "OrganizersDesktop",
+    "variable": "imgArtworkTechnicalTrackPixelBrackets",
+    "bytes": 54880
+  },
+  {
+    "file": "public/assets/1823-3588-b4962.svg",
+    "component": "OrganizersDesktop",
+    "variable": "imgAccentCuriositySpark",
+    "bytes": 5307
+  },
+  {
+    "file": "public/assets/1823-3588-b243c.svg",
+    "component": "OrganizersDesktop",
+    "variable": "imgApprovedWovenLinks1",
+    "bytes": 10107
+  },
+  {
+    "file": "public/assets/1823-3588-7abe7.svg",
+    "component": "OrganizersDesktop",
+    "variable": "imgTheInvitationPixelSpeechPanel",
+    "bytes": 474
+  },
+  {
+    "file": "public/assets/1823-3588-b46e4.svg",
+    "component": "OrganizersDesktop",
+    "variable": "imgDitherPrintedSpeechEdge",
+    "bytes": 2014
+  },
+  {
+    "file": "public/assets/1823-3588-39083.svg",
+    "component": "OrganizersDesktop",
+    "variable": "imgSpeechPaper",
+    "bytes": 515
+  },
+  {
+    "file": "public/assets/1823-3588-684a6.svg",
+    "component": "OrganizersDesktop",
+    "variable": "imgDitherPrintedSpeechEdge1",
+    "bytes": 3571
+  },
+  {
+    "file": "public/assets/1823-3588-03f9c.svg",
+    "component": "OrganizersDesktop",
+    "variable": "imgSpeechPaper1",
+    "bytes": 516
+  },
+  {
+    "file": "public/assets/1823-3588-0beee.svg",
+    "component": "OrganizersDesktop",
+    "variable": "imgDitherPrintedSpeechEdge2",
+    "bytes": 3590
+  },
+  {
+    "file": "public/assets/1823-3588-40ace.svg",
+    "component": "OrganizersDesktop",
+    "variable": "imgSpeechPaper2",
+    "bytes": 514
+  },
+  {
+    "file": "public/assets/1823-3588-b1725.svg",
+    "component": "OrganizersDesktop",
+    "variable": "imgDitherPrintedSpeechEdge3",
+    "bytes": 3575
+  },
+  {
+    "file": "public/assets/1823-3588-dc433.svg",
+    "component": "OrganizersDesktop",
+    "variable": "imgPixelSeamOrangeToNavy",
+    "bytes": 11391
+  },
+  {
+    "file": "public/assets/1823-3589-4611d.svg",
+    "component": "OrganizersMobile",
+    "variable": "imgContactPaper",
+    "bytes": 422
+  },
+  {
+    "file": "public/assets/1823-3589-fb726.svg",
+    "component": "OrganizersMobile",
+    "variable": "imgTearPerforation",
+    "bytes": 414
+  },
+  {
+    "file": "public/assets/1823-3589-14a88.svg",
+    "component": "OrganizersMobile",
+    "variable": "imgApprovedWovenLinks",
+    "bytes": 15377
+  },
+  {
+    "file": "public/assets/1823-3589-5917e.svg",
+    "component": "OrganizersMobile",
+    "variable": "imgPixelSeamNavyToPaper",
+    "bytes": 5606
+  },
+  {
+    "file": "public/assets/1823-3589-bebe2.svg",
+    "component": "OrganizersMobile",
+    "variable": "imgArtworkTechnicalTrackPixelBrackets",
+    "bytes": 66772
+  },
+  {
+    "file": "public/assets/1823-3589-06eef.svg",
+    "component": "OrganizersMobile",
+    "variable": "imgAccentCuriositySpark",
+    "bytes": 11395
+  },
+  {
+    "file": "public/assets/1823-3589-27e21.svg",
+    "component": "OrganizersMobile",
+    "variable": "imgApprovedWovenLinks1",
+    "bytes": 21042
+  },
+  {
+    "file": "public/assets/1823-3589-ac29b.svg",
+    "component": "OrganizersMobile",
+    "variable": "imgTheInvitationPixelSpeechPanel",
+    "bytes": 467
+  },
+  {
+    "file": "public/assets/1823-3589-3bb2c.svg",
+    "component": "OrganizersMobile",
+    "variable": "imgSpeechPaper",
+    "bytes": 440
+  },
+  {
+    "file": "public/assets/1823-3589-60c70.svg",
+    "component": "OrganizersMobile",
+    "variable": "imgDitherPrintedSpeechEdge",
+    "bytes": 1068
+  },
+  {
+    "file": "public/assets/1823-3589-9f954.svg",
+    "component": "OrganizersMobile",
+    "variable": "imgSpeechPaper1",
+    "bytes": 440
+  },
+  {
+    "file": "public/assets/1823-3589-371a0.svg",
+    "component": "OrganizersMobile",
+    "variable": "imgSpeechPaper2",
+    "bytes": 440
+  },
+  {
+    "file": "public/assets/1823-3589-8fe0a.svg",
+    "component": "OrganizersMobile",
+    "variable": "imgDitherPrintedSpeechEdge1",
+    "bytes": 2529
+  },
+  {
+    "file": "public/assets/1823-3589-f1180.svg",
+    "component": "OrganizersMobile",
+    "variable": "imgPixelSeamOrangeToNavy",
+    "bytes": 5607
   }
 ]

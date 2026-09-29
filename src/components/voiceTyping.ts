@@ -16,11 +16,12 @@ export function wrapVoiceLines(text: string, capacity: number): string[] {
   return lines;
 }
 
-export type VoiceTypingState = { head: number; typed: number; phase: 'typing' | 'hold' | 'advance' };
-
-export function advanceVoiceTyping(state: VoiceTypingState, lineLength: number): VoiceTypingState {
-  if (state.phase === 'advance') return { head: state.head + 1, typed: 0, phase: 'typing' };
-  if (state.phase === 'hold') return { ...state, phase: 'advance' };
-  const typed = Math.min(lineLength, state.typed + 1);
-  return { ...state, typed, phase: typed === lineLength ? 'hold' : 'typing' };
+export function voiceTypingTimings(line: string, column: number) {
+  const delay = (16 + column % 4 * 3) / 1000;
+  let elapsed = 0;
+  const characters = Array.from(line, (_, index) => {
+    elapsed += /[.!?]/.test(line[index - 1] ?? '') ? 0.07 : delay;
+    return elapsed;
+  });
+  return { characters, advanceAt: (elapsed || delay) + 0.07 };
 }

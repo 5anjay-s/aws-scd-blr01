@@ -17,7 +17,7 @@ export default function PartnersGoodCompanyMobile() {
             CURIOUS MINDS. SHARED POSSIBILITIES.
           </p>
         </div>
-        <p className="d-88afbae432" data-node-id="1170:624">
+        <p className="d-88afbae432 arcade-heading" data-node-id="1170:624">
           PARTNERS
         </p>
         <div className="d-97c84ffa4e" data-node-id="1170:625" data-name="Partners / Shared purpose and woven links">

@@ -14,7 +14,7 @@ export default function PartnersGoodCompany() {
       <p className="d-47acf6cd27" data-node-id="1160:5761">
         CURIOUS MINDS. SHARED POSSIBILITIES.
       </p>
-      <div className="d-f942f5a22a" data-node-id="1160:5762">
+      <div className="d-f942f5a22a arcade-heading" data-node-id="1160:5762">
         <p className="d-7ba51c60de">PARTNERS</p>
       </div>
       <div className="d-6e958ebb4a" data-node-id="1160:5764" data-name="Partners / Shared purpose">

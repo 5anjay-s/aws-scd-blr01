@@ -53,12 +53,13 @@ export function badgeFilename(name: string, look: BadgeLook) {
 // All coordinates come from the 540 × 675 Figma badge components.
 // The same renderer supplies the preview, thumbnails, and the 2× PNG export.
 export function drawBadge(canvas: HTMLCanvasElement, art: Artwork, look: BadgeLook,
-  name = '', photo: HTMLImageElement | null = null) {
+  name = '', photo: HTMLImageElement | null = null, width = BADGE_WIDTH) {
   const ctx = canvas.getContext('2d');
   if (!ctx) throw new Error('Badge preview is unavailable in this browser.');
-  canvas.width = BADGE_WIDTH;
-  canvas.height = BADGE_HEIGHT;
-  ctx.scale(2, 2);
+  canvas.width = width;
+  canvas.height = Math.round(width * BADGE_HEIGHT / BADGE_WIDTH);
+  const scale = width / 540;
+  ctx.scale(scale, scale);
   const palette = getComputedStyle(document.documentElement);
   const color = (tone: string) => palette.getPropertyValue(`--${tone}`).trim();
   const navy = color('navy'), white = color('white'), cyan = color('cyan');
@@ -69,25 +70,41 @@ export function drawBadge(canvas: HTMLCanvasElement, art: Artwork, look: BadgeLo
   const img = (key: keyof Artwork, x: number, y: number, w: number, h: number) => ctx.drawImage(art[key], x, y, w, h);
   const text = (value: string, x: number, y: number, size: number, tone: string,
     family = 'Geist Mono', lineHeight = size * 1.4, maxWidth?: number) => {
-    const weight = family === 'Geist Mono' ? 400 : 500;
-    ctx.font = `${weight} ${size}px "${family}"`;
-    if (maxWidth && ctx.measureText(value).width > maxWidth) {
-      size *= maxWidth / ctx.measureText(value).width;
+    const arcade = family === 'Arcade Classic';
+    const weight = family === 'Azeret Mono' ? 500 : 400;
+    const setFont = () => {
       ctx.font = `${weight} ${size}px "${family}"`;
+      ctx.fontKerning = arcade ? 'none' : 'auto';
+      ctx.letterSpacing = arcade ? `${size * .01}px` : '0px';
+      ctx.wordSpacing = arcade ? `${size * .12}px` : '0px';
+    };
+    setFont();
+    const width = () => ctx.measureText(value).width - (arcade ? (value.match(/\./g)?.length ?? 0) * size * .28 : 0);
+    if (maxWidth && width() > maxWidth) {
+      size *= maxWidth / width();
+      setFont();
     }
     ctx.fillStyle = tone;
     ctx.textBaseline = 'alphabetic';
     const metrics = ctx.measureText('Hg');
     const ascent = metrics.fontBoundingBoxAscent ?? size * .8;
     const descent = metrics.fontBoundingBoxDescent ?? size * .2;
-    ctx.fillText(value, x, y + (lineHeight - ascent - descent) / 2 + ascent);
+    const baseline = y + (lineHeight - ascent - descent) / 2 + ascent;
+    if (arcade) {
+      let cursor = x;
+      for (const part of value.split(/(\.)/)) {
+        if (part === '.') cursor -= size * .28;
+        ctx.fillText(part, cursor, baseline);
+        cursor += ctx.measureText(part).width;
+      }
+    } else ctx.fillText(value, x, baseline);
   };
   const lines = (values: string[], x: number, y: number, size: number, tone: string, family: string, height: number) =>
     values.forEach((value, i) => text(value, x, y + i * height, size, tone, family, height));
   const portrait = (x: number, y: number, w: number, h: number, mask?: keyof Artwork) => {
     if (!photo) return;
     const layer = document.createElement('canvas');
-    layer.width = Math.ceil(w * 2); layer.height = Math.ceil(h * 2);
+    layer.width = Math.ceil(w * scale); layer.height = Math.ceil(h * scale);
     const painter = layer.getContext('2d')!;
     const crop = coverCrop(photo.naturalWidth, photo.naturalHeight, w, h);
     painter.drawImage(photo, crop.sx, crop.sy, crop.sw, crop.sh, 0, 0, layer.width, layer.height);
@@ -117,7 +134,7 @@ export function drawBadge(canvas: HTMLCanvasElement, art: Artwork, look: BadgeLo
   if (look === 'meet') {
     img('meetField', 262, 140, 278, 422);
     portrait(262, 140, 278, 422, 'meetField');
-    lines(['MEET', 'ME AT', 'SCD.'], 28, 106, 80, navy, 'Pixelify Sans', 80);
+    lines(['MEET', 'ME AT', 'SCD.'], 28, 106, 88, navy, 'Arcade Classic', 80);
     fill(cyan, 28, 392, 48, 8);
     lines(['GOOD PEOPLE.', 'BIG IDEAS.', 'SEE YOU THERE.'], 28, 412, 12, navy, 'Geist Mono', 17);
     img('meetDither', 0, 514, 540, 52);
@@ -125,7 +142,7 @@ export function drawBadge(canvas: HTMLCanvasElement, art: Artwork, look: BadgeLo
     signature(579, white, cyan);
     placeholder(406, 340, navy);
   } else if (look === 'wave') {
-    text('NEXT WAVE.', 28, 99, 83, violet, 'Pixelify Sans', 83);
+    text('NEXT WAVE.', 28, 99, 88, violet, 'Arcade Classic', 83, 484);
     img('waveLeft', 20, 201, 48, 380);
     img('waveRight', 472, 201, 48, 380);
     img('waveField', 84, 182, 372, 388);
@@ -135,7 +152,7 @@ export function drawBadge(canvas: HTMLCanvasElement, art: Artwork, look: BadgeLo
     signature(581, navy, navy, 38, 'I’M ATTENDING / AWS STUDENT COMMUNITY DAY');
     placeholder(270, 335, navy);
   } else if (look === 'company') {
-    lines(['IN GOOD', 'COMPANY.'], 28, 94, 78, white, 'Pixelify Sans', 78);
+    lines(['IN GOOD', 'COMPANY.'], 28, 94, 82, white, 'Arcade Classic', 78);
     // The export retains the original badge-edge clipping of the woven links.
     img('woven', 0, 326, 540, 292.5);
     portrait(60, 250, 440, 304);
@@ -144,7 +161,7 @@ export function drawBadge(canvas: HTMLCanvasElement, art: Artwork, look: BadgeLo
     signature(592, white, cyan, 36);
     placeholder(270, 284, white);
   } else {
-    text('ONE MORE', 28, 97, 78, navy, 'Pixelify Sans', 78);
+    text('ONE MORE', 28, 97, 84, navy, 'Arcade Classic', 78, 484);
     ctx.save();
     // Figma's print assembly has a four-degree tilt around its center.
     ctx.translate(279, 398); ctx.rotate(-4 * Math.PI / 180); ctx.translate(-232, -222);
@@ -164,7 +181,7 @@ export function drawBadge(canvas: HTMLCanvasElement, art: Artwork, look: BadgeLo
     printedAsset('printDither', 16, 222, 376);
     placeholder(204, 123, navy);
     printedAsset('printPerforation', 0, 268, 408);
-    text('BUILDER.', 16, 279, 64, navy, 'Pixelify Sans', 64);
+    text('BUILDER.', 16, 279, 66, navy, 'Arcade Classic', 64, 376);
     text(name.trim() || 'YOUR NAME', 16, 346, 25, navy, 'Azeret Mono', 28, 376);
     text('I’M ATTENDING / AWS SCD BENGALURU', 16, 380, 10, navy, 'Geist Mono', 14);
     ctx.restore();

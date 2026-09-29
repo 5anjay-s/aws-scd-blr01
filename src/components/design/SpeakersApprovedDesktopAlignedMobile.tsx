@@ -1,4 +1,5 @@
 import { SiteLink } from "../SiteLink";
+import { SpeakerQuotation } from "../SpeakerQuotation";
 // Source: Figma 00/ Final, node 1168:494.
 const imgApprovedDitheredQuotationMobileOpener = "/assets/1168-494-a5a4a.svg";
 const imgArrow = "/assets/865-7675-0b485.svg";
@@ -18,7 +19,7 @@ export default function SpeakersApprovedDesktopAlignedMobile() {
           <p className="d-54b4003d0e" data-node-id="1170:552">
             DIFFERENT PERSPECTIVES. SHARED POSSIBILITIES.
           </p>
-          <p className="d-602ee05e42" data-node-id="1170:553">
+          <p className="d-602ee05e42 arcade-heading" data-node-id="1170:553">
             SPEAKERS
           </p>
         </div>
@@ -37,7 +38,7 @@ export default function SpeakersApprovedDesktopAlignedMobile() {
             <p className="d-6a4f4f832e">Meet the people behind the conversation.</p>
           </div>
           <div className="d-a7b8d52d66" data-node-id="1170:559" data-name="Approved dithered quotation / Mobile opener">
-            <img alt="" className="d-511e8f31d4" src={imgApprovedDitheredQuotationMobileOpener} />
+            <SpeakerQuotation className="d-511e8f31d4" src={imgApprovedDitheredQuotationMobileOpener} />
           </div>
         </div>
         <SiteLink hoverTone="violet" buttonTone="navy" className="d-e8fa637ebf" data-node-id="1170:562" data-name="Action / Registration info" href={"/registration"}>
@@ -108,7 +109,7 @@ export default function SpeakersApprovedDesktopAlignedMobile() {
                   <p className="d-6a4f4f832e">details to be announced.</p>
                 </div>
                 <div className="d-5906cd54d7" data-node-id="1170:597" data-name="Approved dithered quotation / Speaker 02">
-                  <img alt="" className="d-511e8f31d4" src={imgApprovedDitheredQuotationSpeaker02} />
+                  <SpeakerQuotation className="d-511e8f31d4" src={imgApprovedDitheredQuotationSpeaker02} />
                 </div>
               </div>
             </div>

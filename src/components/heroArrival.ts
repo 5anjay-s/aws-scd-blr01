@@ -13,6 +13,9 @@ export function createHeroArrival(root: HTMLElement, onComplete: () => void) {
   const letters = (word: Word) => root.querySelectorAll<HTMLElement>(
     `[data-word="${word}"] .hero-word-window .hero-word-letter`,
   );
+  const studentLetters = Array.from(letters('STUDENT'));
+  const communityLetters = Array.from(letters('COMMUNITY'));
+  const letterBounds = new Map([...studentLetters, ...communityLetters].map(target => [target, target.getBoundingClientRect()]));
   const c = letter('COMMUNITY', 0);
   const d = letter('DAY', 0);
   const cBox = c.getBoundingClientRect();
@@ -40,7 +43,6 @@ export function createHeroArrival(root: HTMLElement, onComplete: () => void) {
   gsap.set(root.querySelectorAll('.hero-word-letter'), { opacity: 0 });
   gsap.set(root.querySelectorAll('.hero-word-signal'), { opacity: 0 });
   gsap.set(city, { opacity: 0 });
-  gsap.set(skyFlight, { opacity: 0 });
   gsap.set(plane, { width: planeWidth, xPercent: -50, yPercent: -50,
     x: startX, y: flyY, rotation: 0, scale: 1, opacity: 0 });
   // Suspend C beneath the plane, using the loading banner's stepped, stitched ropes.
@@ -56,8 +58,8 @@ export function createHeroArrival(root: HTMLElement, onComplete: () => void) {
   const timeline = gsap.timeline({ id: 'hero-arrival', paused: true, onComplete });
 
   // The whole word drops from above, with a tight stagger and a shared landing rhythm.
-  Array.from(letters('STUDENT')).forEach((target, index) => {
-    const box = target.getBoundingClientRect();
+  studentLetters.forEach((target, index) => {
+    const box = letterBounds.get(target)!;
     const start = index * 0.035;
     timeline.fromTo(target, { y: -box.top - box.height, opacity: 1,
       scaleX: 0.9, scaleY: 1.12 }, {
@@ -79,8 +81,8 @@ export function createHeroArrival(root: HTMLElement, onComplete: () => void) {
     .to(c, { scaleX: 1, scaleY: 1, duration: 0.4, ease: 'elastic.out(1, 0.4)' }, 1.19);
 
   // Reveal solid letters at C's open edge, stretch them outward, then settle the width.
-  Array.from(letters('COMMUNITY')).slice(1).forEach((target, index) => {
-    const box = target.getBoundingClientRect();
+  communityLetters.slice(1).forEach((target, index) => {
+    const box = letterBounds.get(target)!;
     const start = 1.2 + index * 0.075;
     timeline.fromTo(target, {
       x: cBox.right - cBox.width * 0.35 - box.left, scaleX: 0.05, scaleY: 0.85,
@@ -95,11 +97,13 @@ export function createHeroArrival(root: HTMLElement, onComplete: () => void) {
   timeline.to(plane, { x: passX, y: flyY + cBox.height * 0.45,
     duration: 1.2, ease: 'power1.inOut' }, 0.88)
     .to(plane, { x: exitX, y: flyY + cBox.height * 0.35,
-      duration: 0.32, ease: 'power1.in' }, 2.08)
-    .set(plane, { opacity: 0 }, 2.4)
-    // Resume the original sky flight from its right-hand starting point.
-    .set(skyFlight, { opacity: 1 }, 2.4)
-    .call(() => skyFlight.dispatchEvent(new Event('hero-flight-return')), [], 2.4);
+      duration: 0.32, ease: 'power1.in',
+      onComplete: () => {
+        // Hide this copy before handing visibility to the panel flight.
+        gsap.set(plane, { opacity: 0 });
+        skyFlight.dispatchEvent(new Event('hero-flight-return'));
+      },
+    }, 2.08);
 
   // D stretches out of the orange panel, overshoots, and lands with a soft squash.
   timeline.fromTo(d, { y: launchY, scaleX: 1.3, scaleY: 0.12, opacity: 0 }, {

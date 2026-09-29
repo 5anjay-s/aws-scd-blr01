@@ -1,4 +1,4 @@
-import { useCallback, useLayoutEffect, useRef, type HTMLAttributes } from 'react';
+import { useCallback, useLayoutEffect, useRef, useState, type HTMLAttributes } from 'react';
 import { gsap, useInView, usePageVisible, useReducedMotion } from './animation';
 
 type CanvasFrames = {
@@ -27,7 +27,7 @@ export function DesignMotion({ waitForArrival = false, ...props }: Props) {
   const visible = useInView(sectionRef);
   const pageVisible = usePageVisible();
   const reducedMotion = useReducedMotion();
-  const arrived = useRef(!waitForArrival);
+  const [arrived, setArrived] = useState(!waitForArrival);
   const active = useRef(false);
   active.current = visible && pageVisible && !reducedMotion;
   const animation = keyframes[props['data-node-id'] ?? ''];
@@ -37,11 +37,11 @@ export function DesignMotion({ waitForArrival = false, ...props }: Props) {
   }, []);
 
   useLayoutEffect(() => {
-    if (!animation || reducedMotion) {
-      if (reducedMotion) arrived.current = true;
-      return;
-    }
+    if (!animation || reducedMotion) return;
     const context = gsap.context(() => {
+      // A paused track's zero-time set is not rendered until its first tick.
+      // Position the plane offscreen before the arrival handoff reveals it.
+      gsap.set(ref.current, animation.initial);
       const master = gsap.timeline({ paused: true });
       playback.current = master;
       for (const [key, values] of Object.entries(animation.animate)) {
@@ -62,8 +62,9 @@ export function DesignMotion({ waitForArrival = false, ...props }: Props) {
     }, ref);
     const element = ref.current!;
     const returnToSky = () => {
-      arrived.current = true;
+      // Reset the panel flight while it is still hidden, then let it appear.
       playback.current?.restart().paused(!active.current);
+      setArrived(true);
     };
     element.addEventListener('hero-flight-return', returnToSky);
     return () => {
@@ -74,8 +75,8 @@ export function DesignMotion({ waitForArrival = false, ...props }: Props) {
   }, [animation, reducedMotion]);
 
   useLayoutEffect(() => {
-    playback.current?.paused(!visible || !pageVisible || reducedMotion || !arrived.current);
-  }, [visible, pageVisible, reducedMotion, animation]);
+    playback.current?.paused(!visible || !pageVisible || reducedMotion || !arrived);
+  }, [visible, pageVisible, reducedMotion, animation, arrived]);
 
-  return <div {...props} ref={setRef} />;
+  return <div {...props} ref={setRef} data-flight-waiting={waitForArrival && !arrived && !reducedMotion} />;
 }

@@ -1,3 +1,4 @@
+import { ArcadeText } from "../ArcadeText";
 import { SiteBrand } from "../SiteBrand";
 import { SiteHeader } from "../SiteHeader";
 import { WovenRibbon } from "../WovenRibbon";
@@ -38,7 +39,7 @@ function ScdRegistrationMeetupRsvpDesktop({ className }: { className: string }) 
           <p className="d-727b41800e" data-node-id="1367:710">
             COMMUNITY
           </p>
-          <p className="d-43d15996d7" data-node-id="1367:711">
+          <p className="d-43d15996d7 arcade-heading" data-node-id="1367:711">
             RSVP
           </p>
         </div>
@@ -151,13 +152,13 @@ export default function RegistrationDesktop() {
                 aws / STUDENT COMMUNITY DAY
               </SiteLink>
               <div className="d-e827680dda" data-node-id="I1367:680;1059:507" data-name="Ticket / Top rule" />
-              <div className="d-26140e6705" data-node-id="I1367:680;1059:508">
+              <div className="d-26140e6705 arcade-heading" data-node-id="I1367:680;1059:508">
                 <p className="d-cf3f6248ad">THE NEXT</p>
-                <p className="d-bec5321127">CHAPTER.</p>
+                <p className="d-bec5321127"><ArcadeText>CHAPTER.</ArcadeText></p>
               </div>
-              <div className="d-2880ffcd57" data-node-id="I1367:680;1059:509">
+              <div className="d-2880ffcd57 arcade-heading" data-node-id="I1367:680;1059:509">
                 <p className="d-06214b5362">STARTS WITH</p>
-                <p className="d-0479ea4484">YOUR CURIOSITY.</p>
+                <p className="d-0479ea4484"><ArcadeText>YOUR CURIOSITY.</ArcadeText></p>
               </div>
               <div className="d-ad5ad21980" data-node-id="I1367:680;1059:510" data-name="Ticket / Assembly plus">
                 <img alt="" className="d-511e8f31d4" src={imgTicketAssemblyPlus} />
@@ -168,7 +169,7 @@ export default function RegistrationDesktop() {
               <p className="d-f064523f28" data-node-id="I1367:680;1059:512">
                 REGISTRATION
               </p>
-              <p className="d-6c6c38508c" data-node-id="I1367:680;1059:513">
+              <p className="d-6c6c38508c arcade-heading" data-node-id="I1367:680;1059:513">
                 COMING SOON
               </p>
               <div className="d-994b5566a4" data-node-id="I1367:680;1059:514" data-name="Ticket / Decorative print code">
