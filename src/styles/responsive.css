@@ -10,8 +10,20 @@
 .event-detail strong { display: inline-block; padding: 6px 10px; color: var(--navy); font-weight: 600; line-height: 1.5; }
 .event-detail-date { background: var(--orange); }
 .event-detail-place { background: var(--cyan); }
-.mobile-layout .design-content .event-detail { display: grid; grid-template-columns: 7ch max-content; }
+.mobile-layout .design-content [data-node-id='1169:596'] {
+  display: grid; grid-template-columns: max-content minmax(0, 1fr);
+  gap: 12px; font-size: clamp(10px, 2.82cqw, 11px);
+}
+.mobile-layout .design-content .event-detail { width: auto; gap: 4px; }
+.mobile-layout .design-content [data-node-id='1169:598'] { justify-self: end; }
 .mobile-layout .event-detail > * { white-space: nowrap; }
+.mobile-layout .event-detail strong { padding: 6px; }
+.mobile-layout .design-content [data-node-id='1169:599'] { grid-column: 1 / -1; width: auto; }
+@media (max-width: 359px) {
+  .mobile-layout .design-content [data-node-id='1169:596'] { padding-inline: 16px; column-gap: 8px; }
+  .mobile-layout .design-content .event-detail { gap: 3px; }
+  .mobile-layout .event-detail strong { padding-inline: 5px; }
+}
 /* A compact pixel divider carries the header palette across the viewport. */
 .design-content .site-header { margin-bottom: 12px; }
 .design-content .site-header::after {
@@ -296,8 +308,30 @@
 .mobile-layout .design-content [data-node-id='1169:525'] { width: 100%; }
 .mobile-layout .design-content [data-node-id='866:8559'] { top: 112px; right: calc(18 * var(--space-unit)); left: auto; width: calc(160 * var(--space-unit)); height: calc(128 * var(--space-unit)); }
 .mobile-layout .design-content [data-node-id='866:8560'] { --design-unit: var(--space-unit); }
-.mobile-layout .design-content [data-node-id='866:8441'],
-.mobile-layout .design-content [data-node-id='866:8448'] { height: auto; aspect-ratio: 342 / 192; }
+/* The artwork fills the space beside each description and compact action. */
+.mobile-layout .design-content .mobile-track-card {
+  display: grid; grid-template-columns: minmax(0, 1fr) clamp(96px, 32cqw, 176px);
+  grid-template-areas: 'eyebrow eyebrow' 'title title' 'description artwork' 'action artwork';
+  align-items: center; gap: 12px; width: 100%; padding: 24px;
+}
+.mobile-layout .design-content .mobile-track-card > * { min-width: 0; width: auto; }
+.mobile-layout .design-content .mobile-track-eyebrow { grid-area: eyebrow; font-size: 11px; }
+.mobile-layout .design-content .mobile-track-title {
+  grid-area: title; display: flex; font-size: clamp(26px, 7.8cqw, 36px); line-height: 1.1;
+}
+.mobile-layout .mobile-track-title > p { line-height: inherit; }
+.mobile-layout .design-content .mobile-track-description { grid-area: description; font-size: 14px; line-height: 1.5; }
+.mobile-layout .design-content .mobile-track-artwork {
+  grid-area: artwork; width: 100%; height: auto; aspect-ratio: 5 / 4; overflow: visible;
+}
+.mobile-layout .design-content .mobile-track-artwork > div { position: relative; inset: auto; width: 100%; height: 100%; }
+.mobile-layout .design-content .mobile-track-action {
+  grid-area: action; justify-self: start; justify-content: space-between;
+  width: fit-content; max-width: 100%; min-height: 48px; gap: 10px; padding: 12px 10px;
+}
+.mobile-layout .design-content .mobile-track-action > p { min-width: 0; flex-shrink: 1; font-size: 13px; white-space: normal; }
+.mobile-layout .mobile-track-action > p > span { white-space: nowrap; }
+.mobile-layout .design-content .mobile-track-action > div { width: 18px; height: 18px; flex-shrink: 0; }
 .mobile-layout .design-content [data-node-id='880:9347'] { height: auto; aspect-ratio: 342 / 260.113; }
 /* Mobile speaker directory: two adjoining portrait cards with captions below. */
 .mobile-layout .design-content .mobile-speaker-grid {

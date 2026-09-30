@@ -27,20 +27,20 @@ export default function ProgrammeV2ChooseYourTrackApprovedMobile() {
           <SignalStitch alt="" className="d-511e8f31d4" src={imgTrackMastheadApprovedSignalStitch} />
         </div>
       </div>
-      <SiteLink className="d-26298d5c62" data-node-id="866:8437" data-name="Choose technical / Whole band is linked — Mobile" href="/technical">
-        <p className="d-3c923ef526" data-node-id="866:8438">
+      <SiteLink className="d-26298d5c62 mobile-track-card" data-node-id="866:8437" data-name="Choose technical / Whole band is linked — Mobile" href="/technical">
+        <p className="d-3c923ef526 mobile-track-eyebrow" data-node-id="866:8438">
           01 / START WITH THE BUILD.
         </p>
-        <p className="d-dea40ba60b" data-node-id="866:8439">
+        <p className="d-dea40ba60b mobile-track-title" data-node-id="866:8439">
           TECHNICAL
         </p>
-        <p className="d-0ed9e83818" data-node-id="866:8440">{`Cloud, AI & hands-on building.`}</p>
-        <div className="d-e9401eca47" data-node-id="866:8441" data-name="Technical / Pixel marker — Mobile">
+        <p className="d-0ed9e83818 mobile-track-description" data-node-id="866:8440">{`Cloud, AI & hands-on building.`}</p>
+        <div className="d-e9401eca47 mobile-track-artwork" data-node-id="866:8441" data-name="Technical / Pixel marker — Mobile">
           <div className="d-792578536f" data-node-id="866:8442" data-name="Artwork / Technical track — Pixel brackets">
             <TrackArtwork kind="brackets" className="d-511e8f31d4" src={imgArtworkTechnicalTrackPixelBrackets} />
           </div>
         </div>
-        <div data-button-hover="orange" className="d-dfc8001d8b site-button" data-button-tone="navy" data-node-id="866:8443" data-name="Action / Explore technical">
+        <div data-button-hover="orange" className="d-dfc8001d8b site-button mobile-track-action" data-button-tone="navy" data-node-id="866:8443" data-name="Action / Explore technical">
           <p className="d-7669a2de49" data-node-id="I866:8443;5:30">
             Explore technical
           </p>
@@ -49,23 +49,23 @@ export default function ProgrammeV2ChooseYourTrackApprovedMobile() {
           </div>
         </div>
       </SiteLink>
-      <SiteLink className="d-7b0f966fe7" data-node-id="866:8444" data-name="Choose non-technical / Whole band is linked — Mobile" href="/non-technical">
-        <p className="d-3c923ef526" data-node-id="866:8445">
+      <SiteLink className="d-7b0f966fe7 mobile-track-card" data-node-id="866:8444" data-name="Choose non-technical / Whole band is linked — Mobile" href="/non-technical">
+        <p className="d-3c923ef526 mobile-track-eyebrow" data-node-id="866:8445">
           02 / START WITH AN IDEA.
         </p>
-        <div className="d-b5dd2cdca0" data-node-id="866:8446">
+        <div className="d-b5dd2cdca0 mobile-track-title" data-node-id="866:8446">
           <p className="d-5069c0bf54">NON-</p>
           <p className="d-287d1f8085">TECHNICAL</p>
         </div>
-        <p className="d-0ed9e83818" data-node-id="866:8447">{`Ideas, teamwork & shared perspectives.`}</p>
-        <div className="d-e9401eca47" data-node-id="866:8448" data-name="Non-technical / Pixel marker — Mobile">
+        <p className="d-0ed9e83818 mobile-track-description" data-node-id="866:8447">{`Ideas, teamwork & shared perspectives.`}</p>
+        <div className="d-e9401eca47 mobile-track-artwork" data-node-id="866:8448" data-name="Non-technical / Pixel marker — Mobile">
           <div className="d-aa5c2a33f7" data-node-id="866:8449" data-name="Artwork / Non-technical track — Pixel quotations">
             <TrackArtwork kind="quotes" className="d-511e8f31d4" src={imgArtworkNonTechnicalTrackPixelQuotations} />
           </div>
         </div>
-        <div data-button-hover="lime" className="d-dfc8001d8b site-button" data-button-tone="navy" data-node-id="866:8450" data-name="Action / Explore non-technical">
+        <div data-button-hover="lime" className="d-dfc8001d8b site-button mobile-track-action" data-button-tone="navy" data-node-id="866:8450" data-name="Action / Explore non-technical">
           <p className="d-7669a2de49" data-node-id="I866:8450;5:30">
-            Explore non-technical
+            Explore <span>non-technical</span>
           </p>
           <div className="d-4725149c0e" data-node-id="I866:8450;15:32" data-name="Arrow">
             <img alt="" className="d-511e8f31d4" src={imgArrow} />

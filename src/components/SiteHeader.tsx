@@ -9,16 +9,10 @@ import { useNavigationMotion } from './useNavigationMotion';
 export const HeaderHostContext = createContext<HTMLElement | null>(null);
 
 const menuLinks = [
-  ['/', 'Home'],
-  ['/experience', 'Experience'],
+  ['/#experience', 'Experience'],
   ['/tracks', 'Tracks'],
-  ['/technical', 'Technical'],
-  ['/non-technical', 'Non-technical'],
-  ['/speakers', 'Speakers'],
-  ['/timeline', 'Timeline'],
-  ['/community', 'Community'],
-  ['/partners', 'Partners'],
-  ['/faq', 'FAQ'],
+  ['/#speakers', 'Speakers'],
+  ['/#community', 'Community'],
 ];
 
 // Keep the original desktop navigation and share one mobile menu across pages.
