@@ -108,7 +108,7 @@
 .hero-word--community { font-size: 0.96em; margin-left: 9%; }
 /* Arcade Classic leaves extra space in the TY and LU pairs. Keep both text layers aligned. */
 .hero-word--community .hero-letter-slot[data-character='8'] { margin-left: -0.142em; }
-.hero-title-last-row { --hero-bottom-font-size: 0.92em; display: grid; grid-template-columns: 1fr 2fr; column-gap: 0; align-items: center; margin-top: 22px; }
+.hero-title-last-row { --hero-bottom-font-size: 1em; display: grid; grid-template-columns: 1fr 2fr; column-gap: 0; align-items: center; margin-top: 22px; }
 .hero-word--day { justify-self: center; font-size: var(--hero-bottom-font-size); color: var(--orange); }
 .hero-city { display: block; position: relative; width: max-content; min-width: 0; font-size: var(--hero-bottom-font-size); letter-spacing: inherit; }
 .hero-city-measure { display: block; visibility: hidden; white-space: nowrap; }
@@ -125,7 +125,7 @@
 .mobile-layout .hero-cloud { width: 17%; margin-right: 0; }
 .mobile-layout .hero-title-lower { margin-top: 14px; }
 .mobile-layout .hero-word--community { margin-left: 4%; font-size: 0.81em; }
-.mobile-layout .hero-title-last-row { --hero-bottom-font-size: min(1.15em, 10.3cqw); grid-template-columns: 1fr 3fr; column-gap: 8px; min-height: 56px; margin-top: 18px; align-items: center; }
+.mobile-layout .hero-title-last-row { --hero-bottom-font-size: min(1.15em, 11.2cqw); grid-template-columns: 1fr 3fr; column-gap: 8px; min-height: 56px; margin-top: 18px; align-items: center; }
 .mobile-layout .hero-word--day { justify-self: start; }
 .mobile-layout .hero-title-note { position: static; flex-direction: row; justify-content: space-between; gap: 16px; width: 100%; margin-top: 16px; text-align: left; font-size: clamp(11px, 2.7cqw, 14px); }
 .mobile-layout .hero-title-note > div:first-child { display: block; }

@@ -77,7 +77,8 @@ function CloudCity() {
       </defs>
       <g className="hero-city-reveal" clipPath={`url(#${id}-reveal)`}>
         <g className="hero-city-float">
-          <text x="0" y="50%" dominantBaseline="central" fill={`url(#${id})`}>BENGAL<tspan dx="-0.107em">URU</tspan></text>
+          {/* One text run keeps the city on one baseline; dx retains the LU spacing correction. */}
+          <text x="0" y="50%" dx="0 0 0 0 0 0 -0.107em 0 0" dominantBaseline="central" fill={`url(#${id})`}>BENGALURU</text>
         </g>
       </g>
     </svg>
