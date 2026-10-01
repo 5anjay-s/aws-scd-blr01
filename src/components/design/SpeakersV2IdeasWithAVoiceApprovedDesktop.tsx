@@ -145,31 +145,6 @@ export default function SpeakersV2IdeasWithAVoiceApprovedDesktop() {
             </div>
           </div>
         </div>
-        <div className="d-8f9fa6c789" data-node-id="860:5173" data-name="Speakers / Continue the conversation">
-          <div className="d-f7359ba1ac" data-node-id="860:5174" data-name="Invitation / Copy">
-            <p className="d-5f78480222" data-node-id="860:5175">
-              BRING A QUESTION. LEAVE WITH A CONNECTION.
-            </p>
-            <div className="d-383d6234f0" data-node-id="860:5176">
-              <p className="d-53918f0803">GOOD QUESTIONS.</p>
-              <p className="d-941138427e">GREAT CONVERSATIONS.</p>
-            </div>
-          </div>
-          <div className="d-12ec6f7e1d" data-node-id="860:5177" data-name="Invitation / Programme">
-            <div className="d-536c804f04" data-node-id="860:5178">
-              <p className="d-143d1e5b1d">Hear a new perspective.</p>
-              <p className="d-e894d19a93">Then bring your own.</p>
-            </div>
-            <SiteLink hoverTone="cyan" buttonTone="navy" className="d-0627f1d292" data-node-id="860:5179" data-name="Action / Explore the programme" href={"/#timeline"}>
-              <p className="d-7669a2de49" data-node-id="I860:5179;5:30">
-                Explore the programme
-              </p>
-              <div className="d-4725149c0e" data-node-id="I860:5179;15:32" data-name="Arrow">
-                <img alt="" className="d-511e8f31d4" src={imgArrow} />
-              </div>
-            </SiteLink>
-          </div>
-        </div>
       </div>
     </div>
   );

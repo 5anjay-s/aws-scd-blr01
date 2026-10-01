@@ -1,29 +1,16 @@
 /* Layout dimensions and typography respond independently; no page-level scaling. */
 .design-content { width: 100%; max-width: 1440px; margin-inline: auto; position: relative; container-type: inline-size; --design-unit: min(1px, calc(100cqw / 1440)); --space-unit: min(1px, calc(100cqw / 1440)); }
 .design-content > * { min-width: 0; }
+.mobile-layout { --page-height: calc(100svh - var(--site-header-height, 92px)); }
+/* Copy and controls must be allowed to wrap independently of the artwork. */
+.mobile-layout .design-content :is(p, h1, h2, h3, [role='heading']) { min-width: 0; max-width: 100%; }
+.mobile-layout .design-content .site-button { max-width: 100%; }
+.mobile-layout .design-content .site-button > p { min-width: 0; flex-shrink: 1; white-space: normal; }
 .site-header-shell { position: sticky; top: 0; z-index: 100; display: flow-root; background: var(--navy); }
 .design-section { scroll-margin-top: var(--site-header-height, 92px); }
 .desktop-layout .design-content .site-header { justify-content: flex-start; gap: 24px; }
 .desktop-layout .site-header [data-name='Nav links v2'] { width: auto; gap: 24px; justify-content: flex-start; margin-left: auto; }
 .site-header .site-button { gap: 12px; padding-inline: 16px; white-space: nowrap; }
-.design-content .event-detail { display: flex; align-items: center; gap: 10px; }
-.event-detail strong { display: inline-block; padding: 6px 10px; color: var(--navy); font-weight: 600; line-height: 1.5; }
-.event-detail-date { background: var(--orange); }
-.event-detail-place { background: var(--cyan); }
-.mobile-layout .design-content [data-node-id='1169:596'] {
-  display: grid; grid-template-columns: max-content minmax(0, 1fr);
-  gap: 12px; font-size: clamp(10px, 2.82cqw, 11px);
-}
-.mobile-layout .design-content .event-detail { width: auto; gap: 4px; }
-.mobile-layout .design-content [data-node-id='1169:598'] { justify-self: end; }
-.mobile-layout .event-detail > * { white-space: nowrap; }
-.mobile-layout .event-detail strong { padding: 6px; }
-.mobile-layout .design-content [data-node-id='1169:599'] { grid-column: 1 / -1; width: auto; }
-@media (max-width: 359px) {
-  .mobile-layout .design-content [data-node-id='1169:596'] { padding-inline: 16px; column-gap: 8px; }
-  .mobile-layout .design-content .event-detail { gap: 3px; }
-  .mobile-layout .event-detail strong { padding-inline: 5px; }
-}
 /* A compact pixel divider carries the header palette across the viewport. */
 .design-content .site-header { margin-bottom: 12px; }
 .design-content .site-header::after {
@@ -68,12 +55,13 @@
   mask: var(--dither-mask) repeat-x 0 0 / 1440px 108px;
   mask-mode: alpha;
 }
-.design-content .track-preview-divider { margin-top: 72px; }
-.design-content .track-programme-preview { padding-block: 72px; }
+/* Cover fractional mask edges with the preceding section's color. */
+.track-speakers-divider::after, .speakers-timeline-divider::after {
+  content: ''; position: absolute; left: 0; right: 0; top: -1px; height: 2px;
+  background: var(--dither-from); pointer-events: none;
+}
 .mobile-layout .design-content .dither-divider { height: 54px; }
 .mobile-layout .dither-divider::before { mask-size: 720px 54px; }
-.mobile-layout .design-content .track-preview-divider { margin-top: 40px; }
-.mobile-layout .design-content .track-programme-preview { padding-block: 48px; }
 /* Reuse the approved Figma artwork in the direction of this section change. */
 .design-content .programme-divider { position: relative; left: calc(50% - 50vw); width: 100vw; height: 108px; flex-shrink: 0; }
 .programme-divider > .pixel-border {
@@ -89,8 +77,7 @@
 .design-content [data-node-id='865:7675'] { display: flex; flex-direction: column; width: 100%; background: var(--navy); }
 .design-content [data-node-id='860:4980'],
 .design-content [data-node-id='860:5000'],
-.design-content [data-node-id='860:5008'],
-.design-content [data-node-id='860:5069'] { position: relative; top: auto; left: auto; width: 100%; height: auto; }
+.design-content [data-node-id='860:5008'] { position: relative; top: auto; left: auto; width: 100%; height: auto; }
 .design-content [data-node-id='860:4980'] { min-height: 80px; gap: 24px; }
 /* Leave space around the staggered words and their animated artwork. */
 .design-content .hero-masthead { position: relative; padding: 32px 64px 32px; color: var(--white); }
@@ -98,7 +85,9 @@
 .hero-title-stage { position: relative; }
 .hero-title-display { display: block; width: 100%; font: 400 clamp(112px, 11.2cqw, 160px)/0.76 'Arcade Classic', 'Pixelify Sans', monospace; letter-spacing: 0.01em; font-kerning: none; }
 .hero-title-first-row { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+.hero-title-opening { display: flex; align-items: baseline; gap: .24em; }
 .hero-word { display: flow-root; position: relative; width: max-content; white-space: nowrap; }
+.hero-word--aws { color: var(--orange); }
 .hero-word-window, .hero-word-base { display: block; }
 .hero-word-window { overflow: clip; padding-block: 0.16em; margin-block: -0.16em; }
 .hero-letter-slot { display: inline-block; vertical-align: top; }
@@ -119,22 +108,22 @@
 .hero-title-note > div:first-child { display: block; }
 .hero-title-stitch { flex-shrink: 0; width: 96px; height: 9.6px; }
 .hero-title-stitch img { display: block; width: 100%; height: 100%; }
-.mobile-layout .design-content .hero-masthead { padding: 28px 24px 32px; }
-.mobile-layout .hero-title-kicker { font-size: 10px; margin-bottom: 24px; }
-.mobile-layout .hero-title-display { font-size: clamp(48px, 14.4cqw, 92px); line-height: 0.9; }
+.mobile-layout .design-content .hero-masthead { padding: 16px 24px 20px; }
+.mobile-layout .hero-title-kicker { font-size: 10px; margin-bottom: 16px; }
+.mobile-layout .hero-title-display { font-size: clamp(44px, 13cqw, 80px); line-height: .86; }
+.mobile-layout .hero-title-opening { font-size: .86em; gap: .18em; }
 .mobile-layout .hero-cloud { width: 17%; margin-right: 0; }
-.mobile-layout .hero-title-lower { margin-top: 14px; }
+.mobile-layout .hero-title-lower { margin-top: 10px; }
 .mobile-layout .hero-word--community { margin-left: 4%; font-size: 0.81em; }
-.mobile-layout .hero-title-last-row { --hero-bottom-font-size: min(1.15em, 11.2cqw); grid-template-columns: 1fr 3fr; column-gap: 8px; min-height: 56px; margin-top: 18px; align-items: center; }
+.mobile-layout .hero-title-last-row { --hero-bottom-font-size: min(1.15em, 11.2cqw); grid-template-columns: 1fr 3fr; column-gap: 8px; min-height: 44px; margin-top: 12px; align-items: center; }
 .mobile-layout .hero-word--day { justify-self: start; }
-.mobile-layout .hero-title-note { position: static; flex-direction: row; justify-content: space-between; gap: 16px; width: 100%; margin-top: 16px; text-align: left; font-size: clamp(11px, 2.7cqw, 14px); }
+.mobile-layout .hero-title-note { position: static; flex-direction: row; justify-content: space-between; gap: 16px; width: 100%; margin-top: 12px; text-align: left; font-size: clamp(11px, 2.7cqw, 14px); }
 .mobile-layout .hero-title-note > div:first-child { display: block; }
 .mobile-layout .hero-title-stitch { width: 80px; height: 8px; }
 @media (max-width: 359px) {
   .mobile-layout .design-content .hero-masthead { padding-inline: 20px; }
 }
 .design-content [data-node-id='860:5008'] { display: grid; grid-template-columns: 1fr 2fr; gap: 0; padding: 0 64px 24px; align-items: stretch; }
-.mobile-layout .design-content [data-node-id='1169:532'] { padding-top: 24px; }
 .design-content [data-node-id='860:5009'] { width: 100%; height: auto; min-height: clamp(340px, 28cqw, 400px); }
 /* Keep Figma's 928 × 618.667 print, offset (-16, -85) inside its 896px crop. */
 .design-content [data-node-id='860:5010'] {
@@ -155,8 +144,41 @@
 .design-content [data-node-id='860:5064'] { width: 100%; height: auto; min-width: 0; gap: 28px; }
 .design-content [data-node-id='860:5064'] > * { max-width: 100%; }
 .design-content [data-node-id='860:5066'] { font-size: clamp(28px, 2.4cqw, 34px); }
-.design-content [data-node-id='860:5069'] { min-height: 96px; gap: 24px; padding-inline: 64px; }
-.design-content [data-node-id='860:5069'] > * { width: auto; }
+/* Keep the first screen complete on phones. Short landscape viewports can
+   scroll naturally once the artwork and copy reach their readable minimums. */
+.mobile-layout .design-content [data-node-id='1168:491'] {
+  display: grid;
+  grid-template-rows: auto minmax(136px, 1fr) auto;
+  height: auto;
+  min-height: var(--page-height);
+  align-items: stretch;
+}
+.mobile-layout .design-content [data-node-id='1169:532'] { width: 100%; padding-block: 0 16px; }
+.mobile-layout .design-content [data-node-id='1169:533'] { width: 100%; height: 100%; min-height: clamp(120px, 18svh, 216px); }
+.mobile-layout .design-content [data-node-id='1169:534'] { width: 100%; height: 100%; }
+.mobile-layout .design-content [data-node-id='1169:536'] { top: 50%; margin-top: calc(-30 * var(--design-unit)); }
+.mobile-layout .design-content [data-node-id='1169:588'] { width: 100%; padding-block: 16px; gap: 12px; }
+.mobile-layout .design-content [data-node-id='1169:588'] > * { width: 100%; }
+.mobile-layout .design-content [data-node-id='1169:590'] { font-size: clamp(24px, 7.2cqw, 30px); }
+.mobile-layout .design-content [data-node-id='1169:590'] > p { line-height: 1.1; }
+.mobile-layout .design-content [data-node-id='1169:591'] { font-size: 14px; }
+.mobile-layout .design-content [data-node-id='1169:591'] > p { line-height: 1.4; }
+.mobile-layout .design-content [data-node-id='1169:592'] { min-height: 48px; padding-block: 12px; }
+@media (max-height: 740px) {
+  .mobile-layout .design-content [data-node-id='1168:491'] { grid-template-rows: auto minmax(88px, 1fr) auto; }
+  .mobile-layout .design-content .hero-masthead { padding-block: 8px; }
+  .mobile-layout .hero-title-kicker { margin-bottom: 8px; }
+  .mobile-layout .hero-title-display { font-size: clamp(40px, 12cqw, 68px); }
+  .mobile-layout .hero-title-lower { margin-top: 6px; }
+  .mobile-layout .hero-title-last-row { min-height: 36px; margin-top: 8px; }
+  .mobile-layout .hero-title-note { margin-top: 8px; line-height: 1.4; }
+  .mobile-layout .design-content [data-node-id='1169:532'] { padding-bottom: 8px; }
+  .mobile-layout .design-content [data-node-id='1169:533'] { min-height: clamp(80px, 14svh, 104px); }
+  .mobile-layout .design-content [data-node-id='1169:588'] { padding-block: 12px; gap: 8px; }
+}
+/* Track introductions end at a screen boundary when their content fits. */
+.mobile-layout .design-content [data-node-id='874:9127'],
+.mobile-layout .design-content [data-node-id='880:9342'] { min-height: var(--page-height); justify-content: space-between; }
 .design-content .hero-dither-corner { left: 0; right: auto; top: auto; bottom: 0; transform: scaleX(-1); }
 .design-content [data-node-id='860:5073'] { gap: 32px; padding-bottom: 0; }
 .design-content [data-node-id='860:5075'] { height: auto; width: 100%; display: grid; grid-template-columns: 2fr 1fr; gap: 48px; }
@@ -282,7 +304,16 @@
 .design-content [data-node-id='1127:2324'] { height: 856px; }
 .design-content [data-node-id='1127:2325'] { height: auto; aspect-ratio: 560 / 646.154; }
 .design-content [data-node-id='1127:2335'], .design-content [data-node-id='1127:2337'] { height: auto; aspect-ratio: 336 / 387.692; }
-.design-content [data-node-id='866:8542'] { height: 880px; }
+/* The manifesto's reading column determines its height; decorative artwork
+   follows it so longer lines cannot disappear below a fixed canvas. */
+.mobile-layout .design-content [data-node-id='866:8542'] { height: auto; }
+.mobile-layout .design-content [data-node-id='866:8543'] {
+  position: relative; height: auto; min-height: var(--page-height);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 176px calc(24 * var(--space-unit)) 160px;
+}
+.mobile-layout .design-content [data-node-id='866:8547'] { height: 100%; }
+.mobile-layout .design-content [data-node-id='866:8548'] { position: relative; inset: auto; width: 100%; }
 .design-content [data-node-id='1265:3037'] { min-height: 984px; }
 .design-content [data-node-id='1265:3038'] { height: 884px; top: 52px; }
 .design-content [data-node-id='1265:3039'] { height: 884px; top: 32px; }
@@ -303,11 +334,10 @@
 .design-content [data-node-id='866:8333'] { top: auto; bottom: 44px; }
 .design-content [data-node-id='1171:580'] { top: auto; bottom: 104px; }
 /* Preserve intrinsic artwork compositions, while ordinary section rows stay in document flow. */
-.mobile-layout .design-content [data-node-id='1168:491'] { height: auto; }
 .mobile-layout .design-content [data-node-id='1169:523'] { width: 100%; }
 .mobile-layout .design-content [data-node-id='1169:525'] { width: 100%; }
-.mobile-layout .design-content [data-node-id='866:8559'] { top: 112px; right: calc(18 * var(--space-unit)); left: auto; width: calc(160 * var(--space-unit)); height: calc(128 * var(--space-unit)); }
-.mobile-layout .design-content [data-node-id='866:8560'] { --design-unit: var(--space-unit); }
+.mobile-layout .design-content [data-node-id='866:8559'] { top: 32px; right: calc(18 * var(--space-unit)); left: auto; width: calc(160 * var(--space-unit)); height: calc(128 * var(--space-unit)); }
+.mobile-layout .design-content [data-node-id='866:8560'] { --design-unit: var(--space-unit); top: auto; bottom: 24px; }
 /* The artwork fills the space beside each description and compact action. */
 .mobile-layout .design-content .mobile-track-card {
   display: grid; grid-template-columns: minmax(0, 1fr) clamp(96px, 32cqw, 176px);
@@ -502,16 +532,23 @@
 .organizers-page--mobile .organizers-registration-count { font-size: clamp(72px, 22.56cqw, 112px); }
 .organizers-page--mobile .organizers-impact h2 { font-size: 23px; line-height: 25px; }
 .organizers-page--mobile .organizers-domains { font-size: 30px; line-height: 33px; }
-.organizers-page--mobile .organizers-event-wall { grid-template-columns: 1fr; padding: 8px 0 24px; gap: 36px; width: 100%; }
-.organizers-page--mobile .organizers-event { width: calc(100% - 22px); max-width: 416px; padding: 18.462px; gap: 15.385px; transform: rotate(-1deg); justify-self: end; }
+.organizers-page--mobile .organizers-event-wall { grid-template-columns: 1fr; padding: 8px 0 20px; gap: 24px; width: 100%; }
+.organizers-page--mobile .organizers-event { width: 88%; max-width: 320px; padding: 14px; gap: 10px; transform: rotate(-1deg); justify-self: end; }
 .organizers-page--mobile .organizers-event--violet { margin-top: 0; justify-self: start; transform: rotate(1deg); }
-.organizers-page--mobile .organizers-event-date > p:first-child { font-size: 15.38px; line-height: 18.462px; }
-.organizers-page--mobile .organizers-event-date > p:last-child { font-size: 8px; line-height: 11px; }
-.organizers-page--mobile .organizers-event h3 { font-size: clamp(33.85px, 8.68cqw, 44px); }
-.organizers-page--mobile .organizers-event-art { --art-available-height: 142px; height: auto; min-height: 142px; }
-.organizers-page--mobile .organizers-event-detail { font-size: 10.77px; line-height: 15.385px; }
-.organizers-page--mobile .organizers-event-edition { font-size: 8.46px; line-height: 11.54px; gap: 6px; }
-.organizers-page--mobile .organizers-event-edition > span { height: 4.615px; }
+.organizers-page--mobile .organizers-event-date > p:first-child { font-size: 14px; line-height: 18px; }
+.organizers-page--mobile .organizers-event-date > p:last-child { font-size: 9px; line-height: 12px; }
+.organizers-page--mobile .organizers-event h3 { font-size: clamp(28px, 7.5cqw, 34px); }
+/* Keep the detailed SVGs close to their exported size, with room for edge pixels and motion. */
+.organizers-page--mobile .organizers-event-art {
+  --art-available-height: clamp(136px, 37cqw, 148px);
+  --art-inner-height: calc(var(--art-available-height) - 16px);
+  height: var(--art-available-height); min-height: 0; padding: 8px;
+}
+.organizers-page--mobile .organizers-event-motif { width: min(var(--art-width), 100%, calc(var(--art-inner-height) * var(--art-ratio))); }
+.organizers-page--mobile .organizers-event-motif--spark { width: min(var(--art-width), 100%, calc(var(--art-inner-height) / 1.1)); }
+.organizers-page--mobile .organizers-event-detail { font-size: 12px; line-height: 18px; }
+.organizers-page--mobile .organizers-event-edition { font-size: 10px; line-height: 14px; gap: 5px; }
+.organizers-page--mobile .organizers-event-edition > span { height: 4px; }
 .organizers-page--mobile .organizers-tech-week > .organizers-small { font-size: 9px; line-height: 14px; }
 .organizers-page--mobile .organizers-initiatives { padding: 24px; gap: 32px; }
 .organizers-page--mobile .organizers-initiatives > h2 { font-size: min(10.256cqw, 52px); }
@@ -544,15 +581,17 @@
 .organizers-page--mobile .organizers-contact-heading h2 { font-size: 30px; }
 .organizers-page--mobile .organizers-contact-heading > p { font-size: 10px; line-height: 14px; }
 .organizers-page--mobile .organizers-contacts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-.organizers-page--mobile .organizers-contact { aspect-ratio: 163 / 180; min-height: 180px; }
-.organizers-page--mobile .organizers-contact-copy { inset: 16px 16px auto; gap: 8px; }
+.organizers-page--mobile .organizers-contact { width: 100%; min-width: 0; aspect-ratio: auto; min-height: 180px; }
+.organizers-page--mobile .organizers-contact::after { inset: 0; aspect-ratio: auto; }
+.organizers-page--mobile .organizers-contact .organizers-contact-paper { position: absolute; inset: 0; height: 100%; }
+.organizers-page--mobile .organizers-contact-copy { position: relative; inset: auto; padding: 16px; gap: 8px; overflow-wrap: anywhere; }
 .organizers-page--mobile .organizers-contact-number { font-size: 24px; }
 .organizers-page--mobile .organizers-contact-number > span:last-child { font-size: 22px; line-height: 24px; }
 .organizers-page--mobile .organizers-contact-purpose { font-size: 9px; line-height: 13px; }
 .organizers-page--mobile .organizers-contact h3 { font-size: 17px; line-height: 19px; }
 .organizers-page--mobile .organizers-contact-handle { font-size: 10px; line-height: 14px; }
 @media (max-width: 359px) {
-  .organizers-page--mobile .organizers-contact-copy { inset: 12px 10px auto; gap: 7px; }
+  .organizers-page--mobile .organizers-contact-copy { padding: 12px 10px; gap: 7px; }
   .organizers-page--mobile .organizers-contact h3 { font-size: 15px; }
   .organizers-page--mobile .organizers-contact-purpose { font-size: 8px; }
 }

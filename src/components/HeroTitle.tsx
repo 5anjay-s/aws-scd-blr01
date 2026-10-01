@@ -9,7 +9,7 @@ const imgAccentSignalStitch = '/assets/865-7675-fa3f0.svg';
 const imgHeroCloudTexture = '/assets/865-7675-28d92.webp';
 const imgHeroPlane = '/assets/865-7675-cdcaf.svg';
 const cloudCut = cloudArtwork.match(/\bd="([^"]+)"/)![1];
-type TitleWord = 'STUDENT' | 'COMMUNITY' | 'DAY';
+type TitleWord = 'AWS' | 'STUDENT' | 'COMMUNITY' | 'DAY';
 let heroHasArrived = false;
 
 function WordLetters({ text, signal = false }: { text: TitleWord; signal?: boolean }) {
@@ -217,9 +217,12 @@ export function HeroTitle({ variant }: { variant: 'desktop' | 'mobile' }) {
     data-node-id={mobile ? '1169:523' : '860:5000'} data-name="Masthead / Cloud and type">
     <p className="hero-title-kicker" data-node-id={mobile ? '1169:524' : '860:5004'}>FOR THE NEXT WAVE OF BUILDERS.</p>
     <div className="hero-title-stage">
-      <h1 className="hero-title-display" aria-label="Student Community Day Bengaluru" data-node-id={mobile ? '1169:525' : undefined}>
+      <h1 className="hero-title-display" aria-label="AWS Student Community Day Bengaluru" data-node-id={mobile ? '1169:525' : undefined}>
         <span className="hero-title-first-row" data-node-id={mobile ? undefined : '860:5001'}>
-          <TitleWord text="STUDENT" nodeId={mobile ? undefined : '860:5002'} />
+          <span className="hero-title-opening">
+            <TitleWord text="AWS" />
+            <TitleWord text="STUDENT" nodeId={mobile ? undefined : '860:5002'} />
+          </span>
           <CloudWindow />
         </span>
         <span className="hero-title-lower" data-node-id={mobile ? undefined : '860:5006'}>

@@ -1,8 +1,8 @@
 [
   {
     "file": "public/assets/1154-483-382cb.svg",
-    "component": "DividerSpeakersTimeline",
-    "variable": "imgDividerSpeakersTimeline",
+    "component": "DitherDivider",
+    "variable": "artwork",
     "bytes": 6022
   },
   {
@@ -215,12 +215,6 @@
     "component": "FooterKeepTheConversationGoingMobile",
     "variable": "imgArrow1",
     "bytes": 274
-  },
-  {
-    "file": "public/assets/1170-640-ba173.svg",
-    "component": "DividerSpeakersToProgrammeMobile",
-    "variable": "imgSectionDividerApprovedPixelDither",
-    "bytes": 5639
   },
   {
     "file": "public/assets/1170-643-df33a.svg",

@@ -1,7 +1,7 @@
 import { gsap } from './animation';
 import { flightRope } from './flightRope';
 
-type Word = 'STUDENT' | 'COMMUNITY' | 'DAY';
+type Word = 'AWS' | 'STUDENT' | 'COMMUNITY' | 'DAY';
 
 /** Measure the resting layout once; animated letters never change the line geometry. */
 export function createHeroArrival(root: HTMLElement, onComplete: () => void) {
@@ -13,9 +13,11 @@ export function createHeroArrival(root: HTMLElement, onComplete: () => void) {
   const letters = (word: Word) => root.querySelectorAll<HTMLElement>(
     `[data-word="${word}"] .hero-word-window .hero-word-letter`,
   );
+  const awsLetters = Array.from(letters('AWS'));
   const studentLetters = Array.from(letters('STUDENT'));
   const communityLetters = Array.from(letters('COMMUNITY'));
-  const letterBounds = new Map([...studentLetters, ...communityLetters].map(target => [target, target.getBoundingClientRect()]));
+  const letterBounds = new Map([...awsLetters, ...studentLetters, ...communityLetters].map(target => [target, target.getBoundingClientRect()]));
+  const headerBottom = root.ownerDocument.querySelector('.site-header-shell')?.getBoundingClientRect().bottom ?? bounds.top;
   const c = letter('COMMUNITY', 0);
   const d = letter('DAY', 0);
   const cBox = c.getBoundingClientRect();
@@ -56,6 +58,17 @@ export function createHeroArrival(root: HTMLElement, onComplete: () => void) {
     y: panel.top - bounds.top, opacity: 0, scale: 1 });
 
   const timeline = gsap.timeline({ id: 'hero-arrival', paused: true, onComplete });
+
+  // Orange AWS letters emerge from behind the navbar's orange pixel border.
+  awsLetters.forEach((target, index) => {
+    const box = letterBounds.get(target)!;
+    const start = 0.05 + index * 0.07;
+    timeline.fromTo(target, { y: headerBottom - box.top - box.height, opacity: 1,
+      scaleX: 0.95, scaleY: 1.05 }, {
+      y: 0, scaleX: 1.12, scaleY: 0.82, duration: 0.5, ease: 'power2.in',
+    }, start)
+      .to(target, { scaleX: 1, scaleY: 1, duration: 0.55, ease: 'elastic.out(1, 0.4)' }, start + 0.5);
+  });
 
   // The whole word drops from above, with a tight stagger and a shared landing rhythm.
   studentLetters.forEach((target, index) => {

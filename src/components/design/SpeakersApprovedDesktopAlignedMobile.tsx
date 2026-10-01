@@ -139,27 +139,6 @@ export default function SpeakersApprovedDesktopAlignedMobile() {
           <p className="d-8c8cd1946c">MORE POSSIBILITIES.</p>
         </div>
       </div>
-      <div className="d-3b08d2bd44" data-node-id="1170:612" data-name="Speakers / Continue the conversation — Mobile">
-        <p className="d-bfcc837179" data-node-id="1170:613">
-          BRING A QUESTION. LEAVE WITH A CONNECTION.
-        </p>
-        <div className="d-5f3c5827f3" data-node-id="1170:614">
-          <p className="d-8305ee571e">GOOD QUESTIONS.</p>
-          <p className="d-e358ca9dbc">GREAT CONVERSATIONS.</p>
-        </div>
-        <div className="d-19d4f30f9d" data-node-id="1170:615">
-          <p className="d-06214b5362">Hear a new perspective.</p>
-          <p className="d-0479ea4484">Then bring your own.</p>
-        </div>
-        <SiteLink hoverTone="cyan" buttonTone="navy" className="d-49c8885528" data-node-id="1170:616" data-name="Action / Explore the programme" href={"/#timeline"}>
-          <p className="d-7669a2de49" data-node-id="I1170:616;5:30">
-            Explore the programme
-          </p>
-          <div className="d-4725149c0e" data-node-id="I1170:616;15:32" data-name="Arrow">
-            <img alt="" className="d-511e8f31d4" src={imgArrow} />
-          </div>
-        </SiteLink>
-      </div>
     </div>
   );
 }

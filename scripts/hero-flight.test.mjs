@@ -106,10 +106,15 @@ function skyFlight(nodeId, { reducedMotion = false } = {}) {
 function arrival(sky, width = 1280) {
   const root = new Target({ left: 32, top: 100, width: width - 64, height: 360 });
   const plane = new Target();
+  const aws = [...'AWS'].map((_, i) => new Target({ left: 32 + i * 64, top: 100 }));
   const student = [...'STUDENT'].map((_, i) => new Target({ left: 32 + i * 64, top: 100 }));
   const community = [...'COMMUNITY'].map((_, i) => new Target({ left: 32 + i * 64, top: 180 }));
   const day = [...'DAY'].map((_, i) => new Target({ left: 32 + i * 64, top: 260 }));
-  const groups = { STUDENT: student, COMMUNITY: community, DAY: day };
+  const groups = { AWS: aws, STUDENT: student, COMMUNITY: community, DAY: day };
+  root.ownerDocument = { querySelector: selector => {
+    assert.equal(selector, '.site-header-shell');
+    return new Target({ top: 0, height: 92 });
+  } };
   const singles = new Map([
     ['.hero-city', new Target()], ['.hero-city-reveal', new Target()],
     ['.hero-arrival-plane', plane], ['.hero-arrival-rig', new Target()], ['.hero-cloud', new Target()],
@@ -118,10 +123,10 @@ function arrival(sky, width = 1280) {
   const multiples = new Map([
     ['.hero-city-reveal-row', [new Target(), new Target()]],
     ['.hero-launch-pixels i', Array.from({ length: 4 }, () => new Target())],
-    ['.hero-word-letter', [...student, ...community, ...day]],
-    ['.hero-word-signal', [new Target(), new Target(), new Target()]],
+    ['.hero-word-letter', [...aws, ...student, ...community, ...day]],
+    ['.hero-word-signal', [new Target(), new Target(), new Target(), new Target()]],
     ['.hero-arrival-rig path', [new Target()]],
-    ['.hero-word-letter, .hero-signal-letter', [...student, ...community, ...day]],
+    ['.hero-word-letter, .hero-signal-letter', [...aws, ...student, ...community, ...day]],
     ['[data-word="STUDENT"] [data-character="2"] > span, [data-word="COMMUNITY"] [data-character="6"] > span',
       [student[2], community[6]]],
   ]);
@@ -149,12 +154,31 @@ function arrival(sky, width = 1280) {
   const context = gsap.context(() => {});
   let timeline;
   context.add(() => { timeline = createHeroArrival(root, () => completed++); });
-  return { plane, timeline, completed: () => completed, unmount() { context.revert(); gsap.ticker.sleep(); } };
+  return { aws, plane, timeline, completed: () => completed, unmount() { context.revert(); gsap.ticker.sleep(); } };
 }
 
 for (const [variant, nodeId, rightEdge, width] of [
   ['desktop', '860:5021', 654, 1280], ['mobile', '1169:536', 325.5, 390],
 ]) {
+  test(`${variant} AWS letters drop from the measured navbar border and settle`, () => {
+    const cloud = skyFlight(nodeId);
+    const flight = arrival(cloud.element, width);
+    try {
+      flight.timeline.totalTime(0.05, false);
+      const first = flight.aws[0];
+      assert.equal(first.y, 92 - first.bounds.top - first.bounds.height);
+      flight.timeline.totalTime(0.3, false);
+      assert.ok(first.y > -88 && first.y < 0);
+      flight.timeline.progress(1);
+      for (const letter of flight.aws) {
+        assert.equal(letter.y, 0);
+        assert.equal(letter.opacity, 1);
+        assert.equal(letter.scaleX, 1);
+        assert.equal(letter.scaleY, 1);
+      }
+    } finally { flight.unmount(); cloud.unmount(); }
+  });
+
   test(`${variant} cloud flight waits through visibility changes, then resets before becoming visible`, () => {
     const cloud = skyFlight(nodeId);
     try {

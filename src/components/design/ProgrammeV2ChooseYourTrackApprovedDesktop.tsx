@@ -112,28 +112,7 @@ export default function ProgrammeV2ChooseYourTrackApprovedDesktop() {
           </div>
         </div>
       </div>
-      <DitherDivider from="navy" to="orange" className="track-preview-divider" />
-      <div className="d-8f9fa6c789 track-programme-preview" data-node-id="860:5138" data-name="Programme / One shared day">
-        <div className="d-0cb44f8492" data-node-id="860:5139" data-name="Programme / Invitation">
-          <p className="d-d2f8d3b73a" data-node-id="860:5140">
-            THE EVENT / PROGRAMME PREVIEW
-          </p>
-          <p className="d-bc163b9ca8" data-node-id="860:5141">
-            ONE SHARED DAY.
-          </p>
-          <p className="d-250598d4b9" data-node-id="860:5142">
-            Explore the shape of the day. Timings to be announced.
-          </p>
-        </div>
-        <SiteLink hoverTone="cyan" buttonTone="navy" className="d-912187031a" data-node-id="860:5143" data-name="Action / Explore the day" href={"/#timeline"}>
-          <p className="d-7669a2de49" data-node-id="I860:5143;5:30">
-            Explore the day
-          </p>
-          <div className="d-4725149c0e" data-node-id="I860:5143;15:32" data-name="Arrow">
-            <img alt="" className="d-511e8f31d4" src={imgArrow} />
-          </div>
-        </SiteLink>
-      </div>
+      <DitherDivider from="navy" to="lime" className="track-speakers-divider" />
     </div>
   );
 }

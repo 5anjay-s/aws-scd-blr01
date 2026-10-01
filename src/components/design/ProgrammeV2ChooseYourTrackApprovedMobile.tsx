@@ -72,27 +72,7 @@ export default function ProgrammeV2ChooseYourTrackApprovedMobile() {
           </div>
         </div>
       </SiteLink>
-      <DitherDivider from="navy" to="orange" className="track-preview-divider" />
-      <div className="d-e3ad48b6cf track-programme-preview" data-node-id="866:8451" data-name="Programme / One shared day — Mobile">
-        <p className="d-b795ba67a4" data-node-id="866:8452">
-          THE EVENT / PROGRAMME PREVIEW
-        </p>
-        <div className="d-d4c1ca5aa4" data-node-id="866:8453">
-          <p className="d-9c7634671c">ONE SHARED</p>
-          <p className="d-b593672e9c">DAY.</p>
-        </div>
-        <p className="d-9a93de92ab" data-node-id="866:8454">
-          Explore the shape of the day. Timings to be announced.
-        </p>
-        <SiteLink hoverTone="cyan" buttonTone="navy" className="d-1ed1e68c5b" data-node-id="866:8455" data-name="Action / Explore the day" href={"/#timeline"}>
-          <p className="d-7669a2de49" data-node-id="I866:8455;5:30">
-            Explore the day
-          </p>
-          <div className="d-4725149c0e" data-node-id="I866:8455;15:32" data-name="Arrow">
-            <img alt="" className="d-511e8f31d4" src={imgArrow} />
-          </div>
-        </SiteLink>
-      </div>
+      <DitherDivider from="navy" to="lime" className="track-speakers-divider" />
     </div>
   );
 }

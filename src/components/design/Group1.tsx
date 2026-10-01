@@ -75,17 +75,6 @@ export default function Group1() {
           </DesignMotion>
         </div>
       </div>
-      <div className="d-7bf40bcb7e" data-node-id="860:5069" data-name="Metadata v2">
-        <p className="d-0490a1ae8e event-detail" data-node-id="860:5070">
-          <span>DATE /</span> <strong className="event-detail-date">NOVEMBER 6TH</strong>
-        </p>
-        <p className="d-98133fdace event-detail" data-node-id="860:5071">
-          <span>PLACE /</span> <strong className="event-detail-place">REVA UNIVERSITY</strong>
-        </p>
-        <p className="d-74e80c5c8f" data-node-id="860:5072">
-          STUDENT LED. COMMUNITY POWERED.
-        </p>
-      </div>
     </div>
   );
 }

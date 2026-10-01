@@ -70,17 +70,6 @@ export default function MobileHeroDesktopAligned() {
           </div>
         </SiteLink>
       </div>
-      <div className="d-ae46956b33" data-node-id="1169:596" data-name="Hero / Event information">
-        <p className="d-f3be3a50a0 event-detail" data-node-id="1169:597">
-          <span>DATE /</span> <strong className="event-detail-date">NOVEMBER 6TH</strong>
-        </p>
-        <p className="d-f3be3a50a0 event-detail" data-node-id="1169:598">
-          <span>PLACE /</span> <strong className="event-detail-place">REVA UNIVERSITY</strong>
-        </p>
-        <p className="d-c12a734a38" data-node-id="1169:599">
-          STUDENT LED. COMMUNITY POWERED.
-        </p>
-      </div>
     </div>
   );
 }

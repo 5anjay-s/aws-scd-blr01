@@ -4,9 +4,12 @@ import re
 source=Path('src/styles/design.css').read_text()
 rules={name:dict(part.split(':',1) for part in value.split(';') if ':' in part) for name,value in re.findall(r'\.([\w-]+)\{([^}]+)\}',source)}
 art=set(); bleed=set(); borders=[]; compositions=set(); image_classes=set()
+# These components render the same artwork box as an img, including its fixed
+# composition height. Keep regeneration aligned with the shared motion wrappers.
+image_tags=r'(?:img|SignalStitch|ScrollSpark|SpinningSpark|WovenRibbon|BuildBrackets|TrackArtwork|SpeakerQuotation|PixelQuote)'
 for component in Path('src/components').rglob('*.tsx'):
     text=component.read_text()
-    image_classes.update(re.findall(r'<(?:img|SignalStitch|ScrollSpark)\b[^>]*className="([^"]+)"', text))
+    image_classes.update(re.findall(r'<'+image_tags+r'\b[^>]*className="([^"]+)"', text))
     stack=[]
     for m in re.finditer(r'<(/?)([A-Za-z][\w.]*)\b([^<>]*)>',text):
         close,tag,attrs=m.groups()
@@ -20,7 +23,7 @@ for component in Path('src/components').rglob('*.tsx'):
         name=cl[1].split()[0] if cl else ''
         if stack:stack[-1]['children'].append(name)
         if not attrs.rstrip().endswith('/'):stack.append({'class':name,'children':[]})
-    for match in re.finditer(r'<(?:div|DesignMotion)\b([^<>]+)>\s*<(?:img|SignalStitch|ScrollSpark)\b([^<>]+)>',text):
+    for match in re.finditer(r'<(?:div|DesignMotion)\b([^<>]+)>\s*<'+image_tags+r'\b([^<>]+)>',text):
         attrs,img=match.groups()
         cl=re.search(r'className="([^"]+)"',attrs)
         if cl: art.add(cl[1].split()[0])

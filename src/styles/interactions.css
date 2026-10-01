@@ -31,7 +31,7 @@
   mask-composite: intersect;
 }
 .hero-word--community .hero-word-signal { color: var(--violet); }
-.hero-word--day .hero-word-signal { color: #ffca73; }
+.hero-word--aws .hero-word-signal, .hero-word--day .hero-word-signal { color: #ffca73; }
 .hero-masthead[data-arriving='true'] { z-index: 2; }
 .hero-masthead[data-arriving='true'] .hero-word-window { overflow: visible; }
 .hero-arrival-plane { position: absolute; left: 0; top: 0; width: 128px; aspect-ratio: 128 / 80; opacity: 0; pointer-events: none; z-index: 3; }
