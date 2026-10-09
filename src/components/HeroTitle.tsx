@@ -1,7 +1,7 @@
 import { useId, useLayoutEffect, useRef } from 'react';
 import { gsap, useInView, usePageVisible, useReducedMotion } from './animation';
 import { SignalStitch } from './SignalStitch';
-import { createHeroArrival } from './heroArrival';
+import { createHeroArrival, type HeroWord } from './heroArrival';
 import { resolveLocation } from '../navigation';
 import cloudArtwork from '../../public/assets/1590-802-cfe72.svg?raw';
 
@@ -9,17 +9,17 @@ const imgAccentSignalStitch = '/assets/865-7675-fa3f0.svg';
 const imgHeroCloudTexture = '/assets/865-7675-28d92.webp';
 const imgHeroPlane = '/assets/865-7675-cdcaf.svg';
 const cloudCut = cloudArtwork.match(/\bd="([^"]+)"/)![1];
-type TitleWord = 'AWS' | 'STUDENT' | 'COMMUNITY' | 'DAY';
+
 let heroHasArrived = false;
 
-function WordLetters({ text, signal = false }: { text: TitleWord; signal?: boolean }) {
+function WordLetters({ text, signal = false }: { text: HeroWord; signal?: boolean }) {
   return Array.from(text).map((letter, index) => <span key={index} data-character={index}
     className="hero-letter-slot">
     <span className={signal ? 'hero-signal-letter' : 'hero-word-letter'} data-letter={letter}>{letter}</span>
   </span>);
 }
 
-function TitleWord({ text, nodeId }: { text: TitleWord; nodeId?: string }) {
+function TitleWord({ text, nodeId }: { text: HeroWord; nodeId?: string }) {
   return <span className={`hero-word hero-word--${text.toLowerCase()}`} data-node-id={nodeId} data-word={text}>
     <span className="hero-word-window">
       <span className="hero-word-base" aria-hidden="true">
@@ -140,9 +140,13 @@ export function HeroTitle({ variant }: { variant: 'desktop' | 'mobile' }) {
           '--signal-x': '122%', duration: 4.2, ease: 'none',
         }, index * 1.25);
       });
-      const character = (word: TitleWord, index: number) => root.querySelectorAll(
+      const character = (word: HeroWord, index: number) => root.querySelectorAll<HTMLElement>(
         `[data-word="${word}"] [data-character="${index}"] > span`,
       );
+
+      const characterDelay = (_index: number, target: HTMLElement) =>
+        Number(target.parentElement!.dataset.character) * 0.12;
+
       const e = character('STUDENT', 4);
       const u = character('STUDENT', 2);
       const i = character('COMMUNITY', 6);
@@ -163,10 +167,10 @@ export function HeroTitle({ variant }: { variant: 'desktop' | 'mobile' }) {
         .to(u, { rotationY: 360, duration: 1.45, ease: 'power2.inOut' }, 3.6)
         .set(u, { rotationY: 0 }, 5.05)
         .to(ms, { yPercent: -9, scaleY: 1.06, duration: 0.4,
-          stagger: (_index, target) => Number((target as HTMLElement).parentElement!.dataset.character) * 0.12,
+          stagger: characterDelay,
           ease: 'power2.out' }, 4.7)
         .to(ms, { yPercent: 0, scaleY: 1, duration: 0.95,
-          stagger: (_index, target) => Number((target as HTMLElement).parentElement!.dataset.character) * 0.12,
+          stagger: characterDelay,
           ease: 'elastic.out(1, 0.5)' }, 5.1)
         .to(y, { rotation: -9, yPercent: -7, duration: 0.4, ease: 'power2.out' }, 6.15)
         .to(y, { rotation: 0, yPercent: 0, duration: 1.15, ease: 'elastic.out(1, 0.5)' }, 6.55);
