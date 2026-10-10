@@ -1,16 +1,16 @@
 import { gsap } from './animation';
 import { flightRope } from './flightRope';
 
-type Word = 'AWS' | 'STUDENT' | 'COMMUNITY' | 'DAY';
+export type HeroWord = 'AWS' | 'STUDENT' | 'COMMUNITY' | 'DAY';
 
 /** Measure the resting layout once; animated letters never change the line geometry. */
 export function createHeroArrival(root: HTMLElement, onComplete: () => void) {
   const section = root.parentElement!;
   const bounds = root.getBoundingClientRect();
-  const letter = (word: Word, index: number) => root.querySelector<HTMLElement>(
+  const letter = (word: HeroWord, index: number) => root.querySelector<HTMLElement>(
     `[data-word="${word}"] .hero-word-window [data-character="${index}"] > span`,
   )!;
-  const letters = (word: Word) => root.querySelectorAll<HTMLElement>(
+  const letters = (word: HeroWord) => root.querySelectorAll<HTMLElement>(
     `[data-word="${word}"] .hero-word-window .hero-word-letter`,
   );
   const awsLetters = Array.from(letters('AWS'));
