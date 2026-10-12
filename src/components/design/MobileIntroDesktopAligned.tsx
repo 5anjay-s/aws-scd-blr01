@@ -20,9 +20,6 @@ export default function MobileIntroDesktopAligned() {
           <p className="d-6ee5fa6884">world to what</p>
           <p className="d-f42ae1416f">comes next.</p>
         </div>
-        <p className="d-f62b0e22c9" data-node-id="1169:603">
-          A meeting point for students, ideas, and the cloud. Bring your questions. Find a new perspective. Start building.
-        </p>
         <div className="d-8d53dae494" data-node-id="1169:604" data-name="Accent / Signal stitch">
           <SignalStitch alt="" className="d-511e8f31d4" src={imgAccentSignalStitch} />
         </div>

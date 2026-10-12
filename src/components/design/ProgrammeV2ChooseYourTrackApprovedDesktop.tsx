@@ -59,7 +59,7 @@ export default function ProgrammeV2ChooseYourTrackApprovedDesktop() {
             <p className="d-7600d62c87">THE BUILD.</p>
           </div>
         </div>
-        <div className="d-a04cc975a0" data-node-id="860:5120" data-name="Choose technical / Whole band is linked">
+        <div className="d-a04cc975a0" data-node-id="860:5120" data-name="Choose technical">
           <div className="d-9eb9f99b54" data-node-id="860:5121" data-name="Technical / Copy">
             <p className="d-e2eaaa8a2f" data-node-id="860:5122">
               EXPLORE THE TECHNICAL TRACK
@@ -81,7 +81,7 @@ export default function ProgrammeV2ChooseYourTrackApprovedDesktop() {
         </div>
       </div>
       <div className="d-46702215f1" data-node-id="860:5127" data-name="Track route / 02 — Non-technical">
-        <div className="d-f85e5baf3d" data-node-id="860:5128" data-name="Choose non-technical / Whole band is linked">
+        <div className="d-f85e5baf3d" data-node-id="860:5128" data-name="Choose non-technical">
           <ArtworkNonTechnicalTrackPixelQuotations className="d-2b3bdbf669" />
           <div className="d-9eb9f99b54" data-node-id="860:5130" data-name="Non-technical / Copy">
             <p className="d-e2eaaa8a2f" data-node-id="860:5131">

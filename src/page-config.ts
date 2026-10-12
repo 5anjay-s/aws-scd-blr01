@@ -1,12 +1,12 @@
-export type Section = { node: string; anchor?: string; label: string };
+export type Section = { node: string; anchor?: string; label: string; panel?: 'experience' };
 type ResponsiveSections = { desktop: Section[]; mobile: Section[] };
-const section = (node: string, label: string, anchor?: string): Section => ({ node, label, anchor });
+const section = (node: string, label: string, anchor?: string, panel?: Section['panel']): Section => ({ node, label, anchor, panel });
 
 const home: ResponsiveSections = {
   desktop: [
     section('865:7675', 'Student Community Day', 'home'),
-    section('860:5073', 'A day to start something', 'experience'),
-    section('860:5085', 'Learn, build, belong'),
+    section('860:5073', 'A day to start something', 'experience', 'experience'),
+    section('860:5085', 'Learn, build, belong', undefined, 'experience'),
     section('860:5246', 'Our manifesto', 'manifesto'),
     section('860:5104', 'Choose your track', 'tracks'),
     section('860:5144', 'Speakers', 'speakers'),
@@ -25,8 +25,8 @@ const home: ResponsiveSections = {
   ],
   mobile: [
     section('1168:491', 'Student Community Day', 'home'),
-    section('1168:492', 'A day to start something', 'experience'),
-    section('1168:493', 'Learn, build, belong'),
+    section('1168:492', 'A day to start something', 'experience', 'experience'),
+    section('1168:493', 'Learn, build, belong', undefined, 'experience'),
     section('866:8542', 'Our manifesto', 'manifesto'),
     section('866:8432', 'Choose your track', 'tracks'),
     section('1168:494', 'Speakers', 'speakers'),
@@ -63,6 +63,19 @@ const pages: Record<string, ResponsiveSections> = {
 
 export function hasPage(path: string) {
   return Object.hasOwn(pages, path);
+}
+
+export function groupPageSections(sections: Section[]) {
+  const groups: Section[][] = [];
+
+  for (const item of sections) {
+    const previous = groups.at(-1);
+
+    if (item.panel && previous?.[0].panel === item.panel) previous.push(item);
+    else groups.push([item]);
+  }
+
+  return groups;
 }
 
 export function getPageSections(path: string, mobile: boolean, isLoading: boolean): Section[] {

@@ -1,11 +1,29 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
-import { getPageSections, hasPage } from '../src/page-config.ts';
+import { getPageSections, groupPageSections, hasPage } from '../src/page-config.ts';
 import { homeSectionRoutes, resolveLocation } from '../src/navigation.ts';
 
 const manifest = JSON.parse(readFileSync(new URL('../src/design-manifest.json', import.meta.url), 'utf8'));
 const pages = ['/', '/organisers', '/faq', '/technical', '/non-technical', '/registration', '/404'];
+
+test('the introduction and all three chapters share one panel without losing route anchors', () => {
+  for (const mobile of [false, true]) {
+    const sections = getPageSections('/', mobile, false);
+    const panels = groupPageSections(sections);
+    const experience = panels.find(group => group[0].anchor === 'experience');
+
+    assert.deepEqual(experience.map(item => item.label), ['A day to start something', 'Learn, build, belong']);
+    assert.deepEqual(panels.flat(), sections);
+    assert.equal(panels[0][0].anchor, 'home');
+    assert.equal(panels[2][0].anchor, 'manifesto');
+    assert.equal(panels[3][0].anchor, 'tracks');
+  }
+
+  for (const page of pages.slice(1)) {
+    assert.ok(groupPageSections(getPageSections(page, false, false)).every(group => group.length === 1));
+  }
+});
 
 test('every page has unique desktop and mobile sections mapped to the Figma manifest', () => {
   for (const path of pages) {
