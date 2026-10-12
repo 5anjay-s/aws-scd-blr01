@@ -27,7 +27,7 @@ export default function ProgrammeV2ChooseYourTrackApprovedMobile() {
           <SignalStitch alt="" className="d-511e8f31d4" src={imgTrackMastheadApprovedSignalStitch} />
         </div>
       </div>
-      <SiteLink className="d-26298d5c62 mobile-track-card" data-node-id="866:8437" data-name="Choose technical / Whole band is linked — Mobile" href="/technical">
+      <div className="d-26298d5c62 mobile-track-card" data-node-id="866:8437" data-name="Choose technical — Mobile">
         <p className="d-3c923ef526 mobile-track-eyebrow" data-node-id="866:8438">
           01 / START WITH THE BUILD.
         </p>
@@ -40,16 +40,16 @@ export default function ProgrammeV2ChooseYourTrackApprovedMobile() {
             <TrackArtwork kind="brackets" className="d-511e8f31d4" src={imgArtworkTechnicalTrackPixelBrackets} />
           </div>
         </div>
-        <div data-button-hover="orange" className="d-dfc8001d8b site-button mobile-track-action" data-button-tone="navy" data-node-id="866:8443" data-name="Action / Explore technical">
+        <SiteLink href="/technical" hoverTone="orange" buttonTone="navy" className="d-dfc8001d8b mobile-track-action" data-node-id="866:8443" data-name="Action / Explore technical">
           <p className="d-7669a2de49" data-node-id="I866:8443;5:30">
             Explore technical
           </p>
           <div className="d-4725149c0e" data-node-id="I866:8443;15:32" data-name="Arrow">
             <img alt="" className="d-511e8f31d4" src={imgArrow} />
           </div>
-        </div>
-      </SiteLink>
-      <SiteLink className="d-7b0f966fe7 mobile-track-card" data-node-id="866:8444" data-name="Choose non-technical / Whole band is linked — Mobile" href="/non-technical">
+        </SiteLink>
+      </div>
+      <div className="d-7b0f966fe7 mobile-track-card" data-node-id="866:8444" data-name="Choose non-technical — Mobile">
         <p className="d-3c923ef526 mobile-track-eyebrow" data-node-id="866:8445">
           02 / START WITH AN IDEA.
         </p>
@@ -63,15 +63,15 @@ export default function ProgrammeV2ChooseYourTrackApprovedMobile() {
             <TrackArtwork kind="quotes" className="d-511e8f31d4" src={imgArtworkNonTechnicalTrackPixelQuotations} />
           </div>
         </div>
-        <div data-button-hover="lime" className="d-dfc8001d8b site-button mobile-track-action" data-button-tone="navy" data-node-id="866:8450" data-name="Action / Explore non-technical">
+        <SiteLink href="/non-technical" hoverTone="lime" buttonTone="navy" className="d-dfc8001d8b mobile-track-action" data-node-id="866:8450" data-name="Action / Explore non-technical">
           <p className="d-7669a2de49" data-node-id="I866:8450;5:30">
             Explore <span>non-technical</span>
           </p>
           <div className="d-4725149c0e" data-node-id="I866:8450;15:32" data-name="Arrow">
             <img alt="" className="d-511e8f31d4" src={imgArrow} />
           </div>
-        </div>
-      </SiteLink>
+        </SiteLink>
+      </div>
       <DitherDivider from="navy" to="lime" className="track-speakers-divider" />
     </div>
   );

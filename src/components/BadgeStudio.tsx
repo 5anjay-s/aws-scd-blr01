@@ -1,6 +1,7 @@
 import { useEffect, useId, useLayoutEffect, useRef, useState, type RefObject } from 'react';
 import { BADGE_HEIGHT, BADGE_WIDTH, badgeFilename, badgeLooks, drawBadge, loadBadgeArtwork, type BadgeLook } from './badgeArtwork';
 import { ArcadeText } from './ArcadeText';
+import { badgePhotoError } from './badgePhoto';
 
 type Artwork = Awaited<ReturnType<typeof loadBadgeArtwork>>;
 type Portrait = { image: HTMLImageElement; filename: string };
@@ -53,16 +54,20 @@ export function BadgeStudio({ mobile = false }: { mobile?: boolean }) {
   const choosePhoto = async (file?: File) => {
     if (!file) return;
     setError(''); setMessage('');
-    if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type)) {
-      setError('Choose a JPG, PNG, or WebP photo.'); return;
-    }
-    if (file.size > 15 * 1024 * 1024) {
-      setError('Choose a photo smaller than 15 MB.'); return;
-    }
     const request = ++photoRequest.current;
     setReadingPhoto(true);
-    const url = URL.createObjectURL(file);
+    let url: string | undefined;
+
     try {
+      const validationError = await badgePhotoError(file);
+
+      if (request !== photoRequest.current) return;
+      if (validationError) {
+        setError(validationError);
+        return;
+      }
+
+      url = URL.createObjectURL(file);
       const original = new Image(); original.src = url;
       await original.decode();
       const scale = Math.min(1, 1800 / Math.max(original.naturalWidth, original.naturalHeight));
@@ -79,7 +84,7 @@ export function BadgeStudio({ mobile = false }: { mobile?: boolean }) {
     } catch {
       if (request === photoRequest.current) setError('This photo could not be opened. Try another JPG, PNG, or WebP.');
     } finally {
-      URL.revokeObjectURL(url);
+      if (url) URL.revokeObjectURL(url);
       if (request === photoRequest.current) setReadingPhoto(false);
     }
   };

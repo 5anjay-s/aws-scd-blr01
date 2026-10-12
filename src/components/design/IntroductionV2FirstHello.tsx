@@ -20,10 +20,6 @@ export default function IntroductionV2FirstHello() {
             <p className="d-c104b2dca3">hello, world</p>
             <p className="d-307cc96bda">to what comes next.</p>
           </div>
-          <div className="d-b20eeb33f7" data-node-id="860:5078">
-            <p className="d-7519be8e79">A meeting point for students, ideas, and the cloud.</p>
-            <p className="d-95907800fd">Bring your questions. Find a new perspective. Start building.</p>
-          </div>
         </div>
         <div className="d-6fb5331839" data-node-id="860:5079" data-name="Contents column">
           <p className="d-f0204e8f54" data-node-id="860:5080">
