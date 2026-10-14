@@ -3,13 +3,11 @@ import { SiteBrand } from "../SiteBrand";
 import { BadgeStudio } from "../BadgeStudio";
 import { SiteHeader } from "../SiteHeader";
 import { WovenRibbon } from "../WovenRibbon";
-import { SiteCheckbox, SiteLink } from "../SiteLink";
+import { SiteLink } from "../SiteLink";
 import { siteLinks } from "../../site-config";
-import { useState } from "react";
 // Source: Figma 00/ Final, node 1367:780.
 const imgPixelEnvelopeInvitationActionTab = "/assets/1367-780-82bb0.svg";
 const imgArrow = "/assets/865-7675-207b4.svg";
-const imgRsvpPixelCheck = "/assets/1367-652-4fc85.svg";
 const imgTicketSteppedOutline = "/assets/1367-780-2ba6a.svg";
 const imgTicketAssemblyPlus = "/assets/1367-780-08a82.svg";
 const imgTicketSquarePerforation = "/assets/1367-780-dc77f.svg";
@@ -22,7 +20,6 @@ const imgArrow2 = "/assets/1168-498-5d2c8.svg";
 const imgArrow3 = "/assets/1168-498-378aa.svg";
 
 function ScdRegistrationMeetupRsvpMobile({ className }: { className: string }) {
-  const [completed, setCompleted] = useState(false);
   return (
     <div className={className} data-node-id="1367:819" data-name="SCD / Registration / Meetup RSVP — Mobile">
       <div className="d-0741f220f3" data-node-id="1367:820" data-name="RSVP / Index and community motif">
@@ -57,22 +54,6 @@ function ScdRegistrationMeetupRsvpMobile({ className }: { className: string }) {
           <img alt="" className="d-511e8f31d4" src={imgArrow} />
         </div>
       </SiteLink>
-      <div className="d-3c2f073db3" data-node-id="1367:840" data-name="RSVP / Completion">
-        <div className="d-26625795f6" data-node-id="1367:841" data-name="RSVP / Divider" />
-        <div className="d-14dcff3bc1" data-node-id="1367:842" data-name="RSVP / Confirmation row">
-          <SiteCheckbox className="d-96378a4980" data-node-id="1367:843" data-name="RSVP / Checkbox" checked={completed} onClick={() => setCompleted(!completed)}>
-            {completed && (
-              <div className="d-682bfbc359" data-node-id="1367:844" data-name="RSVP / Pixel check">
-                <img alt="" className="d-511e8f31d4" src={imgRsvpPixelCheck} />
-              </div>
-            )}
-          </SiteCheckbox>
-          <div className="d-f5f399abfc" data-node-id="1367:846">
-            <p className="d-73a26a6b50">I’ve completed my</p>
-            <p className="d-9e2417ac68">Meetup RSVP</p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

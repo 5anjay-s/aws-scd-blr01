@@ -4,13 +4,11 @@ import { SiteHeader } from "../SiteHeader";
 import { WovenRibbon } from "../WovenRibbon";
 import { RegistrationButton } from "../RegistrationButton";
 import { BadgeStudio } from "../BadgeStudio";
-import { SiteCheckbox, SiteLink } from "../SiteLink";
+import { SiteLink } from "../SiteLink";
 import { siteLinks } from "../../site-config";
-import { useState } from "react";
 // Source: Figma 00/ Final, node 1367:652.
 const imgPixelEnvelopeInvitationActionTab = "/assets/1367-652-7de52.svg";
 const imgArrow = "/assets/865-7675-207b4.svg";
-const imgRsvpPixelCheck = "/assets/1367-652-4fc85.svg";
 const imgTicketSteppedOutline = "/assets/1367-652-6ea97.svg";
 const imgTicketAssemblyPlus = "/assets/1367-652-e8226.svg";
 const imgTicketSquarePerforation = "/assets/1367-652-2d79b.svg";
@@ -23,7 +21,6 @@ const imgArrow2 = "/assets/1168-498-5d2c8.svg";
 const imgArrow3 = "/assets/1168-498-378aa.svg";
 
 function ScdRegistrationMeetupRsvpDesktop({ className }: { className: string }) {
-  const [completed, setCompleted] = useState(false);
   return (
     <div className={className} data-node-id="1367:694" data-name="SCD / Registration / Meetup RSVP — Desktop">
       <div className="d-3fbef98557" data-node-id="1367:695" data-name="RSVP / Index and community motif">
@@ -61,21 +58,6 @@ function ScdRegistrationMeetupRsvpDesktop({ className }: { className: string }) 
                 <img alt="" className="d-511e8f31d4" src={imgArrow} />
               </div>
             </SiteLink>
-            <div className="d-437ef13cd4" data-node-id="1367:718" data-name="RSVP / Completion">
-              <div className="d-1b878f8f90" data-node-id="1367:719" data-name="RSVP / Divider" />
-              <div className="d-da46bb4c5b" data-node-id="1367:720" data-name="RSVP / Confirmation row">
-                <SiteCheckbox className="d-96378a4980" data-node-id="1367:721" data-name="RSVP / Checkbox" checked={completed} onClick={() => setCompleted(!completed)}>
-                  {completed && (
-                    <div className="d-682bfbc359" data-node-id="1367:722" data-name="RSVP / Pixel check">
-                      <img alt="" className="d-511e8f31d4" src={imgRsvpPixelCheck} />
-                    </div>
-                  )}
-                </SiteCheckbox>
-                <p className="d-51a9a45b38" data-node-id="1367:724">
-                  I’ve completed my Meetup RSVP
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
