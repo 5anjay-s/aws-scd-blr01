@@ -53,7 +53,7 @@ function ScdRegistrationMeetupRsvpDesktop({ className }: { className: string }) 
             </p>
           </div>
           <div className="d-31d2d1cd55" data-node-id="1367:716" data-name="RSVP / Desktop action and confirmation">
-            <SiteLink buttonTone="orange" className="d-47d0fbdca1" data-node-id="1367:717" data-name="RSVP / RSVP on Meetup" href={siteLinks.meetup}>
+            <SiteLink buttonTone="orange" className="d-47d0fbdca1" data-node-id="1367:717" data-name="RSVP / RSVP on Meetup" href={siteLinks.meetupEvent}>
               <p className="d-cf01328ee8" data-node-id="I1367:717;5:30">
                 RSVP on Meetup
               </p>
@@ -127,9 +127,9 @@ export default function RegistrationDesktop() {
             <p className="d-24de9bb201">at REVA University, Bengaluru.</p>
             <p className="d-976352e9f0">The next chapter is taking shape.</p>
           </div>
-          <SiteLink buttonTone="orange" className="d-86b35f0797" data-node-id="1367:676" data-name="Button / Flat" href={"/#home"}>
+          <SiteLink buttonTone="orange" className="d-86b35f0797" data-node-id="1367:676" data-name="Button / Flat" href={siteLinks.konfhub}>
             <p className="d-cf01328ee8" data-node-id="I1367:676;5:30">
-              Back to exploring
+              Register Now
             </p>
             <div className="d-4725149c0e" data-node-id="I1367:676;15:32" data-name="Arrow">
               <img alt="" className="d-511e8f31d4" src={imgArrow} />

@@ -49,7 +49,7 @@ function ScdRegistrationMeetupRsvpMobile({ className }: { className: string }) {
           RSVP to the event and stay connected with community announcements.
         </p>
       </div>
-      <SiteLink buttonTone="orange" className="d-1f8f4797f4" data-node-id="1367:839" data-name="RSVP / RSVP on Meetup" href={siteLinks.meetup}>
+      <SiteLink buttonTone="orange" className="d-1f8f4797f4" data-node-id="1367:839" data-name="RSVP / RSVP on Meetup" href={siteLinks.meetupEvent}>
         <p className="d-cf01328ee8" data-node-id="I1367:839;5:30">
           RSVP on Meetup
         </p>
@@ -107,9 +107,9 @@ export default function RegistrationMobile() {
             <p className="d-143d1e5b1d">at REVA University, Bengaluru.</p>
             <p className="d-e894d19a93">The next chapter is taking shape.</p>
           </div>
-          <SiteLink buttonTone="orange" className="d-d4e2f56eff" data-node-id="1367:800" data-name="Registration / Back to exploring" href={"/#home"}>
+          <SiteLink buttonTone="orange" className="d-d4e2f56eff" data-node-id="1367:800" data-name="Registration / Back to exploring" href={siteLinks.konfhub}>
             <p className="d-ad21a68151" data-node-id="I1367:800;5:30">
-              Back to exploring
+              Register Now
             </p>
             <div className="d-4725149c0e" data-node-id="I1367:800;15:32" data-name="Arrow">
               <img alt="" className="d-511e8f31d4" src={imgArrow} />
