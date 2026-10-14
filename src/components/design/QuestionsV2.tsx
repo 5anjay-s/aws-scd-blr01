@@ -25,7 +25,7 @@ export default function QuestionsV2() {
           WHEN + WHERE?
         </p>
         <p className="d-7b5fb256f4" data-node-id="860:5350">
-          Date, venue, and registration details are on the way.
+          5 November 2026 at REVA University. Registration is open.
         </p>
       </div>
       <div className="d-1a9ede0d7f" data-node-id="860:5351" data-name="Accent / Dither corner">

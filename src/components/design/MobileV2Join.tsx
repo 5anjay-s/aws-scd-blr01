@@ -22,7 +22,7 @@ export default function MobileV2Join() {
         </div>
       </SiteLink>
       <p className="d-ffa7ca0278" data-node-id="866:8626">
-        REGISTRATION DETAILS COMING SOON
+        REGISTRATION OPEN NOW
       </p>
       <div className="d-551a84cf78" data-node-id="866:8627" data-name="Accent / Next step">
         <img alt="" className="d-511e8f31d4" src={imgAccentNextStep} />

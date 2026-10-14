@@ -1,14 +1,18 @@
-// Add the event's official destinations when they are announced.
-// Empty URLs preserve the Figma controls without sending visitors to unrelated pages.
+// The event's official destinations. Empty URLs keep the Figma controls inactive.
 export const siteLinks = {
-  meetup: '',
-  linkedin: '',
-  instagram: '',
+  meetup: 'https://www.meetup.com/aws-sbg-at-reva-university',
+  linkedin: 'https://www.linkedin.com/company/aws-sbg-reva-university',
+  instagram: 'https://www.instagram.com/aws.scd.blr',
 };
 
-// Organizer destinations will be supplied later. Keep their contact tabs inactive until then.
+// Official organiser destinations for the community contact tabs.
 export const organizerLinks = {
-  eventInstagram: '', campusInstagram: '', linkedin: '', meetup: '', luma: '', builderCenter: '',
+  eventInstagram: 'https://www.instagram.com/aws.scd.blr',
+  campusInstagram: 'https://www.instagram.com/aws.sbg.ru',
+  linkedin: 'https://www.linkedin.com/company/aws-sbg-reva-university',
+  meetup: 'https://www.meetup.com/aws-sbg-at-reva-university',
+  luma: 'https://luma.com/aws.sbg.ru',
+  builderCenter: 'https://bit.ly/3S7naIT',
 };
 
 export const siteSponsors = {

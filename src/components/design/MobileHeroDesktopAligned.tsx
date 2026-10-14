@@ -43,7 +43,7 @@ export default function MobileHeroDesktopAligned() {
                 <img alt="" className="d-511e8f31d4" src={imgSteppedPixelPennant} />
               </div>
               <p className="d-f99e433a84 arcade-heading" data-node-id="1169:554">
-                COMING SOON
+                5 NOV 2026
               </p>
             </div>
           </DesignMotion>

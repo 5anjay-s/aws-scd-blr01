@@ -15,9 +15,10 @@ type ScdFullWidthProgrammePhaseMobileProps = {
   sequence?: string;
   sessionSummary?: string;
   sessionTitle?: string;
+  time?: string;
 };
 
-function ScdFullWidthProgrammePhaseMobile({ className, programmeCategory = "ARRIVAL", sequence = "01", sessionSummary = "Settle in. Meet the people you might build with next.", sessionTitle = "ARRIVE & CONNECT" }: ScdFullWidthProgrammePhaseMobileProps) {
+function ScdFullWidthProgrammePhaseMobile({ className, programmeCategory = "ARRIVAL", sequence = "01", sessionSummary = "Settle in. Meet the people you might build with next.", sessionTitle = "ARRIVE & CONNECT", time = "TBA" }: ScdFullWidthProgrammePhaseMobileProps) {
   return (
     <div className={className} data-node-id="685:2329" data-name="SCD / Full-width programme phase / Mobile">
       <div className="d-ea38f6601d" data-node-id="685:2330" data-name="Programme / Ledger rule" />
@@ -29,7 +30,7 @@ function ScdFullWidthProgrammePhaseMobile({ className, programmeCategory = "ARRI
           {programmeCategory}
         </p>
         <p className="d-cd228f785d" data-node-id="685:2334">
-          TIME / TBA
+          {`TIME / ${time}`}
         </p>
       </div>
       <div className="d-7739a64de1" data-node-id="685:2335" data-name="Phase / Content">
@@ -92,7 +93,7 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
           PROGRAMME PREVIEW
         </p>
         <p className="d-4b43c08078" data-node-id="866:8498">
-          TIMINGS TO BE ANNOUNCED
+          PROVISIONAL TIMINGS
         </p>
       </div>
       <div className="d-9b2731d2f8" data-node-id="866:8499" data-name="Programme / Full-width schedule">
@@ -109,15 +110,15 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
           </div>
           <div className="d-9973ee015d" data-node-id="866:8504" data-name="Programme / Preview note">
             <p className="d-5a1a09ea43" data-node-id="866:8505">
-              A first look at the day. Exact timings and the final running order are coming soon.
+              A first look at the day. Key timings are confirmed; the final running order will be announced.
             </p>
             <div className="d-77b59f1ce0" data-node-id="866:8506" data-name="Accent / Pixel stitch">
               <SignalStitch alt="" className="d-511e8f31d4" src={imgAccentPixelStitch} />
             </div>
           </div>
         </div>
-        <ScdFullWidthProgrammePhaseMobile className="d-fc2890d78c" />
-        <ScdFullWidthProgrammePhaseMobile className="d-fc2890d78c" programmeCategory="OPENING" sequence="02" sessionSummary="A shared hello. A first look at what lies ahead." sessionTitle="START WITH POSSIBILITY" />
+        <ScdFullWidthProgrammePhaseMobile className="d-fc2890d78c" time="08:00 AM" />
+        <ScdFullWidthProgrammePhaseMobile className="d-fc2890d78c" programmeCategory="OPENING" sequence="02" sessionSummary="A shared hello. A first look at what lies ahead." sessionTitle="START WITH POSSIBILITY" time="09:00 AM" />
         <div className="d-fc2890d78c" data-node-id="866:8513" data-name="Programme / 03 EXPLORE">
           <div className="d-ea38f6601d" data-node-id="866:8514" data-name="Programme / Ledger rule" />
           <div className="d-2a29c9d11d" data-node-id="866:8515" data-name="Phase / Metadata">
@@ -128,7 +129,7 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
               EXPLORE
             </p>
             <p className="d-cd228f785d" data-node-id="866:8518">
-              TIME / TBA
+              TIME / AFTER OPENING
             </p>
           </div>
           <div className="d-7739a64de1" data-node-id="866:8519" data-name="Phase / Content">
@@ -180,8 +181,8 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
             </div>
           </div>
         </div>
-        <ScdFullWidthProgrammePhaseMobile className="d-fc2890d78c" programmeCategory="COMMUNITY" sequence="04" sessionSummary="Trade discoveries. Keep the conversation going." sessionTitle="SHARE WHAT YOU FOUND" />
-        <ScdFullWidthProgrammePhaseMobile className="d-fc2890d78c" programmeCategory="CLOSING" sequence="05" sessionSummary="Leave with new ideas and a fresh starting point." sessionTitle="TAKE IT FORWARD" />
+        <ScdFullWidthProgrammePhaseMobile className="d-fc2890d78c" programmeCategory="COMMUNITY" sequence="04" sessionSummary="Trade discoveries. Keep the conversation going." sessionTitle="SHARE WHAT YOU FOUND" time="AFTERNOON" />
+        <ScdFullWidthProgrammePhaseMobile className="d-fc2890d78c" programmeCategory="CLOSING" sequence="05" sessionSummary="Leave with new ideas and a fresh starting point." sessionTitle="TAKE IT FORWARD" time="APPROX. 5:00–5:30 PM" />
       </div>
       <ProgrammeDivider />
       <div className="d-4a0d7dd9ea" data-node-id="866:8535" data-name="Programme / Keep exploring">

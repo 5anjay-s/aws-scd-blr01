@@ -123,8 +123,8 @@ export default function RegistrationDesktop() {
         </p>
         <div className="d-a69b48af18" data-node-id="1367:674" data-name="Registration / Current status">
           <div className="d-090bbee435" data-node-id="1367:675">
-            <p className="d-24de9bb201">Date, venue and registration details</p>
-            <p className="d-24de9bb201">will be announced here soon.</p>
+            <p className="d-24de9bb201">Registration is open for 5 November 2026</p>
+            <p className="d-24de9bb201">at REVA University, Bengaluru.</p>
             <p className="d-976352e9f0">The next chapter is taking shape.</p>
           </div>
           <SiteLink buttonTone="orange" className="d-86b35f0797" data-node-id="1367:676" data-name="Button / Flat" href={"/#home"}>
@@ -139,7 +139,7 @@ export default function RegistrationDesktop() {
         <div className="d-31fddeba75" data-node-id="1367:677" data-name="Registration / Announcement note">
           <div className="d-31f28ff034" data-node-id="1367:678" data-name="Rectangle" />
           <p className="d-757bc9fd86" data-node-id="1367:679">
-            REGISTRATION DETAILS / COMING SOON
+            REGISTRATION DETAILS / OPEN NOW
           </p>
         </div>
         <div className="d-01015d3743" data-node-id="1367:680">
@@ -170,7 +170,7 @@ export default function RegistrationDesktop() {
                 REGISTRATION
               </p>
               <p className="d-6c6c38508c arcade-heading" data-node-id="I1367:680;1059:513">
-                COMING SOON
+                OPEN NOW
               </p>
               <div className="d-994b5566a4" data-node-id="I1367:680;1059:514" data-name="Ticket / Decorative print code">
                 <img alt="" className="d-511e8f31d4" src={imgTicketDecorativePrintCode} />
@@ -188,7 +188,7 @@ export default function RegistrationDesktop() {
             DATE
           </p>
           <p className="d-51b0f0d5e7" data-node-id="1367:684">
-            To be announced
+            5 November 2026
           </p>
         </div>
         <div className="d-8aac1916c9" data-node-id="1367:685" data-name="Status / VENUE">
@@ -196,7 +196,7 @@ export default function RegistrationDesktop() {
             VENUE
           </p>
           <p className="d-51b0f0d5e7" data-node-id="1367:687">
-            To be announced
+            REVA University
           </p>
         </div>
         <div className="d-8aac1916c9" data-node-id="1367:688" data-name="Status / REGISTRATION">
@@ -204,7 +204,7 @@ export default function RegistrationDesktop() {
             REGISTRATION
           </p>
           <p className="d-51b0f0d5e7" data-node-id="1367:690">
-            Coming soon
+            Open now
           </p>
         </div>
       </div>
@@ -253,7 +253,7 @@ export default function RegistrationDesktop() {
                   Event details
                 </p>
                 <p className="d-0ae5befe23" data-node-id="1367:739">
-                  The date and venue will appear here once confirmed.
+                  5 November 2026 at REVA University, Bengaluru.
                 </p>
               </div>
             </div>
@@ -266,7 +266,7 @@ export default function RegistrationDesktop() {
                   How to join
                 </p>
                 <p className="d-0ae5befe23" data-node-id="1367:744">
-                  Registration instructions will be shared here.
+                  RSVP on Meetup and register on KonfHub for your official ticket.
                 </p>
               </div>
             </div>

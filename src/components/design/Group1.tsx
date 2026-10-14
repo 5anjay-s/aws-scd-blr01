@@ -69,7 +69,7 @@ export default function Group1() {
                 <img alt="" className="d-511e8f31d4" src={imgSteppedPixelPennant} />
               </div>
               <p className="d-9445b43840 arcade-heading" data-node-id="860:5063">
-                COMING SOON
+                5 NOV 2026
               </p>
             </div>
           </DesignMotion>

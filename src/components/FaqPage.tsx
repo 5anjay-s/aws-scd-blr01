@@ -16,14 +16,14 @@ const groups = [
     questions: [
       { number: '03', question: 'What will we explore?', answer: 'Ideas in cloud, AI, and the tools shaping what comes next, with room to ask questions and share perspectives.', desktopNode: '235:805', mobileNode: '239:639' },
       { number: '04', question: 'What can I bring to the conversation?', answer: 'A question, a rough sketch, or a first line of code. Unfinished ideas are part of the conversation.', desktopNode: '235:814', mobileNode: '239:648' },
-      { number: '05', question: 'Where can I find the program and speakers?', answer: 'Program and speaker details are coming soon.', desktopNode: '235:823', mobileNode: '239:657' },
+      { number: '05', question: 'Where can I find the program and speakers?', answer: 'Programme highlights and the day’s timeline are on this site. Speaker names and session details will be announced as they are confirmed.', desktopNode: '235:823', mobileNode: '239:657' },
     ],
   },
   {
     id: 'plan-your-visit', title: '03 / Plan your visit', desktopNode: '235:833', mobileNode: '239:667',
     questions: [
-      { number: '06', question: 'When and where is the event?', answer: 'The date and venue are yet to be announced.', desktopNode: '235:835', mobileNode: '239:669' },
-      { number: '07', question: 'How do I register?', answer: 'Registration details are coming soon.', desktopNode: '235:844', mobileNode: '239:678' },
+      { number: '06', question: 'When and where is the event?', answer: 'AWS Student Community Day Bengaluru 2026 takes place on 5 November 2026 at REVA University, Rukmini Knowledge Park, Kattigenahalli, Yelahanka, Bengaluru 560064. Check-in begins at 8:00 AM and the programme starts at 9:00 AM IST.', desktopNode: '235:835', mobileNode: '239:669' },
+      { number: '07', question: 'How do I register?', answer: 'RSVP on Meetup and register on KonfHub. Your official ticket is issued by KonfHub, and entry is confirmed only for KonfHub-registered attendees. A Meetup RSVP alone does not confirm entry.', desktopNode: '235:844', mobileNode: '239:678' },
     ],
   },
 ];
@@ -48,9 +48,9 @@ export function FaqPage({ mobile = false }: { mobile?: boolean }) {
     </div>
     <dl className="faq-status faq-surface" data-node-id={node('230:541', '237:853')}>
       {[
-        { label: 'DATE', value: 'To be announced', desktopNode: '230:542', mobileNode: '237:854' },
-        { label: 'VENUE', value: 'To be announced', desktopNode: '230:545', mobileNode: '237:857' },
-        { label: 'REGISTRATION', value: 'Coming soon', desktopNode: '230:548', mobileNode: '237:860' },
+        { label: 'DATE', value: '5 November 2026', desktopNode: '230:542', mobileNode: '237:854' },
+        { label: 'VENUE', value: 'REVA University', desktopNode: '230:545', mobileNode: '237:857' },
+        { label: 'REGISTRATION', value: 'Open now', desktopNode: '230:548', mobileNode: '237:860' },
       ].map((item, index) => <div key={item.label} data-node-id={node(item.desktopNode, item.mobileNode)}>
         <dt>{item.label}{!mobile && ` / 0${index + 1}`}</dt><dd>{item.value}</dd>
       </div>)}
@@ -82,7 +82,7 @@ export function FaqPage({ mobile = false }: { mobile?: boolean }) {
         <h2 data-node-id={node('236:596', '240:650')}>Bring your<br />next question.</h2>
       </div>
       <div className="faq-closing-details" data-node-id={mobile ? undefined : '236:597'}>
-        <p data-node-id={node('236:598', '240:651')}>More event details are on the way. Explore the day and the community behind it.</p>
+        <p data-node-id={node('236:598', '240:651')}>5 November 2026 at REVA University. Explore the day and the community behind it.</p>
         <SiteLink href="/" className="faq-explore" buttonTone="navy" hoverTone="cyan" data-node-id={node('236:599', '240:652')}>
           <span>Explore the event</span><span className="faq-explore-arrow" data-name="Arrow"><img src="/assets/865-7675-0b485.svg" width="22" height="22" alt="" /></span>
         </SiteLink>

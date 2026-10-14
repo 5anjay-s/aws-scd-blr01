@@ -103,8 +103,8 @@ export default function RegistrationMobile() {
             That’s a good thing.
           </p>
           <div className="d-cef894190b" data-node-id="1367:799">
-            <p className="d-143d1e5b1d">Date, venue and registration details</p>
-            <p className="d-143d1e5b1d">will be announced here soon.</p>
+            <p className="d-143d1e5b1d">Registration is open for 5 November 2026</p>
+            <p className="d-143d1e5b1d">at REVA University, Bengaluru.</p>
             <p className="d-e894d19a93">The next chapter is taking shape.</p>
           </div>
           <SiteLink buttonTone="orange" className="d-d4e2f56eff" data-node-id="1367:800" data-name="Registration / Back to exploring" href={"/#home"}>
@@ -145,7 +145,7 @@ export default function RegistrationMobile() {
                   REGISTRATION
                 </p>
                 <p className="d-ff1b9b6c84 arcade-heading" data-node-id="I1367:802;1059:513">
-                  COMING SOON
+                  OPEN NOW
                 </p>
                 <div className="d-cf401d4ea7" data-node-id="I1367:802;1059:514" data-name="Ticket / Decorative print code">
                   <img alt="" className="d-511e8f31d4" src={imgTicketDecorativePrintCode} />
@@ -160,7 +160,7 @@ export default function RegistrationMobile() {
         <div className="d-fd07aa37f7" data-node-id="1367:803" data-name="Registration / Announcement note">
           <div className="d-31f28ff034" data-node-id="1367:804" data-name="Status / Announcement pending" />
           <p className="d-9003e36c9a" data-node-id="1367:805">
-            REGISTRATION DETAILS / COMING SOON
+            REGISTRATION DETAILS / OPEN NOW
           </p>
         </div>
       </div>
@@ -170,7 +170,7 @@ export default function RegistrationMobile() {
             DATE
           </p>
           <p className="d-5b27af2011" data-node-id="1367:809">
-            To be announced
+            5 November 2026
           </p>
         </div>
         <div className="d-43f50fc4ff" data-node-id="1367:810" data-name="Status / VENUE">
@@ -178,7 +178,7 @@ export default function RegistrationMobile() {
             VENUE
           </p>
           <p className="d-5b27af2011" data-node-id="1367:812">
-            To be announced
+            REVA University
           </p>
         </div>
         <div className="d-43f50fc4ff" data-node-id="1367:813" data-name="Status / REGISTRATION">
@@ -186,7 +186,7 @@ export default function RegistrationMobile() {
             REGISTRATION
           </p>
           <p className="d-5b27af2011" data-node-id="1367:815">
-            Coming soon
+            Open now
           </p>
         </div>
       </div>
@@ -234,7 +234,7 @@ export default function RegistrationMobile() {
                 Event details
               </p>
               <p className="d-c37f273d0b" data-node-id="1367:860">
-                The date and venue will appear here once confirmed.
+                5 November 2026 at REVA University, Bengaluru.
               </p>
             </div>
           </div>
@@ -247,7 +247,7 @@ export default function RegistrationMobile() {
                 How to join
               </p>
               <p className="d-c37f273d0b" data-node-id="1367:865">
-                Registration instructions will be shared here.
+                RSVP on Meetup and register on KonfHub for your official ticket.
               </p>
             </div>
           </div>

@@ -24,7 +24,7 @@ export default function MobileDetailsDesktopAligned() {
             WHEN + WHERE?
           </p>
           <p className="d-9256617af6" data-node-id="1169:686">
-            Date, venue, and registration details are on the way.
+            5 November 2026 at REVA University. Registration is open.
           </p>
         </div>
         <div className="d-aceb3ef40d" data-node-id="1169:687" data-name="Details / Print edge">

@@ -70,9 +70,9 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
     ? [art.imgDitherPrintedSpeechEdge, art.imgDitherPrintedSpeechEdge, art.imgDitherPrintedSpeechEdge]
     : [organizerArtwork.desktop.imgDitherPrintedSpeechEdge1, organizerArtwork.desktop.imgDitherPrintedSpeechEdge2, organizerArtwork.desktop.imgDitherPrintedSpeechEdge3];
   const conversations = [
-    { count: '1,104', channel: 'Meetup', measure: 'members', note: 'MEET IN PERSON. BUILD TOGETHER.', art: art.imgSpeechPaper, node: node('1851:3855', '1851:3972') },
+    { count: '1,107', channel: 'Meetup', measure: 'members', note: 'MEET IN PERSON. BUILD TOGETHER.', art: art.imgSpeechPaper, node: node('1851:3855', '1851:3972') },
     { count: '~900', channel: 'WhatsApp', measure: 'members', note: 'KEEP THE CONVERSATION GOING.', art: art.imgSpeechPaper1, node: node('1851:3865', '1851:3982') },
-    { count: '261', channel: 'LinkedIn', measure: 'followers', note: 'SHARE WHAT’S NEXT.', art: art.imgSpeechPaper2, node: node('1851:3875', '1851:3992') },
+    { count: '250', channel: 'LinkedIn', measure: 'followers', note: 'SHARE WHAT’S NEXT.', art: art.imgSpeechPaper2, node: node('1851:3875', '1851:3992') },
   ];
 
   return <div className={`organizers-page${mobile ? ' organizers-page--mobile' : ''}`} data-node-id={node('1823:3588', '1823:3589')}>
@@ -163,7 +163,7 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
         </div>)}
         <div className="organizers-invitation-note" data-node-id={node('1851:3885', '1851:4002')}>
           {!mobile && <p>A first hello.<br />A shared project.<br />A reason to keep building.</p>}
-          <p>{mobile ? '~2,265 memberships + follows' : '~2,265 MEMBERSHIPS + FOLLOWS'}<br /><span>ACROSS OUR COMMUNITY CHANNELS</span></p>
+          <p>{mobile ? '~3,292 memberships + follows' : '~3,292 MEMBERSHIPS + FOLLOWS'}<br /><span>ACROSS OUR COMMUNITY CHANNELS</span></p>
         </div>
       </div>
       <div className="organizers-contact-wall" data-node-id={node('1851:3888', '1851:4005')}>

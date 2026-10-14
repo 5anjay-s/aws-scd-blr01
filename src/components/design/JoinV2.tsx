@@ -23,7 +23,7 @@ export default function JoinV2() {
           </div>
         </SiteLink>
         <p className="d-4a2ed4174e" data-node-id="860:5357">
-          REGISTRATION DETAILS COMING SOON
+          REGISTRATION OPEN NOW
         </p>
       </div>
       <div className="d-2b9b55c96b" data-node-id="860:5358" data-name="Accent / Next step">

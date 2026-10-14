@@ -15,9 +15,10 @@ type ScdFullWidthProgrammePhaseDesktopProps = {
   sequence?: string;
   sessionSummary?: string;
   sessionTitle?: string;
+  time?: string;
 };
 
-function ScdFullWidthProgrammePhaseDesktop({ className, programmeCategory = "ARRIVAL", sequence = "01", sessionSummary = "Settle in. Meet the people you might build with next.", sessionTitle = "ARRIVE & CONNECT" }: ScdFullWidthProgrammePhaseDesktopProps) {
+function ScdFullWidthProgrammePhaseDesktop({ className, programmeCategory = "ARRIVAL", sequence = "01", sessionSummary = "Settle in. Meet the people you might build with next.", sessionTitle = "ARRIVE & CONNECT", time = "TBA" }: ScdFullWidthProgrammePhaseDesktopProps) {
   return (
     <div className={className} data-node-id="685:2230" data-name="SCD / Full-width programme phase / Desktop">
       <div className="d-af7b482fec" data-node-id="685:2231" data-name="Programme / Ledger rule" />
@@ -46,7 +47,7 @@ function ScdFullWidthProgrammePhaseDesktop({ className, programmeCategory = "ARR
             TIME
           </p>
           <p className="d-dab1a99bdb" data-node-id="685:2243">
-            TBA
+            {time}
           </p>
         </div>
       </div>
@@ -102,7 +103,7 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
           PROGRAMME PREVIEW
         </p>
         <p className="d-4c830edfb9" data-node-id="860:5197">
-          TIMINGS TO BE ANNOUNCED
+          PROVISIONAL TIMINGS
         </p>
       </div>
       <div className="d-97d35dcc97" data-node-id="860:5198" data-name="Programme / Full-width schedule">
@@ -118,15 +119,15 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
           </div>
           <div className="d-71a755c0b9" data-node-id="860:5203" data-name="Programme / Preview note">
             <p className="d-a051a1d382" data-node-id="860:5204">
-              A first look at the day. Exact timings and the final running order are coming soon.
+              A first look at the day. Key timings are confirmed; the final running order will be announced.
             </p>
             <div className="d-df75d32160" data-node-id="860:5205" data-name="Accent / Pixel stitch">
               <SignalStitch alt="" className="d-511e8f31d4" src={imgAccentPixelStitch} />
             </div>
           </div>
         </div>
-        <ScdFullWidthProgrammePhaseDesktop className="d-5bc03310bc" />
-        <ScdFullWidthProgrammePhaseDesktop className="d-5bc03310bc" programmeCategory="OPENING" sequence="02" sessionSummary="A shared hello. A first look at what lies ahead." sessionTitle="START WITH POSSIBILITY" />
+        <ScdFullWidthProgrammePhaseDesktop className="d-5bc03310bc" time="08:00 AM" />
+        <ScdFullWidthProgrammePhaseDesktop className="d-5bc03310bc" programmeCategory="OPENING" sequence="02" sessionSummary="A shared hello. A first look at what lies ahead." sessionTitle="START WITH POSSIBILITY" time="09:00 AM" />
         <div className="d-5bc03310bc" data-node-id="860:5212" data-name="Programme / 03 EXPLORE">
           <div className="d-af7b482fec" data-node-id="860:5213" data-name="Programme / Ledger rule" />
           <div className="d-4f3c7894ae" data-node-id="860:5214" data-name="Phase / Ledger columns">
@@ -154,7 +155,7 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
                 TIME
               </p>
               <p className="d-dab1a99bdb" data-node-id="860:5225">
-                TBA
+                AFTER OPENING
               </p>
             </div>
           </div>
@@ -199,8 +200,8 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
             </div>
           </div>
         </div>
-        <ScdFullWidthProgrammePhaseDesktop className="d-5bc03310bc" programmeCategory="COMMUNITY" sequence="04" sessionSummary="Trade discoveries. Keep the conversation going." sessionTitle="SHARE WHAT YOU FOUND" />
-        <ScdFullWidthProgrammePhaseDesktop className="d-5bc03310bc" programmeCategory="CLOSING" sequence="05" sessionSummary="Leave with new ideas and a fresh starting point." sessionTitle="TAKE IT FORWARD" />
+        <ScdFullWidthProgrammePhaseDesktop className="d-5bc03310bc" programmeCategory="COMMUNITY" sequence="04" sessionSummary="Trade discoveries. Keep the conversation going." sessionTitle="SHARE WHAT YOU FOUND" time="AFTERNOON" />
+        <ScdFullWidthProgrammePhaseDesktop className="d-5bc03310bc" programmeCategory="CLOSING" sequence="05" sessionSummary="Leave with new ideas and a fresh starting point." sessionTitle="TAKE IT FORWARD" time="APPROX. 5:00–5:30 PM" />
       </div>
       <ProgrammeDivider />
       <div className="d-8f9fa6c789" data-node-id="860:5239" data-name="Programme / Keep exploring">
