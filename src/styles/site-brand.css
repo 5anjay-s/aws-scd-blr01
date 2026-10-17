@@ -8,48 +8,32 @@
   text-decoration: none;
 }
 
-.site-brand__mark {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-}
-
 .site-brand__artwork {
   display: block;
   width: 56px;
   height: auto;
 }
 
-.site-brand__aws {
-  font-family: 'Geist Mono', monospace;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: -0.5px;
-}
-
 .site-brand__name {
   font-family: 'Azeret Mono', monospace;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1.35;
   letter-spacing: -0.3px;
   white-space: nowrap;
 }
 
+.site-brand__provider { color: var(--orange); }
 .site-brand__city { color: var(--cyan); }
 
 .mobile-layout .site-brand { gap: 9px; }
 .mobile-layout .site-brand__artwork { width: 40px; }
-.mobile-layout .site-brand__aws { font-size: 14px; }
-.mobile-layout .site-brand__name { font-size: 11px; letter-spacing: -0.25px; }
+.mobile-layout .site-brand__name { font-size: 15px; letter-spacing: -0.25px; }
 .mobile-layout .design-content .site-header { gap: 12px; }
 .mobile-layout [data-name='Footer / Brand and return'] { flex-wrap: wrap; gap: 16px; justify-content: space-between; }
 
 @media (max-width: 359px) {
   .mobile-layout .site-brand { gap: 7px; }
   .mobile-layout .site-brand__artwork { width: 32px; }
-  .mobile-layout .site-brand__aws { font-size: 12px; }
-  .mobile-layout .site-brand__name { font-size: 9px; letter-spacing: -0.2px; }
+  .mobile-layout .site-brand__name { font-size: 13px; letter-spacing: -0.2px; }
 }
