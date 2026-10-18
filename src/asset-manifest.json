@@ -457,12 +457,6 @@
     "bytes": 274
   },
   {
-    "file": "public/assets/1367-652-4fc85.svg",
-    "component": "RegistrationDesktop",
-    "variable": "imgRsvpPixelCheck",
-    "bytes": 300
-  },
-  {
     "file": "public/assets/1367-652-6ea97.svg",
     "component": "RegistrationDesktop",
     "variable": "imgTicketSteppedOutline",
@@ -485,12 +479,6 @@
     "component": "RegistrationDesktop",
     "variable": "imgTicketDecorativePrintCode",
     "bytes": 1092
-  },
-  {
-    "file": "public/assets/1367-652-442d6.svg",
-    "component": "RegistrationDesktop",
-    "variable": "imgRsvpCyanToNavyPixelTransition",
-    "bytes": 6014
   },
   {
     "file": "public/assets/865-7675-0b485.svg",
@@ -535,12 +523,6 @@
     "bytes": 274
   },
   {
-    "file": "public/assets/1367-652-4fc85.svg",
-    "component": "RegistrationMobile",
-    "variable": "imgRsvpPixelCheck",
-    "bytes": 300
-  },
-  {
     "file": "public/assets/1367-780-2ba6a.svg",
     "component": "RegistrationMobile",
     "variable": "imgTicketSteppedOutline",
@@ -563,12 +545,6 @@
     "component": "RegistrationMobile",
     "variable": "imgTicketDecorativePrintCode",
     "bytes": 1898
-  },
-  {
-    "file": "public/assets/1367-780-673f2.svg",
-    "component": "RegistrationMobile",
-    "variable": "imgRsvpCyanToNavyPixelTransition",
-    "bytes": 5640
   },
   {
     "file": "public/assets/865-7675-0b485.svg",
