@@ -1030,6 +1030,8 @@
 .desktop-layout .design-content [data-node-id='860:5104'] .d-2b3bdbf669 { width: min(22svh, 240px); height: auto; aspect-ratio: 5 / 4; }
 /* The first track reads left from its 01 index; the second mirrors it, hugging the 02 index. */
 .desktop-layout .design-content [data-node-id='860:5130'] { align-items: flex-end; text-align: right; }
+/* Keep the second track's title on one line, matching "TECHNICAL" above. */
+.desktop-layout .design-content [data-node-id='860:5132'] { display: flex; justify-content: flex-end; }
 .mobile-layout .design-content [data-node-id='866:8433'] { padding: 14px 20px; gap: 8px; }
 .mobile-layout .design-content [data-node-id='866:8435'] { font-size: clamp(24px, 4svh, 38px); width: 100%; }
 .mobile-layout .design-content [data-node-id='866:8435'] > p { display: inline; line-height: 1.05; }
