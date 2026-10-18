@@ -4,6 +4,7 @@ import { SiteHeader } from "../SiteHeader";
 import { WovenRibbon } from "../WovenRibbon";
 import { RegistrationButton } from "../RegistrationButton";
 import { BadgeStudio } from "../BadgeStudio";
+import { DitherDivider } from "../DitherDivider";
 import { SiteLink } from "../SiteLink";
 import { siteLinks } from "../../site-config";
 // Source: Figma 00/ Final, node 1367:652.
@@ -13,7 +14,6 @@ const imgTicketSteppedOutline = "/assets/1367-652-6ea97.svg";
 const imgTicketAssemblyPlus = "/assets/1367-652-e8226.svg";
 const imgTicketSquarePerforation = "/assets/1367-652-2d79b.svg";
 const imgTicketDecorativePrintCode = "/assets/1367-652-ab864.svg";
-const imgRsvpCyanToNavyPixelTransition = "/assets/1367-652-442d6.svg";
 const imgArrow1 = "/assets/865-7675-0b485.svg";
 const imgRegistrationPaperToNavyFooterTransition = "/assets/1367-652-1103f.svg";
 const imgApprovedWovenLinks = "/assets/1265-3035-453bd.svg";
@@ -90,78 +90,83 @@ export default function RegistrationDesktop() {
         </div>
         <RegistrationButton />
       </SiteHeader>
-      <div className="d-a8f0c92515" data-node-id="1367:669" data-name="Registration / Admission desk">
-        <p className="d-09dae26e09" data-node-id="1367:670" role="heading" aria-level={1}>
-          REGISTRATION / THE NEXT CHAPTER
-        </p>
-        <p className="d-3edd08d552" data-node-id="1367:671">
-          YOU’RE
-        </p>
-        <p className="d-693e676d46" data-node-id="1367:672">
-          EARLY.
-        </p>
-        <p className="d-b4f42ccefc" data-node-id="1367:673">
-          That’s a good thing.
-        </p>
-        <div className="d-a69b48af18" data-node-id="1367:674" data-name="Registration / Current status">
-          <div className="d-090bbee435" data-node-id="1367:675">
-            <p className="d-24de9bb201">Registration is open for 5 November 2026</p>
-            <p className="d-24de9bb201">at REVA University, Bengaluru.</p>
-            <p className="d-976352e9f0">The next chapter is taking shape.</p>
-          </div>
-          <SiteLink buttonTone="orange" className="d-86b35f0797" data-node-id="1367:676" data-name="Button / Flat" href={siteLinks.konfhub}>
-            <p className="d-cf01328ee8" data-node-id="I1367:676;5:30">
-              Register Now
-            </p>
-            <div className="d-4725149c0e" data-node-id="I1367:676;15:32" data-name="Arrow">
-              <img alt="" className="d-511e8f31d4" src={imgArrow} />
-            </div>
-          </SiteLink>
-        </div>
-        <div className="d-31fddeba75" data-node-id="1367:677" data-name="Registration / Announcement note">
-          <div className="d-31f28ff034" data-node-id="1367:678" data-name="Rectangle" />
-          <p className="d-757bc9fd86" data-node-id="1367:679">
-            REGISTRATION DETAILS / OPEN NOW
+      <div className="registration-choices">
+        <div className="d-a8f0c92515 registration-admission" data-node-id="1367:669" data-name="Registration / Admission desk">
+          <p className="d-09dae26e09" data-node-id="1367:670" role="heading" aria-level={1}>
+            REGISTRATION / THE NEXT CHAPTER
           </p>
-        </div>
-        <div className="d-01015d3743" data-node-id="1367:680">
-          <div className="d-c3905a3b54">
-            <div className="d-3ab0ab12e8" data-name="Admission / Next chapter — Flat ticket">
-              <div className="d-f077a0522e" data-node-id="I1367:680;1059:505" data-name="Ticket / Stepped outline">
-                <img alt="" className="d-511e8f31d4" src={imgTicketSteppedOutline} />
-              </div>
-              <SiteLink className="d-68239f1ac4" data-node-id="I1367:680;1059:506" href={"/#home"}>
-                aws / STUDENT COMMUNITY DAY
-              </SiteLink>
-              <div className="d-e827680dda" data-node-id="I1367:680;1059:507" data-name="Ticket / Top rule" />
-              <div className="d-26140e6705 arcade-heading" data-node-id="I1367:680;1059:508">
-                <p className="d-cf3f6248ad">THE NEXT</p>
-                <p className="d-bec5321127"><ArcadeText>CHAPTER.</ArcadeText></p>
-              </div>
-              <div className="d-2880ffcd57 arcade-heading" data-node-id="I1367:680;1059:509">
-                <p className="d-06214b5362">STARTS WITH</p>
-                <p className="d-0479ea4484"><ArcadeText>YOUR CURIOSITY.</ArcadeText></p>
-              </div>
-              <div className="d-ad5ad21980" data-node-id="I1367:680;1059:510" data-name="Ticket / Assembly plus">
-                <img alt="" className="d-511e8f31d4" src={imgTicketAssemblyPlus} />
-              </div>
-              <div className="d-2a4e9b64fd" data-node-id="I1367:680;1059:511" data-name="Ticket / Square perforation">
-                <img alt="" className="d-511e8f31d4" src={imgTicketSquarePerforation} />
-              </div>
-              <p className="d-f064523f28" data-node-id="I1367:680;1059:512">
-                REGISTRATION
+          <p className="d-3edd08d552" data-node-id="1367:671">
+            YOU’RE
+          </p>
+          <p className="d-693e676d46" data-node-id="1367:672">
+            EARLY.
+          </p>
+          <p className="d-b4f42ccefc" data-node-id="1367:673">
+            That’s a good thing.
+          </p>
+          <div className="d-a69b48af18" data-node-id="1367:674" data-name="Registration / Current status">
+            <div className="d-090bbee435" data-node-id="1367:675">
+              <p className="d-24de9bb201">Registration is open for 5 November 2026</p>
+              <p className="d-24de9bb201">at REVA University, Bengaluru.</p>
+              <p className="d-976352e9f0">The next chapter is taking shape.</p>
+            </div>
+            <SiteLink buttonTone="orange" className="d-86b35f0797" data-node-id="1367:676" data-name="Button / Flat" href={siteLinks.konfhub}>
+              <p className="d-cf01328ee8" data-node-id="I1367:676;5:30">
+                Register Now
               </p>
-              <p className="d-6c6c38508c arcade-heading" data-node-id="I1367:680;1059:513">
-                OPEN NOW
-              </p>
-              <div className="d-994b5566a4" data-node-id="I1367:680;1059:514" data-name="Ticket / Decorative print code">
-                <img alt="" className="d-511e8f31d4" src={imgTicketDecorativePrintCode} />
+              <div className="d-4725149c0e" data-node-id="I1367:676;15:32" data-name="Arrow">
+                <img alt="" className="d-511e8f31d4" src={imgArrow} />
               </div>
-              <p className="d-f87663c86a" data-node-id="I1367:680;1059:515">
-                SCD / NEXT WAVE
-              </p>
+            </SiteLink>
+          </div>
+          <div className="d-31fddeba75" data-node-id="1367:677" data-name="Registration / Announcement note">
+            <div className="d-31f28ff034" data-node-id="1367:678" data-name="Rectangle" />
+            <p className="d-757bc9fd86" data-node-id="1367:679">
+              REGISTRATION DETAILS / OPEN NOW
+            </p>
+          </div>
+          <div className="d-01015d3743" data-node-id="1367:680">
+            <div className="d-c3905a3b54">
+              <div className="d-3ab0ab12e8" data-name="Admission / Next chapter — Flat ticket">
+                <div className="d-f077a0522e" data-node-id="I1367:680;1059:505" data-name="Ticket / Stepped outline">
+                  <img alt="" className="d-511e8f31d4" src={imgTicketSteppedOutline} />
+                </div>
+                <SiteLink className="d-68239f1ac4" data-node-id="I1367:680;1059:506" href={"/#home"}>
+                  aws / STUDENT COMMUNITY DAY
+                </SiteLink>
+                <div className="d-e827680dda" data-node-id="I1367:680;1059:507" data-name="Ticket / Top rule" />
+                <div className="d-26140e6705 arcade-heading" data-node-id="I1367:680;1059:508">
+                  <p className="d-cf3f6248ad">THE NEXT</p>
+                  <p className="d-bec5321127"><ArcadeText>CHAPTER.</ArcadeText></p>
+                </div>
+                <div className="d-2880ffcd57 arcade-heading" data-node-id="I1367:680;1059:509">
+                  <p className="d-06214b5362">STARTS WITH</p>
+                  <p className="d-0479ea4484"><ArcadeText>YOUR CURIOSITY.</ArcadeText></p>
+                </div>
+                <div className="d-ad5ad21980" data-node-id="I1367:680;1059:510" data-name="Ticket / Assembly plus">
+                  <img alt="" className="d-511e8f31d4" src={imgTicketAssemblyPlus} />
+                </div>
+                <div className="d-2a4e9b64fd" data-node-id="I1367:680;1059:511" data-name="Ticket / Square perforation">
+                  <img alt="" className="d-511e8f31d4" src={imgTicketSquarePerforation} />
+                </div>
+                <p className="d-f064523f28" data-node-id="I1367:680;1059:512">
+                  REGISTRATION
+                </p>
+                <p className="d-6c6c38508c arcade-heading" data-node-id="I1367:680;1059:513">
+                  OPEN NOW
+                </p>
+                <div className="d-994b5566a4" data-node-id="I1367:680;1059:514" data-name="Ticket / Decorative print code">
+                  <img alt="" className="d-511e8f31d4" src={imgTicketDecorativePrintCode} />
+                </div>
+                <p className="d-f87663c86a" data-node-id="I1367:680;1059:515">
+                  SCD / NEXT WAVE
+                </p>
+              </div>
             </div>
           </div>
+        </div>
+        <div className="d-2bc135e391 registration-community" data-node-id="1367:691" data-name="Registration / Community RSVP — Desktop">
+          <ScdRegistrationMeetupRsvpDesktop className="d-5782fa7dda" />
         </div>
       </div>
       <div className="d-af30854260" data-node-id="1367:681" data-name="Registration / What is pending">
@@ -190,12 +195,7 @@ export default function RegistrationDesktop() {
           </p>
         </div>
       </div>
-      <div className="d-2bc135e391" data-node-id="1367:691" data-name="Registration / Community RSVP — Desktop">
-        <div className="d-2deab807cb pixel-border pixel-border-cyan-navy" data-node-id="1367:692" data-name="RSVP / Cyan-to-navy pixel transition">
-          <img alt="" className="d-511e8f31d4" src={imgRsvpCyanToNavyPixelTransition} />
-        </div>
-        <ScdRegistrationMeetupRsvpDesktop className="d-5782fa7dda" />
-      </div>
+      <DitherDivider from="cyan" to="white" nodeId="1367:692" name="Registration / Cyan-to-paper pixel transition" />
       <BadgeStudio />
       <div className="d-0ad43c5865" data-node-id="1367:725" data-name="Registration / Before the details arrive">
         <div className="d-552c1c6224" data-node-id="1367:726" data-name="Section index">

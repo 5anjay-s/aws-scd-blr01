@@ -1,4 +1,4 @@
-import { createContext, useContext, type AnchorHTMLAttributes, type ButtonHTMLAttributes } from 'react';
+import { createContext, useContext, type AnchorHTMLAttributes } from 'react';
 import { isNavigationActive, resolveLinkUrl, resolveLocation } from '../navigation';
 import { HeaderNavigationContext, NavigationLocationContext } from './NavigationState';
 
@@ -41,10 +41,4 @@ export function SiteLink({ href, children, className, buttonTone, hoverTone, onC
           : { x: event.clientX, y: event.clientY } });
       }
     }}>{children}</a>;
-}
-
-type CheckboxProps = ButtonHTMLAttributes<HTMLButtonElement> & { checked: boolean };
-export function SiteCheckbox({ checked, children, ...props }: CheckboxProps) {
-  return <button {...props} type="button" role="checkbox" aria-checked={checked}
-    aria-label="I've completed my Meetup RSVP">{children}</button>;
 }

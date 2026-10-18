@@ -220,7 +220,6 @@
   left: min(0px, calc((1440px - 100vw) / 2)); background: inherit;
   z-index: -1; pointer-events: none;
 }
-.design-content [data-node-id='1367:691'] { overflow: visible; }
 .design-content [data-node-id='666:2087'] { height: auto; aspect-ratio: 832 / 336; }
 .design-content [data-node-id='860:5187'],
 .design-content [data-node-id='860:5188'],
@@ -318,7 +317,6 @@
 .design-content [data-node-id='1265:3038'] { height: 884px; top: 52px; }
 .design-content [data-node-id='1265:3039'] { height: 884px; top: 32px; }
 .design-content [data-node-id='1265:3064'] { height: 28px; top: 900px; }
-.design-content [data-node-id='1367:669'] { min-height: 844px; }
 .design-content [data-node-id='860:4959'] { height: 100svh; min-height: 700px; }
 .design-content [data-node-id='860:4960'] { width: 100vw; height: 100%; left: calc(50% - 50vw); }
 .design-content [data-node-id='860:4960'] img { object-fit: cover; }
@@ -392,7 +390,6 @@
 .mobile-layout .design-content .d-d2efcd5d06,
 .mobile-layout .design-content .d-11f997cef7,
 .mobile-layout .design-content .d-74ac1ded28,
-.mobile-layout .design-content [data-node-id='1367:816'] { overflow: visible; }
 /* Preserve the coordinate system inside the ticket illustration. */
 .mobile-layout .design-content [data-node-id='1265:3122'] { --design-unit: var(--space-unit); width: min(100%, 390px); height: calc(984 * var(--space-unit)); margin-inline: auto; }
 .mobile-layout .design-content [data-node-id='1265:3127'] { top: calc(48 * var(--space-unit)); }
@@ -402,15 +399,63 @@
 .ticket-artwork { --design-unit: 1px; --space-unit: 1px; position: relative; width: 342px; height: 392px; transform: scale(var(--ticket-scale)); transform-origin: top left; }
 .design-content [data-node-id='1229:2241'] { --ticket-scale: calc(var(--design-unit) / 1px); height: calc(592 * var(--design-unit)); }
 .ticket-artwork-desktop { width: 672px; height: 592px; }
-.design-content [data-node-id='1367:680'] { --ticket-scale: calc(var(--design-unit) / 1px); height: calc(700.387 * var(--design-unit)); }
-.design-content [data-node-id='1367:680'] > * { --design-unit: 1px; --space-unit: 1px; scale: var(--ticket-scale); }
 .mobile-layout .design-content [data-node-id='1265:3131'] { top: calc(552 * var(--space-unit)); }
 .mobile-layout .design-content [data-node-id='1265:3136'] { top: calc(876 * var(--space-unit)); }
-.design-content [role='checkbox'] { width: 24px; height: 24px; min-height: 24px; flex: none; }
 .design-content [data-name='Arrow'] { width: 24px; height: 24px; flex: none; }
-.mobile-layout .design-content [data-node-id='1367:822'] { --design-unit: var(--space-unit); width: min(342px, calc(342 * var(--space-unit))); height: 216px; margin-inline: auto; }
 .mobile-layout .design-content [data-node-id='1367:801'] { --design-unit: var(--space-unit); --ticket-scale: calc(var(--space-unit) / 1px); width: calc(342 * var(--space-unit)); height: calc(402.98 * var(--space-unit)); margin-inline: auto; }
 .mobile-layout .design-content [data-node-id='1367:802'] { --design-unit: 1px; --space-unit: 1px; transform: scale(var(--ticket-scale)); transform-origin: top left; }
+
+/* Registration and community RSVP share one opening section. */
+.design-content .registration-choices {
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px;
+  width: 100%; padding: 32px 24px 40px; background: var(--navy);
+}
+.design-content .registration-choices :is(.registration-admission, .registration-community, [data-node-id='1367:694'], [data-node-id='1367:819']) {
+  width: 100%; min-width: 0; padding: 0; overflow: visible;
+}
+.design-content .registration-choices :is(.registration-admission, .registration-community, [data-node-id='1367:694'], [data-node-id='1367:819'])::before { display: none; }
+.design-content .registration-choices .registration-community { border-top: 1px solid rgb(248 250 252 / 18%); padding-top: 32px; }
+.design-content .registration-community :is([data-node-id='1367:695'], [data-node-id='1367:696'], [data-node-id='1367:697'], [data-node-id='1367:712'], [data-node-id='1367:713'], [data-node-id='1367:714'], [data-node-id='1367:715'], [data-node-id='1367:716'], [data-node-id='1367:717'], [data-node-id='1367:820'], [data-node-id='1367:821'], [data-node-id='1367:836'], [data-node-id='1367:837'], [data-node-id='1367:838'], [data-node-id='1367:839']) { width: 100%; min-width: 0; }
+.design-content .registration-community :is([data-node-id='1367:694'], [data-node-id='1367:697'], [data-node-id='1367:712'], [data-node-id='1367:819']) { gap: 24px; }
+.design-content .registration-community [data-node-id='1367:697'] { flex-direction: column; overflow: visible; }
+.design-content .registration-community :is([data-node-id='1367:714'], [data-node-id='1367:837']) { font-size: clamp(24px, 2.4cqw, 32px); line-height: 1.2; }
+.design-content .registration-community :is([data-node-id='1367:715'], [data-node-id='1367:838']) { font-size: 15px; line-height: 1.55; }
+.design-content .registration-community :is([data-node-id='1367:717'], [data-node-id='1367:839']) { min-height: 48px; padding: 12px 20px; }
+.design-content .registration-community [data-node-id='1367:698'] { width: min(100%, 400px); height: auto; aspect-ratio: 592 / 352; container-type: inline-size; margin-inline: auto; }
+.design-content .registration-community [data-node-id='1367:699'] { inset: 0; width: 100%; height: 100%; }
+.design-content .registration-community [data-node-id='1367:710'] { left: 31.081%; top: 16.193%; width: 35.135%; font-size: clamp(8px, calc(100cqw * 12 / 592), 12px); line-height: 1.5; }
+.design-content .registration-community [data-node-id='1367:711'] { left: 49.324%; top: 23.864%; width: 35.135%; font-size: calc(100cqw * 56 / 592); line-height: 1.2; }
+.mobile-layout .design-content .registration-community [data-node-id='1367:822'] { width: min(100%, 342px); height: auto; aspect-ratio: 342 / 216; container-type: inline-size; margin-inline: auto; }
+.mobile-layout .design-content .registration-community [data-node-id='1367:823'] { left: 0; top: 2.926%; width: 100%; height: 94.144%; }
+.mobile-layout .design-content .registration-community [data-node-id='1367:834'] { left: 31.082%; top: 18.171%; width: 35.135%; font-size: clamp(8px, calc(100cqw * 9 / 342), 9px); line-height: 1.5; }
+.mobile-layout .design-content .registration-community [data-node-id='1367:835'] { left: 49.325%; top: 25.394%; width: 35.135%; height: auto; font-size: calc(100cqw * 32.351 / 342); line-height: 1.2; }
+.mobile-layout .design-content .registration-choices .registration-admission > *,
+.mobile-layout .design-content .registration-admission [data-node-id='1367:797'] > * { max-width: 100%; min-width: 0; }
+
+.desktop-layout .design-content .registration-choices { grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 48px; padding: 40px 48px 48px; }
+.desktop-layout .design-content .registration-choices .registration-community { border-top: 0; border-left: 1px solid rgb(248 250 252 / 18%); padding: 0 0 0 32px; }
+.desktop-layout .design-content .registration-choices .registration-admission { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .85fr); align-content: start; gap: 14px 24px; min-height: 0; height: auto; }
+.desktop-layout .design-content .registration-admission > * { position: relative; inset: auto; width: 100%; height: auto; min-width: 0; }
+.desktop-layout .design-content .registration-admission :is([data-node-id='1367:670'], [data-node-id='1367:677']) { grid-column: 1 / -1; }
+.desktop-layout .design-content .registration-admission :is([data-node-id='1367:671'], [data-node-id='1367:672']) { grid-column: 1; font-size: clamp(56px, 6.3cqw, 88px); line-height: .95; }
+.desktop-layout .design-content .registration-admission [data-node-id='1367:673'] { grid-column: 1; font-size: clamp(20px, 1.8cqw, 26px); line-height: 1.3; }
+.desktop-layout .design-content .registration-admission [data-node-id='1367:674'] { grid-column: 1; gap: 20px; }
+.desktop-layout .design-content .registration-admission [data-node-id='1367:675'] { width: 100%; font-size: 14px; }
+.desktop-layout .design-content .registration-admission [data-node-id='1367:675'] > p { line-height: 1.55; }
+.desktop-layout .design-content .registration-admission [data-node-id='1367:676'] { width: 100%; min-height: 48px; padding: 12px 20px; }
+.desktop-layout .design-content .registration-admission [data-node-id='1367:677'] { margin-top: 12px; }
+.desktop-layout .design-content .registration-admission [data-node-id='1367:679'] { width: auto; font-size: 10px; }
+.desktop-layout .design-content .registration-admission [data-node-id='1367:680'] { grid-column: 2; grid-row: 2 / 6; align-self: center; height: auto; aspect-ratio: 594.402 / 700.387; container-type: inline-size; }
+.desktop-layout .design-content .registration-admission [data-node-id='1367:680'] > * { --design-unit: 1px; --space-unit: 1px; position: absolute; left: 50%; top: 50%; translate: -50% -50%; scale: calc(100cqw / 594.402px); }
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .mobile-layout .design-content .registration-choices { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+  .mobile-layout .design-content .registration-choices .registration-community { border-top: 0; border-left: 1px solid rgb(248 250 252 / 18%); padding: 0 0 0 24px; }
+  .mobile-layout .design-content .registration-choices .registration-admission { display: flex; flex-direction: column; gap: 24px; }
+  .mobile-layout .design-content .registration-admission [data-node-id='1367:796'] { width: 100%; font-size: 56px; }
+  .mobile-layout .design-content .registration-admission [data-node-id='1367:798'] { font-size: 24px; }
+  .mobile-layout .design-content .registration-admission [data-node-id='1367:801'] { --ticket-scale: .7; width: 239.4px; height: 282.086px; }
+}
 
 /* Homepage invitation to the organizers page. */
 .community-organizers-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 24px; min-height: 54px; width: fit-content; background: var(--orange); font: 400 15px/1.5 'Geist Mono', monospace; }
