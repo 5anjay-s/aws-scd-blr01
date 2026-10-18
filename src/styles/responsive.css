@@ -1021,13 +1021,17 @@
 .desktop-layout .design-content :is([data-node-id='860:5116'], [data-node-id='860:5127']) { height: 100%; align-items: stretch; }
 .desktop-layout .design-content :is([data-node-id='860:5117'], [data-node-id='860:5135']) { height: 100%; padding-block: 16px; justify-content: center; gap: 12px; }
 .desktop-layout .design-content :is([data-node-id='860:5118'], [data-node-id='860:5136']) { font-size: clamp(44px, 7svh, 88px); }
-.desktop-layout .design-content :is([data-node-id='860:5120'], [data-node-id='860:5128']) { padding: 16px 32px; gap: 24px; min-height: 0; }
+.desktop-layout .design-content :is([data-node-id='860:5120'], [data-node-id='860:5128']) { padding: 16px 48px; gap: 24px; min-height: 0; }
 .desktop-layout .design-content :is([data-node-id='860:5121'], [data-node-id='860:5130']) { gap: 10px; flex: 1; min-width: 0; }
 .desktop-layout .design-content :is([data-node-id='860:5123'], [data-node-id='860:5132']) { font-size: clamp(28px, 4.6svh, 56px); width: 100%; }
 .desktop-layout .design-content [data-node-id='860:5132'] > p { line-height: 1.05; }
 .desktop-layout .design-content :is([data-node-id='860:5124'], [data-node-id='860:5133']) { font-size: 14px; width: 100%; }
 .desktop-layout .design-content :is([data-node-id='860:5125'], [data-node-id='860:5134']) { min-height: 44px; padding-block: 10px; }
 .desktop-layout .design-content [data-node-id='860:5104'] .d-2b3bdbf669 { width: min(22svh, 240px); height: auto; aspect-ratio: 5 / 4; }
+/* The first track reads left from its 01 index; the second mirrors it, hugging the 02 index. */
+.desktop-layout .design-content [data-node-id='860:5130'] { align-items: flex-end; text-align: right; }
+/* Keep the second track's title on one line, matching "TECHNICAL" above. */
+.desktop-layout .design-content [data-node-id='860:5132'] { display: flex; justify-content: flex-end; }
 .mobile-layout .design-content [data-node-id='866:8433'] { padding: 14px 20px; gap: 8px; }
 .mobile-layout .design-content [data-node-id='866:8435'] { font-size: clamp(24px, 4svh, 38px); width: 100%; }
 .mobile-layout .design-content [data-node-id='866:8435'] > p { display: inline; line-height: 1.05; }
