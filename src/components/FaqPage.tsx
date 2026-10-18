@@ -14,9 +14,9 @@ const groups = [
   {
     id: 'ideas-and-community', title: '02 / Ideas & community', desktopNode: '235:803', mobileNode: '239:637',
     questions: [
-      { number: '03', question: 'What will we explore?', answer: 'Ideas in cloud, AI, and the tools shaping what comes next, with room to ask questions and share perspectives.', desktopNode: '235:805', mobileNode: '239:639' },
+      { number: '03', question: 'What will we explore?', answer: 'Ideas in cloud, AI, and the tools shaping what comes next: AWS sessions and hands-on workshops, a ChatGPT workshop by OpenAI Student Collective, and workshops and sessions from MongoDB — with room to ask questions and share perspectives.', desktopNode: '235:805', mobileNode: '239:639' },
       { number: '04', question: 'What can I bring to the conversation?', answer: 'A question, a rough sketch, or a first line of code. Unfinished ideas are part of the conversation.', desktopNode: '235:814', mobileNode: '239:648' },
-      { number: '05', question: 'Where can I find the program and speakers?', answer: 'Programme highlights and the day’s timeline are on this site. Speaker names and session details will be announced as they are confirmed.', desktopNode: '235:823', mobileNode: '239:657' },
+      { number: '05', question: 'Where can I find the program and speakers?', answer: 'Programme highlights and the day’s timeline are on this site. Selected attendees of the ChatGPT workshop receive one month of ChatGPT Plus. Speaker names, session details, and timings will be announced as they are confirmed.', desktopNode: '235:823', mobileNode: '239:657' },
     ],
   },
   {
