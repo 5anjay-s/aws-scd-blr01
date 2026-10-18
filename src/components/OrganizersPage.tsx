@@ -28,22 +28,22 @@ const initiatives = [
   {
     label: '01 / FIRST SPARKS', title: ['START.', 'TOGETHER.'], tone: 'orange', desktop: '1834:3947', mobile: '1834:4187',
     activities: [
-      { date: '11 DEC 2025', title: 'CODE to CLOUD', detail: 'Build & deploy with AWS — from idea to production in 30 minutes.', link: 'Meetup archive', desktop: '1834:3950', mobile: '1834:4190' },
-      { date: '13 MAR 2026', title: 'Inauguration & keynote', detail: 'AWS Cloud Club REVA University • 350 students • A shared vision for learning, with a keynote from AWS.', link: 'Meetup', desktop: '1834:3958', mobile: '1834:4198' },
+      { date: '11 DEC 2025', title: 'CODE to CLOUD', detail: 'Build & deploy with AWS — from idea to production in 30 minutes.', link: 'Meetup archive', url: `${organizerLinks.meetup}/events/past/`, desktop: '1834:3950', mobile: '1834:4190' },
+      { date: '13 MAR 2026', title: 'Inauguration & keynote', detail: 'AWS Cloud Club REVA University • 350 students • A shared vision for learning, with a keynote from AWS.', link: 'Meetup', url: 'https://www.meetup.com/aws-cloud-club-at-reva-university/events/313750547/', desktop: '1834:3958', mobile: '1834:4198' },
     ],
   },
   {
     label: '02 / BEYOND CAMPUS', title: ['TAKE IT', 'FURTHER.'], tone: 'cyan', desktop: '1834:3966', mobile: '1834:4206',
     activities: [
-      { date: '28 APR 2026', title: 'Intro to cloud & getting started with AWS', detail: '90+ participants taking their first steps in cloud computing.', link: 'Meetup', desktop: '1834:3969', mobile: '1834:4209' },
-      { date: '20 MAY 2026', title: 'Cloud beyond campus / OA1', detail: '120+ participants at HKBK • Cloud fundamentals and hands-on practice with Amazon S3 and EC2.', link: 'Meetup', desktop: '1834:3977', mobile: '1834:4217' },
+      { date: '28 APR 2026', title: 'Intro to cloud & getting started with AWS', detail: '90+ participants taking their first steps in cloud computing.', link: 'Meetup', url: `${organizerLinks.meetup}/events/314500658/`, desktop: '1834:3969', mobile: '1834:4209' },
+      { date: '20 MAY 2026', title: 'Cloud beyond campus / OA1', detail: '120+ participants at HKBK • Cloud fundamentals and hands-on practice with Amazon S3 and EC2.', link: 'Meetup', url: `${organizerLinks.meetup}/events/314813532/`, desktop: '1834:3977', mobile: '1834:4217' },
     ],
   },
   {
     label: '03 / A LEARNING PROGRAMME', title: ['KEEP', 'BUILDING.'], tone: 'violet', desktop: '1834:3985', mobile: '1834:4225',
     activities: [
-      { date: '20 JUN 2026', title: 'AWS Launchpad / Info session', detail: '136 first-cohort registrations • A learning programme in collaboration with AWS Academy.', link: 'Meetup', desktop: '1834:3988', mobile: '1834:4228' },
-      { date: '24 JUL 2026', title: 'AWS Launchpad / Goodies + Q&A', detail: 'Goodies announcement and doubt-clearing session.', link: 'Meetup', desktop: '1834:3996', mobile: '1834:4236' },
+      { date: '20 JUN 2026', title: 'AWS Launchpad / Info session', detail: '136 first-cohort registrations • A learning programme in collaboration with AWS Academy.', link: 'Meetup', url: `${organizerLinks.meetup}/events/315342529/`, desktop: '1834:3988', mobile: '1834:4228' },
+      { date: '24 JUL 2026', title: 'AWS Launchpad / Goodies + Q&A', detail: 'Goodies announcement and doubt-clearing session.', link: 'Meetup', url: `${organizerLinks.meetup}/events/315815706/`, desktop: '1834:3996', mobile: '1834:4236' },
     ],
   },
 ];
@@ -139,7 +139,7 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
             <p className="organizers-eyebrow">{activity.date}</p>
             <h4>{activity.title}</h4>
             <p>{activity.detail}</p>
-            <SiteLink href={organizerLinks.meetup} className="organizers-archive">{activity.link} <span aria-hidden="true">↗</span></SiteLink>
+            <SiteLink href={activity.url} className="organizers-archive">{activity.link} <span aria-hidden="true">↗</span></SiteLink>
           </article>)}
         </section>)}
       </div>
