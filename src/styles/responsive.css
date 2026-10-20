@@ -406,10 +406,6 @@
 .mobile-layout .design-content .mobile-speaker-caption > div p { font-size: 13px; line-height: 1.5; }
 .mobile-layout .design-content .mobile-speaker-caption [data-node-id='1170:595'] { flex-direction: column; align-items: flex-start; gap: 12px; }
 .mobile-layout .design-content .mobile-speaker-caption [data-node-id='1170:597'] { width: 48px; height: 36px; align-self: flex-end; }
-/* These wrappers crop Figma's larger divider export, not the repeated CSS border. */
-.mobile-layout .design-content .d-d2efcd5d06,
-.mobile-layout .design-content .d-11f997cef7,
-.mobile-layout .design-content .d-74ac1ded28,
 /* Preserve the coordinate system inside the ticket illustration. */
 .mobile-layout .design-content [data-node-id='1265:3122'] { --design-unit: var(--space-unit); width: min(100%, 390px); height: calc(984 * var(--space-unit)); margin-inline: auto; }
 .mobile-layout .design-content [data-node-id='1265:3127'] { top: calc(48 * var(--space-unit)); }
