@@ -969,9 +969,35 @@
 }
 .desktop-layout .design-content .hero-masthead { padding-block: clamp(12px, 2svh, 28px); }
 .desktop-layout .hero-title-kicker { margin-bottom: clamp(12px, 2svh, 24px); }
-.desktop-layout .hero-title-display { font-size: min(11.2cqw, 12svh, 160px); }
-.desktop-layout .hero-title-lower { margin-top: 1.5svh; }
-.desktop-layout .hero-title-last-row { margin-top: 2svh; }
+/* Arcade Classic fills only 0.563em of its em box, so the 0.76 leading and the
+   svh row margins read as wide gaps. Keep the rhythm in em so the stacked lines
+   hold the same optical spacing at every desktop height. */
+.desktop-layout .hero-title-display {
+  --hero-line-gap: 0.02em;
+  --hero-line-height: 0.7;
+  --hero-cloud-size: min(1.6em, 13%);
+  font-size: min(11.2cqw, 12svh, 160px);
+  line-height: var(--hero-line-height);
+}
+/* Row one is as tall as the cloud, so recover half of that extra height and
+   keep both gaps in step. Percentages here resolve against the same width as
+   the cloud, and em against the title size. */
+.desktop-layout .hero-title-lower {
+  margin-top: calc(var(--hero-line-gap) - 0.25 * (var(--hero-cloud-size) * 0.75 - var(--hero-line-height) * 1em));
+}
+/* BENGALURU keeps its column, while DAY sits exactly one glyph space before it,
+   so the pair never drifts when the title size changes. */
+.desktop-layout .hero-title-last-row {
+  --hero-word-space: 0.14em; /* Arcade Classic's 0.128em space + tracking */
+  margin-top: var(--hero-line-gap);
+}
+.desktop-layout .hero-word--day {
+  justify-self: end;
+  margin-right: var(--hero-word-space);
+}
+/* Size the cloud against the type (capped at its original 13% width) so it
+   cannot stretch the first gap on short desktops or grow over the note. */
+.desktop-layout .hero-cloud { width: var(--hero-cloud-size); }
 .desktop-layout .hero-title-note { top: 42%; font-size: clamp(12px, 1.6svh, 15px); gap: 12px; }
 .desktop-layout .design-content [data-node-id='860:5009'] { min-height: 0; }
 .desktop-layout .design-content [data-node-id='860:5064'] { padding: clamp(16px, 2.5svh, 32px); gap: clamp(10px, 1.8svh, 24px); justify-content: center; }
