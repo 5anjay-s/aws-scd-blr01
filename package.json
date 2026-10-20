@@ -3,11 +3,12 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "packageManager": "bun@1.4.3",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "typecheck": "tsc --noEmit",
     "build": "tsc -b && vite build",
-    "test": "node --test scripts/*.test.mjs",
+    "test": "bun test",
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {

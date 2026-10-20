@@ -7,3 +7,8 @@ artifacts/
 !.env.example
 *.log
 .DS_Store
+
+# This project uses Bun; do not add other package manager lockfiles.
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

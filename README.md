@@ -4,12 +4,16 @@ React, TypeScript, GSAP, and Vite implementation of the website designs in the F
 
 `src/App.tsx` connects the application providers, hooks, and page rendering. `src/page-config.ts` defines route compositions and section order, and `PageSections` resolves their Figma modules. Shared hooks in `src/components/` own navigation and transition commits (`useSiteNavigation`), responsive layout and header measurement (`usePageLayout`), and scrolling, focus, and section tracking (`usePageScroll`). Hash parsing and legacy aliases remain in `src/navigation.ts`.
 
+## Requirements
+
+This project uses [Bun](https://bun.sh) for installing dependencies, running scripts, and testing. Bun 1.4 or newer is recommended. Do not use npm, yarn, or pnpm. If `bun --version` fails, install Bun first and then continue.
+
 ```sh
-npm ci
-npm run dev
+bun install
+bun run dev
 ```
 
-Run `npm run build` to type-check and build the production site. TypeScript also checks for unused locals and parameters. Run `npm run preview` to preview that build.
+Run `bun run build` to type-check and build the production site. TypeScript also checks for unused locals and parameters. Run `bun run preview` to preview that build. Dependencies are locked in `bun.lock`; use `bun install --frozen-lockfile` in CI.
 
 The site plays the intro once per browser tab before opening the requested page. Visit `/#loading` to replay it. **Enter the day** skips the animation.
 
@@ -19,7 +23,7 @@ The public page URLs are `/#home`, `/#loading`, `/#technical`, `/#non-technical`
 
 Page navigation uses solid pixel-art circles, squares, diamonds, and crosses in cyan, orange, violet, and lime. The shapes have stepped block outlines whose edges snap to physical pixels as they scale. They grow outward from the activated link in a short stagger over 380 ms, overlapping until they cover the viewport. The destination mounts and scrolls into position underneath; the shapes then shrink away in reverse order over 360 ms, clearing the topmost shapes first. The canvas and geometry persist through the page swap. Back and Forward use the same effect; an interrupted navigation cannot later replace the chosen destination. Homepage section links use GSAP ScrollToPlugin for smooth scrolling, with cancellation when the visitor scrolls manually. Reduced motion skips the effect. Keyboard focus moves to the destination after the transition finishes.
 
-Homepage scrolling updates hash URLs such as `/#experience`, `/#tracks`, and `/#partners` without adding browser history entries. Learn, Build, Belong stays under `/#experience`, followed by the manifesto and Tracks. The manifesto remains accessible at `/#manifesto` but has no header link. Older clean paths, `/program`, and `/partner-lineup` normalize to the corresponding hash URL. FAQ categories use links such as `/#faq/plan-your-visit`. Back-to-top links retain the current standalone page. Run `npm test` to check route resolution.
+Homepage scrolling updates hash URLs such as `/#experience`, `/#tracks`, and `/#partners` without adding browser history entries. Learn, Build, Belong stays under `/#experience`, followed by the manifesto and Tracks. The manifesto remains accessible at `/#manifesto` but has no header link. Older clean paths, `/program`, and `/partner-lineup` normalize to the corresponding hash URL. FAQ categories use links such as `/#faq/plan-your-visit`. Back-to-top links retain the current standalone page. Run `bun test` to check route resolution.
 
 Page navigation renders in a shared sticky header. Section links account for its measured height on desktop and mobile. The navbar uses tighter link spacing and a “Register now” label. The hero uses orange AWS lettering and cloud-textured Bengaluru lettering. Existing Figma dither geometry separates the manifesto from Tracks in cyan and Tracks from Speakers in lime.
 
@@ -77,4 +81,4 @@ The registration page places the admission desk and the complete Meetup RSVP blo
 
 Badge photos must match their declared image format's file signature before the browser decodes them. Empty, truncated, oversized, and disguised SVG/HTML files are rejected. Names remain plain text in React and the canvas renderer; they are never interpreted as HTML or sent to an AI service.
 
-`vercel.json` supplies production security headers, and `npm run preview` uses the same headers for local verification. The Content Security Policy allows scripts, fonts, and network requests only from this site; it blocks inline scripts, event-handler attributes, frames, plugins, base-URL overrides, and form submissions. Image data and blob URLs remain allowed for the local badge editor, and inline styles remain allowed for React and GSAP animations. Framing is denied, MIME sniffing is disabled, and camera, microphone, and geolocation access are disabled. These settings take effect on Vercel after deployment; the Vite dev server retains its development policy for hot reload. See the [MDN CSP reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) and [Vercel header configuration](https://vercel.com/docs/project-configuration/vercel-json#headers).
+`vercel.json` supplies production security headers, and `bun run preview` uses the same headers for local verification. The Content Security Policy allows scripts, fonts, and network requests only from this site; it blocks inline scripts, event-handler attributes, frames, plugins, base-URL overrides, and form submissions. Image data and blob URLs remain allowed for the local badge editor, and inline styles remain allowed for React and GSAP animations. Framing is denied, MIME sniffing is disabled, and camera, microphone, and geolocation access are disabled. These settings take effect on Vercel after deployment; the Vite dev server retains its development policy for hot reload. See the [MDN CSP reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) and [Vercel header configuration](https://vercel.com/docs/project-configuration/vercel-json#headers).
