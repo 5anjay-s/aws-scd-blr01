@@ -1172,6 +1172,71 @@
   .mobile-layout .experience-panel :is([data-node-id='1169:630'], [data-node-id='1169:643'], [data-node-id='1169:656']) { line-height: 1.25; }
 }
 
+/* Phones keep the heading full width, then sit the accent mark and copy side
+   by side. Every mark shares one width, so all three copy columns begin on the
+   same axis. The wrapping row lets the existing title+symbol wrapper stay
+   display:contents without changing the Figma DOM. */
+@media (max-width: 767px) {
+  .mobile-layout .experience-panel [data-node-id='1169:621'] {
+    gap: calc(12 * var(--space-unit));
+    padding-block: calc(4 * var(--space-unit));
+  }
+  .mobile-layout .experience-panel :is([data-node-id='1169:623'], [data-node-id='1169:635'], [data-node-id='1169:648']) {
+    --chapter-mark-size: clamp(44px, 8svh, 64px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: flex-start;
+    column-gap: calc(28 * var(--space-unit));
+    row-gap: calc(8 * var(--space-unit));
+    padding-inline: calc(20 * var(--space-unit));
+    padding-block: calc(2 * var(--space-unit));
+  }
+  .mobile-layout .experience-panel :is([data-node-id='1169:624'], [data-node-id='1169:636'], [data-node-id='1169:649']) {
+    display: contents;
+  }
+  .mobile-layout .experience-panel :is([data-node-id='1169:625'], [data-node-id='1169:637'], [data-node-id='1169:650']) {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+  .mobile-layout .experience-panel :is([data-node-id='1169:626'], [data-node-id='1169:638']) {
+    flex: 0 0 var(--chapter-mark-size);
+    align-self: flex-start;
+    width: var(--chapter-mark-size);
+    height: auto;
+    aspect-ratio: 1;
+  }
+  .mobile-layout .experience-panel [data-node-id='1169:651'] {
+    flex: 0 0 var(--chapter-mark-size);
+    align-self: flex-start;
+    width: var(--chapter-mark-size);
+    height: auto;
+    aspect-ratio: 2;
+  }
+  .mobile-layout .experience-panel :is([data-node-id='1169:630'], [data-node-id='1169:643'], [data-node-id='1169:656']) {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    align-self: flex-start;
+  }
+}
+
+/* Short phones only tighten the vertical rhythm; the larger logo, type scale,
+   and horizontal inset are kept intact. */
+@media (max-width: 767px) and (max-height: 660px) {
+  .mobile-layout .experience-panel [data-node-id='1169:621'] {
+    gap: calc(10 * var(--space-unit));
+    padding-block: calc(2 * var(--space-unit));
+  }
+  .mobile-layout .experience-panel :is([data-node-id='1169:623'], [data-node-id='1169:635'], [data-node-id='1169:648']) {
+    column-gap: calc(24 * var(--space-unit));
+    row-gap: calc(4 * var(--space-unit));
+    padding-block: calc(1 * var(--space-unit));
+  }
+}
+
 /* A short, wide viewport needs columns rather than a taller phone stack. */
 @media (min-width: 600px) and (max-width: 1199px) and (max-height: 540px) {
   .mobile-layout .design-content { max-width: 960px; }
