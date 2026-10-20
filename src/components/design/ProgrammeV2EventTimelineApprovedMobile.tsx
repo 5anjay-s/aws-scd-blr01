@@ -182,7 +182,7 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
           </div>
         </div>
         <ScdFullWidthProgrammePhaseMobile className="d-fc2890d78c" programmeCategory="COMMUNITY" sequence="04" sessionSummary="Meet people across interests and industries. Food and refreshments are provided." sessionTitle="COMMUNITY CONNECTIONS" time="ALL DAY" />
-        <ScdFullWidthProgrammePhaseMobile className="d-fc2890d78c" programmeCategory="CLOSING" sequence="05" sessionSummary="Planned conclusion of the day. The conclusion time is approximate." sessionTitle="CLOSING PROGRAMME" time="APPROX. 5:00–5:30 PM" />
+        <ScdFullWidthProgrammePhaseMobile className="d-fc2890d78c" programmeCategory="CLOSING" sequence="05" sessionSummary="Planned conclusion of the day. The conclusion time is approximate." sessionTitle="CLOSING PROGRAMME" time="5:00–5:30 PM" />
       </div>
       <ProgrammeDivider />
       <div className="d-4a0d7dd9ea" data-node-id="866:8535" data-name="Programme / Keep exploring">

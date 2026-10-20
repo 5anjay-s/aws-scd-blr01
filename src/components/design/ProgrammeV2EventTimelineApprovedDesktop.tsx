@@ -201,7 +201,7 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
           </div>
         </div>
         <ScdFullWidthProgrammePhaseDesktop className="d-5bc03310bc" programmeCategory="COMMUNITY" sequence="04" sessionSummary="Meet people across interests and industries. Food and refreshments are provided." sessionTitle="COMMUNITY CONNECTIONS" time="ALL DAY" />
-        <ScdFullWidthProgrammePhaseDesktop className="d-5bc03310bc" programmeCategory="CLOSING" sequence="05" sessionSummary="Planned conclusion of the day. The conclusion time is approximate." sessionTitle="CLOSING PROGRAMME" time="APPROX. 5:00–5:30 PM" />
+        <ScdFullWidthProgrammePhaseDesktop className="d-5bc03310bc" programmeCategory="CLOSING" sequence="05" sessionSummary="Planned conclusion of the day. The conclusion time is approximate." sessionTitle="CLOSING PROGRAMME" time="5:00–5:30 PM" />
       </div>
       <ProgrammeDivider />
       <div className="d-8f9fa6c789" data-node-id="860:5239" data-name="Programme / Keep exploring">
