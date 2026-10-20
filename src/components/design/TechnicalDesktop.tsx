@@ -95,62 +95,62 @@ export default function TechnicalDesktop() {
         <div className="d-f7e6db2c74" data-node-id="874:8951" data-name="Programme / Three theme fields">
           <div className="d-0c4da33e5c" data-node-id="874:8952" data-name="SCD / Technical / Theme panel / Desktop">
             <p className="d-888b47fa83" data-node-id="I874:8952;667:2541">
-              01 / AWS SESSIONS & WORKSHOPS
+              01 / CLOUD
             </p>
             <p className="d-94d5a91ee2" data-node-id="I874:8952;667:2542">
-              CLOUD
+              IMPULSE ’26
             </p>
             <div className="d-c4064b08a6" data-node-id="I874:8952;667:2543" data-name="Theme / Rule" />
             <div className="d-d5153bf1ae" data-node-id="I874:8952;667:2544">
-              <p className="d-edce8460ce">Understand</p>
-              <p className="d-e64f4edba4">the cloud.</p>
+              <p className="d-edce8460ce">National-Level</p>
+              <p className="d-e64f4edba4">24-Hour Hackathon</p>
             </div>
             <p className="d-b2638fb3c2" data-node-id="I874:8952;667:2545">
-              Explore AWS through technical sessions and hands-on workshops on the main day at AWS Student Community Day Bengaluru 2026.
+              24-hour hackathon at Rangasthala, REVA University, Bengaluru.
             </p>
             <div className="d-3133ffc36f" data-node-id="I874:8952;667:2546">
-              <p className="d-ebed470a6c">FORMAT + SPEAKER</p>
-              <p className="d-d43f566f28">TO BE ANNOUNCED</p>
+              <p className="d-ebed470a6c">DATES</p>
+              <p className="d-d43f566f28">23-24 OCTOBER 2026 · 24 HOURS</p>
             </div>
           </div>
           <div className="d-88921b4168" data-node-id="874:8953" data-name="Theme / AI">
             <p className="d-888b47fa83" data-node-id="I874:8953;667:2541">
-              02 / CHATGPT WORKSHOP
+              02 / AI
             </p>
             <p className="d-94d5a91ee2" data-node-id="I874:8953;667:2542">
-              AI
+              ChatGPT Workshop
             </p>
             <div className="d-c4064b08a6" data-node-id="I874:8953;667:2543" data-name="Theme / Rule" />
             <div className="d-d5153bf1ae" data-node-id="I874:8953;667:2544">
-              <p className="d-edce8460ce">Ask what</p>
-              <p className="d-e64f4edba4">AI can do.</p>
+              <p className="d-edce8460ce">OpenAI Student</p>
+              <p className="d-e64f4edba4">Collective</p>
             </div>
             <p className="d-b2638fb3c2" data-node-id="I874:8953;667:2545">
-              Join the ChatGPT workshop by OpenAI Student Collective — one participant per team from IMPULSE ’26. Selected attendees receive one month of ChatGPT Plus.
+              Hands-on workshop for participants. Selected attendees receive one month of ChatGPT Plus.
             </p>
             <div className="d-3133ffc36f" data-node-id="I874:8953;667:2546">
-              <p className="d-ebed470a6c">FORMAT + SPEAKER</p>
-              <p className="d-d43f566f28">TO BE ANNOUNCED</p>
+              <p className="d-ebed470a6c">DATE</p>
+              <p className="d-d43f566f28">5 NOVEMBER 2026 · MAIN-DAY</p>
             </div>
           </div>
           <div className="d-1ce5ee9503" data-node-id="874:8954" data-name="Theme / BUILD">
             <p className="d-2a82521e63" data-node-id="I874:8954;667:2541">
-              03 / MONGODB WORKSHOPS
+              03 / BUILD
             </p>
             <p className="d-0f2274cd94" data-node-id="I874:8954;667:2542">
-              BUILD
+              MongoDB Workshop
             </p>
             <div className="d-fa05bef8aa" data-node-id="I874:8954;667:2543" data-name="Theme / Rule" />
             <div className="d-01b8dd4d38" data-node-id="I874:8954;667:2544">
-              <p className="d-edce8460ce">Make the</p>
-              <p className="d-e64f4edba4">next move.</p>
+              <p className="d-edce8460ce">Workshops &</p>
+              <p className="d-e64f4edba4">Sessions</p>
             </div>
             <p className="d-d53caec9f0" data-node-id="I874:8954;667:2545">
-              Join MongoDB for workshops and sessions in the technical programme. Session times and details to be announced.
+              Technical sessions and developer workshops hosted by MongoDB.
             </p>
             <div className="d-f056d2414f" data-node-id="I874:8954;667:2546">
-              <p className="d-ebed470a6c">FORMAT + SPEAKER</p>
-              <p className="d-d43f566f28">TO BE ANNOUNCED</p>
+              <p className="d-ebed470a6c">DATE</p>
+              <p className="d-d43f566f28">5 NOVEMBER 2026 · MAIN-DAY</p>
             </div>
           </div>
         </div>
@@ -172,33 +172,33 @@ export default function TechnicalDesktop() {
           <div className="d-3cb220a981" data-node-id="874:8961" data-name="Preparation / EXPERIENCE LEVEL">
             <div className="d-f8b122a797" data-node-id="874:8962" data-name="Rule" />
             <p className="d-b83d2d963b" data-node-id="874:8963">
-              PRE-SCD HACKATHON
+              MAIN-DAY EVENT
             </p>
             <p className="d-73728e76c4" data-node-id="874:8964">
-              IMPULSE ’26 · 23–24 OCT 2026
+              AWS SCD BLR · 5 NOV 2026
             </p>
           </div>
           <div className="d-3cb220a981" data-node-id="874:8965" data-name="Preparation / EQUIPMENT + SETUP">
             <div className="d-f8b122a797" data-node-id="874:8966" data-name="Rule" />
             <p className="d-b83d2d963b" data-node-id="874:8967">
-              HACKATHON VENUE
+              MAIN-DAY VENUE
             </p>
             <p className="d-73728e76c4" data-node-id="874:8968">
-              RANGSTHALA, REVA UNIVERSITY
+              REVA UNIVERSITY CAMPUS, BENGALURU
             </p>
           </div>
           <div className="d-3cb220a981" data-node-id="874:8969" data-name="Preparation / SESSION ACCESS">
             <div className="d-f8b122a797" data-node-id="874:8970" data-name="Rule" />
             <p className="d-b83d2d963b" data-node-id="874:8971">
-              CHATGPT PLUS CUTOFF
+              PREREQUISITES
             </p>
             <p className="d-73728e76c4" data-node-id="874:8972">
-              21 OCT 2026 · 10:00 AM IST
+              LAPTOP, CHARGER & VALID STUDENT ID
             </p>
           </div>
-          <SiteLink buttonTone="orange" className="d-44f977d6f9" data-node-id="874:8973" data-name="Action / Register for IMPULSE '26" href={siteLinks.hackathonLuma}>
+          <SiteLink buttonTone="orange" className="d-44f977d6f9" data-node-id="874:8973" data-name="Action / Get Main-Day Ticket" href={siteLinks.konfhub}>
             <p className="d-cf01328ee8" data-node-id="I874:8973;5:30">
-              Register on Luma
+              Get Main-Day Ticket
             </p>
             <div className="d-4725149c0e" data-node-id="I874:8973;15:32" data-name="Arrow">
               <img alt="" className="d-511e8f31d4" src={imgArrow1} />
