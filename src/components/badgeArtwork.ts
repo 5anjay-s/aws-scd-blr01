@@ -129,7 +129,7 @@ export function drawBadge(canvas: HTMLCanvasElement, art: Artwork, look: BadgeLo
   const dark = look === 'wave' || look === 'company';
   img('logo', 32, 30, 64, 36);
   lines(['AWS STUDENT', 'COMMUNITY DAY'], 120, 28, 14, dark ? white : navy, 'Geist Mono', 20);
-  lines(['BENGALURU', '06 NOV 2026'], 414, 33, 11, dark ? cyan : navy, 'Geist Mono', 15);
+  lines(['BENGALURU', '5 NOV 2026'], 414, 33, 11, dark ? cyan : navy, 'Geist Mono', 15);
 
   if (look === 'meet') {
     img('meetField', 262, 140, 278, 422);

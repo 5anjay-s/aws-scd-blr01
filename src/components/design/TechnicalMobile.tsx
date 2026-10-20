@@ -29,7 +29,7 @@ export default function TechnicalMobile() {
         </SiteLink>
         <div className="d-447a4f144a" data-node-id="874:9129">
           <p className="d-9f251d856d">01 / TECHNICAL</p>
-          <p className="d-8c8cd1946c">PROGRAMME PREVIEW</p>
+          <p className="d-8c8cd1946c">5 NOVEMBER 2026</p>
         </div>
         <div className="d-1b5595777a" data-node-id="874:9130" role="heading" aria-level={1}>
           <p className="d-00bdb0ea46">IDEAS INTO</p>
@@ -39,7 +39,7 @@ export default function TechnicalMobile() {
           <TrackArtwork kind="compile" className="d-511e8f31d4" src={imgArtworkCompileBracketsMobile} />
         </div>
         <p className="d-2c3b9cd2b0" data-node-id="874:9132">
-          Get closer to the cloud. Explore AI. Turn your curiosity into something you can build.
+          Explore cloud, AI, security, and software development, including AWS technical sessions and hands-on workshops on the main day.
         </p>
         <SiteLink buttonTone="orange" className="d-205df6f90e" data-node-id="874:9133" data-name="Action / Registration info" href={"/registration"}>
           <p className="d-cf01328ee8" data-node-id="I874:9133;5:30">
@@ -61,12 +61,12 @@ export default function TechnicalMobile() {
             <p className="d-e358ca9dbc">TO GO DEEPER.</p>
           </div>
           <p className="d-486b70b514" data-node-id="874:9138">
-            A first look at the themes. The final line-up, formats and timings will be announced.
+            AWS sessions and workshops, a ChatGPT workshop by OpenAI Student Collective, and workshops and sessions from MongoDB. Session times and details to be announced.
           </p>
         </div>
         <div className="d-8b1378b1cb" data-node-id="874:9139" data-name="SCD / Technical / Theme panel / Mobile">
           <p className="d-b795ba67a4" data-node-id="I874:9139;667:2567">
-            01 / CLOUD FOUNDATIONS
+            01 / AWS SESSIONS & WORKSHOPS
           </p>
           <p className="d-c7ecc424bd" data-node-id="I874:9139;667:2568">
             CLOUD
@@ -77,7 +77,7 @@ export default function TechnicalMobile() {
             <p className="d-2158fa6ddb">the cloud.</p>
           </div>
           <p className="d-5a1a09ea43" data-node-id="I874:9139;667:2571">
-            Explore the building blocks behind cloud technology — and how they can become the starting point for your next idea.
+            Explore AWS through technical sessions and hands-on workshops on the main day at AWS Student Community Day Bengaluru 2026.
           </p>
           <div className="d-b82fa5d8d7" data-node-id="I874:9139;667:2572">
             <p className="d-ebed470a6c">FORMAT + SPEAKER</p>
@@ -86,7 +86,7 @@ export default function TechnicalMobile() {
         </div>
         <div className="d-5ab761d0eb" data-node-id="874:9140" data-name="Theme / AI">
           <p className="d-b795ba67a4" data-node-id="I874:9140;667:2567">
-            02 / AI EXPLORATION
+            02 / CHATGPT WORKSHOP
           </p>
           <p className="d-c7ecc424bd" data-node-id="I874:9140;667:2568">
             AI
@@ -97,7 +97,7 @@ export default function TechnicalMobile() {
             <p className="d-2158fa6ddb">AI can do.</p>
           </div>
           <p className="d-5a1a09ea43" data-node-id="I874:9140;667:2571">
-            Follow your questions into the world of AI. Explore the ideas and tools that are opening up new ways to create.
+            Join the ChatGPT workshop by OpenAI Student Collective — one participant per team from IMPULSE ’26. Selected attendees receive one month of ChatGPT Plus.
           </p>
           <div className="d-b82fa5d8d7" data-node-id="I874:9140;667:2572">
             <p className="d-ebed470a6c">FORMAT + SPEAKER</p>
@@ -106,7 +106,7 @@ export default function TechnicalMobile() {
         </div>
         <div className="d-381cf3dbba" data-node-id="874:9141" data-name="Theme / BUILD">
           <p className="d-a4a5347c5b" data-node-id="I874:9141;667:2567">
-            03 / HANDS-ON BUILDING
+            03 / MONGODB WORKSHOPS
           </p>
           <p className="d-7ecd3c2bde" data-node-id="I874:9141;667:2568">
             BUILD
@@ -117,7 +117,7 @@ export default function TechnicalMobile() {
             <p className="d-2158fa6ddb">next move.</p>
           </div>
           <p className="d-c6f15078ce" data-node-id="I874:9141;667:2571">
-            Connect what you learn with what you want to make. Explore tools, experiment with ideas and discover your next project.
+            Join MongoDB for workshops and sessions in the technical programme. Session times and details to be announced.
           </p>
           <div className="d-3badf42354" data-node-id="I874:9141;667:2572">
             <p className="d-ebed470a6c">FORMAT + SPEAKER</p>
@@ -134,38 +134,38 @@ export default function TechnicalMobile() {
           <p className="d-e358ca9dbc">NEXT QUESTION.</p>
         </div>
         <p className="d-5a1a09ea43" data-node-id="874:9145">
-          Curious about cloud, AI or building with new tools? Preparation details will follow with the final programme.
+          Curious about cloud, AI or building with new tools? IMPULSE ’26 is the 24-hour pre-SCD hackathon — separate registration from your SCD ticket.
         </p>
         <div className="d-43f50fc4ff" data-node-id="874:9146" data-name="Preparation / EXPERIENCE LEVEL">
           <div className="d-b48d4df271" data-node-id="874:9147" data-name="Rule" />
           <p className="d-b795ba67a4" data-node-id="874:9148">
-            EXPERIENCE LEVEL
+            PRE-SCD HACKATHON
           </p>
           <p className="d-6d0816660e" data-node-id="874:9149">
-            TO BE ANNOUNCED
+            IMPULSE ’26 · 23–24 OCT 2026
           </p>
         </div>
         <div className="d-43f50fc4ff" data-node-id="874:9150" data-name="Preparation / EQUIPMENT + SETUP">
           <div className="d-b48d4df271" data-node-id="874:9151" data-name="Rule" />
           <p className="d-b795ba67a4" data-node-id="874:9152">
-            EQUIPMENT + SETUP
+            HACKATHON VENUE
           </p>
           <p className="d-6d0816660e" data-node-id="874:9153">
-            TO BE ANNOUNCED
+            RANGSTHALA, REVA UNIVERSITY
           </p>
         </div>
         <div className="d-43f50fc4ff" data-node-id="874:9154" data-name="Preparation / SESSION ACCESS">
           <div className="d-b48d4df271" data-node-id="874:9155" data-name="Rule" />
           <p className="d-b795ba67a4" data-node-id="874:9156">
-            SESSION ACCESS
+            CHATGPT PLUS CUTOFF
           </p>
           <p className="d-6d0816660e" data-node-id="874:9157">
-            TO BE ANNOUNCED
+            21 OCT 2026 · 10:00 AM IST
           </p>
         </div>
-        <SiteLink buttonTone="orange" className="d-205df6f90e" data-node-id="874:9158" data-name="Action / Registration info" href={"/registration"}>
+        <SiteLink buttonTone="orange" className="d-205df6f90e" data-node-id="874:9158" data-name="Action / Register for IMPULSE '26" href={siteLinks.hackathonLuma}>
           <p className="d-cf01328ee8" data-node-id="I874:9158;5:30">
-            Registration info
+            Register on Luma
           </p>
           <div className="d-4725149c0e" data-node-id="I874:9158;15:32" data-name="Arrow">
             <img alt="" className="d-511e8f31d4" src={imgArrow} />

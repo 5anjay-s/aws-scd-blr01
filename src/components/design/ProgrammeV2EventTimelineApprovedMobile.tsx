@@ -18,7 +18,7 @@ type ScdFullWidthProgrammePhaseMobileProps = {
   time?: string;
 };
 
-function ScdFullWidthProgrammePhaseMobile({ className, programmeCategory = "ARRIVAL", sequence = "01", sessionSummary = "Settle in. Meet the people you might build with next.", sessionTitle = "ARRIVE & CONNECT", time = "TBA" }: ScdFullWidthProgrammePhaseMobileProps) {
+function ScdFullWidthProgrammePhaseMobile({ className, programmeCategory = "CHECK-IN", sequence = "01", sessionSummary = "Event-day check-in begins.", sessionTitle = "CHECK-IN & COMMUNITY", time = "TBA" }: ScdFullWidthProgrammePhaseMobileProps) {
   return (
     <div className={className} data-node-id="685:2329" data-name="SCD / Full-width programme phase / Mobile">
       <div className="d-ea38f6601d" data-node-id="685:2330" data-name="Programme / Ledger rule" />
@@ -90,7 +90,7 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
       </div>
       <div className="d-1c9404c1d4" data-node-id="866:8496" data-name="Timeline / Status rail">
         <p className="d-4b43c08078" data-node-id="866:8497">
-          PROGRAMME PREVIEW
+          5 NOV 2026 / ALL TIMES IST
         </p>
         <p className="d-4b43c08078" data-node-id="866:8498">
           PROVISIONAL TIMINGS
@@ -118,7 +118,7 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
           </div>
         </div>
         <ScdFullWidthProgrammePhaseMobile className="d-fc2890d78c" time="08:00 AM" />
-        <ScdFullWidthProgrammePhaseMobile className="d-fc2890d78c" programmeCategory="OPENING" sequence="02" sessionSummary="A shared hello. A first look at what lies ahead." sessionTitle="START WITH POSSIBILITY" time="09:00 AM" />
+        <ScdFullWidthProgrammePhaseMobile className="d-fc2890d78c" programmeCategory="OPENING" sequence="02" sessionSummary="The programme begins at REVA University." sessionTitle="OPENING PROGRAMME" time="09:00 AM" />
         <div className="d-fc2890d78c" data-node-id="866:8513" data-name="Programme / 03 EXPLORE">
           <div className="d-ea38f6601d" data-node-id="866:8514" data-name="Programme / Ledger rule" />
           <div className="d-2a29c9d11d" data-node-id="866:8515" data-name="Phase / Metadata">
@@ -126,18 +126,18 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
               03
             </p>
             <p className="d-510a72407a" data-node-id="866:8517">
-              EXPLORE
+              TRACKS
             </p>
             <p className="d-cd228f785d" data-node-id="866:8518">
-              TIME / AFTER OPENING
+              TIME / AFTER THE OPENING
             </p>
           </div>
           <div className="d-7739a64de1" data-node-id="866:8519" data-name="Phase / Content">
             <p className="d-ba765cc2f2" data-node-id="866:8520">
-              FOLLOW YOUR CURIOSITY.
+              TWO PARALLEL TRACKS.
             </p>
             <p className="d-486b70b514" data-node-id="866:8521">
-              Cloud and code, or ideas and teamwork. Get a first look at both tracks.
+              Parallel sessions across the Technical and Non-Technical tracks.
             </p>
           </div>
           <div className="d-9973ee015d" data-node-id="866:8522" data-name="Programme / Two tracks">
@@ -147,7 +147,7 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
                   TECHNICAL
                 </p>
                 <p className="d-902df9c1ec" data-node-id="866:8526">
-                  Cloud / AI / Building
+                  Cloud / AI / Security
                 </p>
                 <SiteLink hoverTone="orange" buttonTone="navy" className="d-4ec8c19304" data-node-id="866:8527" data-name="Action / View details" href={"/technical"}>
                   <p className="d-7669a2de49" data-node-id="I866:8527;5:30">
@@ -163,7 +163,7 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
                   NON-TECHNICAL
                 </p>
                 <p className="d-902df9c1ec" data-node-id="866:8530">
-                  Ideas / Teamwork / Community
+                  Startups / Product / Leadership
                 </p>
                 <SiteLink hoverTone="lime" buttonTone="navy" className="d-4ec8c19304" data-node-id="866:8531" data-name="Action / View details" href={"/non-technical"}>
                   <p className="d-7669a2de49" data-node-id="I866:8531;5:30">
@@ -181,8 +181,8 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
             </div>
           </div>
         </div>
-        <ScdFullWidthProgrammePhaseMobile className="d-fc2890d78c" programmeCategory="COMMUNITY" sequence="04" sessionSummary="Trade discoveries. Keep the conversation going." sessionTitle="SHARE WHAT YOU FOUND" time="AFTERNOON" />
-        <ScdFullWidthProgrammePhaseMobile className="d-fc2890d78c" programmeCategory="CLOSING" sequence="05" sessionSummary="Leave with new ideas and a fresh starting point." sessionTitle="TAKE IT FORWARD" time="APPROX. 5:00–5:30 PM" />
+        <ScdFullWidthProgrammePhaseMobile className="d-fc2890d78c" programmeCategory="COMMUNITY" sequence="04" sessionSummary="Meet people across interests and industries. Food and refreshments are provided." sessionTitle="COMMUNITY CONNECTIONS" time="ALL DAY" />
+        <ScdFullWidthProgrammePhaseMobile className="d-fc2890d78c" programmeCategory="CLOSING" sequence="05" sessionSummary="Planned conclusion of the day. The conclusion time is approximate." sessionTitle="CLOSING PROGRAMME" time="APPROX. 5:00–5:30 PM" />
       </div>
       <ProgrammeDivider />
       <div className="d-4a0d7dd9ea" data-node-id="866:8535" data-name="Programme / Keep exploring">

@@ -2,6 +2,7 @@
 export const siteLinks = {
   meetup: 'https://www.meetup.com/aws-sbg-at-reva-university',
   meetupEvent: 'https://www.meetup.com/aws-sbg-at-reva-university/events/316557754/',
+  hackathonLuma: 'https://luma.com/t67kuo2c',
   konfhub: 'https://konfhub.com/aws-student-community-day-bengaluru-2026',
   linkedin: 'https://www.linkedin.com/company/aws-sbg-reva-university',
   instagram: 'https://www.instagram.com/aws.scd.blr',

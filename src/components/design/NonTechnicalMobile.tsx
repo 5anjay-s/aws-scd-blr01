@@ -31,7 +31,7 @@ export default function NonTechnicalMobile() {
           <p className="d-b593672e9c">THE CODE.</p>
         </div>
         <p className="d-9a93de92ab" data-node-id="880:9345">
-          Bring your perspective. Explore ideas, meet new people and make room for a different kind of challenge.
+          Explore the business and people side of technology through entrepreneurship, startup, management, and strategy conversations.
         </p>
         <SiteLink hoverTone="violet" buttonTone="navy" className="d-1ed1e68c5b" data-node-id="880:9346" data-name="Action / Explore the programme" href={"/#timeline"}>
           <p className="d-7669a2de49" data-node-id="I880:9346;5:30">
@@ -70,7 +70,7 @@ export default function NonTechnicalMobile() {
             <p className="d-b593672e9c">EXCHANGE.</p>
           </div>
           <p className="d-b4d7a1dfce" data-node-id="880:9354">
-            Ideas grow when different people get involved. Explore the kinds of experiences being considered for the non-technical track.
+            Speakers and sessions will be announced. Explore entrepreneurship, startups, management, business and product strategy, leadership and community.
           </p>
           <div className="d-a889512826" data-node-id="880:9355">
             <p className="d-ebed470a6c">THEMES BELOW</p>
@@ -91,10 +91,10 @@ export default function NonTechnicalMobile() {
             <p className="d-e358ca9dbc">TOGETHER.</p>
           </div>
           <p className="d-78f8308966" data-node-id="880:9361">
-            Share a problem, hear a new point of view and work towards a response together. A space for teamwork and clear communication.
+            Explore entrepreneurship and startups — how ideas become ventures and how teams build them.
           </p>
           <div className="d-6845d6050e" data-node-id="880:9362">
-            <p className="d-ebed470a6c">TEAMWORK / COMMUNICATION</p>
+            <p className="d-ebed470a6c">ENTREPRENEURSHIP / STARTUPS</p>
             <p className="d-d43f566f28">FORMAT TO BE ANNOUNCED</p>
           </div>
         </div>
@@ -112,10 +112,10 @@ export default function NonTechnicalMobile() {
             <p className="d-e358ca9dbc">FOR IDEAS.</p>
           </div>
           <p className="d-78f8308966" data-node-id="880:9368">
-            Look at a familiar challenge from an unexpected angle. Explore creative thinking, shape a concept and make your perspective heard.
+            Explore management, business and product strategy — how products, teams and companies take shape.
           </p>
           <div className="d-6845d6050e" data-node-id="880:9369">
-            <p className="d-ebed470a6c">CREATIVITY / STORYTELLING</p>
+            <p className="d-ebed470a6c">BUSINESS / PRODUCT STRATEGY</p>
             <p className="d-d43f566f28">FORMAT TO BE ANNOUNCED</p>
           </div>
         </div>
@@ -133,10 +133,10 @@ export default function NonTechnicalMobile() {
             <p className="d-e358ca9dbc">PEOPLE.</p>
           </div>
           <p className="d-78f8308966" data-node-id="880:9375">
-            Start a conversation beyond your usual circle. Exchange interests, discover different perspectives and meet others in the community.
+            Explore leadership and community — meet people across interests and industries.
           </p>
           <div className="d-6845d6050e" data-node-id="880:9376">
-            <p className="d-ebed470a6c">CONVERSATION / COMMUNITY</p>
+            <p className="d-ebed470a6c">LEADERSHIP / COMMUNITY</p>
             <p className="d-d43f566f28">FORMAT TO BE ANNOUNCED</p>
           </div>
         </div>
@@ -151,7 +151,7 @@ export default function NonTechnicalMobile() {
           <p className="d-e358ca9dbc">OF THINKING.</p>
         </div>
         <p className="d-9a93de92ab" data-node-id="880:9380">
-          The programme is taking shape. Check back for the activity line-up and everything you need to take part.
+          Speakers and sessions will be announced. Check back for the full line-up and everything you need to take part.
         </p>
         <div className="d-ffe19a0b04" data-node-id="880:9381" data-name="Participation / Before you join">
           <p className="d-b24c1a3b18" data-node-id="880:9382">
@@ -160,7 +160,7 @@ export default function NonTechnicalMobile() {
           <div className="d-372174b68b" data-node-id="880:9383" data-name="Rule / Activity line-up" />
           <div className="d-9720deff99" data-node-id="880:9384" data-name="Detail / Activity line-up">
             <p className="d-588c372a58" data-node-id="880:9385">
-              Activity line-up
+              Sessions & speakers
             </p>
             <p className="d-391553d552" data-node-id="880:9386">
               To be announced
@@ -168,16 +168,16 @@ export default function NonTechnicalMobile() {
           </div>
           <div className="d-372174b68b" data-node-id="880:9387" data-name="Rule / Formats & participation" />
           <div className="d-9720deff99" data-node-id="880:9388" data-name="Detail / Formats & participation">
-            <p className="d-588c372a58" data-node-id="880:9389">{`Formats & participation`}</p>
+            <p className="d-588c372a58" data-node-id="880:9389">{`Expected topics`}</p>
             <p className="d-391553d552" data-node-id="880:9390">
-              To be announced
+              Entrepreneurship · Startups · Management · Product strategy · Leadership · Community
             </p>
           </div>
           <div className="d-372174b68b" data-node-id="880:9391" data-name="Rule / Schedule & location" />
           <div className="d-9720deff99" data-node-id="880:9392" data-name="Detail / Schedule & location">
             <p className="d-588c372a58" data-node-id="880:9393">{`Schedule & location`}</p>
             <p className="d-391553d552" data-node-id="880:9394">
-              To be announced
+              5 November 2026 · REVA University, Bengaluru
             </p>
           </div>
         </div>
