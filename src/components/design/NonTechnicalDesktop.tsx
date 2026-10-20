@@ -56,7 +56,7 @@ export default function NonTechnicalDesktop() {
               <p className="d-13cc595302">THE CODE.</p>
             </div>
             <p className="d-160b8bdb33" data-node-id="874:9236">
-              Bring your perspective. Explore ideas, meet new people and make room for a different kind of challenge.
+              Explore the business and people side of technology through entrepreneurship, startup, management, and strategy conversations.
             </p>
             <SiteLink hoverTone="violet" buttonTone="navy" className="d-271d08db71" data-node-id="874:9237" data-name="Action / Explore the programme" href={"/#timeline"}>
               <p className="d-7669a2de49" data-node-id="I874:9237;5:30">
@@ -99,7 +99,7 @@ export default function NonTechnicalDesktop() {
           </div>
           <div className="d-f1679ad66c" data-node-id="874:9249" data-name="Programme / Description group">
             <p className="d-d429737306" data-node-id="874:9250">
-              Ideas grow when different people get involved. Here is a preview of the kinds of experiences being explored for the non-technical track.
+              Speakers and sessions will be announced. Explore entrepreneurship, startups, management, business and product strategy, leadership and community.
             </p>
             <p className="d-2fb5a0fa12" data-node-id="874:9251">
               THEMES BELOW / FORMATS TO BE ANNOUNCED
@@ -123,10 +123,10 @@ export default function NonTechnicalDesktop() {
           </div>
           <div className="d-2c555b0457" data-node-id="874:9258" data-name="Chapter / Details">
             <p className="d-8acd9593db" data-node-id="874:9259">
-              Share a problem, hear a new point of view and work towards a response together. A space for teamwork and clear communication.
+              Explore entrepreneurship and startups — how ideas become ventures and how teams build them.
             </p>
             <div className="d-a8db87501d" data-node-id="874:9260">
-              <p className="d-ebed470a6c">TEAMWORK / COMMUNICATION</p>
+              <p className="d-ebed470a6c">ENTREPRENEURSHIP / STARTUPS</p>
               <p className="d-d43f566f28">FORMAT TO BE ANNOUNCED</p>
             </div>
           </div>
@@ -148,10 +148,10 @@ export default function NonTechnicalDesktop() {
           </div>
           <div className="d-fd6b592ca0" data-node-id="874:9267" data-name="Chapter / Details">
             <p className="d-8acd9593db" data-node-id="874:9268">
-              Look at a familiar challenge from an unexpected angle. Explore creative thinking, shape a concept and make your perspective heard.
+              Explore management, business and product strategy — how products, teams and companies take shape.
             </p>
             <div className="d-a8db87501d" data-node-id="874:9269">
-              <p className="d-ebed470a6c">CREATIVITY / STORYTELLING</p>
+              <p className="d-ebed470a6c">BUSINESS / PRODUCT STRATEGY</p>
               <p className="d-d43f566f28">FORMAT TO BE ANNOUNCED</p>
             </div>
           </div>
@@ -173,10 +173,10 @@ export default function NonTechnicalDesktop() {
           </div>
           <div className="d-2c555b0457" data-node-id="874:9276" data-name="Chapter / Details">
             <p className="d-8acd9593db" data-node-id="874:9277">
-              Start a conversation beyond your usual circle. Exchange interests, discover different perspectives and meet others in the community.
+              Explore leadership and community — meet people across interests and industries.
             </p>
             <div className="d-a8db87501d" data-node-id="874:9278">
-              <p className="d-ebed470a6c">CONVERSATION / COMMUNITY</p>
+              <p className="d-ebed470a6c">LEADERSHIP / COMMUNITY</p>
               <p className="d-d43f566f28">FORMAT TO BE ANNOUNCED</p>
             </div>
           </div>
@@ -192,7 +192,7 @@ export default function NonTechnicalDesktop() {
             <p className="d-287d1f8085">OF THINKING.</p>
           </div>
           <p className="d-5007ffeed4" data-node-id="874:9283">
-            The programme is taking shape. Check back for the activity line-up and everything you need to take part.
+            Speakers and sessions will be announced. Check back for the full line-up and everything you need to take part.
           </p>
           <SiteLink hoverTone="violet" buttonTone="orange" className="d-f1b2e9aab1" data-node-id="874:9284" data-name="Action / Registration info" href={"/registration"}>
             <p className="d-cf01328ee8" data-node-id="I874:9284;5:30">
@@ -210,7 +210,7 @@ export default function NonTechnicalDesktop() {
           <div className="d-c143a98bc5" data-node-id="874:9287" data-name="Rule / Activity line-up" />
           <div className="d-b771137754" data-node-id="874:9288" data-name="Detail / Activity line-up">
             <p className="d-f1ab926c19" data-node-id="874:9289">
-              Activity line-up
+              Sessions & speakers
             </p>
             <p className="d-07bbff703b" data-node-id="874:9290">
               To be announced
@@ -218,16 +218,16 @@ export default function NonTechnicalDesktop() {
           </div>
           <div className="d-c143a98bc5" data-node-id="874:9291" data-name="Rule / Formats & participation" />
           <div className="d-b771137754" data-node-id="874:9292" data-name="Detail / Formats & participation">
-            <p className="d-f1ab926c19" data-node-id="874:9293">{`Formats & participation`}</p>
+            <p className="d-f1ab926c19" data-node-id="874:9293">{`Expected topics`}</p>
             <p className="d-07bbff703b" data-node-id="874:9294">
-              To be announced
+              Entrepreneurship · Startups · Management · Product strategy · Leadership · Community
             </p>
           </div>
           <div className="d-c143a98bc5" data-node-id="874:9295" data-name="Rule / Schedule & location" />
           <div className="d-b771137754" data-node-id="874:9296" data-name="Detail / Schedule & location">
             <p className="d-f1ab926c19" data-node-id="874:9297">{`Schedule & location`}</p>
             <p className="d-07bbff703b" data-node-id="874:9298">
-              To be announced
+              5 November 2026 · REVA University, Bengaluru
             </p>
           </div>
         </div>

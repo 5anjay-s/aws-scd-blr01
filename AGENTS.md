@@ -1,6 +1,12 @@
 # Project Guide
 
-This is the AWS Student Community Day website, built with React 19, TypeScript, Vite, and GSAP. The current website uses npm and package-lock.json. Figma provides the original artwork and compositions; apply the user's approved design changes to both responsive variants.
+This is the AWS Student Community Day website, built with React 19, TypeScript, Vite, and GSAP. The project uses Bun and `bun.lock`. Figma provides the original artwork and compositions; apply the user's approved design changes to both responsive variants.
+
+## Package manager
+
+Use Bun for every install, script, and test. Do not use npm, yarn, or pnpm, and do not create or commit a `package-lock.json`, `yarn.lock`, or `pnpm-lock.yaml`.
+
+Before running any project command, check `bun --version`. If Bun is not installed, stop and tell the user to install it from <https://bun.sh> before continuing. Never fall back to npm.
 
 ## Code map
 
@@ -15,10 +21,11 @@ This is the AWS Student Community Day website, built with React 19, TypeScript, 
 
 ## Commands
 
-- `npm ci` installs the locked dependencies.
-- `npm run dev` starts Vite.
-- `npm run typecheck` checks TypeScript, including unused locals and parameters.
-- `npm test` checks routing and artwork animation helpers.
-- `npm run build` typechecks and creates the production build.
+- `bun install` installs the dependencies locked in `bun.lock`.
+- `bun run dev` starts Vite.
+- `bun run typecheck` checks TypeScript, including unused locals and parameters.
+- `bun test` checks routing and artwork animation helpers.
+- `bun run build` typechecks and creates the production build.
+- `bun install --frozen-lockfile` installs exact locked versions in CI.
 
 Keep shared behavior in `src/components/`, compositions in `src/components/design/`, and route definitions in `src/page-config.ts` and `src/navigation.ts`. Preserve Figma node IDs, original artwork, and desktop/mobile behavior. See `README.md` for setup and animation details.

@@ -18,7 +18,7 @@ type ScdFullWidthProgrammePhaseDesktopProps = {
   time?: string;
 };
 
-function ScdFullWidthProgrammePhaseDesktop({ className, programmeCategory = "ARRIVAL", sequence = "01", sessionSummary = "Settle in. Meet the people you might build with next.", sessionTitle = "ARRIVE & CONNECT", time = "TBA" }: ScdFullWidthProgrammePhaseDesktopProps) {
+function ScdFullWidthProgrammePhaseDesktop({ className, programmeCategory = "CHECK-IN", sequence = "01", sessionSummary = "Event-day check-in begins.", sessionTitle = "CHECK-IN & COMMUNITY", time = "TBA" }: ScdFullWidthProgrammePhaseDesktopProps) {
   return (
     <div className={className} data-node-id="685:2230" data-name="SCD / Full-width programme phase / Desktop">
       <div className="d-af7b482fec" data-node-id="685:2231" data-name="Programme / Ledger rule" />
@@ -100,7 +100,7 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
       </div>
       <div className="d-4d6088a1ba" data-node-id="860:5195" data-name="Timeline / Status rail">
         <p className="d-595f2e21a8" data-node-id="860:5196">
-          PROGRAMME PREVIEW
+          5 NOV 2026 / ALL TIMES IST
         </p>
         <p className="d-4c830edfb9" data-node-id="860:5197">
           PROVISIONAL TIMINGS
@@ -127,7 +127,7 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
           </div>
         </div>
         <ScdFullWidthProgrammePhaseDesktop className="d-5bc03310bc" time="08:00 AM" />
-        <ScdFullWidthProgrammePhaseDesktop className="d-5bc03310bc" programmeCategory="OPENING" sequence="02" sessionSummary="A shared hello. A first look at what lies ahead." sessionTitle="START WITH POSSIBILITY" time="09:00 AM" />
+        <ScdFullWidthProgrammePhaseDesktop className="d-5bc03310bc" programmeCategory="OPENING" sequence="02" sessionSummary="The programme begins at REVA University." sessionTitle="OPENING PROGRAMME" time="09:00 AM" />
         <div className="d-5bc03310bc" data-node-id="860:5212" data-name="Programme / 03 EXPLORE">
           <div className="d-af7b482fec" data-node-id="860:5213" data-name="Programme / Ledger rule" />
           <div className="d-4f3c7894ae" data-node-id="860:5214" data-name="Phase / Ledger columns">
@@ -139,15 +139,15 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
             </div>
             <div className="d-14a2e5d967" data-node-id="860:5218" data-name="Phase / Heading">
               <p className="d-aed963120d" data-node-id="860:5219">
-                EXPLORE
+                TRACKS
               </p>
               <p className="d-a3f0e2bf2e" data-node-id="860:5220">
-                FOLLOW YOUR CURIOSITY.
+                TWO PARALLEL TRACKS.
               </p>
             </div>
             <div className="d-16e92d0fc7" data-node-id="860:5221" data-name="Phase / Description">
               <p className="d-0c8cd4180e" data-node-id="860:5222">
-                Cloud and code, or ideas and teamwork. Get a first look at both tracks.
+                Parallel sessions across the Technical and Non-Technical tracks.
               </p>
             </div>
             <div className="d-0d46dca5e4" data-node-id="860:5223" data-name="Phase / Timing">
@@ -155,7 +155,7 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
                 TIME
               </p>
               <p className="d-dab1a99bdb" data-node-id="860:5225">
-                AFTER OPENING
+                AFTER THE OPENING
               </p>
             </div>
           </div>
@@ -166,7 +166,7 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
                   TECHNICAL
                 </p>
                 <p className="d-7b5e75c7c6" data-node-id="860:5230">
-                  Cloud / AI / Building
+                  Cloud / AI / Security
                 </p>
                 <SiteLink hoverTone="orange" buttonTone="navy" className="d-9486bf8b78" data-node-id="860:5231" data-name="Action / View details" href={"/technical"}>
                   <p className="d-7a0f1f17eb" data-node-id="I860:5231;5:30">
@@ -182,7 +182,7 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
                   NON-TECHNICAL
                 </p>
                 <p className="d-7b5e75c7c6" data-node-id="860:5234">
-                  Ideas / Teamwork / Community
+                  Startups / Product / Leadership
                 </p>
                 <SiteLink hoverTone="lime" buttonTone="navy" className="d-9486bf8b78" data-node-id="860:5235" data-name="Action / View details" href={"/non-technical"}>
                   <p className="d-7a0f1f17eb" data-node-id="I860:5235;5:30">
@@ -200,8 +200,8 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
             </div>
           </div>
         </div>
-        <ScdFullWidthProgrammePhaseDesktop className="d-5bc03310bc" programmeCategory="COMMUNITY" sequence="04" sessionSummary="Trade discoveries. Keep the conversation going." sessionTitle="SHARE WHAT YOU FOUND" time="AFTERNOON" />
-        <ScdFullWidthProgrammePhaseDesktop className="d-5bc03310bc" programmeCategory="CLOSING" sequence="05" sessionSummary="Leave with new ideas and a fresh starting point." sessionTitle="TAKE IT FORWARD" time="APPROX. 5:00–5:30 PM" />
+        <ScdFullWidthProgrammePhaseDesktop className="d-5bc03310bc" programmeCategory="COMMUNITY" sequence="04" sessionSummary="Meet people across interests and industries. Food and refreshments are provided." sessionTitle="COMMUNITY CONNECTIONS" time="ALL DAY" />
+        <ScdFullWidthProgrammePhaseDesktop className="d-5bc03310bc" programmeCategory="CLOSING" sequence="05" sessionSummary="Planned conclusion of the day. The conclusion time is approximate." sessionTitle="CLOSING PROGRAMME" time="5:00–5:30 PM" />
       </div>
       <ProgrammeDivider />
       <div className="d-8f9fa6c789" data-node-id="860:5239" data-name="Programme / Keep exploring">

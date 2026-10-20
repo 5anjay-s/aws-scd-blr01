@@ -91,7 +91,7 @@ export default function ProgrammeV2ChooseYourTrackApprovedDesktop() {
               <p className="d-58de503319">NON-</p>
               <p className="d-39cfb050ad">TECHNICAL</p>
             </div>
-            <p className="d-160b8bdb33" data-node-id="860:5133">{`Ideas, teamwork & shared perspectives.`}</p>
+            <p className="d-160b8bdb33" data-node-id="860:5133">{`Startups, management & product strategy.`}</p>
             <SiteLink hoverTone="lime" buttonTone="navy" className="d-3ea4699496" data-node-id="860:5134" data-name="Action / Explore non-technical" href={"/non-technical"}>
               <p className="d-7a0f1f17eb" data-node-id="I860:5134;5:30">
                 Explore non-technical

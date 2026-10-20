@@ -183,6 +183,26 @@
   .mobile-layout .design-content [data-node-id='1169:533'] { min-height: clamp(80px, 14svh, 104px); }
   .mobile-layout .design-content [data-node-id='1169:588'] { padding-block: 12px; gap: 8px; }
 }
+/* Phones stack the masthead three rows deep. Arcade Classic fills roughly half
+   of its em box, so the phone view needs tighter optical leading than tablets.
+   The cloud is taller than the opening row; recover that height before setting
+   the next line, then trim the remaining space under the smaller row-one type. */
+@media (max-width: 767px) {
+  .mobile-layout .hero-title-display {
+    --hero-line-gap: 0.02em;
+    --hero-line-height: 0.7;
+    --hero-cloud-size: 17%;
+    --hero-optical-trim: 0.08em;
+    line-height: var(--hero-line-height);
+  }
+  .mobile-layout .hero-title-lower {
+    margin-top: calc(var(--hero-line-gap) - 0.25 * (var(--hero-cloud-size) * 0.75 - var(--hero-line-height) * 1em) - var(--hero-optical-trim));
+  }
+  .mobile-layout .hero-title-last-row {
+    min-height: 0;
+    margin-top: var(--hero-line-gap);
+  }
+}
 /* Track introductions end at a screen boundary when their content fits. */
 .mobile-layout .design-content [data-node-id='874:9127'],
 .mobile-layout .design-content [data-node-id='880:9342'] { min-height: var(--page-height); justify-content: space-between; }
@@ -386,10 +406,6 @@
 .mobile-layout .design-content .mobile-speaker-caption > div p { font-size: 13px; line-height: 1.5; }
 .mobile-layout .design-content .mobile-speaker-caption [data-node-id='1170:595'] { flex-direction: column; align-items: flex-start; gap: 12px; }
 .mobile-layout .design-content .mobile-speaker-caption [data-node-id='1170:597'] { width: 48px; height: 36px; align-self: flex-end; }
-/* These wrappers crop Figma's larger divider export, not the repeated CSS border. */
-.mobile-layout .design-content .d-d2efcd5d06,
-.mobile-layout .design-content .d-11f997cef7,
-.mobile-layout .design-content .d-74ac1ded28,
 /* Preserve the coordinate system inside the ticket illustration. */
 .mobile-layout .design-content [data-node-id='1265:3122'] { --design-unit: var(--space-unit); width: min(100%, 390px); height: calc(984 * var(--space-unit)); margin-inline: auto; }
 .mobile-layout .design-content [data-node-id='1265:3127'] { top: calc(48 * var(--space-unit)); }
@@ -969,9 +985,35 @@
 }
 .desktop-layout .design-content .hero-masthead { padding-block: clamp(12px, 2svh, 28px); }
 .desktop-layout .hero-title-kicker { margin-bottom: clamp(12px, 2svh, 24px); }
-.desktop-layout .hero-title-display { font-size: min(11.2cqw, 12svh, 160px); }
-.desktop-layout .hero-title-lower { margin-top: 1.5svh; }
-.desktop-layout .hero-title-last-row { margin-top: 2svh; }
+/* Arcade Classic fills only 0.563em of its em box, so the 0.76 leading and the
+   svh row margins read as wide gaps. Keep the rhythm in em so the stacked lines
+   hold the same optical spacing at every desktop height. */
+.desktop-layout .hero-title-display {
+  --hero-line-gap: 0.02em;
+  --hero-line-height: 0.7;
+  --hero-cloud-size: min(1.6em, 13%);
+  font-size: min(11.2cqw, 12svh, 160px);
+  line-height: var(--hero-line-height);
+}
+/* Row one is as tall as the cloud, so recover half of that extra height and
+   keep both gaps in step. Percentages here resolve against the same width as
+   the cloud, and em against the title size. */
+.desktop-layout .hero-title-lower {
+  margin-top: calc(var(--hero-line-gap) - 0.25 * (var(--hero-cloud-size) * 0.75 - var(--hero-line-height) * 1em));
+}
+/* BENGALURU keeps its column, while DAY sits exactly one glyph space before it,
+   so the pair never drifts when the title size changes. */
+.desktop-layout .hero-title-last-row {
+  --hero-word-space: 0.14em; /* Arcade Classic's 0.128em space + tracking */
+  margin-top: var(--hero-line-gap);
+}
+.desktop-layout .hero-word--day {
+  justify-self: end;
+  margin-right: var(--hero-word-space);
+}
+/* Size the cloud against the type (capped at its original 13% width) so it
+   cannot stretch the first gap on short desktops or grow over the note. */
+.desktop-layout .hero-cloud { width: var(--hero-cloud-size); }
 .desktop-layout .hero-title-note { top: 42%; font-size: clamp(12px, 1.6svh, 15px); gap: 12px; }
 .desktop-layout .design-content [data-node-id='860:5009'] { min-height: 0; }
 .desktop-layout .design-content [data-node-id='860:5064'] { padding: clamp(16px, 2.5svh, 32px); gap: clamp(10px, 1.8svh, 24px); justify-content: center; }
@@ -993,8 +1035,16 @@
 .desktop-layout .experience-panel [data-node-id='860:5084'] { --intro-spark-size: clamp(56px, 8svh, 96px); width: var(--intro-spark-size); height: var(--intro-spark-size); bottom: calc(32px + var(--intro-spark-size) / 4); }
 .desktop-layout .experience-panel [data-node-id='920:3377'] { height: 32px; margin-top: 0; background-size: auto 32px; }
 .desktop-layout .experience-panel [data-node-id='860:5085'] { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; height: 100%; padding: 12px 48px; gap: 8px; }
-.desktop-layout .experience-panel [data-node-id='860:5087'] { display: grid; grid-template-rows: repeat(3, minmax(0, 1fr)); height: 100%; width: 100%; gap: 8px; }
-.desktop-layout .experience-panel :is([data-node-id='860:5088'], [data-node-id='860:5093'], [data-node-id='860:5098']) { display: grid; grid-template-columns: 1fr min(16svh, 160px) 1.3fr; gap: 24px; width: 100%; height: 100%; min-height: 0; padding: 12px 24px; }
+/* The three bands share 1fr rows, so a wider gap shortens each band instead of
+   growing the panel. Trimming the vertical padding by 4px per side keeps every
+   band's inner content box the same while the panel still fits one viewport. */
+.desktop-layout .experience-panel [data-node-id='860:5087'] {
+  --chapter-gap: calc(20 * var(--space-unit));
+  --chapter-padding-block: calc(8 * var(--space-unit));
+  display: grid; grid-template-rows: repeat(3, minmax(0, 1fr)); height: 100%; width: 100%;
+  gap: var(--chapter-gap);
+}
+.desktop-layout .experience-panel :is([data-node-id='860:5088'], [data-node-id='860:5093'], [data-node-id='860:5098']) { display: grid; grid-template-columns: 1fr min(16svh, 160px) 1.3fr; gap: 24px; width: 100%; height: 100%; min-height: 0; padding: var(--chapter-padding-block) 24px; }
 .desktop-layout .experience-panel :is([data-node-id='860:5089'], [data-node-id='860:5094'], [data-node-id='860:5099']) { font-size: clamp(32px, 6svh, 64px); width: auto; }
 .desktop-layout .experience-panel :is([data-node-id='860:5090'], [data-node-id='860:5095'], [data-node-id='860:5100']) { grid-column: 3; grid-row: 1; width: 100%; font-size: clamp(14px, 1.6svh, 17px); }
 /* Keep each accent's original proportions, including the animated SVG layer. */
@@ -1018,7 +1068,14 @@
 .mobile-layout .experience-panel [data-node-id='1169:617'] { font-size: clamp(10px, 1.4svh, 13px); width: 100%; }
 .mobile-layout .experience-panel [data-node-id='1169:617'] > p { line-height: 1.3; }
 .mobile-layout .experience-panel :is([data-node-id='1169:618'], [data-node-id='1169:619']) { height: 20px; }
-.mobile-layout .experience-panel [data-node-id='1169:619'] { background-size: auto 20px; }
+/* The divider already repeats at 100vw; let it escape the Figma-sized wrapper
+   instead of being cropped by that wrapper's overflow clip. */
+.mobile-layout .experience-panel [data-node-id='1169:618'] { overflow: visible; }
+.mobile-layout .experience-panel [data-node-id='1169:619'] {
+  width: 100vw;
+  left: calc(50% - 50vw);
+  background-size: auto 20px;
+}
 .mobile-layout .experience-panel [data-node-id='1168:493'] { height: 100%; }
 .mobile-layout .experience-panel [data-node-id='1169:621'] { display: grid; grid-template-rows: auto repeat(3, minmax(0, 1fr)) auto; gap: 6px; padding: 10px 20px; height: 100%; width: 100%; }
 .mobile-layout .experience-panel :is([data-node-id='1169:622'], [data-node-id='1169:661']) { font-size: 9px; width: 100%; }
@@ -1116,6 +1173,71 @@
   .mobile-layout .experience-panel [data-node-id='1169:621'] { padding-inline: 16px; }
   .mobile-layout .experience-panel :is([data-node-id='1169:623'], [data-node-id='1169:635'], [data-node-id='1169:648']) { padding-block: 6px; }
   .mobile-layout .experience-panel :is([data-node-id='1169:630'], [data-node-id='1169:643'], [data-node-id='1169:656']) { line-height: 1.25; }
+}
+
+/* Phones keep the heading full width, then sit the accent mark and copy side
+   by side. Every mark shares one width, so all three copy columns begin on the
+   same axis. The wrapping row lets the existing title+symbol wrapper stay
+   display:contents without changing the Figma DOM. */
+@media (max-width: 767px) {
+  .mobile-layout .experience-panel [data-node-id='1169:621'] {
+    gap: calc(12 * var(--space-unit));
+    padding-block: calc(4 * var(--space-unit));
+  }
+  .mobile-layout .experience-panel :is([data-node-id='1169:623'], [data-node-id='1169:635'], [data-node-id='1169:648']) {
+    --chapter-mark-size: clamp(44px, 8svh, 64px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: flex-start;
+    column-gap: calc(28 * var(--space-unit));
+    row-gap: calc(8 * var(--space-unit));
+    padding-inline: calc(20 * var(--space-unit));
+    padding-block: calc(2 * var(--space-unit));
+  }
+  .mobile-layout .experience-panel :is([data-node-id='1169:624'], [data-node-id='1169:636'], [data-node-id='1169:649']) {
+    display: contents;
+  }
+  .mobile-layout .experience-panel :is([data-node-id='1169:625'], [data-node-id='1169:637'], [data-node-id='1169:650']) {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+  .mobile-layout .experience-panel :is([data-node-id='1169:626'], [data-node-id='1169:638']) {
+    flex: 0 0 var(--chapter-mark-size);
+    align-self: flex-start;
+    width: var(--chapter-mark-size);
+    height: auto;
+    aspect-ratio: 1;
+  }
+  .mobile-layout .experience-panel [data-node-id='1169:651'] {
+    flex: 0 0 var(--chapter-mark-size);
+    align-self: flex-start;
+    width: var(--chapter-mark-size);
+    height: auto;
+    aspect-ratio: 2;
+  }
+  .mobile-layout .experience-panel :is([data-node-id='1169:630'], [data-node-id='1169:643'], [data-node-id='1169:656']) {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    align-self: flex-start;
+  }
+}
+
+/* Short phones only tighten the vertical rhythm; the larger logo, type scale,
+   and horizontal inset are kept intact. */
+@media (max-width: 767px) and (max-height: 660px) {
+  .mobile-layout .experience-panel [data-node-id='1169:621'] {
+    gap: calc(10 * var(--space-unit));
+    padding-block: calc(2 * var(--space-unit));
+  }
+  .mobile-layout .experience-panel :is([data-node-id='1169:623'], [data-node-id='1169:635'], [data-node-id='1169:648']) {
+    column-gap: calc(24 * var(--space-unit));
+    row-gap: calc(4 * var(--space-unit));
+    padding-block: calc(1 * var(--space-unit));
+  }
 }
 
 /* A short, wide viewport needs columns rather than a taller phone stack. */
