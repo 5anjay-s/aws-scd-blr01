@@ -183,6 +183,26 @@
   .mobile-layout .design-content [data-node-id='1169:533'] { min-height: clamp(80px, 14svh, 104px); }
   .mobile-layout .design-content [data-node-id='1169:588'] { padding-block: 12px; gap: 8px; }
 }
+/* Phones stack the masthead three rows deep. Arcade Classic fills roughly half
+   of its em box, so the phone view needs tighter optical leading than tablets.
+   The cloud is taller than the opening row; recover that height before setting
+   the next line, then trim the remaining space under the smaller row-one type. */
+@media (max-width: 767px) {
+  .mobile-layout .hero-title-display {
+    --hero-line-gap: 0.02em;
+    --hero-line-height: 0.7;
+    --hero-cloud-size: 17%;
+    --hero-optical-trim: 0.08em;
+    line-height: var(--hero-line-height);
+  }
+  .mobile-layout .hero-title-lower {
+    margin-top: calc(var(--hero-line-gap) - 0.25 * (var(--hero-cloud-size) * 0.75 - var(--hero-line-height) * 1em) - var(--hero-optical-trim));
+  }
+  .mobile-layout .hero-title-last-row {
+    min-height: 0;
+    margin-top: var(--hero-line-gap);
+  }
+}
 /* Track introductions end at a screen boundary when their content fits. */
 .mobile-layout .design-content [data-node-id='874:9127'],
 .mobile-layout .design-content [data-node-id='880:9342'] { min-height: var(--page-height); justify-content: space-between; }
