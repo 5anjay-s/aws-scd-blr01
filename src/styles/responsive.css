@@ -1072,7 +1072,14 @@
 .mobile-layout .experience-panel [data-node-id='1169:617'] { font-size: clamp(10px, 1.4svh, 13px); width: 100%; }
 .mobile-layout .experience-panel [data-node-id='1169:617'] > p { line-height: 1.3; }
 .mobile-layout .experience-panel :is([data-node-id='1169:618'], [data-node-id='1169:619']) { height: 20px; }
-.mobile-layout .experience-panel [data-node-id='1169:619'] { background-size: auto 20px; }
+/* The divider already repeats at 100vw; let it escape the Figma-sized wrapper
+   instead of being cropped by that wrapper's overflow clip. */
+.mobile-layout .experience-panel [data-node-id='1169:618'] { overflow: visible; }
+.mobile-layout .experience-panel [data-node-id='1169:619'] {
+  width: 100vw;
+  left: calc(50% - 50vw);
+  background-size: auto 20px;
+}
 .mobile-layout .experience-panel [data-node-id='1168:493'] { height: 100%; }
 .mobile-layout .experience-panel [data-node-id='1169:621'] { display: grid; grid-template-rows: auto repeat(3, minmax(0, 1fr)) auto; gap: 6px; padding: 10px 20px; height: 100%; width: 100%; }
 .mobile-layout .experience-panel :is([data-node-id='1169:622'], [data-node-id='1169:661']) { font-size: 9px; width: 100%; }
