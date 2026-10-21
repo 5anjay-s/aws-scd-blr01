@@ -6,6 +6,15 @@
   font-display: swap;
 }
 
+/* OpenAI Sans Semibold, self-hosted from OpenAI's official CDN for the partner mark. */
+@font-face {
+  font-family: 'OpenAI Sans';
+  src: url('/fonts/OpenAISans-Semibold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
 :root {
   font-family: 'Geist Mono', monospace;
   color: #0b1020;

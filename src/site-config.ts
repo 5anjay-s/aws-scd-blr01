@@ -18,8 +18,16 @@ export const organizerLinks = {
   builderCenter: 'https://bit.ly/3S7naIT',
 };
 
-export const siteSponsors = {
+type SponsorConfig = {
+  role: string;
+  name: string;
+  logo: string;
+  /** Optional second line under the sponsor logo. */
+  caption?: string;
+};
+
+export const siteSponsors: Record<'title' | 'poweredBy' | 'workshop', SponsorConfig> = {
   title: { role: 'TITLE SPONSOR', name: 'AWS', logo: '/assets/sponsors/aws.svg' },
-  poweredBy: { role: 'POWERED BY', name: 'OpenAI Student Collective', logo: '/assets/sponsors/openai.svg' },
+  poweredBy: { role: 'POWERED BY', name: 'OpenAI Student Collective', logo: '/assets/sponsors/openai.svg', caption: 'Student Collective' },
   workshop: { role: 'POWERED BY', name: 'MongoDB', logo: '/assets/sponsors/mongodb.svg' },
 };
