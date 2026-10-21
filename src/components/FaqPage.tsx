@@ -25,39 +25,25 @@ const groups: FaqGroup[] = [
   {
     id: 'about-the-day', title: '01 / About the day', desktopNode: '235:541', mobileNode: '239:616', navDesktop: '234:546', navMobile: '238:600',
     questions: [
-      { number: '01', question: 'What is AWS Student Community Day?', answer: 'A student-led meeting point for people, ideas, and the cloud. Come to learn, explore, and build together.', desktopNode: '235:543', mobileNode: '239:618' },
-      { number: '02', question: 'Who is this for?', answer: 'Students curious about cloud technology and the things we can build together.', desktopNode: '235:552', mobileNode: '239:627' },
+      { number: '01', question: 'When and where is the event?', answer: 'The event is on 5 November 2026 at REVA University, Bengaluru. Check-in starts at 8:00 AM and the programme begins at 9:00 AM.', desktopNode: '235:543', mobileNode: '239:618' },
+      { number: '02', question: 'When will the agenda and session timings be announced?', answer: 'The timeline, agenda and session details will be announced as soon as we receive confirmation from our partners. Updates will be shared with all attendees through official channels.', desktopNode: '235:552', mobileNode: '239:627' },
+      { number: '03', question: 'Will there be workshops?', answer: 'Workshop details, participation requirements and any seat limits will be communicated when the sessions are announced. An event ticket does not guarantee a workshop seat.', desktopNode: '235:805', mobileNode: '239:639' },
     ],
   },
   {
     id: 'ideas-and-community', title: '02 / Ideas & community', desktopNode: '235:803', mobileNode: '239:637', navDesktop: '234:547', navMobile: '238:601',
     questions: [
-      { number: '03', question: 'What will we explore?', answer: 'Ideas in cloud, AI, and the tools shaping what comes next: AWS sessions and hands-on workshops, a ChatGPT workshop by OpenAI Student Collective, and workshops and sessions from MongoDB — with room to ask questions and share perspectives.', desktopNode: '235:805', mobileNode: '239:639' },
-      { number: '04', question: 'What can I bring to the conversation?', answer: 'A question, a rough sketch, or a first line of code. Unfinished ideas are part of the conversation.', desktopNode: '235:814', mobileNode: '239:648' },
-      { number: '05', question: 'Where can I find the program and speakers?', answer: 'Programme highlights and the day’s timeline are on this site. Selected attendees of the ChatGPT workshop receive one month of ChatGPT Plus. Speaker names, session details, and timings will be announced as they are confirmed.', desktopNode: '235:823', mobileNode: '239:657' },
+      { number: '04', question: 'Who can attend the event?', answer: 'Students, developers, working professionals and anyone interested in technology and community learning are welcome.', desktopNode: '235:814', mobileNode: '239:648' },
+      { number: '05', question: 'Will attendees receive certificates?', answer: 'Confirmed registered attendees who complete event-day check-in will receive a digital certificate of participation after the event.', desktopNode: '235:823', mobileNode: '239:657' },
+      { number: '06', question: 'Will goodies be provided?', answer: 'We would love to make the experience better for everyone. However, goodies are limited and will be available on a first-come, first-served basis, subject to availability.', desktopNode: '235:835', mobileNode: '239:669' },
     ],
   },
   {
     id: 'plan-your-visit', title: '03 / Plan your visit', desktopNode: '235:833', mobileNode: '239:667', navDesktop: '234:548', navMobile: '238:602',
     questions: [
-      { number: '06', question: 'When and where is the event?', answer: 'AWS Student Community Day Bengaluru 2026 takes place on 5 November 2026 at REVA University, Rukmini Knowledge Park, Kattigenahalli, Yelahanka, Bengaluru 560064. Check-in begins at 8:00 AM and the programme starts at 9:00 AM IST.', desktopNode: '235:835', mobileNode: '239:669' },
-      { number: '07', question: 'How do I register?', answer: 'RSVP on Meetup and register on KonfHub. Your official ticket is issued by KonfHub, and entry is confirmed only for KonfHub-registered attendees. A Meetup RSVP alone does not confirm entry.', desktopNode: '235:844', mobileNode: '239:678' },
-    ],
-  },
-  // New category has no Figma frame yet; local node IDs keep the data shape stable.
-  {
-    id: 'faqs', title: '04 / FAQs', desktopNode: 'faq-group-04', mobileNode: 'faq-mobile-group-04', navDesktop: 'faq-nav-04', navMobile: 'faq-mobile-nav-04',
-    questions: [
-      { number: '08', question: 'What are the check-in timings and the policy for late arrivals?', answer: 'Check-in starts at 8:00 AM and the programme begins at 9:00 AM. Specific policies regarding late entry will be updated soon.', desktopNode: 'faq-q08', mobileNode: 'faq-mobile-q08' },
-      { number: '09', question: 'Are seats guaranteed with a KonfHub ticket, or is it first-come, first-served?', answer: 'Please keep your registration confirmation for check-in. Note that an event ticket does not guarantee a workshop seat.', desktopNode: 'faq-q09', mobileNode: 'faq-mobile-q09' },
-      { number: '10', question: 'How are students selected for the ChatGPT Plus subscription, and is there a seat limit?', answer: 'Workshop details, participation requirements and any seat limits will be communicated when the sessions are announced.', desktopNode: 'faq-q10', mobileNode: 'faq-mobile-q10' },
-      { number: '11', question: 'Will a Digital Certificate of Participation be issued to everyone, and is full-day attendance required?', answer: 'Confirmed registered attendees who complete event-day check-in will receive a digital certificate of participation after the event.', desktopNode: 'faq-q11', mobileNode: 'faq-mobile-q11' },
-      { number: '12', question: 'Will goodies be distributed to every attendee, or only to top participants?', answer: 'Goodies are limited and will be available on a first-come, first-served basis, subject to availability.', desktopNode: 'faq-q12', mobileNode: 'faq-mobile-q12' },
-      { number: '13', question: 'When will the session-wise schedule be published, and can we switch between parallel tracks?', answer: 'The timeline, agenda and session details will be announced as soon as we receive confirmation from our partners. Updates will be shared with all attendees through official channels.', desktopNode: 'faq-q13', mobileNode: 'faq-mobile-q13' },
-      { number: '14', question: 'When will the laptop, software, and account requirements be shared for the workshops?', answer: 'Workshop details and participation requirements will be communicated when the sessions are announced.', desktopNode: 'faq-q14', mobileNode: 'faq-mobile-q14' },
-      { number: '15', question: 'Is lunch included, and at approximately what time?', answer: 'Details regarding food and refreshments will be updated closer to the event date.', desktopNode: 'faq-q15', mobileNode: 'faq-mobile-q15' },
-      { number: '16', question: 'Is a physical college ID required at the gate for students from other colleges?', answer: 'Please keep your registration confirmation for check-in. Any additional physical ID requirements will be communicated shortly.', desktopNode: 'faq-q16', mobileNode: 'faq-mobile-q16' },
-      { number: '17', question: 'Is car parking available on campus? Are shuttles arranged from Majestic or Yelahanka?', answer: 'Yes, attendees can use the designated parking facilities at REVA University free of cost; please follow campus security directions. Any updates regarding shuttle services will be announced later.', desktopNode: 'faq-q17', mobileNode: 'faq-mobile-q17' },
+      { number: '07', question: 'How can I register?', answer: 'Register through the official website: https://aws-scd-blr.in/. Please keep your registration confirmation for check-in.', desktopNode: '235:844', mobileNode: '239:678' },
+      { number: '08', question: 'Is parking available?', answer: 'Yes. Attendees can use the designated parking facilities at REVA University free of cost. Please follow campus security directions.', desktopNode: 'faq-q08', mobileNode: 'faq-mobile-q08' },
+      { number: '09', question: 'Where can I find updates or ask further questions?', answer: 'Event updates will be published on https://aws-scd-blr.in/. For additional queries, email connect.aws.sbg.ru@gmail.com.', desktopNode: 'faq-q09', mobileNode: 'faq-mobile-q09' },
     ],
   },
 ];
