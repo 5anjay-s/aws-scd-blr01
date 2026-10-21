@@ -3,16 +3,34 @@ import { FaqAccordion } from './FaqAccordion';
 import { HomeNavigation } from './HomeNavigation';
 import { SiteLink } from './SiteLink';
 
-const groups = [
+type FaqQuestion = {
+  number: string;
+  question: string;
+  answer: string;
+  desktopNode: string;
+  mobileNode: string;
+};
+
+type FaqGroup = {
+  id: string;
+  title: string;
+  desktopNode: string;
+  mobileNode: string;
+  navDesktop: string;
+  navMobile: string;
+  questions: FaqQuestion[];
+};
+
+const groups: FaqGroup[] = [
   {
-    id: 'about-the-day', title: '01 / About the day', desktopNode: '235:541', mobileNode: '239:616',
+    id: 'about-the-day', title: '01 / About the day', desktopNode: '235:541', mobileNode: '239:616', navDesktop: '234:546', navMobile: '238:600',
     questions: [
       { number: '01', question: 'What is AWS Student Community Day?', answer: 'A student-led meeting point for people, ideas, and the cloud. Come to learn, explore, and build together.', desktopNode: '235:543', mobileNode: '239:618' },
       { number: '02', question: 'Who is this for?', answer: 'Students curious about cloud technology and the things we can build together.', desktopNode: '235:552', mobileNode: '239:627' },
     ],
   },
   {
-    id: 'ideas-and-community', title: '02 / Ideas & community', desktopNode: '235:803', mobileNode: '239:637',
+    id: 'ideas-and-community', title: '02 / Ideas & community', desktopNode: '235:803', mobileNode: '239:637', navDesktop: '234:547', navMobile: '238:601',
     questions: [
       { number: '03', question: 'What will we explore?', answer: 'Ideas in cloud, AI, and the tools shaping what comes next: AWS sessions and hands-on workshops, a ChatGPT workshop by OpenAI Student Collective, and workshops and sessions from MongoDB — with room to ask questions and share perspectives.', desktopNode: '235:805', mobileNode: '239:639' },
       { number: '04', question: 'What can I bring to the conversation?', answer: 'A question, a rough sketch, or a first line of code. Unfinished ideas are part of the conversation.', desktopNode: '235:814', mobileNode: '239:648' },
@@ -20,10 +38,26 @@ const groups = [
     ],
   },
   {
-    id: 'plan-your-visit', title: '03 / Plan your visit', desktopNode: '235:833', mobileNode: '239:667',
+    id: 'plan-your-visit', title: '03 / Plan your visit', desktopNode: '235:833', mobileNode: '239:667', navDesktop: '234:548', navMobile: '238:602',
     questions: [
       { number: '06', question: 'When and where is the event?', answer: 'AWS Student Community Day Bengaluru 2026 takes place on 5 November 2026 at REVA University, Rukmini Knowledge Park, Kattigenahalli, Yelahanka, Bengaluru 560064. Check-in begins at 8:00 AM and the programme starts at 9:00 AM IST.', desktopNode: '235:835', mobileNode: '239:669' },
       { number: '07', question: 'How do I register?', answer: 'RSVP on Meetup and register on KonfHub. Your official ticket is issued by KonfHub, and entry is confirmed only for KonfHub-registered attendees. A Meetup RSVP alone does not confirm entry.', desktopNode: '235:844', mobileNode: '239:678' },
+    ],
+  },
+  // New category has no Figma frame yet; local node IDs keep the data shape stable.
+  {
+    id: 'faqs', title: '04 / FAQs', desktopNode: 'faq-group-04', mobileNode: 'faq-mobile-group-04', navDesktop: 'faq-nav-04', navMobile: 'faq-mobile-nav-04',
+    questions: [
+      { number: '08', question: 'What are the check-in timings and the policy for late arrivals?', answer: 'Check-in starts at 8:00 AM and the programme begins at 9:00 AM. Specific policies regarding late entry will be updated soon.', desktopNode: 'faq-q08', mobileNode: 'faq-mobile-q08' },
+      { number: '09', question: 'Are seats guaranteed with a KonfHub ticket, or is it first-come, first-served?', answer: 'Please keep your registration confirmation for check-in. Note that an event ticket does not guarantee a workshop seat.', desktopNode: 'faq-q09', mobileNode: 'faq-mobile-q09' },
+      { number: '10', question: 'How are students selected for the ChatGPT Plus subscription, and is there a seat limit?', answer: 'Workshop details, participation requirements and any seat limits will be communicated when the sessions are announced.', desktopNode: 'faq-q10', mobileNode: 'faq-mobile-q10' },
+      { number: '11', question: 'Will a Digital Certificate of Participation be issued to everyone, and is full-day attendance required?', answer: 'Confirmed registered attendees who complete event-day check-in will receive a digital certificate of participation after the event.', desktopNode: 'faq-q11', mobileNode: 'faq-mobile-q11' },
+      { number: '12', question: 'Will goodies be distributed to every attendee, or only to top participants?', answer: 'Goodies are limited and will be available on a first-come, first-served basis, subject to availability.', desktopNode: 'faq-q12', mobileNode: 'faq-mobile-q12' },
+      { number: '13', question: 'When will the session-wise schedule be published, and can we switch between parallel tracks?', answer: 'The timeline, agenda and session details will be announced as soon as we receive confirmation from our partners. Updates will be shared with all attendees through official channels.', desktopNode: 'faq-q13', mobileNode: 'faq-mobile-q13' },
+      { number: '14', question: 'When will the laptop, software, and account requirements be shared for the workshops?', answer: 'Workshop details and participation requirements will be communicated when the sessions are announced.', desktopNode: 'faq-q14', mobileNode: 'faq-mobile-q14' },
+      { number: '15', question: 'Is lunch included, and at approximately what time?', answer: 'Details regarding food and refreshments will be updated closer to the event date.', desktopNode: 'faq-q15', mobileNode: 'faq-mobile-q15' },
+      { number: '16', question: 'Is a physical college ID required at the gate for students from other colleges?', answer: 'Please keep your registration confirmation for check-in. Any additional physical ID requirements will be communicated shortly.', desktopNode: 'faq-q16', mobileNode: 'faq-mobile-q16' },
+      { number: '17', question: 'Is car parking available on campus? Are shuttles arranged from Majestic or Yelahanka?', answer: 'Yes, attendees can use the designated parking facilities at REVA University free of cost; please follow campus security directions. Any updates regarding shuttle services will be announced later.', desktopNode: 'faq-q17', mobileNode: 'faq-mobile-q17' },
     ],
   },
 ];
@@ -61,8 +95,8 @@ export function FaqPage({ mobile = false }: { mobile?: boolean }) {
         <p className="faq-eyebrow" data-node-id={node('234:543', '238:598')}>FIND YOUR ANSWER</p>
         <h2 data-node-id={node('234:544', '238:599')}>{mobile ? <>Select a question<br />to read more.</> : <>Curiosity<br />welcome.</>}</h2>
         <nav aria-label="FAQ categories" data-node-id={mobile ? undefined : '234:545'}>
-          {groups.map((group, index) => <SiteLink key={group.id} href={`/faq#${group.id}`}
-            data-node-id={node(`234:${546 + index}`, `238:${600 + index}`)}>{group.title}</SiteLink>)}
+          {groups.map(group => <SiteLink key={group.id} href={`/faq#${group.id}`}
+            data-node-id={node(group.navDesktop, group.navMobile)}>{group.title}</SiteLink>)}
         </nav>
         {!mobile && <p className="faq-index-hint" data-node-id="234:549">Start anywhere.<br />Select a question to read more.</p>}
       </aside>
