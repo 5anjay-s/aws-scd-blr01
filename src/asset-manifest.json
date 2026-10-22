@@ -1584,6 +1584,48 @@
     "bytes": 2529
   },
   {
+    "file": "public/media/previous-speakers/ashita-prasad.jpeg",
+    "component": "PreviousSpeakers",
+    "variable": "photoAshitaPrasad",
+    "bytes": 152152,
+    "source": "../aws-scd-blr02/public/media/previous-speakers/ashita-prasad.jpeg"
+  },
+  {
+    "file": "public/media/previous-speakers/smiti-guru.jpeg",
+    "component": "PreviousSpeakers",
+    "variable": "photoSmitiGuru",
+    "bytes": 99202,
+    "source": "../aws-scd-blr02/public/media/previous-speakers/smiti-guru.jpeg"
+  },
+  {
+    "file": "public/media/previous-speakers/arun-kumar.png",
+    "component": "PreviousSpeakers",
+    "variable": "photoArunKumar",
+    "bytes": 194041,
+    "source": "../aws-scd-blr02/public/media/previous-speakers/arun-kumar.png"
+  },
+  {
+    "file": "public/media/previous-speakers/deepak-n.png",
+    "component": "PreviousSpeakers",
+    "variable": "photoDeepakN",
+    "bytes": 190019,
+    "source": "../aws-scd-blr02/public/media/previous-speakers/deepak-n.png"
+  },
+  {
+    "file": "public/brands/aws-white.svg",
+    "component": "PreviousSpeakers",
+    "variable": "awsSpeakerLogo",
+    "bytes": 3675,
+    "source": "../aws-scd-blr02/public/brands/aws-white.svg"
+  },
+  {
+    "file": "public/brands/jll.svg",
+    "component": "PreviousSpeakers",
+    "variable": "jllSpeakerLogo",
+    "bytes": 9335,
+    "source": "../aws-scd-blr02/public/brands/jll.svg"
+  },
+  {
     "file": "public/assets/hackathon-image.svg",
     "component": "TechnicalDesktop",
     "variable": "imgImpulseHackathon",

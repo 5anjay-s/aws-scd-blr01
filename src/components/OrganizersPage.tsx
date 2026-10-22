@@ -58,7 +58,7 @@ const channels = [
 ] as const;
 
 // Figma: 03 / Desktop explorations, organizers frames 1823:3588 and 1823:3589.
-export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
+export function OrganizersPage({ mobile = false, segment = 'intro' }: { mobile?: boolean; segment?: 'intro' | 'community' }) {
   const node = (desktop: string, compact: string) => mobile ? compact : desktop;
   const art = mobile ? organizerArtwork.mobile : organizerArtwork.desktop;
   const events = [
@@ -75,7 +75,8 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
     { count: '250', channel: 'LinkedIn', measure: 'followers', note: 'SHARE WHAT’S NEXT.', art: art.imgSpeechPaper2, node: node('1851:3875', '1851:3992') },
   ];
 
-  return <div className={`organizers-page${mobile ? ' organizers-page--mobile' : ''}`} data-node-id={node('1823:3588', '1823:3589')}>
+  return <div className={`organizers-page${mobile ? ' organizers-page--mobile' : ''}`}>
+    {segment === 'intro' && <>
     <HomeNavigation mobile={mobile} />
     <section className="organizers-manifesto organizers-surface" aria-labelledby="organizers-title" data-node-id={node('1834:3826', '1834:4071')}>
       <div className="organizers-poster" data-node-id={node('1834:3827', '1834:4072')} data-reveal="off">
@@ -127,6 +128,8 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
       </div>
       <p className="organizers-small">CLOUD / AI / BLOCKCHAIN. THREE DAYS OF BUILDING TOGETHER.</p>
     </section>
+    </>}
+    {segment === 'community' && <>
     <section className="organizers-initiatives organizers-surface" aria-labelledby="organizers-initiatives-title" data-node-id={node('1834:3942', '1834:4182')}>
       <p className="organizers-eyebrow organizers-cyan">02 / BEFORE THE BIG DAYS — DEC 2025 TO JUL 2026</p>
       <h2 id="organizers-initiatives-title"><ArcadeText>START SMALL.</ArcadeText><br /><ArcadeText>BUILD TOGETHER.</ArcadeText></h2>
@@ -182,5 +185,6 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
       </div>
     </section>
     <div data-node-id={node('1834:4068', '1834:4310')} data-reveal="off"><DitherDivider from="orange" to="navy" /></div>
+    </>}
   </div>;
 }

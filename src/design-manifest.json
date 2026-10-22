@@ -1,5 +1,20 @@
 [
   {
+    "id": "1834:3942",
+    "name": "OrganizersCommunityDesktop",
+    "file": "src/components/design/OrganizersCommunityDesktop.tsx"
+  },
+  {
+    "id": "1834:4182",
+    "name": "OrganizersCommunityMobile",
+    "file": "src/components/design/OrganizersCommunityMobile.tsx"
+  },
+  {
+    "id": "155:692",
+    "name": "PreviousSpeakers",
+    "file": "src/components/design/PreviousSpeakers.tsx"
+  },
+  {
     "id": "1823:3588",
     "name": "OrganizersDesktop",
     "file": "src/components/design/OrganizersDesktop.tsx"

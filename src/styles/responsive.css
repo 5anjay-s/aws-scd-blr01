@@ -603,10 +603,29 @@
 .organizers-intro { display: flex; flex-direction: column; gap: 16px; }
 .organizers-manifesto .organizers-lime { color: var(--navy); }
 /* The organizers page already owns the full-width transition into the shared footer. */
-.design-section[data-design-section='1823:3588'] + .design-section [data-node-id='913:540'],
-.design-section[data-design-section='1823:3589'] + .design-section [data-node-id='1169:691'] { display: none; }
-.design-section[data-design-section='1823:3588'] + .design-section [data-node-id='860:5359'] { padding-top: 48px; }
+.design-section[data-design-section='1834:3942'] + .design-section [data-node-id='913:540'],
+.design-section[data-design-section='1834:4182'] + .design-section [data-node-id='1169:691'] { display: none; }
+.design-section[data-design-section='1834:3942'] + .design-section [data-node-id='860:5359'] { padding-top: 48px; }
 .organizers-tech-week { display: flex; flex-direction: column; gap: 32px; padding: 48px; background: var(--white); color: var(--navy); font-size: 15px; line-height: 21px; }
+.organizers-previous { display: flex; flex-direction: column; gap: 32px; padding: 64px 48px; background: var(--violet); color: var(--navy); }
+.organizers-previous-heading { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.organizers-previous-heading h2 { font: 500 40px/1.1 'Azeret Mono', monospace; }
+.organizers-previous-heading > p:last-child { max-width: 720px; font: 400 15px/21px 'Geist Mono', monospace; }
+.organizers-previous-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.organizers-previous-card { display: flex; min-width: 0; flex-direction: column; gap: 16px; color: var(--navy); }
+.organizers-previous-photo { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--cyan); }
+.organizers-previous-photo--2 { background: var(--violet); }
+.organizers-previous-photo--3 { background: var(--lime); }
+.organizers-previous-photo--4 { background: var(--orange); }
+.organizers-previous-photo > img:first-child { display: block; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: filter 240ms ease; }
+.organizers-previous-photo:hover > img:first-child, .organizers-previous-photo:focus-within > img:first-child { filter: grayscale(0); }
+.organizers-previous-info { display: flex; min-height: 160px; flex-direction: column; align-items: flex-start; gap: 8px; }
+.organizers-previous-name-row { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px 0 0; }
+.organizers-previous-company { position: absolute; top: 18px; right: 18px; display: block; width: auto; max-width: 72px; height: 22px; object-fit: contain; object-position: right center; }
+.organizers-previous-company--black { filter: brightness(0); }
+.organizers-previous-info h3 { color: var(--navy); font: 500 clamp(17px, 1.55cqw, 22px)/1.2 'Azeret Mono', monospace; }
+.organizers-previous-info p { color: var(--navy); font: 400 12px/1.5 'Geist Mono', monospace; }
+.organizers-previous-link { margin-top: auto; color: var(--navy); font: 400 12px/1.4 'Geist Mono', monospace; text-decoration: underline; text-underline-offset: 3px; }
 .organizers-impact { display: grid; grid-template-columns: 912fr 400fr; gap: 32px; align-items: center; }
 .organizers-registration-count { font: 400 min(13.056cqw, 188px)/1 var(--font-arcade); }
 .organizers-impact h2 { font: 500 32px/35px 'Azeret Mono', monospace; margin-bottom: 16px; }
@@ -687,6 +706,15 @@
 .organizers-page--mobile .organizers-signature { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
 .organizers-page--mobile .organizers-host h2 { font-size: 25px; line-height: 28px; }
 .organizers-page--mobile .organizers-tech-week { padding: 24px; gap: 24px; font-size: 13px; line-height: 18px; }
+.mobile-layout .organizers-previous { gap: 24px; padding: 40px 24px; }
+.mobile-layout .organizers-previous-heading h2 { font-size: 30px; line-height: 34px; }
+.mobile-layout .organizers-previous-heading > p:last-child { font-size: 13px; line-height: 19px; }
+.mobile-layout .organizers-previous-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; }
+.mobile-layout .organizers-previous-info { min-height: 150px; gap: 7px; }
+.mobile-layout .organizers-previous-name-row { padding: 6px 8px 0 0; }
+.mobile-layout .organizers-previous-company { top: 12px; right: 12px; height: 14px; max-width: 48px; }
+.mobile-layout .organizers-previous-info h3 { font-size: clamp(14px, 4cqw, 19px); line-height: 1.2; }
+.mobile-layout .organizers-previous-info p, .mobile-layout .organizers-previous-link { font-size: 10px; line-height: 14px; }
 .organizers-page--mobile .organizers-tech-week > .organizers-eyebrow { font-size: 10px; line-height: 14px; }
 .organizers-page--mobile .organizers-impact { grid-template-columns: 1fr; gap: 8px; }
 .organizers-page--mobile .organizers-registration-count { font-size: clamp(72px, 22.56cqw, 112px); }
