@@ -99,86 +99,11 @@ export default function NonTechnicalDesktop() {
           </div>
           <div className="d-f1679ad66c" data-node-id="874:9249" data-name="Programme / Description group">
             <p className="d-d429737306" data-node-id="874:9250">
-              Speakers and sessions will be announced. Explore entrepreneurship, startups, management, business and product strategy, leadership and community.
+              Explore the business and people side of technology through entrepreneurship, startup, management, and strategy conversations.
             </p>
             <p className="d-2fb5a0fa12" data-node-id="874:9251">
-              THEMES BELOW / FORMATS TO BE ANNOUNCED
+              SESSIONS TO BE ANNOUNCED
             </p>
-          </div>
-        </div>
-        <div className="d-96c02da9c3" data-node-id="874:9252" data-name="Programme / 01 COLLABORATE">
-          <div className="d-fe6c6fa3bf" data-node-id="874:9253" data-name="Chapter / Number">
-            <p className="d-2f24b8f57e" data-node-id="874:9254">
-              01
-            </p>
-          </div>
-          <div className="d-5190dfe567" data-node-id="874:9255" data-name="Chapter / Topic">
-            <p className="d-63c423661a" data-node-id="874:9256">
-              COLLABORATE
-            </p>
-            <div className="d-85e8a98f69" data-node-id="874:9257">
-              <p className="d-9c7634671c">THINK</p>
-              <p className="d-b593672e9c">TOGETHER.</p>
-            </div>
-          </div>
-          <div className="d-2c555b0457" data-node-id="874:9258" data-name="Chapter / Details">
-            <p className="d-8acd9593db" data-node-id="874:9259">
-              Explore entrepreneurship and startups — how ideas become ventures and how teams build them.
-            </p>
-            <div className="d-a8db87501d" data-node-id="874:9260">
-              <p className="d-ebed470a6c">ENTREPRENEURSHIP / STARTUPS</p>
-              <p className="d-d43f566f28">FORMAT TO BE ANNOUNCED</p>
-            </div>
-          </div>
-        </div>
-        <div className="d-dddf5c6c16" data-node-id="874:9261" data-name="Programme / 02 IMAGINE">
-          <div className="d-fe6c6fa3bf" data-node-id="874:9262" data-name="Chapter / Number">
-            <p className="d-31a4a52b6a" data-node-id="874:9263">
-              02
-            </p>
-          </div>
-          <div className="d-65fa648f17" data-node-id="874:9264" data-name="Chapter / Topic">
-            <p className="d-63c423661a" data-node-id="874:9265">
-              IMAGINE
-            </p>
-            <div className="d-85e8a98f69" data-node-id="874:9266">
-              <p className="d-9c7634671c">MAKE ROOM</p>
-              <p className="d-b593672e9c">FOR IDEAS.</p>
-            </div>
-          </div>
-          <div className="d-fd6b592ca0" data-node-id="874:9267" data-name="Chapter / Details">
-            <p className="d-8acd9593db" data-node-id="874:9268">
-              Explore management, business and product strategy — how products, teams and companies take shape.
-            </p>
-            <div className="d-a8db87501d" data-node-id="874:9269">
-              <p className="d-ebed470a6c">BUSINESS / PRODUCT STRATEGY</p>
-              <p className="d-d43f566f28">FORMAT TO BE ANNOUNCED</p>
-            </div>
-          </div>
-        </div>
-        <div className="d-4c9a0c8255" data-node-id="874:9270" data-name="Programme / 03 CONNECT">
-          <div className="d-fe6c6fa3bf" data-node-id="874:9271" data-name="Chapter / Number">
-            <p className="d-2f24b8f57e" data-node-id="874:9272">
-              03
-            </p>
-          </div>
-          <div className="d-5190dfe567" data-node-id="874:9273" data-name="Chapter / Topic">
-            <p className="d-63c423661a" data-node-id="874:9274">
-              CONNECT
-            </p>
-            <div className="d-85e8a98f69" data-node-id="874:9275">
-              <p className="d-9c7634671c">FIND YOUR</p>
-              <p className="d-b593672e9c">PEOPLE.</p>
-            </div>
-          </div>
-          <div className="d-2c555b0457" data-node-id="874:9276" data-name="Chapter / Details">
-            <p className="d-8acd9593db" data-node-id="874:9277">
-              Explore leadership and community — meet people across interests and industries.
-            </p>
-            <div className="d-a8db87501d" data-node-id="874:9278">
-              <p className="d-ebed470a6c">LEADERSHIP / COMMUNITY</p>
-              <p className="d-d43f566f28">FORMAT TO BE ANNOUNCED</p>
-            </div>
           </div>
         </div>
       </div>
@@ -220,7 +145,7 @@ export default function NonTechnicalDesktop() {
           <div className="d-b771137754" data-node-id="874:9292" data-name="Detail / Formats & participation">
             <p className="d-f1ab926c19" data-node-id="874:9293">{`Expected topics`}</p>
             <p className="d-07bbff703b" data-node-id="874:9294">
-              Entrepreneurship · Startups · Management · Product strategy · Leadership · Community
+              Entrepreneurship · Startups · Management · Business and Product Strategy · Leadership and Community
             </p>
           </div>
           <div className="d-c143a98bc5" data-node-id="874:9295" data-name="Rule / Schedule & location" />
