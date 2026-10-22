@@ -1,8 +1,6 @@
-import { SiteLink } from "../SiteLink";
 import { SpeakerQuotation } from "../SpeakerQuotation";
 // Source: Figma 00/ Final, node 860:5144.
 const imgSpeakersApprovedDitheredQuotation = "/assets/860-5144-5a444.svg";
-const imgArrow = "/assets/865-7675-0b485.svg";
 const imgPortraitPixelBust = "/assets/860-5144-2417b.svg";
 const imgPortraitPixelBust1 = "/assets/860-5144-b0bb9.svg";
 const imgSpeakersApprovedDitheredQuotation1 = "/assets/860-5144-cc774.svg";
@@ -44,14 +42,6 @@ export default function SpeakersV2IdeasWithAVoiceApprovedDesktop() {
                 <p className="d-2a8bd1889a">New perspectives. New ways to build.</p>
                 <p className="d-2158fa6ddb">Meet the people behind the conversation.</p>
               </div>
-              <SiteLink hoverTone="violet" buttonTone="navy" className="d-58e23e0644" data-node-id="1127:2313" data-name="Button / Flat" href={"/registration"}>
-                <p className="d-7a0f1f17eb" data-node-id="I1127:2313;5:30">
-                  Registration info
-                </p>
-                <div className="d-4725149c0e" data-node-id="I1127:2313;15:32" data-name="Arrow">
-                  <img alt="" className="d-511e8f31d4" src={imgArrow} />
-                </div>
-              </SiteLink>
             </div>
           </div>
           <div className="d-552c1c6224" data-node-id="1127:2314" data-name="Section index">
