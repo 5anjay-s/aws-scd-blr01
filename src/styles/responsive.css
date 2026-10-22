@@ -421,6 +421,8 @@
 }
 .design-content [data-node-id='1127:2324'] { height: 856px; }
 .design-content [data-node-id='1127:2325'] { height: auto; aspect-ratio: 560 / 646.154; }
+.design-content [data-node-id='1127:2325'] img { object-fit: cover; object-position: center; filter: grayscale(1); transition: filter 240ms ease; }
+.design-content [data-node-id='1127:2325']:hover img, .design-content [data-node-id='1127:2325']:focus-within img { filter: grayscale(0); }
 .design-content [data-node-id='1127:2335'], .design-content [data-node-id='1127:2337'] { height: auto; aspect-ratio: 336 / 387.692; }
 /* The manifesto's reading column determines its height; decorative artwork
    follows it so longer lines cannot disappear below a fixed canvas. */
@@ -495,9 +497,10 @@
   border-bottom: 1px solid rgb(11 16 32 / 22%);
 }
 .mobile-layout .design-content .mobile-speaker-card:nth-child(odd) { border-right: 1px solid rgb(11 16 32 / 22%); }
-.mobile-layout .design-content .mobile-speaker-portrait { width: 100%; height: auto; aspect-ratio: 1; }
+.mobile-layout .design-content .mobile-speaker-portrait { width: 100%; height: auto; aspect-ratio: 560 / 646.154; }
 .mobile-layout .design-content .mobile-speaker-portrait > div { inset: 0; width: 100%; height: 100%; }
-.mobile-layout .design-content .mobile-speaker-portrait img { object-fit: contain; object-position: bottom; }
+.mobile-layout .design-content .mobile-speaker-portrait img { object-fit: cover; object-position: center; filter: grayscale(1); transition: filter 240ms ease; }
+.mobile-layout .design-content .mobile-speaker-portrait:hover img, .mobile-layout .design-content .mobile-speaker-portrait:focus-within img { filter: grayscale(0); }
 .mobile-layout .design-content .mobile-speaker-caption { width: 100%; padding: 16px 12px; gap: 8px; }
 .mobile-layout .design-content .mobile-speaker-caption :is(p, div) { width: 100%; min-width: 0; }
 .mobile-layout .design-content .mobile-speaker-caption > p:nth-child(2) { font-size: clamp(16px, 4.6cqw, 22px); line-height: 1.2; }

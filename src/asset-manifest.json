@@ -1584,6 +1584,13 @@
     "bytes": 2529
   },
   {
+    "file": "public/media/previous-speakers/ayush-hooda.png",
+    "component": "Speakers",
+    "variable": "photoAyushHooda",
+    "bytes": 236397,
+    "source": "http://localhost:8076/ayush-hooda.png"
+  },
+  {
     "file": "public/media/previous-speakers/ashita-prasad.jpeg",
     "component": "PreviousSpeakers",
     "variable": "photoAshitaPrasad",

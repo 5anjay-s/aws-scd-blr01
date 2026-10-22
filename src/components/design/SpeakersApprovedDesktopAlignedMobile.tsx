@@ -1,7 +1,7 @@
 import { SpeakerQuotation } from "../SpeakerQuotation";
 // Source: Figma 00/ Final, node 1168:494.
 const imgApprovedDitheredQuotationMobileOpener = "/assets/1168-494-a5a4a.svg";
-const imgPortraitPixelBust = "/assets/1168-494-2f3d4.svg";
+const imgPortraitPixelBust = "/media/previous-speakers/ayush-hooda.png";
 const imgPortraitPixelBust1 = "/assets/1168-494-1942a.svg";
 const imgApprovedDitheredQuotationSpeaker02 = "/assets/1168-494-b8c10.svg";
 const imgPortraitPixelBust2 = "/assets/1168-494-ad0f2.svg";
