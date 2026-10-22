@@ -1582,5 +1582,17 @@
     "component": "OrganizersMobile",
     "variable": "imgDitherPrintedSpeechEdge1",
     "bytes": 2529
+  },
+  {
+    "file": "public/assets/hackathon-image.svg",
+    "component": "TechnicalDesktop",
+    "variable": "imgImpulseHackathon",
+    "bytes": 46504
+  },
+  {
+    "file": "public/assets/hackathon-image.svg",
+    "component": "TechnicalMobile",
+    "variable": "imgImpulseHackathon",
+    "bytes": 46504
   }
 ]
