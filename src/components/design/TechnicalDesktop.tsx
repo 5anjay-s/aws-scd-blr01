@@ -9,6 +9,7 @@ import { siteLinks } from "../../site-config";
 // Source: Figma 00/ Final, node 874:8915.
 const imgScdTechnicalCompileBrackets = "/assets/874-8915-7e810.svg";
 const imgArrow1 = "/assets/865-7675-207b4.svg";
+const imgImpulseHackathon = "/assets/hackathon-image.svg";
 const imgSectionDividerPreparationToContinue = "/assets/874-8915-fb0a8.svg";
 const imgAccentPixelStitch = "/assets/874-8915-7bab5.svg";
 const imgApprovedWovenLinks = "/assets/1265-3035-453bd.svg";
@@ -67,14 +68,6 @@ export default function TechnicalDesktop() {
             <p className="d-64e37b773b" data-node-id="874:8944">
               Explore cloud, AI, security, and software development, including AWS technical sessions and hands-on workshops on the main day.
             </p>
-            <SiteLink buttonTone="orange" className="d-44f977d6f9" data-node-id="874:8945" data-name="Action / Registration info" href={"/registration"}>
-              <p className="d-cf01328ee8" data-node-id="I874:8945;5:30">
-                Registration info
-              </p>
-              <div className="d-4725149c0e" data-node-id="I874:8945;15:32" data-name="Arrow">
-                <img alt="" className="d-511e8f31d4" src={imgArrow1} />
-              </div>
-            </SiteLink>
             <div className="d-1c5e80253f" data-node-id="874:8946">
               <p className="d-ebed470a6c">SESSIONS + SPEAKERS + TIMINGS</p>
               <p className="d-d43f566f28">TO BE ANNOUNCED</p>
@@ -85,12 +78,9 @@ export default function TechnicalDesktop() {
       <div className="d-a566f726bd" data-node-id="874:8947" data-name="Technical / Programme — Desktop">
         <div className="d-64b69ec810" data-node-id="874:8948" data-name="Programme / Introduction">
           <div className="d-9bc9950760" data-node-id="874:8949">
-            <p className="d-5069c0bf54">THREE WAYS</p>
+            <p className="d-5069c0bf54">TWO WAYS</p>
             <p className="d-287d1f8085">TO GO DEEPER.</p>
           </div>
-          <p className="d-549e2da3ec" data-node-id="874:8950">
-            AWS sessions and workshops, a ChatGPT workshop by OpenAI Student Collective, and workshops and sessions from MongoDB. Session times and details to be announced.
-          </p>
         </div>
         <div className="d-f7e6db2c74" data-node-id="874:8951" data-name="Programme / Three theme fields">
           <div className="d-0c4da33e5c" data-node-id="874:8952" data-name="SCD / Technical / Theme panel / Desktop">
@@ -100,53 +90,46 @@ export default function TechnicalDesktop() {
             <p className="d-94d5a91ee2" data-node-id="I874:8952;667:2542">
               IMPULSE ’26
             </p>
-            <div className="d-c4064b08a6" data-node-id="I874:8952;667:2543" data-name="Theme / Rule" />
+            <div className="impulse-art" data-name="IMPULSE / Hackathon artwork">
+              <img alt="Illustration of participants collaborating at laptops during the IMPULSE ’26 hackathon" src={imgImpulseHackathon} />
+            </div>
             <div className="d-d5153bf1ae" data-node-id="I874:8952;667:2544">
               <p className="d-edce8460ce">National-Level</p>
               <p className="d-e64f4edba4">24-Hour Hackathon</p>
             </div>
-            <p className="d-b2638fb3c2" data-node-id="I874:8952;667:2545">
-              24-hour hackathon at Rangasthala, REVA University, Bengaluru.
+            <div className="d-c4064b08a6" data-node-id="I874:8952;667:2543" data-name="Theme / Rule" />
+            <p className="d-b2638fb3c2">
+              Build and compete over 24 hours. Register on Luma for participation details.
             </p>
+            <div className="d-3133ffc36f" data-node-id="I874:8952;667:2545">
+              <p className="d-ebed470a6c">VENUE</p>
+              <p className="d-d43f566f28 impulse-strong">Rangasthala, REVA University, Bengaluru.</p>
+            </div>
             <div className="d-3133ffc36f" data-node-id="I874:8952;667:2546">
               <p className="d-ebed470a6c">DATES</p>
-              <p className="d-d43f566f28">23-24 OCTOBER 2026 · 24 HOURS</p>
+              <p className="d-d43f566f28 impulse-strong">23-24 OCTOBER 2026 · 24 HOURS</p>
             </div>
-          </div>
-          <div className="d-88921b4168" data-node-id="874:8953" data-name="Theme / AI">
-            <p className="d-888b47fa83" data-node-id="I874:8953;667:2541">
-              02 / AI
-            </p>
-            <p className="d-94d5a91ee2" data-node-id="I874:8953;667:2542">
-              ChatGPT Workshop
-            </p>
-            <div className="d-c4064b08a6" data-node-id="I874:8953;667:2543" data-name="Theme / Rule" />
-            <div className="d-d5153bf1ae" data-node-id="I874:8953;667:2544">
-              <p className="d-edce8460ce">OpenAI Student</p>
-              <p className="d-e64f4edba4">Collective</p>
-            </div>
-            <p className="d-b2638fb3c2" data-node-id="I874:8953;667:2545">
-              Hands-on workshop for participants. Selected attendees receive one month of ChatGPT Plus.
-            </p>
-            <div className="d-3133ffc36f" data-node-id="I874:8953;667:2546">
-              <p className="d-ebed470a6c">DATE</p>
-              <p className="d-d43f566f28">5 NOVEMBER 2026 · MAIN-DAY</p>
-            </div>
+            <SiteLink hoverTone="violet" buttonTone="orange" className="d-44f977d6f9" data-name="Action / Register" href={siteLinks.hackathonLuma}>
+              <p className="d-cf01328ee8">Register</p>
+              <div className="d-4725149c0e" data-name="Arrow">
+                <img alt="" className="d-511e8f31d4" src={imgArrow1} />
+              </div>
+            </SiteLink>
           </div>
           <div className="d-1ce5ee9503" data-node-id="874:8954" data-name="Theme / BUILD">
             <p className="d-2a82521e63" data-node-id="I874:8954;667:2541">
-              03 / BUILD
+              02 / AI
             </p>
             <p className="d-0f2274cd94" data-node-id="I874:8954;667:2542">
-              MongoDB Workshop
+              ChatGPT Workshop
             </p>
             <div className="d-fa05bef8aa" data-node-id="I874:8954;667:2543" data-name="Theme / Rule" />
             <div className="d-01b8dd4d38" data-node-id="I874:8954;667:2544">
-              <p className="d-edce8460ce">Workshops &</p>
-              <p className="d-e64f4edba4">Sessions</p>
+              <p className="d-edce8460ce">OpenAI Student</p>
+              <p className="d-e64f4edba4">Collective</p>
             </div>
             <p className="d-d53caec9f0" data-node-id="I874:8954;667:2545">
-              Technical sessions and developer workshops hosted by MongoDB.
+              Hands-on workshop for participants. Selected attendees receive one month of ChatGPT Plus.
             </p>
             <div className="d-f056d2414f" data-node-id="I874:8954;667:2546">
               <p className="d-ebed470a6c">DATE</p>
