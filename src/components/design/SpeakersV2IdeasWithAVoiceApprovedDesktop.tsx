@@ -80,10 +80,10 @@ export default function SpeakersV2IdeasWithAVoiceApprovedDesktop() {
                 01 / SPEAKER
               </p>
               <p className="d-2d39824b22" data-node-id="1127:2328">
-                TO BE ANNOUNCED
+                Ayush hooda
               </p>
               <p className="d-f42682f4f1" data-node-id="1127:2329">
-                Speaker reveal coming soon.
+                Senior system software engineer at NVIDIA
               </p>
             </div>
             <div className="d-cb8ccf733c" data-node-id="1127:2330" data-name="Speaker 02 / Announcement">

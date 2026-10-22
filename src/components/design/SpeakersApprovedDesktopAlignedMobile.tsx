@@ -73,10 +73,10 @@ export default function SpeakersApprovedDesktopAlignedMobile() {
                 01 / SPEAKER
               </p>
               <p className="d-bf2bdce3ac" data-node-id="1170:583">
-                TO BE ANNOUNCED
+                Ayush hooda
               </p>
               <p className="d-4767bf8262" data-node-id="1170:584">
-                Speaker reveal coming soon.
+                Senior system software engineer at NVIDIA
               </p>
             </div>
           </div>
