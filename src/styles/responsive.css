@@ -78,6 +78,53 @@
   font-weight: 700;
   color: var(--navy);
 }
+/* 02 / AI block: the registration cutoff is the key fact, so it sits in its own
+   highlighted group above the event date. */
+/* Align the 02 separator with the 01 separator: the 01 details row is as tall as
+   the IMPULSE title (68) while the 02 heading row is 60, an 8-unit difference. */
+.desktop-layout .design-content .d-1ce5ee9503 > .d-fa05bef8aa {
+  margin-top: calc(8 * var(--design-unit));
+}
+.design-content .ai-cutoff {
+  display: flex;
+  flex-direction: column;
+  gap: calc(6 * var(--space-unit));
+  width: 100%;
+}
+.design-content .ai-cutoff-label {
+  font-family: "Geist Mono", monospace;
+  font-size: clamp(10px, calc(11 * var(--design-unit)), 11px);
+  letter-spacing: 0.08em;
+  color: var(--cyan);
+}
+.design-content .ai-cutoff-value {
+  font-family: "Geist Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(14px, calc(16 * var(--design-unit)), 16px);
+  line-height: 1.25;
+  color: var(--white);
+}
+.design-content .ai-cutoff-note {
+  font-family: "Geist Mono", monospace;
+  font-size: clamp(14px, calc(16 * var(--design-unit)), 16px);
+  line-height: 1.5;
+  color: var(--white);
+}
+.design-content .ai-date-strong {
+  font-weight: 700;
+  font-size: clamp(13px, calc(14 * var(--design-unit)), 14px);
+  color: var(--white);
+}
+/* 02 / AI: supporting copy under the separator is lighter; the timing values keep
+   their bold weight. */
+.desktop-layout .design-content .d-1ce5ee9503 .d-d53caec9f0,
+.desktop-layout .design-content .d-1ce5ee9503 .d-ebed470a6c,
+.mobile-layout .design-content .d-381cf3dbba .d-c6f15078ce,
+.mobile-layout .design-content .d-381cf3dbba .d-ebed470a6c,
+.design-content .ai-cutoff-label,
+.design-content .ai-cutoff-note {
+  font-weight: 300;
+}
 .design-content .pixel-border { flex-shrink: 0; }
 /* Overlap the orange panel and the SVG's solid first row to cover raster seams. */
 .design-content [data-node-id='913:540']::before,

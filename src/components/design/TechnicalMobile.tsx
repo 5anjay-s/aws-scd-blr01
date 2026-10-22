@@ -91,20 +91,22 @@ export default function TechnicalMobile() {
           <p className="d-a4a5347c5b" data-node-id="I874:9141;667:2567">
             02 / AI
           </p>
-          <p className="d-7ecd3c2bde" data-node-id="I874:9141;667:2568">
-            ChatGPT Workshop
-          </p>
-          <div className="d-27985fbfcb" data-node-id="I874:9141;667:2569" data-name="Theme / Rule" />
           <div className="d-621fb4f3ee" data-node-id="I874:9141;667:2570">
-            <p className="d-2a8bd1889a">OpenAI Student</p>
-            <p className="d-2158fa6ddb">Collective</p>
+            <p className="d-2a8bd1889a">ChatGPT workshop for</p>
+            <p className="d-2158fa6ddb">hackathon participants</p>
           </div>
+          <div className="d-27985fbfcb" data-node-id="I874:9141;667:2569" data-name="Theme / Rule" />
           <p className="d-c6f15078ce" data-node-id="I874:9141;667:2571">
-            Hands-on workshop for participants. Selected attendees receive one month of ChatGPT Plus.
+            For IMPULSE ’26 attendees. One participant per team only (venue capacity). One team member gets a free month of ChatGPT Plus.
           </p>
+          <div className="ai-cutoff">
+            <p className="ai-cutoff-label">REGISTER BEFORE</p>
+            <p className="ai-cutoff-value">21 OCTOBER 2026 · 10:00 AM IST</p>
+            <p className="ai-cutoff-note">Before the cutoff: Plus access before the hackathon. On or after: access after.</p>
+          </div>
           <div className="d-3badf42354" data-node-id="I874:9141;667:2572">
             <p className="d-ebed470a6c">DATE</p>
-            <p className="d-d43f566f28">5 NOVEMBER 2026 · MAIN-DAY</p>
+            <p className="d-d43f566f28 ai-date-strong">5 NOVEMBER 2026 · MAIN-DAY</p>
           </div>
         </div>
       </div>
