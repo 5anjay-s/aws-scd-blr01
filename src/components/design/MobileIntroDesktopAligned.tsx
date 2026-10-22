@@ -15,10 +15,10 @@ export default function MobileIntroDesktopAligned() {
           01 / A DAY TO START SOMETHING
         </p>
         <div className="d-3cb557109e" data-node-id="1169:602">
-          <p className="d-6ee5fa6884">From your</p>
-          <p className="d-6ee5fa6884">first hello,</p>
-          <p className="d-6ee5fa6884">world to what</p>
-          <p className="d-f42ae1416f">comes next.</p>
+          <p className="d-6ee5fa6884">Two tracks.</p>
+          <p className="d-6ee5fa6884">One community.</p>
+          <p className="d-6ee5fa6884">Built for</p>
+          <p className="d-f42ae1416f">you.</p>
         </div>
         <div className="d-8d53dae494" data-node-id="1169:604" data-name="Accent / Signal stitch">
           <SignalStitch alt="" className="d-511e8f31d4" src={imgAccentSignalStitch} />
@@ -38,8 +38,7 @@ export default function MobileIntroDesktopAligned() {
             </div>
           </div>
           <div className="d-b4110922e2" data-node-id="1169:617">
-            <p className="d-7517b65055">One community.</p>
-            <p className="d-22d0902a25">Many possible futures.</p>
+            <p className="event-about-description">Sessions and workshops from AWS, OpenAI Student Collective and MongoDB, with non-technical sessions on the main day.</p>
           </div>
         </div>
       </div>

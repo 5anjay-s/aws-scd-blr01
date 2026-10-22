@@ -5,6 +5,7 @@ export const homeSectionRoutes: Record<string, string> = {
   tracks: '/tracks',
   speakers: '/speakers',
   timeline: '/timeline',
+  'pre-scd': '/pre-scd',
   manifesto: '/manifesto',
   community: '/community',
   partners: '/partners',
@@ -24,6 +25,9 @@ sectionsByRoute.set('/partner-lineup', 'partner-lineup');
 sectionsByRoute.set('/learn-build-belong', 'experience');
 sectionsByRoute.set('/program', 'tracks');
 sectionsByRoute.set('/faq-preview', 'faq-preview');
+sectionsByRoute.set('/pre-scd-hackathon', 'pre-scd');
+sectionsByRoute.set('/pre-scd-hackathon-chatgpt-workshop', 'pre-scd');
+sectionsByRoute.set('/scd', 'timeline');
 
 export function resolveLocation(url: URL) {
   let path = url.pathname.replace(/\/$/, '') || '/';
@@ -36,6 +40,9 @@ export function resolveLocation(url: URL) {
   }
   // Preserve older bookmarks while using the same spelling as the page label.
   if (path === '/organizers') path = '/organisers';
+  if (path === '/register') path = '/registration';
+  if (path === '/faqs') path = '/faq';
+  if (path === '/about') path = '/experience';
   const section = sectionsByRoute.get(path);
   return {
     path: section ? '/' : path,

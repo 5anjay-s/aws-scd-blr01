@@ -1,3 +1,4 @@
+import { mainDay } from "../../content/event";
 import { SignalStitch } from "../SignalStitch";
 import { TrackArtwork } from "../TrackArtwork";
 import { SiteLink } from "../SiteLink";
@@ -34,7 +35,7 @@ export default function ProgrammeV2ChooseYourTrackApprovedMobile() {
         <p className="d-dea40ba60b mobile-track-title" data-node-id="866:8439">
           TECHNICAL
         </p>
-        <p className="d-0ed9e83818 mobile-track-description" data-node-id="866:8440">{`Cloud, AI & hands-on building.`}</p>
+        <p className="d-0ed9e83818 mobile-track-description" data-node-id="866:8440">{mainDay.technicalPreview}</p>
         <div className="d-e9401eca47 mobile-track-artwork" data-node-id="866:8441" data-name="Technical / Pixel marker — Mobile">
           <div className="d-792578536f" data-node-id="866:8442" data-name="Artwork / Technical track — Pixel brackets">
             <TrackArtwork kind="brackets" className="d-511e8f31d4" src={imgArtworkTechnicalTrackPixelBrackets} />
@@ -57,7 +58,7 @@ export default function ProgrammeV2ChooseYourTrackApprovedMobile() {
           <p className="d-5069c0bf54">NON-</p>
           <p className="d-287d1f8085">TECHNICAL</p>
         </div>
-        <p className="d-0ed9e83818 mobile-track-description" data-node-id="866:8447">{`Startups, management & product strategy.`}</p>
+        <p className="d-0ed9e83818 mobile-track-description" data-node-id="866:8447">{mainDay.nonTechnicalPreview}</p>
         <div className="d-e9401eca47 mobile-track-artwork" data-node-id="866:8448" data-name="Non-technical / Pixel marker — Mobile">
           <div className="d-aa5c2a33f7" data-node-id="866:8449" data-name="Artwork / Non-technical track — Pixel quotations">
             <TrackArtwork kind="quotes" className="d-511e8f31d4" src={imgArtworkNonTechnicalTrackPixelQuotations} />

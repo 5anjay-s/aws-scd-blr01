@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { SiteLink } from './SiteLink';
 
 type FaqAccordionProps = {
   number: string;
@@ -25,7 +26,13 @@ export function FaqAccordion({ number, question, answer, nodeId, defaultOpen = f
       </button>
     </h3>
     <div className="faq-answer" id={answerId} role="region" aria-labelledby={questionId} hidden={!open}>
-      <p>{answer}</p>
+      <p>{answer.split(/(https?:\/\/[^\s]+|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,})/g).map((part, index) => {
+        if (part.startsWith('https://') || part.startsWith('http://')) {
+          const href = part.replace(/[.,;]+$/, '');
+          return <span key={index}><SiteLink href={href}>{href.includes('konfhub.com') ? 'KonfHub' : href.includes('luma.com') ? 'Luma' : 'the official website'} ↗</SiteLink>{part.slice(href.length)}</span>;
+        }
+        return part.includes('@') ? <SiteLink key={index} href={`mailto:${part}`}>{part}</SiteLink> : part;
+      })}</p>
     </div>
   </article>;
 }

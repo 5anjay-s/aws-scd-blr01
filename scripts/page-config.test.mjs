@@ -5,7 +5,7 @@ import { getPageSections, groupPageSections, hasPage } from '../src/page-config.
 import { homeSectionRoutes, resolveLocation } from '../src/navigation.ts';
 
 const manifest = JSON.parse(readFileSync(new URL('../src/design-manifest.json', import.meta.url), 'utf8'));
-const pages = ['/', '/organisers', '/faq', '/technical', '/non-technical', '/registration', '/404'];
+const pages = ['/', '/organisers', '/faq', '/technical', '/non-technical', '/registration', '/agenda', '/venue', '/404'];
 
 test('the introduction and all three chapters share one panel without losing route anchors', () => {
   for (const mobile of [false, true]) {
@@ -16,8 +16,10 @@ test('the introduction and all three chapters share one panel without losing rou
     assert.deepEqual(experience.map(item => item.label), ['A day to start something', 'Learn, build, belong']);
     assert.deepEqual(panels.flat(), sections);
     assert.equal(panels[0][0].anchor, 'home');
-    assert.equal(panels[2][0].anchor, 'manifesto');
-    assert.equal(panels[3][0].anchor, 'tracks');
+    const anchors = panels.map(group => group[0].anchor).filter(Boolean);
+    assert.ok(anchors.indexOf('experience') < anchors.indexOf('tracks'));
+    assert.ok(anchors.indexOf('tracks') < anchors.indexOf('pre-scd'));
+    assert.ok(anchors.indexOf('pre-scd') < anchors.indexOf('timeline'));
   }
 
   for (const page of pages.slice(1)) {

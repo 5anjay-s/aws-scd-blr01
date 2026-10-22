@@ -1,3 +1,5 @@
+import { HackathonSection } from "../EventContent";
+import { mainDay } from "../../content/event";
 import { SiteBrand } from "../SiteBrand";
 import { TrackArtwork } from "../TrackArtwork";
 import { SiteHeader } from "../SiteHeader";
@@ -89,7 +91,7 @@ export default function TechnicalDesktop() {
             <p className="d-287d1f8085">TO GO DEEPER.</p>
           </div>
           <p className="d-549e2da3ec" data-node-id="874:8950">
-            AWS sessions and workshops, a ChatGPT workshop by OpenAI Student Collective, and workshops and sessions from MongoDB. Session times and details to be announced.
+            {mainDay.technical} Session times and details to be announced.
           </p>
         </div>
         <div className="d-f7e6db2c74" data-node-id="874:8951" data-name="Programme / Three theme fields">
@@ -98,19 +100,19 @@ export default function TechnicalDesktop() {
               01 / CLOUD
             </p>
             <p className="d-94d5a91ee2" data-node-id="I874:8952;667:2542">
-              IMPULSE ’26
+              AWS Sessions & Workshops
             </p>
             <div className="d-c4064b08a6" data-node-id="I874:8952;667:2543" data-name="Theme / Rule" />
             <div className="d-d5153bf1ae" data-node-id="I874:8952;667:2544">
-              <p className="d-edce8460ce">National-Level</p>
-              <p className="d-e64f4edba4">24-Hour Hackathon</p>
+              <p className="d-edce8460ce">Technical sessions</p>
+              <p className="d-e64f4edba4">& hands-on workshops</p>
             </div>
             <p className="d-b2638fb3c2" data-node-id="I874:8952;667:2545">
-              24-hour hackathon at Rangasthala, REVA University, Bengaluru.
+              {mainDay.aws}
             </p>
             <div className="d-3133ffc36f" data-node-id="I874:8952;667:2546">
               <p className="d-ebed470a6c">DATES</p>
-              <p className="d-d43f566f28">23-24 OCTOBER 2026 · 24 HOURS</p>
+              <p className="d-d43f566f28">5 NOVEMBER 2026 · MAIN DAY</p>
             </div>
           </div>
           <div className="d-88921b4168" data-node-id="874:8953" data-name="Theme / AI">
@@ -126,7 +128,7 @@ export default function TechnicalDesktop() {
               <p className="d-e64f4edba4">Collective</p>
             </div>
             <p className="d-b2638fb3c2" data-node-id="I874:8953;667:2545">
-              Hands-on workshop for participants. Selected attendees receive one month of ChatGPT Plus.
+              {mainDay.openai}
             </p>
             <div className="d-3133ffc36f" data-node-id="I874:8953;667:2546">
               <p className="d-ebed470a6c">DATE</p>
@@ -146,7 +148,7 @@ export default function TechnicalDesktop() {
               <p className="d-e64f4edba4">Sessions</p>
             </div>
             <p className="d-d53caec9f0" data-node-id="I874:8954;667:2545">
-              Technical sessions and developer workshops hosted by MongoDB.
+              {mainDay.mongodb}
             </p>
             <div className="d-f056d2414f" data-node-id="I874:8954;667:2546">
               <p className="d-ebed470a6c">DATE</p>
@@ -155,6 +157,7 @@ export default function TechnicalDesktop() {
           </div>
         </div>
       </div>
+      <HackathonSection compact />
       <div className="d-6075610caa" data-node-id="874:8955" data-name="Technical / Preparation — Desktop">
         <div className="d-20556b24a8" data-node-id="874:8956" data-name="Preparation / Invitation">
           <p className="d-d4cf649985" data-node-id="874:8957">
@@ -165,7 +168,7 @@ export default function TechnicalDesktop() {
             <p className="d-287d1f8085">NEXT QUESTION.</p>
           </div>
           <p className="d-c501c3aa8c" data-node-id="874:8959">
-            Curious about cloud, AI or building with new tools? IMPULSE ’26 is the 24-hour pre-SCD hackathon — separate registration from your SCD ticket.
+            Join AWS sessions, AI workshops and developer conversations on the main day. Explore IMPULSE, our pre-SCD hackathon, below.
           </p>
         </div>
         <div className="d-95644d43f8" data-node-id="874:8960" data-name="Preparation / Details">
@@ -193,7 +196,7 @@ export default function TechnicalDesktop() {
               PREREQUISITES
             </p>
             <p className="d-73728e76c4" data-node-id="874:8972">
-              LAPTOP, CHARGER & VALID STUDENT ID
+              BRING A LAPTOP & CHARGER FOR HANDS-ON SESSIONS
             </p>
           </div>
           <SiteLink buttonTone="orange" className="d-44f977d6f9" data-node-id="874:8973" data-name="Action / Get Main-Day Ticket" href={siteLinks.konfhub}>

@@ -5,13 +5,15 @@ const section = (node: string, label: string, anchor?: string, panel?: Section['
 const home: ResponsiveSections = {
   desktop: [
     section('865:7675', 'Student Community Day', 'home'),
+    section('content:EventStatus', 'Date, venue and countdown'),
     section('860:5073', 'A day to start something', 'experience', 'experience'),
     section('860:5085', 'Learn, build, belong', undefined, 'experience'),
     section('860:5246', 'Our manifesto', 'manifesto'),
     section('860:5104', 'Choose your track', 'tracks'),
-    section('860:5144', 'Speakers', 'speakers'),
+    section('content:PreScd', 'Pre-SCD and IMPULSE hackathon', 'pre-scd'),
+    section('860:5180', 'Main-day timeline', 'timeline'),
     section('1154:483', 'Section divider'),
-    section('860:5180', 'Event timeline', 'timeline'),
+    section('860:5144', 'Speakers', 'speakers'),
     section('860:5267', 'Your community', 'community'),
     section('1160:5759', 'Partners', 'partners'),
     section('1398:7044', 'Our partner lineup', 'partner-lineup'),
@@ -25,13 +27,15 @@ const home: ResponsiveSections = {
   ],
   mobile: [
     section('1168:491', 'Student Community Day', 'home'),
+    section('content:EventStatus', 'Date, venue and countdown'),
     section('1168:492', 'A day to start something', 'experience', 'experience'),
     section('1168:493', 'Learn, build, belong', undefined, 'experience'),
     section('866:8542', 'Our manifesto', 'manifesto'),
     section('866:8432', 'Choose your track', 'tracks'),
-    section('1168:494', 'Speakers', 'speakers'),
+    section('content:PreScd', 'Pre-SCD and IMPULSE hackathon', 'pre-scd'),
+    section('866:8481', 'Main-day timeline', 'timeline'),
     section('1170:640', 'Section divider'),
-    section('866:8481', 'Event timeline', 'timeline'),
+    section('1168:494', 'Speakers', 'speakers'),
     section('1168:495', 'Your community', 'community'),
     section('1168:496', 'Partners', 'partners'),
     section('866:8582', 'Our partner lineup', 'partner-lineup'),
@@ -47,6 +51,8 @@ const home: ResponsiveSections = {
 
 const pages: Record<string, ResponsiveSections> = {
   '/': home,
+  '/agenda': { desktop: [section('content:AgendaDesktop', 'Event programme')], mobile: [section('content:AgendaMobile', 'Event programme')] },
+  '/venue': { desktop: [section('content:VenueDesktop', 'Venue and travel')], mobile: [section('content:VenueMobile', 'Venue and travel')] },
   '/organisers': {
     desktop: [section('1823:3588', 'Organisers'), section('860:5359', 'Keep the conversation going')],
     mobile: [section('1823:3589', 'Organisers'), section('1168:498', 'Keep the conversation going')],

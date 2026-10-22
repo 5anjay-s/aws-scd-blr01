@@ -1,0 +1,2 @@
+# Retain existing clean-path bookmarks on static hosts; navigation canonicalises to hashes.
+/* /index.html 200

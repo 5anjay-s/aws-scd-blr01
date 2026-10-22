@@ -1,3 +1,4 @@
+import { mainDay } from "../../content/event";
 import { SignalStitch } from "../SignalStitch";
 import { TrackArtwork } from "../TrackArtwork";
 import { SiteLink } from "../SiteLink";
@@ -67,7 +68,7 @@ export default function ProgrammeV2ChooseYourTrackApprovedDesktop() {
             <p className="d-5f3bea0a6e" data-node-id="860:5123">
               TECHNICAL
             </p>
-            <p className="d-160b8bdb33" data-node-id="860:5124">{`Cloud, AI & hands-on building.`}</p>
+            <p className="d-160b8bdb33" data-node-id="860:5124">{mainDay.technicalPreview}</p>
             <SiteLink hoverTone="orange" buttonTone="navy" className="d-3ea4699496" data-node-id="860:5125" data-name="Action / Explore technical" href={"/technical"}>
               <p className="d-7a0f1f17eb" data-node-id="I860:5125;5:30">
                 Explore technical
@@ -91,7 +92,7 @@ export default function ProgrammeV2ChooseYourTrackApprovedDesktop() {
               <p className="d-58de503319">NON-</p>
               <p className="d-39cfb050ad">TECHNICAL</p>
             </div>
-            <p className="d-160b8bdb33" data-node-id="860:5133">{`Startups, management & product strategy.`}</p>
+            <p className="d-160b8bdb33" data-node-id="860:5133">{mainDay.nonTechnicalPreview}</p>
             <SiteLink hoverTone="lime" buttonTone="navy" className="d-3ea4699496" data-node-id="860:5134" data-name="Action / Explore non-technical" href={"/non-technical"}>
               <p className="d-7a0f1f17eb" data-node-id="I860:5134;5:30">
                 Explore non-technical

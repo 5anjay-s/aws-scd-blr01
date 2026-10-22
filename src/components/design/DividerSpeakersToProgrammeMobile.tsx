@@ -4,7 +4,7 @@ import { DitherDivider } from "../DitherDivider";
 export default function DividerSpeakersToProgrammeMobile() {
   return (
     <div className="d-3c9f0988a3" data-node-id="1170:640" data-name="Divider / Speakers to programme — Mobile">
-      <DitherDivider from="white" to="navy" className="speakers-timeline-divider"
+      <DitherDivider from="navy" to="white" className="speakers-timeline-divider"
         nodeId="1170:641" name="Section divider / Approved pixel dither" />
     </div>
   );

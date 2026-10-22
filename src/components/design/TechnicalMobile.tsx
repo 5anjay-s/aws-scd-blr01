@@ -1,3 +1,5 @@
+import { HackathonSection } from "../EventContent";
+import { mainDay } from "../../content/event";
 import { SiteBrand } from "../SiteBrand";
 import { TrackArtwork } from "../TrackArtwork";
 import { SiteHeader } from "../SiteHeader";
@@ -61,7 +63,7 @@ export default function TechnicalMobile() {
             <p className="d-e358ca9dbc">TO GO DEEPER.</p>
           </div>
           <p className="d-486b70b514" data-node-id="874:9138">
-            AWS sessions and workshops, a ChatGPT workshop by OpenAI Student Collective, and workshops and sessions from MongoDB. Session times and details to be announced.
+            {mainDay.technical} Session times and details to be announced.
           </p>
         </div>
         <div className="d-8b1378b1cb" data-node-id="874:9139" data-name="SCD / Technical / Theme panel / Mobile">
@@ -69,19 +71,19 @@ export default function TechnicalMobile() {
             01 / CLOUD
           </p>
           <p className="d-c7ecc424bd" data-node-id="I874:9139;667:2568">
-            IMPULSE ’26
+            AWS Sessions & Workshops
           </p>
           <div className="d-b48d4df271" data-node-id="I874:9139;667:2569" data-name="Theme / Rule" />
           <div className="d-b8ff23ce63" data-node-id="I874:9139;667:2570">
-            <p className="d-2a8bd1889a">National-Level</p>
-            <p className="d-2158fa6ddb">24-Hour Hackathon</p>
+            <p className="d-2a8bd1889a">Technical sessions</p>
+            <p className="d-2158fa6ddb">& hands-on workshops</p>
           </div>
           <p className="d-5a1a09ea43" data-node-id="I874:9139;667:2571">
-            24-hour hackathon at Rangasthala, REVA University, Bengaluru.
+            {mainDay.aws}
           </p>
           <div className="d-b82fa5d8d7" data-node-id="I874:9139;667:2572">
             <p className="d-ebed470a6c">DATES</p>
-            <p className="d-d43f566f28">23-24 OCTOBER 2026 · 24 HOURS</p>
+            <p className="d-d43f566f28">5 NOVEMBER 2026 · MAIN DAY</p>
           </div>
         </div>
         <div className="d-5ab761d0eb" data-node-id="874:9140" data-name="Theme / AI">
@@ -97,7 +99,7 @@ export default function TechnicalMobile() {
             <p className="d-2158fa6ddb">Collective</p>
           </div>
           <p className="d-5a1a09ea43" data-node-id="I874:9140;667:2571">
-            Hands-on workshop for participants. Selected attendees receive one month of ChatGPT Plus.
+            {mainDay.openai}
           </p>
           <div className="d-b82fa5d8d7" data-node-id="I874:9140;667:2572">
             <p className="d-ebed470a6c">DATE</p>
@@ -117,7 +119,7 @@ export default function TechnicalMobile() {
             <p className="d-2158fa6ddb">Sessions</p>
           </div>
           <p className="d-c6f15078ce" data-node-id="I874:9141;667:2571">
-            Technical sessions and developer workshops hosted by MongoDB.
+            {mainDay.mongodb}
           </p>
           <div className="d-3badf42354" data-node-id="I874:9141;667:2572">
             <p className="d-ebed470a6c">DATE</p>
@@ -125,6 +127,7 @@ export default function TechnicalMobile() {
           </div>
         </div>
       </div>
+      <HackathonSection compact />
       <div className="d-0f22abb004" data-node-id="874:9142" data-name="Technical / Preparation — Mobile">
         <p className="d-b795ba67a4" data-node-id="874:9143">
           BEFORE YOU JOIN
@@ -134,7 +137,7 @@ export default function TechnicalMobile() {
           <p className="d-e358ca9dbc">NEXT QUESTION.</p>
         </div>
         <p className="d-5a1a09ea43" data-node-id="874:9145">
-          Curious about cloud, AI or building with new tools? IMPULSE ’26 is the 24-hour pre-SCD hackathon — separate registration from your SCD ticket.
+          Join AWS sessions, AI workshops and developer conversations on the main day. Explore IMPULSE, our pre-SCD hackathon, below.
         </p>
         <div className="d-43f50fc4ff" data-node-id="874:9146" data-name="Preparation / EXPERIENCE LEVEL">
           <div className="d-b48d4df271" data-node-id="874:9147" data-name="Rule" />
@@ -160,7 +163,7 @@ export default function TechnicalMobile() {
             PREREQUISITES
           </p>
           <p className="d-6d0816660e" data-node-id="874:9157">
-            LAPTOP, CHARGER & VALID STUDENT ID
+            BRING A LAPTOP & CHARGER FOR HANDS-ON SESSIONS
           </p>
         </div>
         <SiteLink buttonTone="orange" className="d-205df6f90e" data-node-id="874:9158" data-name="Action / Get Main-Day Ticket" href={siteLinks.konfhub}>

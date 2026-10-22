@@ -1,22 +1,25 @@
-import { createContext, useContext, useEffect, useId, useLayoutEffect, useRef, useState, type HTMLAttributes } from 'react';
+import { Children, cloneElement, isValidElement, createContext, useContext, useEffect, useId, useLayoutEffect, useRef, useState, type HTMLAttributes } from 'react';
 import { createPortal } from 'react-dom';
 import { gsap, useReducedMotion } from './animation';
 import { HeaderNavigationContext, NavigationLocationContext } from './NavigationState';
 import { SiteLink } from './SiteLink';
 import { RegistrationButton } from './RegistrationButton';
 import { useNavigationMotion } from './useNavigationMotion';
+import { primaryNavigation } from '../content/event';
 
 export const HeaderHostContext = createContext<HTMLElement | null>(null);
 
-const menuLinks = [
-  ['/#experience', 'Experience'],
-  ['/tracks', 'Tracks'],
-  ['/#speakers', 'Speakers'],
-  ['/#community', 'Community'],
-];
+const menuLinks = primaryNavigation;
 
 // Keep the original desktop navigation and share one mobile menu across pages.
 export function SiteHeader({ children, ...props }: HTMLAttributes<HTMLElement>) {
+  const childArray = Children.toArray(children);
+  const navigationChildren = childArray.map(child => {
+    if (!isValidElement<HTMLAttributes<HTMLElement> & { 'data-name'?: string }>(child) || child.props['data-name'] !== 'Nav links v2') return child;
+    return cloneElement(child, { className: `${child.props.className ?? ''} site-primary-links` },
+      menuLinks.map(([href, label]) => <SiteLink key={href} href={href}>{label}</SiteLink>));
+  });
+  const hasRegistration = childArray.some(child => isValidElement(child) && child.type === RegistrationButton);
   const host = useContext(HeaderHostContext);
   const location = useContext(NavigationLocationContext);
   const [open, setOpen] = useState(false);
@@ -85,7 +88,8 @@ export function SiteHeader({ children, ...props }: HTMLAttributes<HTMLElement>) 
           toggleRef.current?.focus({ preventScroll: true });
         }
       }}>
-      {children}
+      {navigationChildren}
+      {!hasRegistration && <RegistrationButton />}
       <span ref={indicatorRef} className="site-nav-indicator" aria-hidden="true" />
       <button ref={toggleRef} type="button" className="site-menu-toggle" aria-expanded={open}
         aria-controls={menuId} aria-label={open ? 'Close navigation menu' : 'Open navigation menu'} onClick={() => setOpen(value => !value)}>

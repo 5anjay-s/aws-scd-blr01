@@ -23,7 +23,7 @@ export default function Group1() {
             <img alt="" src={imgDitherCorner} />
           </div>
           <p className="d-bc95ff465f" data-node-id="860:5065">
-            AWS STUDENT COMMUNITY DAY
+            BENGALURU / 2026
           </p>
           <div className="d-833f74a3c2" data-node-id="860:5066">
             <p className="d-c104b2dca3">THE FUTURE</p>
@@ -31,12 +31,12 @@ export default function Group1() {
             <p className="d-307cc96bda">PROJECT.</p>
           </div>
           <div className="d-f5b51f9218" data-node-id="860:5067">
-            <p className="d-7519be8e79">Meet the people. Explore the cloud.</p>
+            <p className="d-7519be8e79">Meet the people. Explore new ideas.</p>
             <p className="d-95907800fd">Build something that matters.</p>
           </div>
           <SiteLink hoverTone="cyan" buttonTone="navy" className="d-2646a57d26" data-node-id="860:5068" data-name="Button / Flat" href={"/registration"}>
             <p className="d-7a0f1f17eb" data-node-id="I860:5068;5:30">
-              Registration info
+              Register now
             </p>
             <div className="d-4725149c0e" data-node-id="I860:5068;15:32" data-name="Arrow">
               <img alt="" className="d-511e8f31d4" src={imgArrow1} />
