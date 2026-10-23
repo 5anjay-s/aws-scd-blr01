@@ -1,4 +1,3 @@
-import { mainDay } from "../../content/event";
 import { SiteBrand } from "../SiteBrand";
 import { TrackArtwork } from "../TrackArtwork";
 import { SiteHeader } from "../SiteHeader";
@@ -67,7 +66,7 @@ export default function TechnicalDesktop() {
               <p className="d-2158fa6ddb">REAL POSSIBILITIES.</p>
             </div>
             <p className="d-64e37b773b" data-node-id="874:8944">
-              {mainDay.technical} {mainDay.openai}
+              Explore cloud, AI, security, and software development, including AWS technical sessions and hands-on workshops on the main day.
             </p>
             <div className="d-1c5e80253f" data-node-id="874:8946">
               <p className="d-ebed470a6c">SESSIONS + SPEAKERS + TIMINGS</p>

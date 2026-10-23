@@ -63,3 +63,4 @@ export function PreviousSpeakers() {
     <div data-node-id="155:693" data-reveal="off"><DitherDivider from="violet" to="navy" /></div>
   </div>;
 }
+

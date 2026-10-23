@@ -83,7 +83,7 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
               <p className="d-0ec15d1280 programme-step-number" data-node-id="866:8492">01</p>
             </div>
             <p className="d-9fc2a563fc" data-node-id="866:8495">
-              MAIN DAY / MANY POSSIBILITIES
+              ONE DAY / MANY POSSIBILITIES
             </p>
           </ProgrammeSteps>
         </div>
@@ -103,7 +103,7 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
               THE PROGRAMME
             </p>
             <div className="d-d9d082fa8a" data-node-id="866:8503">
-              <p className="d-8305ee571e">MAIN DAY.</p>
+              <p className="d-8305ee571e">ONE DAY.</p>
               <p className="d-8305ee571e">MANY WAYS</p>
               <p className="d-e358ca9dbc">TO BUILD.</p>
             </div>
@@ -147,7 +147,7 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
                   TECHNICAL
                 </p>
                 <p className="d-902df9c1ec" data-node-id="866:8526">
-                  AWS / AI / MongoDB
+                  Cloud / AI / Security
                 </p>
                 <SiteLink hoverTone="orange" buttonTone="navy" className="d-4ec8c19304" data-node-id="866:8527" data-name="Action / View details" href={"/technical"}>
                   <p className="d-7669a2de49" data-node-id="I866:8527;5:30">
@@ -163,7 +163,7 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
                   NON-TECHNICAL
                 </p>
                 <p className="d-902df9c1ec" data-node-id="866:8530">
-                  Main-day sessions / Details soon
+                  Startups / Product / Leadership
                 </p>
                 <SiteLink hoverTone="lime" buttonTone="navy" className="d-4ec8c19304" data-node-id="866:8531" data-name="Action / View details" href={"/non-technical"}>
                   <p className="d-7669a2de49" data-node-id="I866:8531;5:30">

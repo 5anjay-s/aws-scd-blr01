@@ -22,10 +22,8 @@ export function SiteLink({ href, children, className, buttonTone, hoverTone, onC
   if (!href) {
     return <a {...props} {...appearance} role="link" aria-disabled="true" title="Link to be announced">{children}</a>;
   }
-  const external = /^https?:/i.test(href);
-  const nativeLink = /^(mailto:|tel:)/i.test(href);
-  if (/^[a-z][a-z\d+.-]*:/i.test(href) && !external && !nativeLink) return <span className={className}>{children}</span>;
-  const url = external || nativeLink || props.download !== undefined ? null : resolveLinkUrl(href, new URL(window.location.href));
+  const external = /^https?:/.test(href);
+  const url = external || props.download !== undefined ? null : resolveLinkUrl(href, new URL(window.location.href));
   const destination = url ? url.pathname + url.search + url.hash : href;
   const current = inHeader && url && isNavigationActive(resolveLocation(url), location)
     ? (location.path === '/' ? 'location' : 'page') : undefined;
@@ -34,7 +32,7 @@ export function SiteLink({ href, children, className, buttonTone, hoverTone, onC
     rel={rel ?? (external ? 'noopener noreferrer' : undefined)}
     onClick={(event) => {
       onClick?.(event);
-      if (!external && !nativeLink && !event.defaultPrevented && event.button === 0 && (!target || target === '_self')
+      if (!external && !event.defaultPrevented && event.button === 0 && (!target || target === '_self')
         && props.download === undefined && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) {
         event.preventDefault();
         const bounds = event.currentTarget.getBoundingClientRect();

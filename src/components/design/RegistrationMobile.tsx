@@ -72,26 +72,26 @@ export default function RegistrationMobile() {
       <div className="registration-choices">
         <div className="d-db1f158724 registration-admission" data-node-id="1367:793" data-name="Registration / Mobile admission desk">
           <p className="d-11ea5ff482" data-node-id="1367:794">
-            MAIN DAY / REGISTRATION
+            REGISTRATION / THE NEXT CHAPTER
           </p>
           <div className="d-604c817326" data-node-id="1367:795" data-name="Registration / You’re early">
             <div className="d-c08309e7a2" data-node-id="1367:796" role="heading" aria-level={1}>
-              <p className="d-90f3a58a30">YOUR WAY</p>
-              <p className="d-1d948fc99e">IN.</p>
+              <p className="d-90f3a58a30">YOU’RE</p>
+              <p className="d-1d948fc99e">EARLY.</p>
             </div>
           </div>
           <div className="d-c197716cad" data-node-id="1367:797" data-name="Registration / Early invitation">
             <p className="d-e17191e08b" data-node-id="1367:798">
-              Two steps. One community.
+              That’s a good thing.
             </p>
             <div className="d-cef894190b" data-node-id="1367:799">
               <p className="d-143d1e5b1d">Registration is open for 5 November 2026</p>
               <p className="d-143d1e5b1d">at REVA University, Bengaluru.</p>
-              <p className="d-e894d19a93">Entry is confirmed only with an official KonfHub ticket.</p>
+              <p className="d-e894d19a93">The next chapter is taking shape.</p>
             </div>
             <SiteLink buttonTone="orange" className="d-d4e2f56eff" data-node-id="1367:800" data-name="Registration / Back to exploring" href={siteLinks.konfhub}>
               <p className="d-ad21a68151" data-node-id="I1367:800;5:30">
-                Get tickets on KonfHub
+                Register Now
               </p>
               <div className="d-4725149c0e" data-node-id="I1367:800;15:32" data-name="Arrow">
                 <img alt="" className="d-511e8f31d4" src={imgArrow} />
@@ -241,7 +241,7 @@ export default function RegistrationMobile() {
                 Your first step
               </p>
               <p className="d-c37f273d0b" data-node-id="1367:870">
-                IMPULSE requires a separate registration on Luma. Your SCD ticket covers the main day.
+                Bring your questions. We’ll build from there.
               </p>
             </div>
           </div>

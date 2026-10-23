@@ -218,17 +218,6 @@ test('a consumer can cancel navigation in its click handler', () => {
   assert.equal(app.navigations.length, 0);
 });
 
-test('email and telephone links retain their native handler instead of entering the hash router', () => {
-  for (const href of ['mailto:connect.aws.sbg.ru@gmail.com?subject=SCD', 'tel:+918000000000']) {
-    const app = link({ href });
-    assert.equal(app.element.props.href, href);
-    assert.equal(app.element.props.target, undefined);
-    assert.equal(app.click().defaultPrevented, false);
-    assert.equal(app.navigations.length, 0);
-  }
-  assert.equal(link({ href: 'javascript:alert(1)' }).element.type, 'span');
-});
-
 test('modified clicks, secondary clicks, explicit targets and downloads retain native behavior', () => {
   for (const event of [{ ctrlKey: true }, { metaKey: true }, { shiftKey: true }, { altKey: true }, { button: 1 }]) {
     const app = link();

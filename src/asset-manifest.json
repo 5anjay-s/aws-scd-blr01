@@ -19,7 +19,7 @@
   },
   {
     "file": "public/assets/1160-5759-305fd.svg",
-    "component": "CommunityChapters",
+    "component": "PartnersGoodCompany",
     "variable": "imgAccentWovenLinks",
     "bytes": 8992
   },
@@ -98,25 +98,25 @@
   },
   {
     "file": "public/assets/1168-493-2adcd.svg",
-    "component": "CommunityChapters",
+    "component": "MobileChaptersDesktopAligned",
     "variable": "imgAccentCuriositySpark",
     "bytes": 4781
   },
   {
     "file": "public/assets/1168-493-b4ed3.svg",
-    "component": "CommunityChapters",
+    "component": "MobileChaptersDesktopAligned",
     "variable": "imgAccentDitherCorner",
     "bytes": 2496
   },
   {
     "file": "public/assets/1168-493-fd314.svg",
-    "component": "CommunityChapters",
+    "component": "MobileChaptersDesktopAligned",
     "variable": "imgCodeOpenBrackets",
     "bytes": 3040
   },
   {
     "file": "public/assets/1168-493-5454f.svg",
-    "component": "CommunityChapters",
+    "component": "MobileChaptersDesktopAligned",
     "variable": "imgAccentWovenLinks",
     "bytes": 12035
   },
@@ -668,7 +668,7 @@
   },
   {
     "file": "public/assets/860-5073-2287b.svg",
-    "component": "CommunityChapters",
+    "component": "IntroductionV2FirstHello",
     "variable": "imgAccentCuriositySpark",
     "bytes": 4853
   },
@@ -679,16 +679,28 @@
     "bytes": 6030
   },
   {
+    "file": "public/assets/860-5073-2287b.svg",
+    "component": "ChaptersV2",
+    "variable": "imgAccentCuriositySpark",
+    "bytes": 4853
+  },
+  {
     "file": "public/assets/860-5085-cefb3.svg",
-    "component": "CommunityChapters",
+    "component": "ChaptersV2",
     "variable": "imgAccentDitherCorner",
     "bytes": 2005
   },
   {
     "file": "public/assets/860-5085-96238.svg",
-    "component": "CommunityChapters",
+    "component": "ChaptersV2",
     "variable": "imgCodeOpenBrackets",
     "bytes": 3140
+  },
+  {
+    "file": "public/assets/1160-5759-305fd.svg",
+    "component": "ChaptersV2",
+    "variable": "imgAccentWovenLinks",
+    "bytes": 8992
   },
   {
     "file": "public/assets/860-5104-db107.svg",
@@ -1119,7 +1131,7 @@
   },
   {
     "file": "public/assets/874-9211-c568c.svg",
-    "component": "NonTechnicalPage",
+    "component": "NonTechnicalDesktop",
     "variable": "imgSharedGlyphOpenExchange",
     "bytes": 43087
   },
@@ -1167,7 +1179,7 @@
   },
   {
     "file": "public/assets/880-9338-d328b.svg",
-    "component": "NonTechnicalPage",
+    "component": "NonTechnicalMobile",
     "variable": "imgSharedGlyphOpenExchange",
     "bytes": 61570
   },
@@ -1570,168 +1582,6 @@
     "component": "OrganizersMobile",
     "variable": "imgDitherPrintedSpeechEdge1",
     "bytes": 2529
-  },
-  {
-    "file": "public/brands/aws-sbg-reva-black.png",
-    "component": "EventContent",
-    "variable": "approvedPreviousSiteAsset",
-    "bytes": 21590
-  },
-  {
-    "file": "public/brands/aws-sbg-reva-white.png",
-    "component": "EventContent",
-    "variable": "approvedPreviousSiteAsset",
-    "bytes": 19029
-  },
-  {
-    "file": "public/brands/aws-white.svg",
-    "component": "EventContent",
-    "variable": "approvedPreviousSiteAsset",
-    "bytes": 3675
-  },
-  {
-    "file": "public/brands/bengaluru-tech-week-mark.svg",
-    "component": "EventContent",
-    "variable": "approvedPreviousSiteAsset",
-    "bytes": 3592
-  },
-  {
-    "file": "public/brands/jll.svg",
-    "component": "EventContent",
-    "variable": "approvedPreviousSiteAsset",
-    "bytes": 9335
-  },
-  {
-    "file": "public/brands/mongodb-white.svg",
-    "component": "EventContent",
-    "variable": "approvedPreviousSiteAsset",
-    "bytes": 11418
-  },
-  {
-    "file": "public/brands/openai-white.svg",
-    "component": "EventContent",
-    "variable": "approvedPreviousSiteAsset",
-    "bytes": 2189
-  },
-  {
-    "file": "public/brands/reva-university-white.png",
-    "component": "EventContent",
-    "variable": "approvedPreviousSiteAsset",
-    "bytes": 27111
-  },
-  {
-    "file": "public/media/previous-speakers/arun-kumar.png",
-    "component": "PreviousSpeakers",
-    "variable": "approvedPreviousSiteAsset",
-    "bytes": 194041
-  },
-  {
-    "file": "public/media/previous-speakers/ashita-prasad.jpeg",
-    "component": "PreviousSpeakers",
-    "variable": "approvedPreviousSiteAsset",
-    "bytes": 152152
-  },
-  {
-    "file": "public/media/previous-speakers/deepak-n.png",
-    "component": "PreviousSpeakers",
-    "variable": "approvedPreviousSiteAsset",
-    "bytes": 190019
-  },
-  {
-    "file": "public/media/previous-speakers/smiti-guru.jpeg",
-    "component": "PreviousSpeakers",
-    "variable": "approvedPreviousSiteAsset",
-    "bytes": 99202
-  },
-  {
-    "file": "public/maps/reva-campus.webp",
-    "component": "VenueContent",
-    "variable": "approvedPreviousSiteAsset",
-    "bytes": 2997676
-  },
-  {
-    "file": "public/media/scd-social.png",
-    "component": "SiteMetadata",
-    "variable": "approvedSocialImage",
-    "bytes": 108090
-  },
-  {
-    "file": "public/brands/bengaluru-tech-week-horizontal.svg",
-    "component": "OrganizersPage",
-    "variable": "techWeekHorizontalLogo",
-    "bytes": 18137
-  },
-  {
-    "file": "public/assets/1160-5759-305fd.svg",
-    "component": "PartnersGoodCompany",
-    "variable": "imgAccentWovenLinks",
-    "bytes": 8992
-  },
-  {
-    "file": "public/assets/1168-493-2adcd.svg",
-    "component": "MobileChaptersDesktopAligned",
-    "variable": "imgAccentCuriositySpark",
-    "bytes": 4781
-  },
-  {
-    "file": "public/assets/1168-493-b4ed3.svg",
-    "component": "MobileChaptersDesktopAligned",
-    "variable": "imgAccentDitherCorner",
-    "bytes": 2496
-  },
-  {
-    "file": "public/assets/1168-493-fd314.svg",
-    "component": "MobileChaptersDesktopAligned",
-    "variable": "imgCodeOpenBrackets",
-    "bytes": 3040
-  },
-  {
-    "file": "public/assets/1168-493-5454f.svg",
-    "component": "MobileChaptersDesktopAligned",
-    "variable": "imgAccentWovenLinks",
-    "bytes": 12035
-  },
-  {
-    "file": "public/assets/860-5073-2287b.svg",
-    "component": "IntroductionV2FirstHello",
-    "variable": "imgAccentCuriositySpark",
-    "bytes": 4853
-  },
-  {
-    "file": "public/assets/860-5073-2287b.svg",
-    "component": "ChaptersV2",
-    "variable": "imgAccentCuriositySpark",
-    "bytes": 4853
-  },
-  {
-    "file": "public/assets/860-5085-cefb3.svg",
-    "component": "ChaptersV2",
-    "variable": "imgAccentDitherCorner",
-    "bytes": 2005
-  },
-  {
-    "file": "public/assets/860-5085-96238.svg",
-    "component": "ChaptersV2",
-    "variable": "imgCodeOpenBrackets",
-    "bytes": 3140
-  },
-  {
-    "file": "public/assets/1160-5759-305fd.svg",
-    "component": "ChaptersV2",
-    "variable": "imgAccentWovenLinks",
-    "bytes": 8992
-  },
-  {
-    "file": "public/assets/874-9211-c568c.svg",
-    "component": "NonTechnicalDesktop",
-    "variable": "imgSharedGlyphOpenExchange",
-    "bytes": 43087
-  },
-  {
-    "file": "public/assets/880-9338-d328b.svg",
-    "component": "NonTechnicalMobile",
-    "variable": "imgSharedGlyphOpenExchange",
-    "bytes": 61570
   },
   {
     "file": "public/media/previous-speakers/ayush-hooda.png",

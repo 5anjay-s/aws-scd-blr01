@@ -10,7 +10,6 @@ import './styles/design.css';
 import './styles/responsive-generated.css';
 import './styles/responsive.css';
 import './styles/interactions.css';
-import './styles/event-content.css';
 import App from './App';
 
 createRoot(document.getElementById('root')!).render(<StrictMode><App /></StrictMode>);

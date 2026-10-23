@@ -10,19 +10,12 @@ const canonical = href => {
 };
 
 test('hash routes open standalone pages including the loading replay', () => {
-  for (const page of ['loading', 'technical', 'non-technical', 'registration', 'organisers', 'faq', 'agenda', 'venue', '404']) {
+  for (const page of ['loading', 'technical', 'non-technical', 'registration', 'organisers', 'faq', '404']) {
     assert.deepEqual(at(`/#${page}`), { path: `/${page}`, anchor: '' });
     assert.equal(canonical(`/${page}`), `/#${page}`);
     assert.equal(canonical(`/${page}/`), `/#${page}`);
     assert.equal(canonical(`/#${page}`), `/#${page}`);
   }
-});
-
-test('previous registration, about and hackathon bookmarks retain their destinations', () => {
-  assert.deepEqual(at('/register/'), { path: '/registration', anchor: '' });
-  assert.deepEqual(at('/#about'), { path: '/', anchor: 'experience' });
-  assert.deepEqual(at('/#pre-scd-hackathon'), { path: '/', anchor: 'pre-scd' });
-  assert.deepEqual(at('/#pre-scd-hackathon-chatgpt-workshop'), { path: '/', anchor: 'pre-scd' });
 });
 
 test('old organizers URLs use organisers and preserve page anchors and query parameters', () => {

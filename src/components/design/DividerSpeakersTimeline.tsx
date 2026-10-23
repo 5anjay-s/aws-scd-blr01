@@ -3,7 +3,7 @@ import { DitherDivider } from "../DitherDivider";
 
 export default function DividerSpeakersTimeline() {
   return (
-    <DitherDivider from="navy" to="white" className="speakers-timeline-divider"
+    <DitherDivider from="white" to="navy" className="speakers-timeline-divider"
       nodeId="1154:483" name="Divider / Speakers → Timeline" />
   );
 }

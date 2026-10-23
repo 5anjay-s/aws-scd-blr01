@@ -1,4 +1,3 @@
-import { mainDay } from "../../content/event";
 import { SiteBrand } from "../SiteBrand";
 import { TrackArtwork } from "../TrackArtwork";
 import { SiteHeader } from "../SiteHeader";
@@ -41,7 +40,7 @@ export default function TechnicalMobile() {
           <TrackArtwork kind="compile" className="d-511e8f31d4" src={imgArtworkCompileBracketsMobile} />
         </div>
         <p className="d-2c3b9cd2b0" data-node-id="874:9132">
-              {mainDay.technical} {mainDay.openai}
+          Explore cloud, AI, security, and software development, including AWS technical sessions and hands-on workshops on the main day.
         </p>
         <div className="d-0a78fc8e18" data-node-id="874:9134">
           <p className="d-ebed470a6c">SESSIONS + SPEAKERS + TIMINGS</p>

@@ -93,26 +93,26 @@ export default function RegistrationDesktop() {
       <div className="registration-choices">
         <div className="d-a8f0c92515 registration-admission" data-node-id="1367:669" data-name="Registration / Admission desk">
           <p className="d-09dae26e09" data-node-id="1367:670" role="heading" aria-level={1}>
-            MAIN DAY / REGISTRATION
+            REGISTRATION / THE NEXT CHAPTER
           </p>
           <p className="d-3edd08d552" data-node-id="1367:671">
-            YOUR WAY
+            YOU’RE
           </p>
           <p className="d-693e676d46" data-node-id="1367:672">
-            IN.
+            EARLY.
           </p>
           <p className="d-b4f42ccefc" data-node-id="1367:673">
-            Two steps. One community.
+            That’s a good thing.
           </p>
           <div className="d-a69b48af18" data-node-id="1367:674" data-name="Registration / Current status">
             <div className="d-090bbee435" data-node-id="1367:675">
               <p className="d-24de9bb201">Registration is open for 5 November 2026</p>
               <p className="d-24de9bb201">at REVA University, Bengaluru.</p>
-              <p className="d-976352e9f0">Entry is confirmed only with an official KonfHub ticket.</p>
+              <p className="d-976352e9f0">The next chapter is taking shape.</p>
             </div>
             <SiteLink buttonTone="orange" className="d-86b35f0797" data-node-id="1367:676" data-name="Button / Flat" href={siteLinks.konfhub}>
               <p className="d-cf01328ee8" data-node-id="I1367:676;5:30">
-                Get tickets on KonfHub
+                Register Now
               </p>
               <div className="d-4725149c0e" data-node-id="I1367:676;15:32" data-name="Arrow">
                 <img alt="" className="d-511e8f31d4" src={imgArrow} />
@@ -261,7 +261,7 @@ export default function RegistrationDesktop() {
                   Your first step
                 </p>
                 <p className="d-0ae5befe23" data-node-id="1367:749">
-                  IMPULSE requires a separate registration on Luma. Your SCD ticket covers the main day.
+                  Bring your questions. We’ll build from there.
                 </p>
               </div>
             </div>
