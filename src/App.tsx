@@ -6,6 +6,7 @@ import { NavigationLocationContext } from './components/NavigationState';
 import { LoadingTransition } from './components/LoadingTransition';
 import { PageTransition } from './components/PageTransition';
 import { PageSections } from './components/PageSections';
+import { RevaFooter } from './components/RevaBrand';
 import { useSiteNavigation } from './components/useSiteNavigation';
 import { usePageLayout } from './components/usePageLayout';
 import { usePageScroll } from './components/usePageScroll';
@@ -38,6 +39,7 @@ export default function App() {
               <div className="design-content" ref={setHeaderHost} />
             </header>}
             <PageSections sections={sections} />
+            {!isLoading && <RevaFooter />}
           </div>
         </main>
         {transition && (transition.kind === 'intro'

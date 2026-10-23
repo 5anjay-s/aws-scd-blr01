@@ -1,6 +1,7 @@
 import { SignalStitch } from "../SignalStitch";
 import { useRef } from "react";
 import { ScrollSpark } from "../ScrollSpark";
+import { RevaIntroduction } from "../RevaBrand";
 // Source: Figma 00/ Final, node 860:5073.
 const imgAccentSignalStitch = "/assets/860-5073-978e7.svg";
 const imgAccentCuriositySpark = "/assets/860-5073-2287b.svg";
@@ -21,6 +22,7 @@ export default function IntroductionV2FirstHello() {
             <p className="d-307cc96bda">to what comes next.</p>
           </div>
         </div>
+        <RevaIntroduction />
         <div className="d-6fb5331839" data-node-id="860:5079" data-name="Contents column">
           <p className="d-f0204e8f54" data-node-id="860:5080">
             MAKE ROOM FOR

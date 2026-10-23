@@ -1,4 +1,8 @@
 .site-brand {
+  --brand-icon-width: 56px;
+  --brand-logo-height: 42px;
+  --brand-university-gap: 10px;
+  --brand-window-inset: 14px;
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -10,11 +14,37 @@
 
 .site-brand__artwork {
   display: block;
-  width: 56px;
-  height: auto;
+  width: var(--brand-icon-width);
+  height: var(--brand-logo-height);
 }
 
+.site-brand__identity { display: flex; align-items: center; flex: 0 0 auto; }
+.site-brand__separator { position: relative; z-index: 1; flex: 0 0 1px; height: 34px; background: rgb(248 250 252 / 38%); }
+.site-brand__window {
+  display: block;
+  position: relative;
+  width: calc(var(--brand-window-inset) + var(--brand-logo-height) + var(--brand-university-gap) + var(--brand-logo-height) * 374 / 112);
+  height: var(--brand-logo-height);
+  overflow: clip;
+}
+.site-brand__university, .site-brand__name {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  padding-left: var(--brand-window-inset);
+  will-change: transform;
+}
+.site-brand__university .reva-brand--navbar { display: inline-flex; align-items: center; gap: var(--brand-university-gap); width: max-content; }
+.reva-navbar__symbol { flex: 0 0 auto; width: var(--brand-logo-height); height: var(--brand-logo-height); object-fit: contain; }
+.reva-navbar__wordmark { display: block; position: relative; flex: 0 0 auto; width: calc(var(--brand-logo-height) * 374 / 112); height: var(--brand-logo-height); }
+.reva-navbar__wordmark img { display: block; width: 100%; height: 100%; object-fit: contain; }
+/* Keep the supplied orange REVA lettering; lift only UNIVERSITY for the navy header. */
+.reva-navbar__wordmark .reva-navbar__wordmark-contrast { position: absolute; inset: 0; filter: brightness(0) invert(1); clip-path: inset(58% 0 0); }
 .site-brand__name {
+  display: block;
+  align-content: center;
+  transform: translateX(-105%);
   font-family: 'Azeret Mono', monospace;
   font-size: 18px;
   font-weight: 500;
@@ -26,14 +56,17 @@
 .site-brand__provider { color: var(--orange); }
 .site-brand__city { color: var(--cyan); }
 
-.mobile-layout .site-brand { gap: 9px; }
-.mobile-layout .site-brand__artwork { width: 40px; }
+.mobile-layout .site-brand { --brand-icon-width: 40px; --brand-logo-height: 30px; --brand-university-gap: 8px; --brand-window-inset: 12px; gap: 9px; }
 .mobile-layout .site-brand__name { font-size: 15px; letter-spacing: -0.25px; }
+.mobile-layout .site-brand__separator { height: 28px; }
 .mobile-layout .design-content .site-header { gap: 12px; }
 .mobile-layout [data-name='Footer / Brand and return'] { flex-wrap: wrap; gap: 16px; justify-content: space-between; }
 
 @media (max-width: 359px) {
-  .mobile-layout .site-brand { gap: 7px; }
-  .mobile-layout .site-brand__artwork { width: 32px; }
+  .mobile-layout .site-brand { --brand-icon-width: 32px; --brand-logo-height: 24px; --brand-university-gap: 6px; --brand-window-inset: 10px; gap: 7px; }
   .mobile-layout .site-brand__name { font-size: 13px; letter-spacing: -0.2px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-brand__university, .site-brand__name { will-change: auto; }
 }

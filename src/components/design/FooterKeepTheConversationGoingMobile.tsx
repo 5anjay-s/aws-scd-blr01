@@ -1,4 +1,3 @@
-import { SiteBrand } from "../SiteBrand";
 import { WovenRibbon } from "../WovenRibbon";
 import { SiteLink } from "../SiteLink";
 import { siteLinks } from "../../site-config";
@@ -71,20 +70,6 @@ export default function FooterKeepTheConversationGoingMobile() {
             </SiteLink>
             <div className="d-23976039ee" data-node-id="1301:725" data-name="Social / Open rule" />
           </div>
-        </div>
-        <div className="d-116660ca67" data-node-id="1287:657" data-name="Footer / Quiet divider" />
-        <div className="d-3c2f073db3" data-node-id="1287:643" data-name="Footer / Utility">
-          <div className="d-f6b8f3f4a8" data-node-id="1301:726" data-name="Footer / Brand and return">
-            <SiteBrand data-node-id="1301:727" />
-            <SiteLink className="d-5dd7a655ee" data-node-id="1169:697" data-name="Footer / Back to top" href={"#top"}>
-              <p className="d-c52accc82f" data-node-id="1169:698">
-                Back to top ↑
-              </p>
-            </SiteLink>
-          </div>
-          <p className="d-1be0a328f7" data-node-id="1169:696">
-            STUDENT LED. COMMUNITY POWERED.
-          </p>
         </div>
       </div>
     </div>

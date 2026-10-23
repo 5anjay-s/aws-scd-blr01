@@ -1,4 +1,3 @@
-import { SiteBrand } from "../SiteBrand";
 import { WovenRibbon } from "../WovenRibbon";
 import { SiteLink } from "../SiteLink";
 import { siteLinks } from "../../site-config";
@@ -73,16 +72,6 @@ export default function FooterKeepTheConversationGoingDesktop() {
       </div>
       <div className="d-e4467a8187 pixel-border pixel-border-orange-navy" data-node-id="913:540" data-name="Footer / Navy pixel transition">
         <img alt="" className="d-511e8f31d4" src={imgFooterNavyPixelTransition} />
-      </div>
-      <div className="d-e2d3cf23e7" data-node-id="1287:642" data-name="Footer / Quiet divider" />
-      <div className="d-cd7fcf8b0a" data-node-id="1287:625" data-name="Footer / Utility">
-        <SiteBrand data-node-id="1301:702" />
-        <p className="d-393807428f" data-node-id="860:5361">
-          STUDENT LED. COMMUNITY POWERED.
-        </p>
-        <SiteLink className="d-e6baf026ef" data-node-id="860:5362" href={"#top"}>
-          <p className="d-95907800fd">Back to top</p>
-        </SiteLink>
       </div>
     </div>
   );

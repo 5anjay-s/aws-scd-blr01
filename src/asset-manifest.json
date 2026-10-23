@@ -1643,5 +1643,33 @@
     "component": "TechnicalMobile",
     "variable": "imgImpulseHackathon",
     "bytes": 46504
+  },
+  {
+    "file": "public/brands/reva-university-white.png",
+    "component": "RevaBrand",
+    "variable": "revaUniversityWordmark",
+    "bytes": 27111,
+    "source": "https://github.com/5anjay-s/aws-scd/blob/84a67b5297c77927f418bdfd420d6014bfcf7269/public/brands/reva-university-white.png"
+  },
+  {
+    "file": "public/brands/reva-university-dark.png",
+    "component": "RevaBrand",
+    "variable": "revaUniversityDarkWordmark",
+    "bytes": 21799,
+    "source": "User-supplied dark REVA University logo"
+  },
+  {
+    "file": "public/brands/reva-symbol.png",
+    "component": "RevaBrand",
+    "variable": "revaNavbarSymbol",
+    "bytes": 8372,
+    "source": "User-supplied separate REVA symbol"
+  },
+  {
+    "file": "public/brands/reva-wordmark.png",
+    "component": "RevaBrand",
+    "variable": "revaNavbarWordmark",
+    "bytes": 17126,
+    "source": "User-supplied separate REVA UNIVERSITY wordmark"
   }
 ]

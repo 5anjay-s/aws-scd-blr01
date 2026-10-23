@@ -284,16 +284,6 @@ export default function TechnicalDesktop() {
             </div>
           </div>
         </div>
-        <div className="d-e2d3cf23e7" data-node-id="1476:652" data-name="Footer / Quiet divider" />
-        <div className="d-cd7fcf8b0a" data-node-id="1476:653" data-name="Footer / Utility">
-          <SiteBrand data-node-id="1476:654" />
-          <p className="d-393807428f" data-node-id="1476:658">
-            STUDENT LED. COMMUNITY POWERED.
-          </p>
-          <SiteLink className="d-a959ee36a6" data-node-id="1476:659" href={"#top"}>
-            Back to top
-          </SiteLink>
-        </div>
       </div>
     </div>
   );

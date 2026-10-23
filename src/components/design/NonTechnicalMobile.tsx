@@ -214,20 +214,6 @@ export default function NonTechnicalMobile() {
             <div className="d-23976039ee" data-node-id="1476:773" data-name="Social / Open rule" />
           </div>
         </div>
-        <div className="d-116660ca67" data-node-id="1476:774" data-name="Footer / Quiet divider" />
-        <div className="d-3c2f073db3" data-node-id="1476:775" data-name="Footer / Utility">
-          <div className="d-f6b8f3f4a8" data-node-id="1476:776" data-name="Footer / Brand and return">
-            <SiteBrand data-node-id="1476:777" />
-            <SiteLink className="d-2458e22cbe" data-node-id="1476:781" data-name="Footer / Back to top" href={"#top"}>
-              <p className="d-fe8d7a0908" data-node-id="1476:782">
-                Back to top ↑
-              </p>
-            </SiteLink>
-          </div>
-          <p className="d-1be0a328f7" data-node-id="1476:783">
-            STUDENT LED. COMMUNITY POWERED.
-          </p>
-        </div>
       </div>
     </div>
   );

@@ -332,16 +332,6 @@ export default function RegistrationDesktop() {
             </div>
           </div>
         </div>
-        <div className="d-e2d3cf23e7" data-node-id="1476:818" data-name="Footer / Quiet divider" />
-        <div className="d-cd7fcf8b0a" data-node-id="1476:819" data-name="Footer / Utility">
-          <SiteBrand data-node-id="1476:820" />
-          <p className="d-393807428f" data-node-id="1476:824">
-            STUDENT LED. COMMUNITY POWERED.
-          </p>
-          <SiteLink className="d-a959ee36a6" data-node-id="1476:825" href={"#top"}>
-            Back to top
-          </SiteLink>
-        </div>
       </div>
     </div>
   );

@@ -250,16 +250,6 @@ export default function NonTechnicalDesktop() {
             </div>
           </div>
         </div>
-        <div className="d-e2d3cf23e7" data-node-id="1476:735" data-name="Footer / Quiet divider" />
-        <div className="d-cd7fcf8b0a" data-node-id="1476:736" data-name="Footer / Utility">
-          <SiteBrand data-node-id="1476:737" />
-          <p className="d-393807428f" data-node-id="1476:741">
-            STUDENT LED. COMMUNITY POWERED.
-          </p>
-          <SiteLink className="d-a959ee36a6" data-node-id="1476:742" href={"#top"}>
-            Back to top
-          </SiteLink>
-        </div>
       </div>
     </div>
   );

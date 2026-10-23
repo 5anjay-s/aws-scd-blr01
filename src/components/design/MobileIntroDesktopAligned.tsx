@@ -1,6 +1,7 @@
 import { SignalStitch } from "../SignalStitch";
 import { useRef } from "react";
 import { ScrollSpark } from "../ScrollSpark";
+import { RevaIntroduction } from "../RevaBrand";
 // Source: Figma 00/ Final, node 1168:492.
 const imgAccentSignalStitch = "/assets/1168-492-58d8d.svg";
 const imgAccentCuriositySpark = "/assets/1168-492-892aa.svg";
@@ -20,6 +21,7 @@ export default function MobileIntroDesktopAligned() {
           <p className="d-6ee5fa6884">world to what</p>
           <p className="d-f42ae1416f">comes next.</p>
         </div>
+        <RevaIntroduction />
         <div className="d-8d53dae494" data-node-id="1169:604" data-name="Accent / Signal stitch">
           <SignalStitch alt="" className="d-511e8f31d4" src={imgAccentSignalStitch} />
         </div>
