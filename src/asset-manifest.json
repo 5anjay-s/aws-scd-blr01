@@ -679,12 +679,6 @@
     "bytes": 6030
   },
   {
-    "file": "public/assets/860-5073-2287b.svg",
-    "component": "CommunityChapters",
-    "variable": "imgAccentCuriositySpark",
-    "bytes": 4853
-  },
-  {
     "file": "public/assets/860-5085-cefb3.svg",
     "component": "CommunityChapters",
     "variable": "imgAccentDitherCorner",
@@ -695,12 +689,6 @@
     "component": "CommunityChapters",
     "variable": "imgCodeOpenBrackets",
     "bytes": 3140
-  },
-  {
-    "file": "public/assets/1160-5759-305fd.svg",
-    "component": "CommunityChapters",
-    "variable": "imgAccentWovenLinks",
-    "bytes": 8992
   },
   {
     "file": "public/assets/860-5104-db107.svg",
@@ -1672,5 +1660,138 @@
     "component": "OrganizersPage",
     "variable": "techWeekHorizontalLogo",
     "bytes": 18137
+  },
+  {
+    "file": "public/assets/1160-5759-305fd.svg",
+    "component": "PartnersGoodCompany",
+    "variable": "imgAccentWovenLinks",
+    "bytes": 8992
+  },
+  {
+    "file": "public/assets/1168-493-2adcd.svg",
+    "component": "MobileChaptersDesktopAligned",
+    "variable": "imgAccentCuriositySpark",
+    "bytes": 4781
+  },
+  {
+    "file": "public/assets/1168-493-b4ed3.svg",
+    "component": "MobileChaptersDesktopAligned",
+    "variable": "imgAccentDitherCorner",
+    "bytes": 2496
+  },
+  {
+    "file": "public/assets/1168-493-fd314.svg",
+    "component": "MobileChaptersDesktopAligned",
+    "variable": "imgCodeOpenBrackets",
+    "bytes": 3040
+  },
+  {
+    "file": "public/assets/1168-493-5454f.svg",
+    "component": "MobileChaptersDesktopAligned",
+    "variable": "imgAccentWovenLinks",
+    "bytes": 12035
+  },
+  {
+    "file": "public/assets/860-5073-2287b.svg",
+    "component": "IntroductionV2FirstHello",
+    "variable": "imgAccentCuriositySpark",
+    "bytes": 4853
+  },
+  {
+    "file": "public/assets/860-5073-2287b.svg",
+    "component": "ChaptersV2",
+    "variable": "imgAccentCuriositySpark",
+    "bytes": 4853
+  },
+  {
+    "file": "public/assets/860-5085-cefb3.svg",
+    "component": "ChaptersV2",
+    "variable": "imgAccentDitherCorner",
+    "bytes": 2005
+  },
+  {
+    "file": "public/assets/860-5085-96238.svg",
+    "component": "ChaptersV2",
+    "variable": "imgCodeOpenBrackets",
+    "bytes": 3140
+  },
+  {
+    "file": "public/assets/1160-5759-305fd.svg",
+    "component": "ChaptersV2",
+    "variable": "imgAccentWovenLinks",
+    "bytes": 8992
+  },
+  {
+    "file": "public/assets/874-9211-c568c.svg",
+    "component": "NonTechnicalDesktop",
+    "variable": "imgSharedGlyphOpenExchange",
+    "bytes": 43087
+  },
+  {
+    "file": "public/assets/880-9338-d328b.svg",
+    "component": "NonTechnicalMobile",
+    "variable": "imgSharedGlyphOpenExchange",
+    "bytes": 61570
+  },
+  {
+    "file": "public/media/previous-speakers/ayush-hooda.png",
+    "component": "Speakers",
+    "variable": "photoAyushHooda",
+    "bytes": 236397,
+    "source": "http://localhost:8076/ayush-hooda.png"
+  },
+  {
+    "file": "public/media/previous-speakers/ashita-prasad.jpeg",
+    "component": "PreviousSpeakers",
+    "variable": "photoAshitaPrasad",
+    "bytes": 152152,
+    "source": "../aws-scd-blr02/public/media/previous-speakers/ashita-prasad.jpeg"
+  },
+  {
+    "file": "public/media/previous-speakers/smiti-guru.jpeg",
+    "component": "PreviousSpeakers",
+    "variable": "photoSmitiGuru",
+    "bytes": 99202,
+    "source": "../aws-scd-blr02/public/media/previous-speakers/smiti-guru.jpeg"
+  },
+  {
+    "file": "public/media/previous-speakers/arun-kumar.png",
+    "component": "PreviousSpeakers",
+    "variable": "photoArunKumar",
+    "bytes": 194041,
+    "source": "../aws-scd-blr02/public/media/previous-speakers/arun-kumar.png"
+  },
+  {
+    "file": "public/media/previous-speakers/deepak-n.png",
+    "component": "PreviousSpeakers",
+    "variable": "photoDeepakN",
+    "bytes": 190019,
+    "source": "../aws-scd-blr02/public/media/previous-speakers/deepak-n.png"
+  },
+  {
+    "file": "public/brands/aws-white.svg",
+    "component": "PreviousSpeakers",
+    "variable": "awsSpeakerLogo",
+    "bytes": 3675,
+    "source": "../aws-scd-blr02/public/brands/aws-white.svg"
+  },
+  {
+    "file": "public/brands/jll.svg",
+    "component": "PreviousSpeakers",
+    "variable": "jllSpeakerLogo",
+    "bytes": 9335,
+    "source": "../aws-scd-blr02/public/brands/jll.svg"
+  },
+  {
+    "file": "public/assets/hackathon-image.svg",
+    "component": "TechnicalDesktop",
+    "variable": "imgImpulseHackathon",
+    "bytes": 46504
+  },
+  {
+    "file": "public/assets/hackathon-image.svg",
+    "component": "TechnicalMobile",
+    "variable": "imgImpulseHackathon",
+    "bytes": 46504
   }
 ]

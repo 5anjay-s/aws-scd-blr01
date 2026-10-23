@@ -54,8 +54,8 @@ const pages: Record<string, ResponsiveSections> = {
   '/agenda': { desktop: [section('content:AgendaDesktop', 'Event programme')], mobile: [section('content:AgendaMobile', 'Event programme')] },
   '/venue': { desktop: [section('content:VenueDesktop', 'Venue and travel')], mobile: [section('content:VenueMobile', 'Venue and travel')] },
   '/organisers': {
-    desktop: [section('1823:3588', 'Organisers'), section('860:5359', 'Keep the conversation going')],
-    mobile: [section('1823:3589', 'Organisers'), section('1168:498', 'Keep the conversation going')],
+    desktop: [section('1823:3588', 'Organisers'), section('155:692', 'Previous Speakers', 'previous-speakers'), section('1834:3942', 'Community initiatives'), section('860:5359', 'Keep the conversation going')],
+    mobile: [section('1823:3589', 'Organisers'), section('155:692', 'Previous Speakers', 'previous-speakers'), section('1834:4182', 'Community initiatives'), section('1168:498', 'Keep the conversation going')],
   },
   '/faq': {
     desktop: [section('227:540', 'Frequently asked questions'), section('860:5359', 'Keep the conversation going')],

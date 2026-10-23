@@ -1,4 +1,3 @@
-import { HackathonSection } from "../EventContent";
 import { mainDay } from "../../content/event";
 import { SiteBrand } from "../SiteBrand";
 import { TrackArtwork } from "../TrackArtwork";
@@ -11,6 +10,7 @@ import { siteLinks } from "../../site-config";
 // Source: Figma 00/ Final, node 874:8915.
 const imgScdTechnicalCompileBrackets = "/assets/874-8915-7e810.svg";
 const imgArrow1 = "/assets/865-7675-207b4.svg";
+const imgImpulseHackathon = "/assets/hackathon-image.svg";
 const imgSectionDividerPreparationToContinue = "/assets/874-8915-fb0a8.svg";
 const imgAccentPixelStitch = "/assets/874-8915-7bab5.svg";
 const imgApprovedWovenLinks = "/assets/1265-3035-453bd.svg";
@@ -67,16 +67,8 @@ export default function TechnicalDesktop() {
               <p className="d-2158fa6ddb">REAL POSSIBILITIES.</p>
             </div>
             <p className="d-64e37b773b" data-node-id="874:8944">
-              Explore cloud, AI, security, and software development, including AWS technical sessions and hands-on workshops on the main day.
+              {mainDay.technical} {mainDay.openai}
             </p>
-            <SiteLink buttonTone="orange" className="d-44f977d6f9" data-node-id="874:8945" data-name="Action / Registration info" href={"/registration"}>
-              <p className="d-cf01328ee8" data-node-id="I874:8945;5:30">
-                Registration info
-              </p>
-              <div className="d-4725149c0e" data-node-id="I874:8945;15:32" data-name="Arrow">
-                <img alt="" className="d-511e8f31d4" src={imgArrow1} />
-              </div>
-            </SiteLink>
             <div className="d-1c5e80253f" data-node-id="874:8946">
               <p className="d-ebed470a6c">SESSIONS + SPEAKERS + TIMINGS</p>
               <p className="d-d43f566f28">TO BE ANNOUNCED</p>
@@ -87,12 +79,9 @@ export default function TechnicalDesktop() {
       <div className="d-a566f726bd" data-node-id="874:8947" data-name="Technical / Programme — Desktop">
         <div className="d-64b69ec810" data-node-id="874:8948" data-name="Programme / Introduction">
           <div className="d-9bc9950760" data-node-id="874:8949">
-            <p className="d-5069c0bf54">THREE WAYS</p>
+            <p className="d-5069c0bf54">TWO WAYS</p>
             <p className="d-287d1f8085">TO GO DEEPER.</p>
           </div>
-          <p className="d-549e2da3ec" data-node-id="874:8950">
-            {mainDay.technical} Session times and details to be announced.
-          </p>
         </div>
         <div className="d-f7e6db2c74" data-node-id="874:8951" data-name="Programme / Three theme fields">
           <div className="d-0c4da33e5c" data-node-id="874:8952" data-name="SCD / Technical / Theme panel / Desktop">
@@ -100,64 +89,58 @@ export default function TechnicalDesktop() {
               01 / CLOUD
             </p>
             <p className="d-94d5a91ee2" data-node-id="I874:8952;667:2542">
-              AWS Sessions & Workshops
+              IMPULSE ’26
             </p>
-            <div className="d-c4064b08a6" data-node-id="I874:8952;667:2543" data-name="Theme / Rule" />
-            <div className="d-d5153bf1ae" data-node-id="I874:8952;667:2544">
-              <p className="d-edce8460ce">Technical sessions</p>
-              <p className="d-e64f4edba4">& hands-on workshops</p>
+            <div className="impulse-art" data-name="IMPULSE / Hackathon artwork">
+              <img alt="Illustration of participants collaborating at laptops during the IMPULSE ’26 hackathon" src={imgImpulseHackathon} />
             </div>
-            <p className="d-b2638fb3c2" data-node-id="I874:8952;667:2545">
-              {mainDay.aws}
+            <div className="d-d5153bf1ae" data-node-id="I874:8952;667:2544">
+              <p className="d-edce8460ce">National-Level</p>
+              <p className="d-e64f4edba4">24-Hour Hackathon</p>
+            </div>
+            <div className="d-c4064b08a6" data-node-id="I874:8952;667:2543" data-name="Theme / Rule" />
+            <p className="d-b2638fb3c2">
+              Build and compete over 24 hours. Register on Luma for participation details.
             </p>
+            <div className="d-3133ffc36f" data-node-id="I874:8952;667:2545">
+              <p className="d-ebed470a6c">VENUE</p>
+              <p className="d-d43f566f28 impulse-strong">Rangasthala, REVA University, Bengaluru.</p>
+            </div>
             <div className="d-3133ffc36f" data-node-id="I874:8952;667:2546">
               <p className="d-ebed470a6c">DATES</p>
-              <p className="d-d43f566f28">5 NOVEMBER 2026 · MAIN DAY</p>
+              <p className="d-d43f566f28 impulse-strong">23-24 OCTOBER 2026 · 24 HOURS</p>
             </div>
-          </div>
-          <div className="d-88921b4168" data-node-id="874:8953" data-name="Theme / AI">
-            <p className="d-888b47fa83" data-node-id="I874:8953;667:2541">
-              02 / AI
-            </p>
-            <p className="d-94d5a91ee2" data-node-id="I874:8953;667:2542">
-              ChatGPT Workshop
-            </p>
-            <div className="d-c4064b08a6" data-node-id="I874:8953;667:2543" data-name="Theme / Rule" />
-            <div className="d-d5153bf1ae" data-node-id="I874:8953;667:2544">
-              <p className="d-edce8460ce">OpenAI Student</p>
-              <p className="d-e64f4edba4">Collective</p>
-            </div>
-            <p className="d-b2638fb3c2" data-node-id="I874:8953;667:2545">
-              {mainDay.openai}
-            </p>
-            <div className="d-3133ffc36f" data-node-id="I874:8953;667:2546">
-              <p className="d-ebed470a6c">DATE</p>
-              <p className="d-d43f566f28">5 NOVEMBER 2026 · MAIN-DAY</p>
-            </div>
+            <SiteLink hoverTone="violet" buttonTone="orange" className="d-44f977d6f9" data-name="Action / Register" href={siteLinks.hackathonLuma}>
+              <p className="d-cf01328ee8">Register</p>
+              <div className="d-4725149c0e" data-name="Arrow">
+                <img alt="" className="d-511e8f31d4" src={imgArrow1} />
+              </div>
+            </SiteLink>
           </div>
           <div className="d-1ce5ee9503" data-node-id="874:8954" data-name="Theme / BUILD">
             <p className="d-2a82521e63" data-node-id="I874:8954;667:2541">
-              03 / BUILD
+              02 / AI
             </p>
-            <p className="d-0f2274cd94" data-node-id="I874:8954;667:2542">
-              MongoDB Workshop
-            </p>
-            <div className="d-fa05bef8aa" data-node-id="I874:8954;667:2543" data-name="Theme / Rule" />
             <div className="d-01b8dd4d38" data-node-id="I874:8954;667:2544">
-              <p className="d-edce8460ce">Workshops &</p>
-              <p className="d-e64f4edba4">Sessions</p>
+              <p className="d-edce8460ce">ChatGPT workshop for</p>
+              <p className="d-e64f4edba4">hackathon participants</p>
             </div>
+            <div className="d-fa05bef8aa" data-node-id="I874:8954;667:2543" data-name="Theme / Rule" />
             <p className="d-d53caec9f0" data-node-id="I874:8954;667:2545">
-              {mainDay.mongodb}
+              For IMPULSE ’26 attendees. One participant per team only (venue capacity). One team member gets a free month of ChatGPT Plus.
             </p>
+            <div className="ai-cutoff">
+              <p className="ai-cutoff-label">REGISTER BEFORE</p>
+              <p className="ai-cutoff-value">21 OCTOBER 2026 · 10:00 AM IST</p>
+              <p className="ai-cutoff-note">Before the cutoff: Plus access before the hackathon. On or after: access after.</p>
+            </div>
             <div className="d-f056d2414f" data-node-id="I874:8954;667:2546">
               <p className="d-ebed470a6c">DATE</p>
-              <p className="d-d43f566f28">5 NOVEMBER 2026 · MAIN-DAY</p>
+              <p className="d-d43f566f28 ai-date-strong">5 NOVEMBER 2026 · MAIN-DAY</p>
             </div>
           </div>
         </div>
       </div>
-      <HackathonSection compact />
       <div className="d-6075610caa" data-node-id="874:8955" data-name="Technical / Preparation — Desktop">
         <div className="d-20556b24a8" data-node-id="874:8956" data-name="Preparation / Invitation">
           <p className="d-d4cf649985" data-node-id="874:8957">
@@ -168,7 +151,7 @@ export default function TechnicalDesktop() {
             <p className="d-287d1f8085">NEXT QUESTION.</p>
           </div>
           <p className="d-c501c3aa8c" data-node-id="874:8959">
-            Join AWS sessions, AI workshops and developer conversations on the main day. Explore IMPULSE, our pre-SCD hackathon, below.
+            Curious about cloud, AI or building with new tools? IMPULSE ’26 is the 24-hour pre-SCD hackathon — separate registration from your SCD ticket.
           </p>
         </div>
         <div className="d-95644d43f8" data-node-id="874:8960" data-name="Preparation / Details">
@@ -196,7 +179,7 @@ export default function TechnicalDesktop() {
               PREREQUISITES
             </p>
             <p className="d-73728e76c4" data-node-id="874:8972">
-              BRING A LAPTOP & CHARGER FOR HANDS-ON SESSIONS
+              LAPTOP, CHARGER & VALID STUDENT ID
             </p>
           </div>
           <SiteLink buttonTone="orange" className="d-44f977d6f9" data-node-id="874:8973" data-name="Action / Get Main-Day Ticket" href={siteLinks.konfhub}>

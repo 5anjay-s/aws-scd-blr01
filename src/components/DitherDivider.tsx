@@ -6,7 +6,7 @@ import artwork from '../../public/assets/1154-483-382cb.svg?raw';
 const stencil = artwork.replace('fill="#0B1020"', 'fill="none"');
 const mask = `url("data:image/svg+xml,${encodeURIComponent(stencil)}")`;
 
-type Tone = 'navy' | 'orange' | 'lime' | 'cyan' | 'white';
+type Tone = 'navy' | 'orange' | 'lime' | 'cyan' | 'violet' | 'white';
 
 type DitherStyle = CSSProperties & Record<'--dither-mask' | '--dither-from' | '--dither-to', string>;
 

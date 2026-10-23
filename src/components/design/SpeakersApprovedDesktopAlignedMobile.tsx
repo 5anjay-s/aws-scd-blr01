@@ -1,9 +1,7 @@
-import { SiteLink } from "../SiteLink";
 import { SpeakerQuotation } from "../SpeakerQuotation";
 // Source: Figma 00/ Final, node 1168:494.
 const imgApprovedDitheredQuotationMobileOpener = "/assets/1168-494-a5a4a.svg";
-const imgArrow = "/assets/865-7675-0b485.svg";
-const imgPortraitPixelBust = "/assets/1168-494-2f3d4.svg";
+const imgPortraitPixelBust = "/media/previous-speakers/ayush-hooda.png";
 const imgPortraitPixelBust1 = "/assets/1168-494-1942a.svg";
 const imgApprovedDitheredQuotationSpeaker02 = "/assets/1168-494-b8c10.svg";
 const imgPortraitPixelBust2 = "/assets/1168-494-ad0f2.svg";
@@ -41,14 +39,6 @@ export default function SpeakersApprovedDesktopAlignedMobile() {
             <SpeakerQuotation className="d-511e8f31d4" src={imgApprovedDitheredQuotationMobileOpener} />
           </div>
         </div>
-        <SiteLink hoverTone="violet" buttonTone="navy" className="d-e8fa637ebf" data-node-id="1170:562" data-name="Action / Registration info" href={"/registration"}>
-          <p className="d-7a0f1f17eb" data-node-id="I1170:562;5:30">
-            Registration info
-          </p>
-          <div className="d-4725149c0e" data-node-id="I1170:562;15:32" data-name="Arrow">
-            <img alt="" className="d-511e8f31d4" src={imgArrow} />
-          </div>
-        </SiteLink>
         <div className="d-07ccbf50d6" data-node-id="1170:566" data-name="Speaker announcements / Status">
           <p className="d-4b43c08078" data-node-id="1170:567">
             SPEAKER ANNOUNCEMENTS / COMING SOON
@@ -83,10 +73,10 @@ export default function SpeakersApprovedDesktopAlignedMobile() {
                 01 / SPEAKER
               </p>
               <p className="d-bf2bdce3ac" data-node-id="1170:583">
-                TO BE ANNOUNCED
+                Ayush hooda
               </p>
               <p className="d-4767bf8262" data-node-id="1170:584">
-                Speaker reveal coming soon.
+                Senior system software engineer at NVIDIA
               </p>
             </div>
           </div>
