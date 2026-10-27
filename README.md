@@ -75,6 +75,8 @@ Hash routes request only the root document, so direct links and refreshes work o
 
 Confirmed main-day speaker profiles live in `src/content/speakers.ts`. Devansh Agrawal's supplied portrait and LinkedIn profile fill the second slot in the original directory. Company logos use equal-height rows and align to their caption edges; the photographs retain their source files. The date/venue strip includes the calendar link without a countdown timer.
 
+Devansh's transparent cutout is delivered as a 900px WebP (about 152 KB) instead of the 2.61 MB PNG. Alpha transparency is preserved, and the portrait is loaded lazily.
+
 `SpeakerQuotation` animates the original pair of navy quote marks in the Speakers opener and lineup on desktop and mobile. Each mark compresses, lifts with a slight tilt, and settles, with the second mark following 200 ms later. The loop rests between passes, pauses offscreen and in hidden tabs, and stays still for reduced motion.
 
 The Build chapter gently opens the two halves of the original bracket artwork on hover or press, keeping its checker center fixed. Programme steps drop into place once as they enter view, staggered 01 → 02 → 03. Each number moves with its artwork and is centered in the solid colored band on desktop and mobile. Reduced-motion preferences leave both elements still.

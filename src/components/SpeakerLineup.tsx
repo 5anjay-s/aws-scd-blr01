@@ -21,6 +21,7 @@ export function SpeakerLineup({ mobile = false }: { mobile?: boolean }) {
             ? <SiteLink href={person.linkedin} className="speaker-profile-link" aria-label={`${person.name} on LinkedIn`}>{person.name}</SiteLink>
             : person.name}</h3>
           <p className="scd-speaker__role">{person.role}</p>
+          <p className="scd-speaker__background">{person.background}</p>
           {'credential' in person && <p className="scd-speaker__credential">{person.credential}</p>}
           <SpeakerCompany company={person.company} />
         </div>

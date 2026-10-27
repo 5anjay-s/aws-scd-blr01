@@ -19,6 +19,7 @@
 .scd-speaker__index { font: 400 11px/1.5 'Geist Mono', monospace; }
 .scd-speaker__caption h3 { font: 400 clamp(22px, 2cqw, 30px)/1.25 'Geist Mono', monospace; overflow-wrap: normal; }
 .scd-speaker__role { font: 400 14px/1.6 'Geist Mono', monospace; }
+.scd-speaker__background { font: 400 12px/1.5 'Geist Mono', monospace; }
 .scd-speaker__credential { align-self: flex-start; padding: 5px 8px; border: 1px solid currentColor; font: 400 10px/1.5 'Geist Mono', monospace; }
 .scd-lineup .scd-speaker__caption .speaker-affiliation { margin-top: auto; padding-top: 16px; height: 64px; min-height: 64px; }
 .scd-speaker .speaker-profile-link:focus-visible { outline: 2px solid var(--navy); outline-offset: 5px; }

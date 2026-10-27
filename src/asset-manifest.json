@@ -1714,10 +1714,10 @@
     "notes": "Unchanged organiser-supplied original, retained as the source for the transparent cutout."
   },
   {
-    "file": "public/media/speakers/devansh-agrawal-cutout.png",
+    "file": "public/media/speakers/devansh-agrawal-cutout.webp",
     "component": "SpeakerLineup",
     "variable": "speakerPortrait",
-    "bytes": 2610050,
-    "notes": "Transparent-background cutout of the organiser-supplied Devansh Agrawal photograph, made with the built-in image editor."
+    "bytes": 151966,
+    "notes": "900px WebP delivery image with preserved alpha transparency; encoded from the background-removed cutout at quality 82."
   }
 ]
