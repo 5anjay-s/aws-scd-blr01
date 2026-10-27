@@ -17,9 +17,9 @@ export default function IntroductionV2FirstHello() {
       <div className="d-ed4f3c98ce" data-node-id="860:5075" data-name="Manifesto editorial grid">
         <div className="d-d07aec3805" data-node-id="860:5076" data-name="Manifesto statement">
           <div className="d-14adb7d251" data-node-id="860:5077">
-            <p className="d-c104b2dca3">From your first</p>
-            <p className="d-c104b2dca3">hello, world</p>
-            <p className="d-307cc96bda">to what comes next.</p>
+            <p className="d-c104b2dca3">Two tracks.</p>
+            <p className="d-c104b2dca3">One community.</p>
+            <p className="d-307cc96bda">Built for you.</p>
           </div>
         </div>
         <RevaIntroduction />
@@ -33,8 +33,7 @@ export default function IntroductionV2FirstHello() {
             <p className="d-95907800fd">{`03  YOUR PEOPLE`}</p>
           </div>
           <div className="d-071c001b1a" data-node-id="860:5082">
-            <p className="d-7519be8e79">One community.</p>
-            <p className="d-95907800fd">Many possible futures.</p>
+            <p className="event-about-description">Sessions and workshops from AWS, OpenAI Student Collective and MongoDB, with non-technical sessions on the main day.</p>
           </div>
         </div>
       </div>

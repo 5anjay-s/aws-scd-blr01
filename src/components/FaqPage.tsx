@@ -2,6 +2,7 @@ import { DitherDivider } from './DitherDivider';
 import { FaqAccordion } from './FaqAccordion';
 import { HomeNavigation } from './HomeNavigation';
 import { SiteLink } from './SiteLink';
+import { mainDay, hackathon, hasHackathonEnded } from '../content/event';
 
 type FaqQuestion = {
   number: string;
@@ -21,13 +22,15 @@ type FaqGroup = {
   questions: FaqQuestion[];
 };
 
+const hackathonCompleted = hasHackathonEnded();
+
 const groups: FaqGroup[] = [
   {
     id: 'about-the-day', title: '01 / About the day', desktopNode: '235:541', mobileNode: '239:616', navDesktop: '234:546', navMobile: '238:600',
     questions: [
       { number: '01', question: 'When and where is the event?', answer: 'The event is on 5 November 2026 at REVA University, Bengaluru. Check-in starts at 8:00 AM and the programme begins at 9:00 AM.', desktopNode: '235:543', mobileNode: '239:618' },
       { number: '02', question: 'When will the agenda and session timings be announced?', answer: 'The timeline, agenda and session details will be announced as soon as we receive confirmation from our partners. Updates will be shared with all attendees through official channels.', desktopNode: '235:552', mobileNode: '239:627' },
-      { number: '03', question: 'Will there be workshops?', answer: 'Workshop details, participation requirements and any seat limits will be communicated when the sessions are announced. An event ticket does not guarantee a workshop seat.', desktopNode: '235:805', mobileNode: '239:639' },
+      { number: '03', question: 'Will there be workshops?', answer: `${mainDay.technical} ${mainDay.openaiEligibility} Workshop seat requirements will be announced; an event ticket does not guarantee a workshop seat.`, desktopNode: '235:805', mobileNode: '239:639' },
     ],
   },
   {
@@ -41,9 +44,11 @@ const groups: FaqGroup[] = [
   {
     id: 'plan-your-visit', title: '03 / Plan your visit', desktopNode: '235:833', mobileNode: '239:667', navDesktop: '234:548', navMobile: '238:602',
     questions: [
-      { number: '07', question: 'How can I register?', answer: 'Register through the official website: https://aws-scd-blr.in/. Please keep your registration confirmation for check-in.', desktopNode: '235:844', mobileNode: '239:678' },
+      { number: '07', question: 'How can I register?', answer: `RSVP on Meetup and get your official ticket at https://konfhub.com/aws-student-community-day-bengaluru-2026. Only KonfHub registration confirms main-day entry. ${hackathonCompleted ? 'IMPULSE took place on 23–24 October and registration is closed.' : `IMPULSE has a separate registration at ${hackathon.url}.`}`, desktopNode: '235:844', mobileNode: '239:678' },
       { number: '08', question: 'Is parking available?', answer: 'Yes. Attendees can use the designated parking facilities at REVA University free of cost. Please follow campus security directions.', desktopNode: 'faq-q08', mobileNode: 'faq-mobile-q08' },
       { number: '09', question: 'Where can I find updates or ask further questions?', answer: 'Event updates will be published on https://aws-scd-blr.in/. For additional queries, email connect.aws.sbg.ru@gmail.com.', desktopNode: 'faq-q09', mobileNode: 'faq-mobile-q09' },
+      { number: '10', question: 'Are food and refreshments provided?', answer: 'Yes. Food and refreshments are provided for registered main-day attendees.', desktopNode: 'content:faq-food', mobileNode: 'content:faq-food-mobile' },
+      { number: '11', question: hackathonCompleted ? 'What happened before SCD?' : 'What is happening before SCD?', answer: hackathonCompleted ? `${hackathon.name}, our ${hackathon.type.toLowerCase()}, took place on ${hackathon.dates} at ${hackathon.venue}. Event details: ${hackathon.url}. ${hackathon.workshopArchive} ${hackathon.accessArchive}` : `${hackathon.name} is a ${hackathon.type.toLowerCase()} on ${hackathon.dates} at ${hackathon.venue}. Register separately at ${hackathon.url}. ${hackathon.workshop} ${hackathon.access}`, desktopNode: 'content:faq-hackathon', mobileNode: 'content:faq-hackathon-mobile' },
     ],
   },
 ];

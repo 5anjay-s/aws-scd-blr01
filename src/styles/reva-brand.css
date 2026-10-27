@@ -36,6 +36,7 @@
 .reva-brand--intro .reva-brand__logo img { width: 103.557312%; left: 0; top: -37.323944%; }
 .desktop-layout .design-content [data-node-id='860:5075'] { grid-template-columns: minmax(0, 1.5fr) minmax(220px, 1fr) minmax(0, 1fr); }
 .desktop-layout .design-content [data-node-id='860:5075'] :is([data-node-id='860:5076'], [data-node-id='860:5077']) { width: 100%; min-width: 0; }
+.desktop-layout .design-content [data-node-id='860:5079'] :is(p, div) { width: 100%; min-width: 0; }
 .design-content [data-node-id='860:5075'] > .intro-venue { width: max-content; align-self: center; justify-self: center; }
 .mobile-layout .experience-panel [data-node-id='1169:600'] > .intro-venue {
   grid-column: 1 / -1;
@@ -51,6 +52,12 @@
 .mobile-layout .intro-venue__at::before, .mobile-layout .intro-venue__at::after { width: 12px; }
 .mobile-layout .reva-brand--intro .reva-brand__logo { width: clamp(156px, 44cqw, 184px); }
 .mobile-layout .experience-panel [data-node-id='1169:604'] { grid-row: 4; }
+/* The restored programme summary is longer than the original two-line artwork copy. */
+.mobile-layout .experience-panel [data-node-id='1169:617'] > .event-about-description {
+  white-space: normal;
+  font-size: clamp(10px, 1.4svh, 13px);
+  line-height: 1.5;
+}
 .reva-footer {
   background: var(--navy);
   color: var(--white);

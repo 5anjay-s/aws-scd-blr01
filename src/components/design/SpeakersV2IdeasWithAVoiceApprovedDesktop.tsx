@@ -1,10 +1,7 @@
+import { SpeakerLineup } from "../SpeakerLineup";
 import { SpeakerQuotation } from "../SpeakerQuotation";
 // Source: Figma 00/ Final, node 860:5144.
 const imgSpeakersApprovedDitheredQuotation = "/assets/860-5144-5a444.svg";
-const imgPortraitPixelBust = "/media/previous-speakers/ayush-hooda.png";
-const imgPortraitPixelBust1 = "/assets/860-5144-b0bb9.svg";
-const imgSpeakersApprovedDitheredQuotation1 = "/assets/860-5144-cc774.svg";
-const imgPortraitPixelBust2 = "/assets/860-5144-a4a5a.svg";
 
 export default function SpeakersV2IdeasWithAVoiceApprovedDesktop() {
   return (
@@ -46,95 +43,14 @@ export default function SpeakersV2IdeasWithAVoiceApprovedDesktop() {
           </div>
           <div className="d-552c1c6224" data-node-id="1127:2314" data-name="Section index">
             <p className="d-c6a4bf57de" data-node-id="1127:2315">
-              SPEAKER ANNOUNCEMENTS / COMING SOON
+              MEET THE SPEAKERS
             </p>
             <p className="d-1e0f2a177d" data-node-id="1127:2316">
               AWS STUDENT COMMUNITY DAY
             </p>
           </div>
         </div>
-        <div className="d-63fdf152aa" data-node-id="1127:2317" data-name="Speakers / The lineup — Asymmetric directory">
-          <div className="d-ee91bcbc2c" data-node-id="1127:2318" data-name="Directory / Heading and announcement">
-            <p className="d-2e54b9d863" data-node-id="1127:2319">
-              THE LINEUP.
-            </p>
-            <div className="d-e1c05ea2d8" data-node-id="1127:2320" data-name="Directory / Current announcement status">
-              <p className="d-56815c6f01" data-node-id="1127:2321">
-                NEW VOICES ARE JOINING THE CONVERSATION.
-              </p>
-              <div className="d-10aaae0f73" data-node-id="1127:2322">
-                <p className="d-2a8bd1889a">Names, portraits and session details</p>
-                <p className="d-2158fa6ddb">are still to be announced.</p>
-              </div>
-            </div>
-          </div>
-          <div className="d-66c2241b81" data-node-id="1127:2323" data-name="Rule" />
-          <div className="d-4582b3741d" data-node-id="1127:2324" data-name="Directory / Portraits and editorial entries">
-            <div className="d-52fa24bcbd" data-node-id="1127:2325" data-name="Speakers / Anonymous portrait 01 / Artwork only">
-              <div className="d-5aa5863203" data-node-id="I1127:2325;1060:528" data-name="Portrait / Pixel bust">
-                <img alt="" className="d-511e8f31d4" src={imgPortraitPixelBust} />
-              </div>
-            </div>
-            <div className="d-438b1cea4a" data-node-id="1127:2326" data-name="Speaker 01 / Announcement">
-              <p className="d-477d95194b" data-node-id="1127:2327">
-                01 / SPEAKER
-              </p>
-              <p className="d-2d39824b22" data-node-id="1127:2328">
-                Ayush hooda
-              </p>
-              <p className="d-f42682f4f1" data-node-id="1127:2329">
-                Senior system software engineer at NVIDIA
-              </p>
-            </div>
-            <div className="d-cb8ccf733c" data-node-id="1127:2330" data-name="Speaker 02 / Announcement">
-              <p className="d-423ce3d413" data-node-id="1127:2331">
-                02 / SPEAKER
-              </p>
-              <div className="d-c1f367816d" data-node-id="1127:2332">
-                <p className="d-6ee5fa6884">TO BE</p>
-                <p className="d-f42ae1416f">ANNOUNCED</p>
-              </div>
-              <div className="d-d574c0083f" data-node-id="1127:2333" data-name="Rule" />
-              <div className="d-2533afbb9b" data-node-id="1127:2334">
-                <p className="d-897a3c8a4f">Name, role and session</p>
-                <p className="d-6a4f4f832e">details to be announced.</p>
-              </div>
-            </div>
-            <div className="d-f2cc43946c" data-node-id="1127:2335" data-name="Speakers / Anonymous portrait 02 / Artwork only">
-              <div className="d-22bea6fb2f" data-node-id="I1127:2335;1060:533" data-name="Portrait / Pixel bust">
-                <img alt="" className="d-511e8f31d4" src={imgPortraitPixelBust1} />
-              </div>
-            </div>
-            <div className="d-cf1c946646" data-node-id="1127:2336" data-name="Speakers / Approved dithered quotation">
-              <SpeakerQuotation className="d-511e8f31d4" src={imgSpeakersApprovedDitheredQuotation1} />
-            </div>
-            <div className="d-d9ea639326" data-node-id="1127:2337" data-name="Speakers / Anonymous portrait 03 / Artwork only">
-              <div className="d-22bea6fb2f" data-node-id="I1127:2337;1060:538" data-name="Portrait / Pixel bust">
-                <img alt="" className="d-511e8f31d4" src={imgPortraitPixelBust2} />
-              </div>
-            </div>
-            <div className="d-3f5f6c56b4" data-node-id="1127:2338" data-name="Speaker 03 / Announcement">
-              <p className="d-423ce3d413" data-node-id="1127:2339">
-                03 / SPEAKER
-              </p>
-              <div className="d-c1f367816d" data-node-id="1127:2340">
-                <p className="d-6ee5fa6884">TO BE</p>
-                <p className="d-f42ae1416f">ANNOUNCED</p>
-              </div>
-              <div className="d-d574c0083f" data-node-id="1127:2341" data-name="Rule" />
-              <div className="d-2533afbb9b" data-node-id="1127:2342">
-                <p className="d-897a3c8a4f">Name, role and session</p>
-                <p className="d-6a4f4f832e">details to be announced.</p>
-              </div>
-            </div>
-            <div className="d-723111d222" data-node-id="1127:2343" data-name="Directory / More announcements">
-              <div className="d-1d153cc628" data-node-id="1127:2344">
-                <p className="d-73a26a6b50">MORE PERSPECTIVES.</p>
-                <p className="d-9e2417ac68">MORE POSSIBILITIES.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <SpeakerLineup />
       </div>
     </div>
   );

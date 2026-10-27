@@ -16,7 +16,7 @@ const excluded = [
 ].join(',');
 const atomic = [
   'a', 'button', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', '[role="heading"]',
-  '.faq-accordion', '.faq-status > div', '.mobile-speaker-card',
+  '.faq-accordion', '.faq-status > div', '.scd-speaker',
   '.ticket-artwork', '.ticket-artwork-desktop', '[data-reveal="fade"]', '[data-reveal="rise"]',
 ].join(',');
 

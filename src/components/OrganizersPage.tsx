@@ -1,4 +1,7 @@
 import type { CSSProperties } from 'react';
+import { PreviousSpeakers } from './EventContent';
+import { event as scdEvent } from '../content/event';
+import { communityChannels, communityTotal, techWeek } from '../content/organisers';
 import { HomeNavigation } from './HomeNavigation';
 import { SiteLink } from './SiteLink';
 import { organizerLinks } from '../site-config';
@@ -36,7 +39,7 @@ const initiatives = [
     label: '02 / BEYOND CAMPUS', title: ['TAKE IT', 'FURTHER.'], tone: 'cyan', desktop: '1834:3966', mobile: '1834:4206',
     activities: [
       { date: '28 APR 2026', title: 'Intro to cloud & getting started with AWS', detail: '90+ participants taking their first steps in cloud computing.', link: 'Meetup', url: `${organizerLinks.meetup}/events/314500658/`, desktop: '1834:3969', mobile: '1834:4209' },
-      { date: '20 MAY 2026', title: 'Cloud beyond campus / OA1', detail: '120+ participants at HKBK • Cloud fundamentals and hands-on practice with Amazon S3 and EC2.', link: 'Meetup', url: `${organizerLinks.meetup}/events/314813532/`, desktop: '1834:3977', mobile: '1834:4217' },
+      { date: '20 MAY 2026', title: 'OA1: Intro to cloud & getting started with AWS', detail: '120+ participants at HKBK • Cloud fundamentals and hands-on practice with Amazon S3 and EC2.', link: 'Meetup', url: `${organizerLinks.meetup}/events/314813532/`, desktop: '1834:3977', mobile: '1834:4217' },
     ],
   },
   {
@@ -58,7 +61,7 @@ const channels = [
 ] as const;
 
 // Figma: 03 / Desktop explorations, organizers frames 1823:3588 and 1823:3589.
-export function OrganizersPage({ mobile = false, segment = 'intro' }: { mobile?: boolean; segment?: 'intro' | 'community' }) {
+export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
   const node = (desktop: string, compact: string) => mobile ? compact : desktop;
   const art = mobile ? organizerArtwork.mobile : organizerArtwork.desktop;
   const events = [
@@ -70,13 +73,16 @@ export function OrganizersPage({ mobile = false, segment = 'intro' }: { mobile?:
     ? [art.imgDitherPrintedSpeechEdge, art.imgDitherPrintedSpeechEdge, art.imgDitherPrintedSpeechEdge]
     : [organizerArtwork.desktop.imgDitherPrintedSpeechEdge1, organizerArtwork.desktop.imgDitherPrintedSpeechEdge2, organizerArtwork.desktop.imgDitherPrintedSpeechEdge3];
   const conversations = [
-    { count: '1,107', channel: 'Meetup', measure: 'members', note: 'MEET IN PERSON. BUILD TOGETHER.', art: art.imgSpeechPaper, node: node('1851:3855', '1851:3972') },
-    { count: '~900', channel: 'WhatsApp', measure: 'members', note: 'KEEP THE CONVERSATION GOING.', art: art.imgSpeechPaper1, node: node('1851:3865', '1851:3982') },
-    { count: '250', channel: 'LinkedIn', measure: 'followers', note: 'SHARE WHAT’S NEXT.', art: art.imgSpeechPaper2, node: node('1851:3875', '1851:3992') },
-  ];
+    { name: 'Meetup', note: 'MEET IN PERSON. BUILD TOGETHER.', art: art.imgSpeechPaper, node: node('1851:3855', '1851:3972') },
+    { name: 'WhatsApp', note: 'KEEP THE CONVERSATION GOING.', art: art.imgSpeechPaper1, node: node('1851:3865', '1851:3982') },
+    { name: 'LinkedIn', note: 'SHARE WHAT’S NEXT.', art: art.imgSpeechPaper2, node: node('1851:3875', '1851:3992') },
+  ].flatMap(({ name, ...speech }) => {
+    const channel = communityChannels.find(channel => channel.name === name);
+    return channel ? [{ ...speech, ...channel }] : [];
+  });
+  const lumaChannel = communityChannels.find(channel => channel.name === 'Luma');
 
-  return <div className={`organizers-page${mobile ? ' organizers-page--mobile' : ''}`}>
-    {segment === 'intro' && <>
+  return <div className={`organizers-page${mobile ? ' organizers-page--mobile' : ''}`} data-node-id={node('1823:3588', '1823:3589')}>
     <HomeNavigation mobile={mobile} />
     <section className="organizers-manifesto organizers-surface" aria-labelledby="organizers-title" data-node-id={node('1834:3826', '1834:4071')}>
       <div className="organizers-poster" data-node-id={node('1834:3827', '1834:4072')} data-reveal="off">
@@ -92,8 +98,7 @@ export function OrganizersPage({ mobile = false, segment = 'intro' }: { mobile?:
       <div className="organizers-signature" data-node-id={node('1834:3838', '1834:4083')}>
         <div className="organizers-host" data-node-id={node('1834:3839', '1834:4084')}>
           <p className="organizers-small">ORGANISED BY</p>
-          <h2>AWS Student<br />Builder Group</h2>
-          <p className="organizers-eyebrow">REVA UNIVERSITY</p>
+          <img className="organizers-logo" src="/brands/aws-sbg-reva-black.png" alt="AWS Student Builder Group at REVA University" loading="lazy" />
         </div>
         <div className="organizers-intro" data-node-id={node('1834:3843', '1834:4088')}>
           <p>A student-led community learning, building and sharing ideas in cloud, AI and emerging technologies. We’re the team behind AWS Student Community Day Bengaluru 2026.</p>
@@ -104,6 +109,7 @@ export function OrganizersPage({ mobile = false, segment = 'intro' }: { mobile?:
     <div data-node-id={node('1834:3846', '1834:4091')} data-reveal="off"><DitherDivider from="cyan" to="white" /></div>
     <section className="organizers-tech-week organizers-surface" aria-labelledby="organizers-tech-title" data-node-id={node('1834:3849', '1834:4093')}>
       <p className="organizers-eyebrow">01 / BENGALURU TECH WEEK — 02–04 SEPT 2026</p>
+      <SiteLink className="organizers-tech-brand" href="https://bengalurutechweek.com/2026/" aria-label="Bengaluru Tech Week 2026"><img src="/brands/bengaluru-tech-week-horizontal.svg" alt="Bengaluru Tech Week" width="1646" height="256" loading="lazy" /></SiteLink>
       <div className="organizers-impact" data-node-id={node('1834:3851', '1834:4095')}>
         <p className="organizers-registration-count" data-node-id={node('1834:3852', '1834:4096')}><CountUp value={1222} suffix="+" /></p>
         <div><h2>Registrations.<br />All student led.</h2><p>The only student-led community organising at Bengaluru Tech Week 2026.</p></div>
@@ -111,7 +117,7 @@ export function OrganizersPage({ mobile = false, segment = 'intro' }: { mobile?:
       <h2 className="organizers-domains" id="organizers-tech-title">Three days.{mobile ? <br /> : ' '}Three domains.</h2>
       <p>Cloud, AI and blockchain at REVA — alongside the city’s professional technology organisers.</p>
       <div className="organizers-event-wall" data-node-id={node('1834:3858', '1834:4102')}>
-        {events.map(event => <article className={`organizers-event organizers-event--${event.tone}`} key={event.day} data-node-id={event.node} data-reveal="rise">
+        {events.map((event, index) => <article className={`organizers-event organizers-event--${event.tone}`} key={event.day} data-node-id={event.node} data-reveal="rise">
           <div className="organizers-event-date"><p>{event.day}</p><p>{event.category}</p></div>
           <h3>{event.title[0]}<br />{event.title[1]}</h3>
           <div className="organizers-event-art">
@@ -122,14 +128,13 @@ export function OrganizersPage({ mobile = false, segment = 'intro' }: { mobile?:
                   : <WovenRibbon src={event.art.src} alt="" className="organizers-live-art" />}
             </div>
           </div>
-          <p className="organizers-event-detail">{event.detail}</p>
+          <p className="organizers-event-detail">{event.detail}<br /><SiteLink href={techWeek.events[index].url}>View event ↗</SiteLink></p>
           <div className="organizers-event-edition"><p>BENGALURU TECH WEEK / 2026</p><span aria-hidden="true" /></div>
         </article>)}
       </div>
       <p className="organizers-small">CLOUD / AI / BLOCKCHAIN. THREE DAYS OF BUILDING TOGETHER.</p>
     </section>
-    </>}
-    {segment === 'community' && <>
+    <PreviousSpeakers />
     <section className="organizers-initiatives organizers-surface" aria-labelledby="organizers-initiatives-title" data-node-id={node('1834:3942', '1834:4182')}>
       <p className="organizers-eyebrow organizers-cyan">02 / BEFORE THE BIG DAYS — DEC 2025 TO JUL 2026</p>
       <h2 id="organizers-initiatives-title"><ArcadeText>START SMALL.</ArcadeText><br /><ArcadeText>BUILD TOGETHER.</ArcadeText></h2>
@@ -156,21 +161,22 @@ export function OrganizersPage({ mobile = false, segment = 'intro' }: { mobile?:
           <div className="organizers-invitation-copy"><h2 id="organizers-invitation-title">COME BUILD<br /><ArcadeText>WITH US.</ArcadeText></h2><p className="organizers-lime">STUDENT LED. COMMUNITY POWERED.</p></div>
           <Art asset={mobile ? art.imgDitherPrintedSpeechEdge1 : art.imgDitherPrintedSpeechEdge} className="organizers-invitation-dither" nodeId={node('1852:3997', '1852:4005')} />
         </div>
-        {conversations.map((speech, index) => <div key={speech.channel} className={`organizers-speech organizers-speech--${index}`} data-node-id={speech.node}>
+        {conversations.map((speech, index) => <div key={speech.name} className={`organizers-speech organizers-speech--${index}`} data-node-id={speech.node}>
           <Art asset={speech.art} />
           <div className="organizers-speech-copy">
-            <div className="organizers-speech-count"><p>{speech.count}</p><div><h3>{speech.channel}</h3><p>{speech.measure}</p></div></div>
+            <div className="organizers-speech-count"><p>{speech.approximate ? '~' : ''}<CountUp value={speech.count} suffix={speech.suffix} /></p><div><h3>{speech.name}</h3><p>{speech.label}</p></div></div>
             <p className="organizers-speech-note">{speech.note}</p>
           </div>
           <Art asset={speechEdges[index]} className="organizers-speech-dither" />
         </div>)}
         <div className="organizers-invitation-note" data-node-id={node('1851:3885', '1851:4002')}>
           {!mobile && <p>A first hello.<br />A shared project.<br />A reason to keep building.</p>}
-          <p>{mobile ? '~3,292 memberships + follows' : '~3,292 MEMBERSHIPS + FOLLOWS'}<br /><span>ACROSS OUR COMMUNITY CHANNELS</span></p>
+          <p>~{communityTotal.toLocaleString('en-US')} {mobile ? 'memberships + follows' : 'MEMBERSHIPS + FOLLOWS'}<br /><span>ACROSS OUR COMMUNITY CHANNELS{lumaChannel && <><br />INCLUDING <CountUp value={lumaChannel.count} suffix={lumaChannel.suffix} /> LUMA MEMBERS</>}</span></p>
         </div>
       </div>
       <div className="organizers-contact-wall" data-node-id={node('1851:3888', '1851:4005')}>
-        <div className="organizers-contact-heading"><h2><ArcadeText>FIND YOUR PEOPLE.</ArcadeText></h2><p className="organizers-eyebrow">SIX WAYS TO KEEP IN TOUCH ↓</p></div>
+        <div className="organizers-contact-heading"><h2><ArcadeText>FIND YOUR PEOPLE.</ArcadeText></h2><p className="organizers-eyebrow">OUR COMMUNITY CHANNELS ↓</p></div>
+        <p className="organizers-email">Questions about the event? <SiteLink href={`mailto:${scdEvent.email}`}>{scdEvent.email}</SiteLink></p>
         <div className="organizers-contacts" data-node-id={node('1851:3892', '1851:4009')}>
           {channels.map((channel, index) => <SiteLink key={channel.key} href={organizerLinks[channel.key]} className="organizers-contact"
             style={{ '--contact-paper': `url("${art.imgContactPaper.src}")`, '--contact-ratio': art.imgContactPaper.width / art.imgContactPaper.height,
@@ -185,6 +191,5 @@ export function OrganizersPage({ mobile = false, segment = 'intro' }: { mobile?:
       </div>
     </section>
     <div data-node-id={node('1834:4068', '1834:4310')} data-reveal="off"><DitherDivider from="orange" to="navy" /></div>
-    </>}
   </div>;
 }

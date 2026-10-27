@@ -19,7 +19,7 @@
   },
   {
     "file": "public/assets/1160-5759-305fd.svg",
-    "component": "PartnersGoodCompany",
+    "component": "CommunityChapters",
     "variable": "imgAccentWovenLinks",
     "bytes": 8992
   },
@@ -98,25 +98,25 @@
   },
   {
     "file": "public/assets/1168-493-2adcd.svg",
-    "component": "MobileChaptersDesktopAligned",
+    "component": "CommunityChapters",
     "variable": "imgAccentCuriositySpark",
     "bytes": 4781
   },
   {
     "file": "public/assets/1168-493-b4ed3.svg",
-    "component": "MobileChaptersDesktopAligned",
+    "component": "CommunityChapters",
     "variable": "imgAccentDitherCorner",
     "bytes": 2496
   },
   {
     "file": "public/assets/1168-493-fd314.svg",
-    "component": "MobileChaptersDesktopAligned",
+    "component": "CommunityChapters",
     "variable": "imgCodeOpenBrackets",
     "bytes": 3040
   },
   {
     "file": "public/assets/1168-493-5454f.svg",
-    "component": "MobileChaptersDesktopAligned",
+    "component": "CommunityChapters",
     "variable": "imgAccentWovenLinks",
     "bytes": 12035
   },
@@ -668,7 +668,7 @@
   },
   {
     "file": "public/assets/860-5073-2287b.svg",
-    "component": "IntroductionV2FirstHello",
+    "component": "CommunityChapters",
     "variable": "imgAccentCuriositySpark",
     "bytes": 4853
   },
@@ -680,25 +680,25 @@
   },
   {
     "file": "public/assets/860-5073-2287b.svg",
-    "component": "ChaptersV2",
+    "component": "CommunityChapters",
     "variable": "imgAccentCuriositySpark",
     "bytes": 4853
   },
   {
     "file": "public/assets/860-5085-cefb3.svg",
-    "component": "ChaptersV2",
+    "component": "CommunityChapters",
     "variable": "imgAccentDitherCorner",
     "bytes": 2005
   },
   {
     "file": "public/assets/860-5085-96238.svg",
-    "component": "ChaptersV2",
+    "component": "CommunityChapters",
     "variable": "imgCodeOpenBrackets",
     "bytes": 3140
   },
   {
     "file": "public/assets/1160-5759-305fd.svg",
-    "component": "ChaptersV2",
+    "component": "CommunityChapters",
     "variable": "imgAccentWovenLinks",
     "bytes": 8992
   },
@@ -758,8 +758,8 @@
   },
   {
     "file": "public/assets/860-5144-a4a5a.svg",
-    "component": "SpeakersV2IdeasWithAVoiceApprovedDesktop",
-    "variable": "imgPortraitPixelBust2",
+    "component": "SpeakerLineup",
+    "variable": "pendingSpeakerPortrait",
     "bytes": 51756
   },
   {
@@ -1131,7 +1131,7 @@
   },
   {
     "file": "public/assets/874-9211-c568c.svg",
-    "component": "NonTechnicalDesktop",
+    "component": "NonTechnicalPage",
     "variable": "imgSharedGlyphOpenExchange",
     "bytes": 43087
   },
@@ -1179,7 +1179,7 @@
   },
   {
     "file": "public/assets/880-9338-d328b.svg",
-    "component": "NonTechnicalMobile",
+    "component": "NonTechnicalPage",
     "variable": "imgSharedGlyphOpenExchange",
     "bytes": 61570
   },
@@ -1584,92 +1584,140 @@
     "bytes": 2529
   },
   {
-    "file": "public/media/previous-speakers/ayush-hooda.png",
-    "component": "Speakers",
-    "variable": "photoAyushHooda",
-    "bytes": 236397,
-    "source": "http://localhost:8076/ayush-hooda.png"
+    "file": "public/brands/aws-sbg-reva-black.png",
+    "component": "EventContent",
+    "variable": "approvedPreviousSiteAsset",
+    "bytes": 21590
   },
   {
-    "file": "public/media/previous-speakers/ashita-prasad.jpeg",
-    "component": "PreviousSpeakers",
-    "variable": "photoAshitaPrasad",
-    "bytes": 152152,
-    "source": "../aws-scd-blr02/public/media/previous-speakers/ashita-prasad.jpeg"
-  },
-  {
-    "file": "public/media/previous-speakers/smiti-guru.jpeg",
-    "component": "PreviousSpeakers",
-    "variable": "photoSmitiGuru",
-    "bytes": 99202,
-    "source": "../aws-scd-blr02/public/media/previous-speakers/smiti-guru.jpeg"
-  },
-  {
-    "file": "public/media/previous-speakers/arun-kumar.png",
-    "component": "PreviousSpeakers",
-    "variable": "photoArunKumar",
-    "bytes": 194041,
-    "source": "../aws-scd-blr02/public/media/previous-speakers/arun-kumar.png"
-  },
-  {
-    "file": "public/media/previous-speakers/deepak-n.png",
-    "component": "PreviousSpeakers",
-    "variable": "photoDeepakN",
-    "bytes": 190019,
-    "source": "../aws-scd-blr02/public/media/previous-speakers/deepak-n.png"
+    "file": "public/brands/aws-sbg-reva-white.png",
+    "component": "EventContent",
+    "variable": "approvedPreviousSiteAsset",
+    "bytes": 19029
   },
   {
     "file": "public/brands/aws-white.svg",
-    "component": "PreviousSpeakers",
-    "variable": "awsSpeakerLogo",
-    "bytes": 3675,
-    "source": "../aws-scd-blr02/public/brands/aws-white.svg"
+    "component": "EventContent",
+    "variable": "approvedPreviousSiteAsset",
+    "bytes": 3675
+  },
+  {
+    "file": "public/brands/bengaluru-tech-week-mark.svg",
+    "component": "EventContent",
+    "variable": "approvedPreviousSiteAsset",
+    "bytes": 3592
   },
   {
     "file": "public/brands/jll.svg",
-    "component": "PreviousSpeakers",
-    "variable": "jllSpeakerLogo",
-    "bytes": 9335,
-    "source": "../aws-scd-blr02/public/brands/jll.svg"
+    "component": "EventContent",
+    "variable": "approvedPreviousSiteAsset",
+    "bytes": 9335
   },
   {
-    "file": "public/assets/hackathon-image.svg",
-    "component": "TechnicalDesktop",
-    "variable": "imgImpulseHackathon",
-    "bytes": 46504
+    "file": "public/brands/mongodb-white.svg",
+    "component": "EventContent",
+    "variable": "approvedPreviousSiteAsset",
+    "bytes": 11418
   },
   {
-    "file": "public/assets/hackathon-image.svg",
-    "component": "TechnicalMobile",
-    "variable": "imgImpulseHackathon",
-    "bytes": 46504
+    "file": "public/brands/openai-white.svg",
+    "component": "EventContent",
+    "variable": "approvedPreviousSiteAsset",
+    "bytes": 2189
   },
   {
     "file": "public/brands/reva-university-white.png",
     "component": "RevaBrand",
-    "variable": "revaUniversityWordmark",
-    "bytes": 27111,
-    "source": "https://github.com/5anjay-s/aws-scd/blob/84a67b5297c77927f418bdfd420d6014bfcf7269/public/brands/reva-university-white.png"
+    "variable": "approvedUniversityBranding",
+    "bytes": 27111
+  },
+  {
+    "file": "public/media/previous-speakers/arun-kumar.png",
+    "component": "PreviousSpeakers",
+    "variable": "approvedPreviousSiteAsset",
+    "bytes": 194041
+  },
+  {
+    "file": "public/media/previous-speakers/ashita-prasad.jpeg",
+    "component": "PreviousSpeakers",
+    "variable": "approvedPreviousSiteAsset",
+    "bytes": 152152
+  },
+  {
+    "file": "public/media/previous-speakers/deepak-n.png",
+    "component": "PreviousSpeakers",
+    "variable": "approvedPreviousSiteAsset",
+    "bytes": 190019
+  },
+  {
+    "file": "public/media/previous-speakers/smiti-guru.jpeg",
+    "component": "PreviousSpeakers",
+    "variable": "approvedPreviousSiteAsset",
+    "bytes": 99202
+  },
+  {
+    "file": "public/maps/reva-campus.webp",
+    "component": "VenueContent",
+    "variable": "approvedPreviousSiteAsset",
+    "bytes": 2997676
+  },
+  {
+    "file": "public/media/scd-share-preview.png",
+    "component": "SiteMetadata",
+    "variable": "approvedSocialImage",
+    "bytes": 1518742,
+    "source": "User-supplied AWS SCD BLR banner for REVA, edited for link previews without the QR code and IMPULSE panel."
+  },
+  {
+    "file": "public/brands/bengaluru-tech-week-horizontal.svg",
+    "component": "OrganizersPage",
+    "variable": "techWeekHorizontalLogo",
+    "bytes": 18137
   },
   {
     "file": "public/brands/reva-university-dark.png",
     "component": "RevaBrand",
-    "variable": "revaUniversityDarkWordmark",
-    "bytes": 21799,
-    "source": "User-supplied dark REVA University logo"
+    "variable": "approvedUniversityBranding",
+    "bytes": 21799
   },
   {
     "file": "public/brands/reva-symbol.png",
     "component": "RevaBrand",
-    "variable": "revaNavbarSymbol",
-    "bytes": 8372,
-    "source": "User-supplied separate REVA symbol"
+    "variable": "approvedUniversityBranding",
+    "bytes": 8372
   },
   {
     "file": "public/brands/reva-wordmark.png",
     "component": "RevaBrand",
-    "variable": "revaNavbarWordmark",
-    "bytes": 17126,
-    "source": "User-supplied separate REVA UNIVERSITY wordmark"
+    "variable": "approvedUniversityBranding",
+    "bytes": 17126
+  },
+  {
+    "file": "public/media/previous-speakers/ayush-hooda.png",
+    "component": "SpeakerDirectory",
+    "variable": "speakerPortrait",
+    "bytes": 236397
+  },
+  {
+    "file": "public/brands/nvidia.svg",
+    "component": "SpeakerCompany",
+    "variable": "companyLogo",
+    "bytes": 2786,
+    "source": "https://www.nvidia.com/en-gb/about-nvidia/legal-info/logo-brand-usage/",
+    "notes": "Official horizontal artwork; viewBox cropped to the logo bounds without changing paths or colors."
+  },
+  {
+    "file": "public/media/speakers/devansh-agrawal.jpeg",
+    "component": "SpeakerDirectory",
+    "variable": "sourcePhotograph",
+    "bytes": 202623,
+    "notes": "Unchanged organiser-supplied original, retained as the source for the transparent cutout."
+  },
+  {
+    "file": "public/media/speakers/devansh-agrawal-cutout.png",
+    "component": "SpeakerLineup",
+    "variable": "speakerPortrait",
+    "bytes": 2610050,
+    "notes": "Transparent-background cutout of the organiser-supplied Devansh Agrawal photograph, made with the built-in image editor."
   }
 ]
