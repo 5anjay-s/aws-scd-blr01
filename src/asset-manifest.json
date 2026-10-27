@@ -1664,9 +1664,10 @@
   {
     "file": "public/media/scd-share-preview.png",
     "component": "SiteMetadata",
-    "variable": "approvedSocialImage",
+    "variable": "sourceSocialImage",
     "bytes": 1518742,
-    "source": "User-supplied AWS SCD BLR banner for REVA, edited for link previews without the QR code and IMPULSE panel."
+    "source": "User-supplied AWS SCD BLR banner for REVA, edited for link previews without the QR code and IMPULSE panel.",
+    "notes": "Approved source banner, retained publicly for older cached social-preview URLs."
   },
   {
     "file": "public/brands/bengaluru-tech-week-horizontal.svg",
@@ -1719,5 +1720,13 @@
     "variable": "speakerPortrait",
     "bytes": 151966,
     "notes": "900px WebP delivery image with preserved alpha transparency; encoded from the background-removed cutout at quality 82."
+  },
+  {
+    "file": "public/media/scd-bengaluru-2026-share-v2.jpg",
+    "component": "SiteMetadata",
+    "variable": "approvedSocialImage",
+    "bytes": 90657,
+    "source": "Resized from the approved scd-share-preview.png banner without changing its content.",
+    "notes": "1200 × 630 JPEG for link previews. Versioned filename gives crawlers a fresh image URL; keep this URL immutable."
   }
 ]
