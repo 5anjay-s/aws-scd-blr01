@@ -37,6 +37,11 @@ export const hackathon = {
   access: 'Registrations completed before 21 October 2026, 10:00 AM IST receive Plus access before the hackathon. Registrations completed on or after that cutoff receive access after the hackathon.',
   workshopArchive: 'The ChatGPT workshop by OpenAI Student Collective was reserved for IMPULSE participants, with one participant per team due to venue capacity. Eligible attendees could receive one month of ChatGPT Plus.',
   accessArchive: 'The registration cutoff for Plus access before the hackathon was 21 October 2026, 10:00 AM IST. Later registrations were scheduled to receive access after the hackathon.',
+  winners: [
+    { place: '1st prize', team: 'Cite and Conquer', members: ['Shria George', 'Sudiksha V'] },
+    { place: '2nd place', team: 'Algoarchitects', members: ['Chinranjeevi G', 'Ganesh T S', 'Kushal'] },
+    { place: '3rd place', team: 'ALPHA', members: ['Manish Rajak', 'Abhishek Yadav', 'Ravikant Chaurasiya'] },
+  ],
 };
 
 export function hasHackathonEnded(now = Date.now()) {
