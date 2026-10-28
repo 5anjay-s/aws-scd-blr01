@@ -169,10 +169,10 @@ export default function RegistrationMobile() {
         </div>
         <div className="d-43f50fc4ff" data-node-id="1367:813" data-name="Status / REGISTRATION">
           <p className="d-6e37333e29" data-node-id="1367:814">
-            REGISTRATION
+            CHECK-IN
           </p>
           <p className="d-5b27af2011" data-node-id="1367:815">
-            Open now
+            8:00 AM IST
           </p>
         </div>
       </div>
@@ -181,20 +181,19 @@ export default function RegistrationMobile() {
       <div className="d-e6fc559f21" data-node-id="1367:847" data-name="Registration / Before the details arrive — Mobile">
         <div className="d-c589fabaed" data-node-id="1367:848" data-name="Registration / Section index">
           <p className="d-5f1f28fe2d" data-node-id="1367:849">
-            WHILE YOU’RE HERE
+            PLAN YOUR VISIT
           </p>
           <p className="d-e1908a6b66" data-node-id="1367:850">
-            A LITTLE CURIOSITY GOES A LONG WAY.
+            DATE, VENUE & REGISTRATION.
           </p>
         </div>
         <div className="d-2055d7bc3c" data-node-id="1367:851" data-name="Registration / Invitation">
           <div className="d-d0158f7a9a" data-node-id="1367:852">
-            <p className="d-6ee5fa6884">Make a little</p>
-            <p className="d-6ee5fa6884">room for</p>
-            <p className="d-f42ae1416f">possibility.</p>
+            <p className="d-6ee5fa6884">Ready for</p>
+            <p className="d-f42ae1416f">5 November?</p>
           </div>
           <p className="d-18ad0cf623" data-node-id="1367:853">
-            Explore the programme, meet the community and see what we are building together.
+            Check the programme and plan your visit to REVA University.
           </p>
           <SiteLink hoverTone="orange" buttonTone="navy" className="d-49c8885528" data-node-id="1367:854" data-name="Registration / Explore the programme" href="/#timeline">
             <p className="d-7669a2de49" data-node-id="I1367:854;5:30">
@@ -232,16 +231,16 @@ export default function RegistrationMobile() {
               </p>
             </div>
           </div>
-          <div className="d-1a9cf51344" data-node-id="1367:866" data-name="Registration / Your first step">
+          <div className="d-1a9cf51344" data-node-id="1367:866" data-name="Registration / Your main-day ticket">
             <p className="d-69a2c1c4a5" data-node-id="1367:867">
               03
             </p>
-            <div className="d-06b8e507a5" data-node-id="1367:868" data-name="Registration / Your first step copy">
+            <div className="d-06b8e507a5" data-node-id="1367:868" data-name="Registration / Your main-day ticket copy">
               <p className="d-2a04321fae" data-node-id="1367:869">
-                Your first step
+                Your main-day ticket
               </p>
               <p className="d-c37f273d0b" data-node-id="1367:870">
-                IMPULSE requires a separate registration on Luma. Your SCD ticket covers the main day.
+                Your SCD ticket is for 5 November at REVA University. IMPULSE concluded on 23–24 October.
               </p>
             </div>
           </div>

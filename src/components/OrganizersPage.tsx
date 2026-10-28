@@ -75,12 +75,11 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
   const conversations = [
     { name: 'Meetup', note: 'MEET IN PERSON. BUILD TOGETHER.', art: art.imgSpeechPaper, node: node('1851:3855', '1851:3972') },
     { name: 'WhatsApp', note: 'KEEP THE CONVERSATION GOING.', art: art.imgSpeechPaper1, node: node('1851:3865', '1851:3982') },
-    { name: 'LinkedIn', note: 'SHARE WHAT’S NEXT.', art: art.imgSpeechPaper2, node: node('1851:3875', '1851:3992') },
+    { name: 'Luma', note: 'WORKSHOPS. EVENTS. COMMUNITY.', art: art.imgSpeechPaper2, node: node('1851:3875', '1851:3992') },
   ].flatMap(({ name, ...speech }) => {
     const channel = communityChannels.find(channel => channel.name === name);
     return channel ? [{ ...speech, ...channel }] : [];
   });
-  const lumaChannel = communityChannels.find(channel => channel.name === 'Luma');
 
   return <div className={`organizers-page${mobile ? ' organizers-page--mobile' : ''}`} data-node-id={node('1823:3588', '1823:3589')}>
     <HomeNavigation mobile={mobile} />
@@ -109,13 +108,16 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
     <div data-node-id={node('1834:3846', '1834:4091')} data-reveal="off"><DitherDivider from="cyan" to="white" /></div>
     <section className="organizers-tech-week organizers-surface" aria-labelledby="organizers-tech-title" data-node-id={node('1834:3849', '1834:4093')}>
       <p className="organizers-eyebrow">01 / BENGALURU TECH WEEK — 02–04 SEPT 2026</p>
-      <SiteLink className="organizers-tech-brand" href="https://bengalurutechweek.com/2026/" aria-label="Bengaluru Tech Week 2026"><img src="/brands/bengaluru-tech-week-horizontal.svg" alt="Bengaluru Tech Week" width="1646" height="256" loading="lazy" /></SiteLink>
-      <div className="organizers-impact" data-node-id={node('1834:3851', '1834:4095')}>
-        <p className="organizers-registration-count" data-node-id={node('1834:3852', '1834:4096')}><CountUp value={1222} suffix="+" /></p>
-        <div><h2>Registrations.<br />All student led.</h2><p>The only student-led community organising at Bengaluru Tech Week 2026.</p></div>
-      </div>
-      <h2 className="organizers-domains" id="organizers-tech-title">Three days.{mobile ? <br /> : ' '}Three domains.</h2>
-      <p>Cloud, AI and blockchain at REVA — alongside the city’s professional technology organisers.</p>
+      <header className="organizers-tech-intro">
+        <SiteLink className="organizers-tech-brand" href="https://bengalurutechweek.com/2026/" aria-label="Bengaluru Tech Week 2026"><img src="/brands/bengaluru-tech-week-horizontal.svg" alt="Bengaluru Tech Week" width="1646" height="256" loading="lazy" /></SiteLink>
+        <div className="organizers-impact" data-node-id={node('1834:3851', '1834:4095')}>
+          <p className="organizers-registration-count" data-node-id={node('1834:3852', '1834:4096')}><CountUp value={techWeek.registrations} suffix="+" /></p>
+          <p className="organizers-registration-label">Registrations across<br />three events.</p>
+        </div>
+        <h2 className="organizers-domains" id="organizers-tech-title"><span>Three days.</span> <span>Three domains.</span></h2>
+        <p className="organizers-tech-claim">The <strong>only student-led community</strong> organising at Bengaluru Tech Week 2026.</p>
+        <p>Cloud, AI and blockchain at REVA University.</p>
+      </header>
       <div className="organizers-event-wall" data-node-id={node('1834:3858', '1834:4102')}>
         {events.map((event, index) => <article className={`organizers-event organizers-event--${event.tone}`} key={event.day} data-node-id={event.node} data-reveal="rise">
           <div className="organizers-event-date"><p>{event.day}</p><p>{event.category}</p></div>
@@ -138,7 +140,7 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
     <section className="organizers-initiatives organizers-surface" aria-labelledby="organizers-initiatives-title" data-node-id={node('1834:3942', '1834:4182')}>
       <p className="organizers-eyebrow organizers-cyan">02 / BEFORE THE BIG DAYS — DEC 2025 TO JUL 2026</p>
       <h2 id="organizers-initiatives-title"><ArcadeText>START SMALL.</ArcadeText><br /><ArcadeText>BUILD TOGETHER.</ArcadeText></h2>
-      <p>A workshop becomes a programme.<br />A first question becomes a shared possibility.</p>
+      <p>From introductory workshops to campus outreach and AWS Launchpad.</p>
       <div className="organizers-chapters" data-node-id={node('1834:3946', '1834:4186')}>
         {initiatives.map(chapter => <section className={`organizers-chapter organizers-chapter--${chapter.tone}`} key={chapter.label} data-node-id={node(chapter.desktop, chapter.mobile)}>
           <p className="organizers-small">{chapter.label}</p>
@@ -171,7 +173,7 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
         </div>)}
         <div className="organizers-invitation-note" data-node-id={node('1851:3885', '1851:4002')}>
           {!mobile && <p>A first hello.<br />A shared project.<br />A reason to keep building.</p>}
-          <p>~{communityTotal.toLocaleString('en-US')} {mobile ? 'memberships + follows' : 'MEMBERSHIPS + FOLLOWS'}<br /><span>ACROSS OUR COMMUNITY CHANNELS{lumaChannel && <><br />INCLUDING <CountUp value={lumaChannel.count} suffix={lumaChannel.suffix} /> LUMA MEMBERS</>}</span></p>
+          <p>~{communityTotal.toLocaleString('en-US')} {mobile ? 'memberships + follows' : 'MEMBERSHIPS + FOLLOWS'}<br /><span>ACROSS OUR COMMUNITY CHANNELS</span></p>
         </div>
       </div>
       <div className="organizers-contact-wall" data-node-id={node('1851:3888', '1851:4005')}>

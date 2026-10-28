@@ -14,14 +14,12 @@ export const event = {
 };
 
 export const mainDay = {
-  technicalPreview: 'AWS, OpenAI Student Collective & MongoDB sessions and workshops.',
+  about: 'AWS technical sessions, hands-on workshops and non-technical sessions, with time to meet the community.',
+  technicalPreview: 'AWS technical sessions and hands-on workshops.',
   nonTechnicalPreview: 'Non-technical sessions on the main day. Details to be announced.',
-  technical: 'AWS technical sessions and hands-on workshops, a ChatGPT workshop by OpenAI Student Collective, and MongoDB sessions and workshops.',
+  technical: 'AWS technical sessions and hands-on workshops, with time to learn from speakers and meet other builders.',
   nonTechnical: 'Non-technical sessions will be part of the main day on 5 November. Topics, speakers and timings will be announced once confirmed.',
-  aws: 'Technical sessions and hands-on workshops on AWS. Session titles and times will be announced.',
-  openai: 'A ChatGPT workshop by OpenAI Student Collective. Selected attendees receive one month of ChatGPT Plus.',
-  openaiEligibility: 'Selected ChatGPT workshop attendees receive one month of ChatGPT Plus.',
-  mongodb: 'Technical sessions and developer workshops from MongoDB. Session titles and times will be announced.',
+  aws: 'Learn about AWS through technical sessions and practical workshops. Topics and session timings will be announced.',
 };
 
 export const hackathon = {
@@ -33,6 +31,11 @@ export const hackathon = {
   archiveAt: '2026-10-25T00:00:00+05:30',
   venue: 'Rangasthala, REVA University, Bengaluru',
   url: 'https://luma.com/t67kuo2c',
+  winners: [
+    { place: 1, label: '1st place', team: 'Cite and Conquer', members: ['Shria George', 'Sudiksha V'] },
+    { place: 2, label: '2nd place', team: 'Algoarchitects', members: ['Chinranjeevi G', 'Ganesh T S', 'Kushal'] },
+    { place: 3, label: '3rd place', team: 'ALPHA', members: ['Manish Rajak', 'Abhishek Yadav', 'Ravikant Chaurasiya'] },
+  ],
   workshop: 'A ChatGPT workshop by OpenAI Student Collective for students attending IMPULSE. One participant per team can attend due to venue capacity and receive a free one-month ChatGPT Plus subscription.',
   access: 'Registrations completed before 21 October 2026, 10:00 AM IST receive Plus access before the hackathon. Registrations completed on or after that cutoff receive access after the hackathon.',
   workshopArchive: 'The ChatGPT workshop by OpenAI Student Collective was reserved for IMPULSE participants, with one participant per team due to venue capacity. Eligible attendees could receive one month of ChatGPT Plus.',

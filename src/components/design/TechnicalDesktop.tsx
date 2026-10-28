@@ -1,4 +1,4 @@
-import { HackathonSection } from "../EventContent";
+import { TechnicalProgramme } from "../TechnicalProgramme";
 import { mainDay } from "../../content/event";
 import { SiteBrand } from "../SiteBrand";
 import { TrackArtwork } from "../TrackArtwork";
@@ -49,166 +49,34 @@ export default function TechnicalDesktop() {
       <div className="d-5782fa7dda" data-node-id="874:8935" data-name="Technical / Hero — Desktop">
         <div className="d-4de67d6c92" data-node-id="874:8936" data-name="Hero / Index">
           <SiteLink className="d-2669efa126" data-node-id="874:8937" href={"/tracks"}>
-            ← ALL EXPERIENCES
+            ← ALL TRACKS
           </SiteLink>
           <p className="d-a7403a2b46" data-node-id="874:8938">
             01 / TECHNICAL — 5 NOVEMBER 2026
           </p>
         </div>
         <div className="d-24afe222d2" data-node-id="874:8939" role="heading" aria-level={1}>
-          <p className="d-6e5523dbc6">IDEAS INTO</p>
-          <p className="d-2fc83ac3f5">ACTION.</p>
+          <p className="d-6e5523dbc6">TECHNICAL</p>
+          <p className="d-2fc83ac3f5">TRACK.</p>
         </div>
         <div className="d-1e75c12a0f" data-node-id="874:8940" data-name="Hero / Compile and introduction">
           <ScdTechnicalCompileBrackets className="d-ed1e382ab8" />
           <div className="d-c99acbbd56" data-node-id="874:8942" data-name="Hero / Technical introduction">
-            <div className="d-a15186a4fc" data-node-id="874:8943">
-              <p className="d-2a8bd1889a">CURIOUS MINDS.</p>
-              <p className="d-2158fa6ddb">REAL POSSIBILITIES.</p>
-            </div>
             <p className="d-64e37b773b" data-node-id="874:8944">
-              Explore cloud, AI, security, and software development, including AWS technical sessions and hands-on workshops on the main day.
+              {mainDay.technicalPreview}
             </p>
-            <SiteLink buttonTone="orange" className="d-44f977d6f9" data-node-id="874:8945" data-name="Action / Registration info" href={"/registration"}>
+            <SiteLink buttonTone="orange" className="d-44f977d6f9" data-node-id="874:8945" data-name="Action / Get your ticket" href={"/registration"}>
               <p className="d-cf01328ee8" data-node-id="I874:8945;5:30">
-                Registration info
+                Get your ticket
               </p>
               <div className="d-4725149c0e" data-node-id="I874:8945;15:32" data-name="Arrow">
                 <img alt="" className="d-511e8f31d4" src={imgArrow1} />
               </div>
             </SiteLink>
-            <div className="d-1c5e80253f" data-node-id="874:8946">
-              <p className="d-ebed470a6c">SESSIONS + SPEAKERS + TIMINGS</p>
-              <p className="d-d43f566f28">TO BE ANNOUNCED</p>
-            </div>
           </div>
         </div>
       </div>
-      <div className="d-a566f726bd" data-node-id="874:8947" data-name="Technical / Programme — Desktop">
-        <div className="d-64b69ec810" data-node-id="874:8948" data-name="Programme / Introduction">
-          <div className="d-9bc9950760" data-node-id="874:8949">
-            <p className="d-5069c0bf54">THREE WAYS</p>
-            <p className="d-287d1f8085">TO GO DEEPER.</p>
-          </div>
-          <p className="d-549e2da3ec" data-node-id="874:8950">
-            {mainDay.technical} Session times and details to be announced.
-          </p>
-        </div>
-        <div className="d-f7e6db2c74" data-node-id="874:8951" data-name="Programme / Three theme fields">
-          <div className="d-0c4da33e5c" data-node-id="874:8952" data-name="SCD / Technical / Theme panel / Desktop">
-            <p className="d-888b47fa83" data-node-id="I874:8952;667:2541">
-              01 / CLOUD
-            </p>
-            <p className="d-94d5a91ee2" data-node-id="I874:8952;667:2542">
-              AWS Sessions & Workshops
-            </p>
-            <div className="d-c4064b08a6" data-node-id="I874:8952;667:2543" data-name="Theme / Rule" />
-            <div className="d-d5153bf1ae" data-node-id="I874:8952;667:2544">
-              <p className="d-edce8460ce">Technical sessions</p>
-              <p className="d-e64f4edba4">& hands-on workshops</p>
-            </div>
-            <p className="d-b2638fb3c2" data-node-id="I874:8952;667:2545">
-              {mainDay.aws}
-            </p>
-            <div className="d-3133ffc36f" data-node-id="I874:8952;667:2546">
-              <p className="d-ebed470a6c">DATES</p>
-              <p className="d-d43f566f28">5 NOVEMBER 2026 · MAIN DAY</p>
-            </div>
-          </div>
-          <div className="d-88921b4168" data-node-id="874:8953" data-name="Theme / AI">
-            <p className="d-888b47fa83" data-node-id="I874:8953;667:2541">
-              02 / AI
-            </p>
-            <p className="d-94d5a91ee2" data-node-id="I874:8953;667:2542">
-              ChatGPT Workshop
-            </p>
-            <div className="d-c4064b08a6" data-node-id="I874:8953;667:2543" data-name="Theme / Rule" />
-            <div className="d-d5153bf1ae" data-node-id="I874:8953;667:2544">
-              <p className="d-edce8460ce">OpenAI Student</p>
-              <p className="d-e64f4edba4">Collective</p>
-            </div>
-            <p className="d-b2638fb3c2" data-node-id="I874:8953;667:2545">
-              {mainDay.openai}
-            </p>
-            <div className="d-3133ffc36f" data-node-id="I874:8953;667:2546">
-              <p className="d-ebed470a6c">DATE</p>
-              <p className="d-d43f566f28">5 NOVEMBER 2026 · MAIN-DAY</p>
-            </div>
-          </div>
-          <div className="d-1ce5ee9503" data-node-id="874:8954" data-name="Theme / BUILD">
-            <p className="d-2a82521e63" data-node-id="I874:8954;667:2541">
-              03 / BUILD
-            </p>
-            <p className="d-0f2274cd94" data-node-id="I874:8954;667:2542">
-              MongoDB Workshop
-            </p>
-            <div className="d-fa05bef8aa" data-node-id="I874:8954;667:2543" data-name="Theme / Rule" />
-            <div className="d-01b8dd4d38" data-node-id="I874:8954;667:2544">
-              <p className="d-edce8460ce">Workshops &</p>
-              <p className="d-e64f4edba4">Sessions</p>
-            </div>
-            <p className="d-d53caec9f0" data-node-id="I874:8954;667:2545">
-              {mainDay.mongodb}
-            </p>
-            <div className="d-f056d2414f" data-node-id="I874:8954;667:2546">
-              <p className="d-ebed470a6c">DATE</p>
-              <p className="d-d43f566f28">5 NOVEMBER 2026 · MAIN-DAY</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <HackathonSection compact />
-      <div className="d-6075610caa" data-node-id="874:8955" data-name="Technical / Preparation — Desktop">
-        <div className="d-20556b24a8" data-node-id="874:8956" data-name="Preparation / Invitation">
-          <p className="d-d4cf649985" data-node-id="874:8957">
-            BEFORE YOU JOIN
-          </p>
-          <div className="d-7022604942" data-node-id="874:8958">
-            <p className="d-5069c0bf54">BRING YOUR</p>
-            <p className="d-287d1f8085">NEXT QUESTION.</p>
-          </div>
-          <p className="d-c501c3aa8c" data-node-id="874:8959">
-            Join AWS sessions, AI workshops and developer conversations on the main day. Explore IMPULSE, our pre-SCD hackathon, below.
-          </p>
-        </div>
-        <div className="d-95644d43f8" data-node-id="874:8960" data-name="Preparation / Details">
-          <div className="d-3cb220a981" data-node-id="874:8961" data-name="Preparation / EXPERIENCE LEVEL">
-            <div className="d-f8b122a797" data-node-id="874:8962" data-name="Rule" />
-            <p className="d-b83d2d963b" data-node-id="874:8963">
-              MAIN-DAY EVENT
-            </p>
-            <p className="d-73728e76c4" data-node-id="874:8964">
-              AWS SCD BLR · 5 NOV 2026
-            </p>
-          </div>
-          <div className="d-3cb220a981" data-node-id="874:8965" data-name="Preparation / EQUIPMENT + SETUP">
-            <div className="d-f8b122a797" data-node-id="874:8966" data-name="Rule" />
-            <p className="d-b83d2d963b" data-node-id="874:8967">
-              MAIN-DAY VENUE
-            </p>
-            <p className="d-73728e76c4" data-node-id="874:8968">
-              REVA UNIVERSITY CAMPUS, BENGALURU
-            </p>
-          </div>
-          <div className="d-3cb220a981" data-node-id="874:8969" data-name="Preparation / SESSION ACCESS">
-            <div className="d-f8b122a797" data-node-id="874:8970" data-name="Rule" />
-            <p className="d-b83d2d963b" data-node-id="874:8971">
-              PREREQUISITES
-            </p>
-            <p className="d-73728e76c4" data-node-id="874:8972">
-              BRING A LAPTOP & CHARGER FOR HANDS-ON SESSIONS
-            </p>
-          </div>
-          <SiteLink buttonTone="orange" className="d-44f977d6f9" data-node-id="874:8973" data-name="Action / Get Main-Day Ticket" href={siteLinks.konfhub}>
-            <p className="d-cf01328ee8" data-node-id="I874:8973;5:30">
-              Get Main-Day Ticket
-            </p>
-            <div className="d-4725149c0e" data-node-id="I874:8973;15:32" data-name="Arrow">
-              <img alt="" className="d-511e8f31d4" src={imgArrow1} />
-            </div>
-          </SiteLink>
-        </div>
-      </div>
+      <TechnicalProgramme />
       <div className="d-2c32abdc78 pixel-border pixel-border-paper-navy" data-node-id="1413:622" data-name="Section divider / Preparation to continue">
         <img alt="" className="d-511e8f31d4" src={imgSectionDividerPreparationToContinue} />
       </div>
@@ -218,8 +86,8 @@ export default function TechnicalDesktop() {
             <SignalStitch alt="" className="d-511e8f31d4" src={imgAccentPixelStitch} />
           </div>
           <div className="d-1089330ab3" data-node-id="874:8981">
-            <p className="d-9c7634671c">A DIFFERENT</p>
-            <p className="d-b593672e9c">KIND OF SPARK.</p>
+            <p className="d-9c7634671c">KEEP</p>
+            <p className="d-b593672e9c">EXPLORING.</p>
           </div>
         </div>
         <div className="d-6c497b55c2" data-node-id="874:8982" data-name="Continue / Actions">

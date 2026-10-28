@@ -188,10 +188,10 @@ export default function RegistrationDesktop() {
         </div>
         <div className="d-8aac1916c9" data-node-id="1367:688" data-name="Status / REGISTRATION">
           <p className="d-67ca39aa4a" data-node-id="1367:689">
-            REGISTRATION
+            CHECK-IN
           </p>
           <p className="d-51b0f0d5e7" data-node-id="1367:690">
-            Open now
+            8:00 AM IST
           </p>
         </div>
       </div>
@@ -200,21 +200,21 @@ export default function RegistrationDesktop() {
       <div className="d-0ad43c5865" data-node-id="1367:725" data-name="Registration / Before the details arrive">
         <div className="d-552c1c6224" data-node-id="1367:726" data-name="Section index">
           <p className="d-c6a4bf57de" data-node-id="1367:727">
-            WHILE YOU’RE HERE
+            PLAN YOUR VISIT
           </p>
           <p className="d-1e0f2a177d" data-node-id="1367:728">
-            A LITTLE CURIOSITY GOES A LONG WAY.
+            DATE, VENUE & REGISTRATION.
           </p>
         </div>
         <div className="d-00c843dfdd" data-node-id="1367:729" data-name="Registration / Useful next steps">
           <div className="d-ebd5dfbbe6" data-node-id="1367:730" data-name="Registration / Invitation">
             <div className="d-467d6f10a6" data-node-id="1367:731">
-              <p className="d-8854808fbb">Make a little</p>
-              <p className="d-58a8484bb4">room for possibility.</p>
+              <p className="d-8854808fbb">Ready for</p>
+              <p className="d-58a8484bb4">5 November?</p>
             </div>
             <div className="d-e01c4d53d6" data-node-id="1367:732">
-              <p className="d-2eae06771a">Explore the programme, meet the community</p>
-              <p className="d-afb1b38150">and see what we are building together.</p>
+              <p className="d-2eae06771a">Check the programme and plan your visit</p>
+              <p className="d-afb1b38150">to REVA University.</p>
             </div>
             <SiteLink hoverTone="orange" buttonTone="navy" className="d-733305cc49" data-node-id="1367:733" data-name="Button / Flat" href={"/#timeline"}>
               <p className="d-7a0f1f17eb" data-node-id="I1367:733;5:30">
@@ -252,16 +252,16 @@ export default function RegistrationDesktop() {
                 </p>
               </div>
             </div>
-            <div className="d-f7f0034703" data-node-id="1367:745" data-name="Registration / Your first step">
+            <div className="d-f7f0034703" data-node-id="1367:745" data-name="Registration / Your main-day ticket">
               <p className="d-6805fbd7b7" data-node-id="1367:746">
                 03
               </p>
-              <div className="d-4efad2a343" data-node-id="1367:747" data-name="Registration / Your first step copy">
+              <div className="d-4efad2a343" data-node-id="1367:747" data-name="Registration / Your main-day ticket copy">
                 <p className="d-e5507e86e8" data-node-id="1367:748">
-                  Your first step
+                  Your main-day ticket
                 </p>
                 <p className="d-0ae5befe23" data-node-id="1367:749">
-                  IMPULSE requires a separate registration on Luma. Your SCD ticket covers the main day.
+                  Your SCD ticket is for 5 November at REVA University. IMPULSE concluded on 23–24 October.
                 </p>
               </div>
             </div>

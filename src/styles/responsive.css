@@ -390,6 +390,20 @@
 .speaker-profile-link { color: inherit; text-decoration: none; }
 .speaker-profile-link:hover { text-decoration: underline; text-underline-offset: .15em; }
 .speaker-profile-link:focus-visible { outline: 2px solid var(--navy); outline-offset: 4px; }
+/* Keep the original speaker masthead and quotation close to the portrait cards. */
+.design-content .speaker-intro { position: relative; isolation: isolate; width: 100%; padding: clamp(28px, 3.35cqw, 48px); color: var(--navy); background: var(--lime); }
+.speaker-intro::before { content: ''; position: absolute; inset: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); z-index: -1; pointer-events: none; background: var(--lime); }
+.speaker-intro__index { margin: 0 0 20px; font: 400 12px/1.5 'Geist Mono', monospace; }
+.speaker-intro__body { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 20px 36px; }
+.design-content .speaker-intro__title { grid-column: 1; grid-row: 1; margin: 0; font-size: clamp(64px, 13cqw, 176px); line-height: .9; }
+.speaker-intro__description { grid-column: 1; grid-row: 2; margin: 0; max-width: 58ch; font: 400 clamp(14px, 1.3cqw, 18px)/1.6 'Geist Mono', monospace; }
+.speaker-intro__quotation { grid-column: 2; grid-row: 1 / span 2; position: relative; width: clamp(104px, 14cqw, 192px); aspect-ratio: 4 / 3; }
+.speaker-intro__art { position: absolute; inset: 0; width: 100%; height: 100%; }
+.design-content .speaker-intro--mobile { padding: 28px 24px; }
+.speaker-intro--mobile .speaker-intro__body { gap: 20px 16px; }
+.design-content .speaker-intro--mobile .speaker-intro__title { grid-column: 1 / -1; font-size: clamp(56px, 18.462cqw, 72px); }
+.speaker-intro--mobile .speaker-intro__quotation { grid-row: 2; width: 72px; }
+.speaker-intro--mobile .speaker-intro__description { font-size: 14px; }
 /* Preserve the coordinate system inside the ticket illustration. */
 .mobile-layout .design-content [data-node-id='1265:3122'] { --design-unit: var(--space-unit); width: min(100%, 390px); height: calc(984 * var(--space-unit)); margin-inline: auto; }
 .mobile-layout .design-content [data-node-id='1265:3127'] { top: calc(48 * var(--space-unit)); }
@@ -491,11 +505,15 @@
 .design-section[data-design-section='1823:3588'] + .design-section [data-node-id='913:540'],
 .design-section[data-design-section='1823:3589'] + .design-section [data-node-id='1169:691'] { display: none; }
 .design-section[data-design-section='1823:3588'] + .design-section [data-node-id='860:5359'] { padding-top: 48px; }
-.organizers-tech-week { display: flex; flex-direction: column; gap: 32px; padding: 48px; background: var(--white); color: var(--navy); font-size: 15px; line-height: 21px; }
-.organizers-impact { display: grid; grid-template-columns: 912fr 400fr; gap: 32px; align-items: center; }
-.organizers-registration-count { font: 400 min(13.056cqw, 188px)/1 var(--font-arcade); }
-.organizers-impact h2 { font: 500 32px/35px 'Azeret Mono', monospace; margin-bottom: 16px; }
-.organizers-domains { font: 500 40px/44px 'Azeret Mono', monospace; }
+.organizers-tech-week { display: flex; flex-direction: column; gap: 28px; padding: 48px; background: var(--white); color: var(--navy); font-size: 15px; line-height: 1.6; }
+.organizers-tech-intro { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; min-width: 0; }
+.organizers-tech-claim { max-width: 52ch; padding-left: 16px; border-left: 3px solid var(--orange); }
+.organizers-impact { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; max-width: 100%; padding: 0 0 18px; border-bottom: 1px solid #0b102026; }
+.organizers-registration-count { font: 400 clamp(56px, 6.1cqw, 88px)/1 var(--font-arcade); white-space: nowrap; }
+.organizers-registration-label { font: 500 clamp(18px, 1.7cqw, 24px)/1.4 'Azeret Mono', monospace; }
+.organizers-domains { font: 500 clamp(28px, 3.1cqw, 40px)/1.2 'Azeret Mono', monospace; letter-spacing: -.035em; }
+.organizers-domains span { display: inline-block; }
+@media (max-width: 767px) { .organizers-tech-intro { gap: 16px; }.organizers-impact { flex-direction: column; align-items: flex-start; gap: 10px; } }
 .organizers-event-wall { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 24px; padding: 30px 20px 40px; }
 .organizers-event { min-width: 0; display: flex; flex-direction: column; gap: 20px; padding: 24px; transform: rotate(-4deg); background: var(--cyan); }
 .organizers-event--violet { background: var(--violet); transform: rotate(3deg); margin-top: 68px; }
@@ -573,10 +591,9 @@
 .organizers-page--mobile .organizers-host h2 { font-size: 25px; line-height: 28px; }
 .organizers-page--mobile .organizers-tech-week { padding: 24px; gap: 24px; font-size: 13px; line-height: 18px; }
 .organizers-page--mobile .organizers-tech-week > .organizers-eyebrow { font-size: 10px; line-height: 14px; }
-.organizers-page--mobile .organizers-impact { grid-template-columns: 1fr; gap: 8px; }
-.organizers-page--mobile .organizers-registration-count { font-size: clamp(72px, 22.56cqw, 112px); }
-.organizers-page--mobile .organizers-impact h2 { font-size: 23px; line-height: 25px; }
-.organizers-page--mobile .organizers-domains { font-size: 30px; line-height: 33px; }
+.organizers-page--mobile .organizers-impact { gap: 12px; padding: 0 0 18px; }
+.organizers-page--mobile .organizers-registration-count { font-size: clamp(52px, 15.385cqw, 64px); }
+.organizers-page--mobile .organizers-domains { font-size: clamp(24px, 7.692cqw, 30px); line-height: 1.15; }
 .organizers-page--mobile .organizers-event-wall { grid-template-columns: 1fr; padding: 8px 0 20px; gap: 24px; width: 100%; }
 .organizers-page--mobile .organizers-event { width: 88%; max-width: 320px; padding: 14px; gap: 10px; transform: rotate(-1deg); justify-self: end; }
 .organizers-page--mobile .organizers-event--violet { margin-top: 0; justify-self: start; transform: rotate(1deg); }
@@ -613,6 +630,7 @@
 .organizers-page--mobile .organizers-speech--1 { left: 6.154%; top: 55.33%; }
 .organizers-page--mobile .organizers-speech--2 { left: 12.308%; top: 72.081%; }
 .organizers-page--mobile .organizers-speech-copy { left: 7.547%; width: 84.906%; top: 10.345%; }
+.organizers-page--mobile .organizers-speech-count { grid-template-columns: 55% minmax(0, 1fr); gap: 4%; }
 .organizers-page--mobile .organizers-speech-count > p { font-size: 11.282cqw; }
 .organizers-page--mobile .organizers-speech-count h3 { font-size: 4.615cqw; }
 .organizers-page--mobile .organizers-speech-count > div > p { font-size: 2.821cqw; }
@@ -945,8 +963,7 @@
   .mobile-layout .badge-studio__press::before { display: none; }
   .mobile-layout .badge-studio__editor { padding-top: 24px; }
 
-  .organizers-page--mobile .organizers-signature,
-  .organizers-page--mobile .organizers-impact { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+  .organizers-page--mobile .organizers-signature { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
   .organizers-page--mobile .organizers-event-wall { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
   .organizers-page--mobile .organizers-event { width: 100%; max-width: none; justify-self: stretch; }
   .organizers-page--mobile .organizers-event-date { gap: 8px; flex-wrap: wrap; }
@@ -1275,13 +1292,73 @@
   .mobile-layout .design-content .mobile-track-description { font-size: 11px; }
 }
 
+/* Both routes share explicit equal columns; named card areas cannot create implicit parent columns. */
+.design-canvas .design-content .track-picker { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: 24px auto auto 24px; width: 100%; height: auto; min-height: 0; }
+.design-canvas .design-content .track-picker > .track-picker-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 1fr; width: 100%; min-width: 0; }
+.design-canvas .design-content .track-picker-grid > .track-picker-panel { display: flex; flex-direction: column; gap: 16px; width: auto; min-width: 0; height: 100%; min-height: 0; padding: clamp(24px, 3vw, 40px); color: var(--navy); }
+.design-canvas .design-content .track-picker-panel--technical { background: var(--cyan); }
+.design-canvas .design-content .track-picker-panel--nontechnical { background: var(--violet); }
+.design-canvas .design-content .track-picker .track-picker-index { display: flex; flex-direction: row; align-items: center; justify-content: flex-start; order: -1; gap: 8px; width: 100%; height: auto; padding: 0; color: inherit; background: transparent; }
+.design-canvas .design-content .track-picker .track-picker-index > div { display: flex; width: auto; color: inherit; }
+.design-canvas .design-content .track-picker .track-picker-index p { width: auto; font-size: 11px; line-height: 1.5; margin: 0; color: inherit; }
+.design-canvas .design-content .track-picker .track-picker-card { display: grid; grid-template-columns: minmax(0, 1fr) 132px; grid-template-rows: auto minmax(112px, 1fr) 48px; grid-template-areas: 'title title' 'description artwork' 'action action'; flex: 1; align-items: start; align-content: stretch; gap: 16px 24px; width: 100%; min-width: 0; min-height: 0; padding: 0; text-align: left; }
+.design-canvas .design-content .track-picker-grid > .track-picker-panel.track-picker-card { width: auto; padding: clamp(24px, 3vw, 40px); }
+.design-canvas .design-content .track-picker .track-picker-card::before,
+.design-canvas .design-content .track-picker .track-picker-panel::before { display: none; }
+.design-canvas .design-content .track-picker .track-picker-copy { display: contents; text-align: left; }
+.design-canvas .design-content .track-picker .track-picker-duplicate-label { display: none; }
+.design-canvas .design-content .track-picker .track-picker-title { grid-area: title; display: flex; justify-content: flex-start; width: 100%; height: auto; margin: 0; font: 500 clamp(25px, 2.8vw, 40px)/1.15 'Azeret Mono', monospace; letter-spacing: -.04em; }
+.design-canvas .design-content .track-picker .track-picker-title > p { line-height: inherit; margin: 0; }
+.design-canvas .design-content .track-picker .track-picker-description { grid-area: description; width: 100%; margin: 0; font-size: 14px; line-height: 1.6; }
+.design-canvas .design-content .track-picker .track-picker-artwork { grid-area: artwork; position: relative; inset: auto; align-self: center; justify-self: center; width: 132px; max-width: 100%; height: auto; aspect-ratio: 5 / 4; }
+.design-canvas .design-content .track-picker .track-picker-artwork > div { position: relative; inset: auto; width: 100%; height: 100%; }
+.design-canvas .design-content .track-picker .track-picker-action { grid-area: action; display: flex; align-items: center; align-self: end; justify-self: start; justify-content: space-between; width: 190px; max-width: 100%; height: 48px; min-height: 48px; margin: 0; padding: 12px 16px; gap: 16px; background: var(--navy); color: var(--white); }
+.design-canvas .design-content .track-picker .track-picker-action > p { width: auto; font-size: 13px; line-height: 1.4; white-space: nowrap; }
+.design-canvas .design-content .track-picker .track-picker-action > div { flex: 0 0 18px; width: 18px; height: 18px; }
+.design-canvas .design-content .track-picker .mobile-track-card { display: grid; grid-template-rows: auto auto minmax(112px, 1fr) 48px; grid-template-areas: 'eyebrow eyebrow' 'title title' 'description artwork' 'action action'; }
+.design-canvas .design-content .track-picker .track-picker-eyebrow { grid-area: eyebrow; font-size: 11px; line-height: 1.5; margin: 0; }
+@media (max-width: 767px) {
+  .design-canvas .design-content .track-picker > .track-picker-grid { grid-template-columns: minmax(0, 1fr); }
+  .design-canvas .design-content .track-picker .track-picker-card { grid-template-columns: minmax(0, 1fr) 112px; gap: 16px 20px; }
+  .design-canvas .design-content .track-picker .track-picker-description { font-size: 13px; line-height: 1.5; }
+  .design-canvas .design-content .track-picker .track-picker-artwork { width: 112px; }
+}
+
 /* Approved content refinements: concise track, readable identity and commute guide. */
 .nontechnical-intro { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(180px, .6fr); gap: 48px; align-items: center; padding: clamp(32px, 5vw, 80px); background: var(--navy); color: var(--white); }
 .nontechnical-intro .event-lead { max-width: 54ch; line-height: 1.65; }
 .nontechnical-art { display: grid; place-items: center; min-width: 0; padding: 20px; }
 .nontechnical-quotes { display: block; position: relative; width: 100%; max-width: 320px; height: auto; aspect-ratio: 5 / 4; }
 .nontechnical-details h2 { font: 500 clamp(24px, 3vw, 36px)/1.25 'Azeret Mono', monospace; margin-bottom: 20px; }
-.organizers-tech-week .organizers-tech-brand { display: block; width: min(100%, 480px); margin: 24px 0 36px; }
+/* Track detail pages use the same reading edge and content-sized programme rows. */
+.design-canvas .design-content .technical-programme { width: 100%; min-width: 0; padding: clamp(32px, 5vw, 64px) clamp(24px, 5vw, 80px); background: var(--white); color: var(--navy); }
+.technical-programme-heading { max-width: 70ch; }
+.technical-programme-heading h2 { margin: 12px 0 24px; font: 500 clamp(26px, 3.6vw, 48px)/1.18 'Azeret Mono', monospace; letter-spacing: -.04em; }
+.technical-programme-heading > p:last-child { max-width: 60ch; font-size: 15px; line-height: 1.7; }
+.design-canvas .design-content .technical-programme-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; width: 100%; margin: 32px 0 0; padding: 24px 0; border-block: 1px dashed currentColor; }
+.design-canvas .design-content .technical-programme-facts > div { min-width: 0; min-height: 0; }
+.technical-programme-facts dt { font-size: 11px; line-height: 1.6; margin-bottom: 12px; }
+.technical-programme-facts dd { margin: 0; font-size: 14px; line-height: 1.6; }
+.technical-programme-archive { margin: 28px 0 0; font-size: 12px; line-height: 1.7; }
+.technical-programme-archive a { padding-block: 0; }
+.design-canvas .design-content .nontechnical-page .nontechnical-intro { grid-template-columns: minmax(0, 1.4fr) minmax(180px, .6fr); min-height: 0; align-items: center; align-content: start; gap: 40px; padding: clamp(32px, 5vw, 80px); }
+.design-canvas .design-content .nontechnical-page .nontechnical-intro-copy { grid-column: auto; grid-row: auto; min-width: 0; width: 100%; }
+.design-canvas .design-content .nontechnical-page .nontechnical-art { grid-column: auto; grid-row: auto; width: 100%; height: auto; }
+.design-canvas .design-content .nontechnical-page .nontechnical-art > div { position: relative; inset: auto; height: auto; }
+.design-canvas .design-content .nontechnical-details { padding: clamp(32px, 5vw, 80px); }
+.design-canvas .design-content .nontechnical-details .event-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin: 28px 0 20px; padding-block: 24px; }
+.design-canvas .design-content .nontechnical-details .event-facts > div { min-width: 0; }
+.nontechnical-details .event-facts dt { font-size: 11px; line-height: 1.6; }
+.nontechnical-details .event-facts dd { font-size: 14px; line-height: 1.6; }
+@media (max-width: 767px) {
+  .design-canvas .design-content .technical-programme { padding: 36px 24px; }
+  .design-canvas .design-content .technical-programme-facts { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .design-canvas .design-content .nontechnical-page .nontechnical-intro { grid-template-columns: minmax(0, 1fr); gap: 28px; padding: 36px 24px; }
+  .design-canvas .design-content .nontechnical-page .nontechnical-art { padding: 12px 36px; }
+  .design-canvas .design-content .nontechnical-details { padding: 36px 24px; }
+  .design-canvas .design-content .nontechnical-details .event-facts { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+}
+.organizers-tech-week .organizers-tech-brand { display: block; width: min(100%, 420px); margin: 0; }
 .organizers-tech-week .organizers-tech-brand img { display: block; width: 100%; height: auto; }
 .bmtc-guide { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; grid-template-areas: 'symbol copy action'; gap: 28px; align-items: center; margin-top: 40px; padding: 32px; border-left: 6px solid var(--orange); background: var(--cyan); color: var(--navy); }
 .bmtc-guide-symbol { grid-area: symbol; display: grid; place-items: center; width: 56px; height: 56px; background: var(--navy); color: var(--cyan); font-size: 32px; }

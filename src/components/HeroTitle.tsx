@@ -219,7 +219,7 @@ export function HeroTitle({ variant }: { variant: 'desktop' | 'mobile' }) {
   return <div ref={ref} className="hero-masthead" data-motion-active={active}
     data-arriving="true"
     data-node-id={mobile ? '1169:523' : '860:5000'} data-name="Masthead / Cloud and type">
-    <p className="hero-title-kicker" data-node-id={mobile ? '1169:524' : '860:5004'}>FOR THE NEXT WAVE OF BUILDERS.</p>
+    <p className="hero-title-kicker" data-node-id={mobile ? '1169:524' : '860:5004'}>5 NOVEMBER 2026 / BENGALURU</p>
     <div className="hero-title-stage">
       <h1 className="hero-title-display" aria-label="AWS Student Community Day Bengaluru" data-node-id={mobile ? '1169:525' : undefined}>
         <span className="hero-title-first-row" data-node-id={mobile ? undefined : '860:5001'}>
@@ -235,7 +235,7 @@ export function HeroTitle({ variant }: { variant: 'desktop' | 'mobile' }) {
         </span>
       </h1>
       <div className="hero-title-note" data-node-id={mobile ? '1169:526' : '860:5003'}>
-        <div data-node-id={mobile ? undefined : '860:5005'}><p>A little curiosity.</p><p>A world of possibility.</p></div>
+        <div data-node-id={mobile ? undefined : '860:5005'}><p>REVA University.</p><p>Sessions &amp; workshops.</p></div>
         <div className="hero-title-stitch" data-node-id={mobile ? '1169:527' : '860:5007'}>
           <SignalStitch alt="" src={imgAccentSignalStitch} />
         </div>

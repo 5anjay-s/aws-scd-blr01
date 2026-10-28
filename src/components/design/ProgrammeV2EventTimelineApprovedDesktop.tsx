@@ -69,8 +69,8 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
               <p className="d-009dfc7898">UNFOLDED.</p>
             </div>
             <div className="d-db28f85545" data-node-id="860:5186">
-              <p className="d-2eae06771a">A little discovery. A lot of possibility.</p>
-              <p className="d-afb1b38150">Here’s how the day comes together.</p>
+              <p className="d-2eae06771a">Check-in, sessions and community time.</p>
+              <p className="d-afb1b38150">Plan your day at REVA University.</p>
             </div>
           </div>
           <ProgrammeSteps className="d-f8cabe3908" data-node-id="860:5187" data-name="Art / Programme steps">
@@ -93,7 +93,7 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
               <p className="d-8555103173 programme-step-number" data-node-id="860:5191">01</p>
             </div>
             <p className="d-b9e36edfd0" data-node-id="860:5194">
-              MAIN DAY / MANY POSSIBILITIES
+              5 NOVEMBER / MAIN DAY
             </p>
           </ProgrammeSteps>
         </div>
@@ -114,7 +114,7 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
             </p>
             <div className="d-4f6da4825c" data-node-id="860:5202">
               <p className="d-5069c0bf54">MAIN DAY.</p>
-              <p className="d-287d1f8085">MANY WAYS TO BUILD.</p>
+              <p className="d-287d1f8085">AT A GLANCE.</p>
             </div>
           </div>
           <div className="d-71a755c0b9" data-node-id="860:5203" data-name="Programme / Preview note">
@@ -166,7 +166,7 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
                   TECHNICAL
                 </p>
                 <p className="d-7b5e75c7c6" data-node-id="860:5230">
-                  AWS / AI / MongoDB
+                  AWS sessions & workshops
                 </p>
                 <SiteLink hoverTone="orange" buttonTone="navy" className="d-9486bf8b78" data-node-id="860:5231" data-name="Action / View details" href={"/technical"}>
                   <p className="d-7a0f1f17eb" data-node-id="I860:5231;5:30">
@@ -195,8 +195,8 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
               </div>
             </div>
             <div className="d-c9afc50cb5" data-node-id="860:5236">
-              <p className="d-ebed470a6c">TRACK CONTENT PREVIEW</p>
-              <p className="d-d43f566f28">Final formats, timings and running order to be announced.</p>
+              <p className="d-ebed470a6c">SESSION SCHEDULE</p>
+              <p className="d-d43f566f28">Session timings will be announced.</p>
             </div>
           </div>
         </div>

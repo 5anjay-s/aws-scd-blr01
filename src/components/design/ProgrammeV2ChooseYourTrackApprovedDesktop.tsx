@@ -27,7 +27,7 @@ function ArtworkTechnicalTrackPixelBrackets({ className }: { className: string }
 
 export default function ProgrammeV2ChooseYourTrackApprovedDesktop() {
   return (
-    <div className="d-3c9f0988a3" data-node-id="860:5104" data-name="Programme v2 / Choose your track — Approved / Desktop">
+    <div className="d-3c9f0988a3 track-picker" data-node-id="860:5104" data-name="Programme v2 / Choose your track — Approved / Desktop">
       <DitherDivider from="cyan" to="white" />
       <div className="d-065ea19f3d" data-node-id="860:5105" data-name="Choose your track / Masthead">
         <div className="d-22f3efd1f0" data-node-id="860:5106" data-name="Masthead / Title">
@@ -50,52 +50,52 @@ export default function ProgrammeV2ChooseYourTrackApprovedDesktop() {
           </div>
         </div>
       </div>
-      <div className="d-46702215f1" data-node-id="860:5116" data-name="Track route / 01 — Technical">
-        <div className="d-eb068680ac" data-node-id="860:5117" data-name="Route index / 01">
+      <div className="track-picker-grid">
+      <div className="track-picker-panel track-picker-panel--technical" data-node-id="860:5116" data-name="Track route / 01 — Technical">
+        <div className="track-picker-index" data-node-id="860:5117" data-name="Route index / 01">
           <p className="d-bf473a22c4" data-node-id="860:5118">
             01
           </p>
           <div className="d-0ce07179f9" data-node-id="860:5119">
-            <p className="d-8c06a6239d">START WITH</p>
-            <p className="d-7600d62c87">THE BUILD.</p>
+            <p className="d-8c06a6239d">/ TECHNICAL TRACK</p>
           </div>
         </div>
-        <div className="d-a04cc975a0" data-node-id="860:5120" data-name="Choose technical">
-          <div className="d-9eb9f99b54" data-node-id="860:5121" data-name="Technical / Copy">
-            <p className="d-e2eaaa8a2f" data-node-id="860:5122">
+        <div className="track-picker-card" data-node-id="860:5120" data-name="Choose technical">
+          <div className="track-picker-copy" data-node-id="860:5121" data-name="Technical / Copy">
+            <p className="track-picker-duplicate-label" data-node-id="860:5122">
               EXPLORE THE TECHNICAL TRACK
             </p>
-            <p className="d-5f3bea0a6e" data-node-id="860:5123">
+            <p className="track-picker-title" data-node-id="860:5123">
               TECHNICAL
             </p>
-            <p className="d-160b8bdb33" data-node-id="860:5124">{mainDay.technicalPreview}</p>
-            <SiteLink hoverTone="orange" buttonTone="navy" className="d-3ea4699496" data-node-id="860:5125" data-name="Action / Explore technical" href={"/technical"}>
+            <p className="track-picker-description" data-node-id="860:5124">{mainDay.technicalPreview}</p>
+            <SiteLink hoverTone="orange" buttonTone="navy" className="track-picker-action" data-node-id="860:5125" data-name="Action / Explore technical" href={"/technical"} aria-label="Explore the technical track">
               <p className="d-7a0f1f17eb" data-node-id="I860:5125;5:30">
-                Explore technical
+                Explore track
               </p>
               <div className="d-4725149c0e" data-node-id="I860:5125;15:32" data-name="Arrow">
                 <img alt="" className="d-511e8f31d4" src={imgArrow} />
               </div>
             </SiteLink>
           </div>
-          <ArtworkTechnicalTrackPixelBrackets className="d-2b3bdbf669" />
+          <ArtworkTechnicalTrackPixelBrackets className="track-picker-artwork" />
         </div>
       </div>
-      <div className="d-46702215f1" data-node-id="860:5127" data-name="Track route / 02 — Non-technical">
-        <div className="d-f85e5baf3d" data-node-id="860:5128" data-name="Choose non-technical">
-          <ArtworkNonTechnicalTrackPixelQuotations className="d-2b3bdbf669" />
-          <div className="d-9eb9f99b54" data-node-id="860:5130" data-name="Non-technical / Copy">
-            <p className="d-e2eaaa8a2f" data-node-id="860:5131">
+      <div className="track-picker-panel track-picker-panel--nontechnical" data-node-id="860:5127" data-name="Track route / 02 — Non-technical">
+        <div className="track-picker-card" data-node-id="860:5128" data-name="Choose non-technical">
+          <ArtworkNonTechnicalTrackPixelQuotations className="track-picker-artwork" />
+          <div className="track-picker-copy" data-node-id="860:5130" data-name="Non-technical / Copy">
+            <p className="track-picker-duplicate-label" data-node-id="860:5131">
               EXPLORE THE NON-TECHNICAL TRACK
             </p>
-            <div className="d-3b1dd09c8a" data-node-id="860:5132">
+            <div className="track-picker-title" data-node-id="860:5132">
               <p className="d-58de503319">NON-</p>
               <p className="d-39cfb050ad">TECHNICAL</p>
             </div>
-            <p className="d-160b8bdb33" data-node-id="860:5133">{mainDay.nonTechnicalPreview}</p>
-            <SiteLink hoverTone="lime" buttonTone="navy" className="d-3ea4699496" data-node-id="860:5134" data-name="Action / Explore non-technical" href={"/non-technical"}>
+            <p className="track-picker-description" data-node-id="860:5133">{mainDay.nonTechnicalPreview}</p>
+            <SiteLink hoverTone="lime" buttonTone="navy" className="track-picker-action" data-node-id="860:5134" data-name="Action / Explore non-technical" href={"/non-technical"} aria-label="Explore the non-technical track">
               <p className="d-7a0f1f17eb" data-node-id="I860:5134;5:30">
-                Explore non-technical
+                Explore track
               </p>
               <div className="d-4725149c0e" data-node-id="I860:5134;15:32" data-name="Arrow">
                 <img alt="" className="d-511e8f31d4" src={imgArrow} />
@@ -103,15 +103,15 @@ export default function ProgrammeV2ChooseYourTrackApprovedDesktop() {
             </SiteLink>
           </div>
         </div>
-        <div className="d-eb068680ac" data-node-id="860:5135" data-name="Route index / 02">
+        <div className="track-picker-index" data-node-id="860:5135" data-name="Route index / 02">
           <p className="d-bf473a22c4" data-node-id="860:5136">
             02
           </p>
           <div className="d-cea314c430" data-node-id="860:5137">
-            <p className="d-8c06a6239d">START WITH</p>
-            <p className="d-7600d62c87">AN IDEA.</p>
+            <p className="d-8c06a6239d">/ NON-TECHNICAL TRACK</p>
           </div>
         </div>
+      </div>
       </div>
       <DitherDivider from="navy" to="lime" className="track-speakers-divider" />
     </div>

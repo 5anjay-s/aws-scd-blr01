@@ -122,8 +122,8 @@
   },
   {
     "file": "public/assets/1168-494-a5a4a.svg",
-    "component": "SpeakersApprovedDesktopAlignedMobile",
-    "variable": "imgApprovedDitheredQuotationMobileOpener",
+    "component": "SpeakerIntro",
+    "variable": "mobileQuotation",
     "bytes": 9561
   },
   {
@@ -728,8 +728,8 @@
   },
   {
     "file": "public/assets/860-5144-5a444.svg",
-    "component": "SpeakersV2IdeasWithAVoiceApprovedDesktop",
-    "variable": "imgSpeakersApprovedDitheredQuotation",
+    "component": "SpeakerIntro",
+    "variable": "desktopQuotation",
     "bytes": 5312
   },
   {

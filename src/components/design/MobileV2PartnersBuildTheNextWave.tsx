@@ -7,15 +7,15 @@ export default function MobileV2PartnersBuildTheNextWave() {
   return (
     <div className="d-b5b13ba448" data-node-id="866:8600" data-name="Mobile v2 / Partners — Build the next wave">
       <p className="d-b795ba67a4" data-node-id="866:8601">
-        THE NEXT WAVE STARTS WITH US.
+        PARTNER WITH AWS SCD BENGALURU
       </p>
       <div className="d-90e577fb9c" data-node-id="866:8602">
         <p className="d-63e7c83bf6">{`Let's make room`}</p>
         <p className="d-84bf8673ce">for more builders.</p>
       </div>
       <div className="d-8e39d94473" data-node-id="1171:589">
-        <p className="d-2a8bd1889a">Good company.</p>
-        <p className="d-2158fa6ddb">Greater possibility.</p>
+        <p className="d-2a8bd1889a">Support the event.</p>
+        <p className="d-2158fa6ddb">Meet the community.</p>
       </div>
       <p className="d-ff132c886e" data-node-id="866:8603">
         Support student builders through hands-on learning, shared ideas and a stronger community. Talk to the organisers about sponsoring the event.

@@ -11,6 +11,25 @@ export function EventStatus() {
   </div>;
 }
 
+function HackathonWinners() {
+  return <section className="impulse-winners" aria-labelledby="impulse-winners-title">
+    <p className="event-kicker">HACKATHON / RESULTS</p>
+    <h3 id="impulse-winners-title">{hackathon.name} winners.</h3>
+    <ol className="impulse-winners-list" role="list">
+      {hackathon.winners.map(winner => <li className="impulse-winner" data-place={winner.place} key={winner.place}>
+        <div className="impulse-winner-place">
+          <span className="event-kicker">{winner.label}</span>
+          <span className="impulse-winner-number" aria-hidden="true">0{winner.place}</span>
+        </div>
+        <h4>{winner.team}</h4>
+        <ul className="impulse-winner-members" aria-label={`${winner.team} team members`} role="list">
+          {winner.members.map(name => <li key={name}>{name}</li>)}
+        </ul>
+      </li>)}
+    </ol>
+  </section>;
+}
+
 export function HackathonSection({ compact = false }: { compact?: boolean }) {
   const completed = hasHackathonEnded();
   return <div className={`event-content pre-scd${compact ? ' pre-scd--compact' : ''}`}>
@@ -28,6 +47,7 @@ export function HackathonSection({ compact = false }: { compact?: boolean }) {
       </div>
       <div className="hackathon-workshop"><span className="event-kicker">{completed ? 'HACKATHON WORKSHOP / ELIGIBILITY' : 'FOR HACKATHON TEAMS'}</span><h4>ChatGPT workshop</h4><p>{completed ? hackathon.workshopArchive : hackathon.workshop}</p><p className="event-small">{completed ? hackathon.accessArchive : hackathon.access}</p>{completed ? <p className="event-small">Workshop access queries? <SiteLink href={`mailto:${event.email}`}>Contact the organisers ↗</SiteLink></p> : <p className="event-small">Workshop schedule and further instructions will be shared with registered teams.</p>}</div>
     </article>
+    <HackathonWinners />
   </div>;
 }
 
@@ -35,13 +55,13 @@ export function MainDayOverview() {
   return <div className="event-content event-paper">
     <p className="event-kicker">05 NOVEMBER / MAIN-DAY PROGRAMME</p>
     <h2 className="event-heading">Two tracks.<br /><span>One community.</span></h2>
-    <p className="event-lead">A day for students, developers, working professionals and anyone curious about what they can build next.</p>
+    <p className="event-lead">Open to students, developers, working professionals and anyone interested in learning about technology.</p>
     <div className="event-two-column">
-      <article><h2>01 / Technical</h2><p>{mainDay.technical}</p><p>{mainDay.openaiEligibility}</p><SiteLink href="/technical" className="event-text-link">Technical track ↗</SiteLink></article>
+      <article><h2>01 / Technical</h2><p>{mainDay.technical}</p><SiteLink href="/technical" className="event-text-link">Technical track ↗</SiteLink></article>
       <article><h2>02 / Non-technical</h2><p>{mainDay.nonTechnical}</p><SiteLink href="/non-technical" className="event-text-link">Non-technical track ↗</SiteLink></article>
     </div>
     <dl className="event-facts"><div><dt>CHECK-IN</dt><dd>{event.checkIn}</dd></div><div><dt>PROGRAMME</dt><dd>{event.programme}</dd></div><div><dt>INCLUDED</dt><dd>Food & refreshments</dd></div></dl>
-    <p className="event-small">Session timings, speakers and workshop seat requirements will be announced. Follow the official channels for updates.</p>
+    <p className="event-small">The detailed session schedule and any workshop seat requirements will be shared before the event.</p>
     <div className="event-actions"><SiteLink href="/registration" buttonTone="orange" className="event-action">Get your main-day ticket ↗</SiteLink><SiteLink href={event.calendar} className="event-text-link">Add to calendar ↗</SiteLink></div>
   </div>;
 }
@@ -66,7 +86,7 @@ export function VenueContent({ full = false }: { full?: boolean }) {
 
 export function PreviousSpeakers() {
   return <section className="event-content previous-speakers" aria-labelledby="previous-speakers-title">
-    <p className="event-kicker">PEOPLE WHO HAVE SHARED THEIR EXPERIENCE</p><h2 className="event-heading" id="previous-speakers-title">Previous<br /><span>speakers.</span></h2><p>From past community events. The SCD 2026 speaker lineup will be announced separately.</p>
+    <p className="event-kicker">PAST COMMUNITY EVENTS</p><h2 className="event-heading" id="previous-speakers-title">Previous<br /><span>speakers.</span></h2>
     <div className="previous-speakers-grid">{previousSpeakers.map(person => <article key={person.id}>
       <div className="previous-speaker-photo"><img src={person.photo} alt={person.name} style={{ objectPosition: person.photoPosition, transform: `scale(${person.photoScale ?? 1})` }} loading="lazy" /></div>
       <div className="previous-speaker-info"><img className="speaker-company" src={person.companyLogo} alt={person.company} loading="lazy" /><h3>{person.name}</h3><p>{person.role}</p>{person.background && <p className="event-small">{person.background}</p>}<SiteLink href={person.linkedin} className="event-text-link">LinkedIn ↗</SiteLink></div>
