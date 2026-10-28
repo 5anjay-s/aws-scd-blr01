@@ -127,7 +127,7 @@ export default function TechnicalMobile() {
           </div>
         </div>
       </div>
-      <HackathonSection compact />
+      <HackathonSection compact actionLabel="View Event ↗" showWinners />
       <div className="d-0f22abb004" data-node-id="874:9142" data-name="Technical / Preparation — Mobile">
         <p className="d-b795ba67a4" data-node-id="874:9143">
           BEFORE YOU JOIN

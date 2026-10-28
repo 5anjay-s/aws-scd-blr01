@@ -157,7 +157,7 @@ export default function TechnicalDesktop() {
           </div>
         </div>
       </div>
-      <HackathonSection compact />
+      <HackathonSection compact actionLabel="View Event ↗" showWinners />
       <div className="d-6075610caa" data-node-id="874:8955" data-name="Technical / Preparation — Desktop">
         <div className="d-20556b24a8" data-node-id="874:8956" data-name="Preparation / Invitation">
           <p className="d-d4cf649985" data-node-id="874:8957">

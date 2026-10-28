@@ -11,7 +11,7 @@ export function EventStatus() {
   </div>;
 }
 
-export function HackathonSection({ compact = false }: { compact?: boolean }) {
+export function HackathonSection({ compact = false, actionLabel, showWinners = false }: { compact?: boolean; actionLabel?: string; showWinners?: boolean }) {
   const completed = hasHackathonEnded();
   return <div className={`event-content pre-scd${compact ? ' pre-scd--compact' : ''}`}>
     <p className="event-kicker">{completed ? 'PRE-SCD / COMPLETED → MAIN DAY' : 'PRE-SCD → MAIN DAY'}</p>
@@ -23,11 +23,11 @@ export function HackathonSection({ compact = false }: { compact?: boolean }) {
     <article className="hackathon-poster" id="impulse">
       <div className="hackathon-title"><p className="event-kicker">{hackathon.type}</p><h3>{hackathon.name}</h3><p className="hackathon-tagline">{hackathon.tagline}</p>
         <p>{hackathon.dates} · 24 hours</p><p>{hackathon.venue}</p>
-        <SiteLink href={hackathon.url} buttonTone="navy" className="event-action">View Event ↗</SiteLink>
+        <SiteLink href={hackathon.url} buttonTone="navy" className="event-action">{actionLabel ?? (completed ? 'View IMPULSE details ↗' : 'Register for IMPULSE ↗')}</SiteLink>
         <p className="event-small">{completed ? 'IMPULSE registration is closed. Main-day SCD tickets are available separately.' : 'Separate registration from the main-day SCD ticket. Rules and participation details are on Luma.'}</p>
       </div>
       <div className="hackathon-workshop"><span className="event-kicker">{completed ? 'HACKATHON WORKSHOP / ELIGIBILITY' : 'FOR HACKATHON TEAMS'}</span><h4>ChatGPT workshop</h4><p>{completed ? hackathon.workshopArchive : hackathon.workshop}</p><p className="event-small">{completed ? hackathon.accessArchive : hackathon.access}</p>{completed ? <p className="event-small">Workshop access queries? <SiteLink href={`mailto:${event.email}`}>Contact the organisers ↗</SiteLink></p> : <p className="event-small">Workshop schedule and further instructions will be shared with registered teams.</p>}</div>
-      {completed && <div className="hackathon-winners"><span className="event-kicker">HACKATHON RESULTS</span><h4>IMPULSE ’26 winners</h4>
+      {showWinners && completed && <div className="hackathon-winners"><span className="event-kicker">HACKATHON RESULTS</span><h4>IMPULSE ’26 winners</h4>
         <ol className="winners-grid">{hackathon.winners.map((winner, index) => <li key={winner.team} data-place={index + 1}><span className="event-kicker">{winner.place}</span><h5>{winner.team}</h5><ul>{winner.members.map(member => <li key={member}>{member}</li>)}</ul></li>)}</ol>
       </div>}
     </article>
