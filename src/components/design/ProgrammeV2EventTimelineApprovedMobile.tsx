@@ -59,8 +59,8 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
               <p className="d-2682a555d8">UNFOLDED.</p>
             </div>
             <div className="d-e108d164a0" data-node-id="866:8487">
-              <p className="d-06214b5362">Check-in, sessions and community time.</p>
-              <p className="d-0479ea4484">Plan your day at REVA University.</p>
+              <p className="d-06214b5362">A little discovery. A lot of possibility.</p>
+              <p className="d-0479ea4484">Here’s how the day comes together.</p>
             </div>
           </div>
           <ProgrammeSteps className="d-dc390b63a9" data-node-id="866:8488" data-name="Art / Programme steps">
@@ -83,7 +83,7 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
               <p className="d-0ec15d1280 programme-step-number" data-node-id="866:8492">01</p>
             </div>
             <p className="d-9fc2a563fc" data-node-id="866:8495">
-              5 NOVEMBER / MAIN DAY
+              ONE DAY / MANY POSSIBILITIES
             </p>
           </ProgrammeSteps>
         </div>
@@ -103,9 +103,9 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
               THE PROGRAMME
             </p>
             <div className="d-d9d082fa8a" data-node-id="866:8503">
-              <p className="d-8305ee571e">MAIN DAY.</p>
-              <p className="d-8305ee571e">AT A</p>
-              <p className="d-e358ca9dbc">GLANCE.</p>
+              <p className="d-8305ee571e">ONE DAY.</p>
+              <p className="d-8305ee571e">MANY WAYS</p>
+              <p className="d-e358ca9dbc">TO BUILD.</p>
             </div>
           </div>
           <div className="d-9973ee015d" data-node-id="866:8504" data-name="Programme / Preview note">
@@ -147,7 +147,7 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
                   TECHNICAL
                 </p>
                 <p className="d-902df9c1ec" data-node-id="866:8526">
-                  AWS sessions & workshops
+                  Cloud / AI / Security
                 </p>
                 <SiteLink hoverTone="orange" buttonTone="navy" className="d-4ec8c19304" data-node-id="866:8527" data-name="Action / View details" href={"/technical"}>
                   <p className="d-7669a2de49" data-node-id="I866:8527;5:30">
@@ -163,7 +163,7 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
                   NON-TECHNICAL
                 </p>
                 <p className="d-902df9c1ec" data-node-id="866:8530">
-                  Main-day sessions / Details soon
+                  Startups / Product / Leadership
                 </p>
                 <SiteLink hoverTone="lime" buttonTone="navy" className="d-4ec8c19304" data-node-id="866:8531" data-name="Action / View details" href={"/non-technical"}>
                   <p className="d-7669a2de49" data-node-id="I866:8531;5:30">
@@ -176,8 +176,8 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
               </div>
             </div>
             <div className="d-b82fa5d8d7" data-node-id="866:8532">
-              <p className="d-ebed470a6c">SESSION SCHEDULE</p>
-              <p className="d-d43f566f28">Session timings will be announced.</p>
+              <p className="d-ebed470a6c">TRACK CONTENT PREVIEW</p>
+              <p className="d-d43f566f28">Final formats, timings and running order to be announced.</p>
             </div>
           </div>
         </div>

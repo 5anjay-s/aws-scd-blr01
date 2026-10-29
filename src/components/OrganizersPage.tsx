@@ -1,6 +1,5 @@
 import type { CSSProperties } from 'react';
-import { PreviousSpeakers } from './EventContent';
-import { event as scdEvent } from '../content/event';
+import { PreviousSpeakers } from './PreviousSpeakers';
 import { communityChannels, communityTotal, techWeek } from '../content/organisers';
 import { HomeNavigation } from './HomeNavigation';
 import { SiteLink } from './SiteLink';
@@ -178,7 +177,7 @@ export function OrganizersPage({ mobile = false }: { mobile?: boolean }) {
       </div>
       <div className="organizers-contact-wall" data-node-id={node('1851:3888', '1851:4005')}>
         <div className="organizers-contact-heading"><h2><ArcadeText>FIND YOUR PEOPLE.</ArcadeText></h2><p className="organizers-eyebrow">OUR COMMUNITY CHANNELS ↓</p></div>
-        <p className="organizers-email">Questions about the event? <SiteLink href={`mailto:${scdEvent.email}`}>{scdEvent.email}</SiteLink></p>
+        <p className="organizers-email">Questions about the event? <SiteLink href="mailto:connect.aws.sbg.ru@gmail.com">connect.aws.sbg.ru@gmail.com</SiteLink></p>
         <div className="organizers-contacts" data-node-id={node('1851:3892', '1851:4009')}>
           {channels.map((channel, index) => <SiteLink key={channel.key} href={organizerLinks[channel.key]} className="organizers-contact"
             style={{ '--contact-paper': `url("${art.imgContactPaper.src}")`, '--contact-ratio': art.imgContactPaper.width / art.imgContactPaper.height,

@@ -1,0 +1,26 @@
+/* Winners appear only in the technical track. */
+.design-content .impulse-winners { width: 100%; padding: clamp(32px, 5vw, 64px) clamp(24px, 3.34vw, 48px); margin: 0; background: var(--navy); color: var(--white); }
+.impulse-winners .event-kicker { display: block; font-size: 12px; line-height: 1.6; letter-spacing: .06em; margin-bottom: 14px; }
+
+.impulse-winners { margin-top: 48px; }
+.impulse-winners > .event-kicker { color: #22d3ee; }
+.impulse-winners > h3 { font-size: clamp(26px, 3vw, 42px); font-weight: 500; line-height: 1.2; letter-spacing: -.04em; margin-bottom: 28px; }
+.impulse-winners-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; list-style: none; padding: 0; margin: 0; }
+.impulse-winner { --winner-accent: #a78bfa; min-width: 0; padding: clamp(20px, 2.4vw, 32px); background: #11192b; border: 1px solid #f8fafc33; border-top: 4px solid var(--winner-accent); }
+.impulse-winner[data-place='1'] { --winner-accent: #ff9900; }
+.impulse-winner[data-place='2'] { --winner-accent: #22d3ee; }
+.impulse-winner-place { display: flex; align-items: center; justify-content: space-between; gap: 16px; color: var(--winner-accent); margin-bottom: 24px; }
+.impulse-winner-place .event-kicker { margin-bottom: 0; text-transform: uppercase; }
+.impulse-winner-number { font-family: 'Pixelify Sans', monospace; font-size: 48px; line-height: 1; }
+.impulse-winner h4 { font-size: clamp(21px, 2vw, 26px); font-weight: 500; line-height: 1.3; min-height: 2.6em; margin: 0 0 24px; overflow-wrap: anywhere; }
+.impulse-winner-members { display: grid; gap: 8px; list-style: none; padding: 20px 0 0; margin: 0; border-top: 1px dashed #f8fafc33; }
+.impulse-winner-members li { font-size: 14px; line-height: 1.6; overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  .impulse-winners-list { grid-template-columns: 1fr; gap: 16px; }
+}
+@media (max-width: 700px) {
+  .impulse-winner h4 { min-height: 0; margin-bottom: 20px; }
+}
+@media (max-width: 700px) {
+  .impulse-winner-place { margin-bottom: 20px; }
+}

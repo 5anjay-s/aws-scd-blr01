@@ -43,6 +43,12 @@ export function HomeNavigation({ mobile = false }: { mobile?: boolean }) {
             <span className="d-95907800fd">{` Community`}</span>
           </p>
         </SiteLink>
+        <SiteLink className="d-36e152c572" href="/organisers">
+          <p>
+            <span className="d-d0d8823c60">05</span>
+            <span className="d-95907800fd">{` Organisers`}</span>
+          </p>
+        </SiteLink>
       </div>
       <RegistrationButton />
     </SiteHeader>

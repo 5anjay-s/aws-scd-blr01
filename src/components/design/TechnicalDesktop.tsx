@@ -1,5 +1,4 @@
-import { TechnicalProgramme } from "../TechnicalProgramme";
-import { mainDay } from "../../content/event";
+import { ImpulseWinners } from '../ImpulseWinners';
 import { SiteBrand } from "../SiteBrand";
 import { TrackArtwork } from "../TrackArtwork";
 import { SiteHeader } from "../SiteHeader";
@@ -11,6 +10,7 @@ import { siteLinks } from "../../site-config";
 // Source: Figma 00/ Final, node 874:8915.
 const imgScdTechnicalCompileBrackets = "/assets/874-8915-7e810.svg";
 const imgArrow1 = "/assets/865-7675-207b4.svg";
+const imgImpulseHackathon = "/assets/hackathon-image.svg";
 const imgSectionDividerPreparationToContinue = "/assets/874-8915-fb0a8.svg";
 const imgAccentPixelStitch = "/assets/874-8915-7bab5.svg";
 const imgApprovedWovenLinks = "/assets/1265-3035-453bd.svg";
@@ -49,34 +49,150 @@ export default function TechnicalDesktop() {
       <div className="d-5782fa7dda" data-node-id="874:8935" data-name="Technical / Hero — Desktop">
         <div className="d-4de67d6c92" data-node-id="874:8936" data-name="Hero / Index">
           <SiteLink className="d-2669efa126" data-node-id="874:8937" href={"/tracks"}>
-            ← ALL TRACKS
+            ← ALL EXPERIENCES
           </SiteLink>
           <p className="d-a7403a2b46" data-node-id="874:8938">
             01 / TECHNICAL — 5 NOVEMBER 2026
           </p>
         </div>
         <div className="d-24afe222d2" data-node-id="874:8939" role="heading" aria-level={1}>
-          <p className="d-6e5523dbc6">TECHNICAL</p>
-          <p className="d-2fc83ac3f5">TRACK.</p>
+          <p className="d-6e5523dbc6">IDEAS INTO</p>
+          <p className="d-2fc83ac3f5">ACTION.</p>
         </div>
         <div className="d-1e75c12a0f" data-node-id="874:8940" data-name="Hero / Compile and introduction">
           <ScdTechnicalCompileBrackets className="d-ed1e382ab8" />
           <div className="d-c99acbbd56" data-node-id="874:8942" data-name="Hero / Technical introduction">
+            <div className="d-a15186a4fc" data-node-id="874:8943">
+              <p className="d-2a8bd1889a">CURIOUS MINDS.</p>
+              <p className="d-2158fa6ddb">REAL POSSIBILITIES.</p>
+            </div>
             <p className="d-64e37b773b" data-node-id="874:8944">
-              {mainDay.technicalPreview}
+              Explore cloud, AI, security, and software development, including AWS technical sessions and hands-on workshops on the main day.
             </p>
-            <SiteLink buttonTone="orange" className="d-44f977d6f9" data-node-id="874:8945" data-name="Action / Get your ticket" href={"/registration"}>
-              <p className="d-cf01328ee8" data-node-id="I874:8945;5:30">
-                Get your ticket
-              </p>
-              <div className="d-4725149c0e" data-node-id="I874:8945;15:32" data-name="Arrow">
+            <div className="d-1c5e80253f" data-node-id="874:8946">
+              <p className="d-ebed470a6c">SESSIONS + SPEAKERS + TIMINGS</p>
+              <p className="d-d43f566f28">TO BE ANNOUNCED</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="d-a566f726bd" data-node-id="874:8947" data-name="Technical / Programme — Desktop">
+        <div className="d-64b69ec810" data-node-id="874:8948" data-name="Programme / Introduction">
+          <div className="d-9bc9950760" data-node-id="874:8949">
+            <p className="d-5069c0bf54">TWO WAYS</p>
+            <p className="d-287d1f8085">TO GO DEEPER.</p>
+          </div>
+        </div>
+        <div className="d-f7e6db2c74" data-node-id="874:8951" data-name="Programme / Three theme fields">
+          <div className="d-0c4da33e5c" data-node-id="874:8952" data-name="SCD / Technical / Theme panel / Desktop">
+            <p className="d-888b47fa83" data-node-id="I874:8952;667:2541">
+              01 / CLOUD
+            </p>
+            <p className="d-94d5a91ee2" data-node-id="I874:8952;667:2542">
+              IMPULSE ’26
+            </p>
+            <div className="impulse-art" data-name="IMPULSE / Hackathon artwork">
+              <img alt="Illustration of participants collaborating at laptops during the IMPULSE ’26 hackathon" src={imgImpulseHackathon} />
+            </div>
+            <div className="d-d5153bf1ae" data-node-id="I874:8952;667:2544">
+              <p className="d-edce8460ce">National-Level</p>
+              <p className="d-e64f4edba4">24-Hour Hackathon</p>
+            </div>
+            <div className="d-c4064b08a6" data-node-id="I874:8952;667:2543" data-name="Theme / Rule" />
+            <p className="d-b2638fb3c2">
+              IMPULSE took place on 23–24 October 2026. View the event details on Luma.
+            </p>
+            <div className="d-3133ffc36f" data-node-id="I874:8952;667:2545">
+              <p className="d-ebed470a6c">VENUE</p>
+              <p className="d-d43f566f28 impulse-strong">Rangasthala, REVA University, Bengaluru.</p>
+            </div>
+            <div className="d-3133ffc36f" data-node-id="I874:8952;667:2546">
+              <p className="d-ebed470a6c">DATES</p>
+              <p className="d-d43f566f28 impulse-strong">23-24 OCTOBER 2026 · 24 HOURS</p>
+            </div>
+            <SiteLink hoverTone="violet" buttonTone="orange" className="d-44f977d6f9" data-name="Action / View event" href={siteLinks.hackathonLuma}>
+              <p className="d-cf01328ee8">View event</p>
+              <div className="d-4725149c0e" data-name="Arrow">
                 <img alt="" className="d-511e8f31d4" src={imgArrow1} />
               </div>
             </SiteLink>
           </div>
+          <div className="d-1ce5ee9503" data-node-id="874:8954" data-name="Theme / BUILD">
+            <p className="d-2a82521e63" data-node-id="I874:8954;667:2541">
+              02 / AI
+            </p>
+            <div className="d-01b8dd4d38" data-node-id="I874:8954;667:2544">
+              <p className="d-edce8460ce">ChatGPT workshop for</p>
+              <p className="d-e64f4edba4">hackathon participants</p>
+            </div>
+            <div className="d-fa05bef8aa" data-node-id="I874:8954;667:2543" data-name="Theme / Rule" />
+            <p className="d-d53caec9f0" data-node-id="I874:8954;667:2545">
+              The workshop was for IMPULSE team members, with one participant per team due to venue capacity. Eligible attendees received one month of ChatGPT Plus.
+            </p>
+            <div className="ai-cutoff">
+              <p className="ai-cutoff-label">REGISTRATION CUTOFF</p>
+              <p className="ai-cutoff-value">21 OCTOBER 2026 · 10:00 AM IST</p>
+              <p className="ai-cutoff-note">Before the cutoff: Plus access before the hackathon. On or after: access after.</p>
+            </div>
+            <div className="d-f056d2414f" data-node-id="I874:8954;667:2546">
+              <p className="d-ebed470a6c">DATE</p>
+              <p className="d-d43f566f28 ai-date-strong">23 OCTOBER 2026 · HACKATHON</p>
+            </div>
+          </div>
         </div>
       </div>
-      <TechnicalProgramme />
+      <ImpulseWinners />
+      <div className="d-6075610caa" data-node-id="874:8955" data-name="Technical / Preparation — Desktop">
+        <div className="d-20556b24a8" data-node-id="874:8956" data-name="Preparation / Invitation">
+          <p className="d-d4cf649985" data-node-id="874:8957">
+            BEFORE YOU JOIN
+          </p>
+          <div className="d-7022604942" data-node-id="874:8958">
+            <p className="d-5069c0bf54">BRING YOUR</p>
+            <p className="d-287d1f8085">NEXT QUESTION.</p>
+          </div>
+          <p className="d-c501c3aa8c" data-node-id="874:8959">
+            Curious about cloud, AI or building with new tools? IMPULSE ’26 is the 24-hour pre-SCD hackathon — separate registration from your SCD ticket.
+          </p>
+        </div>
+        <div className="d-95644d43f8" data-node-id="874:8960" data-name="Preparation / Details">
+          <div className="d-3cb220a981" data-node-id="874:8961" data-name="Preparation / EXPERIENCE LEVEL">
+            <div className="d-f8b122a797" data-node-id="874:8962" data-name="Rule" />
+            <p className="d-b83d2d963b" data-node-id="874:8963">
+              MAIN-DAY EVENT
+            </p>
+            <p className="d-73728e76c4" data-node-id="874:8964">
+              AWS SCD BLR · 5 NOV 2026
+            </p>
+          </div>
+          <div className="d-3cb220a981" data-node-id="874:8965" data-name="Preparation / EQUIPMENT + SETUP">
+            <div className="d-f8b122a797" data-node-id="874:8966" data-name="Rule" />
+            <p className="d-b83d2d963b" data-node-id="874:8967">
+              MAIN-DAY VENUE
+            </p>
+            <p className="d-73728e76c4" data-node-id="874:8968">
+              REVA UNIVERSITY CAMPUS, BENGALURU
+            </p>
+          </div>
+          <div className="d-3cb220a981" data-node-id="874:8969" data-name="Preparation / SESSION ACCESS">
+            <div className="d-f8b122a797" data-node-id="874:8970" data-name="Rule" />
+            <p className="d-b83d2d963b" data-node-id="874:8971">
+              PREREQUISITES
+            </p>
+            <p className="d-73728e76c4" data-node-id="874:8972">
+              LAPTOP, CHARGER & VALID STUDENT ID
+            </p>
+          </div>
+          <SiteLink buttonTone="orange" className="d-44f977d6f9" data-node-id="874:8973" data-name="Action / Get Main-Day Ticket" href={siteLinks.konfhub}>
+            <p className="d-cf01328ee8" data-node-id="I874:8973;5:30">
+              Get Main-Day Ticket
+            </p>
+            <div className="d-4725149c0e" data-node-id="I874:8973;15:32" data-name="Arrow">
+              <img alt="" className="d-511e8f31d4" src={imgArrow1} />
+            </div>
+          </SiteLink>
+        </div>
+      </div>
       <div className="d-2c32abdc78 pixel-border pixel-border-paper-navy" data-node-id="1413:622" data-name="Section divider / Preparation to continue">
         <img alt="" className="d-511e8f31d4" src={imgSectionDividerPreparationToContinue} />
       </div>
@@ -86,8 +202,8 @@ export default function TechnicalDesktop() {
             <SignalStitch alt="" className="d-511e8f31d4" src={imgAccentPixelStitch} />
           </div>
           <div className="d-1089330ab3" data-node-id="874:8981">
-            <p className="d-9c7634671c">KEEP</p>
-            <p className="d-b593672e9c">EXPLORING.</p>
+            <p className="d-9c7634671c">A DIFFERENT</p>
+            <p className="d-b593672e9c">KIND OF SPARK.</p>
           </div>
         </div>
         <div className="d-6c497b55c2" data-node-id="874:8982" data-name="Continue / Actions">

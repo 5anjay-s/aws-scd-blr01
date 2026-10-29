@@ -93,26 +93,26 @@ export default function RegistrationDesktop() {
       <div className="registration-choices">
         <div className="d-a8f0c92515 registration-admission" data-node-id="1367:669" data-name="Registration / Admission desk">
           <p className="d-09dae26e09" data-node-id="1367:670" role="heading" aria-level={1}>
-            MAIN DAY / REGISTRATION
+            REGISTRATION / THE NEXT CHAPTER
           </p>
           <p className="d-3edd08d552" data-node-id="1367:671">
-            YOUR WAY
+            YOU’RE
           </p>
           <p className="d-693e676d46" data-node-id="1367:672">
-            IN.
+            EARLY.
           </p>
           <p className="d-b4f42ccefc" data-node-id="1367:673">
-            Two steps. One community.
+            That’s a good thing.
           </p>
           <div className="d-a69b48af18" data-node-id="1367:674" data-name="Registration / Current status">
             <div className="d-090bbee435" data-node-id="1367:675">
               <p className="d-24de9bb201">Registration is open for 5 November 2026</p>
               <p className="d-24de9bb201">at REVA University, Bengaluru.</p>
-              <p className="d-976352e9f0">Entry is confirmed only with an official KonfHub ticket.</p>
+              <p className="d-976352e9f0">The next chapter is taking shape.</p>
             </div>
             <SiteLink buttonTone="orange" className="d-86b35f0797" data-node-id="1367:676" data-name="Button / Flat" href={siteLinks.konfhub}>
               <p className="d-cf01328ee8" data-node-id="I1367:676;5:30">
-                Get tickets on KonfHub
+                Register Now
               </p>
               <div className="d-4725149c0e" data-node-id="I1367:676;15:32" data-name="Arrow">
                 <img alt="" className="d-511e8f31d4" src={imgArrow} />
@@ -188,10 +188,10 @@ export default function RegistrationDesktop() {
         </div>
         <div className="d-8aac1916c9" data-node-id="1367:688" data-name="Status / REGISTRATION">
           <p className="d-67ca39aa4a" data-node-id="1367:689">
-            CHECK-IN
+            REGISTRATION
           </p>
           <p className="d-51b0f0d5e7" data-node-id="1367:690">
-            8:00 AM IST
+            Open now
           </p>
         </div>
       </div>
@@ -200,21 +200,21 @@ export default function RegistrationDesktop() {
       <div className="d-0ad43c5865" data-node-id="1367:725" data-name="Registration / Before the details arrive">
         <div className="d-552c1c6224" data-node-id="1367:726" data-name="Section index">
           <p className="d-c6a4bf57de" data-node-id="1367:727">
-            PLAN YOUR VISIT
+            WHILE YOU’RE HERE
           </p>
           <p className="d-1e0f2a177d" data-node-id="1367:728">
-            DATE, VENUE & REGISTRATION.
+            A LITTLE CURIOSITY GOES A LONG WAY.
           </p>
         </div>
         <div className="d-00c843dfdd" data-node-id="1367:729" data-name="Registration / Useful next steps">
           <div className="d-ebd5dfbbe6" data-node-id="1367:730" data-name="Registration / Invitation">
             <div className="d-467d6f10a6" data-node-id="1367:731">
-              <p className="d-8854808fbb">Ready for</p>
-              <p className="d-58a8484bb4">5 November?</p>
+              <p className="d-8854808fbb">Make a little</p>
+              <p className="d-58a8484bb4">room for possibility.</p>
             </div>
             <div className="d-e01c4d53d6" data-node-id="1367:732">
-              <p className="d-2eae06771a">Check the programme and plan your visit</p>
-              <p className="d-afb1b38150">to REVA University.</p>
+              <p className="d-2eae06771a">Explore the programme, meet the community</p>
+              <p className="d-afb1b38150">and see what we are building together.</p>
             </div>
             <SiteLink hoverTone="orange" buttonTone="navy" className="d-733305cc49" data-node-id="1367:733" data-name="Button / Flat" href={"/#timeline"}>
               <p className="d-7a0f1f17eb" data-node-id="I1367:733;5:30">
@@ -252,16 +252,16 @@ export default function RegistrationDesktop() {
                 </p>
               </div>
             </div>
-            <div className="d-f7f0034703" data-node-id="1367:745" data-name="Registration / Your main-day ticket">
+            <div className="d-f7f0034703" data-node-id="1367:745" data-name="Registration / Your first step">
               <p className="d-6805fbd7b7" data-node-id="1367:746">
                 03
               </p>
-              <div className="d-4efad2a343" data-node-id="1367:747" data-name="Registration / Your main-day ticket copy">
+              <div className="d-4efad2a343" data-node-id="1367:747" data-name="Registration / Your first step copy">
                 <p className="d-e5507e86e8" data-node-id="1367:748">
-                  Your main-day ticket
+                  Your first step
                 </p>
                 <p className="d-0ae5befe23" data-node-id="1367:749">
-                  Your SCD ticket is for 5 November at REVA University. IMPULSE concluded on 23–24 October.
+                  Bring your questions. We’ll build from there.
                 </p>
               </div>
             </div>

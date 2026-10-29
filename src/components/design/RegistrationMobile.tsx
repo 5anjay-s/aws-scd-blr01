@@ -72,26 +72,26 @@ export default function RegistrationMobile() {
       <div className="registration-choices">
         <div className="d-db1f158724 registration-admission" data-node-id="1367:793" data-name="Registration / Mobile admission desk">
           <p className="d-11ea5ff482" data-node-id="1367:794">
-            MAIN DAY / REGISTRATION
+            REGISTRATION / THE NEXT CHAPTER
           </p>
           <div className="d-604c817326" data-node-id="1367:795" data-name="Registration / You’re early">
             <div className="d-c08309e7a2" data-node-id="1367:796" role="heading" aria-level={1}>
-              <p className="d-90f3a58a30">YOUR WAY</p>
-              <p className="d-1d948fc99e">IN.</p>
+              <p className="d-90f3a58a30">YOU’RE</p>
+              <p className="d-1d948fc99e">EARLY.</p>
             </div>
           </div>
           <div className="d-c197716cad" data-node-id="1367:797" data-name="Registration / Early invitation">
             <p className="d-e17191e08b" data-node-id="1367:798">
-              Two steps. One community.
+              That’s a good thing.
             </p>
             <div className="d-cef894190b" data-node-id="1367:799">
               <p className="d-143d1e5b1d">Registration is open for 5 November 2026</p>
               <p className="d-143d1e5b1d">at REVA University, Bengaluru.</p>
-              <p className="d-e894d19a93">Entry is confirmed only with an official KonfHub ticket.</p>
+              <p className="d-e894d19a93">The next chapter is taking shape.</p>
             </div>
             <SiteLink buttonTone="orange" className="d-d4e2f56eff" data-node-id="1367:800" data-name="Registration / Back to exploring" href={siteLinks.konfhub}>
               <p className="d-ad21a68151" data-node-id="I1367:800;5:30">
-                Get tickets on KonfHub
+                Register Now
               </p>
               <div className="d-4725149c0e" data-node-id="I1367:800;15:32" data-name="Arrow">
                 <img alt="" className="d-511e8f31d4" src={imgArrow} />
@@ -169,10 +169,10 @@ export default function RegistrationMobile() {
         </div>
         <div className="d-43f50fc4ff" data-node-id="1367:813" data-name="Status / REGISTRATION">
           <p className="d-6e37333e29" data-node-id="1367:814">
-            CHECK-IN
+            REGISTRATION
           </p>
           <p className="d-5b27af2011" data-node-id="1367:815">
-            8:00 AM IST
+            Open now
           </p>
         </div>
       </div>
@@ -181,19 +181,20 @@ export default function RegistrationMobile() {
       <div className="d-e6fc559f21" data-node-id="1367:847" data-name="Registration / Before the details arrive — Mobile">
         <div className="d-c589fabaed" data-node-id="1367:848" data-name="Registration / Section index">
           <p className="d-5f1f28fe2d" data-node-id="1367:849">
-            PLAN YOUR VISIT
+            WHILE YOU’RE HERE
           </p>
           <p className="d-e1908a6b66" data-node-id="1367:850">
-            DATE, VENUE & REGISTRATION.
+            A LITTLE CURIOSITY GOES A LONG WAY.
           </p>
         </div>
         <div className="d-2055d7bc3c" data-node-id="1367:851" data-name="Registration / Invitation">
           <div className="d-d0158f7a9a" data-node-id="1367:852">
-            <p className="d-6ee5fa6884">Ready for</p>
-            <p className="d-f42ae1416f">5 November?</p>
+            <p className="d-6ee5fa6884">Make a little</p>
+            <p className="d-6ee5fa6884">room for</p>
+            <p className="d-f42ae1416f">possibility.</p>
           </div>
           <p className="d-18ad0cf623" data-node-id="1367:853">
-            Check the programme and plan your visit to REVA University.
+            Explore the programme, meet the community and see what we are building together.
           </p>
           <SiteLink hoverTone="orange" buttonTone="navy" className="d-49c8885528" data-node-id="1367:854" data-name="Registration / Explore the programme" href="/#timeline">
             <p className="d-7669a2de49" data-node-id="I1367:854;5:30">
@@ -231,16 +232,16 @@ export default function RegistrationMobile() {
               </p>
             </div>
           </div>
-          <div className="d-1a9cf51344" data-node-id="1367:866" data-name="Registration / Your main-day ticket">
+          <div className="d-1a9cf51344" data-node-id="1367:866" data-name="Registration / Your first step">
             <p className="d-69a2c1c4a5" data-node-id="1367:867">
               03
             </p>
-            <div className="d-06b8e507a5" data-node-id="1367:868" data-name="Registration / Your main-day ticket copy">
+            <div className="d-06b8e507a5" data-node-id="1367:868" data-name="Registration / Your first step copy">
               <p className="d-2a04321fae" data-node-id="1367:869">
-                Your main-day ticket
+                Your first step
               </p>
               <p className="d-c37f273d0b" data-node-id="1367:870">
-                Your SCD ticket is for 5 November at REVA University. IMPULSE concluded on 23–24 October.
+                Bring your questions. We’ll build from there.
               </p>
             </div>
           </div>

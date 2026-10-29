@@ -1,0 +1,32 @@
+/* Updated profiles occupy the original asymmetric portrait and caption slots. */
+.design-content .updated-speaker-portrait > div { inset: 0; width: 100%; height: 100%; }
+.design-content .updated-speaker-portrait .updated-speaker-photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: grayscale(1); transition: filter 240ms ease; }
+.design-content .updated-speaker-portrait--ayush .updated-speaker-photo { position: absolute; top: -29%; left: 50%; width: auto; max-width: none; height: 152%; transform: translateX(-50%); object-fit: contain; }
+.design-content .updated-speaker-portrait:is(:hover, :focus-within) .updated-speaker-photo { filter: grayscale(0); }
+.design-content .updated-speaker-caption { gap: 8px; }
+.design-content .updated-speaker-caption :is(p, div) { max-width: 100%; }
+.design-content .updated-speaker-caption .updated-speaker-name { font: 400 clamp(24px, 2.222cqw, 32px)/1.15 'Geist Mono', monospace; overflow-wrap: normal; }
+.updated-speaker-link { color: inherit; text-decoration: none; }
+.updated-speaker-link:hover { text-decoration: underline; text-underline-offset: .15em; }
+.updated-speaker-link:focus-visible { outline: 2px solid var(--navy); outline-offset: 4px; }
+.design-content .updated-speaker-metadata, .design-content .updated-speaker-facts { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; width: 100%; }
+.design-content .updated-speaker-role { font: 400 16px/1.5 'Geist Mono', monospace; }
+.design-content .updated-speaker-background { font: 400 13px/1.5 'Geist Mono', monospace; }
+.design-content .updated-speaker-credential { width: fit-content; border: 1px solid currentColor; padding: 4px 6px; font: 400 10px/1.4 'Geist Mono', monospace; }
+.design-content .updated-speaker-affiliation { display: flex; align-items: center; flex: 0 0 40px; width: 100%; height: 40px; min-height: 40px; }
+.design-content .updated-speaker-affiliation img { display: block; flex: 0 0 auto; object-fit: contain; object-position: left center; max-width: 100%; }
+.updated-speaker-affiliation--nvidia img { width: 128px; height: 26px; }
+.updated-speaker-affiliation--aws img { width: 68px; height: 40px; }
+.mobile-layout .design-content .updated-speaker-caption { flex: 1; }
+.mobile-layout .design-content .updated-speaker-card .updated-speaker-portrait { height: 57.6923cqw; aspect-ratio: auto; }
+.mobile-layout .design-content .updated-speaker-caption .updated-speaker-name { font-size: clamp(16px, 4.6cqw, 22px); line-height: 1.2; }
+.mobile-layout .design-content .updated-speaker-caption .updated-speaker-role { font-size: 13px; }
+.mobile-layout .design-content .updated-speaker-caption .updated-speaker-background { font-size: 11px; }
+.mobile-layout .design-content .updated-speaker-caption .updated-speaker-credential { font-size: 9px; width: fit-content; }
+.mobile-layout .design-content .updated-speaker-caption .updated-speaker-metadata { flex: 1; position: relative; }
+.mobile-layout .design-content .updated-speaker-facts { flex: 1; }
+.mobile-layout .design-content .updated-speaker-caption .updated-speaker-affiliation { margin-top: auto; }
+.mobile-layout .design-content .updated-speaker-affiliation--nvidia img { width: 104px; height: 22px; }
+.mobile-layout .design-content .updated-speaker-affiliation--aws img { width: 54px; height: 32px; }
+.mobile-layout .design-content .updated-speaker-caption [data-node-id='1170:597'] { position: absolute; right: 0; bottom: 0; width: 48px; height: 36px; }
+@media (prefers-reduced-motion: reduce) { .design-content .updated-speaker-portrait .updated-speaker-photo { transition: none; } }

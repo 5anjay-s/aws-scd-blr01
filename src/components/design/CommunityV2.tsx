@@ -11,7 +11,7 @@ export default function CommunityV2() {
     <div className="d-f51e833ed1" data-node-id="860:5267" data-name="Community v2">
       <div className="d-ee5771173a" data-node-id="860:5268" data-name="Community margin">
         <p className="d-e3d55930ba" data-node-id="860:5269">
-          03 / OUR COMMUNITY
+          03 / A SHARED STARTING POINT
         </p>
         <div className="d-83cd8ec499" data-node-id="860:5270">
           <p className="d-c104b2dca3">YOU +</p>
@@ -20,7 +20,7 @@ export default function CommunityV2() {
         </div>
         <div className="d-fd320dc1de" data-node-id="860:5271">
           <p className="d-7519be8e79">STUDENT LED.</p>
-          <p className="d-95907800fd">OPEN TO EVERYONE.</p>
+          <p className="d-95907800fd">OPEN TO POSSIBILITY.</p>
         </div>
         <SiteLink href="/organisers" className="community-organizers-link" buttonTone="orange" hoverTone="violet">
           <span>Organisers</span><img src="/assets/865-7675-207b4.svg" width={22} height={22} alt="" data-name="Arrow" />
@@ -28,13 +28,13 @@ export default function CommunityV2() {
       </div>
       <div className="d-14ecb956ad" data-node-id="860:5272" data-name="Community statement">
         <div className="d-c20331f0e4" data-node-id="860:5273">
-          <p className="d-c104b2dca3">Meet the community</p>
-          <p className="d-307cc96bda">behind SCD.</p>
+          <p className="d-c104b2dca3">Good things happen</p>
+          <p className="d-307cc96bda">between people.</p>
         </div>
         <div className="d-5003bfd20e" data-node-id="860:5274">
-          <p className="d-7519be8e79">AWS Student Builder Group at REVA University.</p>
-          <p className="d-7519be8e79">Workshops, learning programmes and community events.</p>
-          <p className="d-95907800fd">Meet the organisers and join our community channels.</p>
+          <p className="d-7519be8e79">Your first project. Your biggest question.</p>
+          <p className="d-7519be8e79">Your next collaborator. Bring all of it.</p>
+          <p className="d-95907800fd">A community grows one conversation at a time.</p>
         </div>
       </div>
       <div className="d-87e8379a2b" data-node-id="860:5275" data-name="Accent / Woven links">

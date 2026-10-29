@@ -248,35 +248,5 @@
     "id": "227:541",
     "name": "FaqGoodQuestionsMobile",
     "file": "src/components/design/FaqGoodQuestionsMobile.tsx"
-  },
-  {
-    "id": "content:EventStatus",
-    "name": "EventStatus",
-    "file": "src/components/design/EventStatus.tsx"
-  },
-  {
-    "id": "content:PreScd",
-    "name": "PreScd",
-    "file": "src/components/design/PreScd.tsx"
-  },
-  {
-    "id": "content:AgendaDesktop",
-    "name": "AgendaDesktop",
-    "file": "src/components/design/AgendaDesktop.tsx"
-  },
-  {
-    "id": "content:AgendaMobile",
-    "name": "AgendaMobile",
-    "file": "src/components/design/AgendaMobile.tsx"
-  },
-  {
-    "id": "content:VenueDesktop",
-    "name": "VenueDesktop",
-    "file": "src/components/design/VenueDesktop.tsx"
-  },
-  {
-    "id": "content:VenueMobile",
-    "name": "VenueMobile",
-    "file": "src/components/design/VenueMobile.tsx"
   }
 ]
