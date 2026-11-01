@@ -77,6 +77,8 @@ Confirmed main-day speaker profiles live in `src/content/speakers.ts`. Devansh A
 
 Devansh's transparent cutout is delivered as a 900px WebP (about 152 KB) instead of the 2.61 MB PNG. Alpha transparency is preserved, and the portrait is loaded lazily.
 
+Shreyans Dhankhar takes slot 03 of the confirmed directory, and slots 04–05 mirror it with Vraj Chaubal and Mitul Sarvaiya (`SpeakersInverseDesktop` / `SpeakersInverseMobile`, section ids `9001:5104` and `9001:5105`). The continuation repeats the directory without a second "THE LINEUP." opener; every directory slot reflects the original layout around the canvas center while the content keeps its straight reading direction, so only the mirrored positions move (`responsive.css` holds the reflected coordinates). Slot 06 stays reserved: it reuses the anonymous pixel-bust artwork and the "to be announced" caption treatment.
+
 `SpeakerQuotation` animates the original pair of navy quote marks in the Speakers opener and lineup on desktop and mobile. Each mark compresses, lifts with a slight tilt, and settles, with the second mark following 200 ms later. The loop rests between passes, pauses offscreen and in hidden tabs, and stays still for reduced motion.
 
 The Build chapter gently opens the two halves of the original bracket artwork on hover or press, keeping its checker center fixed. Programme steps drop into place once as they enter view, staggered 01 → 02 → 03. Each number moves with its artwork and is centered in the solid colored band on desktop and mobile. Reduced-motion preferences leave both elements still.

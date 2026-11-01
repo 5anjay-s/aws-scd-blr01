@@ -1733,5 +1733,26 @@
     "variable": "speakerPortrait",
     "bytes": 151966,
     "notes": "900px WebP delivery image with preserved alpha transparency; encoded from the background-removed cutout at quality 82."
+  },
+  {
+    "file": "public/media/speakers/shreyans-dhankhar.png",
+    "component": "ConfirmedSpeakers",
+    "variable": "speakerPortrait",
+    "bytes": 188757,
+    "notes": "Organiser-supplied 500 × 500 RGBA cutout, copied unchanged from the supplied reference. Fills slot 03 of the confirmed directory."
+  },
+  {
+    "file": "public/media/speakers/vraj-chaubal.png",
+    "component": "SpeakersInverse",
+    "variable": "speakerPortrait",
+    "bytes": 159634,
+    "notes": "Organiser-supplied 524 × 476 RGBA cutout, copied unchanged from the supplied reference."
+  },
+  {
+    "file": "public/media/speakers/mitul-sarvaiya.png",
+    "component": "SpeakersInverse",
+    "variable": "speakerPortrait",
+    "bytes": 128591,
+    "notes": "Organiser-supplied 500 × 500 RGBA cutout, copied unchanged from the supplied reference."
   }
 ]

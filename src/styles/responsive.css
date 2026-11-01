@@ -424,6 +424,16 @@
 .design-content [data-node-id='1127:2325'] img { object-fit: cover; object-position: center; filter: grayscale(1); transition: filter 240ms ease; }
 .design-content [data-node-id='1127:2325']:hover img, .design-content [data-node-id='1127:2325']:focus-within img { filter: grayscale(0); }
 .design-content [data-node-id='1127:2335'], .design-content [data-node-id='1127:2337'] { height: auto; aspect-ratio: 336 / 387.692; }
+/* The reflected speakers lineup mirrors each original directory slot around
+   the 1344px canvas center; the content itself keeps its straight direction. */
+.design-content .speakers-inverse .d-52fa24bcbd { left: calc(784 * var(--design-unit)); }
+.design-content .speakers-inverse .d-438b1cea4a { left: calc(784 * var(--design-unit)); }
+.design-content .speakers-inverse .d-cb8ccf733c { left: calc(384 * var(--design-unit)); }
+.design-content .speakers-inverse .d-f2cc43946c { left: 0; }
+.design-content .speakers-inverse .d-cf1c946646 { left: calc(584 * var(--design-unit)); }
+.design-content .speakers-inverse .d-d9ea639326 { left: calc(368 * var(--design-unit)); }
+.design-content .speakers-inverse .d-3f5f6c56b4 { left: 0; }
+.design-content .speakers-inverse .d-723111d222 { left: 0; }
 /* The manifesto's reading column determines its height; decorative artwork
    follows it so longer lines cannot disappear below a fixed canvas. */
 .mobile-layout .design-content [data-node-id='866:8542'] { height: auto; }
@@ -508,6 +518,14 @@
 .mobile-layout .design-content .mobile-speaker-caption > div p { font-size: 13px; line-height: 1.5; }
 .mobile-layout .design-content .mobile-speaker-caption [data-node-id='1170:595'] { flex-direction: column; align-items: flex-start; gap: 12px; }
 .mobile-layout .design-content .mobile-speaker-caption [data-node-id='1170:597'] { width: 48px; height: 36px; align-self: flex-end; }
+/* Reflected mobile directory: slots 04–06 mirror the two-column card placement
+   around the grid center (right, left, then right in the second row), keeping
+   the column divider on the mirrored side. */
+.mobile-layout .design-content .speakers-inverse .mobile-speaker-card { border-right: 0; }
+.mobile-layout .design-content .speakers-inverse .mobile-speaker-card:nth-child(odd) { border-right: 0; border-left: 1px solid rgb(11 16 32 / 22%); }
+.mobile-layout .design-content .speakers-inverse .mobile-speaker-card:nth-child(1) { grid-column: 2; grid-row: 1; }
+.mobile-layout .design-content .speakers-inverse .mobile-speaker-card:nth-child(2) { grid-column: 1; grid-row: 1; }
+.mobile-layout .design-content .speakers-inverse .mobile-speaker-card:nth-child(3) { grid-column: 2; grid-row: 2; }
 /* Preserve the coordinate system inside the ticket illustration. */
 .mobile-layout .design-content [data-node-id='1265:3122'] { --design-unit: var(--space-unit); width: min(100%, 390px); height: calc(984 * var(--space-unit)); margin-inline: auto; }
 .mobile-layout .design-content [data-node-id='1265:3127'] { top: calc(48 * var(--space-unit)); }

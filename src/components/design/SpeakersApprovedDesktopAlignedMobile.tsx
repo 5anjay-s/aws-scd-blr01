@@ -5,7 +5,6 @@ import "../../styles/speakers-updated.css";
 // Source: Figma 00/ Final, node 1168:494.
 const imgApprovedDitheredQuotationMobileOpener = "/assets/1168-494-a5a4a.svg";
 const imgApprovedDitheredQuotationSpeaker02 = "/assets/1168-494-b8c10.svg";
-const imgPortraitPixelBust2 = "/assets/1168-494-ad0f2.svg";
 
 export default function SpeakersApprovedDesktopAlignedMobile() {
   return (
@@ -109,22 +108,23 @@ export default function SpeakersApprovedDesktopAlignedMobile() {
               </div>
             </div>
           </div>
-          <div className="d-c197716cad mobile-speaker-card" data-node-id="1170:601" data-name="Speaker 03 / Portrait and announcement">
-            <div className="d-ea4a445521 mobile-speaker-portrait" data-node-id="1170:602" data-name="Speaker 03 / Approved anonymous portrait">
+          <div className="d-c197716cad mobile-speaker-card" data-node-id="1170:601" data-name="Speaker 03 / Portrait and profile">
+            <div className="d-ea4a445521 mobile-speaker-portrait updated-speaker-portrait" data-node-id="1170:602" data-name="Speaker 03 / Shreyans Dhankhar portrait">
               <div className="d-049d28c98a" data-node-id="I1170:602;1060:538" data-name="Portrait / Pixel bust">
-                <img alt="" className="d-511e8f31d4" src={imgPortraitPixelBust2} />
+                <img alt={speakers.shreyans.name} className="d-511e8f31d4 updated-speaker-photo" src={speakers.shreyans.photo} loading="lazy" decoding="async" />
               </div>
             </div>
-            <div className="d-c589fabaed mobile-speaker-caption" data-node-id="1170:607" data-name="Speaker 03 / Metadata">
+            <div className="d-c589fabaed mobile-speaker-caption updated-speaker-caption" data-node-id="1170:607" data-name="Speaker 03 / Metadata">
               <p className="d-fc9fe25a62" data-node-id="1170:608">
                 03 / SPEAKER
               </p>
               <p className="d-bf2bdce3ac" data-node-id="1170:609">
-                TO BE ANNOUNCED
+                {speakers.shreyans.name}
               </p>
               <div className="d-f308fc5ee1" data-node-id="1170:610">
-                <p className="d-897a3c8a4f">Name, role and session</p>
-                <p className="d-6a4f4f832e">details to be announced.</p>
+                <p className="updated-speaker-role">{speakers.shreyans.role}</p>
+                <p className="updated-speaker-background">{speakers.shreyans.background}</p>
+                <div className="updated-speaker-affiliation updated-speaker-affiliation--aws"><img src="/assets/sponsors/aws.svg" alt="AWS" width="54" height="32" loading="lazy" /></div>
               </div>
             </div>
           </div>

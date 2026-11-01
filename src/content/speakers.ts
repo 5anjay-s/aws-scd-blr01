@@ -16,4 +16,26 @@ export const speakers = {
     photo: '/media/speakers/devansh-agrawal-cutout.webp',
     linkedin: 'https://www.linkedin.com/in/devansh03/',
   },
+  // Shreyans continues the main directory as slot 03; Vraj and Mitul take
+  // slots 04–05 of the reflected lineup (SpeakersInverse*). Slot 06 stays
+  // reserved for a future announcement.
+  shreyans: {
+    name: 'Shreyans Dhankhar',
+    role: 'Senior AI Specialist Solutions Architect',
+    background: 'ex-NVIDIA',
+    company: 'AWS',
+    photo: '/media/speakers/shreyans-dhankhar.png',
+  },
+  vraj: {
+    name: 'Vraj Chaubal',
+    role: 'GTM',
+    background: 'Sarvaswa AI',
+    photo: '/media/speakers/vraj-chaubal.png',
+  },
+  mitul: {
+    name: 'Mitul Sarvaiya',
+    role: 'Principal Architect',
+    company: 'Sarvaswa AI',
+    photo: '/media/speakers/mitul-sarvaiya.png',
+  },
 } as const;

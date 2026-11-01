@@ -5,7 +5,6 @@ import "../../styles/speakers-updated.css";
 // Source: Figma 00/ Final, node 860:5144.
 const imgSpeakersApprovedDitheredQuotation = "/assets/860-5144-5a444.svg";
 const imgSpeakersApprovedDitheredQuotation1 = "/assets/860-5144-cc774.svg";
-const imgPortraitPixelBust2 = "/assets/860-5144-a4a5a.svg";
 
 export default function SpeakersV2IdeasWithAVoiceApprovedDesktop() {
   return (
@@ -112,23 +111,24 @@ export default function SpeakersV2IdeasWithAVoiceApprovedDesktop() {
             <div className="d-cf1c946646" data-node-id="1127:2336" data-name="Speakers / Approved dithered quotation">
               <SpeakerQuotation className="d-511e8f31d4" src={imgSpeakersApprovedDitheredQuotation1} />
             </div>
-            <div className="d-d9ea639326" data-node-id="1127:2337" data-name="Speakers / Anonymous portrait 03 / Artwork only">
+            <div className="d-d9ea639326 updated-speaker-portrait" data-node-id="1127:2337" data-name="Speaker 03 / Shreyans Dhankhar portrait">
               <div className="d-22bea6fb2f" data-node-id="I1127:2337;1060:538" data-name="Portrait / Pixel bust">
-                <img alt="" className="d-511e8f31d4" src={imgPortraitPixelBust2} />
+                <img alt={speakers.shreyans.name} className="d-511e8f31d4 updated-speaker-photo" src={speakers.shreyans.photo} loading="lazy" decoding="async" />
               </div>
             </div>
-            <div className="d-3f5f6c56b4" data-node-id="1127:2338" data-name="Speaker 03 / Announcement">
+            <div className="d-3f5f6c56b4 updated-speaker-caption" data-node-id="1127:2338" data-name="Speaker 03 / Shreyans Dhankhar profile">
               <p className="d-423ce3d413" data-node-id="1127:2339">
                 03 / SPEAKER
               </p>
-              <div className="d-c1f367816d" data-node-id="1127:2340">
-                <p className="d-6ee5fa6884">TO BE</p>
-                <p className="d-f42ae1416f">ANNOUNCED</p>
+              <div className="d-c1f367816d updated-speaker-name" data-node-id="1127:2340">
+                <p className="d-6ee5fa6884">Shreyans</p>
+                <p className="d-f42ae1416f">Dhankhar</p>
               </div>
               <div className="d-d574c0083f" data-node-id="1127:2341" data-name="Rule" />
-              <div className="d-2533afbb9b" data-node-id="1127:2342">
-                <p className="d-897a3c8a4f">Name, role and session</p>
-                <p className="d-6a4f4f832e">details to be announced.</p>
+              <div className="d-2533afbb9b updated-speaker-metadata" data-node-id="1127:2342">
+                <p className="updated-speaker-role">{speakers.shreyans.role}</p>
+                <p className="updated-speaker-background">{speakers.shreyans.background}</p>
+                <div className="updated-speaker-affiliation updated-speaker-affiliation--aws"><img src="/assets/sponsors/aws.svg" alt="AWS" width="68" height="40" loading="lazy" /></div>
               </div>
             </div>
             <div className="d-723111d222" data-node-id="1127:2343" data-name="Directory / More announcements">

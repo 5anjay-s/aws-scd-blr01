@@ -45,6 +45,11 @@
     "file": "src/components/design/SpeakersApprovedDesktopAlignedMobile.tsx"
   },
   {
+    "id": "9001:5105",
+    "name": "SpeakersInverseMobile",
+    "file": "src/components/design/SpeakersInverseMobile.tsx"
+  },
+  {
     "id": "1168:495",
     "name": "MobileCommunityDesktopAligned",
     "file": "src/components/design/MobileCommunityDesktopAligned.tsx"
@@ -133,6 +138,11 @@
     "id": "860:5144",
     "name": "SpeakersV2IdeasWithAVoiceApprovedDesktop",
     "file": "src/components/design/SpeakersV2IdeasWithAVoiceApprovedDesktop.tsx"
+  },
+  {
+    "id": "9001:5104",
+    "name": "SpeakersInverseDesktop",
+    "file": "src/components/design/SpeakersInverseDesktop.tsx"
   },
   {
     "id": "860:5180",
