@@ -2,9 +2,13 @@ import { SpeakerQuotation } from "../SpeakerQuotation";
 import { SiteLink } from "../SiteLink";
 import { speakers } from "../../content/speakers";
 import "../../styles/speakers-updated.css";
-// Source: Figma 00/ Final, node 1168:494.
+// Source: Figma 00/ Final, node 1168:494. Slots 04–06 continue the same
+// two-column directory (1170:645+, frames continued from 1170:611) so the
+// mobile lineup flows 01–06 with no empty cells; the mirrored continuation
+// composition exists only on the desktop responsive variant.
 const imgApprovedDitheredQuotationMobileOpener = "/assets/1168-494-a5a4a.svg";
 const imgApprovedDitheredQuotationSpeaker02 = "/assets/1168-494-b8c10.svg";
+const imgPortraitPixelBust2 = "/assets/1168-494-ad0f2.svg";
 
 export default function SpeakersApprovedDesktopAlignedMobile() {
   return (
@@ -125,6 +129,65 @@ export default function SpeakersApprovedDesktopAlignedMobile() {
                 <p className="updated-speaker-role">{speakers.shreyans.role}</p>
                 <p className="updated-speaker-background">{speakers.shreyans.background}</p>
                 <div className="updated-speaker-affiliation updated-speaker-affiliation--aws"><img src="/assets/sponsors/aws.svg" alt="AWS" width="54" height="32" loading="lazy" /></div>
+              </div>
+            </div>
+          </div>
+          <div className="d-c197716cad mobile-speaker-card updated-speaker-card" data-node-id="1170:645" data-name="Speaker 04 / Portrait and profile">
+            <div className="d-adcca22bcc mobile-speaker-portrait updated-speaker-portrait" data-node-id="1170:646" data-name="Speaker 04 / Vraj Chaubal portrait">
+              <div className="d-049d28c98a" data-node-id="I1170:646;1060:533" data-name="Portrait / Pixel bust">
+                <img alt={speakers.vraj.name} className="d-511e8f31d4 updated-speaker-photo" src={speakers.vraj.photo} loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div className="d-43f50fc4ff mobile-speaker-caption updated-speaker-caption updated-speaker-caption--devansh" data-node-id="1170:647" data-name="Speaker 04 / Metadata">
+              <p className="d-68247c54be" data-node-id="1170:648">
+                04 / SPEAKER
+              </p>
+              <p className="d-30c2530cb1 updated-speaker-name" data-node-id="1170:649">
+                {speakers.vraj.name}
+              </p>
+              <div className="d-f6b8f3f4a8 updated-speaker-metadata" data-node-id="1170:650" data-name="Speaker 04 / Details">
+                <div className="d-07493e07be updated-speaker-facts" data-node-id="1170:651">
+                  <p className="updated-speaker-role">{speakers.vraj.role}</p>
+                  <p className="updated-speaker-background">{speakers.vraj.background}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="d-c197716cad mobile-speaker-card" data-node-id="1170:652" data-name="Speaker 05 / Portrait and profile">
+            <div className="d-ea4a445521 mobile-speaker-portrait updated-speaker-portrait" data-node-id="1170:653" data-name="Speaker 05 / Mitul Sarvaiya portrait">
+              <div className="d-049d28c98a" data-node-id="I1170:653;1060:538" data-name="Portrait / Pixel bust">
+                <img alt={speakers.mitul.name} className="d-511e8f31d4 updated-speaker-photo" src={speakers.mitul.photo} loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div className="d-c589fabaed mobile-speaker-caption updated-speaker-caption" data-node-id="1170:654" data-name="Speaker 05 / Metadata">
+              <p className="d-fc9fe25a62" data-node-id="1170:655">
+                05 / SPEAKER
+              </p>
+              <p className="d-bf2bdce3ac" data-node-id="1170:656">
+                {speakers.mitul.name}
+              </p>
+              <div className="d-f308fc5ee1" data-node-id="1170:657">
+                <p className="updated-speaker-role">{speakers.mitul.role}</p>
+                <p className="updated-speaker-background">{speakers.mitul.company}</p>
+              </div>
+            </div>
+          </div>
+          <div className="d-c197716cad mobile-speaker-card updated-speaker-card" data-node-id="1170:658" data-name="Speaker 06 / Portrait and announcement">
+            <div className="d-8b0689aa60 mobile-speaker-portrait" data-node-id="1170:659" data-name="Speaker 06 / Approved anonymous portrait">
+              <div className="d-049d28c98a" data-node-id="I1170:659;1060:538" data-name="Portrait / Pixel bust">
+                <img alt="" className="d-511e8f31d4" src={imgPortraitPixelBust2} loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div className="d-c589fabaed mobile-speaker-caption" data-node-id="1170:660" data-name="Speaker 06 / Metadata">
+              <p className="d-fc9fe25a62" data-node-id="1170:661">
+                06 / SPEAKER
+              </p>
+              <p className="d-bf2bdce3ac" data-node-id="1170:662">
+                TO BE ANNOUNCED
+              </p>
+              <div className="d-f308fc5ee1" data-node-id="1170:663">
+                <p className="d-897a3c8a4f">Name, role and session</p>
+                <p className="d-6a4f4f832e">details to be announced.</p>
               </div>
             </div>
           </div>

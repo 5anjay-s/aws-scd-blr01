@@ -31,7 +31,6 @@ const home: ResponsiveSections = {
     section('866:8542', 'Our manifesto', 'manifesto'),
     section('866:8432', 'Choose your track', 'tracks'),
     section('1168:494', 'Speakers', 'speakers'),
-    section('9001:5105', 'More speakers'),
     section('1170:640', 'Section divider'),
     section('866:8481', 'Event timeline', 'timeline'),
     section('1168:495', 'Your community', 'community'),

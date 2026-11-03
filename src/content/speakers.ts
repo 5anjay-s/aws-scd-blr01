@@ -17,8 +17,8 @@ export const speakers = {
     linkedin: 'https://www.linkedin.com/in/devansh03/',
   },
   // Shreyans continues the main directory as slot 03; Vraj and Mitul take
-  // slots 04–05 of the reflected lineup (SpeakersInverse*). Slot 06 stays
-  // reserved for a future announcement.
+  // slots 04–05 (reflected lineup on desktop, and the same continuous
+  // directory on mobile). Slot 06 stays reserved for a future announcement.
   shreyans: {
     name: 'Shreyans Dhankhar',
     role: 'Senior AI Specialist Solutions Architect',
