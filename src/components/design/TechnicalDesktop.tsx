@@ -37,11 +37,8 @@ export default function TechnicalDesktop() {
           <SiteLink className="d-0da5c9fe56" data-node-id="874:8920" href={"/technical"}>
             <p className="d-95907800fd">02 Technical</p>
           </SiteLink>
-          <div className="d-467c585ef8" data-node-id="874:8921">
-            <SiteLink className="d-95907800fd" href={"/non-technical"}>03 Non-tech</SiteLink>
-          </div>
           <div className="d-467c585ef8" data-node-id="874:8922">
-            <SiteLink className="d-95907800fd" href={"/#timeline"}>04 Timeline</SiteLink>
+            <SiteLink className="d-95907800fd" href={"/#timeline"}>03 Timeline</SiteLink>
           </div>
         </div>
         <RegistrationButton />
@@ -202,19 +199,11 @@ export default function TechnicalDesktop() {
             <SignalStitch alt="" className="d-511e8f31d4" src={imgAccentPixelStitch} />
           </div>
           <div className="d-1089330ab3" data-node-id="874:8981">
-            <p className="d-9c7634671c">A DIFFERENT</p>
-            <p className="d-b593672e9c">KIND OF SPARK.</p>
+            <p className="d-9c7634671c">THE WHOLE</p>
+            <p className="d-b593672e9c">DAY, UNFOLDED.</p>
           </div>
         </div>
         <div className="d-6c497b55c2" data-node-id="874:8982" data-name="Continue / Actions">
-          <SiteLink hoverTone="lime" buttonTone="violet" className="d-e69857fced" data-node-id="874:8983" data-name="Action / Explore non-technical" href={"/non-technical"}>
-            <p className="d-cf01328ee8" data-node-id="I874:8983;5:30">
-              Explore non-technical
-            </p>
-            <div className="d-4725149c0e" data-node-id="I874:8983;15:32" data-name="Arrow">
-              <img alt="" className="d-511e8f31d4" src={imgArrow1} />
-            </div>
-          </SiteLink>
           <SiteLink hoverTone="cyan" buttonTone="white" className="d-26815d17f7" data-node-id="874:8984" data-name="Action / View event timeline" href={"/#timeline"}>
             <p className="d-cf01328ee8" data-node-id="I874:8984;5:30">
               View event timeline

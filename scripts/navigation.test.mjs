@@ -10,7 +10,7 @@ const canonical = href => {
 };
 
 test('hash routes open standalone pages including the loading replay', () => {
-  for (const page of ['loading', 'technical', 'non-technical', 'registration', 'organisers', 'faq', '404']) {
+  for (const page of ['loading', 'technical', 'registration', 'organisers', 'faq', '404']) {
     assert.deepEqual(at(`/#${page}`), { path: `/${page}`, anchor: '' });
     assert.equal(canonical(`/${page}`), `/#${page}`);
     assert.equal(canonical(`/${page}/`), `/#${page}`);

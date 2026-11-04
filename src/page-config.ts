@@ -57,7 +57,6 @@ const pages: Record<string, ResponsiveSections> = {
     mobile: [section('227:541', 'Frequently asked questions'), section('1168:498', 'Keep the conversation going')],
   },
   '/technical': { desktop: [section('874:8915', 'Technical track')], mobile: [section('874:9123', 'Technical track')] },
-  '/non-technical': { desktop: [section('874:9211', 'Non-technical track')], mobile: [section('880:9338', 'Non-technical track')] },
   '/registration': { desktop: [section('1367:652', 'Registration')], mobile: [section('1367:780', 'Registration')] },
   '/404': { desktop: [section('1265:3035', 'Page not found')], mobile: [section('1265:3120', 'Page not found')] },
 };

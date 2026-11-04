@@ -1,6 +1,6 @@
 # Page compositions
 
-Desktop and mobile compositions live in `src/components/design/`. `src/design-manifest.json` records their source frames; `src/page-config.ts` selects them for the homepage, organizers, FAQ, technical and non-technical tracks, registration, loading, and 404 routes. `PageSections` renders the selected compositions inside the App shell.
+Desktop and mobile compositions live in `src/components/design/`. `src/design-manifest.json` records their source frames; `src/page-config.ts` selects them for the homepage, organizers, FAQ, technical track, registration, loading, and 404 routes. `PageSections` renders the selected compositions inside the App shell.
 
 Keep paired compositions aligned with the approved copy, artwork, and behavior. A new route needs both variants and a page configuration mapping. Shared controls and animations belong in `src/components/`.
 

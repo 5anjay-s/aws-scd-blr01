@@ -134,14 +134,14 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
           </div>
           <div className="d-7739a64de1" data-node-id="866:8519" data-name="Phase / Content">
             <p className="d-ba765cc2f2" data-node-id="866:8520">
-              TWO PARALLEL TRACKS.
+              ONE TRACK. MORE DEPTH.
             </p>
             <p className="d-486b70b514" data-node-id="866:8521">
-              Parallel sessions across the Technical and Non-Technical tracks.
+              Technical sessions across cloud, AI, security and software development.
             </p>
           </div>
-          <div className="d-9973ee015d" data-node-id="866:8522" data-name="Programme / Two tracks">
-            <div className="d-9973ee015d" data-node-id="866:8523" data-name="Programme / Track pair">
+          <div className="d-9973ee015d" data-node-id="866:8522" data-name="Programme / Technical track">
+            <div className="d-9973ee015d" data-node-id="866:8523" data-name="Programme / Technical track">
               <div className="d-05a0169ef1" data-node-id="866:8524" data-name="Programme / TECHNICAL">
                 <p className="d-745e862a55" data-node-id="866:8525">
                   TECHNICAL
@@ -154,22 +154,6 @@ export default function ProgrammeV2EventTimelineApprovedMobile() {
                     View details
                   </p>
                   <div className="d-4725149c0e" data-node-id="I866:8527;15:32" data-name="Arrow">
-                    <img alt="" className="d-511e8f31d4" src={imgArrow} />
-                  </div>
-                </SiteLink>
-              </div>
-              <div className="d-c4c7f38125" data-node-id="866:8528" data-name="Programme / NON-TECHNICAL">
-                <p className="d-745e862a55" data-node-id="866:8529">
-                  NON-TECHNICAL
-                </p>
-                <p className="d-902df9c1ec" data-node-id="866:8530">
-                  Startups / Product / Leadership
-                </p>
-                <SiteLink hoverTone="lime" buttonTone="navy" className="d-4ec8c19304" data-node-id="866:8531" data-name="Action / View details" href={"/non-technical"}>
-                  <p className="d-7669a2de49" data-node-id="I866:8531;5:30">
-                    View details
-                  </p>
-                  <div className="d-4725149c0e" data-node-id="I866:8531;15:32" data-name="Arrow">
                     <img alt="" className="d-511e8f31d4" src={imgArrow} />
                   </div>
                 </SiteLink>

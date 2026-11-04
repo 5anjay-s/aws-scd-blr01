@@ -169,17 +169,9 @@ export default function TechnicalMobile() {
           <SignalStitch alt="" className="d-511e8f31d4" src={imgAccentPixelStitch} />
         </div>
         <div className="d-2b15278d3b" data-node-id="874:9165">
-          <p className="d-27cc6eebfe">A DIFFERENT</p>
-          <p className="d-b4067b5592">KIND OF SPARK.</p>
+          <p className="d-27cc6eebfe">THE WHOLE</p>
+          <p className="d-b4067b5592">DAY, UNFOLDED.</p>
         </div>
-        <SiteLink hoverTone="lime" buttonTone="violet" className="d-0cf2965cb0" data-node-id="874:9166" data-name="Action / Explore non-technical" href={"/non-technical"}>
-          <p className="d-ad21a68151" data-node-id="I874:9166;5:30">
-            Explore non-technical
-          </p>
-          <div className="d-4725149c0e" data-node-id="I874:9166;15:32" data-name="Arrow">
-            <img alt="" className="d-511e8f31d4" src={imgArrow} />
-          </div>
-        </SiteLink>
         <SiteLink hoverTone="cyan" buttonTone="white" className="d-fe15f8978d" data-node-id="874:9167" data-name="Action / View event timeline" href={"/#timeline"}>
           <p className="d-ad21a68151" data-node-id="I874:9167;5:30">
             View event timeline

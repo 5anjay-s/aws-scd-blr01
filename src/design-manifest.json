@@ -235,16 +235,6 @@
     "file": "src/components/design/TechnicalMobile.tsx"
   },
   {
-    "id": "874:9211",
-    "name": "NonTechnicalDesktop",
-    "file": "src/components/design/NonTechnicalDesktop.tsx"
-  },
-  {
-    "id": "880:9338",
-    "name": "NonTechnicalMobile",
-    "file": "src/components/design/NonTechnicalMobile.tsx"
-  },
-  {
     "id": "227:540",
     "name": "FaqGoodQuestionsDesktop",
     "file": "src/components/design/FaqGoodQuestionsDesktop.tsx"

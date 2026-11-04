@@ -9,8 +9,8 @@
 - `SponsorLogo` renders the local sponsor artwork configured in `site-config.ts` in black.
 - `CountUp` animates a number once on entry, reserves its final width, and exposes a stable value to screen readers. It pauses offscreen and in hidden tabs; reduced motion shows the final value.
 - `SpeakerQuotation` gives the two original speaker quote marks a staggered lift, tilt, and settle in the opener and lineup. It preserves the SVG and pauses offscreen, in hidden tabs, and for reduced motion.
-- `TrackArtwork` animates the original Tracks card SVGs in both compositions. Four quotation marks hop in staggered pairs; brackets spring open around a pulsing diamond that turns and returns. Clipped copies and per-glyph pivots preserve the source dither and colors. Loops pause offscreen or in hidden tabs, and reduced motion shows the original still composition.
-- Standalone track heroes also use `TrackArtwork`: `quotes` for the non-technical page and `compile` for the wider technical artwork. Keep the compile variant's crop boundaries and diamond pivot aligned to its 832 × 336 source geometry.
+- `TrackArtwork` animates the original Technical track card SVGs in both compositions. Brackets spring open around a pulsing diamond that turns and returns. Clipped copies preserve the source dither and colors. Loops pause offscreen or in hidden tabs, and reduced motion shows the original still composition.
+- The standalone technical track hero also uses `TrackArtwork` with the `compile` variant for its wider artwork. Keep the compile variant's crop boundaries and diamond pivot aligned to its 832 × 336 source geometry.
 - `DesignMotion` applies its initial frame before playback. Keep the cloud-panel plane hidden until the hero arrival plane finishes its exit, then reset the panel flight before revealing it.
 - `HeroTitle`, `SignalStitch`, `ScrollSpark`, `WovenRibbon`, `BuildBrackets`, `ProgrammeSteps`, and the manifesto components own reusable animation behavior.
 

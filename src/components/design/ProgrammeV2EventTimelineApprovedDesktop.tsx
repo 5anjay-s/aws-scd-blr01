@@ -142,12 +142,12 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
                 TRACKS
               </p>
               <p className="d-a3f0e2bf2e" data-node-id="860:5220">
-                TWO PARALLEL TRACKS.
+                ONE TRACK. MORE DEPTH.
               </p>
             </div>
             <div className="d-16e92d0fc7" data-node-id="860:5221" data-name="Phase / Description">
               <p className="d-0c8cd4180e" data-node-id="860:5222">
-                Parallel sessions across the Technical and Non-Technical tracks.
+                Technical sessions across cloud, AI, security and software development.
               </p>
             </div>
             <div className="d-0d46dca5e4" data-node-id="860:5223" data-name="Phase / Timing">
@@ -159,9 +159,9 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
               </p>
             </div>
           </div>
-          <div className="d-3ba7a50c2f" data-node-id="860:5226" data-name="Programme / Two tracks">
-            <div className="d-3a0fbb554c" data-node-id="860:5227" data-name="Programme / Track pair">
-              <div className="d-75d135f060" data-node-id="860:5228" data-name="Programme / TECHNICAL">
+          <div className="d-3ba7a50c2f" data-node-id="860:5226" data-name="Programme / Technical track">
+            <div className="d-3a0fbb554c" data-node-id="860:5227" data-name="Programme / Technical track">
+              <div className="d-75d135f060 timeline-track-single" data-node-id="860:5228" data-name="Programme / TECHNICAL">
                 <p className="d-7c2a925177" data-node-id="860:5229">
                   TECHNICAL
                 </p>
@@ -173,22 +173,6 @@ export default function ProgrammeV2EventTimelineApprovedDesktop() {
                     View details
                   </p>
                   <div className="d-4725149c0e" data-node-id="I860:5231;15:32" data-name="Arrow">
-                    <img alt="" className="d-511e8f31d4" src={imgArrow} />
-                  </div>
-                </SiteLink>
-              </div>
-              <div className="d-36f4e0fcf2" data-node-id="860:5232" data-name="Programme / NON-TECHNICAL">
-                <p className="d-7c2a925177" data-node-id="860:5233">
-                  NON-TECHNICAL
-                </p>
-                <p className="d-7b5e75c7c6" data-node-id="860:5234">
-                  Startups / Product / Leadership
-                </p>
-                <SiteLink hoverTone="lime" buttonTone="navy" className="d-9486bf8b78" data-node-id="860:5235" data-name="Action / View details" href={"/non-technical"}>
-                  <p className="d-7a0f1f17eb" data-node-id="I860:5235;5:30">
-                    View details
-                  </p>
-                  <div className="d-4725149c0e" data-node-id="I860:5235;15:32" data-name="Arrow">
                     <img alt="" className="d-511e8f31d4" src={imgArrow} />
                   </div>
                 </SiteLink>

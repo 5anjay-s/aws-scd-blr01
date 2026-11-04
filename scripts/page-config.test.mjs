@@ -5,7 +5,7 @@ import { getPageSections, groupPageSections, hasPage } from '../src/page-config.
 import { homeSectionRoutes, resolveLocation } from '../src/navigation.ts';
 
 const manifest = JSON.parse(readFileSync(new URL('../src/design-manifest.json', import.meta.url), 'utf8'));
-const pages = ['/', '/organisers', '/faq', '/technical', '/non-technical', '/registration', '/404'];
+const pages = ['/', '/organisers', '/faq', '/technical', '/registration', '/404'];
 
 test('the introduction and all three chapters share one panel without losing route anchors', () => {
   for (const mobile of [false, true]) {

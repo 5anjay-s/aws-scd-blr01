@@ -703,12 +703,6 @@
     "bytes": 8992
   },
   {
-    "file": "public/assets/860-5104-db107.svg",
-    "component": "ProgrammeV2ChooseYourTrackApprovedDesktop",
-    "variable": "imgArtworkNonTechnicalTrackPixelQuotations",
-    "bytes": 29522
-  },
-  {
     "file": "public/assets/860-5104-5f40e.svg",
     "component": "ProgrammeV2ChooseYourTrackApprovedDesktop",
     "variable": "imgArtworkTechnicalTrackPixelBrackets",
@@ -950,12 +944,6 @@
     "bytes": 274
   },
   {
-    "file": "public/assets/866-8432-00a38.svg",
-    "component": "ProgrammeV2ChooseYourTrackApprovedMobile",
-    "variable": "imgArtworkNonTechnicalTrackPixelQuotations",
-    "bytes": 28634
-  },
-  {
     "file": "public/assets/866-8481-2d4f1.svg",
     "component": "ProgrammeV2EventTimelineApprovedMobile",
     "variable": "imgSteppedProgrammeViolet",
@@ -1127,90 +1115,6 @@
     "file": "public/assets/1168-498-378aa.svg",
     "component": "TechnicalMobile",
     "variable": "imgArrow2",
-    "bytes": 274
-  },
-  {
-    "file": "public/assets/874-9211-c568c.svg",
-    "component": "NonTechnicalDesktop",
-    "variable": "imgSharedGlyphOpenExchange",
-    "bytes": 43087
-  },
-  {
-    "file": "public/assets/865-7675-0b485.svg",
-    "component": "NonTechnicalDesktop",
-    "variable": "imgArrow1",
-    "bytes": 274
-  },
-  {
-    "file": "public/assets/874-9211-fb0a8.svg",
-    "component": "NonTechnicalDesktop",
-    "variable": "imgSectionDividerHeroToOpenExchange",
-    "bytes": 6020
-  },
-  {
-    "file": "public/assets/865-7675-207b4.svg",
-    "component": "NonTechnicalDesktop",
-    "variable": "imgArrow2",
-    "bytes": 274
-  },
-  {
-    "file": "public/assets/1265-3035-453bd.svg",
-    "component": "NonTechnicalDesktop",
-    "variable": "imgApprovedWovenLinks",
-    "bytes": 9616
-  },
-  {
-    "file": "public/assets/1168-498-5d2c8.svg",
-    "component": "NonTechnicalDesktop",
-    "variable": "imgArrow3",
-    "bytes": 274
-  },
-  {
-    "file": "public/assets/1168-498-378aa.svg",
-    "component": "NonTechnicalDesktop",
-    "variable": "imgArrow4",
-    "bytes": 274
-  },
-  {
-    "file": "public/assets/865-7675-0b485.svg",
-    "component": "NonTechnicalMobile",
-    "variable": "imgArrow",
-    "bytes": 274
-  },
-  {
-    "file": "public/assets/880-9338-d328b.svg",
-    "component": "NonTechnicalMobile",
-    "variable": "imgSharedGlyphOpenExchange",
-    "bytes": 61570
-  },
-  {
-    "file": "public/assets/880-9338-2e906.svg",
-    "component": "NonTechnicalMobile",
-    "variable": "imgApprovedDitherPaperToNavyCropped",
-    "bytes": 5665
-  },
-  {
-    "file": "public/assets/865-7675-207b4.svg",
-    "component": "NonTechnicalMobile",
-    "variable": "imgArrow1",
-    "bytes": 274
-  },
-  {
-    "file": "public/assets/1168-498-e1335.svg",
-    "component": "NonTechnicalMobile",
-    "variable": "imgApprovedWovenLinks",
-    "bytes": 11016
-  },
-  {
-    "file": "public/assets/1168-498-5d2c8.svg",
-    "component": "NonTechnicalMobile",
-    "variable": "imgArrow2",
-    "bytes": 274
-  },
-  {
-    "file": "public/assets/1168-498-378aa.svg",
-    "component": "NonTechnicalMobile",
-    "variable": "imgArrow3",
     "bytes": 274
   },
   {
