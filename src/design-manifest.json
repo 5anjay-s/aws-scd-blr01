@@ -135,11 +135,6 @@
     "file": "src/components/design/SpeakersV2IdeasWithAVoiceApprovedDesktop.tsx"
   },
   {
-    "id": "9001:5104",
-    "name": "SpeakersInverseDesktop",
-    "file": "src/components/design/SpeakersInverseDesktop.tsx"
-  },
-  {
     "id": "860:5180",
     "name": "ProgrammeV2EventTimelineApprovedDesktop",
     "file": "src/components/design/ProgrammeV2EventTimelineApprovedDesktop.tsx"

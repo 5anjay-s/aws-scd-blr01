@@ -2,7 +2,7 @@
 
 React, TypeScript, GSAP, and Vite implementation of the website designs in the Figma page `00/ Final`.
 
-The site uses the design and page compositions from `075ee609c1e183bf9718d727be307b72e3eb07e0`, including its REVA University branding, scrolling navbar identity and original home-page order. The current Organisers page is retained as one complete page with its own scoped stylesheet. IMPULSE winner details appear only on the technical page. The four confirmed main-day speakers retain their profiles within the restored speaker layout.
+The site uses the design and page compositions from `075ee609c1e183bf9718d727be307b72e3eb07e0`, including its REVA University branding, scrolling navbar identity and original home-page order. The current Organisers page is retained as one complete page with its own scoped stylesheet. IMPULSE winner details appear only on the technical page. The three confirmed main-day speakers retain their profiles within the restored three-speaker layout.
 
 `src/App.tsx` connects the application providers, hooks, and page rendering. `src/page-config.ts` defines route compositions and section order, and `PageSections` resolves their Figma modules. Shared hooks in `src/components/` own navigation and transition commits (`useSiteNavigation`), responsive layout and header measurement (`usePageLayout`), and scrolling, focus, and section tracking (`usePageScroll`). Hash parsing and legacy aliases remain in `src/navigation.ts`.
 
@@ -73,11 +73,9 @@ Hash routes request only the root document, so direct links and refreshes work o
 
 The speaker directory renders the same colour-changing portrait cards in both compositions. Desktop keeps the asymmetric directory; phones use adjoining portraits with captions directly below. Portraits transition from monochrome to their original colour on hover, while each caption takes its cyan, orange or violet accent. Keyboard focus activates the same highlight, touch screens show colour portraits, and reduced motion removes the transitions. Company logos align to the caption edges in reserved rows.
 
-Confirmed main-day speaker profiles live in `src/content/speakers.ts`. The final lineup runs 01–04: Devansh Agrawal, Shreyans Dhankhar, Vraj Chaubal and Mitul Sarvaiya. Devansh's supplied portrait and LinkedIn profile lead the directory. Company logos use equal-height rows and align to their caption edges; the photographs retain their source files. The date/venue strip includes the calendar link without a countdown timer.
+Confirmed main-day speaker profiles live in `src/content/speakers.ts`. The final lineup runs 01–03: Shreyans Dhankhar, Vraj Chaubal and Mitul Sarvaiya. Company logos use equal-height rows and align to their caption edges; the photographs retain their source files. The date/venue strip includes the calendar link without a countdown timer.
 
-Devansh's transparent cutout is delivered as a 900px WebP (about 152 KB) instead of the 2.61 MB PNG. Alpha transparency is preserved, and the portrait is loaded lazily.
-
-Devansh Agrawal leads the directory as slot 01; Shreyans Dhankhar takes slot 02, followed by Vraj Chaubal and Mitul Sarvaiya in slots 03–04. On desktop the continuation is a mirrored composition (`SpeakersInverseDesktop`, section id `9001:5104`) without a second "THE LINEUP." opener: every directory slot reflects the original layout around the canvas center while the content keeps its straight reading direction, so only the mirrored positions move (`responsive.css` holds the reflected coordinates). On mobile all four cards fill the two-column grid continuously. The removed opening portrait and reserved announcement slot now hold editorial statements about the lineup, styled with the same mono labels, Azeret headings, navy panels and lime/cyan accents as the rest of the section.
+Shreyans Dhankhar leads the directory in slot 01, Vraj Chaubal takes the featured slot 02, and Mitul Sarvaiya closes the lineup in slot 03. Desktop keeps the original asymmetric three-speaker directory; mobile uses the same three cards in the two-column grid. The continuation composition and editorial statement panels are removed, so the section ends after the third speaker.
 
 `SpeakerQuotation` animates the original pair of navy quote marks in the Speakers opener and lineup on desktop and mobile. Each mark compresses, lifts with a slight tilt, and settles, with the second mark following 200 ms later. The loop rests between passes, pauses offscreen and in hidden tabs, and stays still for reduced motion.
 

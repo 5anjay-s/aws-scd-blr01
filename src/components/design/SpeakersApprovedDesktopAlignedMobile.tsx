@@ -1,14 +1,9 @@
 import { SpeakerQuotation } from "../SpeakerQuotation";
-import { SiteLink } from "../SiteLink";
 import { speakers } from "../../content/speakers";
 import "../../styles/speakers-updated.css";
-// Source: Figma 00/ Final, node 1168:494. The final four-speaker directory
-// continues the same two-column layout (1170:645+, frames continued from
-// 1170:611). The removed opening portrait and reserved slot make room for the
-// editorial statement above the grid; the mirrored continuation composition
-// exists only on the desktop responsive variant.
+// Source: Figma 00/ Final, node 1168:494.
 const imgApprovedDitheredQuotationMobileOpener = "/assets/1168-494-a5a4a.svg";
-const imgApprovedDitheredQuotationSpeaker01 = "/assets/1168-494-b8c10.svg";
+const imgApprovedDitheredQuotationSpeaker02 = "/assets/1168-494-b8c10.svg";
 
 export default function SpeakersApprovedDesktopAlignedMobile() {
   return (
@@ -58,103 +53,72 @@ export default function SpeakersApprovedDesktopAlignedMobile() {
             THE LINEUP.
           </p>
           <p className="d-e1908a6b66" data-node-id="1170:572">
-            FOUR VOICES. ONE CONVERSATION.
+            THREE VOICES. ONE CONVERSATION.
           </p>
           <div className="d-839bc9fa18" data-node-id="1170:573">
             <p className="d-06214b5362">Meet the people building</p>
             <p className="d-0479ea4484">what comes next.</p>
           </div>
         </div>
-        <div className="mobile-speaker-statement" data-name="Speakers / Editorial statement — The people in the room">
-          <p className="speaker-statement-kicker">THE PEOPLE IN THE ROOM</p>
-          <p className="mobile-speaker-statement-heading">BUILT IN THE OPEN.</p>
-          <p className="mobile-speaker-statement-body">
-            Devansh, Shreyans, Vraj and Mitul work across cloud security, AI systems, product architecture and go-to-market. They've shipped at scale, made hard calls, and learned what survives contact with the real world. Bring your questions — the best conversations start in the room.
-          </p>
-          <p className="mobile-speaker-statement-foot">FOUR VOICES / ONE STAGE</p>
-        </div>
         <div className="d-683bc8606f mobile-speaker-grid" data-node-id="1170:574" data-name="Speaker directory / Two-column portraits">
-          <div className="d-c197716cad mobile-speaker-card updated-speaker-card" data-node-id="1170:586" data-name="Speaker 01 / Portrait and profile">
-            <div className="d-adcca22bcc mobile-speaker-portrait updated-speaker-portrait updated-speaker-portrait--devansh" data-node-id="1170:587" data-name="Speaker 01 / Devansh Agrawal portrait">
-              <div className="d-049d28c98a" data-node-id="I1170:587;1060:533" data-name="Portrait / Pixel bust">
-                <img alt={speakers.devansh.name} className="d-511e8f31d4 updated-speaker-photo" src={speakers.devansh.photo} loading="lazy" decoding="async" />
-              </div>
-            </div>
-            <div className="d-43f50fc4ff mobile-speaker-caption updated-speaker-caption updated-speaker-caption--devansh" data-node-id="1170:592" data-name="Speaker 01 / Metadata">
-              <p className="d-68247c54be" data-node-id="1170:593">
-                01 / SPEAKER
-              </p>
-              <p className="d-30c2530cb1 updated-speaker-name" data-node-id="1170:594">
-                <SiteLink href={speakers.devansh.linkedin} className="updated-speaker-link" aria-label={`${speakers.devansh.name} on LinkedIn`}>{speakers.devansh.name}</SiteLink>
-              </p>
-              <div className="d-f6b8f3f4a8 updated-speaker-metadata" data-node-id="1170:595" data-name="Speaker 01 / Details and approved quotation">
-                <div className="d-07493e07be updated-speaker-facts" data-node-id="1170:596">
-                  <p className="updated-speaker-role">{speakers.devansh.role}</p>
-                  <p className="updated-speaker-background">{speakers.devansh.background}</p>
-                  <p className="updated-speaker-credential">{speakers.devansh.credential}</p>
-                  <div className="updated-speaker-affiliation updated-speaker-affiliation--aws"><img src="/assets/sponsors/aws.svg" alt="AWS" width="54" height="32" loading="lazy" /></div>
-                </div>
-                <div className="d-5906cd54d7" data-node-id="1170:597" data-name="Approved dithered quotation / Speaker 01">
-                  <SpeakerQuotation className="d-511e8f31d4" src={imgApprovedDitheredQuotationSpeaker01} />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="d-c197716cad mobile-speaker-card" data-node-id="1170:601" data-name="Speaker 02 / Portrait and profile">
-            <div className="d-ea4a445521 mobile-speaker-portrait updated-speaker-portrait" data-node-id="1170:602" data-name="Speaker 02 / Shreyans Dhankhar portrait">
-              <div className="d-049d28c98a" data-node-id="I1170:602;1060:538" data-name="Portrait / Pixel bust">
+          <div className="d-c197716cad mobile-speaker-card updated-speaker-card" data-node-id="1170:575" data-name="Speaker 01 / Portrait and profile">
+            <div className="d-8b0689aa60 mobile-speaker-portrait updated-speaker-portrait" data-node-id="1170:576" data-name="Speaker 01 / Shreyans Dhankhar portrait">
+              <div className="d-049d28c98a" data-node-id="I1170:576;1060:528" data-name="Portrait / Pixel bust">
                 <img alt={speakers.shreyans.name} className="d-511e8f31d4 updated-speaker-photo" src={speakers.shreyans.photo} loading="lazy" decoding="async" />
               </div>
             </div>
-            <div className="d-c589fabaed mobile-speaker-caption updated-speaker-caption" data-node-id="1170:607" data-name="Speaker 02 / Metadata">
-              <p className="d-fc9fe25a62" data-node-id="1170:608">
-                02 / SPEAKER
+            <div className="d-c589fabaed mobile-speaker-caption updated-speaker-caption" data-node-id="1170:581" data-name="Speaker 01 / Metadata">
+              <p className="d-fc9fe25a62" data-node-id="1170:582">
+                01 / SPEAKER
               </p>
-              <p className="d-bf2bdce3ac" data-node-id="1170:609">
+              <p className="d-bf2bdce3ac" data-node-id="1170:583">
                 {speakers.shreyans.name}
               </p>
-              <div className="d-f308fc5ee1" data-node-id="1170:610">
-                <p className="updated-speaker-role">{speakers.shreyans.role}</p>
-                <p className="updated-speaker-background">{speakers.shreyans.background}</p>
-                <div className="updated-speaker-affiliation updated-speaker-affiliation--aws"><img src="/assets/sponsors/aws.svg" alt="AWS" width="54" height="32" loading="lazy" /></div>
-              </div>
+              <p className="d-4767bf8262" data-node-id="1170:584">
+                {speakers.shreyans.role}
+              </p>
+              <p className="updated-speaker-background">{speakers.shreyans.background}</p>
+              <div className="updated-speaker-affiliation updated-speaker-affiliation--aws"><img src="/assets/sponsors/aws.svg" alt="AWS" width="54" height="32" loading="lazy" /></div>
             </div>
           </div>
-          <div className="d-c197716cad mobile-speaker-card updated-speaker-card" data-node-id="1170:645" data-name="Speaker 03 / Portrait and profile">
-            <div className="d-adcca22bcc mobile-speaker-portrait updated-speaker-portrait" data-node-id="1170:646" data-name="Speaker 03 / Vraj Chaubal portrait">
-              <div className="d-049d28c98a" data-node-id="I1170:646;1060:533" data-name="Portrait / Pixel bust">
+          <div className="d-c197716cad mobile-speaker-card updated-speaker-card" data-node-id="1170:586" data-name="Speaker 02 / Portrait and profile">
+            <div className="d-adcca22bcc mobile-speaker-portrait updated-speaker-portrait" data-node-id="1170:587" data-name="Speaker 02 / Vraj Chaubal portrait">
+              <div className="d-049d28c98a" data-node-id="I1170:587;1060:533" data-name="Portrait / Pixel bust">
                 <img alt={speakers.vraj.name} className="d-511e8f31d4 updated-speaker-photo" src={speakers.vraj.photo} loading="lazy" decoding="async" />
               </div>
             </div>
-            <div className="d-43f50fc4ff mobile-speaker-caption updated-speaker-caption updated-speaker-caption--devansh" data-node-id="1170:647" data-name="Speaker 03 / Metadata">
-              <p className="d-68247c54be" data-node-id="1170:648">
-                03 / SPEAKER
+            <div className="d-43f50fc4ff mobile-speaker-caption updated-speaker-caption" data-node-id="1170:592" data-name="Speaker 02 / Metadata">
+              <p className="d-68247c54be" data-node-id="1170:593">
+                02 / SPEAKER
               </p>
-              <p className="d-30c2530cb1 updated-speaker-name" data-node-id="1170:649">
+              <p className="d-30c2530cb1 updated-speaker-name" data-node-id="1170:594">
                 {speakers.vraj.name}
               </p>
-              <div className="d-f6b8f3f4a8 updated-speaker-metadata" data-node-id="1170:650" data-name="Speaker 03 / Details">
-                <div className="d-07493e07be updated-speaker-facts" data-node-id="1170:651">
+              <div className="d-f6b8f3f4a8 updated-speaker-metadata" data-node-id="1170:595" data-name="Speaker 02 / Details and approved quotation">
+                <div className="d-07493e07be updated-speaker-facts" data-node-id="1170:596">
                   <p className="updated-speaker-role">{speakers.vraj.role}</p>
                   <p className="updated-speaker-background">{speakers.vraj.background}</p>
+                </div>
+                <div className="d-5906cd54d7" data-node-id="1170:597" data-name="Approved dithered quotation / Speaker 02">
+                  <SpeakerQuotation className="d-511e8f31d4" src={imgApprovedDitheredQuotationSpeaker02} />
                 </div>
               </div>
             </div>
           </div>
-          <div className="d-c197716cad mobile-speaker-card" data-node-id="1170:652" data-name="Speaker 04 / Portrait and profile">
-            <div className="d-ea4a445521 mobile-speaker-portrait updated-speaker-portrait" data-node-id="1170:653" data-name="Speaker 04 / Mitul Sarvaiya portrait">
-              <div className="d-049d28c98a" data-node-id="I1170:653;1060:538" data-name="Portrait / Pixel bust">
+          <div className="d-c197716cad mobile-speaker-card" data-node-id="1170:601" data-name="Speaker 03 / Portrait and profile">
+            <div className="d-ea4a445521 mobile-speaker-portrait updated-speaker-portrait" data-node-id="1170:602" data-name="Speaker 03 / Mitul Sarvaiya portrait">
+              <div className="d-049d28c98a" data-node-id="I1170:602;1060:538" data-name="Portrait / Pixel bust">
                 <img alt={speakers.mitul.name} className="d-511e8f31d4 updated-speaker-photo" src={speakers.mitul.photo} loading="lazy" decoding="async" />
               </div>
             </div>
-            <div className="d-c589fabaed mobile-speaker-caption updated-speaker-caption" data-node-id="1170:654" data-name="Speaker 04 / Metadata">
-              <p className="d-fc9fe25a62" data-node-id="1170:655">
-                04 / SPEAKER
+            <div className="d-c589fabaed mobile-speaker-caption updated-speaker-caption" data-node-id="1170:607" data-name="Speaker 03 / Metadata">
+              <p className="d-fc9fe25a62" data-node-id="1170:608">
+                03 / SPEAKER
               </p>
-              <p className="d-bf2bdce3ac" data-node-id="1170:656">
+              <p className="d-bf2bdce3ac" data-node-id="1170:609">
                 {speakers.mitul.name}
               </p>
-              <div className="d-f308fc5ee1" data-node-id="1170:657">
+              <div className="d-f308fc5ee1" data-node-id="1170:610">
                 <p className="updated-speaker-role">{speakers.mitul.role}</p>
                 <p className="updated-speaker-background">{speakers.mitul.company}</p>
               </div>
@@ -162,7 +126,7 @@ export default function SpeakersApprovedDesktopAlignedMobile() {
           </div>
         </div>
         <div className="d-b82fa5d8d7" data-node-id="1170:611">
-          <p className="d-9f251d856d">FOUR PERSPECTIVES.</p>
+          <p className="d-9f251d856d">THREE PERSPECTIVES.</p>
           <p className="d-8c8cd1946c">MORE POSSIBILITIES.</p>
         </div>
       </div>

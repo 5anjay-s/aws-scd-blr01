@@ -1,18 +1,7 @@
 // Confirmed main-day profiles shared by both responsive compositions.
-// The final lineup runs 01–04: Devansh, Shreyans, Vraj and Mitul.
+// The final lineup runs 01–03: Shreyans, Vraj and Mitul.
 export const speakers = {
-  devansh: {
-    name: 'Devansh Agrawal',
-    role: 'Senior Solutions Architect – Security',
-    background: 'ex-IBM · ex-Microsoft',
-    company: 'AWS',
-    credential: 'AWS re:Invent speaker',
-    photo: '/media/speakers/devansh-agrawal-cutout.webp',
-    linkedin: 'https://www.linkedin.com/in/devansh03/',
-  },
-  // Shreyans continues the main directory as slot 02; Vraj and Mitul take
-  // slots 03–04 (reflected lineup on desktop, and the same continuous
-  // directory on mobile).
+  // Shreyans leads the directory in slot 01.
   shreyans: {
     name: 'Shreyans Dhankhar',
     role: 'Senior AI Specialist Solutions Architect',
@@ -20,12 +9,14 @@ export const speakers = {
     company: 'AWS',
     photo: '/media/speakers/shreyans-dhankhar.png',
   },
+  // Vraj takes the featured slot 02.
   vraj: {
     name: 'Vraj Chaubal',
     role: 'GTM',
     background: 'Sarvaswa AI',
     photo: '/media/speakers/vraj-chaubal.png',
   },
+  // Mitul closes the directory in slot 03.
   mitul: {
     name: 'Mitul Sarvaiya',
     role: 'Principal Architect',
