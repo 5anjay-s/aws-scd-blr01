@@ -60,37 +60,34 @@ export default function SpeakersV2IdeasWithAVoiceApprovedDesktop() {
             </p>
             <div className="d-e1c05ea2d8" data-node-id="1127:2320" data-name="Directory / Current announcement status">
               <p className="d-56815c6f01" data-node-id="1127:2321">
-                NEW VOICES ARE JOINING THE CONVERSATION.
+                FOUR VOICES. ONE CONVERSATION.
               </p>
               <div className="d-10aaae0f73" data-node-id="1127:2322">
-                <p className="d-2a8bd1889a">More speakers and session details</p>
-                <p className="d-2158fa6ddb">will be announced soon.</p>
+                <p className="d-2a8bd1889a">Meet the people building</p>
+                <p className="d-2158fa6ddb">what comes next.</p>
               </div>
             </div>
           </div>
           <div className="d-66c2241b81" data-node-id="1127:2323" data-name="Rule" />
           <div className="d-4582b3741d" data-node-id="1127:2324" data-name="Directory / Portraits and editorial entries">
-            <div className="d-52fa24bcbd updated-speaker-portrait updated-speaker-portrait--ayush" data-node-id="1127:2325" data-name="Speaker 01 / Ayush Hooda portrait">
-              <div className="d-5aa5863203" data-node-id="I1127:2325;1060:528" data-name="Portrait / Pixel bust">
-                <img alt={speakers.ayush.name} className="d-511e8f31d4 updated-speaker-photo" src={speakers.ayush.photo} loading="lazy" decoding="async" />
+            <div className="d-52fa24bcbd speaker-statement speaker-statement--primary" data-name="Speakers / Editorial statement — The people in the room">
+              <div className="speaker-statement-top">
+                <p className="speaker-statement-kicker">THE PEOPLE IN THE ROOM</p>
+                <p className="speaker-statement-heading">BUILT IN<br />THE OPEN.</p>
               </div>
+              <p className="speaker-statement-body">
+                Devansh, Shreyans, Vraj and Mitul work across cloud security, AI systems, product architecture and go-to-market. They've shipped at scale, made hard calls, and learned what survives contact with the real world.
+              </p>
+              <p className="speaker-statement-foot">FOUR VOICES / ONE STAGE</p>
             </div>
-            <div className="d-438b1cea4a updated-speaker-caption updated-speaker-caption--ayush" data-node-id="1127:2326" data-name="Speaker 01 / Profile">
-              <p className="d-477d95194b" data-node-id="1127:2327">
-                01 / SPEAKER
-              </p>
-              <p className="d-2d39824b22" data-node-id="1127:2328">
-                {speakers.ayush.name}
-              </p>
-              <p className="d-f42682f4f1" data-node-id="1127:2329">
-                {speakers.ayush.role}
-              </p>
-              <p className="updated-speaker-background">{speakers.ayush.background}</p>
-              <div className="updated-speaker-affiliation updated-speaker-affiliation--nvidia"><img src="/brands/nvidia.svg" alt="NVIDIA" width="128" height="26" loading="lazy" /></div>
+            <div className="d-438b1cea4a speaker-statement-footer" data-name="Speakers / Editorial statement footer">
+              <div className="speaker-statement-rule" />
+              <p className="speaker-statement-footer-label">05 NOV 2026 · REVA UNIVERSITY</p>
+              <p className="speaker-statement-footer-copy">BENGALURU, INDIA</p>
             </div>
-            <div className="d-cb8ccf733c updated-speaker-caption updated-speaker-caption--devansh" data-node-id="1127:2330" data-name="Speaker 02 / Profile">
+            <div className="d-cb8ccf733c updated-speaker-caption updated-speaker-caption--devansh" data-node-id="1127:2330" data-name="Speaker 01 / Profile">
               <p className="d-423ce3d413" data-node-id="1127:2331">
-                02 / SPEAKER
+                01 / SPEAKER
               </p>
               <div className="d-c1f367816d updated-speaker-name" data-node-id="1127:2332">
                 <SiteLink href={speakers.devansh.linkedin} className="updated-speaker-link" aria-label={`${speakers.devansh.name} on LinkedIn`}>{speakers.devansh.name}</SiteLink>
@@ -103,7 +100,7 @@ export default function SpeakersV2IdeasWithAVoiceApprovedDesktop() {
                 <div className="updated-speaker-affiliation updated-speaker-affiliation--aws"><img src="/assets/sponsors/aws.svg" alt="AWS" width="68" height="40" loading="lazy" /></div>
               </div>
             </div>
-            <div className="d-f2cc43946c updated-speaker-portrait updated-speaker-portrait--devansh" data-node-id="1127:2335" data-name="Speaker 02 / Devansh Agrawal portrait">
+            <div className="d-f2cc43946c updated-speaker-portrait updated-speaker-portrait--devansh" data-node-id="1127:2335" data-name="Speaker 01 / Devansh Agrawal portrait">
               <div className="d-22bea6fb2f" data-node-id="I1127:2335;1060:533" data-name="Portrait / Pixel bust">
                 <img alt={speakers.devansh.name} className="d-511e8f31d4 updated-speaker-photo" src={speakers.devansh.photo} loading="lazy" decoding="async" />
               </div>
@@ -111,14 +108,14 @@ export default function SpeakersV2IdeasWithAVoiceApprovedDesktop() {
             <div className="d-cf1c946646" data-node-id="1127:2336" data-name="Speakers / Approved dithered quotation">
               <SpeakerQuotation className="d-511e8f31d4" src={imgSpeakersApprovedDitheredQuotation1} />
             </div>
-            <div className="d-d9ea639326 updated-speaker-portrait" data-node-id="1127:2337" data-name="Speaker 03 / Shreyans Dhankhar portrait">
+            <div className="d-d9ea639326 updated-speaker-portrait" data-node-id="1127:2337" data-name="Speaker 02 / Shreyans Dhankhar portrait">
               <div className="d-22bea6fb2f" data-node-id="I1127:2337;1060:538" data-name="Portrait / Pixel bust">
                 <img alt={speakers.shreyans.name} className="d-511e8f31d4 updated-speaker-photo" src={speakers.shreyans.photo} loading="lazy" decoding="async" />
               </div>
             </div>
-            <div className="d-3f5f6c56b4 updated-speaker-caption" data-node-id="1127:2338" data-name="Speaker 03 / Shreyans Dhankhar profile">
+            <div className="d-3f5f6c56b4 updated-speaker-caption" data-node-id="1127:2338" data-name="Speaker 02 / Shreyans Dhankhar profile">
               <p className="d-423ce3d413" data-node-id="1127:2339">
-                03 / SPEAKER
+                02 / SPEAKER
               </p>
               <div className="d-c1f367816d updated-speaker-name" data-node-id="1127:2340">
                 <p className="d-6ee5fa6884">Shreyans</p>
@@ -133,7 +130,7 @@ export default function SpeakersV2IdeasWithAVoiceApprovedDesktop() {
             </div>
             <div className="d-723111d222" data-node-id="1127:2343" data-name="Directory / More announcements">
               <div className="d-1d153cc628" data-node-id="1127:2344">
-                <p className="d-73a26a6b50">MORE PERSPECTIVES.</p>
+                <p className="d-73a26a6b50">FOUR PERSPECTIVES.</p>
                 <p className="d-9e2417ac68">MORE POSSIBILITIES.</p>
               </div>
             </div>

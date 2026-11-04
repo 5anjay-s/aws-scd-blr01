@@ -1,7 +1,6 @@
 /* Updated profiles occupy the original asymmetric portrait and caption slots. */
 .design-content .updated-speaker-portrait > div { inset: 0; width: 100%; height: 100%; }
 .design-content .updated-speaker-portrait .updated-speaker-photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: grayscale(1); transition: filter 240ms ease; }
-.design-content .updated-speaker-portrait--ayush .updated-speaker-photo { position: absolute; top: -29%; left: 50%; width: auto; max-width: none; height: 152%; transform: translateX(-50%); object-fit: contain; }
 .design-content .updated-speaker-portrait:is(:hover, :focus-within) .updated-speaker-photo { filter: grayscale(0); }
 .design-content .updated-speaker-caption { gap: 8px; }
 .design-content .updated-speaker-caption :is(p, div) { max-width: 100%; }
@@ -15,7 +14,6 @@
 .design-content .updated-speaker-credential { width: fit-content; border: 1px solid currentColor; padding: 4px 6px; font: 400 10px/1.4 'Geist Mono', monospace; }
 .design-content .updated-speaker-affiliation { display: flex; align-items: center; flex: 0 0 40px; width: 100%; height: 40px; min-height: 40px; }
 .design-content .updated-speaker-affiliation img { display: block; flex: 0 0 auto; object-fit: contain; object-position: left center; max-width: 100%; }
-.updated-speaker-affiliation--nvidia img { width: 128px; height: 26px; }
 .updated-speaker-affiliation--aws img { width: 68px; height: 40px; }
 .mobile-layout .design-content .updated-speaker-caption { flex: 1; }
 .mobile-layout .design-content .updated-speaker-card .updated-speaker-portrait { height: 57.6923cqw; aspect-ratio: auto; }
@@ -26,7 +24,61 @@
 .mobile-layout .design-content .updated-speaker-caption .updated-speaker-metadata { flex: 1; position: relative; }
 .mobile-layout .design-content .updated-speaker-facts { flex: 1; }
 .mobile-layout .design-content .updated-speaker-caption .updated-speaker-affiliation { margin-top: auto; }
-.mobile-layout .design-content .updated-speaker-affiliation--nvidia img { width: 104px; height: 22px; }
 .mobile-layout .design-content .updated-speaker-affiliation--aws img { width: 54px; height: 32px; }
 .mobile-layout .design-content .updated-speaker-caption [data-node-id='1170:597'] { position: absolute; right: 0; bottom: 0; width: 48px; height: 36px; }
+
+/* Editorial statements replace the removed opening portrait and reserved slot. */
+.design-content .speaker-statement {
+  background: var(--navy);
+  color: var(--white);
+  padding: calc(40 * var(--design-unit));
+  gap: calc(24 * var(--design-unit));
+}
+.design-content .speaker-statement::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(96 * var(--design-unit));
+  height: calc(6 * var(--design-unit));
+  background: var(--lime);
+}
+.design-content .speaker-statement--secondary::before { background: var(--cyan); }
+.design-content .speaker-statement-top { display: flex; flex-direction: column; gap: calc(16 * var(--design-unit)); width: 100%; }
+.design-content .speaker-statement-kicker { font: 400 clamp(10px, calc(11 * var(--design-unit)), 11px)/1.4 'Geist Mono', monospace; letter-spacing: .08em; color: var(--lime); text-transform: uppercase; }
+.design-content .speaker-statement--secondary .speaker-statement-kicker { color: var(--cyan); }
+.design-content .speaker-statement-heading { font-family: 'Azeret Mono', monospace; font-weight: 500; font-size: clamp(34px, calc(52 * var(--design-unit)), 52px); line-height: 1.05; letter-spacing: -0.04em; }
+.design-content .speaker-statement-body { max-width: calc(440 * var(--design-unit)); font: 400 clamp(14px, calc(16 * var(--design-unit)), 16px)/1.6 'Geist Mono', monospace; color: rgb(248 250 252 / 82%); }
+.design-content .speaker-statement-foot { width: 100%; margin-top: auto; padding-top: calc(12 * var(--design-unit)); border-top: 1px solid rgb(248 250 252 / 24%); font: 400 10px/1.4 'Geist Mono', monospace; letter-spacing: .08em; color: var(--cyan); text-transform: uppercase; }
+.design-content .speaker-statement-footer { height: calc(128 * var(--design-unit)); }
+.design-content .speaker-statement-rule { width: 100%; height: 1px; background: var(--navy); opacity: .2; }
+.design-content .speaker-statement-footer-label { font: 400 10px/1.4 'Geist Mono', monospace; letter-spacing: .08em; }
+.design-content .speaker-statement-footer-copy { font: 400 10px/1.4 'Geist Mono', monospace; opacity: .65; }
+
+.mobile-layout .design-content .mobile-speaker-statement {
+  position: relative;
+  overflow: clip;
+  width: calc(100% + 48 * var(--space-unit));
+  margin-inline: calc(-24 * var(--space-unit));
+  padding: calc(24 * var(--space-unit));
+  display: flex;
+  flex-direction: column;
+  gap: calc(14 * var(--space-unit));
+  background: var(--navy);
+  color: var(--white);
+}
+.mobile-layout .design-content .mobile-speaker-statement::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(72 * var(--space-unit));
+  height: calc(5 * var(--space-unit));
+  background: var(--lime);
+}
+.mobile-layout .design-content .mobile-speaker-statement .speaker-statement-kicker { font-size: 10px; }
+.mobile-layout .design-content .mobile-speaker-statement-heading { font-family: 'Azeret Mono', monospace; font-weight: 500; font-size: clamp(28px, 7.2cqw, 34px); line-height: 1.05; letter-spacing: -0.04em; }
+.mobile-layout .design-content .mobile-speaker-statement-body { font: 400 13px/1.6 'Geist Mono', monospace; color: rgb(248 250 252 / 82%); }
+.mobile-layout .design-content .mobile-speaker-statement-foot { margin-top: calc(6 * var(--space-unit)); padding-top: calc(12 * var(--space-unit)); border-top: 1px solid rgb(248 250 252 / 24%); font: 400 10px/1.4 'Geist Mono', monospace; letter-spacing: .08em; color: var(--cyan); text-transform: uppercase; }
+
 @media (prefers-reduced-motion: reduce) { .design-content .updated-speaker-portrait .updated-speaker-photo { transition: none; } }

@@ -1,12 +1,6 @@
 // Confirmed main-day profiles shared by both responsive compositions.
+// The final lineup runs 01–04: Devansh, Shreyans, Vraj and Mitul.
 export const speakers = {
-  ayush: {
-    name: 'Ayush Hooda',
-    role: 'Senior System Software Engineer',
-    background: 'IIT P · ex-Walmart',
-    company: 'NVIDIA',
-    photo: '/media/previous-speakers/ayush-hooda.png',
-  },
   devansh: {
     name: 'Devansh Agrawal',
     role: 'Senior Solutions Architect – Security',
@@ -16,9 +10,9 @@ export const speakers = {
     photo: '/media/speakers/devansh-agrawal-cutout.webp',
     linkedin: 'https://www.linkedin.com/in/devansh03/',
   },
-  // Shreyans continues the main directory as slot 03; Vraj and Mitul take
-  // slots 04–05 (reflected lineup on desktop, and the same continuous
-  // directory on mobile). Slot 06 stays reserved for a future announcement.
+  // Shreyans continues the main directory as slot 02; Vraj and Mitul take
+  // slots 03–04 (reflected lineup on desktop, and the same continuous
+  // directory on mobile).
   shreyans: {
     name: 'Shreyans Dhankhar',
     role: 'Senior AI Specialist Solutions Architect',
